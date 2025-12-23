@@ -978,13 +978,15 @@ function getCluster(id: string): string {
   /* Legend */
   .network-legend {
     position: absolute;
-    bottom: 1.5rem;
+    bottom: 2rem;
     left: 1.5rem;
     background: rgba(18, 18, 26, 0.9);
     border: 1px solid #2a2a3a;
     border-radius: 8px;
-    padding: 1rem;
+    padding: 0.875rem;
     z-index: 10;
+    max-height: calc(100vh - 10rem);
+    overflow-y: auto;
   }
 
   .legend-title {
