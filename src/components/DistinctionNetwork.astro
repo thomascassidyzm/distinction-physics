@@ -1,0 +1,1089 @@
+---
+// Distinction Network Visualization
+// A constellation of concepts that illuminates as understanding grows
+
+import { propositions } from '../content/propositions';
+
+// Calculate node positions based on logical structure
+// Axioms at center, derived concepts radiate outward
+const nodePositions = calculatePositions(propositions);
+
+function calculatePositions(props: typeof propositions) {
+  const positions: Record<string, { x: number; y: number; ring: number }> = {};
+
+  // Classify nodes by their depth from axioms
+  const axiomIds = ['axiom-1-energy-cost', 'axiom-2-finite-budget'];
+  const visited = new Set<string>();
+  const rings: string[][] = [axiomIds];
+
+  // BFS to assign rings
+  axiomIds.forEach(id => visited.add(id));
+  let currentRing = axiomIds;
+
+  for (let depth = 0; depth < 5; depth++) {
+    const nextRing: string[] = [];
+    currentRing.forEach(id => {
+      const prop = props.find(p => p.id === id);
+      if (prop) {
+        prop.linksTo.forEach(linkedId => {
+          if (!visited.has(linkedId)) {
+            visited.add(linkedId);
+            nextRing.push(linkedId);
+          }
+        });
+      }
+    });
+    if (nextRing.length > 0) {
+      rings.push(nextRing);
+      currentRing = nextRing;
+    }
+  }
+
+  // Add any remaining nodes to outer ring
+  const remaining = props.filter(p => !visited.has(p.id)).map(p => p.id);
+  if (remaining.length > 0) {
+    rings.push(remaining);
+  }
+
+  // Position nodes in concentric rings
+  const centerX = 500;
+  const centerY = 400;
+  const ringSpacing = 120;
+
+  rings.forEach((ring, ringIndex) => {
+    const radius = ringIndex === 0 ? 0 : ringSpacing * ringIndex;
+    const angleStep = (2 * Math.PI) / ring.length;
+    const startAngle = Math.PI / 4; // Offset for visual interest
+
+    ring.forEach((id, i) => {
+      const angle = startAngle + angleStep * i + (ringIndex % 2 === 0 ? 0 : angleStep / 2);
+      positions[id] = {
+        x: centerX + radius * Math.cos(angle),
+        y: centerY + radius * Math.sin(angle),
+        ring: ringIndex,
+      };
+    });
+  });
+
+  return positions;
+}
+
+// Build edges from linksTo
+const edges = propositions.flatMap(prop =>
+  prop.linksTo
+    .filter(targetId => propositions.some(p => p.id === targetId))
+    .map(targetId => ({
+      source: prop.id,
+      target: targetId,
+    }))
+);
+
+// Assign conceptual clusters for color variation
+function getCluster(id: string): string {
+  if (id.includes('axiom')) return 'axiom';
+  if (id.includes('consciousness') || id.includes('self-reference') || id.includes('learning') || id.includes('spaced')) return 'mind';
+  if (id.includes('heisenberg') || id.includes('superposition') || id.includes('planck')) return 'quantum';
+  if (id.includes('entropy') || id.includes('landauer') || id.includes('dynamism')) return 'thermo';
+  if (id.includes('spacetime') || id.includes('gravity') || id.includes('time')) return 'spacetime';
+  return 'core';
+}
+---
+
+<div class="network-container" id="distinction-network">
+  <div class="network-header">
+    <div class="header-content">
+      <h2 class="network-title">Your Distinction Network</h2>
+      <p class="network-subtitle">Each node is a concept. Click to explore. Understanding illuminates.</p>
+    </div>
+    <div class="progress-indicator">
+      <span class="progress-count" id="progress-count">0</span>
+      <span class="progress-total">/ {propositions.length}</span>
+      <span class="progress-label">distinctions made</span>
+    </div>
+  </div>
+
+  <div class="network-viewport" id="network-viewport">
+    <svg
+      class="network-svg"
+      viewBox="0 0 1000 800"
+      preserveAspectRatio="xMidYMid meet"
+    >
+      <defs>
+        <!-- Ambient glow filters for each cluster -->
+        <filter id="glow-axiom" x="-100%" y="-100%" width="300%" height="300%">
+          <feGaussianBlur stdDeviation="4" result="blur" />
+          <feFlood flood-color="#4a9eff" flood-opacity="0.6" />
+          <feComposite in2="blur" operator="in" />
+          <feMerge>
+            <feMergeNode />
+            <feMergeNode in="SourceGraphic" />
+          </feMerge>
+        </filter>
+        <filter id="glow-core" x="-100%" y="-100%" width="300%" height="300%">
+          <feGaussianBlur stdDeviation="3" result="blur" />
+          <feFlood flood-color="#50c878" flood-opacity="0.5" />
+          <feComposite in2="blur" operator="in" />
+          <feMerge>
+            <feMergeNode />
+            <feMergeNode in="SourceGraphic" />
+          </feMerge>
+        </filter>
+        <filter id="glow-mind" x="-100%" y="-100%" width="300%" height="300%">
+          <feGaussianBlur stdDeviation="3" result="blur" />
+          <feFlood flood-color="#a855f7" flood-opacity="0.5" />
+          <feComposite in2="blur" operator="in" />
+          <feMerge>
+            <feMergeNode />
+            <feMergeNode in="SourceGraphic" />
+          </feMerge>
+        </filter>
+        <filter id="glow-quantum" x="-100%" y="-100%" width="300%" height="300%">
+          <feGaussianBlur stdDeviation="3" result="blur" />
+          <feFlood flood-color="#f97316" flood-opacity="0.5" />
+          <feComposite in2="blur" operator="in" />
+          <feMerge>
+            <feMergeNode />
+            <feMergeNode in="SourceGraphic" />
+          </feMerge>
+        </filter>
+        <filter id="glow-thermo" x="-100%" y="-100%" width="300%" height="300%">
+          <feGaussianBlur stdDeviation="3" result="blur" />
+          <feFlood flood-color="#ef4444" flood-opacity="0.5" />
+          <feComposite in2="blur" operator="in" />
+          <feMerge>
+            <feMergeNode />
+            <feMergeNode in="SourceGraphic" />
+          </feMerge>
+        </filter>
+        <filter id="glow-spacetime" x="-100%" y="-100%" width="300%" height="300%">
+          <feGaussianBlur stdDeviation="3" result="blur" />
+          <feFlood flood-color="#14b8a6" flood-opacity="0.5" />
+          <feComposite in2="blur" operator="in" />
+          <feMerge>
+            <feMergeNode />
+            <feMergeNode in="SourceGraphic" />
+          </feMerge>
+        </filter>
+
+        <!-- Subtle noise texture -->
+        <filter id="noise">
+          <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="4" result="noise" />
+          <feDisplacementMap in="SourceGraphic" in2="noise" scale="0.5" />
+        </filter>
+      </defs>
+
+      <!-- Background stars (ambient decoration) -->
+      <g class="background-stars">
+        {Array.from({ length: 40 }).map((_, i) => (
+          <circle
+            cx={Math.random() * 1000}
+            cy={Math.random() * 800}
+            r={Math.random() * 0.8 + 0.2}
+            fill="rgba(255,255,255,0.15)"
+            class="bg-star"
+            style={`animation-delay: ${Math.random() * 5}s`}
+          />
+        ))}
+      </g>
+
+      <!-- Connection lines (drawn first, under nodes) -->
+      <g class="edges">
+        {edges.map((edge, i) => {
+          const sourcePos = nodePositions[edge.source];
+          const targetPos = nodePositions[edge.target];
+          if (!sourcePos || !targetPos) return null;
+          return (
+            <line
+              class="edge"
+              x1={sourcePos.x}
+              y1={sourcePos.y}
+              x2={targetPos.x}
+              y2={targetPos.y}
+              data-source={edge.source}
+              data-target={edge.target}
+              stroke-dasharray="2,4"
+            />
+          );
+        })}
+      </g>
+
+      <!-- Concept nodes -->
+      <g class="nodes">
+        {propositions.map((prop) => {
+          const pos = nodePositions[prop.id];
+          if (!pos) return null;
+          const cluster = getCluster(prop.id);
+          const isAxiom = prop.id.includes('axiom');
+          const radius = isAxiom ? 18 : 12;
+
+          return (
+            <g
+              class={`node cluster-${cluster}`}
+              data-id={prop.id}
+              data-cluster={cluster}
+              transform={`translate(${pos.x}, ${pos.y})`}
+            >
+              <!-- Outer glow ring (visible when understood) -->
+              <circle
+                class="node-glow"
+                r={radius + 8}
+                fill="none"
+              />
+
+              <!-- Main node circle -->
+              <circle
+                class="node-core"
+                r={radius}
+              />
+
+              <!-- Inner detail -->
+              <circle
+                class="node-inner"
+                r={radius * 0.4}
+              />
+
+              <!-- Invisible hit area for easier clicking -->
+              <circle
+                class="node-hitarea"
+                r={radius + 12}
+                fill="transparent"
+              />
+            </g>
+          );
+        })}
+      </g>
+    </svg>
+
+    <!-- Floating label that follows hovered node -->
+    <div class="node-tooltip" id="node-tooltip">
+      <span class="tooltip-title"></span>
+      <span class="tooltip-connections"></span>
+    </div>
+  </div>
+
+  <!-- Concept detail panel (slides in when node is clicked) -->
+  <div class="detail-panel" id="detail-panel">
+    <button class="panel-close" id="panel-close">×</button>
+    <div class="panel-content">
+      <div class="panel-header">
+        <h3 class="panel-title" id="panel-title"></h3>
+        <span class="panel-cluster" id="panel-cluster"></span>
+      </div>
+      <p class="panel-surface" id="panel-surface"></p>
+
+      <div class="panel-logic">
+        <div class="logic-row">
+          <span class="logic-label">Claim</span>
+          <p class="logic-value" id="panel-claim"></p>
+        </div>
+        <div class="logic-row">
+          <span class="logic-label">Therefore</span>
+          <p class="logic-value" id="panel-conclusion"></p>
+        </div>
+      </div>
+
+      <div class="panel-connections" id="panel-connections"></div>
+
+      <button class="understand-btn" id="understand-btn">
+        <span class="btn-icon">⬡</span>
+        <span class="btn-text">Mark as Understood</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Legend -->
+  <div class="network-legend">
+    <div class="legend-title">Concept Clusters</div>
+    <div class="legend-items">
+      <div class="legend-item"><span class="legend-dot axiom"></span>Axioms</div>
+      <div class="legend-item"><span class="legend-dot core"></span>Core Derived</div>
+      <div class="legend-item"><span class="legend-dot mind"></span>Mind & Learning</div>
+      <div class="legend-item"><span class="legend-dot quantum"></span>Quantum</div>
+      <div class="legend-item"><span class="legend-dot thermo"></span>Thermodynamics</div>
+      <div class="legend-item"><span class="legend-dot spacetime"></span>Spacetime</div>
+    </div>
+  </div>
+</div>
+
+<script define:vars={{ propositions, nodePositions }}>
+  // Proposition data available to client
+  window.propositionData = propositions;
+  window.nodePositions = nodePositions;
+</script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const props = window.propositionData;
+    const positions = window.nodePositions;
+
+    // Load understood concepts from localStorage
+    const understoodKey = 'distinction-physics-understood';
+    let understood = new Set(JSON.parse(localStorage.getItem(understoodKey) || '[]'));
+
+    // DOM elements
+    const nodes = document.querySelectorAll('.node');
+    const edges = document.querySelectorAll('.edge');
+    const tooltip = document.getElementById('node-tooltip');
+    const detailPanel = document.getElementById('detail-panel');
+    const panelClose = document.getElementById('panel-close');
+    const understandBtn = document.getElementById('understand-btn');
+    const progressCount = document.getElementById('progress-count');
+
+    let currentNodeId = null;
+
+    // Update progress display
+    function updateProgress() {
+      progressCount.textContent = understood.size.toString();
+      localStorage.setItem(understoodKey, JSON.stringify([...understood]));
+    }
+
+    // Apply understood state to nodes
+    function applyUnderstoodState() {
+      nodes.forEach(node => {
+        const id = node.dataset.id;
+        if (understood.has(id)) {
+          node.classList.add('understood');
+        } else {
+          node.classList.remove('understood');
+        }
+      });
+
+      // Update edges - glow if both ends are understood
+      edges.forEach(edge => {
+        const source = edge.dataset.source;
+        const target = edge.dataset.target;
+        if (understood.has(source) && understood.has(target)) {
+          edge.classList.add('active');
+        } else if (understood.has(source) || understood.has(target)) {
+          edge.classList.add('partial');
+        } else {
+          edge.classList.remove('active', 'partial');
+        }
+      });
+
+      updateProgress();
+    }
+
+    // Initial state
+    applyUnderstoodState();
+
+    // Node hover
+    nodes.forEach(node => {
+      node.addEventListener('mouseenter', (e) => {
+        const id = node.dataset.id;
+        const prop = props.find(p => p.id === id);
+        if (!prop) return;
+
+        const titleEl = tooltip.querySelector('.tooltip-title');
+        const connEl = tooltip.querySelector('.tooltip-connections');
+        titleEl.textContent = prop.title;
+        connEl.textContent = `${prop.linksTo.length} connections`;
+
+        tooltip.classList.add('visible');
+
+        // Highlight connected edges
+        edges.forEach(edge => {
+          if (edge.dataset.source === id || edge.dataset.target === id) {
+            edge.classList.add('highlighted');
+          }
+        });
+
+        // Highlight connected nodes
+        nodes.forEach(n => {
+          const nId = n.dataset.id;
+          const isConnected = prop.linksTo.includes(nId) ||
+            props.some(p => p.id === nId && p.linksTo.includes(id));
+          if (isConnected) {
+            n.classList.add('connected');
+          }
+        });
+      });
+
+      node.addEventListener('mouseleave', () => {
+        tooltip.classList.remove('visible');
+        edges.forEach(edge => edge.classList.remove('highlighted'));
+        nodes.forEach(n => n.classList.remove('connected'));
+      });
+
+      node.addEventListener('mousemove', (e) => {
+        const rect = document.getElementById('network-viewport').getBoundingClientRect();
+        tooltip.style.left = `${e.clientX - rect.left + 12}px`;
+        tooltip.style.top = `${e.clientY - rect.top - 20}px`;
+      });
+
+      // Node click - show detail panel
+      node.addEventListener('click', () => {
+        const id = node.dataset.id;
+        const prop = props.find(p => p.id === id);
+        if (!prop) return;
+
+        currentNodeId = id;
+
+        // Populate panel
+        document.getElementById('panel-title').textContent = prop.title;
+        document.getElementById('panel-cluster').textContent = node.dataset.cluster;
+        document.getElementById('panel-cluster').className = `panel-cluster ${node.dataset.cluster}`;
+        document.getElementById('panel-surface').textContent = prop.surface;
+        document.getElementById('panel-claim').textContent = prop.logic.claim;
+        document.getElementById('panel-conclusion').textContent = prop.logic.conclusion;
+
+        // Connections
+        const connectionsEl = document.getElementById('panel-connections');
+        if (prop.linksTo.length > 0) {
+          const connectedProps = prop.linksTo
+            .map(linkId => props.find(p => p.id === linkId))
+            .filter(Boolean);
+
+          connectionsEl.innerHTML = `
+            <span class="connections-label">Connects to</span>
+            <div class="connections-list">
+              ${connectedProps.map(p => `
+                <button class="connection-chip" data-id="${p.id}">
+                  ${p.title}
+                </button>
+              `).join('')}
+            </div>
+          `;
+
+          // Add click handlers to chips
+          connectionsEl.querySelectorAll('.connection-chip').forEach(chip => {
+            chip.addEventListener('click', () => {
+              const targetId = chip.dataset.id;
+              const targetNode = document.querySelector(`.node[data-id="${targetId}"]`);
+              if (targetNode) {
+                targetNode.dispatchEvent(new Event('click'));
+              }
+            });
+          });
+        } else {
+          connectionsEl.innerHTML = '';
+        }
+
+        // Update understand button state
+        if (understood.has(id)) {
+          understandBtn.classList.add('understood');
+          understandBtn.querySelector('.btn-text').textContent = 'Understood ✓';
+        } else {
+          understandBtn.classList.remove('understood');
+          understandBtn.querySelector('.btn-text').textContent = 'Mark as Understood';
+        }
+
+        // Highlight the selected node
+        nodes.forEach(n => n.classList.remove('selected'));
+        node.classList.add('selected');
+
+        detailPanel.classList.add('open');
+      });
+    });
+
+    // Close panel
+    panelClose.addEventListener('click', () => {
+      detailPanel.classList.remove('open');
+      nodes.forEach(n => n.classList.remove('selected'));
+      currentNodeId = null;
+    });
+
+    // Mark as understood
+    understandBtn.addEventListener('click', () => {
+      if (!currentNodeId) return;
+
+      if (understood.has(currentNodeId)) {
+        understood.delete(currentNodeId);
+        understandBtn.classList.remove('understood');
+        understandBtn.querySelector('.btn-text').textContent = 'Mark as Understood';
+      } else {
+        understood.add(currentNodeId);
+        understandBtn.classList.add('understood');
+        understandBtn.querySelector('.btn-text').textContent = 'Understood ✓';
+
+        // Celebration pulse
+        const node = document.querySelector(`.node[data-id="${currentNodeId}"]`);
+        node.classList.add('just-understood');
+        setTimeout(() => node.classList.remove('just-understood'), 1000);
+      }
+
+      applyUnderstoodState();
+    });
+
+    // Pan/zoom (simplified - touch-friendly)
+    const viewport = document.getElementById('network-viewport');
+    const svg = viewport.querySelector('.network-svg');
+    let scale = 1;
+    let translateX = 0;
+    let translateY = 0;
+    let isDragging = false;
+    let startX, startY;
+
+    function updateTransform() {
+      svg.style.transform = `translate(${translateX}px, ${translateY}px) scale(${scale})`;
+    }
+
+    viewport.addEventListener('wheel', (e) => {
+      e.preventDefault();
+      const delta = e.deltaY > 0 ? 0.9 : 1.1;
+      scale = Math.min(2.5, Math.max(0.5, scale * delta));
+      updateTransform();
+    });
+
+    viewport.addEventListener('mousedown', (e) => {
+      if (e.target.closest('.node')) return;
+      isDragging = true;
+      startX = e.clientX - translateX;
+      startY = e.clientY - translateY;
+      viewport.style.cursor = 'grabbing';
+    });
+
+    window.addEventListener('mousemove', (e) => {
+      if (!isDragging) return;
+      translateX = e.clientX - startX;
+      translateY = e.clientY - startY;
+      updateTransform();
+    });
+
+    window.addEventListener('mouseup', () => {
+      isDragging = false;
+      viewport.style.cursor = 'grab';
+    });
+
+    // Reset view button
+    viewport.addEventListener('dblclick', (e) => {
+      if (e.target.closest('.node')) return;
+      scale = 1;
+      translateX = 0;
+      translateY = 0;
+      updateTransform();
+    });
+  });
+</script>
+
+<style>
+  .network-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    min-height: 600px;
+    background:
+      radial-gradient(ellipse at 30% 20%, rgba(74, 158, 255, 0.03) 0%, transparent 50%),
+      radial-gradient(ellipse at 70% 80%, rgba(168, 85, 247, 0.02) 0%, transparent 50%),
+      var(--void, #0a0a0c);
+    overflow: hidden;
+  }
+
+  .network-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 1.5rem 2rem;
+    z-index: 10;
+    background: linear-gradient(180deg, var(--void, #0a0a0c) 0%, transparent 100%);
+  }
+
+  .network-title {
+    font-family: var(--font-display, 'Cormorant Garamond', serif);
+    font-size: 1.75rem;
+    font-weight: 500;
+    color: var(--text-primary, #e8e8f0);
+    margin: 0;
+  }
+
+  .network-subtitle {
+    font-size: 0.875rem;
+    color: var(--text-muted, #606080);
+    margin: 0.25rem 0 0;
+  }
+
+  .progress-indicator {
+    display: flex;
+    align-items: baseline;
+    gap: 0.375rem;
+    font-family: var(--font-mono, 'JetBrains Mono', monospace);
+  }
+
+  .progress-count {
+    font-size: 2rem;
+    font-weight: 500;
+    color: var(--accent, #4a9eff);
+  }
+
+  .progress-total {
+    font-size: 1rem;
+    color: var(--text-muted, #606080);
+  }
+
+  .progress-label {
+    font-size: 0.75rem;
+    color: var(--text-muted, #606080);
+    margin-left: 0.5rem;
+  }
+
+  /* Viewport and SVG */
+  .network-viewport {
+    width: 100%;
+    height: 100%;
+    cursor: grab;
+    position: relative;
+  }
+
+  .network-svg {
+    width: 100%;
+    height: 100%;
+    transform-origin: center center;
+    transition: transform 0.1s ease-out;
+  }
+
+  /* Background stars animation */
+  .bg-star {
+    animation: twinkle 4s ease-in-out infinite;
+  }
+
+  @keyframes twinkle {
+    0%, 100% { opacity: 0.15; }
+    50% { opacity: 0.4; }
+  }
+
+  /* Edges */
+  .edge {
+    stroke: rgba(255, 255, 255, 0.06);
+    stroke-width: 1;
+    transition: all 0.3s ease;
+  }
+
+  .edge.partial {
+    stroke: rgba(74, 158, 255, 0.15);
+    stroke-dasharray: none;
+  }
+
+  .edge.active {
+    stroke: rgba(74, 158, 255, 0.4);
+    stroke-width: 1.5;
+    stroke-dasharray: none;
+  }
+
+  .edge.highlighted {
+    stroke: rgba(255, 255, 255, 0.3);
+    stroke-width: 2;
+    stroke-dasharray: none;
+  }
+
+  /* Nodes - Default (ununderstood) state */
+  .node {
+    cursor: pointer;
+    transition: transform 0.2s ease;
+  }
+
+  .node:hover {
+    transform: scale(1.15);
+  }
+
+  .node.connected {
+    transform: scale(1.1);
+  }
+
+  .node.selected {
+    transform: scale(1.2);
+  }
+
+  .node-glow {
+    stroke-width: 2;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+  }
+
+  .node-core {
+    fill: rgba(30, 30, 45, 0.8);
+    stroke: rgba(255, 255, 255, 0.15);
+    stroke-width: 1;
+    transition: all 0.3s ease;
+  }
+
+  .node-inner {
+    fill: rgba(255, 255, 255, 0.08);
+    transition: all 0.3s ease;
+  }
+
+  /* Cluster colors */
+  .cluster-axiom .node-core { stroke: rgba(74, 158, 255, 0.4); }
+  .cluster-axiom .node-inner { fill: rgba(74, 158, 255, 0.15); }
+
+  .cluster-core .node-core { stroke: rgba(80, 200, 120, 0.3); }
+  .cluster-core .node-inner { fill: rgba(80, 200, 120, 0.1); }
+
+  .cluster-mind .node-core { stroke: rgba(168, 85, 247, 0.3); }
+  .cluster-mind .node-inner { fill: rgba(168, 85, 247, 0.1); }
+
+  .cluster-quantum .node-core { stroke: rgba(249, 115, 22, 0.3); }
+  .cluster-quantum .node-inner { fill: rgba(249, 115, 22, 0.1); }
+
+  .cluster-thermo .node-core { stroke: rgba(239, 68, 68, 0.3); }
+  .cluster-thermo .node-inner { fill: rgba(239, 68, 68, 0.1); }
+
+  .cluster-spacetime .node-core { stroke: rgba(20, 184, 166, 0.3); }
+  .cluster-spacetime .node-inner { fill: rgba(20, 184, 166, 0.1); }
+
+  /* Understood state - nodes come alive */
+  .node.understood .node-glow {
+    opacity: 1;
+    animation: pulse-glow 3s ease-in-out infinite;
+  }
+
+  .node.understood .node-core {
+    stroke-width: 2;
+  }
+
+  .node.understood .node-inner {
+    animation: breathe 4s ease-in-out infinite;
+  }
+
+  .cluster-axiom.understood .node-core { fill: rgba(74, 158, 255, 0.3); stroke: #4a9eff; }
+  .cluster-axiom.understood .node-glow { stroke: rgba(74, 158, 255, 0.4); }
+  .cluster-axiom.understood .node-inner { fill: rgba(74, 158, 255, 0.5); }
+
+  .cluster-core.understood .node-core { fill: rgba(80, 200, 120, 0.25); stroke: #50c878; }
+  .cluster-core.understood .node-glow { stroke: rgba(80, 200, 120, 0.35); }
+  .cluster-core.understood .node-inner { fill: rgba(80, 200, 120, 0.45); }
+
+  .cluster-mind.understood .node-core { fill: rgba(168, 85, 247, 0.25); stroke: #a855f7; }
+  .cluster-mind.understood .node-glow { stroke: rgba(168, 85, 247, 0.35); }
+  .cluster-mind.understood .node-inner { fill: rgba(168, 85, 247, 0.45); }
+
+  .cluster-quantum.understood .node-core { fill: rgba(249, 115, 22, 0.25); stroke: #f97316; }
+  .cluster-quantum.understood .node-glow { stroke: rgba(249, 115, 22, 0.35); }
+  .cluster-quantum.understood .node-inner { fill: rgba(249, 115, 22, 0.45); }
+
+  .cluster-thermo.understood .node-core { fill: rgba(239, 68, 68, 0.25); stroke: #ef4444; }
+  .cluster-thermo.understood .node-glow { stroke: rgba(239, 68, 68, 0.35); }
+  .cluster-thermo.understood .node-inner { fill: rgba(239, 68, 68, 0.45); }
+
+  .cluster-spacetime.understood .node-core { fill: rgba(20, 184, 166, 0.25); stroke: #14b8a6; }
+  .cluster-spacetime.understood .node-glow { stroke: rgba(20, 184, 166, 0.35); }
+  .cluster-spacetime.understood .node-inner { fill: rgba(20, 184, 166, 0.45); }
+
+  /* Just understood celebration */
+  .node.just-understood {
+    animation: celebrate 0.6s ease-out;
+  }
+
+  @keyframes celebrate {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.5); }
+    100% { transform: scale(1.2); }
+  }
+
+  @keyframes pulse-glow {
+    0%, 100% { opacity: 0.4; }
+    50% { opacity: 0.8; }
+  }
+
+  @keyframes breathe {
+    0%, 100% { opacity: 0.4; }
+    50% { opacity: 0.7; }
+  }
+
+  /* Tooltip */
+  .node-tooltip {
+    position: absolute;
+    pointer-events: none;
+    background: var(--depth-1, #12121a);
+    border: 1px solid var(--border, #2a2a3a);
+    border-radius: 6px;
+    padding: 0.5rem 0.75rem;
+    opacity: 0;
+    transform: translateY(4px);
+    transition: all 0.15s ease;
+    z-index: 100;
+  }
+
+  .node-tooltip.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .tooltip-title {
+    display: block;
+    font-family: var(--font-display, 'Cormorant Garamond', serif);
+    font-size: 1rem;
+    color: var(--text-primary, #e8e8f0);
+    white-space: nowrap;
+  }
+
+  .tooltip-connections {
+    display: block;
+    font-size: 0.7rem;
+    color: var(--text-muted, #606080);
+    font-family: var(--font-mono, 'JetBrains Mono', monospace);
+  }
+
+  /* Detail Panel */
+  .detail-panel {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 380px;
+    height: 100%;
+    background: var(--depth-1, #12121a);
+    border-left: 1px solid var(--border, #2a2a3a);
+    transform: translateX(100%);
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 50;
+    overflow-y: auto;
+  }
+
+  .detail-panel.open {
+    transform: translateX(0);
+  }
+
+  .panel-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    width: 32px;
+    height: 32px;
+    background: transparent;
+    border: 1px solid var(--border, #2a2a3a);
+    border-radius: 6px;
+    color: var(--text-muted, #606080);
+    font-size: 1.25rem;
+    cursor: pointer;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .panel-close:hover {
+    border-color: var(--text-secondary, #a0a0b8);
+    color: var(--text-primary, #e8e8f0);
+  }
+
+  .panel-content {
+    padding: 2rem;
+  }
+
+  .panel-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .panel-title {
+    font-family: var(--font-display, 'Cormorant Garamond', serif);
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: var(--text-primary, #e8e8f0);
+    margin: 0;
+    line-height: 1.3;
+  }
+
+  .panel-cluster {
+    font-family: var(--font-mono, 'JetBrains Mono', monospace);
+    font-size: 0.625rem;
+    text-transform: uppercase;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    flex-shrink: 0;
+  }
+
+  .panel-cluster.axiom { background: rgba(74, 158, 255, 0.15); color: #4a9eff; }
+  .panel-cluster.core { background: rgba(80, 200, 120, 0.15); color: #50c878; }
+  .panel-cluster.mind { background: rgba(168, 85, 247, 0.15); color: #a855f7; }
+  .panel-cluster.quantum { background: rgba(249, 115, 22, 0.15); color: #f97316; }
+  .panel-cluster.thermo { background: rgba(239, 68, 68, 0.15); color: #ef4444; }
+  .panel-cluster.spacetime { background: rgba(20, 184, 166, 0.15); color: #14b8a6; }
+
+  .panel-surface {
+    font-size: 0.9375rem;
+    color: var(--text-secondary, #a0a0b8);
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+  }
+
+  .panel-logic {
+    background: var(--void, #0a0a0c);
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .logic-row {
+    margin-bottom: 1rem;
+  }
+
+  .logic-row:last-child {
+    margin-bottom: 0;
+  }
+
+  .logic-label {
+    display: block;
+    font-size: 0.625rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--text-muted, #606080);
+    margin-bottom: 0.25rem;
+  }
+
+  .logic-value {
+    font-size: 0.875rem;
+    color: var(--text-primary, #e8e8f0);
+    margin: 0;
+    line-height: 1.5;
+  }
+
+  .panel-connections {
+    margin-bottom: 1.5rem;
+  }
+
+  .connections-label {
+    display: block;
+    font-size: 0.625rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--text-muted, #606080);
+    margin-bottom: 0.5rem;
+  }
+
+  .connections-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.375rem;
+  }
+
+  .connection-chip {
+    background: var(--depth-2, #1a1a24);
+    border: 1px solid var(--border, #2a2a3a);
+    border-radius: 20px;
+    padding: 0.25rem 0.75rem;
+    font-size: 0.75rem;
+    color: var(--text-secondary, #a0a0b8);
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+
+  .connection-chip:hover {
+    border-color: var(--accent, #4a9eff);
+    color: var(--accent, #4a9eff);
+  }
+
+  .understand-btn {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.875rem 1.5rem;
+    background: transparent;
+    border: 2px solid var(--border, #2a2a3a);
+    border-radius: 8px;
+    color: var(--text-secondary, #a0a0b8);
+    font-size: 0.875rem;
+    font-family: var(--font-body, 'Sora', sans-serif);
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+
+  .understand-btn:hover {
+    border-color: var(--accent, #4a9eff);
+    color: var(--accent, #4a9eff);
+    background: rgba(74, 158, 255, 0.05);
+  }
+
+  .understand-btn.understood {
+    background: rgba(80, 200, 120, 0.1);
+    border-color: #50c878;
+    color: #50c878;
+  }
+
+  .btn-icon {
+    font-size: 1rem;
+    line-height: 1;
+  }
+
+  /* Legend */
+  .network-legend {
+    position: absolute;
+    bottom: 1.5rem;
+    left: 1.5rem;
+    background: rgba(18, 18, 26, 0.9);
+    border: 1px solid var(--border, #2a2a3a);
+    border-radius: 8px;
+    padding: 1rem;
+    z-index: 10;
+  }
+
+  .legend-title {
+    font-size: 0.625rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--text-muted, #606080);
+    margin-bottom: 0.75rem;
+  }
+
+  .legend-items {
+    display: flex;
+    flex-direction: column;
+    gap: 0.375rem;
+  }
+
+  .legend-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.75rem;
+    color: var(--text-secondary, #a0a0b8);
+  }
+
+  .legend-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 2px solid;
+  }
+
+  .legend-dot.axiom { border-color: #4a9eff; background: rgba(74, 158, 255, 0.3); }
+  .legend-dot.core { border-color: #50c878; background: rgba(80, 200, 120, 0.3); }
+  .legend-dot.mind { border-color: #a855f7; background: rgba(168, 85, 247, 0.3); }
+  .legend-dot.quantum { border-color: #f97316; background: rgba(249, 115, 22, 0.3); }
+  .legend-dot.thermo { border-color: #ef4444; background: rgba(239, 68, 68, 0.3); }
+  .legend-dot.spacetime { border-color: #14b8a6; background: rgba(20, 184, 166, 0.3); }
+
+  /* Responsive */
+  @media (max-width: 900px) {
+    .detail-panel {
+      width: 100%;
+      height: 60%;
+      top: auto;
+      bottom: 0;
+      transform: translateY(100%);
+      border-left: none;
+      border-top: 1px solid var(--border, #2a2a3a);
+    }
+
+    .detail-panel.open {
+      transform: translateY(0);
+    }
+
+    .network-header {
+      flex-direction: column;
+      gap: 0.75rem;
+      padding: 1rem;
+    }
+
+    .network-legend {
+      bottom: auto;
+      top: 5rem;
+      left: 1rem;
+      padding: 0.75rem;
+    }
+
+    .legend-items {
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 0.5rem 1rem;
+    }
+  }
+</style>
