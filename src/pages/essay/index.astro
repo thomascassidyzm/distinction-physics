@@ -3,6 +3,27 @@ import GuidePanel from '../../components/GuidePanel.astro';
 import { sections as sectionContent } from '../../content/essay-1/sections';
 import { sections as sectionMeta, essayMeta, epistemicStatusDescriptions } from '../../content/essay-1/config';
 import { VERSION, BUILD } from '../../lib/version';
+
+function parseMarkdown(text: string): string {
+  return text
+    .split('\n\n')
+    .map(para => {
+      // Handle list items
+      if (para.startsWith('- ')) {
+        const items = para.split('\n').map(line =>
+          line.startsWith('- ') ? `<li>${line.slice(2)}</li>` : line
+        ).join('');
+        return `<ul>${items}</ul>`;
+      }
+      // Handle bold and italic
+      let processed = para
+        .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
+        .replace(/\*(.+?)\*/g, '<em>$1</em>')
+        .replace(/`(.+?)`/g, '<code>$1</code>');
+      return `<p>${processed}</p>`;
+    })
+    .join('\n');
+}
 ---
 
 <!DOCTYPE html>
@@ -150,22 +171,6 @@ import { VERSION, BUILD } from '../../lib/version';
   </script>
 </body>
 </html>
-
-<script>
-  function parseMarkdown(text: string): string {
-    return text
-      .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
-      .replace(/\*(.+?)\*/g, '<em>$1</em>')
-      .replace(/`(.+?)`/g, '<code>$1</code>')
-      .replace(/\n\n/g, '</p><p>')
-      .replace(/^- (.+)$/gm, '<li>$1</li>')
-      .replace(/(<li>.*<\/li>)/s, '<ul>$1</ul>')
-      .replace(/^(.+)$/gm, (match) => {
-        if (match.startsWith('<')) return match;
-        return `<p>${match}</p>`;
-      });
-  }
-</script>
 
 <style>
   :root {
