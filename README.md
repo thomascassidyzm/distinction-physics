@@ -35,3 +35,4 @@ This site deploys to Vercel. Add your `ANTHROPIC_API_KEY` as an environment vari
 ## Status
 
 V7 · Anti-fragile after 36 adversarial attacks across 7 rounds.
+# Trigger redeploy
