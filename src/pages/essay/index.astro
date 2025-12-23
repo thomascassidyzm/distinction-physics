@@ -47,10 +47,13 @@ function parseMarkdown(text: string): string {
         <span class="date">{essayMeta.date}</span>
       </div>
     </nav>
-    <div class="read-modes">
-      <button class="mode-btn active" data-mode="essay">Essay</button>
-      <button class="mode-btn" data-mode="overview">Overview</button>
-      <button class="mode-btn" data-mode="academic">Academic</button>
+    <div class="header-actions">
+      <a href="/explore" class="nav-link">Explore Network</a>
+      <div class="read-modes">
+        <button class="mode-btn active" data-mode="essay">Essay</button>
+        <button class="mode-btn" data-mode="overview">Overview</button>
+        <button class="mode-btn" data-mode="academic">Academic</button>
+      </div>
     </div>
   </header>
 
@@ -241,6 +244,23 @@ function parseMarkdown(text: string): string {
     font-size: 0.75rem;
     color: var(--text-muted);
     font-family: var(--font-mono);
+  }
+
+  .header-actions {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .nav-link {
+    font-size: 0.8125rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .nav-link:hover {
+    color: var(--accent);
   }
 
   .read-modes {
