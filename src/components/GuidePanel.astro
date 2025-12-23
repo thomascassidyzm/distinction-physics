@@ -5,7 +5,8 @@
 <aside id="guide-panel" class="guide-panel">
   <header class="guide-header">
     <div class="guide-identity">
-      <span class="guide-name">Leibniz</span>
+      <span class="guide-dot"></span>
+      <span class="guide-name">Alexander</span>
       <span class="guide-role">Epistemic Guide</span>
     </div>
     <div class="context-display">
@@ -18,9 +19,9 @@
   <div id="messages-container" class="messages-container">
     <div class="message assistant">
       <div class="message-content">
-        <p>Welcome to Distinction Physics. I'm Leibniz, your guide through this framework.</p>
-        <p>The framework begins with a simple observation: <strong>distinction is primitive</strong>. From this, plus two physical constraints, we derive the structure of accessible reality.</p>
-        <p>Ask me anything about the framework—the axioms, the derivations, how it relates to physics, or where the genuine uncertainties lie.</p>
+        <p>I'm Alexander, here to help you build understanding of Distinction Physics—not by explaining at you, but by helping you construct your own distinction network.</p>
+        <p>The framework starts with a simple observation: <strong>distinction is primitive</strong>. Everything else follows from there.</p>
+        <p>What would you like to explore? I'll help you see what's similar to things you already know, what's different, and how the pieces connect.</p>
       </div>
     </div>
   </div>
@@ -160,6 +161,14 @@
     // Clear input
     input.value = '';
 
+    // Show typing indicator
+    const typingEl = document.createElement('div');
+    typingEl.className = 'message assistant';
+    typingEl.id = 'typing-indicator';
+    typingEl.innerHTML = '<div class="message-content"><div class="typing-indicator"><span></span><span></span><span></span></div></div>';
+    container?.appendChild(typingEl);
+    container.scrollTop = container.scrollHeight;
+
     try {
       const response = await fetch('/api/guide', {
         method: 'POST',
@@ -176,11 +185,15 @@
       }
 
       const data = await response.json();
+      // Remove typing indicator
+      document.getElementById('typing-indicator')?.remove();
       addMessageToUI(data.message, 'assistant');
       conversationHistory.push({ role: 'assistant', content: data.message });
       saveConversation();
     } catch (error) {
       console.error('Guide error:', error);
+      // Remove typing indicator on error too
+      document.getElementById('typing-indicator')?.remove();
       addMessageToUI('I apologize, but I encountered an error. Please try again.', 'assistant');
     } finally {
       input.disabled = false;
@@ -267,6 +280,19 @@
     margin-bottom: 0.75rem;
   }
 
+  .guide-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--accent, #4a9eff);
+    animation: pulse 2s ease-in-out infinite;
+  }
+
+  @keyframes pulse {
+    0%, 100% { opacity: 0.6; transform: scale(1); }
+    50% { opacity: 1; transform: scale(1.1); }
+  }
+
   .guide-name {
     font-family: var(--font-display, 'Cormorant Garamond', serif);
     font-size: 1.25rem;
@@ -279,6 +305,31 @@
     color: var(--text-muted, #606080);
     text-transform: uppercase;
     letter-spacing: 0.05em;
+  }
+
+  /* Typing indicator */
+  .typing-indicator {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 8px 0;
+  }
+
+  .typing-indicator span {
+    width: 6px;
+    height: 6px;
+    background: var(--accent, #4a9eff);
+    border-radius: 50%;
+    animation: typing-pulse 1.2s infinite ease-in-out;
+  }
+
+  .typing-indicator span:nth-child(1) { animation-delay: 0s; }
+  .typing-indicator span:nth-child(2) { animation-delay: 0.15s; }
+  .typing-indicator span:nth-child(3) { animation-delay: 0.3s; }
+
+  @keyframes typing-pulse {
+    0%, 60%, 100% { opacity: 0.3; transform: scale(1); }
+    30% { opacity: 1; transform: scale(1.15); }
   }
 
   .context-display {
