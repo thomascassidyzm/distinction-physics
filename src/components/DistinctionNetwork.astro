@@ -1,80 +1,22 @@
 ---
-// Distinction Network Visualization
-// A constellation of concepts that illuminates as understanding grows
+// Distinction Network Visualization with D3.js Force Simulation
+// An organic, brain-like constellation that grows as understanding develops
 
 import { propositions } from '../content/propositions';
 
-// Calculate node positions based on logical structure
-// Axioms at center, derived concepts radiate outward
-const nodePositions = calculatePositions(propositions);
+// Prepare data for D3
+const nodes = propositions.map(prop => ({
+  id: prop.id,
+  title: prop.title,
+  surface: prop.surface,
+  claim: prop.logic.claim,
+  conclusion: prop.logic.conclusion,
+  linksTo: prop.linksTo,
+  cluster: getCluster(prop.id),
+  isAxiom: prop.id.includes('axiom'),
+}));
 
-function calculatePositions(props: typeof propositions) {
-  const positions: Record<string, { x: number; y: number; ring: number }> = {};
-
-  // Classify nodes by their depth from axioms
-  const axiomIds = ['axiom-1-energy-cost', 'axiom-2-finite-budget'];
-  const visited = new Set<string>();
-  const rings: string[][] = [axiomIds];
-
-  // BFS to assign rings
-  axiomIds.forEach(id => visited.add(id));
-  let currentRing = axiomIds;
-
-  for (let depth = 0; depth < 5; depth++) {
-    const nextRing: string[] = [];
-    currentRing.forEach(id => {
-      const prop = props.find(p => p.id === id);
-      if (prop) {
-        prop.linksTo.forEach(linkedId => {
-          if (!visited.has(linkedId)) {
-            visited.add(linkedId);
-            nextRing.push(linkedId);
-          }
-        });
-      }
-    });
-    if (nextRing.length > 0) {
-      rings.push(nextRing);
-      currentRing = nextRing;
-    }
-  }
-
-  // Add any remaining nodes to outer ring
-  const remaining = props.filter(p => !visited.has(p.id)).map(p => p.id);
-  if (remaining.length > 0) {
-    rings.push(remaining);
-  }
-
-  // Position nodes in concentric rings
-  // Center in viewBox and adjust spacing for better viewport fit
-  const centerX = 500;
-  const centerY = 350;
-  const baseRingSpacing = 70; // Tighter spacing for more nodes
-
-  rings.forEach((ring, ringIndex) => {
-    // Decrease spacing as rings grow (logarithmic feel)
-    const ringSpacing = baseRingSpacing * (1 - ringIndex * 0.05);
-    const radius = ringIndex === 0 ? 0 : ringSpacing * ringIndex;
-    const angleStep = (2 * Math.PI) / Math.max(ring.length, 1);
-    const startAngle = -Math.PI / 2; // Start from top
-
-    ring.forEach((id, i) => {
-      // Slight offset for alternating rings
-      const offset = ringIndex % 2 === 0 ? 0 : angleStep / 2;
-      const angle = startAngle + angleStep * i + offset;
-      positions[id] = {
-        x: centerX + radius * Math.cos(angle),
-        y: centerY + radius * Math.sin(angle),
-        ring: ringIndex,
-      };
-    });
-  });
-
-  return positions;
-}
-
-// Build edges from linksTo
-const edges = propositions.flatMap(prop =>
+const links = propositions.flatMap(prop =>
   prop.linksTo
     .filter(targetId => propositions.some(p => p.id === targetId))
     .map(targetId => ({
@@ -83,7 +25,6 @@ const edges = propositions.flatMap(prop =>
     }))
 );
 
-// Assign conceptual clusters for color variation
 function getCluster(id: string): string {
   if (id.includes('axiom')) return 'axiom';
   if (id.includes('consciousness') || id.includes('self-reference') || id.includes('learning') || id.includes('spaced') || id.includes('attention') || id.includes('chunking') || id.includes('hard-problem')) return 'mind';
@@ -122,165 +63,29 @@ function getCluster(id: string): string {
   </div>
 
   <div class="network-viewport" id="network-viewport">
-    <svg
-      class="network-svg"
-      viewBox="0 0 1000 700"
-      preserveAspectRatio="xMidYMid meet"
-    >
+    <svg class="network-svg" id="network-svg">
       <defs>
-        <!-- Ambient glow filters for each cluster -->
-        <filter id="glow-axiom" x="-100%" y="-100%" width="300%" height="300%">
-          <feGaussianBlur stdDeviation="4" result="blur" />
-          <feFlood flood-color="#4a9eff" flood-opacity="0.6" />
-          <feComposite in2="blur" operator="in" />
-          <feMerge>
-            <feMergeNode />
-            <feMergeNode in="SourceGraphic" />
-          </feMerge>
-        </filter>
-        <filter id="glow-core" x="-100%" y="-100%" width="300%" height="300%">
+        <!-- Glow filter for understood nodes -->
+        <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
           <feGaussianBlur stdDeviation="3" result="blur" />
-          <feFlood flood-color="#50c878" flood-opacity="0.5" />
-          <feComposite in2="blur" operator="in" />
           <feMerge>
-            <feMergeNode />
+            <feMergeNode in="blur" />
             <feMergeNode in="SourceGraphic" />
           </feMerge>
-        </filter>
-        <filter id="glow-mind" x="-100%" y="-100%" width="300%" height="300%">
-          <feGaussianBlur stdDeviation="3" result="blur" />
-          <feFlood flood-color="#a855f7" flood-opacity="0.5" />
-          <feComposite in2="blur" operator="in" />
-          <feMerge>
-            <feMergeNode />
-            <feMergeNode in="SourceGraphic" />
-          </feMerge>
-        </filter>
-        <filter id="glow-quantum" x="-100%" y="-100%" width="300%" height="300%">
-          <feGaussianBlur stdDeviation="3" result="blur" />
-          <feFlood flood-color="#f97316" flood-opacity="0.5" />
-          <feComposite in2="blur" operator="in" />
-          <feMerge>
-            <feMergeNode />
-            <feMergeNode in="SourceGraphic" />
-          </feMerge>
-        </filter>
-        <filter id="glow-thermo" x="-100%" y="-100%" width="300%" height="300%">
-          <feGaussianBlur stdDeviation="3" result="blur" />
-          <feFlood flood-color="#ef4444" flood-opacity="0.5" />
-          <feComposite in2="blur" operator="in" />
-          <feMerge>
-            <feMergeNode />
-            <feMergeNode in="SourceGraphic" />
-          </feMerge>
-        </filter>
-        <filter id="glow-spacetime" x="-100%" y="-100%" width="300%" height="300%">
-          <feGaussianBlur stdDeviation="3" result="blur" />
-          <feFlood flood-color="#14b8a6" flood-opacity="0.5" />
-          <feComposite in2="blur" operator="in" />
-          <feMerge>
-            <feMergeNode />
-            <feMergeNode in="SourceGraphic" />
-          </feMerge>
-        </filter>
-
-        <!-- Subtle noise texture -->
-        <filter id="noise">
-          <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="4" result="noise" />
-          <feDisplacementMap in="SourceGraphic" in2="noise" scale="0.5" />
         </filter>
       </defs>
-
-      <!-- Background stars (ambient decoration) -->
-      <g class="background-stars">
-        {Array.from({ length: 40 }).map((_, i) => (
-          <circle
-            cx={Math.random() * 1000}
-            cy={Math.random() * 700}
-            r={Math.random() * 0.8 + 0.2}
-            fill="rgba(255,255,255,0.15)"
-            class="bg-star"
-            style={`animation-delay: ${Math.random() * 5}s`}
-          />
-        ))}
-      </g>
-
-      <!-- Connection lines (drawn first, under nodes) -->
-      <g class="edges">
-        {edges.map((edge, i) => {
-          const sourcePos = nodePositions[edge.source];
-          const targetPos = nodePositions[edge.target];
-          if (!sourcePos || !targetPos) return null;
-          return (
-            <line
-              class="edge"
-              x1={sourcePos.x}
-              y1={sourcePos.y}
-              x2={targetPos.x}
-              y2={targetPos.y}
-              data-source={edge.source}
-              data-target={edge.target}
-              stroke-dasharray="2,4"
-            />
-          );
-        })}
-      </g>
-
-      <!-- Concept nodes -->
-      <g class="nodes">
-        {propositions.map((prop) => {
-          const pos = nodePositions[prop.id];
-          if (!pos) return null;
-          const cluster = getCluster(prop.id);
-          const isAxiom = prop.id.includes('axiom');
-          const radius = isAxiom ? 18 : 12;
-
-          return (
-            <g
-              class={`node cluster-${cluster}`}
-              data-id={prop.id}
-              data-cluster={cluster}
-              transform={`translate(${pos.x}, ${pos.y})`}
-            >
-              <!-- Outer glow ring (visible when understood) -->
-              <circle
-                class="node-glow"
-                r={radius + 8}
-                fill="none"
-              />
-
-              <!-- Main node circle -->
-              <circle
-                class="node-core"
-                r={radius}
-              />
-
-              <!-- Inner detail -->
-              <circle
-                class="node-inner"
-                r={radius * 0.4}
-              />
-
-              <!-- Invisible hit area for easier clicking -->
-              <circle
-                class="node-hitarea"
-                r={radius + 12}
-                fill="transparent"
-              />
-            </g>
-          );
-        })}
-      </g>
+      <g class="links-layer" id="links-layer"></g>
+      <g class="nodes-layer" id="nodes-layer"></g>
     </svg>
 
-    <!-- Floating label that follows hovered node -->
+    <!-- Floating tooltip -->
     <div class="node-tooltip" id="node-tooltip">
       <span class="tooltip-title"></span>
       <span class="tooltip-connections"></span>
     </div>
   </div>
 
-  <!-- Concept detail panel (slides in when node is clicked) -->
+  <!-- Detail panel -->
   <div class="detail-panel" id="detail-panel">
     <button class="panel-close" id="panel-close">×</button>
     <div class="panel-content">
@@ -289,7 +94,6 @@ function getCluster(id: string): string {
         <span class="panel-cluster" id="panel-cluster"></span>
       </div>
       <p class="panel-surface" id="panel-surface"></p>
-
       <div class="panel-logic">
         <div class="logic-row">
           <span class="logic-label">Claim</span>
@@ -300,9 +104,7 @@ function getCluster(id: string): string {
           <p class="logic-value" id="panel-conclusion"></p>
         </div>
       </div>
-
       <div class="panel-connections" id="panel-connections"></div>
-
       <button class="understand-btn" id="understand-btn">
         <span class="btn-icon">⬡</span>
         <span class="btn-text">Mark as Understood</span>
@@ -315,70 +117,160 @@ function getCluster(id: string): string {
     <div class="legend-title">Concept Clusters</div>
     <div class="legend-items">
       <div class="legend-item"><span class="legend-dot axiom"></span>Axioms</div>
-      <div class="legend-item"><span class="legend-dot core"></span>Core Derived</div>
-      <div class="legend-item"><span class="legend-dot mind"></span>Mind & Learning</div>
+      <div class="legend-item"><span class="legend-dot core"></span>Core</div>
+      <div class="legend-item"><span class="legend-dot mind"></span>Mind</div>
       <div class="legend-item"><span class="legend-dot quantum"></span>Quantum</div>
-      <div class="legend-item"><span class="legend-dot thermo"></span>Thermodynamics</div>
+      <div class="legend-item"><span class="legend-dot thermo"></span>Thermo</div>
       <div class="legend-item"><span class="legend-dot spacetime"></span>Spacetime</div>
-      <div class="legend-item"><span class="legend-dot formal"></span>Formal/Math</div>
+      <div class="legend-item"><span class="legend-dot formal"></span>Formal</div>
     </div>
   </div>
 </div>
 
-<script define:vars={{ propositions, nodePositions }}>
-  // Proposition data available to client
-  window.propositionData = propositions;
-  window.nodePositions = nodePositions;
+<script define:vars={{ nodes, links }}>
+  window.networkNodes = nodes;
+  window.networkLinks = links;
 </script>
 
 <script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const props = window.propositionData;
-    const positions = window.nodePositions;
+  import * as d3 from 'd3';
 
-    // Load understood concepts from localStorage
+  document.addEventListener('DOMContentLoaded', () => {
+    const nodes = JSON.parse(JSON.stringify(window.networkNodes));
+    const links = JSON.parse(JSON.stringify(window.networkLinks));
+
+    // Cluster colors
+    const clusterColors = {
+      axiom: '#4a9eff',
+      core: '#50c878',
+      mind: '#a855f7',
+      quantum: '#f97316',
+      thermo: '#ef4444',
+      spacetime: '#14b8a6',
+      formal: '#ec4899',
+    };
+
+    // Load understood state
     const understoodKey = 'distinction-physics-understood';
     let understood = new Set(JSON.parse(localStorage.getItem(understoodKey) || '[]'));
 
     // DOM elements
-    const nodes = document.querySelectorAll('.node');
-    const edges = document.querySelectorAll('.edge');
+    const container = document.getElementById('network-viewport');
+    const svg = d3.select('#network-svg');
+    const linksLayer = d3.select('#links-layer');
+    const nodesLayer = d3.select('#nodes-layer');
     const tooltip = document.getElementById('node-tooltip');
     const detailPanel = document.getElementById('detail-panel');
     const panelClose = document.getElementById('panel-close');
     const understandBtn = document.getElementById('understand-btn');
     const progressCount = document.getElementById('progress-count');
+    const demoBtn = document.getElementById('demo-btn');
+    const demoLabel = document.getElementById('demo-label');
+    const demoLabelText = demoLabel.querySelector('.demo-label-text');
 
     let currentNodeId = null;
+    let width = container.clientWidth;
+    let height = container.clientHeight;
 
-    // Update progress display
+    // Set SVG size
+    svg.attr('width', width).attr('height', height);
+
+    // Create force simulation
+    const simulation = d3.forceSimulation(nodes)
+      .force('link', d3.forceLink(links)
+        .id(d => d.id)
+        .distance(80)
+        .strength(0.3))
+      .force('charge', d3.forceManyBody()
+        .strength(-200)
+        .distanceMax(300))
+      .force('center', d3.forceCenter(width / 2, height / 2))
+      .force('collision', d3.forceCollide()
+        .radius(d => d.isAxiom ? 25 : 18))
+      .force('x', d3.forceX(width / 2).strength(0.05))
+      .force('y', d3.forceY(height / 2).strength(0.05));
+
+    // Create curved links
+    const link = linksLayer.selectAll('.link')
+      .data(links)
+      .join('path')
+      .attr('class', 'link')
+      .attr('fill', 'none')
+      .attr('stroke', 'rgba(255,255,255,0.08)')
+      .attr('stroke-width', 1);
+
+    // Create node groups
+    const node = nodesLayer.selectAll('.node')
+      .data(nodes)
+      .join('g')
+      .attr('class', d => `node cluster-${d.cluster}`)
+      .attr('data-id', d => d.id)
+      .call(d3.drag()
+        .on('start', dragstarted)
+        .on('drag', dragged)
+        .on('end', dragended));
+
+    // Node outer glow (for understood state)
+    node.append('circle')
+      .attr('class', 'node-glow')
+      .attr('r', d => d.isAxiom ? 22 : 16)
+      .attr('fill', 'none')
+      .attr('stroke', d => clusterColors[d.cluster])
+      .attr('stroke-width', 2)
+      .attr('opacity', 0);
+
+    // Node core circle
+    node.append('circle')
+      .attr('class', 'node-core')
+      .attr('r', d => d.isAxiom ? 14 : 10)
+      .attr('fill', d => `${clusterColors[d.cluster]}15`)
+      .attr('stroke', d => `${clusterColors[d.cluster]}60`)
+      .attr('stroke-width', 1.5);
+
+    // Node inner dot
+    node.append('circle')
+      .attr('class', 'node-inner')
+      .attr('r', d => d.isAxiom ? 5 : 3.5)
+      .attr('fill', d => `${clusterColors[d.cluster]}40`);
+
+    // Update progress
     function updateProgress() {
       progressCount.textContent = understood.size.toString();
       localStorage.setItem(understoodKey, JSON.stringify([...understood]));
     }
 
-    // Apply understood state to nodes
+    // Apply understood state
     function applyUnderstoodState() {
-      nodes.forEach(node => {
-        const id = node.dataset.id;
-        if (understood.has(id)) {
-          node.classList.add('understood');
-        } else {
-          node.classList.remove('understood');
-        }
+      node.each(function(d) {
+        const isUnderstood = understood.has(d.id);
+        const nodeEl = d3.select(this);
+
+        nodeEl.classed('understood', isUnderstood);
+        nodeEl.select('.node-glow')
+          .attr('opacity', isUnderstood ? 0.6 : 0)
+          .attr('filter', isUnderstood ? 'url(#glow)' : null);
+        nodeEl.select('.node-core')
+          .attr('fill', isUnderstood ? `${clusterColors[d.cluster]}40` : `${clusterColors[d.cluster]}15`)
+          .attr('stroke', isUnderstood ? clusterColors[d.cluster] : `${clusterColors[d.cluster]}60`)
+          .attr('stroke-width', isUnderstood ? 2 : 1.5);
+        nodeEl.select('.node-inner')
+          .attr('fill', isUnderstood ? `${clusterColors[d.cluster]}80` : `${clusterColors[d.cluster]}40`);
       });
 
-      // Update edges - glow if both ends are understood
-      edges.forEach(edge => {
-        const source = edge.dataset.source;
-        const target = edge.dataset.target;
-        if (understood.has(source) && understood.has(target)) {
-          edge.classList.add('active');
-        } else if (understood.has(source) || understood.has(target)) {
-          edge.classList.add('partial');
-        } else {
-          edge.classList.remove('active', 'partial');
+      // Update links
+      link.attr('stroke', d => {
+        const sourceUnderstood = understood.has(d.source.id || d.source);
+        const targetUnderstood = understood.has(d.target.id || d.target);
+        if (sourceUnderstood && targetUnderstood) {
+          return 'rgba(74, 158, 255, 0.4)';
+        } else if (sourceUnderstood || targetUnderstood) {
+          return 'rgba(74, 158, 255, 0.15)';
         }
+        return 'rgba(255,255,255,0.08)';
+      }).attr('stroke-width', d => {
+        const sourceUnderstood = understood.has(d.source.id || d.source);
+        const targetUnderstood = understood.has(d.target.id || d.target);
+        return (sourceUnderstood && targetUnderstood) ? 1.5 : 1;
       });
 
       updateProgress();
@@ -387,119 +279,98 @@ function getCluster(id: string): string {
     // Initial state
     applyUnderstoodState();
 
-    // Node hover
-    nodes.forEach(node => {
-      node.addEventListener('mouseenter', (e) => {
-        const id = node.dataset.id;
-        const prop = props.find(p => p.id === id);
-        if (!prop) return;
+    // Node interactions
+    node.on('mouseenter', function(event, d) {
+      const titleEl = tooltip.querySelector('.tooltip-title');
+      const connEl = tooltip.querySelector('.tooltip-connections');
+      titleEl.textContent = d.title;
+      connEl.textContent = `${d.linksTo.length} connections`;
+      tooltip.classList.add('visible');
 
-        const titleEl = tooltip.querySelector('.tooltip-title');
-        const connEl = tooltip.querySelector('.tooltip-connections');
-        titleEl.textContent = prop.title;
-        connEl.textContent = `${prop.linksTo.length} connections`;
-
-        tooltip.classList.add('visible');
-
-        // Highlight connected edges
-        edges.forEach(edge => {
-          if (edge.dataset.source === id || edge.dataset.target === id) {
-            edge.classList.add('highlighted');
-          }
-        });
-
-        // Highlight connected nodes
-        nodes.forEach(n => {
-          const nId = n.dataset.id;
-          const isConnected = prop.linksTo.includes(nId) ||
-            props.some(p => p.id === nId && p.linksTo.includes(id));
-          if (isConnected) {
-            n.classList.add('connected');
-          }
-        });
+      // Highlight connected links
+      link.attr('stroke', l => {
+        if ((l.source.id || l.source) === d.id || (l.target.id || l.target) === d.id) {
+          return 'rgba(255,255,255,0.4)';
+        }
+        return link.attr('stroke');
+      }).attr('stroke-width', l => {
+        if ((l.source.id || l.source) === d.id || (l.target.id || l.target) === d.id) {
+          return 2;
+        }
+        return 1;
       });
 
-      node.addEventListener('mouseleave', () => {
-        tooltip.classList.remove('visible');
-        edges.forEach(edge => edge.classList.remove('highlighted'));
-        nodes.forEach(n => n.classList.remove('connected'));
-      });
+      // Highlight connected nodes
+      node.classed('connected', n =>
+        d.linksTo.includes(n.id) ||
+        nodes.some(other => other.id === n.id && other.linksTo.includes(d.id))
+      );
+    })
+    .on('mousemove', function(event) {
+      const rect = container.getBoundingClientRect();
+      tooltip.style.left = `${event.clientX - rect.left + 12}px`;
+      tooltip.style.top = `${event.clientY - rect.top - 20}px`;
+    })
+    .on('mouseleave', function() {
+      tooltip.classList.remove('visible');
+      applyUnderstoodState(); // Reset link colors
+      node.classed('connected', false);
+    })
+    .on('click', function(event, d) {
+      event.stopPropagation();
+      currentNodeId = d.id;
 
-      node.addEventListener('mousemove', (e) => {
-        const rect = document.getElementById('network-viewport').getBoundingClientRect();
-        tooltip.style.left = `${e.clientX - rect.left + 12}px`;
-        tooltip.style.top = `${e.clientY - rect.top - 20}px`;
-      });
+      // Populate panel
+      document.getElementById('panel-title').textContent = d.title;
+      document.getElementById('panel-cluster').textContent = d.cluster;
+      document.getElementById('panel-cluster').className = `panel-cluster ${d.cluster}`;
+      document.getElementById('panel-surface').textContent = d.surface;
+      document.getElementById('panel-claim').textContent = d.claim;
+      document.getElementById('panel-conclusion').textContent = d.conclusion;
 
-      // Node click - show detail panel
-      node.addEventListener('click', () => {
-        const id = node.dataset.id;
-        const prop = props.find(p => p.id === id);
-        if (!prop) return;
-
-        currentNodeId = id;
-
-        // Populate panel
-        document.getElementById('panel-title').textContent = prop.title;
-        document.getElementById('panel-cluster').textContent = node.dataset.cluster;
-        document.getElementById('panel-cluster').className = `panel-cluster ${node.dataset.cluster}`;
-        document.getElementById('panel-surface').textContent = prop.surface;
-        document.getElementById('panel-claim').textContent = prop.logic.claim;
-        document.getElementById('panel-conclusion').textContent = prop.logic.conclusion;
-
-        // Connections
-        const connectionsEl = document.getElementById('panel-connections');
-        if (prop.linksTo.length > 0) {
-          const connectedProps = prop.linksTo
-            .map(linkId => props.find(p => p.id === linkId))
-            .filter(Boolean);
-
-          connectionsEl.innerHTML = `
-            <span class="connections-label">Connects to</span>
-            <div class="connections-list">
-              ${connectedProps.map(p => `
-                <button class="connection-chip" data-id="${p.id}">
-                  ${p.title}
-                </button>
-              `).join('')}
-            </div>
-          `;
-
-          // Add click handlers to chips
-          connectionsEl.querySelectorAll('.connection-chip').forEach(chip => {
-            chip.addEventListener('click', () => {
-              const targetId = chip.dataset.id;
-              const targetNode = document.querySelector(`.node[data-id="${targetId}"]`);
-              if (targetNode) {
-                targetNode.dispatchEvent(new Event('click'));
-              }
-            });
+      // Connections
+      const connectionsEl = document.getElementById('panel-connections');
+      if (d.linksTo.length > 0) {
+        const connectedNodes = d.linksTo
+          .map(linkId => nodes.find(n => n.id === linkId))
+          .filter(Boolean);
+        connectionsEl.innerHTML = `
+          <span class="connections-label">Connects to</span>
+          <div class="connections-list">
+            ${connectedNodes.map(n => `
+              <button class="connection-chip" data-id="${n.id}">${n.title}</button>
+            `).join('')}
+          </div>
+        `;
+        connectionsEl.querySelectorAll('.connection-chip').forEach(chip => {
+          chip.addEventListener('click', () => {
+            const targetNode = nodes.find(n => n.id === chip.dataset.id);
+            if (targetNode) {
+              node.filter(n => n.id === targetNode.id).dispatch('click');
+            }
           });
-        } else {
-          connectionsEl.innerHTML = '';
-        }
+        });
+      } else {
+        connectionsEl.innerHTML = '';
+      }
 
-        // Update understand button state
-        if (understood.has(id)) {
-          understandBtn.classList.add('understood');
-          understandBtn.querySelector('.btn-text').textContent = 'Understood ✓';
-        } else {
-          understandBtn.classList.remove('understood');
-          understandBtn.querySelector('.btn-text').textContent = 'Mark as Understood';
-        }
+      // Update button state
+      if (understood.has(d.id)) {
+        understandBtn.classList.add('understood');
+        understandBtn.querySelector('.btn-text').textContent = 'Understood ✓';
+      } else {
+        understandBtn.classList.remove('understood');
+        understandBtn.querySelector('.btn-text').textContent = 'Mark as Understood';
+      }
 
-        // Highlight the selected node
-        nodes.forEach(n => n.classList.remove('selected'));
-        node.classList.add('selected');
-
-        detailPanel.classList.add('open');
-      });
+      node.classed('selected', n => n.id === d.id);
+      detailPanel.classList.add('open');
     });
 
     // Close panel
     panelClose.addEventListener('click', () => {
       detailPanel.classList.remove('open');
-      nodes.forEach(n => n.classList.remove('selected'));
+      node.classed('selected', false);
       currentNodeId = null;
     });
 
@@ -516,80 +387,80 @@ function getCluster(id: string): string {
         understandBtn.classList.add('understood');
         understandBtn.querySelector('.btn-text').textContent = 'Understood ✓';
 
-        // Celebration pulse
-        const node = document.querySelector(`.node[data-id="${currentNodeId}"]`);
-        node.classList.add('just-understood');
-        setTimeout(() => node.classList.remove('just-understood'), 1000);
+        // Celebration
+        node.filter(n => n.id === currentNodeId)
+          .select('.node-core')
+          .transition()
+          .duration(200)
+          .attr('r', d => (d.isAxiom ? 14 : 10) * 1.5)
+          .transition()
+          .duration(300)
+          .attr('r', d => d.isAxiom ? 14 : 10);
       }
 
       applyUnderstoodState();
     });
 
-    // Pan/zoom (simplified - touch-friendly)
-    const viewport = document.getElementById('network-viewport');
-    const svg = viewport.querySelector('.network-svg');
-    let scale = 1;
-    let translateX = 0;
-    let translateY = 0;
-    let isDragging = false;
-    let startX, startY;
-
-    function updateTransform() {
-      svg.style.transform = `translate(${translateX}px, ${translateY}px) scale(${scale})`;
+    // Curved link path generator
+    function linkArc(d) {
+      const dx = d.target.x - d.source.x;
+      const dy = d.target.y - d.source.y;
+      const dr = Math.sqrt(dx * dx + dy * dy) * 1.5; // Curve radius
+      return `M${d.source.x},${d.source.y}A${dr},${dr} 0 0,1 ${d.target.x},${d.target.y}`;
     }
 
-    viewport.addEventListener('wheel', (e) => {
-      e.preventDefault();
-      const delta = e.deltaY > 0 ? 0.9 : 1.1;
-      scale = Math.min(2.5, Math.max(0.5, scale * delta));
-      updateTransform();
+    // Tick function
+    simulation.on('tick', () => {
+      // Keep nodes within bounds
+      nodes.forEach(d => {
+        d.x = Math.max(30, Math.min(width - 30, d.x));
+        d.y = Math.max(30, Math.min(height - 30, d.y));
+      });
+
+      link.attr('d', linkArc);
+      node.attr('transform', d => `translate(${d.x},${d.y})`);
     });
 
-    viewport.addEventListener('mousedown', (e) => {
-      if (e.target.closest('.node')) return;
-      isDragging = true;
-      startX = e.clientX - translateX;
-      startY = e.clientY - translateY;
-      viewport.style.cursor = 'grabbing';
-    });
+    // Drag functions
+    function dragstarted(event, d) {
+      if (!event.active) simulation.alphaTarget(0.3).restart();
+      d.fx = d.x;
+      d.fy = d.y;
+    }
 
-    window.addEventListener('mousemove', (e) => {
-      if (!isDragging) return;
-      translateX = e.clientX - startX;
-      translateY = e.clientY - startY;
-      updateTransform();
-    });
+    function dragged(event, d) {
+      d.fx = event.x;
+      d.fy = event.y;
+    }
 
-    window.addEventListener('mouseup', () => {
-      isDragging = false;
-      viewport.style.cursor = 'grab';
-    });
+    function dragended(event, d) {
+      if (!event.active) simulation.alphaTarget(0);
+      d.fx = null;
+      d.fy = null;
+    }
 
-    // Reset view button
-    viewport.addEventListener('dblclick', (e) => {
-      if (e.target.closest('.node')) return;
-      scale = 1;
-      translateX = 0;
-      translateY = 0;
-      updateTransform();
+    // Resize handler
+    window.addEventListener('resize', () => {
+      width = container.clientWidth;
+      height = container.clientHeight;
+      svg.attr('width', width).attr('height', height);
+      simulation.force('center', d3.forceCenter(width / 2, height / 2));
+      simulation.force('x', d3.forceX(width / 2).strength(0.05));
+      simulation.force('y', d3.forceY(height / 2).strength(0.05));
+      simulation.alpha(0.3).restart();
     });
 
     // ========================================
-    // DEMO MODE - "Watch it Grow" simulation
+    // DEMO MODE
     // ========================================
-    const demoBtn = document.getElementById('demo-btn');
-    const demoLabel = document.getElementById('demo-label');
-    const demoLabelText = demoLabel.querySelector('.demo-label-text');
     let isDemoRunning = false;
     let demoTimeout = null;
 
-    // Calculate learning order using BFS from axioms
     function getLearningOrder() {
       const order = [];
       const visited = new Set();
-      const axiomIds = ['axiom-1-energy-cost', 'axiom-2-finite-budget'];
+      const axiomIds = nodes.filter(n => n.isAxiom).map(n => n.id);
 
-      // Start with axioms
       const queue = [...axiomIds];
       axiomIds.forEach(id => visited.add(id));
 
@@ -597,11 +468,10 @@ function getCluster(id: string): string {
         const id = queue.shift();
         order.push(id);
 
-        const prop = props.find(p => p.id === id);
-        if (prop) {
-          // Add linked concepts that haven't been visited
-          prop.linksTo.forEach(linkedId => {
-            if (!visited.has(linkedId) && props.some(p => p.id === linkedId)) {
+        const nodeData = nodes.find(n => n.id === id);
+        if (nodeData) {
+          nodeData.linksTo.forEach(linkedId => {
+            if (!visited.has(linkedId) && nodes.some(n => n.id === linkedId)) {
               visited.add(linkedId);
               queue.push(linkedId);
             }
@@ -609,11 +479,8 @@ function getCluster(id: string): string {
         }
       }
 
-      // Add any remaining concepts not reachable from axioms
-      props.forEach(p => {
-        if (!visited.has(p.id)) {
-          order.push(p.id);
-        }
+      nodes.forEach(n => {
+        if (!visited.has(n.id)) order.push(n.id);
       });
 
       return order;
@@ -621,10 +488,7 @@ function getCluster(id: string): string {
 
     function stopDemo() {
       isDemoRunning = false;
-      if (demoTimeout) {
-        clearTimeout(demoTimeout);
-        demoTimeout = null;
-      }
+      if (demoTimeout) clearTimeout(demoTimeout);
       demoBtn.classList.remove('running');
       demoBtn.querySelector('.demo-text').textContent = 'Watch it Grow';
       demoLabel.classList.remove('visible');
@@ -640,20 +504,16 @@ function getCluster(id: string): string {
       demoBtn.classList.add('running');
       demoBtn.querySelector('.demo-text').textContent = 'Stop Demo';
 
-      // Clear current understanding
       understood.clear();
       applyUnderstoodState();
-
-      // Close any open panel
       detailPanel.classList.remove('open');
-      nodes.forEach(n => n.classList.remove('selected'));
+      node.classed('selected', false);
 
       const learningOrder = getLearningOrder();
       let currentIndex = 0;
 
       function illuminateNext() {
         if (!isDemoRunning || currentIndex >= learningOrder.length) {
-          // Demo complete
           if (isDemoRunning) {
             demoLabel.classList.add('complete');
             demoLabelText.textContent = 'Understanding Complete';
@@ -666,59 +526,49 @@ function getCluster(id: string): string {
         }
 
         const id = learningOrder[currentIndex];
-        const prop = props.find(p => p.id === id);
-        const node = document.querySelector(`.node[data-id="${id}"]`);
+        const nodeData = nodes.find(n => n.id === id);
 
-        if (prop && node) {
-          // Add to understood
+        if (nodeData) {
           understood.add(id);
           applyUnderstoodState();
 
           // Celebration animation
-          node.classList.add('just-understood');
-          setTimeout(() => node.classList.remove('just-understood'), 800);
+          node.filter(n => n.id === id)
+            .select('.node-core')
+            .transition()
+            .duration(200)
+            .attr('r', d => (d.isAxiom ? 14 : 10) * 1.4)
+            .transition()
+            .duration(300)
+            .attr('r', d => d.isAxiom ? 14 : 10);
 
-          // Show floating label
-          demoLabelText.textContent = prop.title;
+          // Show label
+          demoLabelText.textContent = nodeData.title;
           demoLabel.classList.add('visible');
 
-          // Position label near the node (using SVG coordinates)
-          const pos = positions[id];
-          if (pos) {
-            const svgRect = document.querySelector('.network-svg').getBoundingClientRect();
-            const viewportRect = viewport.getBoundingClientRect();
-            const svgWidth = 1000;
-            const svgHeight = 700;
-
-            // Convert SVG coords to screen coords (accounting for current transform)
-            const screenX = viewportRect.left + (pos.x / svgWidth) * svgRect.width * scale + translateX;
-            const screenY = viewportRect.top + (pos.y / svgHeight) * svgRect.height * scale + translateY;
-
-            demoLabel.style.left = `${screenX - viewportRect.left}px`;
-            demoLabel.style.top = `${screenY - viewportRect.top - 50}px`;
+          // Position near node
+          const nodeEl = node.filter(n => n.id === id).node();
+          if (nodeEl) {
+            const transform = nodeEl.getAttribute('transform');
+            const match = transform.match(/translate\(([^,]+),([^)]+)\)/);
+            if (match) {
+              const x = parseFloat(match[1]);
+              const y = parseFloat(match[2]);
+              demoLabel.style.left = `${x}px`;
+              demoLabel.style.top = `${y - 40}px`;
+            }
           }
         }
 
         currentIndex++;
-
-        // Variable timing for more natural feel
-        // Axioms are slower, later concepts faster
-        const baseDelay = currentIndex <= 2 ? 1200 :
-                         currentIndex <= 5 ? 800 :
-                         currentIndex <= 10 ? 500 : 350;
-        const jitter = Math.random() * 200 - 100;
-
-        demoTimeout = setTimeout(illuminateNext, baseDelay + jitter);
+        const baseDelay = currentIndex <= 2 ? 1000 : currentIndex <= 5 ? 700 : currentIndex <= 15 ? 450 : 300;
+        demoTimeout = setTimeout(illuminateNext, baseDelay + Math.random() * 150 - 75);
       }
 
-      // Start after brief pause
       demoTimeout = setTimeout(illuminateNext, 500);
     }
 
     demoBtn.addEventListener('click', runDemo);
-
-    // Clean up on page unload
-    window.addEventListener('beforeunload', stopDemo);
   });
 </script>
 
@@ -731,7 +581,7 @@ function getCluster(id: string): string {
     background:
       radial-gradient(ellipse at 30% 20%, rgba(74, 158, 255, 0.03) 0%, transparent 50%),
       radial-gradient(ellipse at 70% 80%, rgba(168, 85, 247, 0.02) 0%, transparent 50%),
-      var(--void, #0a0a0c);
+      #0a0a0c;
     overflow: hidden;
   }
 
@@ -745,20 +595,20 @@ function getCluster(id: string): string {
     align-items: flex-start;
     padding: 1.5rem 2rem;
     z-index: 10;
-    background: linear-gradient(180deg, var(--void, #0a0a0c) 0%, transparent 100%);
+    background: linear-gradient(180deg, #0a0a0c 0%, transparent 100%);
   }
 
   .network-title {
-    font-family: var(--font-display, 'Cormorant Garamond', serif);
+    font-family: 'Cormorant Garamond', serif;
     font-size: 1.75rem;
     font-weight: 500;
-    color: var(--text-primary, #e8e8f0);
+    color: #e8e8f0;
     margin: 0;
   }
 
   .network-subtitle {
     font-size: 0.875rem;
-    color: var(--text-muted, #606080);
+    color: #606080;
     margin: 0.25rem 0 0;
   }
 
@@ -776,8 +626,8 @@ function getCluster(id: string): string {
     background: rgba(74, 158, 255, 0.1);
     border: 1px solid rgba(74, 158, 255, 0.3);
     border-radius: 6px;
-    color: var(--accent, #4a9eff);
-    font-family: var(--font-body, 'Sora', sans-serif);
+    color: #4a9eff;
+    font-family: 'Sora', sans-serif;
     font-size: 0.8125rem;
     cursor: pointer;
     transition: all 0.2s;
@@ -785,22 +635,13 @@ function getCluster(id: string): string {
 
   .demo-btn:hover {
     background: rgba(74, 158, 255, 0.2);
-    border-color: var(--accent, #4a9eff);
+    border-color: #4a9eff;
   }
 
   .demo-btn.running {
     background: rgba(239, 68, 68, 0.1);
     border-color: rgba(239, 68, 68, 0.3);
     color: #ef4444;
-  }
-
-  .demo-btn.running:hover {
-    background: rgba(239, 68, 68, 0.2);
-    border-color: #ef4444;
-  }
-
-  .demo-btn.running .demo-icon {
-    animation: none;
   }
 
   .demo-icon {
@@ -812,40 +653,38 @@ function getCluster(id: string): string {
     display: flex;
     align-items: baseline;
     gap: 0.375rem;
-    font-family: var(--font-mono, 'JetBrains Mono', monospace);
+    font-family: 'JetBrains Mono', monospace;
   }
 
   .progress-count {
     font-size: 2rem;
     font-weight: 500;
-    color: var(--accent, #4a9eff);
-    transition: color 0.3s;
+    color: #4a9eff;
   }
 
   .progress-total {
     font-size: 1rem;
-    color: var(--text-muted, #606080);
+    color: #606080;
   }
 
   .progress-label {
     font-size: 0.75rem;
-    color: var(--text-muted, #606080);
+    color: #606080;
     margin-left: 0.5rem;
   }
 
-  /* Demo floating label */
+  /* Demo label */
   .demo-label {
     position: absolute;
     pointer-events: none;
     z-index: 200;
     transform: translate(-50%, 0);
     opacity: 0;
-    transition: opacity 0.3s ease, transform 0.3s ease;
+    transition: opacity 0.3s ease;
   }
 
   .demo-label.visible {
     opacity: 1;
-    animation: float-up 0.4s ease-out;
   }
 
   .demo-label.complete {
@@ -861,80 +700,37 @@ function getCluster(id: string): string {
     border-color: rgba(80, 200, 120, 0.3);
   }
 
-  @keyframes float-up {
-    from {
-      opacity: 0;
-      transform: translate(-50%, 10px);
-    }
-    to {
-      opacity: 1;
-      transform: translate(-50%, 0);
-    }
-  }
-
   .demo-label-text {
     display: inline-block;
-    font-family: var(--font-display, 'Cormorant Garamond', serif);
-    font-size: 1.125rem;
-    color: var(--text-primary, #e8e8f0);
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1rem;
+    color: #e8e8f0;
     background: rgba(18, 18, 26, 0.95);
-    border: 1px solid var(--border, #2a2a3a);
+    border: 1px solid #2a2a3a;
     border-radius: 8px;
     padding: 0.5rem 1rem;
     white-space: nowrap;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
   }
 
-  /* Viewport and SVG */
+  /* Viewport */
   .network-viewport {
     width: 100%;
     height: 100%;
-    cursor: grab;
     position: relative;
   }
 
   .network-svg {
     width: 100%;
     height: 100%;
-    transform-origin: center center;
-    transition: transform 0.1s ease-out;
   }
 
-  /* Background stars animation */
-  .bg-star {
-    animation: twinkle 4s ease-in-out infinite;
+  /* Links */
+  .link {
+    transition: stroke 0.3s ease, stroke-width 0.3s ease;
   }
 
-  @keyframes twinkle {
-    0%, 100% { opacity: 0.15; }
-    50% { opacity: 0.4; }
-  }
-
-  /* Edges */
-  .edge {
-    stroke: rgba(255, 255, 255, 0.06);
-    stroke-width: 1;
-    transition: all 0.3s ease;
-  }
-
-  .edge.partial {
-    stroke: rgba(74, 158, 255, 0.15);
-    stroke-dasharray: none;
-  }
-
-  .edge.active {
-    stroke: rgba(74, 158, 255, 0.4);
-    stroke-width: 1.5;
-    stroke-dasharray: none;
-  }
-
-  .edge.highlighted {
-    stroke: rgba(255, 255, 255, 0.3);
-    stroke-width: 2;
-    stroke-dasharray: none;
-  }
-
-  /* Nodes - Default (ununderstood) state */
+  /* Nodes */
   .node {
     cursor: pointer;
     transition: transform 0.2s ease;
@@ -948,119 +744,28 @@ function getCluster(id: string): string {
     transform: scale(1.1);
   }
 
-  .node.selected {
-    transform: scale(1.2);
+  .node.selected .node-core {
+    stroke-width: 3 !important;
   }
 
   .node-glow {
-    stroke-width: 2;
-    opacity: 0;
     transition: opacity 0.4s ease;
   }
 
   .node-core {
-    fill: rgba(30, 30, 45, 0.8);
-    stroke: rgba(255, 255, 255, 0.15);
-    stroke-width: 1;
     transition: all 0.3s ease;
   }
 
   .node-inner {
-    fill: rgba(255, 255, 255, 0.08);
     transition: all 0.3s ease;
-  }
-
-  /* Cluster colors */
-  .cluster-axiom .node-core { stroke: rgba(74, 158, 255, 0.4); }
-  .cluster-axiom .node-inner { fill: rgba(74, 158, 255, 0.15); }
-
-  .cluster-core .node-core { stroke: rgba(80, 200, 120, 0.3); }
-  .cluster-core .node-inner { fill: rgba(80, 200, 120, 0.1); }
-
-  .cluster-mind .node-core { stroke: rgba(168, 85, 247, 0.3); }
-  .cluster-mind .node-inner { fill: rgba(168, 85, 247, 0.1); }
-
-  .cluster-quantum .node-core { stroke: rgba(249, 115, 22, 0.3); }
-  .cluster-quantum .node-inner { fill: rgba(249, 115, 22, 0.1); }
-
-  .cluster-thermo .node-core { stroke: rgba(239, 68, 68, 0.3); }
-  .cluster-thermo .node-inner { fill: rgba(239, 68, 68, 0.1); }
-
-  .cluster-spacetime .node-core { stroke: rgba(20, 184, 166, 0.3); }
-  .cluster-spacetime .node-inner { fill: rgba(20, 184, 166, 0.1); }
-
-  .cluster-formal .node-core { stroke: rgba(236, 72, 153, 0.3); }
-  .cluster-formal .node-inner { fill: rgba(236, 72, 153, 0.1); }
-
-  /* Understood state - nodes come alive */
-  .node.understood .node-glow {
-    opacity: 1;
-    animation: pulse-glow 3s ease-in-out infinite;
-  }
-
-  .node.understood .node-core {
-    stroke-width: 2;
-  }
-
-  .node.understood .node-inner {
-    animation: breathe 4s ease-in-out infinite;
-  }
-
-  .cluster-axiom.understood .node-core { fill: rgba(74, 158, 255, 0.3); stroke: #4a9eff; }
-  .cluster-axiom.understood .node-glow { stroke: rgba(74, 158, 255, 0.4); }
-  .cluster-axiom.understood .node-inner { fill: rgba(74, 158, 255, 0.5); }
-
-  .cluster-core.understood .node-core { fill: rgba(80, 200, 120, 0.25); stroke: #50c878; }
-  .cluster-core.understood .node-glow { stroke: rgba(80, 200, 120, 0.35); }
-  .cluster-core.understood .node-inner { fill: rgba(80, 200, 120, 0.45); }
-
-  .cluster-mind.understood .node-core { fill: rgba(168, 85, 247, 0.25); stroke: #a855f7; }
-  .cluster-mind.understood .node-glow { stroke: rgba(168, 85, 247, 0.35); }
-  .cluster-mind.understood .node-inner { fill: rgba(168, 85, 247, 0.45); }
-
-  .cluster-quantum.understood .node-core { fill: rgba(249, 115, 22, 0.25); stroke: #f97316; }
-  .cluster-quantum.understood .node-glow { stroke: rgba(249, 115, 22, 0.35); }
-  .cluster-quantum.understood .node-inner { fill: rgba(249, 115, 22, 0.45); }
-
-  .cluster-thermo.understood .node-core { fill: rgba(239, 68, 68, 0.25); stroke: #ef4444; }
-  .cluster-thermo.understood .node-glow { stroke: rgba(239, 68, 68, 0.35); }
-  .cluster-thermo.understood .node-inner { fill: rgba(239, 68, 68, 0.45); }
-
-  .cluster-spacetime.understood .node-core { fill: rgba(20, 184, 166, 0.25); stroke: #14b8a6; }
-  .cluster-spacetime.understood .node-glow { stroke: rgba(20, 184, 166, 0.35); }
-  .cluster-spacetime.understood .node-inner { fill: rgba(20, 184, 166, 0.45); }
-
-  .cluster-formal.understood .node-core { fill: rgba(236, 72, 153, 0.25); stroke: #ec4899; }
-  .cluster-formal.understood .node-glow { stroke: rgba(236, 72, 153, 0.35); }
-  .cluster-formal.understood .node-inner { fill: rgba(236, 72, 153, 0.45); }
-
-  /* Just understood celebration */
-  .node.just-understood {
-    animation: celebrate 0.6s ease-out;
-  }
-
-  @keyframes celebrate {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.5); }
-    100% { transform: scale(1.2); }
-  }
-
-  @keyframes pulse-glow {
-    0%, 100% { opacity: 0.4; }
-    50% { opacity: 0.8; }
-  }
-
-  @keyframes breathe {
-    0%, 100% { opacity: 0.4; }
-    50% { opacity: 0.7; }
   }
 
   /* Tooltip */
   .node-tooltip {
     position: absolute;
     pointer-events: none;
-    background: var(--depth-1, #12121a);
-    border: 1px solid var(--border, #2a2a3a);
+    background: #12121a;
+    border: 1px solid #2a2a3a;
     border-radius: 6px;
     padding: 0.5rem 0.75rem;
     opacity: 0;
@@ -1076,17 +781,17 @@ function getCluster(id: string): string {
 
   .tooltip-title {
     display: block;
-    font-family: var(--font-display, 'Cormorant Garamond', serif);
+    font-family: 'Cormorant Garamond', serif;
     font-size: 1rem;
-    color: var(--text-primary, #e8e8f0);
+    color: #e8e8f0;
     white-space: nowrap;
   }
 
   .tooltip-connections {
     display: block;
     font-size: 0.7rem;
-    color: var(--text-muted, #606080);
-    font-family: var(--font-mono, 'JetBrains Mono', monospace);
+    color: #606080;
+    font-family: 'JetBrains Mono', monospace;
   }
 
   /* Detail Panel */
@@ -1096,8 +801,8 @@ function getCluster(id: string): string {
     right: 0;
     width: 380px;
     height: 100%;
-    background: var(--depth-1, #12121a);
-    border-left: 1px solid var(--border, #2a2a3a);
+    background: #12121a;
+    border-left: 1px solid #2a2a3a;
     transform: translateX(100%);
     transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     z-index: 50;
@@ -1115,20 +820,19 @@ function getCluster(id: string): string {
     width: 32px;
     height: 32px;
     background: transparent;
-    border: 1px solid var(--border, #2a2a3a);
+    border: 1px solid #2a2a3a;
     border-radius: 6px;
-    color: var(--text-muted, #606080);
+    color: #606080;
     font-size: 1.25rem;
     cursor: pointer;
-    transition: all 0.2s;
     display: flex;
     align-items: center;
     justify-content: center;
   }
 
   .panel-close:hover {
-    border-color: var(--text-secondary, #a0a0b8);
-    color: var(--text-primary, #e8e8f0);
+    border-color: #a0a0b8;
+    color: #e8e8f0;
   }
 
   .panel-content {
@@ -1144,16 +848,16 @@ function getCluster(id: string): string {
   }
 
   .panel-title {
-    font-family: var(--font-display, 'Cormorant Garamond', serif);
+    font-family: 'Cormorant Garamond', serif;
     font-size: 1.5rem;
     font-weight: 500;
-    color: var(--text-primary, #e8e8f0);
+    color: #e8e8f0;
     margin: 0;
     line-height: 1.3;
   }
 
   .panel-cluster {
-    font-family: var(--font-mono, 'JetBrains Mono', monospace);
+    font-family: 'JetBrains Mono', monospace;
     font-size: 0.625rem;
     text-transform: uppercase;
     padding: 0.25rem 0.5rem;
@@ -1171,13 +875,13 @@ function getCluster(id: string): string {
 
   .panel-surface {
     font-size: 0.9375rem;
-    color: var(--text-secondary, #a0a0b8);
+    color: #a0a0b8;
     line-height: 1.7;
     margin-bottom: 1.5rem;
   }
 
   .panel-logic {
-    background: var(--void, #0a0a0c);
+    background: #0a0a0c;
     border-radius: 8px;
     padding: 1rem;
     margin-bottom: 1.5rem;
@@ -1196,13 +900,13 @@ function getCluster(id: string): string {
     font-size: 0.625rem;
     text-transform: uppercase;
     letter-spacing: 0.1em;
-    color: var(--text-muted, #606080);
+    color: #606080;
     margin-bottom: 0.25rem;
   }
 
   .logic-value {
     font-size: 0.875rem;
-    color: var(--text-primary, #e8e8f0);
+    color: #e8e8f0;
     margin: 0;
     line-height: 1.5;
   }
@@ -1216,7 +920,7 @@ function getCluster(id: string): string {
     font-size: 0.625rem;
     text-transform: uppercase;
     letter-spacing: 0.1em;
-    color: var(--text-muted, #606080);
+    color: #606080;
     margin-bottom: 0.5rem;
   }
 
@@ -1227,19 +931,19 @@ function getCluster(id: string): string {
   }
 
   .connection-chip {
-    background: var(--depth-2, #1a1a24);
-    border: 1px solid var(--border, #2a2a3a);
+    background: #1a1a24;
+    border: 1px solid #2a2a3a;
     border-radius: 20px;
     padding: 0.25rem 0.75rem;
     font-size: 0.75rem;
-    color: var(--text-secondary, #a0a0b8);
+    color: #a0a0b8;
     cursor: pointer;
     transition: all 0.2s;
   }
 
   .connection-chip:hover {
-    border-color: var(--accent, #4a9eff);
-    color: var(--accent, #4a9eff);
+    border-color: #4a9eff;
+    color: #4a9eff;
   }
 
   .understand-btn {
@@ -1250,18 +954,18 @@ function getCluster(id: string): string {
     gap: 0.5rem;
     padding: 0.875rem 1.5rem;
     background: transparent;
-    border: 2px solid var(--border, #2a2a3a);
+    border: 2px solid #2a2a3a;
     border-radius: 8px;
-    color: var(--text-secondary, #a0a0b8);
+    color: #a0a0b8;
     font-size: 0.875rem;
-    font-family: var(--font-body, 'Sora', sans-serif);
+    font-family: 'Sora', sans-serif;
     cursor: pointer;
     transition: all 0.2s;
   }
 
   .understand-btn:hover {
-    border-color: var(--accent, #4a9eff);
-    color: var(--accent, #4a9eff);
+    border-color: #4a9eff;
+    color: #4a9eff;
     background: rgba(74, 158, 255, 0.05);
   }
 
@@ -1271,18 +975,13 @@ function getCluster(id: string): string {
     color: #50c878;
   }
 
-  .btn-icon {
-    font-size: 1rem;
-    line-height: 1;
-  }
-
   /* Legend */
   .network-legend {
     position: absolute;
     bottom: 1.5rem;
     left: 1.5rem;
     background: rgba(18, 18, 26, 0.9);
-    border: 1px solid var(--border, #2a2a3a);
+    border: 1px solid #2a2a3a;
     border-radius: 8px;
     padding: 1rem;
     z-index: 10;
@@ -1292,7 +991,7 @@ function getCluster(id: string): string {
     font-size: 0.625rem;
     text-transform: uppercase;
     letter-spacing: 0.1em;
-    color: var(--text-muted, #606080);
+    color: #606080;
     margin-bottom: 0.75rem;
   }
 
@@ -1307,7 +1006,7 @@ function getCluster(id: string): string {
     align-items: center;
     gap: 0.5rem;
     font-size: 0.75rem;
-    color: var(--text-secondary, #a0a0b8);
+    color: #a0a0b8;
   }
 
   .legend-dot {
@@ -1334,7 +1033,7 @@ function getCluster(id: string): string {
       bottom: 0;
       transform: translateY(100%);
       border-left: none;
-      border-top: 1px solid var(--border, #2a2a3a);
+      border-top: 1px solid #2a2a3a;
     }
 
     .detail-panel.open {
@@ -1352,15 +1051,6 @@ function getCluster(id: string): string {
       justify-content: space-between;
     }
 
-    .demo-btn {
-      padding: 0.375rem 0.75rem;
-      font-size: 0.75rem;
-    }
-
-    .progress-count {
-      font-size: 1.5rem;
-    }
-
     .network-legend {
       bottom: auto;
       top: 7rem;
@@ -1372,11 +1062,6 @@ function getCluster(id: string): string {
       flex-direction: row;
       flex-wrap: wrap;
       gap: 0.5rem 1rem;
-    }
-
-    .demo-label-text {
-      font-size: 1rem;
-      padding: 0.375rem 0.75rem;
     }
   }
 </style>
