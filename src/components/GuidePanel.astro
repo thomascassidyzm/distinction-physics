@@ -1,0 +1,499 @@
+---
+// GuidePanel component for Distinction Physics
+---
+
+<aside id="guide-panel" class="guide-panel">
+  <header class="guide-header">
+    <div class="guide-identity">
+      <span class="guide-name">Leibniz</span>
+      <span class="guide-role">Epistemic Guide</span>
+    </div>
+    <div class="context-display">
+      <span class="context-label">Currently Reading:</span>
+      <span id="current-section" class="context-section">Foundations</span>
+      <span id="current-status" class="status-badge established">established</span>
+    </div>
+  </header>
+
+  <div id="messages-container" class="messages-container">
+    <div class="message assistant">
+      <div class="message-content">
+        <p>Welcome to Distinction Physics. I'm Leibniz, your guide through this framework.</p>
+        <p>The framework begins with a simple observation: <strong>distinction is primitive</strong>. From this, plus two physical constraints, we derive the structure of accessible reality.</p>
+        <p>Ask me anything about the framework—the axioms, the derivations, how it relates to physics, or where the genuine uncertainties lie.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="scroll-indicator" id="scroll-indicator">
+    <span>More messages below</span>
+    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+      <path d="M8 12L3 7L4.4 5.6L8 9.2L11.6 5.6L13 7L8 12Z" fill="currentColor"/>
+    </svg>
+  </div>
+
+  <form id="guide-form" class="guide-form">
+    <div class="input-wrapper">
+      <input
+        type="text"
+        id="guide-input"
+        placeholder="Ask about distinction, energy, consciousness..."
+        autocomplete="off"
+      />
+      <button type="submit" id="send-button" aria-label="Send message">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M22 2L11 13M22 2L15 22L11 13L2 9L22 2Z"/>
+        </svg>
+      </button>
+    </div>
+    <div class="suggestions">
+      <button type="button" class="suggestion" data-question="What are the two axioms?">Two axioms</button>
+      <button type="button" class="suggestion" data-question="How does this explain quantum uncertainty?">Uncertainty</button>
+      <button type="button" class="suggestion" data-question="What is an OLU?">OLU definition</button>
+    </div>
+  </form>
+</aside>
+
+<button id="guide-toggle" class="guide-toggle" aria-label="Open guide panel">
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+  </svg>
+</button>
+
+<script>
+  const STORAGE_KEY = 'distinction-physics-conversation';
+
+  interface ChatMessage {
+    role: 'user' | 'assistant';
+    content: string;
+  }
+
+  let conversationHistory: ChatMessage[] = [];
+
+  // Load conversation from session storage
+  function loadConversation() {
+    try {
+      const stored = sessionStorage.getItem(STORAGE_KEY);
+      if (stored) {
+        conversationHistory = JSON.parse(stored);
+        renderStoredMessages();
+      }
+    } catch (e) {
+      console.error('Failed to load conversation:', e);
+    }
+  }
+
+  function saveConversation() {
+    try {
+      sessionStorage.setItem(STORAGE_KEY, JSON.stringify(conversationHistory));
+    } catch (e) {
+      console.error('Failed to save conversation:', e);
+    }
+  }
+
+  function renderStoredMessages() {
+    const container = document.getElementById('messages-container');
+    if (!container) return;
+
+    // Keep the welcome message, add stored messages
+    conversationHistory.forEach(msg => {
+      addMessageToUI(msg.content, msg.role);
+    });
+  }
+
+  function addMessageToUI(content: string, role: 'user' | 'assistant') {
+    const container = document.getElementById('messages-container');
+    if (!container) return;
+
+    const messageDiv = document.createElement('div');
+    messageDiv.className = `message ${role}`;
+
+    const contentDiv = document.createElement('div');
+    contentDiv.className = 'message-content';
+
+    if (role === 'assistant') {
+      contentDiv.innerHTML = parseMarkdown(content);
+    } else {
+      contentDiv.textContent = content;
+    }
+
+    messageDiv.appendChild(contentDiv);
+    container.appendChild(messageDiv);
+
+    // Scroll to bottom
+    container.scrollTop = container.scrollHeight;
+  }
+
+  function parseMarkdown(text: string): string {
+    return text
+      .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
+      .replace(/\*(.+?)\*/g, '<em>$1</em>')
+      .replace(/`(.+?)`/g, '<code>$1</code>')
+      .replace(/\n\n/g, '</p><p>')
+      .replace(/\n/g, '<br>')
+      .replace(/^(.+)$/, '<p>$1</p>');
+  }
+
+  function getCurrentContext() {
+    return {
+      currentSection: (window as any).currentSectionId || 'foundations',
+      currentSectionTitle: (window as any).currentSection || 'Foundations',
+      epistemicStatus: (window as any).currentStatus || 'established',
+    };
+  }
+
+  async function sendMessage(message: string) {
+    const input = document.getElementById('guide-input') as HTMLInputElement;
+    const sendButton = document.getElementById('send-button') as HTMLButtonElement;
+
+    if (!message.trim()) return;
+
+    // Disable input while sending
+    input.disabled = true;
+    sendButton.disabled = true;
+
+    // Add user message to UI
+    addMessageToUI(message, 'user');
+    conversationHistory.push({ role: 'user', content: message });
+    saveConversation();
+
+    // Clear input
+    input.value = '';
+
+    try {
+      const response = await fetch('/api/guide', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          message,
+          history: conversationHistory.slice(0, -1), // Exclude the message we just added
+          context: getCurrentContext(),
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error('Failed to get response');
+      }
+
+      const data = await response.json();
+      addMessageToUI(data.message, 'assistant');
+      conversationHistory.push({ role: 'assistant', content: data.message });
+      saveConversation();
+    } catch (error) {
+      console.error('Guide error:', error);
+      addMessageToUI('I apologize, but I encountered an error. Please try again.', 'assistant');
+    } finally {
+      input.disabled = false;
+      sendButton.disabled = false;
+      input.focus();
+    }
+  }
+
+  // Initialize
+  document.addEventListener('DOMContentLoaded', () => {
+    loadConversation();
+
+    const form = document.getElementById('guide-form');
+    const input = document.getElementById('guide-input') as HTMLInputElement;
+    const toggle = document.getElementById('guide-toggle');
+    const panel = document.getElementById('guide-panel');
+
+    form?.addEventListener('submit', (e) => {
+      e.preventDefault();
+      sendMessage(input.value);
+    });
+
+    // Suggestion buttons
+    document.querySelectorAll('.suggestion').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const question = btn.getAttribute('data-question');
+        if (question) sendMessage(question);
+      });
+    });
+
+    // Mobile toggle
+    toggle?.addEventListener('click', () => {
+      panel?.classList.toggle('open');
+    });
+
+    // Update context display
+    setInterval(() => {
+      const sectionEl = document.getElementById('current-section');
+      const statusEl = document.getElementById('current-status');
+
+      if (sectionEl && (window as any).currentSection) {
+        sectionEl.textContent = (window as any).currentSection;
+      }
+      if (statusEl && (window as any).currentStatus) {
+        statusEl.textContent = (window as any).currentStatus;
+        statusEl.className = `status-badge ${(window as any).currentStatus}`;
+      }
+    }, 300);
+
+    // Scroll indicator
+    const container = document.getElementById('messages-container');
+    const indicator = document.getElementById('scroll-indicator');
+    container?.addEventListener('scroll', () => {
+      const isAtBottom = container.scrollHeight - container.scrollTop <= container.clientHeight + 50;
+      indicator?.classList.toggle('hidden', isAtBottom);
+    });
+  });
+</script>
+
+<style>
+  .guide-panel {
+    width: 420px;
+    height: 100vh;
+    position: fixed;
+    right: 0;
+    top: 0;
+    background: var(--depth-1, #12121a);
+    border-left: 1px solid var(--border, #2a2a3a);
+    display: flex;
+    flex-direction: column;
+    z-index: 100;
+  }
+
+  .guide-header {
+    padding: 1rem 1.25rem;
+    border-bottom: 1px solid var(--border, #2a2a3a);
+    background: var(--depth-2, #1a1a24);
+  }
+
+  .guide-identity {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .guide-name {
+    font-family: var(--font-display, 'Cormorant Garamond', serif);
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text-primary, #e8e8f0);
+  }
+
+  .guide-role {
+    font-size: 0.75rem;
+    color: var(--text-muted, #606080);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .context-display {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+
+  .context-label {
+    font-size: 0.75rem;
+    color: var(--text-muted, #606080);
+  }
+
+  .context-section {
+    font-size: 0.875rem;
+    color: var(--text-secondary, #a0a0b8);
+  }
+
+  .status-badge {
+    font-size: 0.625rem;
+    padding: 0.125rem 0.375rem;
+    border-radius: 3px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-weight: 500;
+  }
+
+  .status-badge.established { background: rgba(74, 158, 255, 0.2); color: #4a9eff; }
+  .status-badge.derived { background: rgba(80, 200, 120, 0.2); color: #50c878; }
+  .status-badge.contested { background: rgba(255, 165, 0, 0.2); color: #ffa500; }
+  .status-badge.open { background: rgba(168, 85, 247, 0.2); color: #a855f7; }
+
+  .messages-container {
+    flex: 1;
+    overflow-y: auto;
+    padding: 1rem 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .message {
+    max-width: 90%;
+  }
+
+  .message.user {
+    align-self: flex-end;
+  }
+
+  .message.assistant {
+    align-self: flex-start;
+  }
+
+  .message-content {
+    padding: 0.75rem 1rem;
+    border-radius: 12px;
+    font-size: 0.9375rem;
+    line-height: 1.5;
+  }
+
+  .message.user .message-content {
+    background: var(--accent, #4a9eff);
+    color: white;
+    border-bottom-right-radius: 4px;
+  }
+
+  .message.assistant .message-content {
+    background: var(--depth-2, #1a1a24);
+    color: var(--text-primary, #e8e8f0);
+    border-bottom-left-radius: 4px;
+  }
+
+  .message-content p {
+    margin: 0 0 0.5rem 0;
+  }
+
+  .message-content p:last-child {
+    margin-bottom: 0;
+  }
+
+  .message-content code {
+    background: rgba(0, 0, 0, 0.3);
+    padding: 0.125rem 0.25rem;
+    border-radius: 3px;
+    font-family: var(--font-mono, 'JetBrains Mono', monospace);
+    font-size: 0.875em;
+  }
+
+  .scroll-indicator {
+    padding: 0.5rem;
+    text-align: center;
+    font-size: 0.75rem;
+    color: var(--text-muted, #606080);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.25rem;
+    cursor: pointer;
+  }
+
+  .scroll-indicator.hidden {
+    display: none;
+  }
+
+  .guide-form {
+    padding: 1rem 1.25rem;
+    border-top: 1px solid var(--border, #2a2a3a);
+    background: var(--depth-2, #1a1a24);
+  }
+
+  .input-wrapper {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 0.75rem;
+  }
+
+  #guide-input {
+    flex: 1;
+    padding: 0.75rem 1rem;
+    background: var(--void, #0a0a0c);
+    border: 1px solid var(--border, #2a2a3a);
+    border-radius: 8px;
+    color: var(--text-primary, #e8e8f0);
+    font-size: 0.9375rem;
+    font-family: inherit;
+  }
+
+  #guide-input:focus {
+    outline: none;
+    border-color: var(--accent, #4a9eff);
+  }
+
+  #guide-input::placeholder {
+    color: var(--text-muted, #606080);
+  }
+
+  #send-button {
+    width: 44px;
+    height: 44px;
+    background: var(--accent, #4a9eff);
+    border: none;
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+  }
+
+  #send-button:hover {
+    background: #3a8eef;
+  }
+
+  #send-button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+
+  .suggestions {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+
+  .suggestion {
+    padding: 0.375rem 0.75rem;
+    background: transparent;
+    border: 1px solid var(--border, #2a2a3a);
+    border-radius: 20px;
+    color: var(--text-secondary, #a0a0b8);
+    font-size: 0.75rem;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+
+  .suggestion:hover {
+    border-color: var(--accent, #4a9eff);
+    color: var(--accent, #4a9eff);
+  }
+
+  .guide-toggle {
+    display: none;
+    position: fixed;
+    bottom: 1.5rem;
+    right: 1.5rem;
+    width: 56px;
+    height: 56px;
+    background: var(--accent, #4a9eff);
+    border: none;
+    border-radius: 50%;
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    z-index: 99;
+    align-items: center;
+    justify-content: center;
+  }
+
+  @media (max-width: 1100px) {
+    .guide-panel {
+      position: fixed;
+      width: 100%;
+      max-width: 420px;
+      right: -100%;
+      transition: right 0.3s ease;
+    }
+
+    .guide-panel.open {
+      right: 0;
+    }
+
+    .guide-toggle {
+      display: flex;
+    }
+  }
+</style>
