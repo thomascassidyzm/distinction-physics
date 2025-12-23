@@ -1,291 +1,109 @@
 ---
-// GuidePanel component for Distinction Physics
+// GuidePanel - Persistent right-hand epistemic companion panel
+// For desktop: always visible alongside essay content
+// For mobile: collapses to floating button
+
+interface Props {
+  currentSection?: string;
+  epistemicStatus?: string;
+}
+
+const { currentSection = 'Foundations', epistemicStatus = 'established' } = Astro.props;
 ---
 
-<aside id="guide-panel" class="guide-panel">
+<!-- Desktop: Persistent Panel -->
+<aside id="guide-panel" class="guide-panel" data-default-section={currentSection}>
   <header class="guide-header">
-    <div class="guide-identity">
+    <div class="guide-presence">
       <span class="guide-dot"></span>
-      <span class="guide-name">Alexander</span>
-      <span class="guide-role">Epistemic Guide</span>
-    </div>
-    <div class="context-display">
-      <span class="context-label">Currently Reading:</span>
-      <span id="current-section" class="context-section">Foundations</span>
-      <span id="current-status" class="status-badge established">established</span>
+      <span class="guide-title">Alexander</span>
     </div>
   </header>
 
-  <div id="messages-container" class="messages-container">
-    <div class="message assistant">
-      <div class="message-content">
-        <p>I'm Alexander, here to help you build understanding of Distinction Physics—not by explaining at you, but by helping you construct your own distinction network.</p>
-        <p>The framework starts with a simple observation: <strong>distinction is primitive</strong>. Everything else follows from there.</p>
-        <p>What would you like to explore? I'll help you see what's similar to things you already know, what's different, and how the pieces connect.</p>
-      </div>
+  <div class="guide-context">
+    <div class="context-item">
+      <span class="context-label">Currently Reading</span>
+      <span id="guide-section" class="context-value">{currentSection}</span>
+    </div>
+    <div class="context-item">
+      <span class="context-label">Section Status</span>
+      <span id="guide-status" class="context-value status-established">{epistemicStatus}</span>
     </div>
   </div>
 
-  <div class="scroll-indicator" id="scroll-indicator">
-    <span>More messages below</span>
-    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-      <path d="M8 12L3 7L4.4 5.6L8 9.2L11.6 5.6L13 7L8 12Z" fill="currentColor"/>
+  <div id="guide-messages" class="guide-messages">
+    <div class="guide-welcome">
+      <p>I'm Alexander, here to help you build understanding of Distinction Physics.</p>
+      <p>I teach through distinction-building: what's <strong>similar</strong> to what you know, what's <strong>different</strong>, and how to build precise understanding.</p>
+    </div>
+  </div>
+
+  <div class="guide-suggestions" id="guide-suggestions">
+    <button class="suggestion" data-query="What are the two axioms?">Two axioms</button>
+    <button class="suggestion" data-query="What is an OLU?">What's an OLU?</button>
+    <button class="suggestion" data-query="How does this explain quantum uncertainty?">Uncertainty</button>
+    <button class="suggestion" data-query="Explain this section simply">Explain simply</button>
+  </div>
+
+  <button id="scroll-indicator" class="scroll-indicator" aria-label="Scroll to see more" style="display: none;">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <path d="M12 5v14M5 12l7 7 7-7"/>
     </svg>
-  </div>
+  </button>
 
-  <form id="guide-form" class="guide-form">
-    <div class="input-wrapper">
-      <input
-        type="text"
-        id="guide-input"
-        placeholder="Ask about distinction, energy, consciousness..."
-        autocomplete="off"
-      />
-      <button type="submit" id="send-button" aria-label="Send message">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M22 2L11 13M22 2L15 22L11 13L2 9L22 2Z"/>
-        </svg>
-      </button>
-    </div>
-    <div class="suggestions">
-      <button type="button" class="suggestion" data-question="What are the two axioms?">Two axioms</button>
-      <button type="button" class="suggestion" data-question="How does this explain quantum uncertainty?">Uncertainty</button>
-      <button type="button" class="suggestion" data-question="What is an OLU?">OLU definition</button>
-    </div>
+  <form id="guide-form" class="guide-input-form">
+    <input
+      type="text"
+      id="guide-input"
+      class="guide-input"
+      placeholder="Ask about this section..."
+      autocomplete="off"
+    />
+    <button type="submit" class="guide-submit" aria-label="Send">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/>
+      </svg>
+    </button>
   </form>
 </aside>
 
-<button id="guide-toggle" class="guide-toggle" aria-label="Open guide panel">
-  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
-  </svg>
+<!-- Mobile: Floating Trigger -->
+<button id="guide-mobile-trigger" class="guide-mobile-trigger" aria-label="Open Guide">
+  <span class="guide-dot"></span>
 </button>
 
-<script>
-  const STORAGE_KEY = 'distinction-physics-conversation';
-
-  interface ChatMessage {
-    role: 'user' | 'assistant';
-    content: string;
-  }
-
-  let conversationHistory: ChatMessage[] = [];
-
-  // Load conversation from session storage
-  function loadConversation() {
-    try {
-      const stored = sessionStorage.getItem(STORAGE_KEY);
-      if (stored) {
-        conversationHistory = JSON.parse(stored);
-        renderStoredMessages();
-      }
-    } catch (e) {
-      console.error('Failed to load conversation:', e);
-    }
-  }
-
-  function saveConversation() {
-    try {
-      sessionStorage.setItem(STORAGE_KEY, JSON.stringify(conversationHistory));
-    } catch (e) {
-      console.error('Failed to save conversation:', e);
-    }
-  }
-
-  function renderStoredMessages() {
-    const container = document.getElementById('messages-container');
-    if (!container) return;
-
-    // Keep the welcome message, add stored messages
-    conversationHistory.forEach(msg => {
-      addMessageToUI(msg.content, msg.role);
-    });
-  }
-
-  function addMessageToUI(content: string, role: 'user' | 'assistant') {
-    const container = document.getElementById('messages-container');
-    if (!container) return;
-
-    const messageDiv = document.createElement('div');
-    messageDiv.className = `message ${role}`;
-
-    const contentDiv = document.createElement('div');
-    contentDiv.className = 'message-content';
-
-    if (role === 'assistant') {
-      contentDiv.innerHTML = parseMarkdown(content);
-    } else {
-      contentDiv.textContent = content;
-    }
-
-    messageDiv.appendChild(contentDiv);
-    container.appendChild(messageDiv);
-
-    // Scroll to bottom
-    container.scrollTop = container.scrollHeight;
-  }
-
-  function parseMarkdown(text: string): string {
-    return text
-      .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
-      .replace(/\*(.+?)\*/g, '<em>$1</em>')
-      .replace(/`(.+?)`/g, '<code>$1</code>')
-      .replace(/\n\n/g, '</p><p>')
-      .replace(/\n/g, '<br>')
-      .replace(/^(.+)$/, '<p>$1</p>');
-  }
-
-  function getCurrentContext() {
-    return {
-      currentSection: (window as any).currentSectionId || 'foundations',
-      currentSectionTitle: (window as any).currentSection || 'Foundations',
-      epistemicStatus: (window as any).currentStatus || 'established',
-    };
-  }
-
-  async function sendMessage(message: string) {
-    const input = document.getElementById('guide-input') as HTMLInputElement;
-    const sendButton = document.getElementById('send-button') as HTMLButtonElement;
-    const container = document.getElementById('messages-container');
-
-    if (!message.trim()) return;
-
-    // Disable input while sending
-    input.disabled = true;
-    sendButton.disabled = true;
-
-    // Add user message to UI
-    addMessageToUI(message, 'user');
-    conversationHistory.push({ role: 'user', content: message });
-    saveConversation();
-
-    // Clear input
-    input.value = '';
-
-    // Show typing indicator
-    const typingEl = document.createElement('div');
-    typingEl.className = 'message assistant';
-    typingEl.id = 'typing-indicator';
-    typingEl.innerHTML = '<div class="message-content"><div class="typing-indicator"><span></span><span></span><span></span></div></div>';
-    container?.appendChild(typingEl);
-    if (container) container.scrollTop = container.scrollHeight;
-
-    try {
-      const response = await fetch('/api/guide', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          message,
-          history: conversationHistory.slice(0, -1), // Exclude the message we just added
-          context: getCurrentContext(),
-        }),
-      });
-
-      if (!response.ok) {
-        throw new Error('Failed to get response');
-      }
-
-      const data = await response.json();
-      // Remove typing indicator
-      document.getElementById('typing-indicator')?.remove();
-      addMessageToUI(data.message, 'assistant');
-      conversationHistory.push({ role: 'assistant', content: data.message });
-      saveConversation();
-    } catch (error) {
-      console.error('Guide error:', error);
-      // Remove typing indicator on error too
-      document.getElementById('typing-indicator')?.remove();
-      addMessageToUI('I apologize, but I encountered an error. Please try again.', 'assistant');
-    } finally {
-      input.disabled = false;
-      sendButton.disabled = false;
-      input.focus();
-    }
-  }
-
-  // Initialize
-  document.addEventListener('DOMContentLoaded', () => {
-    loadConversation();
-
-    const form = document.getElementById('guide-form');
-    const input = document.getElementById('guide-input') as HTMLInputElement;
-    const toggle = document.getElementById('guide-toggle');
-    const panel = document.getElementById('guide-panel');
-
-    form?.addEventListener('submit', (e) => {
-      e.preventDefault();
-      sendMessage(input.value);
-    });
-
-    // Suggestion buttons
-    document.querySelectorAll('.suggestion').forEach(btn => {
-      btn.addEventListener('click', () => {
-        const question = btn.getAttribute('data-question');
-        if (question) sendMessage(question);
-      });
-    });
-
-    // Mobile toggle
-    toggle?.addEventListener('click', () => {
-      panel?.classList.toggle('open');
-    });
-
-    // Update context display
-    setInterval(() => {
-      const sectionEl = document.getElementById('current-section');
-      const statusEl = document.getElementById('current-status');
-
-      if (sectionEl && (window as any).currentSection) {
-        sectionEl.textContent = (window as any).currentSection;
-      }
-      if (statusEl && (window as any).currentStatus) {
-        statusEl.textContent = (window as any).currentStatus;
-        statusEl.className = `status-badge ${(window as any).currentStatus}`;
-      }
-    }, 300);
-
-    // Scroll indicator
-    const container = document.getElementById('messages-container');
-    const indicator = document.getElementById('scroll-indicator');
-    container?.addEventListener('scroll', () => {
-      const isAtBottom = container.scrollHeight - container.scrollTop <= container.clientHeight + 50;
-      indicator?.classList.toggle('hidden', isAtBottom);
-    });
-  });
-</script>
-
 <style>
+  /* Desktop Panel */
   .guide-panel {
-    width: 420px;
-    height: 100vh;
     position: fixed;
+    top: 56px;
     right: 0;
-    top: 0;
-    background: var(--depth-1, #12121a);
-    border-left: 1px solid var(--border, #2a2a3a);
+    bottom: 0;
+    width: 440px;
+    background: var(--guide-bg, #0d0d12);
+    border-left: 1px solid var(--guide-border, rgba(255,255,255,0.06));
     display: flex;
     flex-direction: column;
-    z-index: 100;
+    font-family: 'Sora', system-ui, sans-serif;
+    z-index: 50;
   }
 
   .guide-header {
-    padding: 1rem 1.25rem;
-    border-bottom: 1px solid var(--border, #2a2a3a);
-    background: var(--depth-2, #1a1a24);
+    padding: 20px 24px;
+    border-bottom: 1px solid var(--guide-border, rgba(255,255,255,0.06));
   }
 
-  .guide-identity {
+  .guide-presence {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
-    margin-bottom: 0.75rem;
+    gap: 10px;
   }
 
   .guide-dot {
     width: 10px;
     height: 10px;
     border-radius: 50%;
-    background: var(--accent, #4a9eff);
+    background: var(--guide-accent, #4a9eff);
     animation: pulse 2s ease-in-out infinite;
   }
 
@@ -294,258 +112,618 @@
     50% { opacity: 1; transform: scale(1.1); }
   }
 
-  .guide-name {
-    font-family: var(--font-display, 'Cormorant Garamond', serif);
-    font-size: 1.25rem;
-    font-weight: 600;
-    color: var(--text-primary, #e8e8f0);
-  }
-
-  .guide-role {
+  .guide-title {
     font-size: 0.75rem;
-    color: var(--text-muted, #606080);
+    font-weight: 500;
+    color: var(--guide-muted, #606080);
     text-transform: uppercase;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.1em;
   }
 
-  /* Typing indicator */
-  .typing-indicator {
+  /* Context */
+  .guide-context {
+    padding: 20px 24px;
+    border-bottom: 1px solid var(--guide-border, rgba(255,255,255,0.04));
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    background: rgba(0,0,0,0.2);
+  }
+
+  .context-item {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+  }
+
+  .context-label {
+    font-size: 0.625rem;
+    color: var(--guide-muted, #606080);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+
+  .context-value {
+    font-size: 1rem;
+    color: var(--guide-text, #e8e8f0);
+    font-weight: 500;
+  }
+
+  .status-established { color: #4a9eff; }
+  .status-derived { color: #50c878; }
+  .status-contested { color: #ffa500; }
+  .status-open { color: #a855f7; }
+
+  /* Messages */
+  .guide-messages {
+    flex: 1;
+    overflow-y: auto;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .guide-welcome {
+    font-size: 0.9375rem;
+    color: var(--guide-text-secondary, #a0a0b8);
+    line-height: 1.7;
+  }
+
+  .guide-welcome ul {
+    margin: 12px 0 0 0;
+    padding-left: 20px;
+  }
+
+  .guide-welcome li {
+    margin-bottom: 6px;
+  }
+
+  .message {
+    padding: 14px 18px;
+    border-radius: 10px;
+    font-size: 0.9375rem;
+    line-height: 1.7;
+    max-width: 95%;
+  }
+
+  .message.user {
+    background: var(--guide-accent, #4a9eff);
+    color: white;
+    align-self: flex-end;
+    border-bottom-right-radius: 4px;
+  }
+
+  .message.assistant {
+    background: rgba(255,255,255,0.05);
+    color: var(--guide-text, #e8e8f0);
+    align-self: flex-start;
+    border-bottom-left-radius: 4px;
+    border: 1px solid rgba(255,255,255,0.06);
+  }
+
+  /* Markdown styling */
+  .message.assistant :global(p) { margin: 0 0 0.75em 0; }
+  .message.assistant :global(p:last-child) { margin-bottom: 0; }
+  .message.assistant :global(strong) { color: var(--guide-text, #e8e8f0); font-weight: 600; }
+  .message.assistant :global(em) { font-style: italic; opacity: 0.9; }
+  .message.assistant :global(ul), .message.assistant :global(ol) { margin: 0.5em 0; padding-left: 1.5em; }
+  .message.assistant :global(li) { margin-bottom: 0.25em; }
+  .message.assistant :global(code) { background: rgba(255,255,255,0.1); padding: 0.15em 0.4em; border-radius: 3px; font-family: 'JetBrains Mono', monospace; font-size: 0.85em; }
+
+  /* Follow-up buttons */
+  .message.assistant :global(.follow-ups) {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 16px;
+    padding-top: 14px;
+    border-top: 1px solid var(--guide-border, rgba(255,255,255,0.08));
+  }
+
+  .message.assistant :global(.follow-up-btn) {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.6875rem;
+    letter-spacing: 0.03em;
+    padding: 6px 12px;
+    border-radius: 4px;
+    border: 1px solid var(--guide-accent, #4a9eff);
+    background: transparent;
+    color: var(--guide-accent, #4a9eff);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-transform: uppercase;
+  }
+
+  .message.assistant :global(.follow-up-btn:hover) {
+    background: rgba(74, 158, 255, 0.15);
+    color: #fff;
+  }
+
+  /* Typing indicator - tiny horizontal dots (global for dynamic elements) */
+  :global(.typing-indicator) {
     display: flex;
     align-items: center;
+    justify-content: flex-start;
     gap: 4px;
     padding: 8px 0;
   }
 
-  .typing-indicator span {
+  :global(.typing-indicator span) {
     width: 6px;
     height: 6px;
-    background: var(--accent, #4a9eff);
+    background: var(--guide-accent, #4a9eff);
     border-radius: 50%;
     animation: typing-pulse 1.2s infinite ease-in-out;
   }
 
-  .typing-indicator span:nth-child(1) { animation-delay: 0s; }
-  .typing-indicator span:nth-child(2) { animation-delay: 0.15s; }
-  .typing-indicator span:nth-child(3) { animation-delay: 0.3s; }
+  :global(.typing-indicator span:nth-child(1)) { animation-delay: 0s; }
+  :global(.typing-indicator span:nth-child(2)) { animation-delay: 0.15s; }
+  :global(.typing-indicator span:nth-child(3)) { animation-delay: 0.3s; }
 
   @keyframes typing-pulse {
-    0%, 60%, 100% { opacity: 0.3; transform: scale(1); }
-    30% { opacity: 1; transform: scale(1.15); }
+    0%, 60%, 100% {
+      opacity: 0.3;
+      transform: scale(1);
+    }
+    30% {
+      opacity: 1;
+      transform: scale(1.15);
+    }
   }
 
-  .context-display {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    flex-wrap: wrap;
+  .message.error {
+    background: rgba(255, 100, 100, 0.1);
+    color: #ff6b6b;
   }
 
-  .context-label {
-    font-size: 0.75rem;
-    color: var(--text-muted, #606080);
-  }
-
-  .context-section {
-    font-size: 0.875rem;
-    color: var(--text-secondary, #a0a0b8);
-  }
-
-  .status-badge {
-    font-size: 0.625rem;
-    padding: 0.125rem 0.375rem;
-    border-radius: 3px;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    font-weight: 500;
-  }
-
-  .status-badge.established { background: rgba(74, 158, 255, 0.2); color: #4a9eff; }
-  .status-badge.derived { background: rgba(80, 200, 120, 0.2); color: #50c878; }
-  .status-badge.contested { background: rgba(255, 165, 0, 0.2); color: #ffa500; }
-  .status-badge.open { background: rgba(168, 85, 247, 0.2); color: #a855f7; }
-
-  .messages-container {
-    flex: 1;
-    overflow-y: auto;
-    padding: 1rem 1.25rem;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-  }
-
-  .message {
-    max-width: 90%;
-  }
-
-  .message.user {
-    align-self: flex-end;
-  }
-
-  .message.assistant {
-    align-self: flex-start;
-  }
-
-  .message-content {
-    padding: 0.75rem 1rem;
-    border-radius: 12px;
-    font-size: 0.9375rem;
-    line-height: 1.5;
-  }
-
-  .message.user .message-content {
-    background: var(--accent, #4a9eff);
-    color: white;
-    border-bottom-right-radius: 4px;
-  }
-
-  .message.assistant .message-content {
-    background: var(--depth-2, #1a1a24);
-    color: var(--text-primary, #e8e8f0);
-    border-bottom-left-radius: 4px;
-  }
-
-  .message-content p {
-    margin: 0 0 0.5rem 0;
-  }
-
-  .message-content p:last-child {
-    margin-bottom: 0;
-  }
-
-  .message-content code {
-    background: rgba(0, 0, 0, 0.3);
-    padding: 0.125rem 0.25rem;
-    border-radius: 3px;
-    font-family: var(--font-mono, 'JetBrains Mono', monospace);
-    font-size: 0.875em;
-  }
-
+  /* Scroll indicator */
   .scroll-indicator {
-    padding: 0.5rem;
-    text-align: center;
-    font-size: 0.75rem;
-    color: var(--text-muted, #606080);
+    position: absolute;
+    bottom: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: var(--guide-accent, #4a9eff);
+    border: none;
+    color: white;
+    cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 0.25rem;
-    cursor: pointer;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    transition: all 0.2s ease;
+    z-index: 10;
+    animation: bounce-hint 2s ease-in-out infinite;
   }
 
-  .scroll-indicator.hidden {
-    display: none;
+  @keyframes bounce-hint {
+    0%, 100% { transform: translateX(-50%) translateY(0); }
+    50% { transform: translateX(-50%) translateY(3px); }
   }
 
-  .guide-form {
-    padding: 1rem 1.25rem;
-    border-top: 1px solid var(--border, #2a2a3a);
-    background: var(--depth-2, #1a1a24);
-  }
-
-  .input-wrapper {
+  /* Suggestions */
+  .guide-suggestions {
+    padding: 16px 24px;
     display: flex;
-    gap: 0.5rem;
-    margin-bottom: 0.75rem;
+    flex-wrap: wrap;
+    gap: 10px;
+    border-top: 1px solid var(--guide-border, rgba(255,255,255,0.04));
+    background: rgba(0,0,0,0.15);
   }
 
-  #guide-input {
-    flex: 1;
-    padding: 0.75rem 1rem;
-    background: var(--void, #0a0a0c);
-    border: 1px solid var(--border, #2a2a3a);
-    border-radius: 8px;
-    color: var(--text-primary, #e8e8f0);
-    font-size: 0.9375rem;
+  .suggestion {
+    font-size: 0.8125rem;
+    padding: 8px 14px;
+    border-radius: 18px;
+    border: 1px solid var(--guide-border, rgba(255,255,255,0.1));
+    background: transparent;
+    color: var(--guide-text-secondary, #a0a0b8);
+    cursor: pointer;
+    transition: all 0.2s ease;
     font-family: inherit;
   }
 
-  #guide-input:focus {
+  .suggestion:hover {
+    border-color: var(--guide-accent, #4a9eff);
+    color: var(--guide-text, #e8e8f0);
+  }
+
+  .guide-suggestions.hidden {
+    display: none;
+  }
+
+  /* Input */
+  .guide-input-form {
+    padding: 20px 24px;
+    border-top: 1px solid var(--guide-border, rgba(255,255,255,0.06));
+    display: flex;
+    gap: 10px;
+    background: rgba(0,0,0,0.2);
+  }
+
+  .guide-input {
+    flex: 1;
+    padding: 14px 18px;
+    border-radius: 10px;
+    border: 1px solid var(--guide-border, rgba(255,255,255,0.1));
+    background: rgba(255,255,255,0.03);
+    color: var(--guide-text, #e8e8f0);
+    font-size: 0.9375rem;
+    font-family: inherit;
     outline: none;
-    border-color: var(--accent, #4a9eff);
+    transition: border-color 0.2s ease;
   }
 
-  #guide-input::placeholder {
-    color: var(--text-muted, #606080);
+  .guide-input::placeholder {
+    color: var(--guide-muted, #606080);
   }
 
-  #send-button {
-    width: 44px;
-    height: 44px;
-    background: var(--accent, #4a9eff);
-    border: none;
+  .guide-input:focus {
+    border-color: var(--guide-accent, #4a9eff);
+  }
+
+  .guide-submit {
+    padding: 12px 14px;
     border-radius: 8px;
+    border: none;
+    background: var(--guide-accent, #4a9eff);
     color: white;
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: background 0.2s;
+    transition: all 0.2s ease;
   }
 
-  #send-button:hover {
-    background: #3a8eef;
+  .guide-submit:hover {
+    opacity: 0.9;
   }
 
-  #send-button:disabled {
+  .guide-submit:disabled {
     opacity: 0.5;
     cursor: not-allowed;
   }
 
-  .suggestions {
-    display: flex;
-    gap: 0.5rem;
-    flex-wrap: wrap;
-  }
-
-  .suggestion {
-    padding: 0.375rem 0.75rem;
-    background: transparent;
-    border: 1px solid var(--border, #2a2a3a);
-    border-radius: 20px;
-    color: var(--text-secondary, #a0a0b8);
-    font-size: 0.75rem;
-    cursor: pointer;
-    transition: all 0.2s;
-  }
-
-  .suggestion:hover {
-    border-color: var(--accent, #4a9eff);
-    color: var(--accent, #4a9eff);
-  }
-
-  .guide-toggle {
+  /* Mobile trigger - hidden on desktop */
+  .guide-mobile-trigger {
     display: none;
     position: fixed;
-    bottom: 1.5rem;
-    right: 1.5rem;
-    width: 56px;
-    height: 56px;
-    background: var(--accent, #4a9eff);
-    border: none;
+    bottom: 24px;
+    right: 24px;
+    width: 48px;
+    height: 48px;
     border-radius: 50%;
-    color: white;
+    border: 1px solid rgba(255,255,255,0.1);
+    background: #12121a;
     cursor: pointer;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-    z-index: 99;
     align-items: center;
     justify-content: center;
+    z-index: 1000;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
   }
 
+  /* Mobile: Show trigger, hide panel */
   @media (max-width: 1100px) {
     .guide-panel {
       position: fixed;
-      width: 100%;
-      max-width: 420px;
-      right: -100%;
-      transition: right 0.3s ease;
+      top: auto;
+      bottom: 80px;
+      right: 16px;
+      width: calc(100vw - 32px);
+      max-width: 380px;
+      max-height: 70vh;
+      border-radius: 12px;
+      border: 1px solid rgba(255,255,255,0.1);
+      display: none;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.4);
     }
 
-    .guide-panel.open {
-      right: 0;
+    .guide-panel.mobile-open {
+      display: flex;
     }
 
-    .guide-toggle {
+    .guide-mobile-trigger {
       display: flex;
     }
   }
 </style>
+
+<script>
+  // Simple markdown parser
+  function parseMarkdown(text: string): string {
+    let html = text;
+    html = html.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+    html = html.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+    html = html.replace(/__(.+?)__/g, '<strong>$1</strong>');
+    html = html.replace(/\*([^*]+)\*/g, '<em>$1</em>');
+    html = html.replace(/_([^_]+)_/g, '<em>$1</em>');
+    html = html.replace(/`([^`]+)`/g, '<code>$1</code>');
+    html = html.replace(/^&gt;\s*(.+)$/gm, '<blockquote>$1</blockquote>');
+    html = html.replace(/^[\-\*]\s+(.+)$/gm, '<li>$1</li>');
+    html = html.replace(/(<li>.*<\/li>\n?)+/g, '<ul>$&</ul>');
+    html = html.split(/\n\n+/).map(p => {
+      p = p.trim();
+      if (p && !p.startsWith('<ul>') && !p.startsWith('<blockquote>')) {
+        return `<p>${p}</p>`;
+      }
+      return p;
+    }).join('');
+    html = html.replace(/([^>])\n([^<])/g, '$1<br>$2');
+    return html;
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const panel = document.getElementById('guide-panel');
+    const mobileTrigger = document.getElementById('guide-mobile-trigger');
+    const form = document.getElementById('guide-form');
+    const input = document.getElementById('guide-input') as HTMLInputElement;
+    const messagesContainer = document.getElementById('guide-messages');
+    const suggestionsContainer = document.getElementById('guide-suggestions');
+    const suggestions = document.querySelectorAll('.suggestion');
+    const sectionEl = document.getElementById('guide-section');
+    const statusEl = document.getElementById('guide-status');
+
+    // Load conversation history from sessionStorage
+    const STORAGE_KEY = 'guide-conversation';
+    let conversationHistory: Array<{role: 'user' | 'assistant', content: string}> = [];
+    let isLoading = false;
+
+    // Restore previous conversation if exists
+    try {
+      const stored = sessionStorage.getItem(STORAGE_KEY);
+      if (stored) {
+        conversationHistory = JSON.parse(stored);
+        // Restore messages to UI
+        const welcome = messagesContainer?.querySelector('.guide-welcome');
+        if (welcome && conversationHistory.length > 0) {
+          welcome.remove();
+          suggestionsContainer?.classList.add('hidden');
+          conversationHistory.forEach(msg => {
+            const el = document.createElement('div');
+            el.className = `message ${msg.role === 'user' ? 'user' : 'assistant'}`;
+            if (msg.role === 'assistant') {
+              el.innerHTML = parseMarkdown(msg.content);
+            } else {
+              el.textContent = msg.content;
+            }
+            messagesContainer?.appendChild(el);
+          });
+          scrollToBottom();
+        }
+      }
+    } catch (e) {
+      // Ignore storage errors
+    }
+
+    // Save conversation to sessionStorage
+    function saveConversation() {
+      try {
+        sessionStorage.setItem(STORAGE_KEY, JSON.stringify(conversationHistory));
+      } catch (e) {
+        // Ignore storage errors
+      }
+    }
+
+    // Mobile toggle
+    mobileTrigger?.addEventListener('click', () => {
+      panel?.classList.toggle('mobile-open');
+    });
+
+    // Click outside to close on mobile
+    document.addEventListener('click', (e) => {
+      const target = e.target as HTMLElement;
+      if (window.innerWidth <= 1100 &&
+          !target.closest('#guide-panel') &&
+          !target.closest('#guide-mobile-trigger') &&
+          panel?.classList.contains('mobile-open')) {
+        panel?.classList.remove('mobile-open');
+      }
+    });
+
+    // Get current context from page
+    function getCurrentContext() {
+      const dynamicSectionId = (window as any).currentSectionId;  // For proposition lookup
+      const dynamicSection = (window as any).currentSection;       // For display
+      const dynamicStatus = (window as any).currentStatus;
+      const defaultSection = panel?.getAttribute('data-default-section') || 'Essay 1';
+
+      // Read directly from DOM as additional fallback
+      const displayedSection = sectionEl?.textContent?.trim();
+
+      const finalSection = dynamicSection || displayedSection || defaultSection;
+      const finalSectionId = dynamicSectionId || null;
+
+      // Debug logging (remove in production)
+      console.log('[Guide Context]', {
+        dynamicSectionId,
+        dynamicSection,
+        displayedSection,
+        finalSection,
+        finalSectionId
+      });
+
+      return {
+        sectionId: finalSectionId,  // Machine-readable ID
+        section: finalSection,       // Human-readable title
+        status: dynamicStatus || 'established'
+      };
+    }
+
+    // Update displayed context
+    function updateDisplayedContext() {
+      const dynamicSection = (window as any).currentSection;
+      const dynamicStatus = (window as any).currentStatus;
+
+      if (sectionEl && dynamicSection) {
+        sectionEl.textContent = dynamicSection;
+      }
+      if (statusEl && dynamicStatus) {
+        statusEl.textContent = dynamicStatus;
+        statusEl.className = `context-value status-${dynamicStatus}`;
+      }
+    }
+
+    setInterval(updateDisplayedContext, 300);
+
+    // Scroll handling
+    function scrollToBottom() {
+      if (messagesContainer) {
+        messagesContainer.scrollTop = messagesContainer.scrollHeight;
+      }
+    }
+
+    function scrollToElement(element: HTMLElement) {
+      if (messagesContainer) {
+        const containerRect = messagesContainer.getBoundingClientRect();
+        const elementRect = element.getBoundingClientRect();
+        const offsetTop = elementRect.top - containerRect.top + messagesContainer.scrollTop;
+        messagesContainer.scrollTop = offsetTop - 10;
+      }
+    }
+
+    function isAtBottom(): boolean {
+      if (!messagesContainer) return true;
+      return messagesContainer.scrollHeight - messagesContainer.scrollTop - messagesContainer.clientHeight < 50;
+    }
+
+    function updateScrollIndicator() {
+      const indicator = document.getElementById('scroll-indicator');
+      if (indicator && messagesContainer) {
+        const shouldShow = !isAtBottom() && messagesContainer.scrollHeight > messagesContainer.clientHeight;
+        indicator.style.display = shouldShow ? 'flex' : 'none';
+      }
+    }
+
+    const scrollIndicator = document.getElementById('scroll-indicator');
+    scrollIndicator?.addEventListener('click', () => {
+      scrollToBottom();
+      updateScrollIndicator();
+    });
+
+    messagesContainer?.addEventListener('scroll', updateScrollIndicator);
+
+    // Suggestions
+    suggestions.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const query = btn.getAttribute('data-query');
+        if (query) sendMessage(query);
+      });
+    });
+
+    // Form submit
+    form?.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const message = input?.value.trim();
+      if (message && !isLoading) {
+        sendMessage(message);
+        if (input) input.value = '';
+      }
+    });
+
+    // Follow-up buttons
+    function createFollowUpButtons(): HTMLElement {
+      const container = document.createElement('div');
+      container.className = 'follow-ups';
+      const options = [
+        { label: 'Say more', query: 'Can you expand on that?' },
+        { label: 'Related concepts', query: 'What concepts relate to this?' },
+        { label: 'How does this fit in?', query: 'How does this fit into the broader framework?' },
+        { label: 'What follows?', query: 'What are the logical consequences?' },
+      ];
+      options.forEach(opt => {
+        const btn = document.createElement('button');
+        btn.className = 'follow-up-btn';
+        btn.textContent = opt.label;
+        btn.addEventListener('click', () => {
+          document.querySelectorAll('.follow-ups').forEach(el => el.remove());
+          sendMessage(opt.query);
+        });
+        container.appendChild(btn);
+      });
+      return container;
+    }
+
+    // Send message
+    async function sendMessage(message: string) {
+      if (isLoading) return;
+      isLoading = true;
+
+      const welcome = messagesContainer?.querySelector('.guide-welcome');
+      if (welcome) welcome.remove();
+      suggestionsContainer?.classList.add('hidden');
+
+      const userEl = document.createElement('div');
+      userEl.className = 'message user';
+      userEl.textContent = message;
+      messagesContainer?.appendChild(userEl);
+      scrollToBottom();
+
+      const typingEl = document.createElement('div');
+      typingEl.className = 'message assistant';
+      typingEl.innerHTML = '<div class="typing-indicator"><span></span><span></span><span></span></div>';
+      messagesContainer?.appendChild(typingEl);
+      scrollToBottom();
+
+      const context = getCurrentContext();
+
+      // Build the request payload
+      const requestPayload = {
+        message,
+        history: conversationHistory,
+        context: {
+          currentSection: context.sectionId || context.section,  // Prefer ID for proposition lookup
+          currentSectionTitle: context.section,  // Keep title for display context
+          epistemicStatus: context.status
+        }
+      };
+
+      // Debug logging (remove in production)
+      console.log('[Guide Request]', requestPayload.context);
+
+      try {
+        const response = await fetch('/api/guide', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(requestPayload)
+        });
+
+        if (!response.ok) throw new Error('Guide unavailable');
+
+        const data = await response.json();
+        typingEl.innerHTML = parseMarkdown(data.message);
+
+        const followUps = createFollowUpButtons();
+        typingEl.appendChild(followUps);
+
+        scrollToElement(typingEl);
+        updateScrollIndicator();
+
+        conversationHistory.push(
+          { role: 'user', content: message },
+          { role: 'assistant', content: data.message }
+        );
+
+        // Keep history manageable
+        if (conversationHistory.length > 10) {
+          conversationHistory = conversationHistory.slice(-10);
+        }
+
+        // Persist to sessionStorage
+        saveConversation();
+
+      } catch (error) {
+        typingEl.remove();
+        const errorEl = document.createElement('div');
+        errorEl.className = 'message assistant error';
+        errorEl.textContent = "I apologize, but I'm having trouble connecting. Please try again.";
+        messagesContainer?.appendChild(errorEl);
+        scrollToBottom();
+      }
+
+      isLoading = false;
+    }
+  });
+</script>
