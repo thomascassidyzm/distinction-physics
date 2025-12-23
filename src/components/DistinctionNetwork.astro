@@ -95,11 +95,24 @@ function getCluster(id: string): string {
       <h2 class="network-title">Your Distinction Network</h2>
       <p class="network-subtitle">Each node is a concept. Click to explore. Understanding illuminates.</p>
     </div>
-    <div class="progress-indicator">
-      <span class="progress-count" id="progress-count">0</span>
-      <span class="progress-total">/ {propositions.length}</span>
-      <span class="progress-label">distinctions made</span>
+    <div class="header-right">
+      <button class="demo-btn" id="demo-btn">
+        <svg class="demo-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polygon points="5 3 19 12 5 21 5 3"></polygon>
+        </svg>
+        <span class="demo-text">Watch it Grow</span>
+      </button>
+      <div class="progress-indicator">
+        <span class="progress-count" id="progress-count">0</span>
+        <span class="progress-total">/ {propositions.length}</span>
+        <span class="progress-label">distinctions made</span>
+      </div>
     </div>
+  </div>
+
+  <!-- Demo mode floating concept label -->
+  <div class="demo-label" id="demo-label">
+    <span class="demo-label-text"></span>
   </div>
 
   <div class="network-viewport" id="network-viewport">
@@ -553,6 +566,152 @@ function getCluster(id: string): string {
       translateY = 0;
       updateTransform();
     });
+
+    // ========================================
+    // DEMO MODE - "Watch it Grow" simulation
+    // ========================================
+    const demoBtn = document.getElementById('demo-btn');
+    const demoLabel = document.getElementById('demo-label');
+    const demoLabelText = demoLabel.querySelector('.demo-label-text');
+    let isDemoRunning = false;
+    let demoTimeout = null;
+
+    // Calculate learning order using BFS from axioms
+    function getLearningOrder() {
+      const order = [];
+      const visited = new Set();
+      const axiomIds = ['axiom-1-energy-cost', 'axiom-2-finite-budget'];
+
+      // Start with axioms
+      const queue = [...axiomIds];
+      axiomIds.forEach(id => visited.add(id));
+
+      while (queue.length > 0) {
+        const id = queue.shift();
+        order.push(id);
+
+        const prop = props.find(p => p.id === id);
+        if (prop) {
+          // Add linked concepts that haven't been visited
+          prop.linksTo.forEach(linkedId => {
+            if (!visited.has(linkedId) && props.some(p => p.id === linkedId)) {
+              visited.add(linkedId);
+              queue.push(linkedId);
+            }
+          });
+        }
+      }
+
+      // Add any remaining concepts not reachable from axioms
+      props.forEach(p => {
+        if (!visited.has(p.id)) {
+          order.push(p.id);
+        }
+      });
+
+      return order;
+    }
+
+    function stopDemo() {
+      isDemoRunning = false;
+      if (demoTimeout) {
+        clearTimeout(demoTimeout);
+        demoTimeout = null;
+      }
+      demoBtn.classList.remove('running');
+      demoBtn.querySelector('.demo-text').textContent = 'Watch it Grow';
+      demoLabel.classList.remove('visible');
+    }
+
+    function runDemo() {
+      if (isDemoRunning) {
+        stopDemo();
+        return;
+      }
+
+      isDemoRunning = true;
+      demoBtn.classList.add('running');
+      demoBtn.querySelector('.demo-text').textContent = 'Stop Demo';
+
+      // Clear current understanding
+      understood.clear();
+      applyUnderstoodState();
+
+      // Close any open panel
+      detailPanel.classList.remove('open');
+      nodes.forEach(n => n.classList.remove('selected'));
+
+      const learningOrder = getLearningOrder();
+      let currentIndex = 0;
+
+      function illuminateNext() {
+        if (!isDemoRunning || currentIndex >= learningOrder.length) {
+          // Demo complete
+          if (isDemoRunning) {
+            demoLabel.classList.add('complete');
+            demoLabelText.textContent = 'Understanding Complete';
+            setTimeout(() => {
+              demoLabel.classList.remove('complete');
+              stopDemo();
+            }, 2000);
+          }
+          return;
+        }
+
+        const id = learningOrder[currentIndex];
+        const prop = props.find(p => p.id === id);
+        const node = document.querySelector(`.node[data-id="${id}"]`);
+
+        if (prop && node) {
+          // Add to understood
+          understood.add(id);
+          applyUnderstoodState();
+
+          // Celebration animation
+          node.classList.add('just-understood');
+          setTimeout(() => node.classList.remove('just-understood'), 800);
+
+          // Show floating label
+          demoLabelText.textContent = prop.title;
+          demoLabel.classList.add('visible');
+
+          // Position label near the node (using SVG coordinates)
+          const pos = positions[id];
+          if (pos) {
+            const svgRect = document.querySelector('.network-svg').getBoundingClientRect();
+            const viewportRect = viewport.getBoundingClientRect();
+            const svgWidth = 1000;
+            const svgHeight = 800;
+
+            // Convert SVG coords to screen coords (accounting for current transform)
+            const screenX = viewportRect.left + (pos.x / svgWidth) * svgRect.width * scale + translateX;
+            const screenY = viewportRect.top + (pos.y / svgHeight) * svgRect.height * scale + translateY;
+
+            demoLabel.style.left = `${screenX - viewportRect.left}px`;
+            demoLabel.style.top = `${screenY - viewportRect.top - 50}px`;
+          }
+        }
+
+        currentIndex++;
+
+        // Variable timing for more natural feel
+        // Axioms are slower, later concepts faster
+        const baseDelay = currentIndex <= 2 ? 1200 :
+                         currentIndex <= 5 ? 800 :
+                         currentIndex <= 10 ? 500 : 350;
+        const jitter = Math.random() * 200 - 100;
+
+        demoTimeout = setTimeout(illuminateNext, baseDelay + jitter);
+      }
+
+      // Start after brief pause
+      demoTimeout = setTimeout(illuminateNext, 500);
+    }
+
+    demoBtn.addEventListener('click', runDemo);
+
+    // Clean up on page unload
+    window.addEventListener('beforeunload', stopDemo);
   });
 </script>
 
@@ -596,6 +755,52 @@ function getCluster(id: string): string {
     margin: 0.25rem 0 0;
   }
 
+  .header-right {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .demo-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    background: rgba(74, 158, 255, 0.1);
+    border: 1px solid rgba(74, 158, 255, 0.3);
+    border-radius: 6px;
+    color: var(--accent, #4a9eff);
+    font-family: var(--font-body, 'Sora', sans-serif);
+    font-size: 0.8125rem;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+
+  .demo-btn:hover {
+    background: rgba(74, 158, 255, 0.2);
+    border-color: var(--accent, #4a9eff);
+  }
+
+  .demo-btn.running {
+    background: rgba(239, 68, 68, 0.1);
+    border-color: rgba(239, 68, 68, 0.3);
+    color: #ef4444;
+  }
+
+  .demo-btn.running:hover {
+    background: rgba(239, 68, 68, 0.2);
+    border-color: #ef4444;
+  }
+
+  .demo-btn.running .demo-icon {
+    animation: none;
+  }
+
+  .demo-icon {
+    width: 14px;
+    height: 14px;
+  }
+
   .progress-indicator {
     display: flex;
     align-items: baseline;
@@ -607,6 +812,7 @@ function getCluster(id: string): string {
     font-size: 2rem;
     font-weight: 500;
     color: var(--accent, #4a9eff);
+    transition: color 0.3s;
   }
 
   .progress-total {
@@ -618,6 +824,58 @@ function getCluster(id: string): string {
     font-size: 0.75rem;
     color: var(--text-muted, #606080);
     margin-left: 0.5rem;
+  }
+
+  /* Demo floating label */
+  .demo-label {
+    position: absolute;
+    pointer-events: none;
+    z-index: 200;
+    transform: translate(-50%, 0);
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+
+  .demo-label.visible {
+    opacity: 1;
+    animation: float-up 0.4s ease-out;
+  }
+
+  .demo-label.complete {
+    left: 50% !important;
+    top: 50% !important;
+    transform: translate(-50%, -50%);
+  }
+
+  .demo-label.complete .demo-label-text {
+    font-size: 1.5rem;
+    color: #50c878;
+    background: rgba(80, 200, 120, 0.15);
+    border-color: rgba(80, 200, 120, 0.3);
+  }
+
+  @keyframes float-up {
+    from {
+      opacity: 0;
+      transform: translate(-50%, 10px);
+    }
+    to {
+      opacity: 1;
+      transform: translate(-50%, 0);
+    }
+  }
+
+  .demo-label-text {
+    display: inline-block;
+    font-family: var(--font-display, 'Cormorant Garamond', serif);
+    font-size: 1.125rem;
+    color: var(--text-primary, #e8e8f0);
+    background: rgba(18, 18, 26, 0.95);
+    border: 1px solid var(--border, #2a2a3a);
+    border-radius: 8px;
+    padding: 0.5rem 1rem;
+    white-space: nowrap;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
   }
 
   /* Viewport and SVG */
@@ -1073,9 +1331,23 @@ function getCluster(id: string): string {
       padding: 1rem;
     }
 
+    .header-right {
+      width: 100%;
+      justify-content: space-between;
+    }
+
+    .demo-btn {
+      padding: 0.375rem 0.75rem;
+      font-size: 0.75rem;
+    }
+
+    .progress-count {
+      font-size: 1.5rem;
+    }
+
     .network-legend {
       bottom: auto;
-      top: 5rem;
+      top: 7rem;
       left: 1rem;
       padding: 0.75rem;
     }
@@ -1084,6 +1356,11 @@ function getCluster(id: string): string {
       flex-direction: row;
       flex-wrap: wrap;
       gap: 0.5rem 1rem;
+    }
+
+    .demo-label-text {
+      font-size: 1rem;
+      padding: 0.375rem 0.75rem;
     }
   }
 </style>
