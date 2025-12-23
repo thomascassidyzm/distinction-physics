@@ -375,4 +375,297 @@ export const propositions: Proposition[] = [
     linksTo: ['transcendental-necessity', 'anti-fragile-status'],
     version: 'v0.1',
   },
+
+  // ========================================
+  // Additional Nuanced Distinctions
+  // ========================================
+
+  // Derived from Axiom 2
+  {
+    id: 'finitude',
+    title: 'The Finitude Principle',
+    surface: 'Every observer can maintain only finitely many distinctions at once. This isn\'t a practical limit—it\'s fundamental. Infinity is a mathematical concept, not an observable reality.',
+    logic: {
+      claim: 'Only finitely many distinctions can be maintained simultaneously by any OLU.',
+      premises: [
+        'Each distinction requires energy to maintain',
+        'Energy budgets are finite',
+        'Therefore distinction count is finite'
+      ],
+      conclusion: 'There is always a maximum number of simultaneous distinctions for any observer.',
+    },
+    linksTo: ['axiom-2-finite-budget', 'effective-discreteness', 'attention-bottleneck'],
+    version: 'v0.1',
+  },
+
+  // OLU Spectrum
+  {
+    id: 'olu-spectrum',
+    title: 'The Observer Spectrum',
+    surface: 'From thermostat to human to hypothetical superintelligence—observers differ in complexity but share the same fundamental constraint: finite energy, finite distinctions.',
+    logic: {
+      claim: 'OLUs form a spectrum of complexity, all governed by the same axioms.',
+      premises: [
+        'Simple OLUs: few distinctions, low energy (thermostat)',
+        'Complex OLUs: many distinctions, higher energy (brain)',
+        'Self-referential OLUs: distinctions about distinctions (consciousness)'
+      ],
+      conclusion: 'The spectrum is quantitative (energy budget), not qualitative (magical emergence).',
+    },
+    linksTo: ['olu-definition', 'consciousness-as-self-reference', 'differential-response'],
+    version: 'v0.1',
+  },
+
+  // Differential Response
+  {
+    id: 'differential-response',
+    title: 'Differential Response',
+    surface: 'The operational signature of an observer: different inputs produce different outputs. No differential response, no distinction-making, no observer. It\'s that simple.',
+    logic: {
+      claim: 'Differential response is the observable signature of distinction-making.',
+      premises: [
+        'If all inputs produce identical outputs, no distinction is made',
+        'Different outputs for different inputs = distinction',
+        'This is measurable, not metaphysical'
+      ],
+      conclusion: 'We can detect OLUs by their differential response patterns.',
+    },
+    linksTo: ['olu-definition', 'olu-spectrum'],
+    version: 'v0.1',
+  },
+
+  // Circularity Dissolved
+  {
+    id: 'circularity-dissolved',
+    title: 'Productive Circularity',
+    surface: 'Using distinction to argue for distinction isn\'t a bug—it\'s the proof. The circle closes necessarily because distinction is transcendentally prior.',
+    logic: {
+      claim: 'The apparent circularity demonstrates rather than undermines the framework.',
+      premises: [
+        'Transcendental arguments are necessarily self-referential',
+        'Trying to escape the circle uses the circle',
+        'This is how conditions of possibility are established'
+      ],
+      conclusion: 'The circularity is virtuous: it shows you cannot think without distinction.',
+    },
+    linksTo: ['transcendental-necessity', 'consciousness-as-self-reference'],
+    version: 'v0.1',
+  },
+
+  // Resolution-Energy Relationship
+  {
+    id: 'resolution-energy',
+    title: 'Resolution Costs Energy',
+    surface: 'Want to see finer detail? Pay more energy. The relationship is precise: δx ∝ ℏc/E. This connects quantum mechanics to thermodynamics at the deepest level.',
+    logic: {
+      claim: 'Spatial resolution scales inversely with energy investment.',
+      premises: [
+        'Finer distinctions require more energy',
+        'The quantum of action ℏ sets the scale',
+        'Resolution limit: δx ≥ ℏc/E'
+      ],
+      conclusion: 'The Planck scale represents where even infinite energy fails.',
+      predictive: 'Microscopy resolution should correlate with energy input.',
+    },
+    linksTo: ['planck-limit', 'effective-discreteness', 'heisenberg-uncertainty'],
+    version: 'v0.1',
+  },
+
+  // Measurement as Distinction
+  {
+    id: 'measurement-collapse',
+    title: 'Measurement Is Distinction',
+    surface: 'When physicists say the wave function "collapses," we say: a distinction was made. Energy was spent. Possibilities became actuality. That\'s all measurement is.',
+    logic: {
+      claim: 'Quantum measurement is the making of a distinction between previously undistinguished states.',
+      premises: [
+        'Before measurement: superposition (undistinguished)',
+        'Measurement requires energy expenditure',
+        'After measurement: definite state (distinguished)'
+      ],
+      conclusion: 'There is no mystery in collapse—it\'s thermodynamic distinction-making.',
+    },
+    linksTo: ['superposition-undistinguished', 'heisenberg-uncertainty', 'axiom-1-energy-cost'],
+    version: 'v0.1',
+  },
+
+  // Hard Problem Reframed
+  {
+    id: 'hard-problem-reframed',
+    title: 'The Hard Problem Reframed',
+    surface: 'Why is there "something it is like" to be conscious? Because self-reference creates an inside. The loop of observing yourself observing generates perspective.',
+    logic: {
+      claim: 'Phenomenal experience arises from self-referential distinction-making.',
+      premises: [
+        'Self-reference creates a model of the modeler',
+        'This model has an "inside" perspective',
+        'Qualia are self-referential distinctions about one\'s own states'
+      ],
+      conclusion: 'The hard problem is reframed: what it\'s like IS the self-referential loop.',
+    },
+    linksTo: ['consciousness-as-self-reference', 'consciousness-energy'],
+    version: 'v0.1',
+  },
+
+  // Heat Death
+  {
+    id: 'heat-death',
+    title: 'Heat Death as Total Indistinction',
+    surface: 'The universe\'s final state: maximum entropy, minimum distinction. Everything the same temperature, no gradients, no boundaries, no observers. Pure homogeneity.',
+    logic: {
+      claim: 'Heat death represents the complete decay of all distinctions.',
+      premises: [
+        'Without energy gradients, no work can be done',
+        'Without work, no distinctions can be maintained',
+        'Maximum entropy = minimum distinguishability'
+      ],
+      conclusion: 'Heat death is the absence of all OLUs—nothing left to distinguish anything.',
+    },
+    linksTo: ['entropy-as-decay', 'dynamism'],
+    version: 'v0.1',
+  },
+
+  // Relationality
+  {
+    id: 'relationality',
+    title: 'All OLUs Are Relational',
+    surface: 'No observer is an island. Every OLU draws energy from its environment, making distinction-making inherently relational. You cannot observe without being embedded.',
+    logic: {
+      claim: 'Observers necessarily exist in relation to energy-providing environments.',
+      premises: [
+        'Maintaining distinctions requires ongoing energy',
+        'Energy must come from somewhere (environment)',
+        'Therefore OLUs are open systems, not isolated'
+      ],
+      conclusion: 'Observation is always observation-from-somewhere by something-embedded.',
+    },
+    linksTo: ['dynamism', 'axiom-2-finite-budget', 'olu-definition'],
+    version: 'v0.1',
+  },
+
+  // Chunking
+  {
+    id: 'chunking',
+    title: 'Chunking as Compression',
+    surface: 'Experts don\'t see more—they see more efficiently. Chunking compresses many distinctions into one, reducing the energy cost of complex patterns.',
+    logic: {
+      claim: 'Chunking compresses multiple distinctions into single higher-order patterns.',
+      premises: [
+        'Novices process elements individually (high energy)',
+        'Experts process chunks (lower energy per element)',
+        'Chunks are learned compression schemes'
+      ],
+      conclusion: 'Chess masters see board positions; novices see pieces. Same information, different energy cost.',
+    },
+    linksTo: ['spaced-repetition', 'learning-efficiency', 'attention-bottleneck'],
+    version: 'v0.1',
+  },
+
+  // Time from Boundaries
+  {
+    id: 'time-from-boundaries',
+    title: 'Time as Change in Boundaries',
+    surface: 'Time isn\'t a container events happen "in." Time IS the change in boundary patterns. Where nothing changes, no time passes.',
+    logic: {
+      claim: 'Time measures the evolution of distinction patterns.',
+      premises: [
+        'Time is measured by change',
+        'Change is alteration of boundaries',
+        'No boundary change = no time'
+      ],
+      conclusion: 'Time emerges from distinction dynamics, not the reverse.',
+    },
+    linksTo: ['spacetime-emergence', 'dynamism'],
+    version: 'v0.1',
+  },
+
+  // Attention Bottleneck
+  {
+    id: 'attention-bottleneck',
+    title: 'The Attention Bottleneck',
+    surface: 'You can only consciously attend to ~4 things at once. Not because your brain is poorly designed—because conscious distinction-making costs ~8W and that\'s what 8W buys.',
+    logic: {
+      claim: 'Conscious attention capacity is thermodynamically limited to ~4 items.',
+      premises: [
+        'Working memory holds ~4 chunks',
+        'Each chunk requires active maintenance',
+        '~8W budget / ~2W per maintained chunk ≈ 4 items'
+      ],
+      conclusion: 'The attention bottleneck is energy economics, not architecture.',
+    },
+    linksTo: ['consciousness-energy', 'finitude', 'chunking'],
+    version: 'v0.1',
+  },
+
+  // Entanglement
+  {
+    id: 'entanglement',
+    title: 'Entanglement as Shared Boundary',
+    surface: 'Entangled particles share a distinction—their states are correlated because they emerged from a single boundary operation. Measure one, you\'ve distinguished both.',
+    logic: {
+      claim: 'Quantum entanglement reflects shared distinction history.',
+      premises: [
+        'Entangled particles originated from single distinction event',
+        'Their boundary is shared, not separate',
+        'Distinguishing one automatically distinguishes the other'
+      ],
+      conclusion: 'No "spooky action"—just shared distinction propagating.',
+    },
+    linksTo: ['superposition-undistinguished', 'measurement-collapse'],
+    version: 'v0.1',
+  },
+
+  // Black Holes
+  {
+    id: 'black-holes',
+    title: 'Black Holes as Distinction Limits',
+    surface: 'At the event horizon, distinctions cannot escape. Information that crosses in becomes inaccessible—not destroyed, but beyond any OLU\'s ability to distinguish.',
+    logic: {
+      claim: 'Black holes represent regions where distinction extraction requires infinite energy.',
+      premises: [
+        'Escape from black hole requires exceeding c',
+        'This would require infinite energy',
+        'Distinctions trapped inside are operationally lost'
+      ],
+      conclusion: 'Black holes are thermodynamic censorship: what goes in, stays indistinct.',
+    },
+    linksTo: ['planck-limit', 'gravity-as-curvature', 'heat-death'],
+    version: 'v0.1',
+  },
+
+  // Life as Distinction Maintenance
+  {
+    id: 'life-distinction-maintenance',
+    title: 'Life Maintains Boundaries',
+    surface: 'Living things are remarkable: they maintain complex boundary patterns against entropy\'s pull. A cell is a distinction-preserving machine, powered by metabolism.',
+    logic: {
+      claim: 'Life is the active maintenance of distinction patterns against entropic decay.',
+      premises: [
+        'Living systems maintain internal order',
+        'This requires continuous energy input',
+        'Death = cessation of boundary maintenance'
+      ],
+      conclusion: 'Life is thermodynamically special: it locally reverses distinction decay.',
+    },
+    linksTo: ['entropy-as-decay', 'dynamism', 'relationality'],
+    version: 'v0.1',
+  },
+
+  // Mathematics as Distinction Formalism
+  {
+    id: 'math-as-distinction',
+    title: 'Mathematics as Distinction Formalism',
+    surface: 'Numbers are distinctions: 1 ≠ 2 ≠ 3. Sets are boundaries. Proofs are chains of distinction. Mathematics is the formal study of distinction structures.',
+    logic: {
+      claim: 'Mathematical structures are formalized distinction systems.',
+      premises: [
+        'Numbers encode quantity distinctions',
+        'Sets encode membership distinctions',
+        'Proofs preserve distinctions through logical steps'
+      ],
+      conclusion: 'Mathematics is distinction-making made rigorous and abstract.',
+    },
+    linksTo: ['distinction-operator', 'mathematical-honesty'],
+    version: 'v0.1',
+  },
 ];

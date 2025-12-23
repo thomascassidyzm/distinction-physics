@@ -46,17 +46,22 @@ function calculatePositions(props: typeof propositions) {
   }
 
   // Position nodes in concentric rings
-  const centerX = 500;
+  // Adjust center and spacing for better viewport fit
+  const centerX = 600;
   const centerY = 400;
-  const ringSpacing = 120;
+  const baseRingSpacing = 85; // Tighter spacing for more nodes
 
   rings.forEach((ring, ringIndex) => {
+    // Decrease spacing as rings grow (logarithmic feel)
+    const ringSpacing = baseRingSpacing * (1 - ringIndex * 0.05);
     const radius = ringIndex === 0 ? 0 : ringSpacing * ringIndex;
-    const angleStep = (2 * Math.PI) / ring.length;
-    const startAngle = Math.PI / 4; // Offset for visual interest
+    const angleStep = (2 * Math.PI) / Math.max(ring.length, 1);
+    const startAngle = -Math.PI / 2; // Start from top
 
     ring.forEach((id, i) => {
-      const angle = startAngle + angleStep * i + (ringIndex % 2 === 0 ? 0 : angleStep / 2);
+      // Slight offset for alternating rings
+      const offset = ringIndex % 2 === 0 ? 0 : angleStep / 2;
+      const angle = startAngle + angleStep * i + offset;
       positions[id] = {
         x: centerX + radius * Math.cos(angle),
         y: centerY + radius * Math.sin(angle),
@@ -81,10 +86,11 @@ const edges = propositions.flatMap(prop =>
 // Assign conceptual clusters for color variation
 function getCluster(id: string): string {
   if (id.includes('axiom')) return 'axiom';
-  if (id.includes('consciousness') || id.includes('self-reference') || id.includes('learning') || id.includes('spaced')) return 'mind';
-  if (id.includes('heisenberg') || id.includes('superposition') || id.includes('planck')) return 'quantum';
-  if (id.includes('entropy') || id.includes('landauer') || id.includes('dynamism')) return 'thermo';
-  if (id.includes('spacetime') || id.includes('gravity') || id.includes('time')) return 'spacetime';
+  if (id.includes('consciousness') || id.includes('self-reference') || id.includes('learning') || id.includes('spaced') || id.includes('attention') || id.includes('chunking') || id.includes('hard-problem')) return 'mind';
+  if (id.includes('heisenberg') || id.includes('superposition') || id.includes('planck') || id.includes('measurement') || id.includes('entanglement') || id.includes('resolution-energy')) return 'quantum';
+  if (id.includes('entropy') || id.includes('landauer') || id.includes('dynamism') || id.includes('heat-death') || id.includes('life-distinction')) return 'thermo';
+  if (id.includes('spacetime') || id.includes('gravity') || id.includes('time-from') || id.includes('black-hole')) return 'spacetime';
+  if (id.includes('math') || id.includes('distinction-operator') || id.includes('mathematical')) return 'formal';
   return 'core';
 }
 ---
@@ -118,7 +124,7 @@ function getCluster(id: string): string {
   <div class="network-viewport" id="network-viewport">
     <svg
       class="network-svg"
-      viewBox="0 0 1000 800"
+      viewBox="100 50 1000 700"
       preserveAspectRatio="xMidYMid meet"
     >
       <defs>
@@ -314,6 +320,7 @@ function getCluster(id: string): string {
       <div class="legend-item"><span class="legend-dot quantum"></span>Quantum</div>
       <div class="legend-item"><span class="legend-dot thermo"></span>Thermodynamics</div>
       <div class="legend-item"><span class="legend-dot spacetime"></span>Spacetime</div>
+      <div class="legend-item"><span class="legend-dot formal"></span>Formal/Math</div>
     </div>
   </div>
 </div>
@@ -982,6 +989,9 @@ function getCluster(id: string): string {
   .cluster-spacetime .node-core { stroke: rgba(20, 184, 166, 0.3); }
   .cluster-spacetime .node-inner { fill: rgba(20, 184, 166, 0.1); }
 
+  .cluster-formal .node-core { stroke: rgba(236, 72, 153, 0.3); }
+  .cluster-formal .node-inner { fill: rgba(236, 72, 153, 0.1); }
+
   /* Understood state - nodes come alive */
   .node.understood .node-glow {
     opacity: 1;
@@ -1019,6 +1029,10 @@ function getCluster(id: string): string {
   .cluster-spacetime.understood .node-core { fill: rgba(20, 184, 166, 0.25); stroke: #14b8a6; }
   .cluster-spacetime.understood .node-glow { stroke: rgba(20, 184, 166, 0.35); }
   .cluster-spacetime.understood .node-inner { fill: rgba(20, 184, 166, 0.45); }
+
+  .cluster-formal.understood .node-core { fill: rgba(236, 72, 153, 0.25); stroke: #ec4899; }
+  .cluster-formal.understood .node-glow { stroke: rgba(236, 72, 153, 0.35); }
+  .cluster-formal.understood .node-inner { fill: rgba(236, 72, 153, 0.45); }
 
   /* Just understood celebration */
   .node.just-understood {
@@ -1153,6 +1167,7 @@ function getCluster(id: string): string {
   .panel-cluster.quantum { background: rgba(249, 115, 22, 0.15); color: #f97316; }
   .panel-cluster.thermo { background: rgba(239, 68, 68, 0.15); color: #ef4444; }
   .panel-cluster.spacetime { background: rgba(20, 184, 166, 0.15); color: #14b8a6; }
+  .panel-cluster.formal { background: rgba(236, 72, 153, 0.15); color: #ec4899; }
 
   .panel-surface {
     font-size: 0.9375rem;
@@ -1308,6 +1323,7 @@ function getCluster(id: string): string {
   .legend-dot.quantum { border-color: #f97316; background: rgba(249, 115, 22, 0.3); }
   .legend-dot.thermo { border-color: #ef4444; background: rgba(239, 68, 68, 0.3); }
   .legend-dot.spacetime { border-color: #14b8a6; background: rgba(20, 184, 166, 0.3); }
+  .legend-dot.formal { border-color: #ec4899; background: rgba(236, 72, 153, 0.3); }
 
   /* Responsive */
   @media (max-width: 900px) {
