@@ -46,10 +46,10 @@ function calculatePositions(props: typeof propositions) {
   }
 
   // Position nodes in concentric rings
-  // Adjust center and spacing for better viewport fit
-  const centerX = 600;
-  const centerY = 400;
-  const baseRingSpacing = 85; // Tighter spacing for more nodes
+  // Center in viewBox and adjust spacing for better viewport fit
+  const centerX = 500;
+  const centerY = 350;
+  const baseRingSpacing = 70; // Tighter spacing for more nodes
 
   rings.forEach((ring, ringIndex) => {
     // Decrease spacing as rings grow (logarithmic feel)
@@ -124,7 +124,7 @@ function getCluster(id: string): string {
   <div class="network-viewport" id="network-viewport">
     <svg
       class="network-svg"
-      viewBox="100 50 1000 700"
+      viewBox="0 0 1000 700"
       preserveAspectRatio="xMidYMid meet"
     >
       <defs>
@@ -196,7 +196,7 @@ function getCluster(id: string): string {
         {Array.from({ length: 40 }).map((_, i) => (
           <circle
             cx={Math.random() * 1000}
-            cy={Math.random() * 800}
+            cy={Math.random() * 700}
             r={Math.random() * 0.8 + 0.2}
             fill="rgba(255,255,255,0.15)"
             class="bg-star"
@@ -688,7 +688,7 @@ function getCluster(id: string): string {
             const svgRect = document.querySelector('.network-svg').getBoundingClientRect();
             const viewportRect = viewport.getBoundingClientRect();
             const svgWidth = 1000;
-            const svgHeight = 800;
+            const svgHeight = 700;
 
             // Convert SVG coords to screen coords (accounting for current transform)
             const screenX = viewportRect.left + (pos.x / svgWidth) * svgRect.width * scale + translateX;
