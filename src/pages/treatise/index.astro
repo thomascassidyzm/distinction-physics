@@ -1,0 +1,557 @@
+---
+/**
+ * Treatise Index - Module 0: Philosophical Foundations
+ *
+ * Academic treatise rendering with full scholarly apparatus.
+ */
+
+import { module0 } from '../../content/treatise/module-0-philosophical';
+import ContentRenderer from '../../components/treatise/ContentRenderer.astro';
+import SectionHeader from '../../components/treatise/SectionHeader.astro';
+import EpistemicBadge from '../../components/treatise/EpistemicBadge.astro';
+import { VERSION, BUILD } from '../../lib/version';
+
+const epistemicStatusDescriptions = {
+  established: 'Logically necessary from axioms; cannot be denied without contradiction',
+  derived: 'Follows from established premises through valid reasoning',
+  contested: 'Arguable; alternative interpretations exist',
+  open: 'An active research question; multiple approaches viable',
+  speculative: 'Exploratory; requires further development',
+};
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{module0.title} - Distinction Physics</title>
+  <meta name="description" content={module0.subtitle}>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Sora:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- KaTeX CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="header-nav">
+      <a href="/" class="site-title">Distinction Physics</a>
+      <div class="header-meta">
+        <span class="version">{VERSION}</span>
+        <span class="build">build {BUILD}</span>
+      </div>
+    </nav>
+    <div class="header-actions">
+      <a href="/essay" class="nav-link">Essay</a>
+      <a href="/explore" class="nav-link">Explore</a>
+    </div>
+  </header>
+
+  <aside class="section-nav">
+    <div class="nav-title">Module {module0.number}</div>
+    <div class="nav-module-name">{module0.title}</div>
+
+    <div class="nav-sections">
+      {module0.sections.map((section) => (
+        <a
+          href={`#section-${section.id}`}
+          class="nav-item"
+          data-section={section.id}
+        >
+          <span class="nav-number">{section.id}</span>
+          <span class="nav-label">{section.title.split(':')[0]}</span>
+          <span class={`nav-status ${section.epistemicStatus}`}></span>
+        </a>
+      ))}
+    </div>
+
+    <div class="nav-legend">
+      <div class="legend-title">Epistemic Status</div>
+      <div class="legend-item"><span class="legend-dot established"></span> Established</div>
+      <div class="legend-item"><span class="legend-dot derived"></span> Derived</div>
+      <div class="legend-item"><span class="legend-dot contested"></span> Contested</div>
+      <div class="legend-item"><span class="legend-dot open"></span> Open</div>
+      <div class="legend-item"><span class="legend-dot speculative"></span> Speculative</div>
+    </div>
+  </aside>
+
+  <main class="treatise-content">
+    <article>
+      <header class="module-header">
+        <div class="module-number">Module {module0.number}</div>
+        <h1>{module0.title}</h1>
+        <p class="subtitle">{module0.subtitle}</p>
+        <EpistemicBadge status={module0.epistemicStatus} />
+      </header>
+
+      {module0.keyInsights && module0.keyInsights.length > 0 && (
+        <aside class="module-insights">
+          <h3>Key Insights</h3>
+          <ul>
+            {module0.keyInsights.map((insight) => (
+              <li>{insight}</li>
+            ))}
+          </ul>
+        </aside>
+      )}
+
+      {module0.sections.map((section) => (
+        <section id={`section-${section.id}`} class="treatise-section" data-status={section.epistemicStatus}>
+          <SectionHeader
+            number={section.id}
+            title={section.title}
+            subtitle={section.subtitle}
+            epistemicStatus={section.epistemicStatus}
+          />
+
+          <div class="section-body">
+            <ContentRenderer blocks={section.content} />
+          </div>
+
+          {section.keyPoints && section.keyPoints.length > 0 && (
+            <div class="section-key-points">
+              <h4>Key Points</h4>
+              <ul>
+                {section.keyPoints.map((point) => (
+                  <li>{point}</li>
+                ))}
+              </ul>
+            </div>
+          )}
+        </section>
+      ))}
+
+      {module0.connectionsToNext && module0.connectionsToNext.length > 0 && (
+        <aside class="module-connections">
+          <h3>Looking Ahead</h3>
+          <ul>
+            {module0.connectionsToNext.map((connection) => (
+              <li>{connection}</li>
+            ))}
+          </ul>
+        </aside>
+      )}
+    </article>
+  </main>
+
+  <script is:inline>
+    // Track current section for navigation highlighting
+    document.addEventListener('DOMContentLoaded', () => {
+      const sections = document.querySelectorAll('.treatise-section');
+      const navItems = document.querySelectorAll('.nav-item');
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const id = entry.target.id.replace('section-', '');
+            navItems.forEach(item => {
+              item.classList.toggle('active', item.dataset.section === id);
+            });
+          }
+        });
+      }, { threshold: 0.2, rootMargin: '-80px 0px -60% 0px' });
+
+      sections.forEach(section => observer.observe(section));
+    });
+  </script>
+</body>
+</html>
+
+<style>
+  :root {
+    --void: #0a0a0c;
+    --depth-1: #12121a;
+    --depth-2: #1a1a24;
+    --border: #2a2a3a;
+    --text-primary: #e8e8f0;
+    --text-secondary: #a0a0b8;
+    --text-muted: #606080;
+    --accent: #4a9eff;
+    --established: #4a9eff;
+    --derived: #50c878;
+    --contested: #f97316;
+    --open: #a855f7;
+    --speculative: #a855f7;
+    --font-display: 'Cormorant Garamond', serif;
+    --font-body: 'Sora', sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: var(--font-body);
+    background: var(--void);
+    color: var(--text-primary);
+    line-height: 1.6;
+    min-height: 100vh;
+  }
+
+  /* Header */
+  .site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    background: var(--depth-1);
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2rem;
+    z-index: 100;
+  }
+
+  .header-nav {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .site-title {
+    font-family: var(--font-display);
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    text-decoration: none;
+  }
+
+  .header-meta {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    font-family: var(--font-mono);
+  }
+
+  .header-actions {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .nav-link {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .nav-link:hover {
+    color: var(--accent);
+  }
+
+  /* Section Navigation */
+  .section-nav {
+    position: fixed;
+    left: 0;
+    top: 60px;
+    width: 280px;
+    height: calc(100vh - 60px);
+    background: var(--depth-1);
+    border-right: 1px solid var(--border);
+    padding: 1.5rem 0;
+    overflow-y: auto;
+    z-index: 50;
+  }
+
+  .nav-title {
+    padding: 0 1.5rem;
+    font-family: var(--font-mono);
+    font-size: 0.6875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--text-muted);
+  }
+
+  .nav-module-name {
+    padding: 0.5rem 1.5rem 1.5rem;
+    font-family: var(--font-display);
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 1rem;
+  }
+
+  .nav-sections {
+    padding: 0;
+  }
+
+  .nav-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.625rem 1.5rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-size: 0.8125rem;
+    transition: all 0.2s;
+    border-left: 2px solid transparent;
+  }
+
+  .nav-item:hover {
+    background: var(--depth-2);
+    color: var(--text-primary);
+  }
+
+  .nav-item.active {
+    background: rgba(74, 158, 255, 0.08);
+    color: var(--accent);
+    border-left-color: var(--accent);
+  }
+
+  .nav-number {
+    font-family: var(--font-mono);
+    font-size: 0.6875rem;
+    color: var(--text-muted);
+    min-width: 2.5rem;
+  }
+
+  .nav-label {
+    flex: 1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .nav-status {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  .nav-status.established { background: var(--established); }
+  .nav-status.derived { background: var(--derived); }
+  .nav-status.contested { background: var(--contested); }
+  .nav-status.open { background: var(--open); }
+  .nav-status.speculative { background: var(--speculative); }
+
+  .nav-legend {
+    margin-top: 2rem;
+    padding: 1rem 1.5rem;
+    border-top: 1px solid var(--border);
+  }
+
+  .legend-title {
+    font-size: 0.5625rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--text-muted);
+    margin-bottom: 0.75rem;
+  }
+
+  .legend-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.6875rem;
+    color: var(--text-secondary);
+    margin-bottom: 0.375rem;
+  }
+
+  .legend-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+  }
+
+  .legend-dot.established { background: var(--established); }
+  .legend-dot.derived { background: var(--derived); }
+  .legend-dot.contested { background: var(--contested); }
+  .legend-dot.open { background: var(--open); }
+  .legend-dot.speculative { background: var(--speculative); }
+
+  /* Main Content */
+  .treatise-content {
+    margin-left: 280px;
+    padding-top: 60px;
+    min-height: 100vh;
+  }
+
+  article {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 3rem 2rem 6rem;
+  }
+
+  /* Module Header */
+  .module-header {
+    margin-bottom: 3rem;
+    text-align: center;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .module-number {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--accent);
+    margin-bottom: 0.5rem;
+  }
+
+  .module-header h1 {
+    font-family: var(--font-display);
+    font-size: 2.75rem;
+    font-weight: 600;
+    line-height: 1.2;
+    margin-bottom: 0.75rem;
+    letter-spacing: -0.01em;
+  }
+
+  .subtitle {
+    font-size: 1.25rem;
+    font-weight: 300;
+    color: var(--text-secondary);
+    font-style: italic;
+    margin-bottom: 1rem;
+  }
+
+  /* Module Insights */
+  .module-insights {
+    margin-bottom: 3rem;
+    padding: 1.5rem;
+    background: linear-gradient(135deg, rgba(74, 158, 255, 0.05) 0%, rgba(80, 200, 120, 0.03) 100%);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+  }
+
+  .module-insights h3 {
+    font-family: var(--font-mono);
+    font-size: 0.6875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--text-muted);
+    margin-bottom: 1rem;
+  }
+
+  .module-insights ul {
+    margin: 0;
+    padding-left: 1.25rem;
+    list-style-type: none;
+  }
+
+  .module-insights li {
+    position: relative;
+    padding-left: 1rem;
+    margin-bottom: 0.5rem;
+    font-size: 0.9375rem;
+    color: var(--text-secondary);
+  }
+
+  .module-insights li::before {
+    content: '→';
+    position: absolute;
+    left: -0.75rem;
+    color: var(--accent);
+  }
+
+  /* Sections */
+  .treatise-section {
+    margin-bottom: 4rem;
+    scroll-margin-top: 100px;
+  }
+
+  .section-body {
+    margin-top: 1.5rem;
+  }
+
+  /* Key Points */
+  .section-key-points {
+    margin-top: 2rem;
+    padding: 1.25rem;
+    background: var(--depth-1);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+  }
+
+  .section-key-points h4 {
+    font-family: var(--font-mono);
+    font-size: 0.625rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--text-muted);
+    margin-bottom: 0.75rem;
+  }
+
+  .section-key-points ul {
+    margin: 0;
+    padding-left: 1.25rem;
+  }
+
+  .section-key-points li {
+    margin-bottom: 0.375rem;
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+  }
+
+  .section-key-points li:last-child {
+    margin-bottom: 0;
+  }
+
+  /* Module Connections */
+  .module-connections {
+    margin-top: 4rem;
+    padding: 1.5rem;
+    background: var(--depth-1);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+  }
+
+  .module-connections h3 {
+    font-family: var(--font-display);
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+  }
+
+  .module-connections ul {
+    margin: 0;
+    padding-left: 1.25rem;
+  }
+
+  .module-connections li {
+    margin-bottom: 0.5rem;
+    font-size: 0.9375rem;
+    color: var(--text-secondary);
+  }
+
+  /* Responsive */
+  @media (max-width: 1024px) {
+    .section-nav {
+      width: 240px;
+    }
+
+    .treatise-content {
+      margin-left: 240px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .section-nav {
+      display: none;
+    }
+
+    .treatise-content {
+      margin-left: 0;
+    }
+
+    .module-header h1 {
+      font-size: 2rem;
+    }
+  }
+</style>

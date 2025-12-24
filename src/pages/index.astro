@@ -71,6 +71,19 @@ import { VERSION, BUILD } from '../lib/version';
           </div>
           <span class="card-arrow">→</span>
         </a>
+
+        <a href="/treatise" class="entry-card treatise">
+          <div class="card-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+            </svg>
+          </div>
+          <div class="card-content">
+            <h2>Academic Treatise</h2>
+            <p>The full scholarly treatment with formal definitions, theorems, derivations, and rigorous mathematical apparatus.</p>
+          </div>
+          <span class="card-arrow">→</span>
+        </a>
       </section>
 
       <section class="status-block">
@@ -249,6 +262,15 @@ import { VERSION, BUILD } from '../lib/version';
   .entry-card.primary {
     border-color: var(--accent);
     background: linear-gradient(135deg, var(--depth-1) 0%, var(--accent-dim) 100%);
+  }
+
+  .entry-card.treatise {
+    border-color: #50c878;
+    background: linear-gradient(135deg, var(--depth-1) 0%, rgba(80, 200, 120, 0.08) 100%);
+  }
+
+  .entry-card.treatise .card-icon {
+    color: #50c878;
   }
 
   .card-icon {
