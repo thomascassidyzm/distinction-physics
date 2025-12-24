@@ -264,18 +264,33 @@ const links = relationships.map(rel => ({
     function applyUnderstoodState() {
       node.each(function(d) {
         const isUnderstood = understood.has(d.id);
+        const isSelected = d.id === currentNodeId;
         const nodeEl = d3.select(this);
 
         nodeEl.classed('understood', isUnderstood);
-        nodeEl.select('.node-glow')
-          .attr('opacity', isUnderstood ? 0.6 : 0)
-          .attr('filter', isUnderstood ? 'url(#glow)' : null);
-        nodeEl.select('.node-core')
-          .attr('fill', isUnderstood ? `${clusterColors[d.cluster]}40` : `${clusterColors[d.cluster]}15`)
-          .attr('stroke', isUnderstood ? clusterColors[d.cluster] : `${clusterColors[d.cluster]}60`)
-          .attr('stroke-width', isUnderstood ? 2 : 1.5);
-        nodeEl.select('.node-inner')
-          .attr('fill', isUnderstood ? `${clusterColors[d.cluster]}80` : `${clusterColors[d.cluster]}40`);
+
+        // Selected node always glows bright
+        if (isSelected) {
+          nodeEl.select('.node-glow')
+            .attr('opacity', 0.9)
+            .attr('filter', 'url(#glow)');
+          nodeEl.select('.node-core')
+            .attr('fill', `${clusterColors[d.cluster]}50`)
+            .attr('stroke', clusterColors[d.cluster])
+            .attr('stroke-width', 3);
+          nodeEl.select('.node-inner')
+            .attr('fill', clusterColors[d.cluster]);
+        } else {
+          nodeEl.select('.node-glow')
+            .attr('opacity', isUnderstood ? 0.6 : 0)
+            .attr('filter', isUnderstood ? 'url(#glow)' : null);
+          nodeEl.select('.node-core')
+            .attr('fill', isUnderstood ? `${clusterColors[d.cluster]}40` : `${clusterColors[d.cluster]}15`)
+            .attr('stroke', isUnderstood ? clusterColors[d.cluster] : `${clusterColors[d.cluster]}60`)
+            .attr('stroke-width', isUnderstood ? 2 : 1.5);
+          nodeEl.select('.node-inner')
+            .attr('fill', isUnderstood ? `${clusterColors[d.cluster]}80` : `${clusterColors[d.cluster]}40`);
+        }
       });
 
       // Update links
@@ -428,6 +443,7 @@ const links = relationships.map(rel => ({
       }
 
       node.classed('selected', n => n.id === d.id);
+      applyUnderstoodState(); // Light up selected node
       detailPanel.classList.add('open');
     });
 
@@ -436,6 +452,7 @@ const links = relationships.map(rel => ({
       detailPanel.classList.remove('open');
       node.classed('selected', false);
       currentNodeId = null;
+      applyUnderstoodState(); // Reset glow states
     });
 
     // Mark as understood
