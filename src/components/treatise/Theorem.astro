@@ -133,6 +133,19 @@ const accentColor = statusColors[epistemicStatus] || statusColors.derived;
     font-style: normal;
   }
 
+  /* Display math within theorem statement */
+  .theorem-statement :global(.inline-display-math) {
+    margin: 1rem 0;
+    padding: 0.75rem 1rem;
+    background: rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    font-style: normal;
+  }
+
+  .theorem-statement :global(.inline-display-math .katex) {
+    font-size: 1.1em;
+  }
+
   /* Proof slot styling */
   .theorem-block :global([slot="proof"]) {
     margin-top: 1.5rem;
@@ -172,6 +185,18 @@ const accentColor = statusColors[epistemicStatus] || statusColors.derived;
 
   .theorem-block :global([slot="proof"]) :global(p:last-child) {
     margin-bottom: 0;
+  }
+
+  /* Display math within proof */
+  .theorem-block :global([slot="proof"]) :global(.inline-display-math) {
+    margin: 0.75rem 0;
+    padding: 0.5rem 0.75rem;
+    background: rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+  }
+
+  .theorem-block :global([slot="proof"]) :global(.inline-display-math .katex) {
+    font-size: 1em;
   }
 
   /* Link anchor indicator */

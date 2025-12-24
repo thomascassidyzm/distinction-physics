@@ -174,6 +174,18 @@ const borderColor = statusColors[epistemicStatus] || statusColors.derived;
     margin-bottom: 0;
   }
 
+  /* Display math within definitions */
+  .definition-content :global(.inline-display-math) {
+    margin: 1rem 0;
+    padding: 0.75rem 1rem;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+  }
+
+  .definition-content :global(.inline-display-math .katex) {
+    font-size: 1.1em;
+  }
+
   /* Intuition slot styling */
   .definition-block :global([slot="intuition"]) {
     margin-top: 1.25rem;

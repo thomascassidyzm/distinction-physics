@@ -28,8 +28,18 @@ const { blocks } = Astro.props;
  * Process inline LaTeX and citations in text content
  */
 function processInlineContent(text: string): string {
-  // Process inline LaTeX: $...$ -> rendered HTML
-  let processed = text.replace(/\$([^$]+)\$/g, (_, latex) => {
+  // First, process display math: $$...$$ -> block rendered HTML
+  let processed = text.replace(/\$\$([^$]+)\$\$/g, (_, latex) => {
+    try {
+      return `<div class="inline-display-math">${renderMath(latex.trim(), true)}</div>`;
+    } catch {
+      return `<code class="math-error">${latex}</code>`;
+    }
+  });
+
+  // Then, process inline LaTeX: $...$ -> inline rendered HTML
+  // Use negative lookbehind/lookahead to avoid matching already-processed $$
+  processed = processed.replace(/(?<!\$)\$(?!\$)([^$]+)\$(?!\$)/g, (_, latex) => {
     try {
       return renderMath(latex, false);
     } catch {
@@ -409,6 +419,26 @@ function processInlineContent(text: string): string {
     font-family: var(--font-mono, 'JetBrains Mono', monospace);
     font-size: 0.875rem;
     color: var(--text-secondary, #a0a0b8);
+  }
+
+  /* Inline display math ($$...$$ embedded in text) */
+  .content-blocks :global(.inline-display-math) {
+    display: block;
+    margin: 1.25rem 0;
+    padding: 1rem;
+    text-align: center;
+    background: rgba(74, 158, 255, 0.03);
+    border-radius: 6px;
+    overflow-x: auto;
+  }
+
+  .content-blocks :global(.inline-display-math .katex) {
+    font-size: 1.15em;
+  }
+
+  .content-blocks :global(.math-error) {
+    color: #cc0000;
+    font-size: 0.875rem;
   }
 
   /* Examples */
