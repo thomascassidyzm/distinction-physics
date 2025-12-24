@@ -240,10 +240,13 @@ function parseMarkdown(text: string): string {
   .header-meta {
     display: flex;
     align-items: center;
-    gap: 1rem;
-    font-size: 0.75rem;
-    color: var(--text-muted);
+    gap: 0.5rem;
+    font-size: 0.6875rem;
     font-family: var(--font-mono);
+  }
+
+  .version, .build, .status, .date {
+    color: rgba(74, 158, 255, 0.6);
   }
 
   .header-actions {
