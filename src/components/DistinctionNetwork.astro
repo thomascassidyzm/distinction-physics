@@ -384,9 +384,33 @@ const links = relationships.map(rel => ({
         `;
         connectionsEl.querySelectorAll('.connection-chip').forEach(chip => {
           chip.addEventListener('click', () => {
-            const targetNode = nodes.find(n => n.id === chip.dataset.id);
+            const targetId = chip.dataset.id;
+            const targetNode = nodes.find(n => n.id === targetId);
             if (targetNode) {
-              node.filter(n => n.id === targetNode.id).dispatch('click');
+              // Highlight the path before navigating
+              const sourceId = currentNodeId;
+
+              // Flash the connecting link
+              link.filter(l => {
+                const sId = l.source.id || l.source;
+                const tId = l.target.id || l.target;
+                return (sId === sourceId && tId === targetId) || (sId === targetId && tId === sourceId);
+              })
+              .classed('path-highlight', true)
+              .attr('stroke', '#4a9eff')
+              .attr('stroke-width', 3);
+
+              // Flash the target node
+              node.filter(n => n.id === targetId)
+                .classed('path-target', true);
+
+              // Navigate after brief delay
+              setTimeout(() => {
+                link.classed('path-highlight', false);
+                node.classed('path-target', false);
+                applyUnderstoodState();
+                node.filter(n => n.id === targetNode.id).dispatch('click');
+              }, 400);
             }
           });
         });
@@ -786,6 +810,33 @@ const links = relationships.map(rel => ({
 
   .node.selected .node-core {
     stroke-width: 3 !important;
+  }
+
+  .node.selected .node-glow {
+    opacity: 0.8 !important;
+    filter: url(#glow) !important;
+  }
+
+  .node.selected .node-inner {
+    opacity: 1 !important;
+  }
+
+  /* Path highlight when navigating between nodes */
+  .link.path-highlight {
+    stroke: #4a9eff !important;
+    stroke-width: 3 !important;
+    filter: url(#glow);
+  }
+
+  .node.path-target .node-core {
+    stroke: #4a9eff !important;
+    stroke-width: 3 !important;
+    filter: url(#glow);
+  }
+
+  .node.path-target .node-glow {
+    opacity: 1 !important;
+    stroke: #4a9eff !important;
   }
 
   .node-glow {
