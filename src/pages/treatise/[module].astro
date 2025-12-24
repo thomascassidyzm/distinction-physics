@@ -12,6 +12,8 @@ import SectionHeader from '../../components/treatise/SectionHeader.astro';
 import EpistemicBadge from '../../components/treatise/EpistemicBadge.astro';
 import { VERSION, BUILD } from '../../lib/version';
 
+export const prerender = true;
+
 export function getStaticPaths() {
   return [
     { params: { module: 'module-0' } },
@@ -32,6 +34,9 @@ const moduleNumber = parseInt(moduleParam.replace('module-', ''));
 
 const modules = [module0, module1, module2, module3, module4, module5, module6, module7, module8, module9];
 const currentModule = modules[moduleNumber];
+const sections = currentModule.sections;
+const keyInsights = currentModule.keyInsights || [];
+const connectionsToNext = currentModule.connectionsToNext || [];
 const prevModule = moduleNumber > 0 ? modules[moduleNumber - 1] : null;
 const nextModule = moduleNumber < 9 ? modules[moduleNumber + 1] : null;
 ---
@@ -41,7 +46,7 @@ const nextModule = moduleNumber < 9 ? modules[moduleNumber + 1] : null;
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Module {currentModule.number}: {currentModule.title} - Distinction Physics</title>
+  <title>Module {currentModule.number} — {currentModule.title} | Distinction Physics</title>
   <meta name="description" content={currentModule.subtitle}>
 
   <!-- Fonts -->
@@ -74,15 +79,15 @@ const nextModule = moduleNumber < 9 ? modules[moduleNumber + 1] : null;
     <div class="nav-module-name">{currentModule.title}</div>
 
     <div class="nav-sections">
-      {currentModule.sections.map((section) => (
+      {sections.map((sec) => (
         <a
-          href={`#section-${section.id}`}
+          href={`#section-${sec.id}`}
           class="nav-item"
-          data-section={section.id}
+          data-section={sec.id}
         >
-          <span class="nav-number">{section.id}</span>
-          <span class="nav-label">{section.title.split(':')[0]}</span>
-          <span class={`nav-status ${section.epistemicStatus}`}></span>
+          <span class="nav-number">{sec.id}</span>
+          <span class="nav-label">{sec.title.split(':')[0]}</span>
+          <span class={`nav-status ${sec.epistemicStatus}`}></span>
         </a>
       ))}
     </div>
@@ -106,48 +111,48 @@ const nextModule = moduleNumber < 9 ? modules[moduleNumber + 1] : null;
         <EpistemicBadge status={currentModule.epistemicStatus} />
       </header>
 
-      {currentModule.keyInsights && currentModule.keyInsights.length > 0 && (
+      {keyInsights.length > 0 && (
         <aside class="module-insights">
           <h3>Key Insights</h3>
           <ul>
-            {currentModule.keyInsights.map((insight) => (
+            {keyInsights.map((insight) => (
               <li>{insight}</li>
             ))}
           </ul>
         </aside>
       )}
 
-      {currentModule.sections.map((section) => (
-        <section id={`section-${section.id}`} class="treatise-section" data-status={section.epistemicStatus}>
+      {sections.map((sec) => (
+        <div id={`section-${sec.id}`} class="treatise-section" data-status={sec.epistemicStatus}>
           <SectionHeader
-            number={section.id}
-            title={section.title}
-            subtitle={section.subtitle}
-            epistemicStatus={section.epistemicStatus}
+            number={sec.id}
+            title={sec.title}
+            subtitle={sec.subtitle}
+            epistemicStatus={sec.epistemicStatus}
           />
 
           <div class="section-body">
-            <ContentRenderer blocks={section.content} />
+            <ContentRenderer blocks={sec.content} />
           </div>
 
-          {section.keyPoints && section.keyPoints.length > 0 && (
+          {sec.keyPoints && sec.keyPoints.length > 0 && (
             <div class="section-key-points">
               <h4>Key Points</h4>
               <ul>
-                {section.keyPoints.map((point) => (
+                {sec.keyPoints.map((point) => (
                   <li>{point}</li>
                 ))}
               </ul>
             </div>
           )}
-        </section>
+        </div>
       ))}
 
-      {currentModule.connectionsToNext && currentModule.connectionsToNext.length > 0 && (
+      {connectionsToNext.length > 0 && (
         <aside class="module-connections">
           <h3>Looking Ahead</h3>
           <ul>
-            {currentModule.connectionsToNext.map((connection) => (
+            {connectionsToNext.map((connection) => (
               <li>{connection}</li>
             ))}
           </ul>
