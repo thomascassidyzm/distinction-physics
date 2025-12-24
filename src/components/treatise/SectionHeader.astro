@@ -1,0 +1,125 @@
+---
+/**
+ * Section Header Component
+ *
+ * Renders section/subsection headers with proper numbering and epistemic status.
+ */
+
+import type { EpistemicStatus } from '../../content/treatise/types';
+
+interface Props {
+  /** Section number like "0.1", "0.2", "3.11" */
+  number: string;
+  /** Section title */
+  title: string;
+  /** Optional subtitle */
+  subtitle?: string;
+  /** Epistemic status for badge */
+  epistemicStatus?: EpistemicStatus;
+  /** Heading level */
+  level?: 2 | 3 | 4;
+}
+
+const { number, title, subtitle, epistemicStatus, level = 2 } = Astro.props;
+
+const Tag = `h${level}` as 'h2' | 'h3' | 'h4';
+const sectionId = `section-${number.replace(/\./g, '-')}`;
+
+const statusColors: Record<EpistemicStatus, string> = {
+  established: '#4a9eff',
+  derived: '#50c878',
+  contested: '#f97316',
+  open: '#a855f7',
+  speculative: '#ec4899',
+};
+---
+
+<header class="section-header" id={sectionId}>
+  <div class="section-number-line">
+    <span class="section-number">{number}</span>
+    {epistemicStatus && (
+      <span
+        class="section-status"
+        style={`--status-color: ${statusColors[epistemicStatus]}`}
+        title={`Epistemic status: ${epistemicStatus}`}
+      >
+        {epistemicStatus}
+      </span>
+    )}
+  </div>
+  <Tag class:list={['section-title', `section-title-${level}`]}>
+    {title}
+  </Tag>
+  {subtitle && (
+    <p class="section-subtitle">{subtitle}</p>
+  )}
+</header>
+
+<style>
+  .section-header {
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border, #2a2a3a);
+  }
+
+  .section-number-line {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .section-number {
+    font-family: var(--font-mono, 'JetBrains Mono', monospace);
+    font-size: 0.875rem;
+    color: var(--accent, #4a9eff);
+    font-weight: 500;
+  }
+
+  .section-status {
+    font-family: var(--font-mono, 'JetBrains Mono', monospace);
+    font-size: 0.625rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--status-color);
+    background: color-mix(in srgb, var(--status-color) 15%, transparent);
+    padding: 0.125rem 0.5rem;
+    border-radius: 3px;
+  }
+
+  .section-title {
+    font-family: var(--font-display, 'Cormorant Garamond', serif);
+    color: var(--text-primary, #e8e8f0);
+    margin: 0;
+    line-height: 1.3;
+  }
+
+  .section-title-2 {
+    font-size: 2rem;
+    font-weight: 500;
+  }
+
+  .section-title-3 {
+    font-size: 1.5rem;
+    font-weight: 500;
+  }
+
+  .section-title-4 {
+    font-size: 1.25rem;
+    font-weight: 500;
+  }
+
+  .section-subtitle {
+    font-family: var(--font-body, 'Sora', sans-serif);
+    font-size: 1rem;
+    color: var(--text-secondary, #a0a0b8);
+    margin: 0.5rem 0 0;
+    font-style: italic;
+  }
+
+  /* Anchor link on hover */
+  .section-header:hover .section-number::after {
+    content: ' #';
+    opacity: 0.5;
+  }
+</style>

@@ -1,0 +1,144 @@
+---
+/**
+ * Axiom.astro - Renders axiom blocks with prominent styling
+ *
+ * For AxiomBlock from treatise types
+ */
+
+interface Props {
+  id: string;  // e.g., 'A1', 'A2'
+  name: string;
+}
+
+const { id, name } = Astro.props;
+---
+
+<div class="axiom-block" id={id}>
+  <div class="axiom-header">
+    <span class="axiom-number">{id}</span>
+    <span class="axiom-name">{name}</span>
+  </div>
+
+  <div class="axiom-statement">
+    <slot />
+  </div>
+
+  <slot name="grounding">
+    <!-- Optional grounding slot -->
+  </slot>
+</div>
+
+<style>
+  .axiom-block {
+    position: relative;
+    margin: 2.5rem 0;
+    padding: 2rem;
+    background: linear-gradient(135deg, var(--depth-1, #12121a) 0%, var(--depth-2, #1a1a24) 100%);
+    border: 2px solid var(--accent, #4a9eff);
+    border-radius: 12px;
+  }
+
+  .axiom-block::before {
+    content: '';
+    position: absolute;
+    inset: -1px;
+    border-radius: 12px;
+    padding: 2px;
+    background: linear-gradient(135deg, var(--accent, #4a9eff) 0%, transparent 50%);
+    -webkit-mask:
+      linear-gradient(#fff 0 0) content-box,
+      linear-gradient(#fff 0 0);
+    mask:
+      linear-gradient(#fff 0 0) content-box,
+      linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+  }
+
+  .axiom-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .axiom-number {
+    font-family: var(--font-mono, 'JetBrains Mono', monospace);
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--accent, #4a9eff);
+    background: rgba(74, 158, 255, 0.15);
+    padding: 0.375rem 0.75rem;
+    border-radius: 6px;
+    letter-spacing: 0.05em;
+  }
+
+  .axiom-name {
+    font-family: var(--font-display, 'Cormorant Garamond', serif);
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text-primary, #e8e8f0);
+  }
+
+  .axiom-statement {
+    font-family: var(--font-body, 'Sora', sans-serif);
+    font-size: 1.0625rem;
+    font-weight: 500;
+    line-height: 1.7;
+    color: var(--text-primary, #e8e8f0);
+    padding-left: 0.5rem;
+    border-left: 2px solid rgba(74, 158, 255, 0.3);
+  }
+
+  .axiom-statement :global(p) {
+    margin: 0 0 0.75rem 0;
+  }
+
+  .axiom-statement :global(p:last-child) {
+    margin-bottom: 0;
+  }
+
+  .axiom-statement :global(.katex) {
+    font-size: 1.1em;
+  }
+
+  /* Grounding slot styling */
+  .axiom-block :global([slot="grounding"]) {
+    margin-top: 1.5rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid var(--border, #2a2a3a);
+    font-size: 0.8125rem;
+    line-height: 1.7;
+    color: var(--text-secondary, #a0a0b8);
+  }
+
+  .axiom-block :global([slot="grounding"])::before {
+    content: 'Grounding';
+    display: block;
+    font-family: var(--font-mono, 'JetBrains Mono', monospace);
+    font-size: 0.625rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--text-muted, #606080);
+    margin-bottom: 0.5rem;
+  }
+
+  .axiom-block :global([slot="grounding"]) :global(p) {
+    margin: 0 0 0.5rem 0;
+  }
+
+  .axiom-block :global([slot="grounding"]) :global(p:last-child) {
+    margin-bottom: 0;
+  }
+
+  /* Link anchor indicator */
+  .axiom-block:target {
+    animation: highlight-pulse 0.5s ease-out;
+  }
+
+  @keyframes highlight-pulse {
+    0% { box-shadow: 0 0 0 4px rgba(74, 158, 255, 0.4); }
+    100% { box-shadow: 0 0 0 0 transparent; }
+  }
+</style>

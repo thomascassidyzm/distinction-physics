@@ -1,0 +1,52 @@
+---
+/**
+ * Math Component
+ *
+ * Renders LaTeX math expressions using KaTeX.
+ * Supports both inline and display (block) modes.
+ */
+
+import { renderMath } from '../../lib/math';
+
+interface Props {
+  latex: string;
+  display?: boolean;
+}
+
+const { latex, display = false } = Astro.props;
+
+const renderedMath = renderMath(latex, display);
+---
+
+<Fragment set:html={renderedMath} />
+
+<style is:global>
+  @import 'katex/dist/katex.min.css';
+
+  /* Inline math styling */
+  .katex {
+    font-size: 1.1em;
+  }
+
+  /* Display (block) math styling */
+  .katex-display {
+    margin: 1.5rem 0;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 0.5rem 0;
+  }
+
+  .katex-display > .katex {
+    font-size: 1.21em;
+  }
+
+  /* Error styling */
+  .math-error {
+    font-family: monospace;
+    font-size: 0.875rem;
+    background-color: #fff0f0;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+    border: 1px solid #ffcccc;
+  }
+</style>

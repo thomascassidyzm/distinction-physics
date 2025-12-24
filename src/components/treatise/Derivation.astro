@@ -1,0 +1,222 @@
+---
+/**
+ * Derivation.astro
+ * Renders a formal derivation with numbered steps, justifications,
+ * and a prominent conclusion.
+ */
+
+import EpistemicBadge from './EpistemicBadge.astro';
+
+export interface DerivationStep {
+  number: number;
+  statement: string;
+  justification: string;
+}
+
+export interface Props {
+  id: string;
+  name?: string;
+  from: string[];
+  epistemicStatus: 'established' | 'derived' | 'contested' | 'open';
+  steps?: DerivationStep[];
+  conclusion?: string;
+}
+
+const { id, name, from, epistemicStatus, steps = [], conclusion } = Astro.props;
+
+const fromDisplay = from.join(', ');
+---
+
+<aside class="derivation" id={id} aria-labelledby={`${id}-title`}>
+  <header class="derivation-header">
+    <div class="derivation-meta">
+      <span class="derivation-label">Derivation</span>
+      {name && <h4 class="derivation-name" id={`${id}-title`}>{name}</h4>}
+    </div>
+    <EpistemicBadge status={epistemicStatus} />
+  </header>
+
+  <div class="derivation-from">
+    <span class="from-label">From:</span>
+    <span class="from-ids">{fromDisplay}</span>
+  </div>
+
+  <div class="derivation-content">
+    {steps.length > 0 ? (
+      <ol class="derivation-steps">
+        {steps.map((step) => (
+          <li class="derivation-step" value={step.number}>
+            <div class="step-statement">{step.statement}</div>
+            <div class="step-justification">{step.justification}</div>
+          </li>
+        ))}
+      </ol>
+    ) : (
+      <div class="derivation-slot">
+        <slot />
+      </div>
+    )}
+  </div>
+
+  {conclusion && (
+    <div class="derivation-conclusion">
+      <span class="conclusion-marker">∴</span>
+      <span class="conclusion-text">{conclusion}</span>
+    </div>
+  )}
+</aside>
+
+<style>
+  .derivation {
+    --epistemic-color: var(--accent, #4a9eff);
+
+    margin: 2rem 0;
+    padding: 1.5rem;
+    background: var(--depth-1, #12121a);
+    border: 1px solid var(--border, #2a2a3a);
+    border-left: 3px solid var(--epistemic-color);
+    border-radius: 8px;
+  }
+
+  .derivation-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .derivation-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  .derivation-label {
+    font-family: 'Sora', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text-secondary, #a0a0b8);
+  }
+
+  .derivation-name {
+    margin: 0;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.25rem;
+    font-weight: 600;
+    font-style: italic;
+    color: var(--text-primary, #e8e8f0);
+  }
+
+  .derivation-from {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1.25rem;
+    padding: 0.5rem 0.75rem;
+    background: var(--depth-2, #1a1a24);
+    border-radius: 4px;
+  }
+
+  .from-label {
+    font-family: 'Sora', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: var(--text-secondary, #a0a0b8);
+  }
+
+  .from-ids {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.85rem;
+    color: var(--accent, #4a9eff);
+  }
+
+  .derivation-content {
+    margin-bottom: 1.25rem;
+  }
+
+  .derivation-steps {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    counter-reset: step-counter;
+  }
+
+  .derivation-step {
+    position: relative;
+    padding: 0.75rem 0 0.75rem 3rem;
+    border-bottom: 1px solid var(--border, #2a2a3a);
+    counter-increment: step-counter;
+  }
+
+  .derivation-step:last-child {
+    border-bottom: none;
+  }
+
+  .derivation-step::before {
+    content: counter(step-counter) ".";
+    position: absolute;
+    left: 0;
+    top: 0.75rem;
+    width: 2rem;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--accent, #4a9eff);
+    text-align: right;
+    padding-right: 0.5rem;
+  }
+
+  .step-statement {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.1rem;
+    line-height: 1.5;
+    color: var(--text-primary, #e8e8f0);
+    margin-bottom: 0.35rem;
+  }
+
+  .step-justification {
+    font-family: 'Sora', sans-serif;
+    font-size: 0.8rem;
+    font-style: italic;
+    color: var(--text-secondary, #a0a0b8);
+    padding-left: 0.5rem;
+    border-left: 2px solid var(--border, #2a2a3a);
+  }
+
+  .derivation-slot {
+    padding: 0.5rem 0;
+  }
+
+  .derivation-conclusion {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    padding: 1rem;
+    background: linear-gradient(
+      135deg,
+      rgba(74, 158, 255, 0.08) 0%,
+      rgba(74, 158, 255, 0.03) 100%
+    );
+    border: 1px solid rgba(74, 158, 255, 0.2);
+    border-radius: 6px;
+  }
+
+  .conclusion-marker {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--accent, #4a9eff);
+    line-height: 1;
+  }
+
+  .conclusion-text {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.15rem;
+    font-weight: 600;
+    line-height: 1.5;
+    color: var(--text-primary, #e8e8f0);
+  }
+</style>

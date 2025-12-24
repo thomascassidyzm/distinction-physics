@@ -1,0 +1,64 @@
+---
+/**
+ * EpistemicBadge.astro
+ * A small pill/badge showing epistemic status with color coding.
+ */
+
+export interface Props {
+  status: 'established' | 'derived' | 'contested' | 'open';
+}
+
+const { status } = Astro.props;
+
+const statusLabels: Record<Props['status'], string> = {
+  established: 'Established',
+  derived: 'Derived',
+  contested: 'Contested',
+  open: 'Open',
+};
+
+const label = statusLabels[status];
+---
+
+<span class:list={['epistemic-badge', `epistemic-badge--${status}`]}>
+  {label}
+</span>
+
+<style>
+  .epistemic-badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.2rem 0.6rem;
+    font-family: 'Sora', sans-serif;
+    font-size: 0.7rem;
+    font-weight: 500;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    border-radius: 9999px;
+    white-space: nowrap;
+  }
+
+  .epistemic-badge--established {
+    background-color: rgba(74, 158, 255, 0.15);
+    color: #4a9eff;
+    border: 1px solid rgba(74, 158, 255, 0.3);
+  }
+
+  .epistemic-badge--derived {
+    background-color: rgba(80, 200, 120, 0.15);
+    color: #50c878;
+    border: 1px solid rgba(80, 200, 120, 0.3);
+  }
+
+  .epistemic-badge--contested {
+    background-color: rgba(249, 115, 22, 0.15);
+    color: #f97316;
+    border: 1px solid rgba(249, 115, 22, 0.3);
+  }
+
+  .epistemic-badge--open {
+    background-color: rgba(168, 85, 247, 0.15);
+    color: #a855f7;
+    border: 1px solid rgba(168, 85, 247, 0.3);
+  }
+</style>

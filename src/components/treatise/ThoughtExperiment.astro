@@ -1,0 +1,256 @@
+---
+/**
+ * ThoughtExperiment.astro
+ * Renders a philosophical thought experiment with structured sections:
+ * setup, analysis, conclusion, and implications.
+ */
+
+export interface Props {
+  id: string;
+  name: string;
+  setup?: string;
+  analysis?: string;
+  conclusion?: string;
+  implications?: string[];
+}
+
+const { id, name, setup, analysis, conclusion, implications = [] } = Astro.props;
+
+const hasStructuredContent = setup || analysis || conclusion || implications.length > 0;
+---
+
+<aside class="thought-experiment" id={id} aria-labelledby={`${id}-title`}>
+  <header class="te-header">
+    <div class="te-icon">
+      <svg
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.5"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        aria-hidden="true"
+      >
+        <path d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+      </svg>
+    </div>
+    <div class="te-meta">
+      <span class="te-label">Thought Experiment</span>
+      <h4 class="te-name" id={`${id}-title`}>{name}</h4>
+    </div>
+  </header>
+
+  <div class="te-content">
+    {hasStructuredContent ? (
+      <>
+        {setup && (
+          <section class="te-section te-setup">
+            <h5 class="te-section-title">
+              <span class="section-icon">I.</span>
+              Setup
+            </h5>
+            <div class="te-section-content">{setup}</div>
+          </section>
+        )}
+
+        {analysis && (
+          <section class="te-section te-analysis">
+            <h5 class="te-section-title">
+              <span class="section-icon">II.</span>
+              Analysis
+            </h5>
+            <div class="te-section-content">{analysis}</div>
+          </section>
+        )}
+
+        {conclusion && (
+          <section class="te-section te-conclusion">
+            <h5 class="te-section-title">
+              <span class="section-icon">III.</span>
+              Conclusion
+            </h5>
+            <div class="te-section-content">{conclusion}</div>
+          </section>
+        )}
+
+        {implications.length > 0 && (
+          <section class="te-section te-implications">
+            <h5 class="te-section-title">
+              <span class="section-icon">IV.</span>
+              Implications
+            </h5>
+            <ul class="implications-list">
+              {implications.map((item) => (
+                <li class="implication-item">{item}</li>
+              ))}
+            </ul>
+          </section>
+        )}
+      </>
+    ) : (
+      <div class="te-slot">
+        <slot />
+      </div>
+    )}
+  </div>
+</aside>
+
+<style>
+  .thought-experiment {
+    margin: 2rem 0;
+    background: var(--depth-1, #12121a);
+    border: 1px solid var(--border, #2a2a3a);
+    border-radius: 12px;
+    overflow: hidden;
+  }
+
+  .te-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1.25rem 1.5rem;
+    background: linear-gradient(
+      135deg,
+      rgba(168, 85, 247, 0.1) 0%,
+      rgba(74, 158, 255, 0.05) 100%
+    );
+    border-bottom: 1px solid var(--border, #2a2a3a);
+  }
+
+  .te-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    background: var(--depth-2, #1a1a24);
+    border: 1px solid var(--border, #2a2a3a);
+    border-radius: 10px;
+    color: #a855f7;
+    flex-shrink: 0;
+  }
+
+  .te-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  .te-label {
+    font-family: 'Sora', sans-serif;
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #a855f7;
+  }
+
+  .te-name {
+    margin: 0;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.4rem;
+    font-weight: 600;
+    font-style: italic;
+    color: var(--text-primary, #e8e8f0);
+    line-height: 1.3;
+  }
+
+  .te-content {
+    padding: 1.5rem;
+  }
+
+  .te-section {
+    margin-bottom: 1.5rem;
+  }
+
+  .te-section:last-child {
+    margin-bottom: 0;
+  }
+
+  .te-section-title {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 0 0 0.75rem 0;
+    font-family: 'Sora', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--text-secondary, #a0a0b8);
+  }
+
+  .section-icon {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--accent, #4a9eff);
+  }
+
+  .te-section-content {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: var(--text-primary, #e8e8f0);
+    padding-left: 1.5rem;
+    border-left: 2px solid var(--border, #2a2a3a);
+  }
+
+  .te-setup .te-section-content {
+    border-left-color: rgba(168, 85, 247, 0.4);
+  }
+
+  .te-analysis .te-section-content {
+    border-left-color: rgba(74, 158, 255, 0.4);
+  }
+
+  .te-conclusion .te-section-content {
+    font-weight: 500;
+    border-left-color: rgba(80, 200, 120, 0.4);
+  }
+
+  .te-implications {
+    padding: 1rem;
+    background: var(--depth-2, #1a1a24);
+    border-radius: 8px;
+  }
+
+  .implications-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .implication-item {
+    position: relative;
+    padding: 0.5rem 0 0.5rem 1.5rem;
+    font-family: 'Sora', sans-serif;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--text-primary, #e8e8f0);
+  }
+
+  .implication-item::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.9rem;
+    width: 6px;
+    height: 6px;
+    background: #a855f7;
+    border-radius: 50%;
+  }
+
+  .implication-item:not(:last-child) {
+    border-bottom: 1px solid var(--border, #2a2a3a);
+  }
+
+  .te-slot {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: var(--text-primary, #e8e8f0);
+  }
+</style>

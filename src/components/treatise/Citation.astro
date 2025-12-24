@@ -1,0 +1,137 @@
+---
+/**
+ * Citation Component
+ *
+ * Renders inline citations with hover preview.
+ * Supports author-year format (Chicago style).
+ */
+
+import { getCitation, formatCitation } from '../../content/treatise/bibliography';
+
+interface Props {
+  /** Citation ID from bibliography */
+  id: string;
+  /** Optional page number */
+  page?: string;
+  /** Optional prefix like "see", "cf." */
+  prefix?: string;
+  /** Use narrative style: "Landauer (1961)" vs "(Landauer, 1961)" */
+  narrative?: boolean;
+}
+
+const { id, page, prefix, narrative = false } = Astro.props;
+
+const citation = getCitation(id);
+const displayText = citation
+  ? formatCitation(id, { page, prefix })
+  : `[${id}]`;
+
+// Build full citation for hover
+const fullCitation = citation ? buildFullCitation(citation) : null;
+
+function buildFullCitation(c: typeof citation) {
+  if (!c) return '';
+  const authors = c.authors.join(', ');
+  let text = `${authors} (${c.year}). "${c.title}."`;
+  if (c.journal) {
+    text += ` ${c.journal}`;
+    if (c.volume) text += ` ${c.volume}`;
+    if (c.pages) text += `: ${c.pages}`;
+  } else if (c.publisher) {
+    text += ` ${c.publisher}`;
+  }
+  return text;
+}
+---
+
+{narrative ? (
+  <span class="citation citation-narrative" data-citation-id={id}>
+    <span class="citation-author">{citation?.authors[0]?.split(',')[0]}</span>
+    (<span class="citation-year">{citation?.year}</span>{page && `, p. ${page}`})
+    {fullCitation && (
+      <span class="citation-tooltip">{fullCitation}</span>
+    )}
+  </span>
+) : (
+  <span class="citation citation-parenthetical" data-citation-id={id}>
+    ({displayText})
+    {fullCitation && (
+      <span class="citation-tooltip">{fullCitation}</span>
+    )}
+  </span>
+)}
+
+<style>
+  .citation {
+    position: relative;
+    cursor: help;
+    color: var(--accent, #4a9eff);
+    font-family: var(--font-mono, 'JetBrains Mono', monospace);
+    font-size: 0.875em;
+  }
+
+  .citation-narrative {
+    color: inherit;
+  }
+
+  .citation-narrative .citation-author {
+    color: var(--text-primary, #e8e8f0);
+  }
+
+  .citation-narrative .citation-year {
+    color: var(--accent, #4a9eff);
+  }
+
+  .citation:hover {
+    text-decoration: underline;
+    text-decoration-style: dotted;
+  }
+
+  .citation-tooltip {
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 0.75rem 1rem;
+    background: var(--depth-1, #12121a);
+    border: 1px solid var(--border, #2a2a3a);
+    border-radius: 6px;
+    font-family: var(--font-body, 'Sora', sans-serif);
+    font-size: 0.8125rem;
+    color: var(--text-secondary, #a0a0b8);
+    white-space: nowrap;
+    max-width: 400px;
+    white-space: normal;
+    line-height: 1.5;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.15s, visibility 0.15s;
+    z-index: 100;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    pointer-events: none;
+  }
+
+  .citation-tooltip::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 6px solid transparent;
+    border-top-color: var(--border, #2a2a3a);
+  }
+
+  .citation:hover .citation-tooltip {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  /* Mobile: tap instead of hover */
+  @media (max-width: 768px) {
+    .citation-tooltip {
+      left: 0;
+      transform: none;
+      max-width: 280px;
+    }
+  }
+</style>

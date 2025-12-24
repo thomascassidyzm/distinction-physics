@@ -1,0 +1,200 @@
+---
+/**
+ * Theorem.astro - Renders theorem, lemma, corollary, and proposition blocks
+ *
+ * For TheoremBlock from treatise types
+ */
+import type { EpistemicStatus } from '../../content/treatise/types';
+
+interface Props {
+  id: string;
+  label: 'theorem' | 'lemma' | 'corollary' | 'proposition';
+  epistemicStatus: EpistemicStatus;
+  name?: string;
+  number?: string;
+}
+
+const { id, label, epistemicStatus, name, number } = Astro.props;
+
+// Capitalize first letter for display
+const labelDisplay = label.charAt(0).toUpperCase() + label.slice(1);
+
+// Map epistemic status to colors
+const statusColors: Record<EpistemicStatus, string> = {
+  established: '#4a9eff',
+  derived: '#50c878',
+  contested: '#f97316',
+  open: '#a855f7',
+  speculative: '#a855f7'
+};
+
+const accentColor = statusColors[epistemicStatus] || statusColors.derived;
+---
+
+<div class="theorem-block" id={id} data-label={label} data-epistemic-status={epistemicStatus}>
+  <div class="theorem-header">
+    <span class="theorem-label">
+      {labelDisplay}{number && ` ${number}`}
+      {name && <span class="theorem-name">({name})</span>}
+    </span>
+    <span class={`epistemic-badge ${epistemicStatus}`}>{epistemicStatus}</span>
+  </div>
+
+  <div class="theorem-statement">
+    <slot />
+  </div>
+
+  <slot name="proof">
+    <!-- Optional proof slot -->
+  </slot>
+</div>
+
+<style define:vars={{ accentColor }}>
+  .theorem-block {
+    position: relative;
+    margin: 2rem 0;
+    padding: 1.5rem;
+    background: linear-gradient(135deg, var(--depth-1, #12121a) 0%, var(--depth-2, #1a1a24) 100%);
+    border: 1px solid var(--border, #2a2a3a);
+    border-radius: 8px;
+  }
+
+  .theorem-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid var(--border, #2a2a3a);
+  }
+
+  .theorem-label {
+    font-family: var(--font-display, 'Cormorant Garamond', serif);
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--accentColor);
+  }
+
+  .theorem-name {
+    font-weight: 500;
+    font-style: italic;
+    color: var(--text-primary, #e8e8f0);
+    margin-left: 0.25rem;
+  }
+
+  .epistemic-badge {
+    font-size: 0.625rem;
+    padding: 0.125rem 0.5rem;
+    border-radius: 3px;
+    text-transform: lowercase;
+    font-weight: 500;
+    flex-shrink: 0;
+  }
+
+  .epistemic-badge.established {
+    background: rgba(74, 158, 255, 0.15);
+    color: #4a9eff;
+  }
+  .epistemic-badge.derived {
+    background: rgba(80, 200, 120, 0.15);
+    color: #50c878;
+  }
+  .epistemic-badge.contested {
+    background: rgba(249, 115, 22, 0.15);
+    color: #f97316;
+  }
+  .epistemic-badge.open {
+    background: rgba(168, 85, 247, 0.15);
+    color: #a855f7;
+  }
+  .epistemic-badge.speculative {
+    background: rgba(168, 85, 247, 0.15);
+    color: #a855f7;
+  }
+
+  .theorem-statement {
+    font-family: var(--font-body, 'Sora', sans-serif);
+    font-size: 0.9375rem;
+    font-style: italic;
+    line-height: 1.8;
+    color: var(--text-primary, #e8e8f0);
+  }
+
+  .theorem-statement :global(p) {
+    margin: 0 0 0.75rem 0;
+  }
+
+  .theorem-statement :global(p:last-child) {
+    margin-bottom: 0;
+  }
+
+  .theorem-statement :global(.katex) {
+    font-style: normal;
+  }
+
+  /* Proof slot styling */
+  .theorem-block :global([slot="proof"]) {
+    margin-top: 1.5rem;
+    padding: 1.25rem;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 6px;
+    border: 1px solid var(--border, #2a2a3a);
+  }
+
+  .theorem-block :global([slot="proof"])::before {
+    content: 'Proof.';
+    display: block;
+    font-family: var(--font-display, 'Cormorant Garamond', serif);
+    font-size: 0.9375rem;
+    font-weight: 600;
+    font-style: italic;
+    color: var(--text-secondary, #a0a0b8);
+    margin-bottom: 0.75rem;
+  }
+
+  .theorem-block :global([slot="proof"])::after {
+    content: '\25A1'; /* QED square symbol */
+    display: block;
+    text-align: right;
+    margin-top: 0.75rem;
+    font-size: 0.875rem;
+    color: var(--text-muted, #606080);
+  }
+
+  .theorem-block :global([slot="proof"]) :global(p) {
+    font-style: normal;
+    font-size: 0.875rem;
+    line-height: 1.7;
+    color: var(--text-secondary, #a0a0b8);
+    margin: 0 0 0.75rem 0;
+  }
+
+  .theorem-block :global([slot="proof"]) :global(p:last-child) {
+    margin-bottom: 0;
+  }
+
+  /* Link anchor indicator */
+  .theorem-block:target {
+    animation: highlight-pulse 0.5s ease-out;
+  }
+
+  @keyframes highlight-pulse {
+    0% { box-shadow: 0 0 0 3px var(--accentColor); }
+    100% { box-shadow: 0 0 0 0 transparent; }
+  }
+
+  /* Label-specific styling */
+  .theorem-block[data-label="lemma"] {
+    border-left: 3px solid var(--accentColor);
+  }
+
+  .theorem-block[data-label="corollary"] {
+    border-left: 3px solid var(--accentColor);
+    background: var(--depth-1, #12121a);
+  }
+
+  .theorem-block[data-label="proposition"] {
+    border-left: 3px solid var(--accentColor);
+  }
+</style>
