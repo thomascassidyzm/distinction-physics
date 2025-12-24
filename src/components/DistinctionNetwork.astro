@@ -2,38 +2,56 @@
 // Distinction Network Visualization with D3.js Force Simulation
 // An organic, brain-like constellation that grows as understanding develops
 
-import { propositions } from '../content/propositions';
+import { concepts, relationships, getRelationshipsForConcept } from '../content/graph';
+
+// Map concept categories to display clusters
+function categoryToCluster(category: string): string {
+  switch (category) {
+    case 'foundational': return 'axiom';
+    case 'formal': return 'formal';
+    case 'physical': return 'quantum'; // QM, thermo, spacetime merged for visual simplicity
+    case 'consciousness': return 'mind';
+    case 'philosophical': return 'core';
+    case 'derived': return 'thermo';
+    case 'theorem': return 'spacetime';
+    case 'property': return 'formal';
+    default: return 'core';
+  }
+}
 
 // Prepare data for D3
-const nodes = propositions.map(prop => ({
-  id: prop.id,
-  title: prop.title,
-  surface: prop.surface,
-  claim: prop.logic.claim,
-  conclusion: prop.logic.conclusion,
-  linksTo: prop.linksTo,
-  cluster: getCluster(prop.id),
-  isAxiom: prop.id.includes('axiom'),
+const nodes = concepts.map(concept => {
+  const rels = getRelationshipsForConcept(concept.id);
+  const linksTo = [
+    ...rels.filter(r => r.source === concept.id).map(r => r.target),
+    ...rels.filter(r => r.target === concept.id).map(r => r.source),
+    ...(concept.related || [])
+  ];
+  // Deduplicate
+  const uniqueLinks = [...new Set(linksTo)];
+
+  return {
+    id: concept.id,
+    title: concept.name,
+    surface: concept.definitions.brief,
+    formal: concept.definitions.formal || null,
+    intuition: concept.definitions.intuition || null,
+    linksTo: uniqueLinks,
+    cluster: categoryToCluster(concept.category),
+    category: concept.category,
+    module: concept.source.module,
+    tags: concept.tags,
+    isAxiom: concept.category === 'foundational',
+  };
+});
+
+// Create links from relationships (directed edges)
+const links = relationships.map(rel => ({
+  source: rel.source,
+  target: rel.target,
+  type: rel.type,
+  strength: rel.strength,
 }));
-
-const links = propositions.flatMap(prop =>
-  prop.linksTo
-    .filter(targetId => propositions.some(p => p.id === targetId))
-    .map(targetId => ({
-      source: prop.id,
-      target: targetId,
-    }))
-);
-
-function getCluster(id: string): string {
-  if (id.includes('axiom')) return 'axiom';
-  if (id.includes('consciousness') || id.includes('self-reference') || id.includes('learning') || id.includes('spaced') || id.includes('attention') || id.includes('chunking') || id.includes('hard-problem')) return 'mind';
-  if (id.includes('heisenberg') || id.includes('superposition') || id.includes('planck') || id.includes('measurement') || id.includes('entanglement') || id.includes('resolution-energy')) return 'quantum';
-  if (id.includes('entropy') || id.includes('landauer') || id.includes('dynamism') || id.includes('heat-death') || id.includes('life-distinction')) return 'thermo';
-  if (id.includes('spacetime') || id.includes('gravity') || id.includes('time-from') || id.includes('black-hole')) return 'spacetime';
-  if (id.includes('math') || id.includes('distinction-operator') || id.includes('mathematical')) return 'formal';
-  return 'core';
-}
 ---
 
 <div class="network-container" id="distinction-network">
@@ -51,8 +69,8 @@ function getCluster(id: string): string {
       </button>
       <div class="progress-indicator">
         <span class="progress-count" id="progress-count">0</span>
-        <span class="progress-total">/ {propositions.length}</span>
-        <span class="progress-label">distinctions made</span>
+        <span class="progress-total">/ {concepts.length}</span>
+        <span class="progress-label">concepts understood</span>
       </div>
     </div>
   </div>
@@ -91,19 +109,23 @@ function getCluster(id: string): string {
     <div class="panel-content">
       <div class="panel-header">
         <h3 class="panel-title" id="panel-title"></h3>
-        <span class="panel-cluster" id="panel-cluster"></span>
+        <div class="panel-meta">
+          <span class="panel-cluster" id="panel-cluster"></span>
+          <span class="panel-module" id="panel-module"></span>
+        </div>
       </div>
       <p class="panel-surface" id="panel-surface"></p>
-      <div class="panel-logic">
-        <div class="logic-row">
-          <span class="logic-label">Claim</span>
-          <p class="logic-value" id="panel-claim"></p>
+      <div class="panel-definitions" id="panel-definitions">
+        <div class="definition-row" id="formal-row">
+          <span class="definition-label">Formal</span>
+          <p class="definition-value" id="panel-formal"></p>
         </div>
-        <div class="logic-row">
-          <span class="logic-label">Therefore</span>
-          <p class="logic-value" id="panel-conclusion"></p>
+        <div class="definition-row" id="intuition-row">
+          <span class="definition-label">Intuition</span>
+          <p class="definition-value" id="panel-intuition"></p>
         </div>
       </div>
+      <div class="panel-tags" id="panel-tags"></div>
       <div class="panel-connections" id="panel-connections"></div>
       <button class="understand-btn" id="understand-btn">
         <span class="btn-icon">⬡</span>
@@ -322,11 +344,42 @@ function getCluster(id: string): string {
 
       // Populate panel
       document.getElementById('panel-title').textContent = d.title;
-      document.getElementById('panel-cluster').textContent = d.cluster;
+      document.getElementById('panel-cluster').textContent = d.category || d.cluster;
       document.getElementById('panel-cluster').className = `panel-cluster ${d.cluster}`;
+      document.getElementById('panel-module').textContent = d.module !== undefined ? `Module ${d.module}` : '';
       document.getElementById('panel-surface').textContent = d.surface;
-      document.getElementById('panel-claim').textContent = d.claim;
-      document.getElementById('panel-conclusion').textContent = d.conclusion;
+
+      // Formal definition (show/hide)
+      const formalRow = document.getElementById('formal-row');
+      const formalEl = document.getElementById('panel-formal');
+      if (d.formal) {
+        formalEl.textContent = d.formal;
+        formalRow.style.display = 'block';
+      } else {
+        formalRow.style.display = 'none';
+      }
+
+      // Intuition (show/hide)
+      const intuitionRow = document.getElementById('intuition-row');
+      const intuitionEl = document.getElementById('panel-intuition');
+      if (d.intuition) {
+        intuitionEl.textContent = d.intuition;
+        intuitionRow.style.display = 'block';
+      } else {
+        intuitionRow.style.display = 'none';
+      }
+
+      // Tags
+      const tagsEl = document.getElementById('panel-tags');
+      if (d.tags && d.tags.length > 0) {
+        tagsEl.innerHTML = `
+          <div class="tags-list">
+            ${d.tags.map(tag => `<span class="tag-chip">${tag}</span>`).join('')}
+          </div>
+        `;
+      } else {
+        tagsEl.innerHTML = '';
+      }
 
       // Connections
       const connectionsEl = document.getElementById('panel-connections');
@@ -335,7 +388,7 @@ function getCluster(id: string): string {
           .map(linkId => nodes.find(n => n.id === linkId))
           .filter(Boolean);
         connectionsEl.innerHTML = `
-          <span class="connections-label">Connects to</span>
+          <span class="connections-label">Connected concepts</span>
           <div class="connections-list">
             ${connectedNodes.map(n => `
               <button class="connection-chip" data-id="${n.id}">${n.title}</button>
@@ -841,9 +894,8 @@ function getCluster(id: string): string {
 
   .panel-header {
     display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    gap: 1rem;
+    flex-direction: column;
+    gap: 0.5rem;
     margin-bottom: 1rem;
   }
 
@@ -856,6 +908,12 @@ function getCluster(id: string): string {
     line-height: 1.3;
   }
 
+  .panel-meta {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+  }
+
   .panel-cluster {
     font-family: 'JetBrains Mono', monospace;
     font-size: 0.625rem;
@@ -863,6 +921,15 @@ function getCluster(id: string): string {
     padding: 0.25rem 0.5rem;
     border-radius: 4px;
     flex-shrink: 0;
+  }
+
+  .panel-module {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.625rem;
+    color: #606080;
+    padding: 0.25rem 0.5rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 4px;
   }
 
   .panel-cluster.axiom { background: rgba(74, 158, 255, 0.15); color: #4a9eff; }
@@ -880,22 +947,22 @@ function getCluster(id: string): string {
     margin-bottom: 1.5rem;
   }
 
-  .panel-logic {
+  .panel-definitions {
     background: #0a0a0c;
     border-radius: 8px;
     padding: 1rem;
-    margin-bottom: 1.5rem;
-  }
-
-  .logic-row {
     margin-bottom: 1rem;
   }
 
-  .logic-row:last-child {
+  .definition-row {
+    margin-bottom: 1rem;
+  }
+
+  .definition-row:last-child {
     margin-bottom: 0;
   }
 
-  .logic-label {
+  .definition-label {
     display: block;
     font-size: 0.625rem;
     text-transform: uppercase;
@@ -904,11 +971,30 @@ function getCluster(id: string): string {
     margin-bottom: 0.25rem;
   }
 
-  .logic-value {
+  .definition-value {
     font-size: 0.875rem;
     color: #e8e8f0;
     margin: 0;
     line-height: 1.5;
+  }
+
+  .panel-tags {
+    margin-bottom: 1rem;
+  }
+
+  .tags-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.375rem;
+  }
+
+  .tag-chip {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.625rem;
+    color: #808090;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
   }
 
   .panel-connections {
