@@ -1,22 +1,22 @@
 ---
 /**
- * Treatise Index - Module 0: Philosophical Foundations
- *
- * Academic treatise rendering with full scholarly apparatus.
+ * Treatise Index - Landing page with all modules
  */
 
-import { module0 } from '../../content/treatise/module-0-philosophical';
-import ContentRenderer from '../../components/treatise/ContentRenderer.astro';
-import SectionHeader from '../../components/treatise/SectionHeader.astro';
-import EpistemicBadge from '../../components/treatise/EpistemicBadge.astro';
+import {
+  module0, module1, module2, module3, module4,
+  module5, module6, module7, module8, module9
+} from '../../content/treatise';
 import { VERSION, BUILD } from '../../lib/version';
 
-const epistemicStatusDescriptions = {
-  established: 'Logically necessary from axioms; cannot be denied without contradiction',
-  derived: 'Follows from established premises through valid reasoning',
-  contested: 'Arguable; alternative interpretations exist',
-  open: 'An active research question; multiple approaches viable',
-  speculative: 'Exploratory; requires further development',
+const modules = [module0, module1, module2, module3, module4, module5, module6, module7, module8, module9];
+
+const epistemicColors = {
+  established: '#4a9eff',
+  derived: '#50c878',
+  contested: '#f97316',
+  open: '#a855f7',
+  speculative: '#a855f7',
 };
 ---
 
@@ -25,16 +25,11 @@ const epistemicStatusDescriptions = {
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{module0.title} - Distinction Physics</title>
-  <meta name="description" content={module0.subtitle}>
-
-  <!-- Fonts -->
+  <title>Academic Treatise - Distinction Physics</title>
+  <meta name="description" content="The complete scholarly treatment of Distinction Physics: 10 modules covering philosophical foundations through synthesis.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Sora:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-
-  <!-- KaTeX CSS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
 </head>
 <body>
   <header class="site-header">
@@ -48,116 +43,81 @@ const epistemicStatusDescriptions = {
     <div class="header-actions">
       <a href="/essay" class="nav-link">Essay</a>
       <a href="/explore" class="nav-link">Explore</a>
+      <a href="/treatise" class="nav-link active">Treatise</a>
     </div>
   </header>
 
-  <aside class="section-nav">
-    <div class="nav-title">Module {module0.number}</div>
-    <div class="nav-module-name">{module0.title}</div>
+  <main class="treatise-index">
+    <header class="page-header">
+      <h1>Academic Treatise</h1>
+      <p class="subtitle">The Complete Scholarly Treatment</p>
+      <p class="description">
+        Ten modules deriving the structure of accessible reality from two axioms.
+        Includes formal definitions, theorems, derivations, and rigorous mathematical apparatus.
+      </p>
+    </header>
 
-    <div class="nav-sections">
-      {module0.sections.map((section) => (
-        <a
-          href={`#section-${section.id}`}
-          class="nav-item"
-          data-section={section.id}
-        >
-          <span class="nav-number">{section.id}</span>
-          <span class="nav-label">{section.title.split(':')[0]}</span>
-          <span class={`nav-status ${section.epistemicStatus}`}></span>
-        </a>
-      ))}
-    </div>
-
-    <div class="nav-legend">
-      <div class="legend-title">Epistemic Status</div>
-      <div class="legend-item"><span class="legend-dot established"></span> Established</div>
-      <div class="legend-item"><span class="legend-dot derived"></span> Derived</div>
-      <div class="legend-item"><span class="legend-dot contested"></span> Contested</div>
-      <div class="legend-item"><span class="legend-dot open"></span> Open</div>
-      <div class="legend-item"><span class="legend-dot speculative"></span> Speculative</div>
-    </div>
-  </aside>
-
-  <main class="treatise-content">
-    <article>
-      <header class="module-header">
-        <div class="module-number">Module {module0.number}</div>
-        <h1>{module0.title}</h1>
-        <p class="subtitle">{module0.subtitle}</p>
-        <EpistemicBadge status={module0.epistemicStatus} />
-      </header>
-
-      {module0.keyInsights && module0.keyInsights.length > 0 && (
-        <aside class="module-insights">
-          <h3>Key Insights</h3>
-          <ul>
-            {module0.keyInsights.map((insight) => (
+    <section class="modules-grid">
+      {modules.map((module) => (
+        <a href={`/treatise/module-${module.number}`} class="module-card" data-status={module.epistemicStatus}>
+          <div class="module-number">Module {module.number}</div>
+          <h2 class="module-title">{module.title}</h2>
+          <p class="module-subtitle">{module.subtitle}</p>
+          <div class="module-meta">
+            <span class="section-count">{module.sections.length} sections</span>
+            <span class={`status-badge ${module.epistemicStatus}`}>{module.epistemicStatus}</span>
+          </div>
+          <ul class="key-insights">
+            {module.keyInsights?.slice(0, 2).map((insight) => (
               <li>{insight}</li>
             ))}
           </ul>
-        </aside>
-      )}
-
-      {module0.sections.map((section) => (
-        <section id={`section-${section.id}`} class="treatise-section" data-status={section.epistemicStatus}>
-          <SectionHeader
-            number={section.id}
-            title={section.title}
-            subtitle={section.subtitle}
-            epistemicStatus={section.epistemicStatus}
-          />
-
-          <div class="section-body">
-            <ContentRenderer blocks={section.content} />
-          </div>
-
-          {section.keyPoints && section.keyPoints.length > 0 && (
-            <div class="section-key-points">
-              <h4>Key Points</h4>
-              <ul>
-                {section.keyPoints.map((point) => (
-                  <li>{point}</li>
-                ))}
-              </ul>
-            </div>
-          )}
-        </section>
+          <span class="card-arrow">→</span>
+        </a>
       ))}
+    </section>
 
-      {module0.connectionsToNext && module0.connectionsToNext.length > 0 && (
-        <aside class="module-connections">
-          <h3>Looking Ahead</h3>
-          <ul>
-            {module0.connectionsToNext.map((connection) => (
-              <li>{connection}</li>
-            ))}
-          </ul>
-        </aside>
-      )}
-    </article>
+    <section class="treatise-info">
+      <div class="info-card">
+        <h3>Epistemic Status Legend</h3>
+        <div class="legend-items">
+          <div class="legend-item">
+            <span class="legend-dot established"></span>
+            <span class="legend-label">Established</span>
+            <span class="legend-desc">Logically necessary from axioms</span>
+          </div>
+          <div class="legend-item">
+            <span class="legend-dot derived"></span>
+            <span class="legend-label">Derived</span>
+            <span class="legend-desc">Follows from established premises</span>
+          </div>
+          <div class="legend-item">
+            <span class="legend-dot contested"></span>
+            <span class="legend-label">Contested</span>
+            <span class="legend-desc">Alternative interpretations exist</span>
+          </div>
+          <div class="legend-item">
+            <span class="legend-dot speculative"></span>
+            <span class="legend-label">Speculative</span>
+            <span class="legend-desc">Exploratory; requires development</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="info-card">
+        <h3>Framework Status</h3>
+        <p>V7 · Anti-fragile</p>
+        <p class="info-detail">
+          Survived 36 adversarial attacks. 28 antibodies generated. 22 refinements absorbed.
+        </p>
+      </div>
+    </section>
   </main>
 
-  <script is:inline>
-    // Track current section for navigation highlighting
-    document.addEventListener('DOMContentLoaded', () => {
-      const sections = document.querySelectorAll('.treatise-section');
-      const navItems = document.querySelectorAll('.nav-item');
-
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            const id = entry.target.id.replace('section-', '');
-            navItems.forEach(item => {
-              item.classList.toggle('active', item.dataset.section === id);
-            });
-          }
-        });
-      }, { threshold: 0.2, rootMargin: '-80px 0px -60% 0px' });
-
-      sections.forEach(section => observer.observe(section));
-    });
-  </script>
+  <footer class="site-footer">
+    <span class="version-info">{VERSION} · build {BUILD}</span>
+    <span class="footer-text">Working Draft · December 2025</span>
+  </footer>
 </body>
 </html>
 
@@ -174,7 +134,6 @@ const epistemicStatusDescriptions = {
     --established: #4a9eff;
     --derived: #50c878;
     --contested: #f97316;
-    --open: #a855f7;
     --speculative: #a855f7;
     --font-display: 'Cormorant Garamond', serif;
     --font-body: 'Sora', sans-serif;
@@ -195,7 +154,6 @@ const epistemicStatusDescriptions = {
     min-height: 100vh;
   }
 
-  /* Header */
   .site-header {
     position: fixed;
     top: 0;
@@ -247,189 +205,188 @@ const epistemicStatusDescriptions = {
     transition: color 0.2s;
   }
 
-  .nav-link:hover {
+  .nav-link:hover, .nav-link.active {
     color: var(--accent);
   }
 
-  /* Section Navigation */
-  .section-nav {
-    position: fixed;
-    left: 0;
-    top: 60px;
-    width: 280px;
-    height: calc(100vh - 60px);
-    background: var(--depth-1);
-    border-right: 1px solid var(--border);
-    padding: 1.5rem 0;
-    overflow-y: auto;
-    z-index: 50;
-  }
-
-  .nav-title {
-    padding: 0 1.5rem;
-    font-family: var(--font-mono);
-    font-size: 0.6875rem;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    color: var(--text-muted);
-  }
-
-  .nav-module-name {
-    padding: 0.5rem 1.5rem 1.5rem;
-    font-family: var(--font-display);
-    font-size: 1.125rem;
-    font-weight: 600;
-    color: var(--text-primary);
-    border-bottom: 1px solid var(--border);
-    margin-bottom: 1rem;
-  }
-
-  .nav-sections {
-    padding: 0;
-  }
-
-  .nav-item {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-    padding: 0.625rem 1.5rem;
-    color: var(--text-secondary);
-    text-decoration: none;
-    font-size: 0.8125rem;
-    transition: all 0.2s;
-    border-left: 2px solid transparent;
-  }
-
-  .nav-item:hover {
-    background: var(--depth-2);
-    color: var(--text-primary);
-  }
-
-  .nav-item.active {
-    background: rgba(74, 158, 255, 0.08);
-    color: var(--accent);
-    border-left-color: var(--accent);
-  }
-
-  .nav-number {
-    font-family: var(--font-mono);
-    font-size: 0.6875rem;
-    color: var(--text-muted);
-    min-width: 2.5rem;
-  }
-
-  .nav-label {
-    flex: 1;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-
-  .nav-status {
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
-    flex-shrink: 0;
-  }
-
-  .nav-status.established { background: var(--established); }
-  .nav-status.derived { background: var(--derived); }
-  .nav-status.contested { background: var(--contested); }
-  .nav-status.open { background: var(--open); }
-  .nav-status.speculative { background: var(--speculative); }
-
-  .nav-legend {
-    margin-top: 2rem;
-    padding: 1rem 1.5rem;
-    border-top: 1px solid var(--border);
-  }
-
-  .legend-title {
-    font-size: 0.5625rem;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    color: var(--text-muted);
-    margin-bottom: 0.75rem;
-  }
-
-  .legend-item {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    font-size: 0.6875rem;
-    color: var(--text-secondary);
-    margin-bottom: 0.375rem;
-  }
-
-  .legend-dot {
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
-  }
-
-  .legend-dot.established { background: var(--established); }
-  .legend-dot.derived { background: var(--derived); }
-  .legend-dot.contested { background: var(--contested); }
-  .legend-dot.open { background: var(--open); }
-  .legend-dot.speculative { background: var(--speculative); }
-
-  /* Main Content */
-  .treatise-content {
-    margin-left: 280px;
+  .treatise-index {
     padding-top: 60px;
     min-height: 100vh;
   }
 
-  article {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 3rem 2rem 6rem;
-  }
-
-  /* Module Header */
-  .module-header {
-    margin-bottom: 3rem;
+  .page-header {
     text-align: center;
-    padding-bottom: 2rem;
-    border-bottom: 1px solid var(--border);
+    padding: 4rem 2rem 3rem;
+    background: linear-gradient(180deg, var(--depth-1) 0%, var(--void) 100%);
   }
 
-  .module-number {
-    font-family: var(--font-mono);
-    font-size: 0.75rem;
-    text-transform: uppercase;
-    letter-spacing: 0.15em;
-    color: var(--accent);
-    margin-bottom: 0.5rem;
-  }
-
-  .module-header h1 {
+  .page-header h1 {
     font-family: var(--font-display);
-    font-size: 2.75rem;
-    font-weight: 600;
-    line-height: 1.2;
-    margin-bottom: 0.75rem;
-    letter-spacing: -0.01em;
+    font-size: 3rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
   }
 
   .subtitle {
     font-size: 1.25rem;
-    font-weight: 300;
     color: var(--text-secondary);
     font-style: italic;
     margin-bottom: 1rem;
   }
 
-  /* Module Insights */
-  .module-insights {
-    margin-bottom: 3rem;
-    padding: 1.5rem;
-    background: linear-gradient(135deg, rgba(74, 158, 255, 0.05) 0%, rgba(80, 200, 120, 0.03) 100%);
-    border: 1px solid var(--border);
-    border-radius: 10px;
+  .description {
+    max-width: 600px;
+    margin: 0 auto;
+    color: var(--text-muted);
+    font-size: 1rem;
   }
 
-  .module-insights h3 {
+  .modules-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem 3rem;
+  }
+
+  .module-card {
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+    background: var(--depth-1);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.2s;
+    position: relative;
+  }
+
+  .module-card:hover {
+    border-color: var(--accent);
+    background: var(--depth-2);
+    transform: translateY(-2px);
+  }
+
+  .module-number {
+    font-family: var(--font-mono);
+    font-size: 0.6875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--accent);
+    margin-bottom: 0.5rem;
+  }
+
+  .module-title {
+    font-family: var(--font-display);
+    font-size: 1.375rem;
+    font-weight: 600;
+    margin-bottom: 0.375rem;
+    line-height: 1.3;
+  }
+
+  .module-subtitle {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 1rem;
+  }
+
+  .module-meta {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .section-count {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--text-muted);
+  }
+
+  .status-badge {
+    font-family: var(--font-mono);
+    font-size: 0.625rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+  }
+
+  .status-badge.established {
+    color: var(--established);
+    background: rgba(74, 158, 255, 0.15);
+  }
+
+  .status-badge.derived {
+    color: var(--derived);
+    background: rgba(80, 200, 120, 0.15);
+  }
+
+  .status-badge.contested {
+    color: var(--contested);
+    background: rgba(249, 115, 22, 0.15);
+  }
+
+  .status-badge.speculative {
+    color: var(--speculative);
+    background: rgba(168, 85, 247, 0.15);
+  }
+
+  .key-insights {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    flex: 1;
+  }
+
+  .key-insights li {
+    font-size: 0.8125rem;
+    color: var(--text-secondary);
+    padding-left: 1rem;
+    position: relative;
+    margin-bottom: 0.5rem;
+  }
+
+  .key-insights li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--text-muted);
+  }
+
+  .card-arrow {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    font-size: 1.25rem;
+    color: var(--text-muted);
+    transition: all 0.2s;
+  }
+
+  .module-card:hover .card-arrow {
+    color: var(--accent);
+    transform: translateX(4px);
+  }
+
+  .treatise-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem 4rem;
+  }
+
+  .info-card {
+    padding: 1.5rem;
+    background: var(--depth-1);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+  }
+
+  .info-card h3 {
     font-family: var(--font-mono);
     font-size: 0.6875rem;
     text-transform: uppercase;
@@ -438,120 +395,65 @@ const epistemicStatusDescriptions = {
     margin-bottom: 1rem;
   }
 
-  .module-insights ul {
-    margin: 0;
-    padding-left: 1.25rem;
-    list-style-type: none;
+  .legend-items {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
   }
 
-  .module-insights li {
-    position: relative;
-    padding-left: 1rem;
-    margin-bottom: 0.5rem;
-    font-size: 0.9375rem;
-    color: var(--text-secondary);
+  .legend-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 0.8125rem;
   }
 
-  .module-insights li::before {
-    content: '→';
-    position: absolute;
-    left: -0.75rem;
-    color: var(--accent);
+  .legend-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    flex-shrink: 0;
   }
 
-  /* Sections */
-  .treatise-section {
-    margin-bottom: 4rem;
-    scroll-margin-top: 100px;
+  .legend-dot.established { background: var(--established); }
+  .legend-dot.derived { background: var(--derived); }
+  .legend-dot.contested { background: var(--contested); }
+  .legend-dot.speculative { background: var(--speculative); }
+
+  .legend-label {
+    color: var(--text-primary);
+    min-width: 80px;
   }
 
-  .section-body {
-    margin-top: 1.5rem;
-  }
-
-  /* Key Points */
-  .section-key-points {
-    margin-top: 2rem;
-    padding: 1.25rem;
-    background: var(--depth-1);
-    border: 1px solid var(--border);
-    border-radius: 8px;
-  }
-
-  .section-key-points h4 {
-    font-family: var(--font-mono);
-    font-size: 0.625rem;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
+  .legend-desc {
     color: var(--text-muted);
-    margin-bottom: 0.75rem;
   }
 
-  .section-key-points ul {
-    margin: 0;
-    padding-left: 1.25rem;
-  }
-
-  .section-key-points li {
-    margin-bottom: 0.375rem;
+  .info-detail {
     font-size: 0.875rem;
     color: var(--text-secondary);
+    margin-top: 0.5rem;
   }
 
-  .section-key-points li:last-child {
-    margin-bottom: 0;
-  }
-
-  /* Module Connections */
-  .module-connections {
-    margin-top: 4rem;
-    padding: 1.5rem;
-    background: var(--depth-1);
-    border: 1px solid var(--border);
-    border-radius: 10px;
-  }
-
-  .module-connections h3 {
-    font-family: var(--font-display);
-    font-size: 1.25rem;
-    font-weight: 600;
-    color: var(--text-primary);
-    margin-bottom: 1rem;
-  }
-
-  .module-connections ul {
-    margin: 0;
-    padding-left: 1.25rem;
-  }
-
-  .module-connections li {
-    margin-bottom: 0.5rem;
-    font-size: 0.9375rem;
-    color: var(--text-secondary);
-  }
-
-  /* Responsive */
-  @media (max-width: 1024px) {
-    .section-nav {
-      width: 240px;
-    }
-
-    .treatise-content {
-      margin-left: 240px;
-    }
+  .site-footer {
+    padding: 2rem;
+    border-top: 1px solid var(--border);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    font-family: var(--font-mono);
   }
 
   @media (max-width: 768px) {
-    .section-nav {
-      display: none;
+    .modules-grid {
+      grid-template-columns: 1fr;
     }
 
-    .treatise-content {
-      margin-left: 0;
-    }
-
-    .module-header h1 {
-      font-size: 2rem;
+    .page-header h1 {
+      font-size: 2.25rem;
     }
   }
 </style>
