@@ -125,7 +125,6 @@ const links = relationships.map(rel => ({
           <p class="definition-value" id="panel-intuition"></p>
         </div>
       </div>
-      <div class="panel-tags" id="panel-tags"></div>
       <div class="panel-connections" id="panel-connections"></div>
       <button class="understand-btn" id="understand-btn">
         <span class="btn-icon">⬡</span>
@@ -367,19 +366,6 @@ const links = relationships.map(rel => ({
         intuitionRow.style.display = 'block';
       } else {
         intuitionRow.style.display = 'none';
-      }
-
-      // Tags
-      const tagsEl = document.getElementById('panel-tags');
-      if (d.tags && d.tags.length > 0) {
-        tagsEl.innerHTML = `
-          <span class="tags-label">Tags</span>
-          <div class="tags-list">
-            ${d.tags.map(tag => `<span class="tag-chip">${tag}</span>`).join('')}
-          </div>
-        `;
-      } else {
-        tagsEl.innerHTML = '';
       }
 
       // Connections
@@ -977,35 +963,6 @@ const links = relationships.map(rel => ({
     color: #e8e8f0;
     margin: 0;
     line-height: 1.5;
-  }
-
-  .panel-tags {
-    margin-bottom: 1rem;
-  }
-
-  :global(.tags-label) {
-    display: block;
-    font-size: 0.625rem;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    color: #606080;
-    margin-bottom: 0.5rem;
-  }
-
-  :global(.tags-list) {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-  }
-
-  :global(.tag-chip) {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 0.625rem;
-    color: rgba(74, 158, 255, 0.7) !important;
-    background: transparent !important;
-    border: 1px solid rgba(74, 158, 255, 0.25) !important;
-    padding: 0.25rem 0.625rem;
-    border-radius: 999px;
   }
 
   .panel-connections {
