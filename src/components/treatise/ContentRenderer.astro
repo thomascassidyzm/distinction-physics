@@ -28,50 +28,60 @@ const { blocks } = Astro.props;
  * Process inline LaTeX, citations, and formatting in text content
  */
 function processInlineContent(text: string): string {
-  // First, process display math: $$...$$ -> block rendered HTML
-  let processed = text.replace(/\$\$([^$]+)\$\$/g, (_, latex) => {
-    try {
-      return `<div class="inline-display-math">${renderMath(latex.trim(), true)}</div>`;
-    } catch {
-      return `<code class="math-error">${latex}</code>`;
-    }
-  });
+  // FIRST: Convert newlines to temporary placeholders BEFORE any math processing
+  // This prevents <br> tags from appearing inside KaTeX SVG output
+  const PARA_BREAK = '%%%PARA_BREAK%%%';
+  const LINE_BREAK = '%%%LINE_BREAK%%%';
 
-  // Then, process inline LaTeX: $...$ -> inline rendered HTML
-  // Use negative lookbehind/lookahead to avoid matching already-processed $$
-  processed = processed.replace(/(?<!\$)\$(?!\$)([^$]+)\$(?!\$)/g, (_, latex) => {
-    try {
-      return renderMath(latex, false);
-    } catch {
-      return `<code>${latex}</code>`;
-    }
-  });
+  // Split into paragraphs by double newlines
+  const paragraphs = text.split(/\n\n+/);
+  const hasMultipleParagraphs = paragraphs.length > 1;
 
-  // Process citations: [@key] -> link
-  processed = processed.replace(/\[@([^\]]+)\]/g, (_, key) => {
-    return `<a href="#ref-${key}" class="citation-ref">[${key}]</a>`;
-  });
+  // Process each paragraph
+  const processedParagraphs = paragraphs.map(para => {
+    // Replace single newlines with placeholder
+    let processed = para.trim().replace(/\n/g, LINE_BREAK);
 
-  // Process glossary refs: [term] -> tooltip (simple version)
-  processed = processed.replace(/\[([A-Z][^[\]]+)\]/g, (_, term) => {
-    return `<span class="glossary-term" data-term="${term.toLowerCase().replace(/\s+/g, '-')}">${term}</span>`;
-  });
+    // Process display math: $$...$$ -> block rendered HTML
+    processed = processed.replace(/\$\$([^$]+)\$\$/g, (_, latex) => {
+      try {
+        return `<div class="inline-display-math">${renderMath(latex.trim(), true)}</div>`;
+      } catch {
+        return `<code class="math-error">${latex}</code>`;
+      }
+    });
 
-  // Convert double newlines to paragraph breaks, single newlines to <br>
-  // First split by double newlines into paragraphs
-  const paragraphs = processed.split(/\n\n+/);
-  if (paragraphs.length > 1) {
-    processed = paragraphs
-      .map(p => p.trim())
-      .filter(p => p.length > 0)
-      .map(p => `<p class="proof-para">${p.replace(/\n/g, '<br>')}</p>`)
-      .join('');
+    // Process inline LaTeX: $...$ -> inline rendered HTML
+    processed = processed.replace(/(?<!\$)\$(?!\$)([^$]+)\$(?!\$)/g, (_, latex) => {
+      try {
+        return renderMath(latex, false);
+      } catch {
+        return `<code>${latex}</code>`;
+      }
+    });
+
+    // Process citations: [@key] -> link
+    processed = processed.replace(/\[@([^\]]+)\]/g, (_, key) => {
+      return `<a href="#ref-${key}" class="citation-ref">[${key}]</a>`;
+    });
+
+    // Process glossary refs: [term] -> tooltip (simple version)
+    processed = processed.replace(/\[([A-Z][^[\]]+)\]/g, (_, term) => {
+      return `<span class="glossary-term" data-term="${term.toLowerCase().replace(/\s+/g, '-')}">${term}</span>`;
+    });
+
+    // NOW convert line break placeholders to actual <br> tags (after math is done)
+    processed = processed.replace(new RegExp(LINE_BREAK, 'g'), '<br>');
+
+    return processed;
+  }).filter(p => p.length > 0);
+
+  // Join paragraphs
+  if (hasMultipleParagraphs) {
+    return processedParagraphs.map(p => `<p class="proof-para">${p}</p>`).join('');
   } else {
-    // Single paragraph - just convert single newlines to breaks
-    processed = processed.replace(/\n/g, '<br>');
+    return processedParagraphs[0] || '';
   }
-
-  return processed;
 }
 ---
 

@@ -21,7 +21,8 @@ const renderedMath = renderMath(latex, display);
 <Fragment set:html={renderedMath} />
 
 <style is:global>
-  @import 'katex/dist/katex.min.css';
+  /* KaTeX CSS is loaded from CDN in page head - do not import from node_modules
+     as it bundles fonts with incorrect local paths */
 
   /* Inline math styling */
   .katex {
