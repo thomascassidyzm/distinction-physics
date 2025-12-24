@@ -31,6 +31,7 @@ export {
 // Modules
 export { module0 } from './module-0-philosophical';
 export { module1 } from './module-1-formalization';
+export { module2 } from './module-2-mathematics';
 
 // Re-export commonly used types for convenience
 export type {
