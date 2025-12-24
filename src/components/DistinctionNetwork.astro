@@ -269,20 +269,22 @@ const links = relationships.map(rel => ({
 
         nodeEl.classed('understood', isUnderstood);
 
-        // Selected node always glows bright
+        // Selected node always glows bright yellow
         if (isSelected) {
           nodeEl.select('.node-glow')
             .attr('opacity', 0.9)
+            .attr('stroke', '#fbbf24')
             .attr('filter', 'url(#glow)');
           nodeEl.select('.node-core')
-            .attr('fill', `${clusterColors[d.cluster]}50`)
-            .attr('stroke', clusterColors[d.cluster])
+            .attr('fill', 'rgba(251, 191, 36, 0.25)')
+            .attr('stroke', '#fbbf24')
             .attr('stroke-width', 3);
           nodeEl.select('.node-inner')
-            .attr('fill', clusterColors[d.cluster]);
+            .attr('fill', '#fbbf24');
         } else {
           nodeEl.select('.node-glow')
             .attr('opacity', isUnderstood ? 0.6 : 0)
+            .attr('stroke', clusterColors[d.cluster])
             .attr('filter', isUnderstood ? 'url(#glow)' : null);
           nodeEl.select('.node-core')
             .attr('fill', isUnderstood ? `${clusterColors[d.cluster]}40` : `${clusterColors[d.cluster]}15`)
@@ -405,14 +407,14 @@ const links = relationships.map(rel => ({
               // Highlight the path before navigating
               const sourceId = currentNodeId;
 
-              // Flash the connecting link
+              // Flash the connecting link yellow
               link.filter(l => {
                 const sId = l.source.id || l.source;
                 const tId = l.target.id || l.target;
                 return (sId === sourceId && tId === targetId) || (sId === targetId && tId === sourceId);
               })
               .classed('path-highlight', true)
-              .attr('stroke', '#4a9eff')
+              .attr('stroke', '#fbbf24')
               .attr('stroke-width', 3);
 
               // Flash the target node
@@ -838,22 +840,22 @@ const links = relationships.map(rel => ({
     opacity: 1 !important;
   }
 
-  /* Path highlight when navigating between nodes */
+  /* Path highlight when navigating between nodes - yellow for visibility */
   .link.path-highlight {
-    stroke: #4a9eff !important;
+    stroke: #fbbf24 !important;
     stroke-width: 3 !important;
     filter: url(#glow);
   }
 
   .node.path-target .node-core {
-    stroke: #4a9eff !important;
+    stroke: #fbbf24 !important;
     stroke-width: 3 !important;
     filter: url(#glow);
   }
 
   .node.path-target .node-glow {
     opacity: 1 !important;
-    stroke: #4a9eff !important;
+    stroke: #fbbf24 !important;
   }
 
   .node-glow {
