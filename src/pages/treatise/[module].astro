@@ -10,6 +10,7 @@ import {
 import ContentRenderer from '../../components/treatise/ContentRenderer.astro';
 import SectionHeader from '../../components/treatise/SectionHeader.astro';
 import EpistemicBadge from '../../components/treatise/EpistemicBadge.astro';
+import GuidePanel from '../../components/GuidePanel.astro';
 import { VERSION, BUILD } from '../../lib/version';
 
 export const prerender = true;
@@ -178,8 +179,15 @@ const nextModule = moduleNumber < 9 ? modules[moduleNumber + 1] : null;
     </article>
   </main>
 
-  <script is:inline>
-    // Track current section for navigation highlighting
+  <GuidePanel />
+
+  <script is:inline define:vars={{ moduleNumber: currentModule.number, moduleTitle: currentModule.title }}>
+    // Initialize context for Alexander
+    window.currentSectionId = moduleNumber + '.0';
+    window.currentSection = 'Module ' + moduleNumber + ' — ' + moduleTitle;
+    window.currentStatus = 'derived';
+
+    // Track current section for navigation highlighting and Alexander context
     document.addEventListener('DOMContentLoaded', () => {
       const sections = document.querySelectorAll('.treatise-section');
       const navItems = document.querySelectorAll('.nav-item');
@@ -188,9 +196,19 @@ const nextModule = moduleNumber < 9 ? modules[moduleNumber + 1] : null;
         entries.forEach(entry => {
           if (entry.isIntersecting) {
             const id = entry.target.id.replace('section-', '');
+            const status = entry.target.dataset.status || 'derived';
+
+            // Update nav highlighting
             navItems.forEach(item => {
               item.classList.toggle('active', item.dataset.section === id);
             });
+
+            // Update Alexander context
+            const sectionHeader = entry.target.querySelector('.section-header .section-title');
+            const sectionTitle = sectionHeader ? sectionHeader.textContent : 'Section ' + id;
+            window.currentSectionId = id;
+            window.currentSection = sectionTitle;
+            window.currentStatus = status;
           }
         });
       }, { threshold: 0.2, rootMargin: '-80px 0px -60% 0px' });
@@ -430,6 +448,7 @@ const nextModule = moduleNumber < 9 ? modules[moduleNumber + 1] : null;
   /* Main Content */
   .treatise-content {
     margin-left: 280px;
+    margin-right: 420px;
     padding-top: 60px;
     min-height: 100vh;
   }
@@ -623,13 +642,27 @@ const nextModule = moduleNumber < 9 ? modules[moduleNumber + 1] : null;
   }
 
   /* Responsive */
-  @media (max-width: 1024px) {
+  @media (max-width: 1400px) {
+    .treatise-content {
+      margin-right: 380px;
+    }
+  }
+
+  @media (max-width: 1200px) {
     .section-nav {
       width: 240px;
     }
 
     .treatise-content {
       margin-left: 240px;
+      margin-right: 360px;
+    }
+  }
+
+  @media (max-width: 1100px) {
+    /* Guide panel becomes modal on smaller screens */
+    .treatise-content {
+      margin-right: 0;
     }
   }
 
@@ -640,6 +673,7 @@ const nextModule = moduleNumber < 9 ? modules[moduleNumber + 1] : null;
 
     .treatise-content {
       margin-left: 0;
+      margin-right: 0;
     }
 
     .module-header h1 {
