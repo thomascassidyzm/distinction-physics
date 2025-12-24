@@ -37,6 +37,8 @@ export { module4 } from './module-4-learning';
 export { module5 } from './module-5-quantum';
 export { module6 } from './module-6-spacetime';
 export { module7 } from './module-7-thermodynamics';
+export { module8 } from './module-8-predictions';
+export { module9 } from './module-9-synthesis';
 
 // Re-export commonly used types for convenience
 export type {
