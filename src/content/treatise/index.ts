@@ -35,6 +35,7 @@ export { module2 } from './module-2-mathematics';
 export { module3 } from './module-3-consciousness';
 export { module4 } from './module-4-learning';
 export { module5 } from './module-5-quantum';
+export { module6 } from './module-6-spacetime';
 
 // Re-export commonly used types for convenience
 export type {
