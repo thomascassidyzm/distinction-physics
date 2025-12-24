@@ -25,7 +25,7 @@ interface Props {
 const { blocks } = Astro.props;
 
 /**
- * Process inline LaTeX and citations in text content
+ * Process inline LaTeX, citations, and formatting in text content
  */
 function processInlineContent(text: string): string {
   // First, process display math: $$...$$ -> block rendered HTML
@@ -56,6 +56,20 @@ function processInlineContent(text: string): string {
   processed = processed.replace(/\[([A-Z][^[\]]+)\]/g, (_, term) => {
     return `<span class="glossary-term" data-term="${term.toLowerCase().replace(/\s+/g, '-')}">${term}</span>`;
   });
+
+  // Convert double newlines to paragraph breaks, single newlines to <br>
+  // First split by double newlines into paragraphs
+  const paragraphs = processed.split(/\n\n+/);
+  if (paragraphs.length > 1) {
+    processed = paragraphs
+      .map(p => p.trim())
+      .filter(p => p.length > 0)
+      .map(p => `<p class="proof-para">${p.replace(/\n/g, '<br>')}</p>`)
+      .join('');
+  } else {
+    // Single paragraph - just convert single newlines to breaks
+    processed = processed.replace(/\n/g, '<br>');
+  }
 
   return processed;
 }
@@ -439,6 +453,16 @@ function processInlineContent(text: string): string {
   .content-blocks :global(.math-error) {
     color: #cc0000;
     font-size: 0.875rem;
+  }
+
+  /* Proof paragraphs (from newline-separated content) */
+  .content-blocks :global(.proof-para) {
+    margin: 0 0 1rem 0;
+    line-height: 1.8;
+  }
+
+  .content-blocks :global(.proof-para:last-child) {
+    margin-bottom: 0;
   }
 
   /* Examples */

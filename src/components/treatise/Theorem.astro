@@ -175,16 +175,23 @@ const accentColor = statusColors[epistemicStatus] || statusColors.derived;
     color: var(--text-muted, #606080);
   }
 
-  .theorem-block :global([slot="proof"]) :global(p) {
+  .theorem-block :global([slot="proof"]) :global(p),
+  .theorem-block :global([slot="proof"]) :global(.proof-para) {
     font-style: normal;
     font-size: 0.875rem;
-    line-height: 1.7;
+    line-height: 1.8;
     color: var(--text-secondary, #a0a0b8);
-    margin: 0 0 0.75rem 0;
+    margin: 0 0 1rem 0;
   }
 
-  .theorem-block :global([slot="proof"]) :global(p:last-child) {
+  .theorem-block :global([slot="proof"]) :global(p:last-child),
+  .theorem-block :global([slot="proof"]) :global(.proof-para:last-child) {
     margin-bottom: 0;
+  }
+
+  /* Numbered proof steps get special treatment */
+  .theorem-block :global([slot="proof"]) :global(.proof-para) {
+    padding-left: 0.25rem;
   }
 
   /* Display math within proof */
