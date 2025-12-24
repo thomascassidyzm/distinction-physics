@@ -1,0 +1,137 @@
+---
+/**
+ * Unified Site Header
+ * Consistent navigation across all pages
+ */
+
+import { VERSION, BUILD } from '../lib/version';
+
+interface Props {
+  currentPage?: 'essay' | 'explore' | 'treatise' | 'home';
+}
+
+const { currentPage } = Astro.props;
+---
+
+<header class="site-header">
+  <nav class="header-nav">
+    <a href="/" class="site-title">Distinction Physics</a>
+  </nav>
+
+  <div class="header-center">
+    <a href="/essay" class:list={["nav-link", { active: currentPage === 'essay' }]}>Essay</a>
+    <a href="/explore" class:list={["nav-link", { active: currentPage === 'explore' }]}>Explore</a>
+    <a href="/treatise" class:list={["nav-link", { active: currentPage === 'treatise' }]}>Treatise</a>
+  </div>
+
+  <div class="header-meta">
+    <span class="version">{VERSION}</span>
+    <span class="build">build {BUILD}</span>
+  </div>
+</header>
+
+<style>
+  .site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 56px;
+    background: rgba(10, 10, 12, 0.95);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border, #2a2a3a);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2rem;
+    z-index: 100;
+  }
+
+  .header-nav {
+    display: flex;
+    align-items: center;
+  }
+
+  .site-title {
+    font-family: var(--font-display, 'Cormorant Garamond', serif);
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--text-primary, #e8e8f0);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .site-title:hover {
+    color: var(--accent, #4a9eff);
+  }
+
+  .header-center {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    background: rgba(255, 255, 255, 0.03);
+    padding: 0.25rem;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+  }
+
+  .nav-link {
+    font-family: var(--font-body, 'Sora', sans-serif);
+    font-size: 0.8125rem;
+    color: var(--text-muted, #606080);
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    transition: all 0.2s;
+  }
+
+  .nav-link:hover {
+    color: var(--text-secondary, #a0a0b8);
+  }
+
+  .nav-link.active {
+    background: rgba(74, 158, 255, 0.1);
+    color: var(--accent, #4a9eff);
+  }
+
+  .header-meta {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: var(--font-mono, 'JetBrains Mono', monospace);
+    font-size: 0.6875rem;
+  }
+
+  .version, .build {
+    color: rgba(74, 158, 255, 0.5);
+  }
+
+  @media (max-width: 768px) {
+    .site-header {
+      padding: 0 1rem;
+    }
+
+    .header-meta {
+      display: none;
+    }
+
+    .nav-link {
+      padding: 0.5rem 0.75rem;
+      font-size: 0.75rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .site-title {
+      font-size: 1rem;
+    }
+
+    .header-center {
+      gap: 0;
+    }
+
+    .nav-link {
+      padding: 0.375rem 0.5rem;
+    }
+  }
+</style>

@@ -7,11 +7,11 @@ import {
   module0, module1, module2, module3, module4,
   module5, module6, module7, module8, module9
 } from '../../content/treatise';
+import SiteHeader from '../../components/SiteHeader.astro';
 import ContentRenderer from '../../components/treatise/ContentRenderer.astro';
 import SectionHeader from '../../components/treatise/SectionHeader.astro';
 import EpistemicBadge from '../../components/treatise/EpistemicBadge.astro';
 import GuidePanel from '../../components/GuidePanel.astro';
-import { VERSION, BUILD } from '../../lib/version';
 
 export const prerender = true;
 
@@ -59,20 +59,7 @@ const nextModule = moduleNumber < 9 ? modules[moduleNumber + 1] : null;
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
 </head>
 <body>
-  <header class="site-header">
-    <nav class="header-nav">
-      <a href="/" class="site-title">Distinction Physics</a>
-      <div class="header-meta">
-        <span class="version">{VERSION}</span>
-        <span class="build">build {BUILD}</span>
-      </div>
-    </nav>
-    <div class="header-actions">
-      <a href="/essay" class="nav-link">Essay</a>
-      <a href="/explore" class="nav-link">Explore</a>
-      <a href="/treatise" class="nav-link active">Treatise</a>
-    </div>
-  </header>
+  <SiteHeader currentPage="treatise" />
 
   <aside class="section-nav">
     <a href="/treatise" class="nav-back">← All Modules</a>
@@ -253,72 +240,13 @@ const nextModule = moduleNumber < 9 ? modules[moduleNumber + 1] : null;
     min-height: 100vh;
   }
 
-  /* Header */
-  .site-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 60px;
-    background: var(--depth-1);
-    border-bottom: 1px solid var(--border);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 2rem;
-    z-index: 100;
-  }
-
-  .header-nav {
-    display: flex;
-    align-items: center;
-    gap: 2rem;
-  }
-
-  .site-title {
-    font-family: var(--font-display);
-    font-size: 1.25rem;
-    font-weight: 600;
-    color: var(--text-primary);
-    text-decoration: none;
-  }
-
-  .header-meta {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    font-size: 0.6875rem;
-    font-family: var(--font-mono);
-  }
-
-  .version, .build {
-    color: rgba(74, 158, 255, 0.6);
-  }
-
-  .header-actions {
-    display: flex;
-    align-items: center;
-    gap: 1.5rem;
-  }
-
-  .nav-link {
-    font-size: 0.875rem;
-    color: var(--text-secondary);
-    text-decoration: none;
-    transition: color 0.2s;
-  }
-
-  .nav-link:hover, .nav-link.active {
-    color: var(--accent);
-  }
-
   /* Section Navigation */
   .section-nav {
     position: fixed;
     left: 0;
-    top: 60px;
+    top: 56px;
     width: 280px;
-    height: calc(100vh - 60px);
+    height: calc(100vh - 56px);
     background: var(--depth-1);
     border-right: 1px solid var(--border);
     padding: 1.5rem 0;
@@ -452,7 +380,7 @@ const nextModule = moduleNumber < 9 ? modules[moduleNumber + 1] : null;
   .treatise-content {
     margin-left: 280px;
     margin-right: 420px;
-    padding-top: 60px;
+    padding-top: 56px;
     min-height: 100vh;
   }
 

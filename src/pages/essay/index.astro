@@ -1,8 +1,8 @@
 ---
+import SiteHeader from '../../components/SiteHeader.astro';
 import GuidePanel from '../../components/GuidePanel.astro';
 import { sections as sectionContent } from '../../content/essay-1/sections';
 import { sections as sectionMeta, essayMeta, epistemicStatusDescriptions } from '../../content/essay-1/config';
-import { VERSION, BUILD } from '../../lib/version';
 
 function parseMarkdown(text: string): string {
   return text
@@ -37,25 +37,7 @@ function parseMarkdown(text: string): string {
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Sora:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header class="site-header">
-    <nav class="header-nav">
-      <a href="/" class="site-title">Distinction Physics</a>
-      <div class="header-meta">
-        <span class="version">{VERSION}</span>
-        <span class="build">build {BUILD}</span>
-        <span class="status">{essayMeta.status}</span>
-        <span class="date">{essayMeta.date}</span>
-      </div>
-    </nav>
-    <div class="header-actions">
-      <a href="/explore" class="nav-link">Explore Network</a>
-      <div class="read-modes">
-        <button class="mode-btn active" data-mode="essay">Essay</button>
-        <button class="mode-btn" data-mode="overview">Overview</button>
-        <button class="mode-btn" data-mode="academic">Academic</button>
-      </div>
-    </div>
-  </header>
+  <SiteHeader currentPage="essay" />
 
   <aside class="section-nav">
     <div class="nav-title">Sections</div>
@@ -89,6 +71,7 @@ function parseMarkdown(text: string): string {
       {sectionMeta.map((meta, i) => {
         const content = sectionContent.find(s => s.id === meta.id);
         if (!content) return null;
+        const hasKeyPoints = content.keyPoints && content.keyPoints.length > 0;
         return (
           <section id={meta.id} class="essay-section" data-status={meta.epistemicStatus}>
             <div class="section-header">
@@ -98,21 +81,18 @@ function parseMarkdown(text: string): string {
                 {meta.epistemicStatus}
               </span>
             </div>
-            <div class="section-body essay-mode" set:html={parseMarkdown(content.content)} />
-            <div class="section-body overview-mode hidden">
-              <ul class="key-points">
-                {content.keyPoints?.map(point => (
-                  <li>{point}</li>
-                ))}
-              </ul>
-            </div>
-            <div class="section-body academic-mode hidden">
-              <div class="academic-abstract">
-                <strong>Abstract:</strong> This section addresses {meta.title.toLowerCase()}.
-                Epistemic status: <span class={meta.epistemicStatus}>{meta.epistemicStatus}</span>.
+
+            {hasKeyPoints && (
+              <div class="key-insights">
+                <ul class="key-points">
+                  {content.keyPoints.map(point => (
+                    <li><span class="arrow">→</span> {point}</li>
+                  ))}
+                </ul>
               </div>
-              <div class="academic-content" set:html={parseMarkdown(content.content)} />
-            </div>
+            )}
+
+            <div class="section-body" set:html={parseMarkdown(content.content)} />
           </section>
         );
       })}
@@ -153,23 +133,6 @@ function parseMarkdown(text: string): string {
       }, { threshold: 0.3 });
 
       sections.forEach(section => observer.observe(section));
-
-      // Read mode switching
-      const modeBtns = document.querySelectorAll('.mode-btn');
-      modeBtns.forEach(btn => {
-        btn.addEventListener('click', () => {
-          const mode = btn.dataset.mode;
-          modeBtns.forEach(b => b.classList.remove('active'));
-          btn.classList.add('active');
-
-          document.querySelectorAll('.section-body').forEach(body => {
-            body.classList.add('hidden');
-            if (body.classList.contains(`${mode}-mode`)) {
-              body.classList.remove('hidden');
-            }
-          });
-        });
-      });
     });
   </script>
 </body>
@@ -208,99 +171,12 @@ function parseMarkdown(text: string): string {
     min-height: 100vh;
   }
 
-  .site-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 420px;
-    height: 60px;
-    background: var(--depth-1);
-    border-bottom: 1px solid var(--border);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 2rem;
-    z-index: 50;
-  }
-
-  .header-nav {
-    display: flex;
-    align-items: center;
-    gap: 2rem;
-  }
-
-  .site-title {
-    font-family: var(--font-display);
-    font-size: 1.25rem;
-    font-weight: 600;
-    color: var(--text-primary);
-    text-decoration: none;
-  }
-
-  .header-meta {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    font-size: 0.6875rem;
-    font-family: var(--font-mono);
-  }
-
-  .version, .build, .status, .date {
-    color: rgba(74, 158, 255, 0.6);
-  }
-
-  .header-actions {
-    display: flex;
-    align-items: center;
-    gap: 1.5rem;
-  }
-
-  .nav-link {
-    font-size: 0.8125rem;
-    color: var(--text-secondary);
-    text-decoration: none;
-    transition: color 0.2s;
-  }
-
-  .nav-link:hover {
-    color: var(--accent);
-  }
-
-  .read-modes {
-    display: flex;
-    gap: 0.25rem;
-    background: var(--void);
-    padding: 0.25rem;
-    border-radius: 6px;
-  }
-
-  .mode-btn {
-    padding: 0.375rem 0.75rem;
-    background: transparent;
-    border: none;
-    border-radius: 4px;
-    color: var(--text-muted);
-    font-size: 0.75rem;
-    font-family: var(--font-body);
-    cursor: pointer;
-    transition: all 0.2s;
-  }
-
-  .mode-btn.active {
-    background: var(--depth-2);
-    color: var(--text-primary);
-  }
-
-  .mode-btn:hover:not(.active) {
-    color: var(--text-secondary);
-  }
-
   .section-nav {
     position: fixed;
     left: 0;
-    top: 60px;
+    top: 56px;
     width: 260px;
-    height: calc(100vh - 60px);
+    height: calc(100vh - 56px);
     background: var(--depth-1);
     border-right: 1px solid var(--border);
     padding: 1.5rem 0;
@@ -393,7 +269,7 @@ function parseMarkdown(text: string): string {
   .essay-content {
     margin-left: 260px;
     margin-right: 420px;
-    padding: 60px 0 0;
+    padding: 56px 0 0;
     min-height: 100vh;
   }
 
@@ -460,14 +336,44 @@ function parseMarkdown(text: string): string {
   .section-status.contested { background: rgba(255, 165, 0, 0.2); color: var(--contested); }
   .section-status.open { background: rgba(168, 85, 247, 0.2); color: var(--open); }
 
+  /* Key Insights Box */
+  .key-insights {
+    background: rgba(74, 158, 255, 0.03);
+    border: 1px solid rgba(74, 158, 255, 0.1);
+    border-radius: 8px;
+    padding: 1.25rem 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .key-points {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .key-points li {
+    display: flex;
+    gap: 0.75rem;
+    padding: 0.5rem 0;
+    font-size: 0.9375rem;
+    color: var(--text-secondary);
+    line-height: 1.5;
+  }
+
+  .key-points li:not(:last-child) {
+    border-bottom: 1px solid rgba(74, 158, 255, 0.08);
+  }
+
+  .key-points .arrow {
+    color: var(--accent);
+    flex-shrink: 0;
+  }
+
+  /* Section Body */
   .section-body {
     font-size: 1rem;
     line-height: 1.8;
     color: var(--text-secondary);
-  }
-
-  .section-body.hidden {
-    display: none;
   }
 
   .section-body :global(p) {
@@ -499,48 +405,7 @@ function parseMarkdown(text: string): string {
     margin-bottom: 0.5rem;
   }
 
-  .key-points {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-
-  .key-points li {
-    padding: 0.75rem 0;
-    border-bottom: 1px solid var(--border);
-    position: relative;
-    padding-left: 1.5rem;
-  }
-
-  .key-points li::before {
-    content: '→';
-    position: absolute;
-    left: 0;
-    color: var(--accent);
-  }
-
-  .key-points li:last-child {
-    border-bottom: none;
-  }
-
-  .academic-abstract {
-    padding: 1rem;
-    background: var(--depth-2);
-    border-radius: 6px;
-    margin-bottom: 1.5rem;
-    font-size: 0.9375rem;
-  }
-
-  .academic-abstract .established { color: var(--established); }
-  .academic-abstract .derived { color: var(--derived); }
-  .academic-abstract .contested { color: var(--contested); }
-  .academic-abstract .open { color: var(--open); }
-
   @media (max-width: 1100px) {
-    .site-header {
-      right: 0;
-    }
-
     .essay-content {
       margin-right: 0;
     }

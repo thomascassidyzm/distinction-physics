@@ -7,7 +7,7 @@ import {
   module0, module1, module2, module3, module4,
   module5, module6, module7, module8, module9
 } from '../../content/treatise';
-import { VERSION, BUILD } from '../../lib/version';
+import SiteHeader from '../../components/SiteHeader.astro';
 
 const modules = [module0, module1, module2, module3, module4, module5, module6, module7, module8, module9];
 
@@ -32,20 +32,7 @@ const epistemicColors = {
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Sora:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header class="site-header">
-    <nav class="header-nav">
-      <a href="/" class="site-title">Distinction Physics</a>
-      <div class="header-meta">
-        <span class="version">{VERSION}</span>
-        <span class="build">build {BUILD}</span>
-      </div>
-    </nav>
-    <div class="header-actions">
-      <a href="/essay" class="nav-link">Essay</a>
-      <a href="/explore" class="nav-link">Explore</a>
-      <a href="/treatise" class="nav-link active">Treatise</a>
-    </div>
-  </header>
+  <SiteHeader currentPage="treatise" />
 
   <main class="treatise-index">
     <header class="page-header">
@@ -154,63 +141,8 @@ const epistemicColors = {
     min-height: 100vh;
   }
 
-  .site-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 60px;
-    background: var(--depth-1);
-    border-bottom: 1px solid var(--border);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 2rem;
-    z-index: 100;
-  }
-
-  .header-nav {
-    display: flex;
-    align-items: center;
-    gap: 2rem;
-  }
-
-  .site-title {
-    font-family: var(--font-display);
-    font-size: 1.25rem;
-    font-weight: 600;
-    color: var(--text-primary);
-    text-decoration: none;
-  }
-
-  .header-meta {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    font-size: 0.75rem;
-    color: var(--text-muted);
-    font-family: var(--font-mono);
-  }
-
-  .header-actions {
-    display: flex;
-    align-items: center;
-    gap: 1.5rem;
-  }
-
-  .nav-link {
-    font-size: 0.875rem;
-    color: var(--text-secondary);
-    text-decoration: none;
-    transition: color 0.2s;
-  }
-
-  .nav-link:hover, .nav-link.active {
-    color: var(--accent);
-  }
-
   .treatise-index {
-    padding-top: 60px;
+    padding-top: 56px;
     min-height: 100vh;
   }
 
