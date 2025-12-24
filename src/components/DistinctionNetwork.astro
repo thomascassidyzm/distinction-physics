@@ -983,7 +983,7 @@ const links = relationships.map(rel => ({
     margin-bottom: 1rem;
   }
 
-  .tags-label {
+  :global(.tags-label) {
     display: block;
     font-size: 0.625rem;
     text-transform: uppercase;
@@ -992,18 +992,18 @@ const links = relationships.map(rel => ({
     margin-bottom: 0.5rem;
   }
 
-  .tags-list {
+  :global(.tags-list) {
     display: flex;
     flex-wrap: wrap;
     gap: 0.5rem;
   }
 
-  .tag-chip {
+  :global(.tag-chip) {
     font-family: 'JetBrains Mono', monospace;
     font-size: 0.625rem;
-    color: rgba(74, 158, 255, 0.7);
-    background: transparent;
-    border: 1px solid rgba(74, 158, 255, 0.25);
+    color: rgba(74, 158, 255, 0.7) !important;
+    background: transparent !important;
+    border: 1px solid rgba(74, 158, 255, 0.25) !important;
     padding: 0.25rem 0.625rem;
     border-radius: 999px;
   }
@@ -1012,7 +1012,7 @@ const links = relationships.map(rel => ({
     margin-bottom: 1.5rem;
   }
 
-  .connections-label {
+  :global(.connections-label) {
     display: block;
     font-size: 0.625rem;
     text-transform: uppercase;
@@ -1021,28 +1021,28 @@ const links = relationships.map(rel => ({
     margin-bottom: 0.5rem;
   }
 
-  .connections-list {
+  :global(.connections-list) {
     display: flex;
     flex-wrap: wrap;
     gap: 0.375rem;
   }
 
-  .connection-chip {
-    background: transparent;
-    border: 1px solid rgba(74, 158, 255, 0.2);
+  :global(.connection-chip) {
+    background: transparent !important;
+    border: 1px solid rgba(74, 158, 255, 0.2) !important;
     border-radius: 999px;
     padding: 0.375rem 0.875rem;
     font-size: 0.75rem;
-    color: rgba(74, 158, 255, 0.6);
+    color: rgba(74, 158, 255, 0.6) !important;
     cursor: pointer;
     transition: all 0.2s;
     white-space: nowrap;
   }
 
-  .connection-chip:hover {
-    background: rgba(74, 158, 255, 0.08);
-    border-color: rgba(74, 158, 255, 0.5);
-    color: #4a9eff;
+  :global(.connection-chip:hover) {
+    background: rgba(74, 158, 255, 0.08) !important;
+    border-color: rgba(74, 158, 255, 0.5) !important;
+    color: #4a9eff !important;
   }
 
   .understand-btn {
