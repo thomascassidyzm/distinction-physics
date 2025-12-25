@@ -190,6 +190,7 @@ const links = relationships.map(rel => ({
     const demoLabelText = demoLabel.querySelector('.demo-label-text');
 
     let currentNodeId = null;
+    let previousNodeId = null;
     let width = container.clientWidth;
     let height = container.clientHeight;
 
@@ -265,9 +266,11 @@ const links = relationships.map(rel => ({
       node.each(function(d) {
         const isUnderstood = understood.has(d.id);
         const isSelected = d.id === currentNodeId;
+        const isPrevious = d.id === previousNodeId;
         const nodeEl = d3.select(this);
 
         nodeEl.classed('understood', isUnderstood);
+        nodeEl.classed('previous', isPrevious);
 
         // Selected node always glows bright yellow
         if (isSelected) {
@@ -281,6 +284,18 @@ const links = relationships.map(rel => ({
             .attr('stroke-width', 3);
           nodeEl.select('.node-inner')
             .attr('fill', '#fbbf24');
+        } else if (isPrevious) {
+          // Previous node - dimmer yellow
+          nodeEl.select('.node-glow')
+            .attr('opacity', 0.5)
+            .attr('stroke', '#fbbf24')
+            .attr('filter', 'url(#glow)');
+          nodeEl.select('.node-core')
+            .attr('fill', 'rgba(251, 191, 36, 0.15)')
+            .attr('stroke', 'rgba(251, 191, 36, 0.6)')
+            .attr('stroke-width', 2);
+          nodeEl.select('.node-inner')
+            .attr('fill', 'rgba(251, 191, 36, 0.6)');
         } else {
           nodeEl.select('.node-glow')
             .attr('opacity', isUnderstood ? 0.6 : 0)
@@ -297,8 +312,19 @@ const links = relationships.map(rel => ({
 
       // Update links
       link.attr('stroke', d => {
-        const sourceUnderstood = understood.has(d.source.id || d.source);
-        const targetUnderstood = understood.has(d.target.id || d.target);
+        const sId = d.source.id || d.source;
+        const tId = d.target.id || d.target;
+
+        // Highlight trail between previous and current
+        const isTrail = previousNodeId && currentNodeId &&
+          ((sId === previousNodeId && tId === currentNodeId) ||
+           (sId === currentNodeId && tId === previousNodeId));
+        if (isTrail) {
+          return '#fbbf24';
+        }
+
+        const sourceUnderstood = understood.has(sId);
+        const targetUnderstood = understood.has(tId);
         if (sourceUnderstood && targetUnderstood) {
           return 'rgba(74, 158, 255, 0.4)';
         } else if (sourceUnderstood || targetUnderstood) {
@@ -306,8 +332,19 @@ const links = relationships.map(rel => ({
         }
         return 'rgba(255,255,255,0.08)';
       }).attr('stroke-width', d => {
-        const sourceUnderstood = understood.has(d.source.id || d.source);
-        const targetUnderstood = understood.has(d.target.id || d.target);
+        const sId = d.source.id || d.source;
+        const tId = d.target.id || d.target;
+
+        // Thicker trail
+        const isTrail = previousNodeId && currentNodeId &&
+          ((sId === previousNodeId && tId === currentNodeId) ||
+           (sId === currentNodeId && tId === previousNodeId));
+        if (isTrail) {
+          return 2.5;
+        }
+
+        const sourceUnderstood = understood.has(sId);
+        const targetUnderstood = understood.has(tId);
         return (sourceUnderstood && targetUnderstood) ? 1.5 : 1;
       });
 
@@ -356,6 +393,12 @@ const links = relationships.map(rel => ({
     })
     .on('click', function(event, d) {
       event.stopPropagation();
+
+      // If clicking directly (not via connection chip), clear trail
+      if (!event.detail || !event.detail.fromConnection) {
+        previousNodeId = null;
+      }
+
       currentNodeId = d.id;
 
       // Populate panel
@@ -425,8 +468,19 @@ const links = relationships.map(rel => ({
               setTimeout(() => {
                 link.classed('path-highlight', false);
                 node.classed('path-target', false);
-                applyUnderstoodState();
-                node.filter(n => n.id === targetNode.id).dispatch('click');
+
+                // Set previous before navigating
+                previousNodeId = sourceId;
+
+                // Dispatch click with custom detail to indicate connection navigation
+                const targetEl = node.filter(n => n.id === targetNode.id).node();
+                if (targetEl) {
+                  const customEvent = new CustomEvent('click', {
+                    bubbles: true,
+                    detail: { fromConnection: true }
+                  });
+                  targetEl.dispatchEvent(customEvent);
+                }
               }, 400);
             }
           });
@@ -454,6 +508,7 @@ const links = relationships.map(rel => ({
       detailPanel.classList.remove('open');
       node.classed('selected', false);
       currentNodeId = null;
+      previousNodeId = null;
       applyUnderstoodState(); // Reset glow states
     });
 
