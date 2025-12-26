@@ -3,7 +3,7 @@ import type { Section } from '../types';
 export const section4_3: Section = {
   id: '4.3',
   title: 'Chunking: Compression for Efficiency',
-  epistemicStatus: 'derived',
+  epistemicStatus: 'interpreted',
   content: [
     {
       type: 'paragraph',

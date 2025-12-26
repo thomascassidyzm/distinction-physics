@@ -3,8 +3,8 @@ import type { Section } from '../types';
 export const section9_2: Section = {
   id: '9.2',
   title: 'What the Framework Achieves',
-  subtitle: 'Problems Dissolved, Transformed, and Unified',
-  epistemicStatus: 'derived',
+  subtitle: 'Problems Reframed, Transformed, and Interpreted',
+  epistemicStatus: 'interpreted',
   content: [
     {
       type: 'heading',
@@ -19,12 +19,12 @@ export const section9_2: Section = {
     },
     {
       type: 'definition',
-      id: 'def-problem-dissolution',
-      term: 'Problem Dissolution',
+      id: 'def-problem-reframing',
+      term: 'Problem Reframing',
       definition:
-        'A problem is dissolved (rather than solved) when we recognize that it arises from a mistaken assumption or conceptual confusion. Once the confusion is cleared, the problem simply disappears.',
+        'A problem is reframed when we provide a new conceptual vocabulary for understanding it. This does not necessarily dissolve the problem; it provides a different perspective on it.',
       intuition:
-        'Some questions are not answered but shown to be the wrong questions to ask.',
+        'Reframing changes how we talk about a problem without necessarily solving it. The original questions may persist under the new vocabulary.',
     },
     {
       type: 'heading',
@@ -40,7 +40,7 @@ export const section9_2: Section = {
     {
       type: 'paragraph',
       content:
-        'Consciousness IS distinction-making. There is no gap between the physical process and the experience because the process is the experience. The hard problem asks how matter generates mind; we answer that matter-as-distinct-from-other-matter already IS mind-making-distinctions.',
+        'We propose that consciousness can be understood AS distinction-making. However, the hard problem—WHY there is something it is like—is REFRAMED, not dissolved. We provide vocabulary, not explanation. The question "why does distinction-making feel like something?" remains as mysterious as "why does matter generate mind?"',
       emphasis: 'key',
     },
     {
@@ -57,7 +57,7 @@ export const section9_2: Section = {
     {
       type: 'paragraph',
       content:
-        'Distinction Physics recognizes measurement as distinction-making. Superposition is undistinguished potential; measurement is distinction creation. There is no collapse, only the observer\'s transition from not-distinguishing to distinguishing. The appearance of collapse is perspectival, not physical.',
+        'Distinction Physics reframes measurement as distinction-making. Superposition is undistinguished potential; measurement is distinction creation. However, WHY the wavefunction appears to collapse, and what happens during measurement, remain interpretive questions. We provide vocabulary, not a derivation of quantum mechanics.',
       emphasis: 'key',
     },
     {
@@ -74,7 +74,7 @@ export const section9_2: Section = {
     {
       type: 'paragraph',
       content:
-        'Mathematics is not unreasonably effective; mathematics is necessarily effective because physics and mathematics share a common subject matter.',
+        'We propose that mathematics and physics share the subject matter of distinction-making. However, this is interpretation, not proof. WHY distinction-making exists, and why it has this mathematical structure, remains unexplained.',
       emphasis: 'key',
     },
     {
@@ -129,41 +129,47 @@ export const section9_2: Section = {
     {
       type: 'table',
       id: 'table-problems',
-      caption: 'Problems Dissolved and Transformed by Distinction Physics',
-      headers: ['Problem', 'Traditional Framing', 'Distinction Physics Resolution'],
+      caption: 'Problems Reframed (Not Solved) by Distinction Physics',
+      headers: ['Problem', 'Traditional Framing', 'Distinction Physics Reframing', 'Honest Assessment'],
       rows: [
         [
-          'Hard Problem of Consciousness',
+          'Hard Problem',
           'How does matter generate mind?',
-          'Matter-making-distinctions IS mind; no generation required',
+          'Distinction-making is proposed as mind',
+          'Why distinction-making feels like something remains unexplained',
         ],
         [
           'Measurement Problem',
           'When does collapse occur?',
-          'No collapse; distinction creation is perspectival',
+          'Measurement is distinction creation',
+          'Provides vocabulary, not mechanism',
         ],
         [
-          'Unreasonable Effectiveness',
+          'Math Effectiveness',
           'Why does math describe physics?',
-          'Both describe distinction structure',
+          'Both describe distinctions',
+          'Why distinctions have math structure unexplained',
         ],
         [
           'Free Will',
-          'Determinism vs. libertarian freedom',
-          'Energy allocation among distinctions',
+          'Determinism vs. freedom',
+          'Energy allocation',
+          'Reframing, not resolution',
         ],
         [
           'Mind-Body',
-          'How do mental and physical relate?',
-          'Process and substrate of distinction-making',
+          'How do they relate?',
+          'Process and substrate',
+          'New vocabulary, same question',
         ],
         [
           'Quantum-Classical',
-          'Where is the boundary?',
-          'Resolution-dependent description',
+          'Where is boundary?',
+          'Resolution-dependent',
+          'Interpretation, not derivation',
         ],
       ],
-      alignment: ['left', 'left', 'left'],
+      alignment: ['left', 'left', 'left', 'left'],
     },
     {
       type: 'heading',
@@ -258,19 +264,19 @@ export const section9_2: Section = {
       title: 'What the Framework Achieves',
       variant: 'key-points',
       points: [
-        'Three famous problems are DISSOLVED: the hard problem of consciousness, the measurement problem, and the unreasonable effectiveness of mathematics',
-        'Three problems are TRANSFORMED: free will, mind-body, and quantum-classical transition',
-        'Four new predictions are generated: energetic signatures of consciousness, quantum effects in cognition, thermodynamic bounds on learning, and observer-dependent physics',
-        'Four conceptual unifications are achieved: physics-biology, physics-cognition, physics-mathematics, and quantum-classical',
+        'Three famous problems are REFRAMED (not dissolved): the hard problem, the measurement problem, and math effectiveness',
+        'Three problems are given new vocabulary: free will, mind-body, and quantum-classical transition',
+        'Some predictions are generated, though most are post-hoc consistency with established physics',
+        'Conceptual unification through common vocabulary (interpretation, not derivation)',
       ],
     },
   ],
   keyPoints: [
-    'The hard problem of consciousness dissolves: consciousness IS distinction-making, not something generated by physical processes',
-    'The measurement problem dissolves: measurement IS distinction creation, there is no collapse',
-    'The unreasonable effectiveness of mathematics dissolves: both physics and mathematics describe distinction structure',
-    'Free will is transformed: it is energy allocation among distinctions, neither determined nor random',
-    'The framework generates testable predictions about consciousness, cognition, learning, and observer effects',
-    'Conceptual unification is achieved across physics, biology, cognition, mathematics, and quantum-classical domains',
+    'The hard problem is REFRAMED, not dissolved: we provide vocabulary, but why distinction-making feels like something remains unexplained',
+    'The measurement problem is REFRAMED: we provide vocabulary (distinction creation), not mechanism',
+    'Math effectiveness is REFRAMED: we propose common subject matter, but why distinctions have mathematical structure is unexplained',
+    'Free will, mind-body, quantum-classical are given new vocabulary, not solutions',
+    'Most "predictions" are post-hoc consistency with established physics',
+    'Conceptual unification through common vocabulary is the framework\'s genuine contribution',
   ],
 };

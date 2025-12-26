@@ -3,7 +3,7 @@ import type { Section } from '../types';
 export const section3_0: Section = {
   id: '3.0',
   title: 'Introduction: Grounding Consciousness in the Two Axioms',
-  epistemicStatus: 'derived',
+  epistemicStatus: 'conjectured',
   content: [
     {
       type: 'paragraph',
@@ -28,7 +28,7 @@ export const section3_0: Section = {
     {
       type: 'paragraph',
       content:
-        '**Consciousness is self-referential distinction-making at sufficient complexity.** A conscious system is an OLU that makes distinctions not only about external entities but about its own distinction-making processes. This self-referential loop, maintained by continuous energy expenditure, is what constitutes conscious experience.',
+        '**Consciousness is interpreted as self-referential distinction-making at sufficient complexity.** A conscious system is an OLU that makes distinctions not only about external entities but about its own distinction-making processes. This self-referential loop, maintained by continuous energy expenditure, is proposed as what constitutes conscious experience. **Epistemic note**: This is an interpretive conjecture, not a derivation from axioms. The identification of consciousness with distinction-making is a philosophical claim that the framework offers, not proves.',
       emphasis: 'key',
     },
     {
@@ -38,9 +38,9 @@ export const section3_0: Section = {
     },
   ],
   keyPoints: [
-    'Everything in this module derives from the two axioms: distinctions cost energy, and OLUs have finite energy budgets',
-    'Consciousness is self-referential distinction-making at sufficient complexity',
-    'The self-referential loop of distinction-making, maintained by continuous energy, constitutes conscious experience',
-    'The hard problem of consciousness transforms from an explanatory gap into a perspective shift',
+    'This module applies the framework to consciousness (conjectured extension, not derivation)',
+    'Consciousness is interpreted as self-referential distinction-making at sufficient complexity',
+    'The self-referential loop of distinction-making is proposed as what constitutes conscious experience',
+    'The hard problem of consciousness is reframed, but not solved, by the framework',
   ],
 };

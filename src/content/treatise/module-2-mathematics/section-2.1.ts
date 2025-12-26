@@ -3,7 +3,7 @@ import type { Section } from '../types';
 export const section2_1: Section = {
   id: '2.1',
   title: 'Mathematics as Stable Distinction Patterns',
-  epistemicStatus: 'derived',
+  epistemicStatus: 'interpreted',
   content: [
     {
       type: 'heading',
@@ -106,7 +106,7 @@ export const section2_1: Section = {
       name: 'Mathematics as Thermodynamic Attractors',
       statement:
         'Mathematical structures are thermodynamic attractors in distinction-space—the most stable configurations of boundary-drawing that any finite-energy observer will converge upon.',
-      epistemicStatus: 'derived',
+      epistemicStatus: 'interpreted',
       dependsOn: ['A1', 'A2', 'thm-effective-discreteness'],
     },
     {

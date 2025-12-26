@@ -4,7 +4,7 @@ export const section4_10: Section = {
   id: '4.10',
   title: 'Implications for Educational Practice',
   subtitle: 'Applying Thermodynamic Principles to Teaching and Learning',
-  epistemicStatus: 'derived',
+  epistemicStatus: 'interpreted',
   content: [
     {
       type: 'paragraph',

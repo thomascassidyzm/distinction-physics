@@ -3,7 +3,7 @@ import type { Section } from '../types';
 export const section4_1: Section = {
   id: '4.1',
   title: 'Learning as Distinction Refinement',
-  epistemicStatus: 'derived',
+  epistemicStatus: 'interpreted',
   content: [
     {
       type: 'paragraph',

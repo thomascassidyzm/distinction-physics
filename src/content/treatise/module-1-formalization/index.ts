@@ -18,7 +18,7 @@ export const module1: Module = {
   id: 'formalization',
   title: 'Formalization of Distinction Physics',
   subtitle: 'From Philosophy to Mathematics',
-  epistemicStatus: 'derived',
+  epistemicStatus: 'interpreted',
   sections: [
     section1_0,
     section1_1,

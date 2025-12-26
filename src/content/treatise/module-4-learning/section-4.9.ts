@@ -4,7 +4,7 @@ export const section4_9: Section = {
   id: '4.9',
   title: 'Consistency Demonstrations and Empirical Validation',
   subtitle: 'Where the Framework Aligns with Known Results',
-  epistemicStatus: 'derived',
+  epistemicStatus: 'consistent',
   content: [
     {
       type: 'paragraph',

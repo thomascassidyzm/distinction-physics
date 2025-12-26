@@ -3,7 +3,7 @@ import type { Section } from '../types';
 export const section5_7: Section = {
   id: '5.7',
   title: 'Entanglement as Shared Distinction Structure',
-  epistemicStatus: 'derived',
+  epistemicStatus: 'interpreted',
   content: [
     {
       type: 'paragraph',

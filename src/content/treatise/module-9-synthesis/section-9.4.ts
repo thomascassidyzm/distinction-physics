@@ -4,7 +4,7 @@ export const section9_4: Section = {
   id: '9.4',
   title: 'Philosophical Implications',
   subtitle: 'Ontology, Epistemology, and the Observer\'s Role',
-  epistemicStatus: 'derived',
+  epistemicStatus: 'interpreted',
   content: [
     {
       type: 'heading',

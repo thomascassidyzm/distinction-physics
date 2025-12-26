@@ -3,7 +3,7 @@ import type { Section } from '../types';
 export const section5_8: Section = {
   id: '5.8',
   title: 'Classical Emergence Through Resolution Economics',
-  epistemicStatus: 'derived',
+  epistemicStatus: 'interpreted',
   content: [
     {
       type: 'paragraph',

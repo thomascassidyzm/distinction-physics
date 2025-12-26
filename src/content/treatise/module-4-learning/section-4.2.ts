@@ -3,7 +3,7 @@ import type { Section } from '../types';
 export const section4_2: Section = {
   id: '4.2',
   title: 'The Same/Different Duality: Foundation of All Learning',
-  epistemicStatus: 'derived',
+  epistemicStatus: 'interpreted',
   content: [
     {
       type: 'paragraph',
@@ -88,7 +88,7 @@ export const section4_2: Section = {
       name: 'Energy Asymmetry of Same/Different Processing',
       statement:
         'Difference processing is typically more energy-intensive than same processing. Detecting difference requires actively comparing inputs to stored patterns and registering mismatches. Detecting sameness often relies on pattern completion—a lower-energy process where partial matches activate existing structures.',
-      epistemicStatus: 'derived',
+      epistemicStatus: 'interpreted',
       dependsOn: ['A1', 'def-difference-processing', 'def-same-processing'],
     },
     {

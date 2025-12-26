@@ -4,7 +4,7 @@ export const section0_1: Section = {
   id: '0.1',
   title: 'Beyond Subject and Object: The Primordial Act of Boundary-Drawing',
   subtitle: 'Defining the Observer-Like-Us (OLU)',
-  epistemicStatus: 'derived',
+  epistemicStatus: 'interpreted',
   content: [
     {
       type: 'heading',
@@ -171,6 +171,22 @@ export const section0_1: Section = {
         'Our framework makes claims about **reality-as-accessible-to-systems-capable-of-differential-response**. Since this includes nearly all far-from-equilibrium physical systems, our scope is not narrow but encompasses the vast majority of physics and all of experience.',
       emphasis: 'conclusion',
     },
+    {
+      type: 'heading',
+      level: 2,
+      content: 'The OLU Concept: Interpretive Vocabulary',
+      id: 'olu-interpretive',
+    },
+    {
+      type: 'paragraph',
+      content:
+        '**Important clarification:** The OLU concept is not a new physical entity or force. It is interpretive vocabulary—a lens for understanding systems that already exist and are already described by physics. A thermometer is described by thermodynamics; we are not replacing that description. We are providing additional vocabulary for understanding what the thermometer does: it makes distinctions about temperature.',
+    },
+    {
+      type: 'paragraph',
+      content:
+        'The framework is complementary to existing physics, not a replacement. Physics tells us HOW systems behave (equations, constants, mechanisms). The OLU framework provides vocabulary for understanding WHAT systems are doing at a more abstract level (making distinctions, investing energy, maintaining boundaries). Both descriptions are valid and useful.',
+    },
   ],
   keyPoints: [
     'An OLU is any system that responds differentially to inputs in a way that changes its state',
@@ -178,5 +194,6 @@ export const section0_1: Section = {
     'OLUs exist on a spectrum from minimal (thermometers) to self-referential (conscious minds)',
     'The definition is maximally general, operationally precise, and dissolves anthropocentrism',
     'At thermodynamic equilibrium, no OLUs can exist because no distinctions can be made',
+    'The OLU concept is interpretive vocabulary complementary to physics, not a replacement for it',
   ],
 };

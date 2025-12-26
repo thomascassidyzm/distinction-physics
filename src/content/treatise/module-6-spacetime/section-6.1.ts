@@ -3,7 +3,7 @@ import type { Section } from '../types';
 export const section6_1: Section = {
   id: '6.1',
   title: 'Spacetime as Distinction-Pattern, Not Container',
-  epistemicStatus: 'derived',
+  epistemicStatus: 'interpreted',
   content: [
     {
       type: 'heading',
@@ -74,8 +74,8 @@ export const section6_1: Section = {
         },
       ],
       conclusion:
-        'Spacetime-as-accessible-to-OLUs must have a relational, distinction-based structure.',
-      epistemicStatus: 'derived',
+        'Spacetime-as-accessible-to-OLUs is interpreted as having a relational, distinction-based structure. Note: The axioms motivate this perspective but the specific geometric properties of spacetime are imported from physics, not derived.',
+      epistemicStatus: 'interpreted',
     },
     {
       type: 'note',

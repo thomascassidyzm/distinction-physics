@@ -4,7 +4,7 @@ export const section5_12: Section = {
   id: '5.12',
   title: 'Empirical Tests and Predictions',
   subtitle: 'Distinguishing Consistency Demonstrations from Novel Predictions',
-  epistemicStatus: 'derived',
+  epistemicStatus: 'conjectured',  // Novel predictions are speculative extensions
   content: [
     {
       type: 'paragraph',

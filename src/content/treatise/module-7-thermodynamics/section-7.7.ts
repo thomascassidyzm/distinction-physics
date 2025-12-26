@@ -3,7 +3,7 @@ import type { Section } from '../types';
 export const section7_7: Section = {
   id: '7.7',
   title: 'Heat Death: The State Without Observers',
-  epistemicStatus: 'derived',
+  epistemicStatus: 'interpreted',
   content: [
     {
       type: 'paragraph',
@@ -74,7 +74,7 @@ export const section7_7: Section = {
       name: 'Heat Death and Accessible Reality',
       statement:
         'Heat death would be the end of accessible reality itself--not because the universe would cease to exist "in itself" (we remain agnostic about reality-in-itself), but because no observer could exist to access it.',
-      epistemicStatus: 'derived',
+      epistemicStatus: 'interpreted',
       dependsOn: ['def-olu', 'A1', 'A2'],
     },
     {

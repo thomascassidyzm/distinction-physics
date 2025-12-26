@@ -3,8 +3,8 @@ import type { Section } from '../types';
 export const section9_6: Section = {
   id: '9.6',
   title: 'The Bold Claim',
-  subtitle: 'A Unified Foundation for Physics, Mathematics, and Consciousness',
-  epistemicStatus: 'derived',
+  subtitle: 'An Interpretive Vocabulary for Physics, Mathematics, and Consciousness',
+  epistemicStatus: 'interpreted',
   content: [
     {
       type: 'heading',
@@ -26,7 +26,7 @@ export const section9_6: Section = {
     {
       type: 'paragraph',
       content:
-        'From these axioms, we claim to derive:',
+        'From these axioms, we claim to INTERPRET (while importing substantial physics from established theory):',
     },
     {
       type: 'list',
@@ -61,7 +61,7 @@ export const section9_6: Section = {
     {
       type: 'paragraph',
       content:
-        'We claim that this derivation **dissolves** several longstanding problems:',
+        'We claim that this interpretation **reframes** several longstanding problems (providing vocabulary, not solutions):',
     },
     {
       type: 'list',
@@ -81,7 +81,7 @@ export const section9_6: Section = {
     {
       type: 'paragraph',
       content:
-        'We claim that this derivation **transforms** several other problems:',
+        'We claim that this interpretation **provides new vocabulary for** several other problems:',
     },
     {
       type: 'list',
@@ -101,7 +101,7 @@ export const section9_6: Section = {
     {
       type: 'paragraph',
       content:
-        'We claim that this derivation **unifies** traditionally separate domains:',
+        'We claim that this interpretation **provides common vocabulary for** traditionally separate domains:',
     },
     {
       type: 'list',
@@ -124,7 +124,7 @@ export const section9_6: Section = {
     {
       type: 'paragraph',
       content:
-        'We claim these are not separate achievements but facets of one achievement: the recognition that distinction-making under energy constraints is the foundation from which all else follows.',
+        'We claim these provide interpretive unification: distinction-making vocabulary offers a common lens. However, this is conceptual unification through shared vocabulary, not derivation from first principles. Substantial physics is imported.',
       emphasis: 'key',
     },
     {
@@ -209,12 +209,12 @@ export const section9_6: Section = {
     },
   ],
   keyPoints: [
-    'Distinction Physics claims to derive mathematics, consciousness, quantum mechanics, spacetime, thermodynamics, and biology from two axioms',
-    'The framework claims to dissolve the hard problem of consciousness, the measurement problem, and the unreasonable effectiveness of mathematics',
-    'Problems of free will, mind-body, and quantum-classical transition are transformed rather than eliminated',
-    'Physics, mathematics, and consciousness become aspects of one subject: distinction-making under energy constraints',
-    'This matters for physics (offers unification), philosophy (dissolves ancient problems), cognitive science (grounds mind in physics), and self-understanding',
-    'The framework is a proposal, not a proof---skepticism is warranted but the perspective has value',
-    'The invitation: consider whether distinction-making is the foundation from which all else follows',
+    'Distinction Physics claims to INTERPRET (not derive) physics through distinction vocabulary, while importing substantial established physics',
+    'The framework REFRAMES (not dissolves) problems: provides vocabulary, not explanations of why consciousness feels like something',
+    'Free will, mind-body, quantum-classical are given new vocabulary, not solutions',
+    'The framework provides conceptual unification through shared vocabulary, not derivation from first principles',
+    'Landauer is imported (grounds A1), statistical mechanics is imported (Second Law), quantum formalism is imported',
+    'The framework is a proposal---its value is conceptual coherence and interpretive vocabulary, not predictive novelty',
+    'The invitation: consider whether distinction-making vocabulary provides useful unification',
   ],
 };

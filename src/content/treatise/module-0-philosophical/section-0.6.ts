@@ -3,7 +3,7 @@ import type { Section } from '../types';
 export const section0_6: Section = {
   id: '0.6',
   title: 'Knowledge as Boundary Refinement',
-  epistemicStatus: 'derived',
+  epistemicStatus: 'interpreted',
   content: [
     {
       type: 'paragraph',

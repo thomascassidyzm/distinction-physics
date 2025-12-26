@@ -2,8 +2,8 @@ import type { Section } from '../types';
 
 export const section7_9: Section = {
   id: '7.9',
-  title: "Maxwell's Demon Resolved",
-  epistemicStatus: 'derived',
+  title: "Maxwell's Demon Interpreted",
+  epistemicStatus: 'interpreted',
   content: [
     {
       type: 'paragraph',
@@ -76,11 +76,11 @@ export const section7_9: Section = {
     {
       type: 'theorem',
       id: 'thm-maxwell-demon-resolution',
-      label: 'theorem',
-      name: "Maxwell's Demon Resolution",
+      label: 'proposition',
+      name: "Maxwell's Demon Interpretation",
       statement:
-        'The Second Law holds because THE DEMON IS A DISTINCTION-MAKING SYSTEM SUBJECT TO THE SAME ENERGY CONSTRAINTS AS EVERYTHING ELSE.',
-      epistemicStatus: 'derived',
+        'The framework interprets why the Second Law holds for the demon: the demon is a distinction-making system subject to energy constraints. However, this resolution was historically achieved by Landauer (1961) and Bennett (1982); we provide interpretation, not novel derivation.',
+      epistemicStatus: 'interpreted',
       dependsOn: ['A1', 'A2', 'thm-landauer-principle'],
     },
     {

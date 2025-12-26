@@ -3,12 +3,12 @@ import type { Section } from '../types';
 export const section3_2: Section = {
   id: '3.2',
   title: 'The Energy Budget of Consciousness',
-  epistemicStatus: 'derived',
+  epistemicStatus: 'imported',
   content: [
     {
       type: 'paragraph',
       content:
-        'From our two axioms, we can derive specific constraints on conscious systems. This section develops the thermodynamic requirements for consciousness and shows that the figures we observe in biological brains are not arbitrary but reflect these fundamental constraints.',
+        'This section **imports** empirical data from neuroscience to characterize the energy budget of consciousness. The figures presented (10^7 neurons, 8W power, etc.) are drawn from neuroscience research, not derived from our axioms. Our framework provides interpretive vocabulary for understanding these empirical findings.',
     },
     {
       type: 'heading',
@@ -89,12 +89,13 @@ export const section3_2: Section = {
     {
       type: 'definition',
       id: 'def-n-conscious',
-      term: 'Consciousness Complexity Threshold',
+      term: 'Consciousness Complexity Threshold (Empirical Estimate)',
       symbol: 'N_{\\text{conscious}}',
       definition:
-        '$N_{\\text{conscious}} \\approx 10^7$ simultaneously maintained distinction-states as a working estimate for the minimum complexity required for consciousness.',
+        '$N_{\\text{conscious}} \\approx 10^7$ simultaneously maintained distinction-states as a working estimate for the minimum complexity required for consciousness. **Epistemic note**: This figure is imported from neuroscience, not derived from our axioms. It is a post-hoc interpretation of empirical data, not a prediction.',
       intuition:
         'This represents the number of integrated distinctions that must be maintained simultaneously for conscious experience to emerge.',
+      epistemicStatus: 'imported',
     },
     {
       type: 'heading',
@@ -163,10 +164,10 @@ export const section3_2: Section = {
     },
   ],
   keyPoints: [
-    'Consciousness requires maintaining the self/not-self boundary, perception, self-reference, coherence, and temporal continuity',
-    'The Landauer limit sets the theoretical minimum at ~3 x 10^-21 joules per distinction at body temperature',
-    'Consciousness requires approximately 10^7 simultaneously maintained distinction-states',
-    'Conscious processing in humans costs approximately 8W—40% of the brain\'s total energy budget',
-    'This energy cost explains limited capacity, attention as allocation, fatigue, metabolic vulnerability, and evolutionary expense',
+    'This section imports empirical data from neuroscience (not derived from axioms)',
+    'The Landauer limit (imported from thermodynamics) sets the theoretical minimum at ~3 x 10^-21 joules per distinction',
+    'The 10^7 threshold is an empirical estimate from neuroscience, not a prediction of the framework',
+    'The 8W figure and other quantities are post-hoc interpretations of neuroscience data',
+    'The framework provides interpretive vocabulary for understanding these empirical findings',
   ],
 };

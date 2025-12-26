@@ -3,7 +3,7 @@ import type { Section } from '../types';
 export const section4_5: Section = {
   id: '4.5',
   title: 'Forgetting: Boundary Decay and Energy Economics',
-  epistemicStatus: 'derived',
+  epistemicStatus: 'interpreted',
   content: [
     {
       type: 'paragraph',
@@ -127,7 +127,7 @@ export const section4_5: Section = {
       name: 'Necessity of Forgetting',
       statement:
         'For any finite-energy observer, forgetting is not merely inevitable but adaptive. The capacity for new distinction-making requires releasing maintenance energy from old distinctions. Perfect memory would preclude new learning.',
-      epistemicStatus: 'derived',
+      epistemicStatus: 'interpreted',
       dependsOn: ['A1', 'A2'],
     },
     {

@@ -2,8 +2,8 @@ import type { Section } from '../types';
 
 export const section7_4: Section = {
   id: '7.4',
-  title: "Landauer's Principle: A Prediction Confirmed",
-  epistemicStatus: 'established',
+  title: "Landauer's Principle: A Foundational Import",
+  epistemicStatus: 'imported',
   content: [
     {
       type: 'paragraph',
@@ -13,7 +13,7 @@ export const section7_4: Section = {
     {
       type: 'paragraph',
       content:
-        'Our framework PREDICTS this limit from first principles.',
+        'Our framework IMPORTS this limit as the grounding for Axiom 1. Landauer (1961) predates the framework by decades; we adopt his principle, not derive it.',
       emphasis: 'key',
     },
     {
@@ -24,7 +24,7 @@ export const section7_4: Section = {
     {
       type: 'derivation',
       id: 'deriv-landauer',
-      name: "Derivation of Landauer's Limit",
+      name: "Landauer's Limit as Framework Foundation",
       from: ['A1', 'A2', 'thm-second-law'],
       steps: [
         {
@@ -40,17 +40,17 @@ export const section7_4: Section = {
         {
           number: 3,
           statement: 'Collapsing a distinction is a physical process',
-          justification: 'Axiom 1: Distinctions have physical reality requiring energy. Their removal is equally physical.',
+          justification: 'Axiom 1 states this, but Axiom 1 itself imports Landauer.',
         },
         {
           number: 4,
           statement: 'This process must increase entropy elsewhere',
-          justification: 'Second Law (derived above): Total entropy cannot decrease in a closed system.',
+          justification: 'Second Law (which imports statistical mechanics).',
         },
         {
           number: 5,
           statement: 'The minimum entropy increase is $k \\ln(2)$',
-          justification: 'For reducing two equiprobable states to one: $\\Delta S = k \\ln(2)$.',
+          justification: '[IMPORTED from thermodynamics]: For reducing two equiprobable states to one: $\\Delta S = k \\ln(2)$.',
           notation: '\\Delta S = k \\ln(2)',
         },
         {
@@ -61,13 +61,13 @@ export const section7_4: Section = {
         },
       ],
       conclusion:
-        "Landauer's limit follows necessarily from the physical reality of distinctions and the Second Law.",
-      epistemicStatus: 'derived',
+        "Landauer's limit is IMPORTED as the grounding for Axiom 1, not derived from it. The direction of explanation is: Landauer's principle (from thermodynamics) grounds Axiom 1, not vice versa.",
+      epistemicStatus: 'imported',
     },
     {
       type: 'heading',
       level: 3,
-      content: 'The Prediction',
+      content: 'Epistemic Honesty',
     },
     {
       type: 'paragraph',
@@ -100,10 +100,10 @@ export const section7_4: Section = {
       type: 'theorem',
       id: 'thm-landauer-confirmation',
       label: 'claim',
-      name: 'Experimental Validation',
+      name: 'Foundational Consistency',
       statement:
-        'This confirmation validates a core prediction of our framework: distinctions have physical reality with measurable energy costs.',
-      epistemicStatus: 'established',
+        'Experimental confirmation of Landauer\'s limit validates the physical principle that grounds Axiom 1. This is a consistency check, not a prediction: we import Landauer; these experiments confirm what we imported.',
+      epistemicStatus: 'imported',
       dependsOn: ['A1'],
     },
     {
@@ -143,10 +143,10 @@ export const section7_4: Section = {
   ],
   keyPoints: [
     "Landauer's principle: erasing one bit requires at least $kT \\ln(2)$ energy",
-    'Our framework PREDICTS this limit from first principles before knowing it empirically',
+    'Our framework IMPORTS this limit as the grounding for Axiom 1; Landauer (1961) predates the framework',
     'A bit is a distinction; erasing it is a physical process with thermodynamic cost',
-    'Berut et al. (2012) experimentally confirmed the limit to high precision',
-    'This validates our core claim: distinctions have physical reality with measurable energy costs',
+    'Berut et al. (2012) experimentally confirmed the limit - this validates what we imported',
+    'This is a consistency check, not a prediction: the framework is grounded in Landauer, not vice versa',
     'Implications extend to computation, Maxwell\'s demon, quantum computing, and black hole physics',
   ],
 };

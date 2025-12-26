@@ -3,7 +3,7 @@ import type { Section } from '../types';
 export const section5_10: Section = {
   id: '5.10',
   title: 'Reframing Quantum Interpretations',
-  epistemicStatus: 'derived',
+  epistemicStatus: 'interpreted',
   content: [
     {
       type: 'paragraph',

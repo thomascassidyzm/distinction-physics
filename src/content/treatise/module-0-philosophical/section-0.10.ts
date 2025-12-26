@@ -3,7 +3,7 @@ import type { Section } from '../types';
 export const section0_10: Section = {
   id: '0.10',
   title: 'Conclusion: A Framework for Reality-as-Accessible',
-  epistemicStatus: 'derived',
+  epistemicStatus: 'interpreted',
   content: [
     {
       type: 'paragraph',
@@ -75,11 +75,11 @@ export const section0_10: Section = {
     {
       type: 'heading',
       level: 3,
-      content: 'The Revolutionary Claim',
+      content: 'The Framework Claim',
     },
     {
       type: 'paragraph',
-      content: "**From distinction-primacy alone, we can derive the fundamental structure of physical reality: effective discreteness, quantization, thermodynamic irreversibility, and observer-dependence. These are not mysteries about nature but necessary consequences of finite-energy observation.**",
+      content: "**From distinction-primacy and the axiom that distinctions cost energy, we can [DERIVE] effective discreteness and resolution limits. We can [INTERPRET] quantum mechanics, thermodynamics, and consciousness through distinction-vocabulary. We [IMPORT] Landauer's principle as foundational. The framework complements existing physics—it does not replace it.**",
       emphasis: 'key',
     },
     {
@@ -110,21 +110,21 @@ export const section0_10: Section = {
     {
       type: 'heading',
       level: 4,
-      content: '2. Testable Predictions',
+      content: '2. Consistency with Physics',
     },
     {
       type: 'paragraph',
-      content: "Unlike much philosophy, our framework makes empirical predictions:",
+      content: "The framework is consistent with established physical results:",
     },
     {
       type: 'list',
       style: 'bullet',
       items: [
-        { content: "Energy signatures of distinction-making (confirmed)" },
-        { content: "Resolution-energy scaling (confirmed)" },
-        { content: "Landauer's limit (confirmed 2012)" },
-        { content: "Learning efficiency improvements (testable)" },
-        { content: "Observer-dependent effective discreteness (confirmed)" },
+        { content: "Energy signatures of distinction-making (consistent with observation)" },
+        { content: "Resolution-energy scaling (consistent with observation)" },
+        { content: "Landauer's limit (IMPORTED, confirmed experimentally 2012)" },
+        { content: "Learning efficiency improvements (interpretive prediction, testable)" },
+        { content: "Observer-dependent effective discreteness (consistent with QM)" },
       ],
     },
     {
@@ -230,7 +230,7 @@ export const section0_10: Section = {
     },
     {
       type: 'paragraph',
-      content: "By grounding distinction-making in thermodynamics, we've transformed it from pure philosophy into testable physics. By deriving quantum mechanics and thermodynamics from distinction-primacy, we've shown the framework is not speculative metaphysics but recovers known science from more fundamental principles.",
+      content: "By grounding distinction-making in thermodynamics, we've connected philosophy to physics. By showing consistency with quantum mechanics and thermodynamics, and by interpreting them through distinction-vocabulary, we've provided a unifying lens for understanding physics, not a replacement for it.",
     },
     {
       type: 'paragraph',
@@ -248,12 +248,12 @@ export const section0_10: Section = {
     },
   ],
   keyPoints: [
-    "Distinction-making is ontologically primitive for observers-like-us",
-    "From two axioms (distinctions cost energy, observers have finite budgets), we derive effective discreteness, finitude, dynamism, and relationality",
-    "These principles recover quantum mechanics, thermodynamics, and information theory from pure ontology",
-    "The framework unifies epistemology, metaphysics, philosophy of mind, ethics, and philosophy of science",
-    "Unlike much philosophy, this framework makes testable empirical predictions",
-    "Distinctions are primitive, they cost energy, observers have finite budgets—from these facts, the structure of accessible reality follows with mathematical necessity",
-    "All domains of inquiry emerge from the same source: boundary-drawing under resource constraints",
+    "Distinction-making is ontologically primitive for observers-like-us [TRANSCENDENTAL ARGUMENT]",
+    "From two axioms, we [DERIVE] effective discreteness, finitude, dynamism, and relationality",
+    "We [INTERPRET] quantum mechanics and thermodynamics through distinction-vocabulary—we do not derive them independently",
+    "We [IMPORT] Landauer's principle as foundational—this is acknowledged, not hidden",
+    "The framework complements existing physics, providing interpretive vocabulary rather than replacement equations",
+    "The key contribution domain is learning: understanding learning as anti-entropic distinction pattern building",
+    "All domains can be understood through the common lens of boundary-drawing under resource constraints",
   ],
 };

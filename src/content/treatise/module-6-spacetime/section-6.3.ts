@@ -3,7 +3,7 @@ import type { Section } from '../types';
 export const section6_3: Section = {
   id: '6.3',
   title: 'Relativity as Observer-Dependence of Distinction-Patterns',
-  epistemicStatus: 'contested',
+  epistemicStatus: 'imported',  // Special relativity is imported, then interpreted
   content: [
     {
       type: 'paragraph',
@@ -40,7 +40,7 @@ export const section6_3: Section = {
         'The maximum speed at which the possibility of distinguishing an event can propagate to other observers. This speed must be finite and invariant for the notion of "event" to be coherent.',
       intuition:
         'If distinguishability could propagate infinitely fast, all events would be simultaneously distinguishable by all observers, and the structure of "before" and "after" would collapse.',
-      epistemicStatus: 'contested',
+      epistemicStatus: 'imported',
     },
     {
       type: 'heading',
@@ -193,8 +193,8 @@ export const section6_3: Section = {
       label: 'claim',
       name: 'Lorentz Invariance as Boundary Consistency',
       statement:
-        'The interpretation is well-motivated because the framework naturally accommodates relativity, but we do not claim to have *derived* special relativity from pure first principles. Rather, we show how it fits coherently within the distinction framework. The invariance of $c$ reflects the fundamental constraint that distinction-patterns must propagate consistently across all observers.',
-      epistemicStatus: 'contested',
+        'The interpretation is well-motivated because the framework naturally accommodates relativity, but we do not claim to have *derived* special relativity from pure first principles. Rather, we show how it fits coherently within the distinction framework. The invariance of $c$ and the Lorentz transformations are imported from special relativity; we interpret them as consistency constraints on boundary propagation.',
+      epistemicStatus: 'imported',
       dependsOn: ['A1', 'A2'],
     },
     {

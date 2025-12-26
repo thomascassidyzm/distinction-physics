@@ -31,18 +31,18 @@ export const section8_2: Section = {
       name: 'Landauer\'s Principle',
       statement:
         'Erasing one bit of information requires minimum energy dissipation of $kT \\ln(2)$, where $k$ is Boltzmann\'s constant and $T$ is temperature.',
-      epistemicStatus: 'established',
+      epistemicStatus: 'imported',
       dependsOn: ['A1', 'A2'],
     },
     {
       type: 'paragraph',
       content:
-        '**Derivation Type**: Type 1 (Derivation)',
+        '**Epistemic Status**: IMPORTED (grounds Axiom 1)',
     },
     {
       type: 'paragraph',
       content:
-        '**Framework Account**: A bit is a distinction between two states. Erasing a bit means collapsing this distinction. From Axiom 1, collapsing a distinction is a physical process requiring energy. The Second Law (derived in Module 7) requires entropy increase, setting the minimum at $kT \\ln(2)$.',
+        '**Framework Account**: Landauer\'s principle (1961) predates the framework. Axiom 1 imports Landauer by stipulating the minimum kT ln 2 cost. We do not derive Landauer; Landauer grounds our axiom. The direction of explanation is: Landauer -> Axiom 1, not vice versa.',
     },
     {
       type: 'paragraph',
@@ -62,7 +62,7 @@ export const section8_2: Section = {
       type: 'note',
       variant: 'technical',
       content:
-        'This result was known before our framework. However, it directly validates the core claim that distinctions have physical reality with measurable energy costs. The framework provides ontological grounding for what was previously a thermodynamic result.',
+        'EPISTEMIC HONESTY: Landauer\'s principle was established in 1961, decades before this framework. We import it as the grounding for Axiom 1; we do not derive it. Claiming Landauer as a "confirmed prediction" would be historically inaccurate. The framework is consistent with Landauer because it was designed to be.',
     },
     {
       type: 'heading',
@@ -108,7 +108,7 @@ export const section8_2: Section = {
       type: 'note',
       variant: 'technical',
       content:
-        'Quantum mechanics predates our framework by a century. The framework\'s contribution is providing a derivation of what standard physics takes as foundational. Quantization is not mysterious but thermodynamically necessary for any finite-energy observer.',
+        'EPISTEMIC HONESTY: Quantum mechanics predates our framework by a century. We provide an INTERPRETATION of quantization through distinction-making vocabulary, not a novel derivation. The framework is consistent with quantization; it did not predict it.',
     },
     {
       type: 'heading',
@@ -362,19 +362,19 @@ export const section8_2: Section = {
       label: 'claim',
       name: 'Second Law as Distinction Decay',
       statement:
-        'The Second Law of Thermodynamics (entropy increase in closed systems) follows from the axioms: distinctions naturally disperse without energy input.',
-      epistemicStatus: 'derived',
+        'The Second Law of Thermodynamics (entropy increase in closed systems) can be interpreted through the axioms: distinctions naturally disperse without energy input. However, this interpretation imports statistical mechanics.',
+      epistemicStatus: 'interpreted',
       dependsOn: ['A1', 'A2'],
     },
     {
       type: 'paragraph',
       content:
-        '**Derivation Type**: Type 1 (Derivation)',
+        '**Epistemic Status**: INTERPRETED (imports statistical mechanics)',
     },
     {
       type: 'paragraph',
       content:
-        '**Framework Account**: From Module 7: Distinctions require energy to maintain (Axiom 1). Energy is finite (Axiom 2). Statistical mechanics favors configurations with dispersed boundaries (more ways to be high-entropy than low-entropy). Therefore entropy increases unless energy maintains boundaries.',
+        '**Framework Account**: The interpretation requires: (1) Axiom 1 (distinctions cost energy), (2) Axiom 2 (finite budgets), (3) [IMPORTED] Statistical mechanics (equiprobability, typicality arguments). Step 3 is not derived from axioms; it is imported from Boltzmann. The Second Law was established empirically before this framework.',
     },
     {
       type: 'paragraph',
@@ -394,7 +394,7 @@ export const section8_2: Section = {
       type: 'note',
       variant: 'technical',
       content:
-        'The Second Law was established long before our framework. The contribution is deriving the Second Law rather than assuming it, providing an ontological foundation for thermodynamics grounded in the costs of distinction-making.',
+        'EPISTEMIC HONESTY: The Second Law was established long before our framework. We provide an INTERPRETATION through distinction vocabulary, but the "derivation" imports statistical mechanics (Step 3 in Module 7.3). This is post-hoc consistency, not genuine prediction.',
     },
     {
       type: 'heading',
@@ -411,10 +411,10 @@ export const section8_2: Section = {
       type: 'list',
       style: 'numbered',
       items: [
-        { content: '**Unifies** them under common principles (all are manifestations of energy-constrained distinction-making)' },
-        { content: '**Derives** several of them (C1, C2, C4, C5, C6, C8) from the axioms, rather than taking them as unexplained empirical facts' },
-        { content: '**Interprets** others (C3, C7) in ways consistent with the axioms, providing conceptual coherence' },
-        { content: '**Would be falsified** if any of the Type 1 derivations failed experimentally' },
+        { content: '**Unifies** them under common vocabulary (all can be described as manifestations of energy-constrained distinction-making)' },
+        { content: '**Interprets** most of them (C1-C8) through the axioms - though C1 (Landauer) and C8 (Second Law) are imported rather than derived' },
+        { content: '**Provides conceptual coherence** but not predictive novelty for these established phenomena' },
+        { content: '**Is consistent with** these phenomena, which is necessary but not sufficient for validation' },
       ],
     },
     {
@@ -425,11 +425,11 @@ export const section8_2: Section = {
   ],
   keyPoints: [
     'Eight phenomena are consistent with the framework and experimentally confirmed',
-    'Most were known before the framework - these are consistency demonstrations, not predictions',
-    'Type 1 derivations (C1, C2, C4, C5, C6, C8) follow from the axioms necessarily',
-    'Type 2 interpretations (C3, C7) are consistent but not unique to the framework',
-    'The framework\'s value is unification: explaining WHY these disparate phenomena share structure',
-    'Landauer\'s principle directly validates that distinctions have physical energy costs',
-    'The resolution hierarchy confirms energy-constrained access to reality',
+    'ALL were known before the framework - these are consistency demonstrations, not predictions',
+    'C1 (Landauer) is IMPORTED as the grounding for Axiom 1, not derived from it',
+    'C8 (Second Law) interpretation imports statistical mechanics beyond the two axioms',
+    'Other phenomena (C2-C7) are interpreted through the framework vocabulary',
+    'The framework\'s value is conceptual unification, not predictive novelty for established physics',
+    'Honest assessment: post-hoc consistency, not temporal prediction',
   ],
 };

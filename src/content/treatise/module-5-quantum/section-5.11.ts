@@ -4,7 +4,7 @@ export const section5_11: Section = {
   id: '5.11',
   title: 'The Resolution Hierarchy Across Observers',
   subtitle: 'How Different OLUs Access Quantum Reality',
-  epistemicStatus: 'derived',
+  epistemicStatus: 'interpreted',
   content: [
     {
       type: 'paragraph',

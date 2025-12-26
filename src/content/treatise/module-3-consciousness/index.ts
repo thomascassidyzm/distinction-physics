@@ -18,7 +18,7 @@ export const module3: Module = {
   id: 'consciousness',
   title: 'Consciousness as Self-Referential Distinction-Making',
   subtitle: 'The Thermodynamic Foundations of Subjective Experience',
-  epistemicStatus: 'derived',
+  epistemicStatus: 'conjectured',
   sections: [
     section3_0,
     section3_1,

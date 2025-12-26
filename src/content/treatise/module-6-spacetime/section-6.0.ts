@@ -3,7 +3,7 @@ import type { Section } from '../types';
 export const section6_0: Section = {
   id: '6.0',
   title: 'Introduction: From Axioms to Geometry',
-  epistemicStatus: 'derived',
+  epistemicStatus: 'interpreted',
   content: [
     {
       type: 'paragraph',
@@ -39,7 +39,7 @@ export const section6_0: Section = {
       term: 'Spacetime as Distinction-Pattern',
       definition:
         'Space and time are not containers within which events occur. They are distinction-patterns themselves—relational structures that emerge from boundary-drawing under energy constraints. The geometric properties we associate with spacetime (distances, durations, curvature) represent patterns in how distinctions relate to each other and propagate across observer networks.',
-      epistemicStatus: 'derived',
+      epistemicStatus: 'interpreted',
     },
     {
       type: 'paragraph',

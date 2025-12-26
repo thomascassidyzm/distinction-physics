@@ -3,7 +3,7 @@ import type { Section } from '../types';
 export const section7_12: Section = {
   id: '7.12',
   title: 'Fluctuation Theorems and Non-Equilibrium Dynamics',
-  epistemicStatus: 'derived',
+  epistemicStatus: 'interpreted',
   content: [
     {
       type: 'paragraph',
@@ -79,8 +79,8 @@ export const section7_12: Section = {
       label: 'proposition',
       name: 'Statistical Nature of the Second Law',
       statement:
-        'The Second Law of Thermodynamics is statistical, not absolute. However, the statistics are so overwhelmingly one-directional that macroscopic reversals never occur in practice. For $N$ particles, the probability of spontaneous entropy decrease scales as $e^{-N}$, making violations unobservable for any macroscopic system.',
-      epistemicStatus: 'derived',
+        'The Second Law of Thermodynamics is statistical, not absolute. However, the statistics are so overwhelmingly one-directional that macroscopic reversals never occur in practice. For $N$ particles, the probability of spontaneous entropy decrease scales as $e^{-N}$. This understanding comes from statistical mechanics (Boltzmann, Jarzynski, Crooks); the framework provides interpretive context, not novel derivation.',
+      epistemicStatus: 'interpreted',
       dependsOn: ['A1', 'A2'],
     },
     {

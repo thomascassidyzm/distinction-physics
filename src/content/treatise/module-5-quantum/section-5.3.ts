@@ -3,7 +3,7 @@ import type { Section } from '../types';
 export const section5_3: Section = {
   id: '5.3',
   title: 'Superposition as Undistinguished Possibility',
-  epistemicStatus: 'derived',
+  epistemicStatus: 'interpreted',
   content: [
     {
       type: 'paragraph',
@@ -18,7 +18,7 @@ export const section5_3: Section = {
         'Superposition represents possibilities between which no OLU has yet made a distinction - between which no energy has been invested to distinguish.',
       intuition:
         'The particle is not "in two places at once." Rather, the question "which place is the particle in?" has not yet been answered because no observer has paid the energetic cost required to answer it.',
-      epistemicStatus: 'derived',
+      epistemicStatus: 'interpreted',
     },
     {
       type: 'heading',
@@ -126,10 +126,10 @@ export const section5_3: Section = {
       type: 'theorem',
       id: 'thm-wave-particle',
       label: 'claim',
-      name: 'Resolution of Wave-Particle Duality',
+      name: 'Interpretation of Wave-Particle Duality',
       statement:
-        'The particle does not "switch" between being a wave and a particle. Rather: "Wavelike" behavior = undistinguished spatial possibilities; "Particle-like" behavior = distinguished spatial location. Wave and particle are not properties of the thing observed but descriptions of whether spatial distinctions have been made.',
-      epistemicStatus: 'derived',
+        'The particle does not "switch" between being a wave and a particle. Rather: "Wavelike" behavior = undistinguished spatial possibilities; "Particle-like" behavior = distinguished spatial location. Wave and particle are not properties of the thing observed but descriptions of whether spatial distinctions have been made. This is an interpretation of wave-particle duality, not a derivation of why interference occurs.',
+      epistemicStatus: 'interpreted',
       dependsOn: ['A1', 'A2'],
     },
     {

@@ -3,13 +3,13 @@ import type { Section } from '../types';
 export const section9_1: Section = {
   id: '9.1',
   title: 'The Unity of the Framework',
-  subtitle: 'From Two Axioms to One Physics',
-  epistemicStatus: 'derived',
+  subtitle: 'Interpretive Unification Through Distinction Vocabulary',
+  epistemicStatus: 'interpreted',
   content: [
     {
       type: 'paragraph',
       content:
-        'We have traveled far. Beginning with two simple axioms—that all distinctions cost energy, and that observers-like-us have finite energy budgets—we have derived the essential structures of mathematics, consciousness, learning, quantum mechanics, spacetime, and thermodynamics. Now we must step back and see this journey whole.',
+        'We have traveled far. Beginning with two simple axioms—that all distinctions cost energy, and that observers-like-us have finite energy budgets—we have INTERPRETED the essential structures of mathematics, consciousness, learning, quantum mechanics, spacetime, and thermodynamics through distinction vocabulary. However, epistemic honesty requires acknowledging that we import substantial physics from established theory rather than deriving it from axioms alone.',
       emphasis: 'key',
     },
     {
@@ -26,12 +26,12 @@ export const section9_1: Section = {
     {
       type: 'paragraph',
       content:
-        '**Module 0** established that distinction-making is the primitive operation from which all else follows. Mathematics emerged not as a Platonic realm we somehow access, but as the structure of distinction-making itself. The natural numbers count distinctions. Set theory describes collections of distinctions. Logic encodes the relationships between distinguished states.',
+        '**Module 0** proposed that distinction-making vocabulary can interpret mathematical structure. Mathematics can be understood as the formalization of distinction-making. However, this is interpretation, not derivation: we did not derive mathematics from axioms; we provided a lens for understanding it.',
     },
     {
       type: 'paragraph',
       content:
-        '**Module 1** showed that consciousness is not a mysterious addition to physics but a necessary consequence of distinction-making. An entity that makes distinctions IS conscious—not as an epiphenomenon, but as the very process of distinguishing. The hard problem dissolves because we were asking the wrong question. Consciousness is not produced by physical processes; consciousness IS the process of making physical distinctions.',
+        '**Module 1** proposed that consciousness can be interpreted through distinction-making. An entity that makes self-referential distinctions experiences something. The hard problem is REFRAMED, not solved: we provide a conceptual vocabulary, not an explanation of why there is something it is like.',
     },
     {
       type: 'paragraph',
@@ -41,7 +41,7 @@ export const section9_1: Section = {
     {
       type: 'paragraph',
       content:
-        '**Module 3** revealed quantum mechanics as the physics of distinction-making at fundamental scales. Superposition is undistinguished potential. Measurement is distinction creation. The Born rule emerges from the counting of equivalent ways to make a given distinction. Entanglement is shared distinction structure. The measurement problem dissolves: there never was a problem, only a failure to recognize that physics is ABOUT distinction-making.',
+        '**Module 3** interpreted quantum mechanics through distinction vocabulary. Superposition is reframed as undistinguished potential; measurement as distinction creation. The Born rule remains an import, not a derivation. The measurement problem is REFRAMED, not dissolved: we offer an interpretive perspective, not a derivation of quantum mechanics from axioms.',
     },
     {
       type: 'paragraph',
@@ -51,7 +51,7 @@ export const section9_1: Section = {
     {
       type: 'paragraph',
       content:
-        '**Module 5** showed thermodynamics to be the macroscopic manifestation of distinction economics. Entropy measures undistinguished configurations. The second law follows from the fact that energy constraints prevent observers from making all possible distinctions, so systems evolve toward states requiring fewer distinctions to describe. Temperature relates energy to distinction-making capacity.',
+        '**Module 5** interpreted thermodynamics through distinction vocabulary. Entropy is reframed as distinction-decay. However, the Second Law "derivation" imports statistical mechanics (equiprobability, typicality arguments). Landauer\'s principle grounds Axiom 1 rather than following from it.',
     },
     {
       type: 'paragraph',
@@ -72,7 +72,7 @@ export const section9_1: Section = {
     {
       type: 'paragraph',
       content:
-        'This question has only one class of answers. The structures we derive are not arbitrary or contingent; they are NECESSARY given our starting conditions. An observer who makes distinctions under energy constraints MUST experience something like quantum mechanics at small scales, spacetime at large scales, and thermodynamics at statistical scales.',
+        'This question provides a unifying lens. However, epistemic honesty requires acknowledging: the structures we describe are INTERPRETED through our vocabulary, not derived from axioms alone. Substantial physics is imported (statistical mechanics, Landauer, quantum formalism). The framework provides conceptual unification, not derivation from first principles.',
       emphasis: 'key',
     },
     {
@@ -86,8 +86,8 @@ export const section9_1: Section = {
       label: 'claim',
       name: 'Framework Unity',
       statement:
-        'Physics, mathematics, and consciousness are not three things but one thing seen from different perspectives. Physics describes the structure of distinctions. Mathematics provides the language for that structure. Consciousness is the making of distinctions. There is no gap between them because they were never separate.',
-      epistemicStatus: 'derived',
+        'The framework proposes that physics, mathematics, and consciousness can be understood through a common vocabulary of distinction-making. This is conceptual unification, not derivation: we provide an interpretive lens, while importing substantial physics from established theory. The unity is in vocabulary and perspective, not in derivation from first principles.',
+      epistemicStatus: 'interpreted',
       dependsOn: ['A1', 'A2'],
     },
     {
@@ -126,10 +126,10 @@ export const section9_1: Section = {
     },
   ],
   keyPoints: [
-    'All modules share a single explanatory strategy: what structures must emerge for finite observers making costly distinctions?',
-    'The structures derived are NECESSARY given our starting conditions, not arbitrary or contingent',
-    'This is ONE theory, not nine separate claims—modules are facets of a single gem',
-    'Physics, mathematics, and consciousness are one thing seen from different perspectives',
-    'The unity is discovered, not imposed—the derivations refused to stay in separate boxes',
+    'All modules share a single interpretive strategy: understanding structures through distinction-making vocabulary',
+    'The framework provides conceptual unification, but imports substantial physics (stat mech, Landauer, quantum formalism)',
+    'This is a unified INTERPRETATION, not derivation from axioms alone',
+    'Physics, mathematics, and consciousness can be understood through common vocabulary (interpretation, not identity)',
+    'Epistemic honesty: the unity is conceptual, not derivational; we provide vocabulary, not proofs',
   ],
 };

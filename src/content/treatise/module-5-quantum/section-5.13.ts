@@ -2,9 +2,9 @@ import type { Section } from '../types';
 
 export const section5_13: Section = {
   id: '5.13',
-  title: 'Conclusion: Quantum Mechanics Demystified',
+  title: 'Conclusion: Quantum Mechanics Interpreted',
   subtitle: 'The Signature of Finite-Energy Observation',
-  epistemicStatus: 'derived',
+  epistemicStatus: 'interpreted',
   content: [
     {
       type: 'paragraph',
@@ -113,7 +113,7 @@ export const section5_13: Section = {
     {
       type: 'paragraph',
       content:
-        'This module fulfills the promise made in Module 0: that the two axioms about distinction and energy would GENERATE the core principles of quantum mechanics. We have not merely interpreted quantum mechanics through a new lens. We have shown that quantum mechanics is what physics MUST look like for any finite-energy observer.',
+        'This module has shown that the two axioms about distinction and energy provide a conceptually coherent framework for understanding quantum mechanics. We have interpreted quantum mechanics through the lens of resource-constrained distinction-making. The axioms do not logically generate the mathematical structure of quantum mechanics (Hilbert spaces, complex amplitudes, the Born rule), but they provide a natural conceptual home for understanding why quantum mechanics takes the form it does.',
       emphasis: 'key',
     },
     {
@@ -193,8 +193,8 @@ export const section5_13: Section = {
       title: 'Module 5 Key Takeaways',
       variant: 'takeaways',
       points: [
-        'Quantum mechanics is DERIVED from, not interpreted through, the distinction framework',
-        'Two axioms (distinction costs energy + finite budgets) generate quantum principles',
+        'Quantum mechanics is INTERPRETED through, not derived from, the distinction framework',
+        'Two axioms (distinction costs energy + finite budgets) provide conceptual foundation for understanding quantum principles',
         'Superposition = undistinguished possibilities; Uncertainty = resource allocation',
         'Measurement = distinction-making; Entanglement = shared distinction structure',
         'The Born rule is interpreted but not derived (honest about limits)',
@@ -207,11 +207,11 @@ export const section5_13: Section = {
     },
   ],
   keyPoints: [
-    'Quantum mechanics is derived from two axioms: distinction costs energy and observers have finite energy',
-    'Superposition, uncertainty, measurement, and entanglement are all explained as aspects of finite-energy distinction-making',
-    'The Born rule remains interpretive rather than rigorously derived---honest acknowledgment of limits',
-    'Quantum mechanics is the inevitable signature of finite-energy observation, not fundamental strangeness',
-    'The framework fulfills Module 0\'s promise to GENERATE quantum principles from distinction axioms',
+    'Quantum mechanics is interpreted through two axioms: distinction costs energy and observers have finite energy',
+    'Superposition, uncertainty, measurement, and entanglement are reframed as aspects of finite-energy distinction-making',
+    'The Born rule and Hilbert space structure are imported from established physics, not derived',
+    'Quantum mechanics is understood as the signature of finite-energy observation, not fundamental strangeness',
+    'The framework provides a conceptually coherent interpretation of quantum principles, not a derivation',
     'Quantum mechanics connects to spacetime (Module 6), thermodynamics (Module 7), consciousness (Module 3), and learning (Module 4)',
   ],
 };

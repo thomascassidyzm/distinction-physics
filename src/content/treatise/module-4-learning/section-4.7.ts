@@ -3,7 +3,7 @@ import type { Section } from '../types';
 export const section4_7: Section = {
   id: '4.7',
   title: 'Transfer Learning: When Distinction Structures Generalize',
-  epistemicStatus: 'derived',
+  epistemicStatus: 'interpreted',
   content: [
     {
       type: 'paragraph',

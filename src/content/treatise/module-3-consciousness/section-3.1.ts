@@ -3,7 +3,7 @@ import type { Section } from '../types';
 export const section3_1: Section = {
   id: '3.1',
   title: 'The Primordial Distinction: Self and Not-Self',
-  epistemicStatus: 'derived',
+  epistemicStatus: 'conjectured',
   content: [
     {
       type: 'paragraph',

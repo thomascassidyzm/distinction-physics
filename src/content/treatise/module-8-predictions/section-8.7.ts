@@ -3,7 +3,7 @@ import type { Section } from '../types';
 export const section8_7: Section = {
   id: '8.7',
   title: 'Honest Assessment: Predictions vs. Interpretations',
-  epistemicStatus: 'derived',
+  epistemicStatus: 'consistent',
   content: [
     {
       type: 'paragraph',
@@ -31,10 +31,10 @@ export const section8_7: Section = {
       style: 'bullet',
       items: [
         {
-          content: '**Landauer\'s limit** --- erasing distinctions costs minimum $kT \\ln 2$ energy (confirmed)',
+          content: '**Landauer\'s limit** --- IMPORTED as grounding for Axiom 1; framework did not predict this (post-hoc)',
         },
         {
-          content: '**Effective discreteness / quantization** --- no OLU can access continuous quantities (confirmed)',
+          content: '**Effective discreteness / quantization** --- interpretation of established physics, not novel prediction (post-hoc)',
         },
         {
           content: '**Resolution-energy scaling** --- finer distinctions require more energy (confirmed)',
@@ -46,7 +46,7 @@ export const section8_7: Section = {
           content: '**Consciousness requires continuous energy** --- self-referential distinction-making is costly (confirmed)',
         },
         {
-          content: '**Second Law as distinction decay** --- entropy increases without energy input (confirmed)',
+          content: '**Second Law as distinction decay** --- interpretation that imports statistical mechanics (post-hoc)',
         },
         {
           content: '**Forgetting rate correlates with maintenance cost** --- expensive distinctions decay faster (testable)',
@@ -165,8 +165,8 @@ export const section8_7: Section = {
       label: 'claim',
       name: 'The Epistemic Status Hierarchy',
       statement:
-        'Type 1 claims (derivations) can test the axioms. Type 2 claims (interpretations) provide conceptual unification but not tests. Type 3 claims (conjectures) are research directions requiring substantial further development. Conflating these categories would undermine the framework\'s scientific credibility.',
-      epistemicStatus: 'derived',
+        'Most "confirmed predictions" are post-hoc consistency checks with established physics. Only N4 (measurement energy scaling) and similar near-term predictions represent genuinely novel claims. Conflating post-hoc consistency with temporal prediction would undermine the framework\'s scientific credibility.',
+      epistemicStatus: 'consistent',
       dependsOn: ['A1', 'A2'],
     },
     {
@@ -202,10 +202,11 @@ export const section8_7: Section = {
     },
   ],
   keyPoints: [
-    'Type 1 (derivations) follow from axioms and can test them: Landauer, quantization, learning costs, consciousness costs',
+    'Most "Type 1 derivations" are actually post-hoc: Landauer (imported), quantization (interpretation), Second Law (imports stat mech)',
     'Type 2 (interpretations) are consistent but not uniquely derivable: gravity, Born rule, qualia, time\'s arrow',
     'Type 3 (conjectures) are speculative extensions: dark energy, consciousness threshold, Big Bang',
-    'The framework cannot claim to have derived full QM, solved the hard problem, or achieved empirical superiority',
-    'Acknowledging limits maintains scientific credibility; conflating categories would undermine it',
+    'Only N4 (measurement energy) and similar near-term predictions might represent genuine novel claims',
+    'The framework cannot claim to have derived established physics; it provides interpretive vocabulary',
+    'Acknowledging limits maintains scientific credibility; conflating post-hoc with prediction would undermine it',
   ],
 };

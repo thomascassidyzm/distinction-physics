@@ -3,7 +3,7 @@ import type { Section } from '../types';
 export const section7_6: Section = {
   id: '7.6',
   title: 'Temperature and Free Energy Reconceived',
-  epistemicStatus: 'derived',
+  epistemicStatus: 'interpreted',
   content: [
     {
       type: 'heading',

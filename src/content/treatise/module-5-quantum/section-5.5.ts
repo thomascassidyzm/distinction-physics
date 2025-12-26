@@ -3,7 +3,7 @@ import type { Section } from '../types';
 export const section5_5: Section = {
   id: '5.5',
   title: 'Measurement as Energy-Costly Distinction-Making',
-  epistemicStatus: 'derived',
+  epistemicStatus: 'interpreted',
   content: [
     {
       type: 'paragraph',
@@ -164,8 +164,8 @@ export const section5_5: Section = {
       number: '5.2',
       name: 'Energy Cost of Measurement',
       statement:
-        'Every quantum measurement requires a minimum energy expenditure of at least $k_B T \\ln 2$ per binary distinction made. Truly non-disturbing measurement is thermodynamically impossible: to distinguish is to exchange energy.',
-      epistemicStatus: 'derived',
+        'Every quantum measurement requires a minimum energy expenditure of at least $k_B T \\ln 2$ per binary distinction made. Truly non-disturbing measurement is thermodynamically impossible: to distinguish is to exchange energy. Note: The Landauer limit is imported from established physics; we interpret measurement through this lens rather than deriving Landauer from our axioms.',
+      epistemicStatus: 'consistent',
       dependsOn: ['A1', 'landauer-bound'],
     },
     {

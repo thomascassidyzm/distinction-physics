@@ -3,7 +3,7 @@ import type { Section } from '../types';
 export const section5_4: Section = {
   id: '5.4',
   title: 'The Heisenberg Uncertainty Principle as Resource Allocation',
-  epistemicStatus: 'derived',
+  epistemicStatus: 'interpreted',
   content: [
     {
       type: 'paragraph',
@@ -182,8 +182,8 @@ export const section5_4: Section = {
       number: '5.1',
       name: 'Uncertainty as Resource Constraint',
       statement:
-        'The Heisenberg uncertainty relations are consistent with interpreting complementary observables as competing allocations of finite distinction-making resources. Perfect precision in both members of a complementary pair would require infinite energy investment, which is unavailable to any finite-energy observer.',
-      epistemicStatus: 'derived',
+        'The Heisenberg uncertainty relations are consistent with interpreting complementary observables as competing allocations of finite distinction-making resources. Perfect precision in both members of a complementary pair would require infinite energy investment, which is unavailable to any finite-energy observer. Note: This is an interpretation showing consistency, not a derivation of the specific form or constants of the uncertainty relation.',
+      epistemicStatus: 'interpreted',
       dependsOn: ['A1', 'A2'],
     },
     {

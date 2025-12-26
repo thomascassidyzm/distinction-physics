@@ -3,7 +3,7 @@ import type { Section } from '../types';
 export const section3_5: Section = {
   id: '3.5',
   title: 'Self-Reference and the Emergence of Consciousness',
-  epistemicStatus: 'derived',
+  epistemicStatus: 'conjectured',
   content: [
     {
       type: 'heading',
@@ -105,7 +105,7 @@ export const section3_5: Section = {
       name: 'Self-Reference as Necessary Condition',
       statement:
         'Self-referential distinction-making is a necessary condition for consciousness. A system that cannot make distinctions about its own distinction-making processes cannot be conscious, regardless of its computational power or behavioral complexity.',
-      epistemicStatus: 'derived',
+      epistemicStatus: 'conjectured',
       dependsOn: ['def-consciousness', 'def-self-referential-distinction'],
     },
     {
@@ -149,7 +149,7 @@ export const section3_5: Section = {
       name: 'Consciousness as Continuum',
       statement:
         'Consciousness exists on a continuum defined by the depth and complexity of self-referential distinction-making. Higher levels of self-reference require proportionally greater energy expenditure and more complex distinction-maintenance architecture.',
-      epistemicStatus: 'derived',
+      epistemicStatus: 'conjectured',
       dependsOn: ['A1', 'A2', 'thm-self-reference-necessary'],
     },
     {

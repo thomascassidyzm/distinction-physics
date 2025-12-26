@@ -3,7 +3,7 @@ import type { Section } from '../types';
 export const section4_8: Section = {
   id: '4.8',
   title: 'Skill Acquisition as Thermodynamic Trajectory',
-  epistemicStatus: 'derived',
+  epistemicStatus: 'interpreted',
   content: [
     {
       type: 'paragraph',

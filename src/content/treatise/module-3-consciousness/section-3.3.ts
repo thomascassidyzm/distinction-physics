@@ -3,7 +3,7 @@ import type { Section } from '../types';
 export const section3_3: Section = {
   id: '3.3',
   title: 'Qualia: What Boundary Maintenance Feels Like from Within',
-  epistemicStatus: 'derived',
+  epistemicStatus: 'conjectured',
   content: [
     {
       type: 'heading',
@@ -122,7 +122,7 @@ export const section3_3: Section = {
       name: 'Experiential Granularity',
       statement:
         'Conscious experience is necessarily discrete at scales determined by available distinction-maintenance energy. The apparent continuity of experience is an emergent property of discrete boundary-maintenance states integrated across time.',
-      epistemicStatus: 'derived',
+      epistemicStatus: 'conjectured',
       dependsOn: ['A1', 'A2', 'thm-effective-discreteness'],
     },
     {

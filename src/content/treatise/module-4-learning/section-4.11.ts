@@ -4,7 +4,7 @@ export const section4_11: Section = {
   id: '4.11',
   title: 'Learning Within the Broader Framework',
   subtitle: 'Connections Across Modules',
-  epistemicStatus: 'derived',
+  epistemicStatus: 'interpreted',
   content: [
     {
       type: 'paragraph',

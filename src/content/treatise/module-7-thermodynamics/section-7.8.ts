@@ -3,7 +3,7 @@ import type { Section } from '../types';
 export const section7_8: Section = {
   id: '7.8',
   title: 'Work, Heat, and the Dynamics of Distinction',
-  epistemicStatus: 'derived',
+  epistemicStatus: 'interpreted',
   content: [
     {
       type: 'heading',

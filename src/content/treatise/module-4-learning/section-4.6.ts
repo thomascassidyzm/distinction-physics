@@ -3,7 +3,7 @@ import type { Section } from '../types';
 export const section4_6: Section = {
   id: '4.6',
   title: 'Neural Plasticity as Boundary Reorganization',
-  epistemicStatus: 'derived',
+  epistemicStatus: 'interpreted',
   content: [
     {
       type: 'paragraph',

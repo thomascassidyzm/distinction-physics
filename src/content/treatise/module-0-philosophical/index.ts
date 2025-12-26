@@ -1,5 +1,6 @@
 import type { Module } from '../types';
 
+import { section0_0 } from './section-0.0';
 import { section0_1 } from './section-0.1';
 import { section0_2 } from './section-0.2';
 import { section0_3 } from './section-0.3';
@@ -14,10 +15,11 @@ import { section0_10 } from './section-0.10';
 export const module0: Module = {
   number: 0,
   id: 'philosophical-foundations',
-  title: 'Philosophical Foundations',
-  subtitle: 'The Ontological Primacy of Distinction',
-  epistemicStatus: 'derived',
+  title: 'Distinction as Primitive',
+  subtitle: 'A Philosophical Meta-Theory Complementary to Physics',
+  epistemicStatus: 'interpreted',
   sections: [
+    section0_0,
     section0_1,
     section0_2,
     section0_3,
@@ -30,16 +32,16 @@ export const module0: Module = {
     section0_10,
   ],
   keyInsights: [
-    'Distinction is ontologically prior to both subject and object',
-    'Every act of knowing presupposes the drawing of a boundary',
-    'Maintaining distinctions requires energy expenditure',
-    'The observer is itself a distinction-maintaining system',
-    'Knowledge has fundamental limits rooted in the nature of distinction',
+    'Distinction-making is transcendentally prior to all premises—you cannot state any theory without first making distinctions',
+    'This framework is complementary to existing physics, not a replacement for it',
+    'Two axioms ground the framework: distinctions cost energy (imports Landauer), and OLUs have finite energy budgets',
+    'The framework interprets and provides vocabulary for physics, mathematics, and cognition—it does not derive them from nothing',
+    'The key contribution domain is learning: understanding learning as anti-entropic distinction pattern building',
   ],
   connectionsToNext: [
-    'Module 1 formalizes the distinction operator introduced philosophically here',
-    'The energy cost of distinction becomes the foundation for physical derivations',
-    'The observer concept is refined into the Observer-Like-Us (OLU) formalism',
+    'Module 1 formalizes the distinction operator and provides mathematical rigor',
+    'The energy cost of distinction enables interpretation of physical constraints',
+    'The OLU formalism connects to existing physics through Landauer\'s principle',
   ],
 };
 

@@ -3,7 +3,7 @@ import type { Section } from '../types';
 export const section5_6: Section = {
   id: '5.6',
   title: 'The Born Rule: Interpretation Rather Than Derivation',
-  epistemicStatus: 'derived',
+  epistemicStatus: 'imported',  // The Born rule is explicitly imported from QM
   content: [
     {
       type: 'paragraph',
@@ -169,7 +169,7 @@ export const section5_6: Section = {
       name: 'Born Rule Consistency',
       statement:
         'The Born rule $P(i) = |\\alpha_i|^2$ is consistent with interpreting probability as reflecting the relative energy cost of actualizing different distinctions. However, this consistency does not constitute a derivation of the specific $|\\alpha|^2$ form from first principles.',
-      epistemicStatus: 'derived',
+      epistemicStatus: 'imported',
       dependsOn: ['A1', 'A2'],
     },
     {

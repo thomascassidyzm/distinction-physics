@@ -3,7 +3,7 @@ import type { Section } from '../types';
 export const section5_2: Section = {
   id: '5.2',
   title: 'Effective Discreteness: Why Quantization is Necessary',
-  epistemicStatus: 'derived',
+  epistemicStatus: 'derived',  // Note: Effective discreteness IS genuinely derived from the axioms
   content: [
     {
       type: 'paragraph',

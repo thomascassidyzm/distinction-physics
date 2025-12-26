@@ -3,7 +3,7 @@ import type { Section } from '../types';
 export const section4_4: Section = {
   id: '4.4',
   title: 'Automatization: Migrating to Lower-Energy Circuits',
-  epistemicStatus: 'derived',
+  epistemicStatus: 'interpreted',
   content: [
     {
       type: 'paragraph',
@@ -152,7 +152,7 @@ export const section4_4: Section = {
       name: 'Consciousness Limitation Principle',
       statement:
         'The scope of conscious processing is limited by the energy cost of maintaining explicit distinctions. Only a small subset of ongoing distinction-making can be conscious at any moment because conscious processing requires high-energy prefrontal maintenance.',
-      epistemicStatus: 'derived',
+      epistemicStatus: 'interpreted',
       dependsOn: ['A1', 'A2'],
     },
     {

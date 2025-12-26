@@ -3,24 +3,24 @@ import type { Section } from '../types';
 export const section9_7: Section = {
   id: '9.7',
   title: 'Concluding Statement',
-  subtitle: 'From Two Axioms, One Physics',
-  epistemicStatus: 'derived',
+  subtitle: 'Interpretive Vocabulary for Understanding Physics',
+  epistemicStatus: 'interpreted',
   content: [
     {
       type: 'paragraph',
       content:
-        'We began with two axioms: All distinctions cost energy. All observers-like-us have finite energy budgets. From these axioms, we derived the essential structures of mathematics, consciousness, learning, quantum mechanics, spacetime, and thermodynamics.',
+        'We began with two axioms: All distinctions cost energy (grounded in Landauer). All observers-like-us have finite energy budgets. Through these axioms, we INTERPRETED the structures of mathematics, consciousness, learning, quantum mechanics, spacetime, and thermodynamics---while importing substantial physics from established theory.',
     },
     {
       type: 'paragraph',
       content:
-        'The derivation revealed something unexpected: these structures are not separate but unified. They are facets of one reality---the reality of distinction-making under constraint. Physics, mathematics, and consciousness are not three things but one thing seen from different angles.',
+        'The interpretation revealed conceptual unity: these structures can be understood through common vocabulary---distinction-making under constraint. Physics, mathematics, and consciousness share this interpretive lens. However, the unity is conceptual, not derivational: we provide vocabulary while importing substantial physics.',
       emphasis: 'key',
     },
     {
       type: 'paragraph',
       content:
-        'This unity dissolves old problems and generates new questions. The hard problem of consciousness dissolves because consciousness IS distinction-making. The measurement problem dissolves because measurement IS distinction creation. The unreasonable effectiveness of mathematics dissolves because mathematics and physics share a common subject.',
+        'This interpretation REFRAMES old problems and generates new questions. The hard problem is reframed (consciousness as distinction-making), but WHY it feels like something remains unexplained. The measurement problem is reframed (measurement as distinction creation), but we provide vocabulary, not mechanism. The framework provides perspective, not proof.',
     },
     {
       type: 'paragraph',
@@ -47,7 +47,7 @@ export const section9_7: Section = {
     {
       type: 'paragraph',
       content:
-        '**From two axioms, one physics. From constraints, necessity. From distinction-making, everything.**',
+        '**From two axioms, an interpretive vocabulary. From constraints, conceptual unity. From distinction-making, a unifying perspective (while importing substantial physics).**',
       emphasis: 'key',
     },
     {
@@ -66,25 +66,25 @@ export const section9_7: Section = {
       title: 'Module 9 Key Takeaways',
       variant: 'takeaways',
       points: [
-        'All modules share one explanatory strategy: what must emerge for finite observers making costly distinctions?',
-        'Physics, mathematics, and consciousness are not three things but one thing seen from different perspectives',
-        'The hard problem dissolves: consciousness IS distinction-making',
-        'The measurement problem dissolves: measurement IS distinction creation',
-        'The unreasonable effectiveness of mathematics dissolves: physics and mathematics share a common subject',
-        'New tractable questions emerge about minimum distinction energy, quantum gravity, and multi-observer physics',
-        'The framework is bold but humble: a perspective, not a final theory',
-        'From two axioms, one physics. From constraints, necessity. From distinction-making, everything.',
-        'The invitation stands: test this framework against your best thinking',
+        'All modules share one interpretive strategy: understanding through distinction-making vocabulary',
+        'The framework provides conceptual unification while importing substantial physics (Landauer, stat mech, quantum formalism)',
+        'The hard problem is REFRAMED, not dissolved: why distinction-making feels like something remains unexplained',
+        'The measurement problem is REFRAMED: vocabulary, not mechanism',
+        'Most "confirmed predictions" are post-hoc consistency with established physics',
+        'The framework\'s genuine contribution is interpretive vocabulary and conceptual coherence',
+        'The framework is a proposal---its value is unification, not predictive novelty',
+        'From two axioms, an interpretive vocabulary. From constraints, conceptual unity.',
+        'Epistemic honesty: we provide vocabulary, not derivation from first principles',
       ],
     },
   ],
   keyPoints: [
-    'From two axioms (distinctions cost energy, observers have finite energy) we derived mathematics, consciousness, quantum mechanics, spacetime, and thermodynamics',
-    'These structures are unified---facets of one reality: distinction-making under constraint',
-    'Old problems dissolve: hard problem of consciousness, measurement problem, unreasonable effectiveness of mathematics',
-    'New tractable questions emerge: minimum distinction energy, quantum gravity of distinction space, multi-observer relations',
-    'The framework offers a view from somewhere---the situated perspective of finite beings making costly distinctions',
-    'From two axioms, one physics. From constraints, necessity. From distinction-making, everything.',
-    'The distinction is yours to make',
+    'From two axioms we INTERPRETED physics through distinction vocabulary (while importing Landauer, stat mech, quantum formalism)',
+    'The framework provides conceptual unification through shared vocabulary, not derivation from first principles',
+    'Old problems are REFRAMED, not dissolved: we provide vocabulary, not explanations of qualia or measurement mechanisms',
+    'Most "confirmed predictions" are post-hoc consistency with established physics; N4 (measurement energy) may be genuinely novel',
+    'The framework\'s genuine contribution is interpretive vocabulary and conceptual coherence',
+    'From two axioms, an interpretive vocabulary. From constraints, conceptual unity.',
+    'Epistemic honesty requires distinguishing interpretation from derivation, post-hoc from prediction',
   ],
 };

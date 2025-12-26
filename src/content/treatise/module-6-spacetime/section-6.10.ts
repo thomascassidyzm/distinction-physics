@@ -3,7 +3,7 @@ import type { Section } from '../types';
 export const section6_10: Section = {
   id: '6.10',
   title: 'Conclusion: Spacetime as Distinction Relationship Structure',
-  epistemicStatus: 'derived',
+  epistemicStatus: 'interpreted',
   content: [
     {
       type: 'paragraph',

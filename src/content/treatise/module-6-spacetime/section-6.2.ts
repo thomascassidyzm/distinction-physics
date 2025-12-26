@@ -3,7 +3,7 @@ import type { Section } from '../types';
 export const section6_2: Section = {
   id: '6.2',
   title: 'Effective Discreteness at the Planck Scale',
-  epistemicStatus: 'derived',
+  epistemicStatus: 'consistent',  // The Planck scale values are imported from physics
   content: [
     {
       type: 'heading',

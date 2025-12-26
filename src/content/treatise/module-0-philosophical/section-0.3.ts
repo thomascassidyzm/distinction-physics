@@ -4,11 +4,11 @@ export const section0_3: Section = {
   id: '0.3',
   title: 'The Energy Cost of Existence',
   subtitle: 'From Philosophy to Physics',
-  epistemicStatus: 'derived',
+  epistemicStatus: 'interpreted',
   content: [
     {
       type: 'paragraph',
-      content: 'The preceding sections established that distinction-making is transcendentally necessary for observers-like-us and that to be (accessible) is to be distinct. We now address the physical requirements that make distinction-making possible. What follows is not an appeal to known physics but a **derivation** from first principles—from the ontological primacy of distinction alone, we will derive the fundamental structure of physical reality.',
+      content: 'The preceding sections established that distinction-making is transcendentally necessary for observers-like-us and that to be (accessible) is to be distinct. We now address the physical requirements that make distinction-making possible. What follows **interprets** established physics through our framework—showing how the energy cost of distinction-making provides conceptual vocabulary for understanding why physical reality has the structure it does.',
       emphasis: 'key',
     },
 
@@ -28,10 +28,10 @@ export const section0_3: Section = {
     {
       type: 'axiom',
       id: 'A1',
-      name: 'Energy Cost of Distinction',
+      name: 'Energy Cost of Distinction [IMPORTS Landauer]',
       statement: 'All distinctions cost energy. To maintain that a system is in state A rather than state B requires that states A and B be physically distinguishable. But distinguishability is not free. Making or maintaining any distinction—any boundary, any difference, any observable property—requires energy expenditure.',
       grounding: 'This is not a contingent fact about our particular technology or biology but a necessary feature of physical distinction-making. Distinguishability requires physical instantiation, and physical instantiation requires energy.',
-      physicalBasis: 'Grounded in Landauer\'s principle (kT ln 2 per bit erasure), thermodynamic work requirements for state preparation, and the physical nature of measurement.',
+      physicalBasis: '**IMPORTANT: This axiom IMPORTS Landauer\'s principle** (kT ln 2 per bit erasure) from thermodynamics. We do not derive Landauer\'s limit—we build upon it. This is not a weakness: all physics frameworks import some foundational principles. Ours imports one of the most well-established results in information thermodynamics, experimentally confirmed in 2012 (Bérut et al.).',
       implications: [
         'No distinction can be made or maintained without energy expenditure',
         'More precise distinctions require more energy',
@@ -54,9 +54,27 @@ export const section0_3: Section = {
       ],
     },
     {
+      type: 'heading',
+      level: 3,
+      content: 'The Assumption Defense',
+      id: 'assumption-defense',
+    },
+    {
       type: 'paragraph',
-      content: 'From these two axioms alone—that distinctions cost energy and observers have finite energy—we will derive the fundamental structure of accessible reality. What emerges is not merely consistent with known physics but **generates** the core principles of thermodynamics and quantum mechanics from pure ontology.',
+      content: 'Before proceeding, we address the objection: "You import Landauer\'s principle; you don\'t derive physics from nothing."',
+    },
+    {
+      type: 'paragraph',
+      content: '**This objection applies equally to ALL physics.** Quantum mechanics postulates the Born rule without deriving it. General relativity assumes the equivalence principle. Thermodynamics posits the Second Law. No physics derives physics from nothing.',
+    },
+    {
+      type: 'paragraph',
+      content: 'The right questions are: (1) Are our assumptions **minimal**? Yes—two axioms. (2) Are they **unavoidable**? Yes—you cannot deny distinction-primacy without invoking distinctions. (3) Are they **productive**? Yes—they illuminate learning, consciousness, and physical constraints. Our assumptions are remarkably minimal, genuinely unavoidable, and productively illuminating.',
       emphasis: 'key',
+    },
+    {
+      type: 'paragraph',
+      content: 'From these two axioms—that distinctions cost energy and observers have finite energy—we will show what **genuinely follows** (effective discreteness, resolution limits) and what we **interpret** through this lens (quantum phenomena, thermodynamic behavior). We maintain epistemic honesty about which is which.',
     },
 
     // =========================================================================
@@ -433,29 +451,30 @@ export const section0_3: Section = {
     },
 
     // =========================================================================
-    // PART III: VALIDATION - RECOVERING KNOWN PHYSICS
+    // PART III: INTERPRETING KNOWN PHYSICS
     // =========================================================================
     {
       type: 'heading',
       level: 2,
-      content: 'Part III: Validation—Recovering Known Physics',
-      id: 'recovering-physics',
+      content: 'Part III: Interpreting Known Physics [INTERPRETED]',
+      id: 'interpreting-physics',
     },
     {
       type: 'paragraph',
-      content: 'Having derived these principles purely from distinction-primacy and finite energy, we now show that they **recover and explain** established physical laws. This convergence validates both our framework and existing physics.',
+      content: 'Having established effective discreteness and related principles, we now show how existing physics can be **interpreted** through distinction-vocabulary. This section provides conceptual vocabulary for understanding physical phenomena—not independent derivations of physics, but a lens that illuminates why physics has the features it does.',
+      emphasis: 'key',
     },
 
     // QUANTUM MECHANICS
     {
       type: 'heading',
       level: 3,
-      content: 'Our Effective Discreteness → Quantum Mechanics',
+      content: 'Interpreting Quantum Mechanics [INTERPRETED]',
       id: 'quantum-mechanics',
     },
     {
       type: 'paragraph',
-      content: 'Standard quantum mechanics introduces quantization as a fundamental feature without deep explanation. Our framework derives it:',
+      content: 'Standard quantum mechanics introduces quantization as a fundamental feature. Our framework provides an interpretive lens—not a derivation of quantum mechanics, but vocabulary for understanding why quantization makes sense from the perspective of finite-energy observers:',
     },
     {
       type: 'heading',
@@ -535,12 +554,12 @@ export const section0_3: Section = {
     {
       type: 'heading',
       level: 3,
-      content: 'Our Entropy Principle → Second Law of Thermodynamics',
+      content: 'Interpreting Thermodynamics [INTERPRETED]',
       id: 'thermodynamics',
     },
     {
       type: 'paragraph',
-      content: 'We derived that maintaining distinctions requires continuous energy input; without input, distinctions decay. This **is** the second law:',
+      content: 'We established that maintaining distinctions requires continuous energy input; without input, distinctions decay. This is **consistent with** and provides vocabulary for understanding the Second Law:',
     },
     {
       type: 'comparison',
@@ -579,12 +598,12 @@ export const section0_3: Section = {
     {
       type: 'heading',
       level: 3,
-      content: 'Our Minimum Energy Cost → Landauer\'s Principle',
+      content: 'Landauer\'s Principle [IMPORTED]',
       id: 'landauer',
     },
     {
       type: 'paragraph',
-      content: 'Landauer\'s principle (1961) states that erasing one bit of information requires minimum energy dissipation of $kT \\ln(2)$, where $k$ is Boltzmann\'s constant and $T$ is temperature. Our framework predicts this:',
+      content: 'Landauer\'s principle (1961) states that erasing one bit of information requires minimum energy dissipation of $kT \\ln(2)$, where $k$ is Boltzmann\'s constant and $T$ is temperature. **We import this result as foundational**—we do not derive it. Through the lens of distinction-making, we interpret why this limit exists:',
     },
     {
       type: 'list',
@@ -599,7 +618,7 @@ export const section0_3: Section = {
     },
     {
       type: 'paragraph',
-      content: 'Our framework thus predicts Landauer\'s limit from first principles: if distinctions have physical reality and cost energy, then information erasure must dissipate energy.',
+      content: '**Epistemic note**: Landauer\'s limit is imported from thermodynamics, not derived from our axioms. Our framework interprets why this limit exists through the lens of distinction-making: if distinctions have physical reality and cost energy, then information erasure must dissipate energy. The specific value $kT \\ln(2)$ comes from thermodynamics, not from our axioms alone.',
     },
 
     // HEAT DEATH
@@ -941,21 +960,21 @@ export const section0_3: Section = {
     },
     {
       type: 'paragraph',
-      content: 'These four principles recover and explain:',
+      content: 'These four principles provide interpretive vocabulary for:',
     },
     {
       type: 'list',
       style: 'bullet',
       items: [
-        { content: 'Quantum mechanics (quantization, uncertainty, wave-particle duality)' },
-        { content: 'Thermodynamics (second law, entropy, heat death)' },
-        { content: 'Information theory (Landauer\'s principle, information-energy equivalence)' },
-        { content: 'Resolution hierarchies (observer-dependent effective grain size)' },
+        { content: 'Quantum mechanics (quantization, uncertainty, wave-particle duality) — [INTERPRETED]' },
+        { content: 'Thermodynamics (second law, entropy, heat death) — [INTERPRETED]' },
+        { content: 'Information theory (Landauer\'s principle) — [IMPORTED]' },
+        { content: 'Resolution hierarchies (observer-dependent effective grain size) — [DERIVED from axioms]' },
       ],
     },
     {
       type: 'paragraph',
-      content: 'This is not mere consistency with known physics—we have **derived** fundamental physical principles from pure ontology of distinction. The mystery of quantization dissolves: it is a necessary consequence of finite-energy observation. The strangeness of quantum mechanics evaporates: it is the signature of thermodynamic constraints on distinction-making.',
+      content: 'This demonstrates **consistency** with known physics and provides interpretive vocabulary for understanding physical principles through distinction-ontology. The mystery of quantization is illuminated: it can be understood from the perspective of finite-energy observation. The strangeness of quantum mechanics is reframed: it reflects thermodynamic constraints on distinction-making. **Epistemic note:** This is interpretation, not derivation—the specific mathematical form of quantum mechanics is not generated by our axioms. We complement physics; we do not replace it.',
       emphasis: 'key',
     },
     {
@@ -974,17 +993,16 @@ export const section0_3: Section = {
     },
   ],
   keyPoints: [
-    'Two axioms ground the framework: (1) All distinctions cost energy; (2) All OLUs have finite energy budgets.',
-    'Effective Discreteness: No continuous quantity can be accessed by any observer—infinite precision would require infinite energy.',
-    'The Resolution Hierarchy shows different OLUs access reality at different effective resolutions based on their energy budgets.',
-    'The Planck scale represents a universal resolution limit beyond which no observer can make distinctions.',
-    'Finitude: Only finitely many distinctions can be maintained simultaneously, grounding the limits of complexity and knowledge.',
-    'Dynamism: Distinctions require continuous energy maintenance—existence is processual, not substantial.',
-    'Relationality: All OLUs must draw energy from their environments, making pure isolation impossible.',
-    'The framework recovers quantum mechanics (uncertainty, quantization, superposition) from observer energy constraints.',
-    'The framework recovers thermodynamics (second law, entropy increase) as distinction-decay without energy input.',
-    'Landauer\'s principle (kT ln 2 per bit) is predicted from first principles.',
-    'Classical philosophical problems (mind-body, persistence, causation, Zeno\'s paradoxes) are reframed and dissolved.',
-    'The framework generates testable predictions, many of which are already empirically confirmed.',
+    'Two axioms ground the framework: (1) All distinctions cost energy [IMPORTS Landauer]; (2) All OLUs have finite energy budgets',
+    '[DERIVED] Effective Discreteness: No continuous quantity can be accessed by any observer—infinite precision would require infinite energy',
+    '[DERIVED] The Resolution Hierarchy: Different OLUs access reality at different effective resolutions based on energy budgets',
+    '[DERIVED] The Planck scale represents a universal resolution limit beyond which no observer can make distinctions',
+    '[DERIVED] Finitude: Only finitely many distinctions can be maintained simultaneously',
+    '[DERIVED] Dynamism: Distinctions require continuous energy maintenance',
+    '[DERIVED] Relationality: All OLUs must draw energy from their environments',
+    '[INTERPRETED] Quantum mechanics (uncertainty, quantization, superposition) viewed through distinction-vocabulary',
+    '[INTERPRETED] Thermodynamics (second law, entropy) as distinction-decay without energy input',
+    '[IMPORTED] Landauer\'s principle (kT ln 2 per bit) is foundational, not derived',
+    'The framework complements existing physics—it interprets rather than replaces',
   ],
 };

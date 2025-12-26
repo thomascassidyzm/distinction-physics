@@ -3,7 +3,7 @@ import type { Section } from '../types';
 export const section8_9: Section = {
   id: '8.9',
   title: 'Conclusion: The Empirical Status of the Framework',
-  epistemicStatus: 'derived',
+  epistemicStatus: 'consistent',
   content: [
     {
       type: 'paragraph',
@@ -19,29 +19,29 @@ export const section8_9: Section = {
     {
       type: 'paragraph',
       content:
-        'The framework has made or explained eight major predictions that experimental evidence supports:',
+        'The framework is CONSISTENT WITH eight established phenomena, though most were known before the framework was developed (post-hoc consistency, not temporal prediction):',
     },
     {
       type: 'table',
       id: 'tbl-confirmed-predictions',
-      caption: 'Confirmed Predictions of the Distinction Framework',
-      headers: ['ID', 'Prediction', 'Status'],
+      caption: 'Phenomena Consistent with the Framework (Epistemic Status)',
+      headers: ['ID', 'Phenomenon', 'Epistemic Status'],
       rows: [
-        ['C1', 'Landauer\'s Principle --- erasure costs minimum $kT \\ln 2$', 'Confirmed'],
-        ['C2', 'Quantum discreteness --- no continuous quantities accessible', 'Confirmed'],
-        ['C3', 'Metabolic cost of consciousness --- ~8W for conscious processing', 'Confirmed'],
-        ['C4', 'Practice reduces metabolic cost --- learning is energy optimization', 'Confirmed'],
-        ['C5', 'Resolution-energy scaling --- finer measurement requires more energy', 'Confirmed'],
-        ['C6', 'Observer-dependent quantization --- different OLUs access different grain sizes', 'Confirmed'],
-        ['C7', 'Spacing effect in learning --- distributed practice outperforms massed', 'Confirmed'],
-        ['C8', 'Second Law as distinction decay --- entropy increase without energy input', 'Confirmed'],
+        ['C1', 'Landauer\'s Principle --- erasure costs minimum $kT \\ln 2$', 'IMPORTED (grounds A1)'],
+        ['C2', 'Quantum discreteness --- no continuous quantities accessible', 'POST-HOC (interpretation)'],
+        ['C3', 'Metabolic cost of consciousness --- ~8W for conscious processing', 'POST-HOC (interpretation)'],
+        ['C4', 'Practice reduces metabolic cost --- learning is energy optimization', 'POST-HOC (interpretation)'],
+        ['C5', 'Resolution-energy scaling --- finer measurement requires more energy', 'POST-HOC (interpretation)'],
+        ['C6', 'Observer-dependent quantization --- different OLUs access different grain sizes', 'POST-HOC (interpretation)'],
+        ['C7', 'Spacing effect in learning --- distributed practice outperforms massed', 'POST-HOC (interpretation)'],
+        ['C8', 'Second Law as distinction decay --- entropy increase without energy input', 'IMPORTS stat mech'],
       ],
       alignment: ['left', 'left', 'center'],
     },
     {
       type: 'paragraph',
       content:
-        'These confirmations validate the core claim that distinctions have physical reality with measurable energy costs.',
+        'These consistency checks show the framework aligns with established physics, but this is necessary, not sufficient, for validation. The framework was designed to be consistent with these phenomena.',
     },
     {
       type: 'heading',
@@ -147,8 +147,8 @@ export const section8_9: Section = {
       label: 'claim',
       name: 'The Framework\'s Scientific Standing',
       statement:
-        'The Distinction Framework is (1) empirically grounded with multiple confirmed predictions, (2) falsifiable with clear conditions that remain unmet, (3) productive of novel testable predictions, (4) conceptually unifying across physics and cognition, and (5) honest about limits distinguishing derivations from interpretations from conjectures.',
-      epistemicStatus: 'derived',
+        'The Distinction Framework is (1) consistent with established physics (post-hoc, not predictive), (2) falsifiable with clear conditions that remain unmet, (3) productive of some novel testable predictions (especially N4), (4) conceptually unifying across physics and cognition, and (5) honest about limits distinguishing genuine predictions from post-hoc consistency.',
+      epistemicStatus: 'consistent',
       dependsOn: ['A1', 'A2'],
     },
     {
@@ -161,19 +161,19 @@ export const section8_9: Section = {
       style: 'bullet',
       items: [
         {
-          content: '**Empirically grounded**: Confirmed predictions (C1-C8) provide validation for the core axioms',
+          content: '**Consistent with physics**: C1-C8 are post-hoc consistency checks; the framework was designed to match established physics',
         },
         {
           content: '**Falsifiable**: Clear falsification conditions exist and have not been met',
         },
         {
-          content: '**Generative**: Near-term testable predictions (N1-N6) can be investigated with current technology',
+          content: '**Some novel predictions**: N4 (measurement energy scaling) represents a genuinely testable novel claim',
         },
         {
-          content: '**Unifying**: Explains common structure across quantum mechanics, thermodynamics, consciousness, and learning',
+          content: '**Conceptually unifying**: Provides common vocabulary across quantum mechanics, thermodynamics, consciousness, and learning',
         },
         {
-          content: '**Honest**: Distinguishes what follows necessarily from what is merely consistent',
+          content: '**Epistemically honest**: Distinguishes genuine predictions from post-hoc consistency',
         },
       ],
     },
@@ -226,16 +226,16 @@ export const section8_9: Section = {
       style: 'numbered',
       items: [
         {
-          content: 'Survived the tests it has faced',
+          content: 'Is consistent with established physics (necessary but not sufficient)',
         },
         {
-          content: 'Made specific claims about phenomena that were subsequently confirmed',
+          content: 'Was designed to match phenomena that were already known (post-hoc, not predictive for C1-C8)',
         },
         {
-          content: 'Generated novel predictions that can be tested',
+          content: 'Generates some novel predictions (especially N4) that can be tested',
         },
         {
-          content: 'Could be shown wrong by experimental results',
+          content: 'Could be shown wrong by experimental results (falsifiable)',
         },
       ],
     },
@@ -266,10 +266,11 @@ export const section8_9: Section = {
     },
   ],
   keyPoints: [
-    'Eight confirmed predictions validate core axioms: Landauer, quantization, consciousness costs, learning efficiency, resolution scaling, observer dependence, spacing effect, Second Law',
-    'Six near-term and four future predictions await testing; none have been falsified',
+    'C1-C8 are post-hoc consistency checks with established physics, not temporal predictions',
+    'C1 (Landauer) is IMPORTED to ground Axiom 1; C8 (Second Law) imports statistical mechanics',
+    'N4 (measurement energy scaling) represents the most promising genuinely novel prediction',
     'Five falsification conditions could disprove the framework; none has been met',
-    'The framework is empirically grounded, falsifiable, generative, unifying, and honest about limits',
-    'Scientific progress requires specific predictions, genuine tests, and possible falsification --- the framework provides all three',
+    'The framework provides conceptual unification and interpretive vocabulary, not predictive novelty for established physics',
+    'Epistemic honesty requires distinguishing post-hoc consistency from genuine prediction',
   ],
 };

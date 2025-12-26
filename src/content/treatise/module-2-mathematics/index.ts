@@ -17,7 +17,7 @@ export const module2: Module = {
   id: 'mathematics',
   title: 'The Emergence of Mathematics from Distinction',
   subtitle: 'Why Mathematical Structures Are Thermodynamically Necessary',
-  epistemicStatus: 'derived',
+  epistemicStatus: 'interpreted',
   sections: [
     section2_1,
     section2_2,

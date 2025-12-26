@@ -3,7 +3,7 @@ import type { Section } from '../types';
 export const section7_2: Section = {
   id: '7.2',
   title: 'Entropy as Distinction-Decay',
-  epistemicStatus: 'derived',
+  epistemicStatus: 'interpreted',
   content: [
     {
       type: 'paragraph',
@@ -15,10 +15,10 @@ export const section7_2: Section = {
       id: 'def-entropy',
       term: 'Entropy (Distinction Framework)',
       definition:
-        'Entropy is the measure of distinction-decay - the tendency toward indistinguishability.',
+        'Entropy is interpreted as the measure of distinction-decay - the tendency toward indistinguishability.',
       intuition:
         'When entropy increases, the boundaries that made parts distinguishable are dissolving. High entropy means states are indistinguishable (no maintained boundaries); low entropy means states remain distinct (many maintained boundaries).',
-      epistemicStatus: 'derived',
+      epistemicStatus: 'interpreted',
     },
     {
       type: 'heading',

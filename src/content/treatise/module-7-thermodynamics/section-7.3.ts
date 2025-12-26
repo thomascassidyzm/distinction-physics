@@ -2,13 +2,13 @@ import type { Section } from '../types';
 
 export const section7_3: Section = {
   id: '7.3',
-  title: 'The Second Law Derived',
-  epistemicStatus: 'derived',
+  title: 'The Second Law Interpreted',
+  epistemicStatus: 'interpreted',
   content: [
     {
       type: 'paragraph',
       content:
-        'The Second Law of Thermodynamics states that in closed systems, entropy tends to increase. In our framework, this is not an independent law but a direct consequence of our axioms.',
+        'The Second Law of Thermodynamics states that in closed systems, entropy tends to increase. In our framework, this empirically established law can be interpreted through the lens of distinction-making, though this interpretation requires importing statistical mechanics.',
     },
     {
       type: 'heading',
@@ -23,7 +23,7 @@ export const section7_3: Section = {
     {
       type: 'paragraph',
       content:
-        '**Our derivation**: Distinctions naturally disperse unless energy is invested in maintaining them.',
+        '**Our interpretation**: Distinctions naturally disperse unless energy is invested in maintaining them.',
       emphasis: 'key',
     },
     {
@@ -34,12 +34,12 @@ export const section7_3: Section = {
     {
       type: 'paragraph',
       content:
-        'Here is why the Second Law follows necessarily from our axioms:',
+        'Here is how the Second Law can be understood through our axioms (note: Step 3 imports statistical mechanics, making this an interpretation rather than pure derivation):',
     },
     {
       type: 'derivation',
       id: 'deriv-second-law',
-      name: 'Derivation of the Second Law',
+      name: 'Interpretation of the Second Law',
       from: ['A1', 'A2'],
       steps: [
         {
@@ -55,17 +55,17 @@ export const section7_3: Section = {
         {
           number: 3,
           statement: 'Random fluctuations overwhelmingly favor dispersion',
-          justification: 'Statistical inevitability: For any boundary, there are vastly more configurations where the boundary is blurred than configurations where it is sharp. Random fluctuations overwhelmingly favor dispersion over concentration.',
+          justification: '[IMPORTED from statistical mechanics]: For any boundary, there are vastly more configurations where the boundary is blurred than configurations where it is sharp. This step imports the equiprobability assumption and typicality arguments from statistical mechanics - it is not entailed by Axioms 1-2 alone.',
         },
         {
           number: 4,
           statement: 'Therefore distinctions decay without directed energy input',
-          justification: 'Without directed energy input, boundaries dissolve. High-distinction states (low entropy) evolve toward low-distinction states (high entropy).',
+          justification: 'Given Steps 1-3, boundaries dissolve without directed energy input. High-distinction states (low entropy) evolve toward low-distinction states (high entropy).',
         },
       ],
       conclusion:
-        'This IS the Second Law. Entropy increases because maintaining distinctions requires energy, energy is finite, and random processes favor dissolution over maintenance.',
-      epistemicStatus: 'derived',
+        'This interpretation connects the Second Law to distinction dynamics. However, Step 3 imports statistical mechanics, making this an interpretation with hidden assumptions rather than a pure derivation from Axioms 1-2.',
+      epistemicStatus: 'interpreted',
     },
     {
       type: 'heading',
@@ -75,11 +75,11 @@ export const section7_3: Section = {
     {
       type: 'theorem',
       id: 'thm-second-law',
-      label: 'theorem',
-      name: 'Statistical Necessity of the Second Law',
+      label: 'proposition',
+      name: 'Interpretive Account of the Second Law',
       statement:
-        'The Second Law is not a mysterious tendency of nature but a statistical necessity for any system of maintained distinctions under finite resources. Even abstract mathematical systems with distinction-like structure and resource constraints would exhibit entropy increase.',
-      epistemicStatus: 'derived',
+        'The Second Law can be understood as a statistical tendency for systems of maintained distinctions under finite resources. However, this understanding requires importing statistical mechanics (equiprobability, typicality) beyond the two axioms. The framework provides interpretive unification, not derivation from first principles.',
+      epistemicStatus: 'interpreted',
       dependsOn: ['A1', 'A2'],
     },
     {
@@ -106,11 +106,11 @@ export const section7_3: Section = {
     },
   ],
   keyPoints: [
-    'The Second Law is derived from our two axioms, not assumed as an independent principle',
+    'The Second Law is interpreted through our axioms, but requires importing statistical mechanics',
     'Step 1: Maintenance requires energy (Axiom 1)',
     'Step 2: Energy budgets are finite (Axiom 2)',
-    'Step 3: Random fluctuations statistically favor dispersion over concentration',
-    'Step 4: Therefore distinctions decay - this IS entropy increase',
+    'Step 3: Random fluctuations favor dispersion [IMPORTED from statistical mechanics, not from axioms]',
+    'Step 4: Therefore distinctions decay - this connects to entropy increase',
     'Closed systems cannot maintain distinctions indefinitely; open systems can by importing energy',
     'Living systems maintain local order by exporting disorder to their environment',
   ],

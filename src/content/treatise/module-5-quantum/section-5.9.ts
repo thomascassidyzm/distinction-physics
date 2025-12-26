@@ -3,7 +3,7 @@ import type { Section } from '../types';
 export const section5_9: Section = {
   id: '5.9',
   title: 'Quantum Computing as Distinction-Potential Computation',
-  epistemicStatus: 'derived',
+  epistemicStatus: 'interpreted',
   content: [
     {
       type: 'paragraph',

@@ -3,7 +3,7 @@ import type { Section } from '../types';
 export const section7_5: Section = {
   id: '7.5',
   title: "Time's Arrow from Boundary Dispersion",
-  epistemicStatus: 'derived',
+  epistemicStatus: 'interpreted',
   content: [
     {
       type: 'paragraph',
@@ -13,7 +13,7 @@ export const section7_5: Section = {
     {
       type: 'paragraph',
       content:
-        'Our framework explains time\'s arrow as a necessary consequence of distinction dynamics.',
+        'Our framework interprets time\'s arrow through the lens of distinction dynamics. However, the arrow of time problem is not fully solved: the framework is consistent with time\'s arrow but does not derive it without additional assumptions about boundary conditions.',
       emphasis: 'key',
     },
     {
@@ -114,17 +114,17 @@ export const section7_5: Section = {
       type: 'theorem',
       id: 'thm-time-arrow',
       label: 'claim',
-      name: 'Emergence of Time Arrow',
+      name: 'Interpretive Account of Time Arrow',
       statement:
-        'The arrow of time is not a mystery requiring special initial conditions but a statistical necessity for any system of maintained distinctions evolving under finite resources.',
-      epistemicStatus: 'derived',
+        'The arrow of time can be understood through distinction dynamics, but this remains an interpretation rather than derivation. The axioms are time-symmetric (energy costs apply regardless of direction); the arrow requires boundary conditions (low entropy past) that are not derived from the axioms.',
+      epistemicStatus: 'interpreted',
       dependsOn: ['A1', 'A2'],
     },
     {
       type: 'note',
       variant: 'technical',
       content:
-        'This derivation explains time asymmetry without appealing to cosmological boundary conditions or a low-entropy Big Bang. The arrow emerges from the local dynamics of distinction-maintenance, not from global initial conditions.',
+        'Honest assessment: The arrow of time problem is not fully solved by this interpretation. The axioms are time-symmetric. WHY distinctions decay in one temporal direction rather than the other requires boundary conditions (low entropy past) that are not derived from the axioms. The framework is consistent with time\'s arrow but does not derive it from scratch.',
     },
   ],
   keyPoints: [

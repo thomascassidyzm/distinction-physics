@@ -3,7 +3,7 @@ import type { Section } from '../types';
 export const section0_5: Section = {
   id: '0.5',
   title: 'The Appearance/Reality Distinction Reconsidered',
-  epistemicStatus: 'derived',
+  epistemicStatus: 'interpreted',
   content: [
     {
       type: 'paragraph',

@@ -3,12 +3,12 @@ import type { Section } from '../types';
 export const section7_14: Section = {
   id: '7.14',
   title: 'Conclusion: Thermodynamics as Distinction Dynamics',
-  epistemicStatus: 'derived',
+  epistemicStatus: 'interpreted',
   content: [
     {
       type: 'paragraph',
       content:
-        'We have shown that thermodynamics emerges necessarily from the two axioms established in Module 0:',
+        'We have shown that thermodynamics can be interpreted through the lens of the two axioms established in Module 0 (though this interpretation imports statistical mechanics rather than deriving thermodynamics from scratch):',
       emphasis: 'key',
     },
     {
@@ -30,23 +30,23 @@ export const section7_14: Section = {
     },
     {
       type: 'paragraph',
-      content: 'From these two axioms alone:',
+      content: 'Through these two axioms (plus imported statistical mechanics):',
     },
     {
       type: 'list',
       style: 'bullet',
       items: [
         {
-          content: '**Entropy** is the measure of distinction-decay',
+          content: '**Entropy** is interpreted as the measure of distinction-decay',
         },
         {
-          content: '**The Second Law** states that distinctions disperse without energy input',
+          content: '**The Second Law** is interpreted as stating that distinctions disperse without energy input (imports statistical mechanics)',
         },
         {
-          content: '**Landauer\'s Principle** predicts minimum energy costs for information operations',
+          content: '**Landauer\'s Principle** is IMPORTED as the grounding for Axiom 1, not derived from it',
         },
         {
-          content: '**Time\'s Arrow** emerges from the statistics of boundary dispersion',
+          content: '**Time\'s Arrow** can be understood through boundary dispersion (but requires boundary conditions not derived from axioms)',
         },
         {
           content: '**Temperature** indexes distinction-stability',
@@ -80,32 +80,32 @@ export const section7_14: Section = {
       style: 'bullet',
       items: [
         {
-          content: '**Module 0** derived quantum structure (discreteness, quantization, uncertainty)',
+          content: '**Module 0** interpreted quantum structure through distinction-making (discreteness, quantization, uncertainty)',
         },
         {
-          content: '**Module 7** derived thermodynamic dynamics (entropy, irreversibility, limits)',
+          content: '**Module 7** interpreted thermodynamic dynamics through distinction-making (entropy, irreversibility, limits)',
         },
       ],
     },
     {
       type: 'paragraph',
       content:
-        'Both emerge from the same foundation: distinction-making under finite energy. Quantum mechanics and thermodynamics are not separate theories requiring separate foundations. They are two aspects of the same underlying constraint: what it means to make distinctions when distinctions cost energy and energy is finite.',
+        'Both can be understood through the same conceptual lens: distinction-making under finite energy. Quantum mechanics and thermodynamics share interpretive unification under this framework. However, this is conceptual unification, not derivation from scratch---both domains import substantial physics from established theory.',
     },
     {
       type: 'theorem',
       id: 'thm-thermodynamic-unification',
       label: 'claim',
-      name: 'Thermodynamic-Quantum Unification',
+      name: 'Thermodynamic-Quantum Interpretive Unification',
       statement:
-        'Standard physics treats thermodynamic laws as empirical discoveries requiring statistical mechanics to explain. Our framework shows they are NECESSARY CONSEQUENCES of distinction-making constraints. Any system of maintained distinctions under finite resources would exhibit the Second Law, Landauer\'s limit, and time asymmetry.',
-      epistemicStatus: 'derived',
+        'The framework provides conceptual unification of thermodynamics and quantum mechanics under distinction-making vocabulary. However, this is interpretive unification, not derivation from first principles. The Second Law interpretation imports statistical mechanics (equiprobability, typicality). Landauer\'s limit grounds Axiom 1 rather than following from it. The framework\'s value is conceptual coherence, not predictive novelty.',
+      epistemicStatus: 'interpreted',
       dependsOn: ['A1', 'A2'],
     },
     {
       type: 'paragraph',
       content:
-        'This is not reinterpretation but derivation. The laws of thermodynamics had to be this way because they express what it means to be an observer in a universe where observation costs energy.',
+        'This is interpretive reframing, not derivation from axioms alone. The framework provides conceptual unification: thermodynamic laws can be understood as expressing what it means to be an observer in a universe where observation costs energy. The framework\'s value is this unifying perspective, not predictive novelty beyond established physics.',
       emphasis: 'conclusion',
     },
     {
@@ -177,15 +177,15 @@ export const section7_14: Section = {
     {
       type: 'paragraph',
       content:
-        'From the two axioms, thermodynamics follows necessarily. This is the completion of physics grounding: Module 0\'s structure plus Module 7\'s dynamics equals the full foundation for accessible reality.',
+        'Through the two axioms plus imported statistical mechanics, thermodynamics can be interpreted coherently. This provides conceptual unification: Module 0\'s structure plus Module 7\'s dynamics offer a unified vocabulary for understanding accessible reality, while acknowledging that substantial physics is imported rather than derived.',
       emphasis: 'conclusion',
     },
   ],
   keyPoints: [
-    'Thermodynamics emerges necessarily from the two foundational axioms',
-    'Module 0 (structure) + Module 7 (dynamics) = complete physics grounding',
-    'Quantum mechanics and thermodynamics are unified under distinction-making constraints',
-    'The Second Law, Landauer\'s limit, and time asymmetry are derived consequences',
-    'Thermodynamics is the dynamics of reality-as-accessible---how distinctions evolve under finite resources',
+    'Thermodynamics can be interpreted through the two foundational axioms (but imports statistical mechanics)',
+    'Module 0 (structure) + Module 7 (dynamics) = conceptual unification of physics through distinction vocabulary',
+    'Quantum mechanics and thermodynamics share interpretive unification under distinction-making concepts',
+    'The Second Law, Landauer\'s limit, and time asymmetry are interpreted through the framework (not derived from axioms alone)',
+    'The framework\'s value is conceptual coherence and unification, not predictive novelty beyond established physics',
   ],
 };

@@ -4,7 +4,7 @@ export const section2_10: Section = {
   id: '2.10',
   title: 'Mathematical Truth as Thermodynamic Necessity',
   subtitle: 'Why Mathematical Truths Feel Necessary',
-  epistemicStatus: 'derived',
+  epistemicStatus: 'interpreted',
   content: [
     {
       type: 'paragraph',
@@ -79,10 +79,10 @@ export const section2_10: Section = {
       id: 'thm-mathematical-necessity',
       label: 'proposition',
       number: '2.6',
-      name: 'Mathematical Necessity as Thermodynamic Stability',
+      name: 'Mathematical Necessity as Thermodynamic Stability (Interpretive Claim)',
       statement:
-        'A mathematical statement $P$ is necessarily true if and only if the distinction pattern it describes is thermodynamically stable---requiring minimal energy to maintain and representing the lowest-energy configuration among alternatives.',
-      epistemicStatus: 'derived',
+        'A mathematical statement $P$ is necessarily true if and only if the distinction pattern it describes is thermodynamically stable---requiring minimal energy to maintain and representing the lowest-energy configuration among alternatives. **Epistemic note**: This is an interpretation, not a derivation. The equivalence between mathematical necessity and thermodynamic stability is a proposed correspondence, not something proven from axioms.',
+      epistemicStatus: 'interpreted',
       dependsOn: ['thm-distinction-stability', 'A1'],
     },
     {
@@ -166,12 +166,12 @@ export const section2_10: Section = {
         'Knowledge of mathematical truths that appears independent of empirical observation, explained in our framework as recognition of distinction patterns that any OLU necessarily embodies through its own boundary-drawing activity.',
       intuition:
         'We can know that 2 + 2 = 4 without counting physical objects because we are already systems that maintain and combine distinctions---the pattern is inherent in what we are.',
-      epistemicStatus: 'derived',
+      epistemicStatus: 'interpreted',
     },
   ],
   keyPoints: [
-    'Mathematical truths are stable distinction patterns that any OLU will converge upon',
-    'Mathematical necessity is thermodynamic stability---alternatives require more energy',
+    'Mathematical truths are interpreted as stable distinction patterns that any OLU will converge upon',
+    'Mathematical necessity is interpreted as thermodynamic stability (this is a philosophical claim, not a derivation)',
     "Godel's incompleteness reflects energy limits on proof, not arbitrary logical restrictions",
     'Mathematics appears a priori because it formalizes structures inherent in distinction-making itself',
     'The universal/conventional distinction: patterns are universal, notations are invented',

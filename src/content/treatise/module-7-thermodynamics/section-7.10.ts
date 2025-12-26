@@ -3,7 +3,7 @@ import type { Section } from '../types';
 export const section7_10: Section = {
   id: '7.10',
   title: 'Living Systems as Boundary-Maintenance Networks',
-  epistemicStatus: 'derived',
+  epistemicStatus: 'interpreted',
   content: [
     {
       type: 'paragraph',
@@ -99,7 +99,7 @@ export const section7_10: Section = {
         'Ecosystems maintaining species distinctions through energy flow from sunlight',
         'Potential artificial life maintaining computational distinctions through power consumption',
       ],
-      epistemicStatus: 'derived',
+      epistemicStatus: 'interpreted',
     },
     {
       type: 'paragraph',

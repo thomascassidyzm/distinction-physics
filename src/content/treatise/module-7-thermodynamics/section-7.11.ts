@@ -3,7 +3,7 @@ import type { Section } from '../types';
 export const section7_11: Section = {
   id: '7.11',
   title: 'Computational Thermodynamics and Fundamental Limits',
-  epistemicStatus: 'derived',
+  epistemicStatus: 'interpreted',
   content: [
     {
       type: 'paragraph',
@@ -117,11 +117,11 @@ export const section7_11: Section = {
     {
       type: 'theorem',
       id: 'thm-computational-thermodynamic-limits',
-      label: 'theorem',
+      label: 'proposition',
       name: 'Computational Thermodynamic Limits',
       statement:
-        'All computation is subject to thermodynamic constraints on distinction-making. The minimum energy cost of irreversible computation is $kT \\ln(2)$ per bit. Perfect computation (omniscience, perfect simulation, entropy reversal) is impossible in principle because it would require infinite energy or violate the Second Law.',
-      epistemicStatus: 'derived',
+        'All computation is subject to thermodynamic constraints on distinction-making. The minimum energy cost of irreversible computation is $kT \\ln(2)$ per bit (imported from Landauer). Perfect computation (omniscience, perfect simulation, entropy reversal) is impossible in principle. These limits were established by Landauer, Bremermann, Bekenstein, and Lloyd; the framework provides interpretive unification, not novel derivation.',
+      epistemicStatus: 'interpreted',
       dependsOn: ['A1', 'A2', 'thm-landauer-principle', 'thm-second-law'],
     },
     {
