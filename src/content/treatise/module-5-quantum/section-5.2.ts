@@ -100,11 +100,11 @@ export const section5_2: Section = {
     },
   ],
   keyPoints: [
-    'No continuous quantity can be accessed by any OLU - this is universal',
-    'Specifying continuous position requires infinite distinctions, hence infinite energy',
-    'All properties (time, momentum, energy, fields) must be effectively discrete',
-    'Different observers access different resolution scales based on energy budgets',
-    'The Planck scale represents an absolute limit where even infinite energy fails',
-    'Quantum mechanics describes the regime between observer-dependent and Planck-scale discreteness',
+    '[DERIVED] No continuous quantity can be accessed by any OLU---this follows necessarily from the two axioms',
+    '[DERIVED] Specifying continuous position requires infinite distinctions, hence infinite energy',
+    '[DERIVED] All properties (time, momentum, energy, fields) must be effectively discrete for any observer',
+    '[DERIVED] Different observers access different resolution scales based on energy budgets',
+    '[INTERPRETED] The Planck scale represents an absolute limit---this is consistent with our framework but the specific value is imported from physics',
+    '[INTERPRETED] Quantum mechanics describes the regime between observer-dependent and Planck-scale discreteness',
   ],
 };

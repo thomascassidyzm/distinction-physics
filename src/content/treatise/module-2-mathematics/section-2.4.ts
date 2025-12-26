@@ -2,13 +2,14 @@ import type { Section } from '../types';
 
 export const section2_4: Section = {
   id: '2.4',
-  title: 'The Emergence of Number from Iterated Distinction',
-  epistemicStatus: 'derived',
+  title: 'Number Understood Through Iterated Distinction',
+  subtitle: 'An Interpretive Account [INTERPRETED]',
+  epistemicStatus: 'interpreted',
   content: [
     {
       type: 'paragraph',
       content:
-        'The natural numbers emerge from the simplest possible pattern: iterated application of the boundary-drawing operation. This is perhaps the most fundamental example of mathematics emerging from stable distinction patterns.',
+        'The natural numbers can be understood through the lens of iterated boundary-drawing. This section offers an interpretation of number through distinction-vocabulary, showing consistency between arithmetic and the framework. We do not derive the natural numbers from our axioms—we show that number is consistent with distinction-primacy.',
     },
     {
       type: 'heading',
@@ -151,31 +152,31 @@ export const section2_4: Section = {
     {
       type: 'theorem',
       id: 'thm-inevitability-naturals',
-      label: 'theorem',
+      label: 'proposition',
       number: '2.4',
-      name: 'Inevitability of Natural Numbers',
+      name: 'Consistency of Natural Numbers with Distinction-Making [INTERPRETED]',
       statement:
-        'Any OLU that can (1) make at least one distinction, (2) iterate the distinction-making process, and (3) distinguish one iteration count from another will necessarily arrive at a structure isomorphic to the natural numbers.',
-      epistemicStatus: 'derived',
+        'Any OLU that can (1) make at least one distinction, (2) iterate the distinction-making process, and (3) distinguish one iteration count from another will arrive at a structure isomorphic to the natural numbers. **Epistemic note**: This shows consistency between number and distinction-making, not a derivation of number from axioms. Number exists; we show it fits with the framework.',
+      epistemicStatus: 'interpreted',
       dependsOn: ['axiom-1', 'axiom-2', 'def-successor'],
     },
     {
       type: 'paragraph',
       content:
-        'This is why counting feels so fundamental—it does not depend on culture, language, or even biology. It depends only on having the capacity for iterated distinction-making, which is the minimal capacity for any OLU.',
+        'This interpretation suggests why counting feels so fundamental—it is consistent with the capacity for iterated distinction-making, which is the minimal capacity for any OLU.',
       emphasis: 'key',
     },
     {
       type: 'paragraph',
       content:
-        'The natural numbers are not a human invention. They are the most stable discrete structure possible—the thermodynamic attractor for iterated distinction-making.',
+        'Viewed through the framework, the natural numbers can be understood as a stable discrete structure—interpretable as a thermodynamic attractor for iterated distinction-making. This is consistency with distinction-primacy, not derivation from scratch.',
     },
   ],
   keyPoints: [
-    'Natural numbers emerge from iterated boundary-drawing operations',
-    'Each number represents a stable configuration of maintained distinctions',
-    'Arithmetic operations are boundary manipulations: addition combines, multiplication repeats, subtraction removes, division partitions',
-    'The sequence 0, 1, 2, 3, ... represents minimal-energy distinction configurations',
-    'Any OLU capable of iterated distinction-making will discover the natural numbers',
+    '[INTERPRETED] Natural numbers can be understood through iterated boundary-drawing operations',
+    '[INTERPRETED] Each number represents a stable configuration of maintained distinctions',
+    '[INTERPRETED] Arithmetic operations as boundary manipulations: addition combines, multiplication repeats, subtraction removes, division partitions',
+    '[INTERPRETED] The sequence 0, 1, 2, 3, ... as minimal-energy distinction configurations',
+    '[INTERPRETED] Number is consistent with distinction-primacy—this is an interpretive claim',
   ],
 };

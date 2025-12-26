@@ -2,19 +2,25 @@ import type { Section } from '../types';
 
 export const section3_3: Section = {
   id: '3.3',
-  title: 'Qualia: What Boundary Maintenance Feels Like from Within',
-  epistemicStatus: 'conjectured',
+  title: 'Qualia: What Boundary Maintenance Feels Like from Within [INTERPRETED]',
+  epistemicStatus: 'interpreted',
   content: [
+    {
+      type: 'note',
+      variant: 'editorial',
+      content:
+        '**Epistemic status: INTERPRETED.** This section offers a philosophical reframing of qualia using distinction-vocabulary. The claim that qualia ARE the interior perspective on boundary maintenance is interpretive vocabulary—a proposed way of thinking about the relationship, not a scientific explanation or proof.',
+    },
     {
       type: 'heading',
       level: 2,
-      content: 'The Hard Problem Reframed',
+      content: 'The Hard Problem Relocated (Not Solved)',
       id: 'hard-problem-reframed',
     },
     {
       type: 'paragraph',
       content:
-        'The "hard problem" of consciousness asks: why do physical processes generate subjective experiences with specific qualities? Why is there "something it feels like" to see red, taste salt, or feel pain? Our framework transforms this problem.',
+        'The "hard problem" of consciousness asks: why do physical processes generate subjective experiences with specific qualities? Why is there "something it feels like" to see red, taste salt, or feel pain? Our framework **relocates** this problem—it does NOT solve it.',
     },
     {
       type: 'heading',
@@ -133,10 +139,11 @@ export const section3_3: Section = {
     },
   ],
   keyPoints: [
-    'Qualia are the internal perspective on boundary-maintenance processes',
-    'The same process appears as physical activity from outside and felt quality from inside',
-    'Ineffability, intrinsicality, privacy, and immediacy all follow from the inside/outside distinction',
-    'Conscious experience is necessarily granular due to finite energy budgets',
-    'Apparent continuity emerges from integration of discrete distinction-states',
+    '[INTERPRETED] Qualia as the internal perspective on boundary-maintenance—philosophical vocabulary, not proof',
+    '[INTERPRETED] The same process appears as physical from outside and felt from inside—a reframing',
+    '[INTERPRETED] Ineffability, intrinsicality, privacy, and immediacy explained through inside/outside framing',
+    '[INTERPRETED] Conscious experience as granular due to finite energy—interpretation of effective discreteness',
+    '[INTERPRETED] Apparent continuity as emergent from discrete states—interpretive claim',
+    'This reframing RELOCATES the hard problem—it does NOT solve why there is experience at all',
   ],
 };

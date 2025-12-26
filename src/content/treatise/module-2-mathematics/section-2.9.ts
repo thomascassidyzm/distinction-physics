@@ -2,13 +2,20 @@ import type { Section } from '../types';
 
 export const section2_9: Section = {
   id: '2.9',
-  title: 'The Unreasonable Effectiveness of Mathematics Explained',
-  epistemicStatus: 'derived',
+  title: 'The Unreasonable Effectiveness of Mathematics Illuminated',
+  subtitle: 'An Interpretive Account [INTERPRETED]',
+  epistemicStatus: 'interpreted',
   content: [
     {
       type: 'paragraph',
       content:
-        'Eugene Wigner\'s famous 1960 essay asked why mathematics is so unreasonably effective in describing physical reality. Our framework provides the answer.',
+        'Eugene Wigner\'s famous 1960 essay asked why mathematics is so unreasonably effective in describing physical reality. Our framework offers an interpretive lens for understanding this puzzle—not a derivation from axioms, but a way of seeing consistency.',
+    },
+    {
+      type: 'note',
+      variant: 'sidenote',
+      content:
+        '**Epistemic note**: This section is [INTERPRETED]. We offer a perspective on why mathematics and physics align—this is interpretive vocabulary, not proof.',
     },
     {
       type: 'heading',
@@ -201,10 +208,10 @@ export const section2_9: Section = {
     },
   ],
   keyPoints: [
-    'Mathematics and physics share a common origin in boundary-drawing under energy constraints',
-    'The effectiveness of mathematics is not unreasonable but necessary—observation requires stable patterns',
-    'Mathematical structures are thermodynamic attractors: energy-efficient, stable, composable, universal',
-    'Different physical domains require different mathematics reflecting their distinct boundary conditions',
-    'New physics may require new mathematics as we encounter novel distinction patterns',
+    '[INTERPRETED] Mathematics and physics share a common origin in boundary-drawing under energy constraints',
+    '[INTERPRETED] The effectiveness of mathematics is not unreasonable but necessary—observation requires stable patterns',
+    '[INTERPRETED] Mathematical structures as thermodynamic attractors: energy-efficient, stable, composable, universal',
+    '[INTERPRETED] Different physical domains require different mathematics reflecting their distinct boundary conditions',
+    '[INTERPRETED] New physics may require new mathematics as we encounter novel distinction patterns',
   ],
 };

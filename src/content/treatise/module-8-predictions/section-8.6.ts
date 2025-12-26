@@ -3,12 +3,14 @@ import type { Section } from '../types';
 export const section8_6: Section = {
   id: '8.6',
   title: 'Comparison with Competing Theories',
+  subtitle: 'Honest Assessment of What Distinguishes the Framework',
   epistemicStatus: 'contested',
   content: [
     {
       type: 'paragraph',
       content:
-        'How do our predictions differ from standard physics and competing frameworks? We present honest comparisons, acknowledging both genuine distinctions and areas of overlap.',
+        '**Critical Assessment**: How does this framework compare with standard physics and competing approaches? We present honest comparisons, acknowledging that for most currently testable phenomena, the framework makes IDENTICAL predictions to standard physics. The genuine differences are primarily interpretive, not predictive.',
+      emphasis: 'key',
     },
     {
       type: 'heading',
@@ -250,12 +252,12 @@ export const section8_6: Section = {
     },
   ],
   keyPoints: [
-    'For standard QM and thermodynamics: we offer derivation and ontological grounding, not novel predictions',
-    'For consciousness theories (IIT, GWT): we add self-reference requirement, potentially distinguishable with artificial systems',
-    'For Wolfram: epistemological vs. ontological discreteness - explanatory difference, not decisive test',
-    'For RQM: we predict energy signatures of measurement that RQM does not address',
-    'Most distinctive predictions concern measurement energetics and learning efficiency',
-    'Framework\'s primary value may be unificatory rather than predictively novel - connects disparate domains under common ontology',
-    'Honest acknowledgment: we derive what others assume but rarely predict different outcomes for currently testable experiments',
+    '[INTERPRETED] For standard QM and thermodynamics: we offer interpretive vocabulary and ontological grounding, NOT novel predictions',
+    '[CONTESTED] For consciousness theories (IIT, GWT): we add self-reference requirement, but consciousness verification is notoriously difficult',
+    '[INTERPRETED] For Wolfram: epistemological vs. ontological discreteness---explanatory difference, not decisive empirical test',
+    '[POTENTIALLY NOVEL] For RQM: we predict energy signatures of measurement that RQM does not address',
+    '[EPISTEMIC HONESTY] For currently testable phenomena, the framework makes IDENTICAL predictions to standard physics',
+    'The framework\'s genuine value is unificatory vocabulary, not predictive novelty for established physics',
+    'Honest acknowledgment: we interpret what others assume, but rarely predict different outcomes for currently testable experiments',
   ],
 };

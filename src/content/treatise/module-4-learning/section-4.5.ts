@@ -2,13 +2,14 @@ import type { Section } from '../types';
 
 export const section4_5: Section = {
   id: '4.5',
-  title: 'Forgetting: Boundary Decay and Energy Economics',
+  title: 'Forgetting: Entropy Reclaiming Distinction Patterns [INTERPRETED]',
+  subtitle: 'The Natural Thermodynamic Direction Reasserted',
   epistemicStatus: 'interpreted',
   content: [
     {
       type: 'paragraph',
       content:
-        'Forgetting is not a system failure but an inevitable consequence of finite energy budgets. From the dynamism implication of Section 0.3, we know that all boundaries require continuous energy investment to maintain. When energy is withdrawn, boundaries decay.',
+        '**Forgetting is entropy winning.** It is not a system failure but the natural thermodynamic direction reasserting itself when anti-entropic investment ceases. From the dynamism implication of Section 0.3, we know that all boundaries require continuous energy investment to maintain. When energy is withdrawn, boundaries decay—entropy reclaims the ordered patterns that learning had built.',
       emphasis: 'key',
     },
     {
@@ -214,11 +215,13 @@ export const section4_5: Section = {
     },
   ],
   keyPoints: [
+    'Forgetting is entropy reclaiming: the natural thermodynamic direction reasserted [INTERPRETED]',
     'Forgetting is boundary decay when energy is not invested in maintenance',
     'Passive decay is thermodynamically free; active forgetting costs energy',
-    'Different distinction types have different maintenance costs and decay rates',
-    'Forgetting is adaptive: it frees resources for new distinction-making',
+    'Different distinction types have different maintenance costs and decay rates [INTERPRETED]',
+    'Forgetting is adaptive: it frees resources for new anti-entropic building',
     'Learning redistributes costs across time, not just reduces them',
-    'The spacing effect emerges from reconstruction being more effective than maintenance',
+    'The spacing effect emerges from reconstruction being more effective than maintenance [INTERPRETED]',
   ],
 };
+

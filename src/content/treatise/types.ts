@@ -1,5 +1,5 @@
 /**
- * Distinction Physics: Academic Treatise Type Definitions
+ * Distinction as Primitive: Academic Treatise Type Definitions
  *
  * A comprehensive type system for rendering scholarly content with:
  * - Hierarchical structure (Module → Section → Subsection)
@@ -19,7 +19,11 @@
 export type EpistemicStatus =
   | 'established'   // Grounded in thermodynamics, information theory, or experimental confirmation
   | 'derived'       // Follows logically from axioms with explicit derivation
+  | 'interpreted'   // Existing physics/phenomena reframed through distinction-vocabulary
+  | 'imported'      // Brought in from established physics (e.g., Landauer's principle)
+  | 'consistent'    // Post-hoc consistency with known physics (not temporal prediction)
   | 'contested'     // Alternative interpretations exist; we defend one position
+  | 'conjectured'   // Speculative extension beyond what axioms force
   | 'open'          // Genuinely unresolved; active research question
   | 'speculative';  // Exploratory extension, not yet validated
 

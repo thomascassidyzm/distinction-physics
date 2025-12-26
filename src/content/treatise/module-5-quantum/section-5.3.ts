@@ -8,7 +8,7 @@ export const section5_3: Section = {
     {
       type: 'paragraph',
       content:
-        'Quantum superposition is often presented as a deep mystery: How can a particle be "in two places at once"? The distinction framework dissolves this mystery entirely.',
+        'Quantum superposition is often presented as a deep mystery: How can a particle be "in two places at once"? The distinction framework offers an **interpretive lens** for understanding this phenomenon. **Note: This is interpretation, not derivation. The mathematical structure of superposition (Hilbert space, complex amplitudes) is imported from quantum mechanics. We provide conceptual vocabulary, not replacement physics.**',
     },
     {
       type: 'definition',
@@ -140,10 +140,10 @@ export const section5_3: Section = {
     },
   ],
   keyPoints: [
-    'Superposition represents undistinguished possibilities, not objects "in two places at once"',
-    'Possibilities remain undistinguished because no OLU has invested the energy to distinguish them',
-    'Asking about definite properties before distinction is like asking if 7 is larger than blue',
-    'Wave-particle duality dissolves: "wave" means undistinguished possibilities, "particle" means distinguished location',
-    'Complementarity is a direct consequence of distinction economics, not metaphysical mystery',
+    '[INTERPRETED] Superposition can be understood as undistinguished possibilities, not objects "in two places at once"',
+    '[INTERPRETED] Possibilities remain undistinguished because no OLU has invested the energy to distinguish them',
+    '[INTERPRETED] Wave-particle duality can be reframed: "wave" as undistinguished possibilities, "particle" as distinguished location',
+    '[INTERPRETED] Complementarity can be viewed as a consequence of distinction economics',
+    'This is conceptual vocabulary for understanding QM, not derivation of the superposition formalism',
   ],
 };

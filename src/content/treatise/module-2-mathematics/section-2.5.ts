@@ -2,13 +2,20 @@ import type { Section } from '../types';
 
 export const section2_5: Section = {
   id: '2.5',
-  title: 'The Emergence of Logic from Boundary Stability',
-  epistemicStatus: 'derived',
+  title: 'Logic Understood Through Boundary Stability',
+  subtitle: 'An Interpretive Account [INTERPRETED]',
+  epistemicStatus: 'interpreted',
   content: [
     {
       type: 'paragraph',
       content:
-        'Logical operations emerge from the stability properties of boundaries. Logic is not an arbitrary formal system but the formalization of how boundary states can be reliably combined and maintained.',
+        'Logical operations can be understood through the lens of boundary stability. This section offers an interpretation of logic through distinction-vocabulary, showing consistency between logical structure and the framework. We do not derive logic from our axioms—we show that logic is consistent with distinction-primacy.',
+    },
+    {
+      type: 'note',
+      variant: 'sidenote',
+      content:
+        '**Epistemic note**: This entire section is [INTERPRETED]. Logic exists independently; we offer a lens for understanding it through distinction-vocabulary.',
     },
     {
       type: 'heading',
@@ -94,33 +101,28 @@ export const section2_5: Section = {
     {
       type: 'theorem',
       id: 'thm-law-identity',
-      label: 'theorem',
-      name: 'Law of Identity',
-      statement: '$A = A$: A maintained boundary is identical to itself.',
-      proof:
-        'This is the minimal assertion possible—a boundary is what it is.',
-      epistemicStatus: 'derived',
+      label: 'proposition',
+      name: 'Law of Identity [INTERPRETED]',
+      statement: '$A = A$: A maintained boundary is identical to itself. **Interpretation**: This can be understood as the minimal assertion possible—a boundary is what it is.',
+      epistemicStatus: 'interpreted',
     },
     {
       type: 'theorem',
       id: 'thm-law-non-contradiction',
-      label: 'theorem',
-      name: 'Law of Non-Contradiction',
+      label: 'proposition',
+      name: 'Law of Non-Contradiction [INTERPRETED]',
       statement:
-        '$\\neg(A \\land \\neg A)$: A boundary cannot be simultaneously maintained and not maintained.',
-      proof:
-        'This is not an arbitrary axiom but a physical necessity—a boundary either has energy invested in it or it does not.',
-      epistemicStatus: 'derived',
+        '$\\neg(A \\land \\neg A)$: A boundary cannot be simultaneously maintained and not maintained. **Interpretation**: In distinction-vocabulary, this reflects that a boundary either has energy invested in it or it does not.',
+      epistemicStatus: 'interpreted',
     },
     {
       type: 'theorem',
       id: 'thm-law-excluded-middle',
-      label: 'theorem',
-      name: 'Law of Excluded Middle',
+      label: 'proposition',
+      name: 'Law of Excluded Middle [INTERPRETED]',
       statement:
-        '$A \\lor \\neg A$: Either a boundary is maintained or it is not.',
-      proof: 'There is no third option for discrete boundaries.',
-      epistemicStatus: 'derived',
+        '$A \\lor \\neg A$: Either a boundary is maintained or it is not. **Interpretation**: In distinction-vocabulary, there is no third option for discrete boundaries.',
+      epistemicStatus: 'interpreted',
     },
     {
       type: 'paragraph',
@@ -184,15 +186,15 @@ export const section2_5: Section = {
     {
       type: 'paragraph',
       content:
-        'This explains why logic feels necessary. Logical laws describe the most stable patterns of boundary maintenance and combination. Violating logic does not just lead to "wrong answers"—it leads to boundary configurations that require more energy to maintain than alternatives.',
+        'This interpretation suggests why logic feels necessary. Through distinction-vocabulary, logical laws can be understood as stable patterns of boundary maintenance and combination. This is consistency with the framework, not derivation of logic from axioms.',
       emphasis: 'key',
     },
   ],
   keyPoints: [
-    'Truth values are boundary states: TRUE means maintained, FALSE means not maintained',
-    'Logical operations are boundary combinations: NOT inverts, AND requires both, OR requires at least one, IMPLIES creates dependency',
-    'The laws of classical logic (identity, non-contradiction, excluded middle) are maximally stable boundary patterns',
-    'Non-classical logics arise when boundary conditions differ from the binary ideal',
-    'Logical inference rules are energy-efficient—they propagate truth without additional energy investment',
+    '[INTERPRETED] Truth values as boundary states: TRUE means maintained, FALSE means not maintained',
+    '[INTERPRETED] Logical operations as boundary combinations: NOT inverts, AND requires both, OR requires at least one, IMPLIES creates dependency',
+    '[INTERPRETED] The laws of classical logic (identity, non-contradiction, excluded middle) viewed as maximally stable boundary patterns',
+    '[INTERPRETED] Non-classical logics arise when boundary conditions differ from the binary ideal',
+    '[INTERPRETED] Logical inference rules as energy-efficient—a proposed interpretation',
   ],
 };

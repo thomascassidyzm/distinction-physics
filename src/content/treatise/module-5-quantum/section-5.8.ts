@@ -8,7 +8,7 @@ export const section5_8: Section = {
     {
       type: 'paragraph',
       content:
-        'Classical physics emerges when quantum distinction patterns become energetically cheap and stable at macroscopic scales:',
+        'Classical physics can be **interpreted** as emerging when quantum distinction patterns become energetically cheap and stable at macroscopic scales. **Note: This is interpretation, not derivation. Decoherence theory and the classical limit are imported from established physics. We provide conceptual vocabulary for understanding the quantum-classical transition, not alternative physics.**',
     },
     {
       type: 'math',
@@ -90,10 +90,10 @@ export const section5_8: Section = {
     },
   ],
   keyPoints: [
-    'Classical physics emerges when quantum distinction patterns become energetically cheap and stable',
-    'Decoherence spreads distinction information across environmental degrees of freedom beyond practical recovery',
-    'Amplification transforms small quantum distinctions into macroscopically stable patterns through reinforcing interactions',
-    'Redundancy creates robustness by distributing the same distinction pattern across many environmental particles',
-    'The classical world is the quantum world viewed at resolution scales where distinctions are cheap and stable',
+    '[INTERPRETED] Classical physics can be understood as emerging when distinction patterns become energetically cheap and stable',
+    '[IMPORTED] Decoherence theory is imported from established physics---we interpret it through distinction vocabulary',
+    '[INTERPRETED] Amplification and redundancy can be viewed as processes that stabilize distinction patterns',
+    '[INTERPRETED] The classical world can be understood as the quantum world viewed at resolution scales where distinctions are cheap',
+    'This is philosophical interpretation of the quantum-classical transition, not derivation of decoherence',
   ],
 };

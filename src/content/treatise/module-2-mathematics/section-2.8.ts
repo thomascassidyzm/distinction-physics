@@ -2,13 +2,20 @@ import type { Section } from '../types';
 
 export const section2_8: Section = {
   id: '2.8',
-  title: 'The Emergence of Complex Numbers and Higher Structures',
-  epistemicStatus: 'derived',
+  title: 'Complex Numbers and Higher Structures Through Distinction',
+  subtitle: 'An Interpretive Account [INTERPRETED]',
+  epistemicStatus: 'interpreted',
   content: [
     {
       type: 'paragraph',
       content:
-        'Advanced mathematical structures emerge as OLUs discover increasingly efficient ways to organize distinction patterns. Complex numbers, groups, rings, fields, categories—all represent stable patterns that enable more powerful reasoning than simpler structures alone.',
+        'Advanced mathematical structures can be understood through the lens of efficient distinction organization. Complex numbers, groups, rings, fields, categories—all can be interpreted as stable patterns that enable more powerful reasoning than simpler structures alone. We do not derive these structures from our axioms; we show consistency.',
+    },
+    {
+      type: 'note',
+      variant: 'sidenote',
+      content:
+        '**Epistemic note**: This entire section is [INTERPRETED]. These mathematical structures exist independently; we offer a lens for understanding them through distinction-vocabulary.',
     },
     {
       type: 'heading',
@@ -97,9 +104,9 @@ export const section2_8: Section = {
     },
   ],
   keyPoints: [
-    'Complex numbers emerge as the most efficient representation of rotational and phase distinctions',
-    'Groups formalize symmetry—what remains invariant under transformation',
-    'Category theory captures meta-level distinctions: patterns of patterns',
-    'Higher mathematical structures represent increasingly abstract but thermodynamically stable distinction patterns',
+    '[INTERPRETED] Complex numbers as efficient representation of rotational and phase distinctions',
+    '[INTERPRETED] Groups as formalizations of symmetry—what remains invariant under transformation',
+    '[INTERPRETED] Category theory as meta-level distinctions: patterns of patterns',
+    '[INTERPRETED] Higher mathematical structures as increasingly abstract but thermodynamically stable distinction patterns',
   ],
 };

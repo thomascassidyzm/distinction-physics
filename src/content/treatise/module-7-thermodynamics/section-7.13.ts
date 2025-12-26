@@ -169,10 +169,10 @@ export const section7_13: Section = {
     },
   ],
   keyPoints: [
-    'Landauer\'s principle (2012) demonstrates consistency with minimum energy costs for distinctions',
-    'Maxwell\'s demon experiments confirm information processing incurs thermodynamic costs',
-    'Many results predate the framework---it provides interpretation rather than strict prediction',
-    'Testable predictions include: complexity-energy scaling, learning efficiency, resolution costs',
+    '[IMPORTED] Landauer\'s principle (confirmed 2012) demonstrates consistency with minimum energy costs for distinctions',
+    '[IMPORTED] Maxwell\'s demon experiments confirm information processing incurs thermodynamic costs',
+    'Many results predate the framework—it provides interpretation rather than strict prediction',
+    '[CONJECTURED] Testable predictions include: complexity-energy scaling, learning efficiency, resolution costs',
     'Intellectual honesty requires distinguishing consistency demonstrations from genuine predictions',
   ],
 };

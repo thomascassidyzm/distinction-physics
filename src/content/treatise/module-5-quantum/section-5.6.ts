@@ -284,11 +284,11 @@ export const section5_6: Section = {
     },
   ],
   keyPoints: [
-    'The Born rule is interpreted within, not derived from, the distinction framework',
-    'Probability amplitudes plausibly reflect energy costs of actualization, but the $|\\alpha|^2$ form is not derived',
-    'Why complex numbers? Why squaring? These remain open questions',
-    'Honest acknowledgment: we derive conceptual structure but not all mathematical details',
+    '[IMPORTED] The Born rule ($P(i) = |\\alpha_i|^2$) is imported from quantum mechanics, not derived from our axioms',
+    '[INTERPRETED] Probability amplitudes can be interpreted as reflecting relative energy costs of distinction actualization',
+    '[IMPORTED] The $|\\alpha|^2$ form, complex number structure, and normalization are imported from QM formalism',
+    'Honest acknowledgment: we provide conceptual vocabulary but do not derive the Born rule',
     'The framework gains credibility by being explicit about its limits',
-    'Future work may close the gap between interpretation and derivation',
+    'This is a model of epistemic honesty---acknowledging what we can and cannot claim',
   ],
 };

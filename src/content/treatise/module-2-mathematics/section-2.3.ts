@@ -2,19 +2,26 @@ import type { Section } from '../types';
 
 export const section2_3: Section = {
   id: '2.3',
-  title: 'The Emergence of Sets from Boundary-Drawing',
-  epistemicStatus: 'derived',
+  title: 'Sets Understood Through Boundary-Drawing',
+  subtitle: 'An Interpretive Account [INTERPRETED]',
+  epistemicStatus: 'interpreted',
   content: [
     {
       type: 'heading',
       level: 2,
-      content: 'Sets as Boundary Operations',
+      content: 'Sets as Boundary Operations [INTERPRETED]',
       id: 'sets-as-boundaries',
     },
     {
       type: 'paragraph',
       content:
-        'The concept of a set—a collection of distinct entities considered as a single object—emerges directly from the act of drawing boundaries. This is not a metaphorical description but a literal account of what set formation is.',
+        'The concept of a set—a collection of distinct entities considered as a single object—can be understood through the lens of boundary-drawing. This section offers an interpretation of set theory through distinction-vocabulary, showing consistency between set-theoretic structure and the framework. We do not derive set theory from our axioms.',
+    },
+    {
+      type: 'note',
+      variant: 'sidenote',
+      content:
+        '**Epistemic note**: This section is [INTERPRETED]. We are showing that set theory is consistent with distinction-primacy, not that set theory follows necessarily from the two axioms. Set theory exists independently; we offer a lens for understanding it.',
     },
     {
       type: 'heading',
@@ -178,26 +185,26 @@ export const section2_3: Section = {
       id: 'thm-set-theory-grounding',
       label: 'proposition',
       number: '2.4',
-      name: 'Physical Grounding of Set Theory',
+      name: 'Physical Grounding of Set Theory [INTERPRETED]',
       statement:
-        'Set theory is grounded not in abstract logic but in the physics of boundary-drawing under energy constraints. Set operations formalize the stable patterns of boundary combination that any distinction-making system will converge upon.',
-      epistemicStatus: 'derived',
+        'Set theory can be understood as grounded in the physics of boundary-drawing under energy constraints. Set operations can be interpreted as stable patterns of boundary combination. **Epistemic note**: This is an interpretive claim, not a derivation—set theory stands independently of our framework; we show consistency.',
+      epistemicStatus: 'interpreted',
       dependsOn: ['def-first-order-boundary', 'def-second-order-boundary', 'A1', 'A2'],
     },
     {
       type: 'paragraph',
       content:
-        'This grounds set theory not in abstract logic but in the physics of boundary-drawing under energy constraints.',
+        'This interpretation views set theory through the physics of boundary-drawing under energy constraints. The correspondence is illuminating but does not replace set theory with something derived from our axioms.',
       emphasis: 'conclusion',
     },
   ],
   keyPoints: [
-    'Sets emerge from two levels of boundary-drawing: first-order (member distinctions) and second-order (membership boundary)',
-    'The energy cost of a set is the sum of member distinction costs plus the membership boundary cost',
-    'Set membership is binary because boundaries are discrete for finite-energy observers',
-    'The empty set is the minimal-energy set structure',
-    'Infinite sets can only be accessed through compressed representations, finite samples, or limit processes',
-    'Set operations (union, intersection, complement, subset) are boundary operations',
-    'Set-theoretic laws reflect thermodynamically stable patterns of boundary combination',
+    '[INTERPRETED] Sets can be understood as two levels of boundary-drawing: first-order (member distinctions) and second-order (membership boundary)',
+    '[INTERPRETED] The energy cost of a set can be viewed as the sum of member distinction costs plus the membership boundary cost',
+    '[INTERPRETED] Set membership is binary—consistent with boundaries being discrete for finite-energy observers',
+    '[INTERPRETED] The empty set as minimal-energy set structure',
+    '[INTERPRETED] Infinite sets can only be accessed through compressed representations, finite samples, or limit processes',
+    '[INTERPRETED] Set operations (union, intersection, complement, subset) viewed as boundary operations',
+    '[INTERPRETED] Set-theoretic laws as thermodynamically stable patterns—a proposed correspondence',
   ],
 };

@@ -219,11 +219,11 @@ export const section5_4: Section = {
     },
   ],
   keyPoints: [
-    'Uncertainty is a resource allocation constraint, not a metaphysical mystery',
-    'The framework shows consistency with uncertainty, not derivation of it (R3)',
-    'Complementary observables compete for finite distinction-making resources',
-    'Planck\'s constant sets the fundamental exchange rate between complementary distinctions',
-    'Perfect certainty would require infinite energy unavailable to any observer',
-    'This interpretation preserves all empirical content while removing metaphysical strangeness',
+    '[INTERPRETED] Uncertainty can be viewed as a resource allocation constraint',
+    '[INTERPRETED] The framework shows consistency with uncertainty, not derivation of it',
+    '[INTERPRETED] Complementary observables can be understood as competing for finite distinction-making resources',
+    '[IMPORTED] Planck\'s constant and the specific form of the uncertainty relation are imported from QM',
+    '[INTERPRETED] The interpretation provides conceptual vocabulary while preserving all empirical content',
+    'This is philosophical interpretation, not replacement of the Heisenberg uncertainty principle',
   ],
 };

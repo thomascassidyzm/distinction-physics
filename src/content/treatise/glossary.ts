@@ -1,5 +1,5 @@
 /**
- * Distinction Physics: Glossary
+ * Distinction as Primitive: Glossary
  *
  * Canonical definitions of key terms used throughout the treatise.
  * These definitions are authoritative and should be referenced when
@@ -232,7 +232,7 @@ export const glossary: GlossaryEntry[] = [
   {
     id: 'hard-problem',
     term: 'Hard Problem of Consciousness',
-    definition: 'The question of why physical processes generate subjective experiences with specific qualities. In our framework, this transforms from an explanatory gap to a perspective shift: qualia ARE boundary maintenance as experienced from within.',
+    definition: 'The question of why physical processes generate subjective experiences with specific qualities. In our framework, the hard problem is RELOCATED, not solved: we reframe qualia as boundary maintenance experienced from within, but this does not explain why there is experience at all. The framework offers vocabulary, not solution.',
     firstAppearance: '3.2',
     relatedTerms: ['qualia', 'consciousness'],
     seeAlso: ['Chalmers, 1995'],

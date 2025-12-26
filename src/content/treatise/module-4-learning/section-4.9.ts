@@ -2,14 +2,14 @@ import type { Section } from '../types';
 
 export const section4_9: Section = {
   id: '4.9',
-  title: 'Consistency Demonstrations and Empirical Validation',
-  subtitle: 'Where the Framework Aligns with Known Results',
+  title: 'Empirical Validation and Practical Implementation',
+  subtitle: 'Where the Framework Aligns with Known Results and Working Systems',
   epistemicStatus: 'consistent',
   content: [
     {
       type: 'paragraph',
       content:
-        'The thermodynamic framework generates specific, testable claims about learning. Importantly, these are not novel predictions in the strong scientific sense---rather, they are **consistency demonstrations** showing that the framework aligns with what neuroscience and cognitive psychology have already established. This alignment provides evidential support: the framework would be falsified if it predicted outcomes contradicted by existing data.',
+        'The thermodynamic framework generates specific, testable claims about learning. Importantly, these are not novel predictions in the strong scientific sense---rather, they are **consistency demonstrations** showing that the framework aligns with what neuroscience and cognitive psychology have already established. Beyond theoretical consistency, the framework has been **practically validated through implemented learning systems**.',
     },
     {
       type: 'note',
@@ -126,6 +126,41 @@ export const section4_9: Section = {
     {
       type: 'heading',
       level: 2,
+      content: 'Practical Implementation: Working Learning Systems',
+      id: 'practical-implementation',
+    },
+    {
+      type: 'paragraph',
+      content:
+        'Beyond theoretical consistency, the framework\'s learning interpretation has been validated through **working implementations**:',
+    },
+    {
+      type: 'list',
+      style: 'bullet',
+      items: [
+        {
+          content:
+            '**SSi (Spaced Repetition System)** — Implements the spacing effect as thermodynamically optimal reconstruction timing. Items are reviewed at intervals calculated to maximize the boundary-reconstruction benefit.',
+        },
+        {
+          content:
+            '**Zenjin (Structured Learning)** — Implements hierarchical chunking principles. Content is organized into consolidatable units with explicit structure to facilitate anti-entropic pattern building.',
+        },
+        {
+          content:
+            '**Alexander (AI Tutoring)** — Implements adaptive distinction-building. The system assesses where a learner\'s distinction boundaries are fuzzy and targets instruction to sharpen those boundaries efficiently.',
+        },
+      ],
+    },
+    {
+      type: 'paragraph',
+      content:
+        'These systems are not merely tools that "happen to work"—they are **engineered implementations of the thermodynamic learning principles** described in this module. Their effectiveness provides practical validation that the anti-entropic interpretation of learning is productive.',
+      emphasis: 'key',
+    },
+    {
+      type: 'heading',
+      level: 2,
       content: 'What Would Falsify the Framework',
       id: 'falsification',
     },
@@ -175,10 +210,12 @@ export const section4_9: Section = {
     },
   ],
   keyPoints: [
-    'The framework aligns with established empirical findings about learning, practice, and memory',
+    'The framework aligns with established empirical findings about learning, practice, and memory [CONSISTENT]',
     'Consistency demonstrations show the framework does not contradict known results',
     'Novel predictions await experimental investigation with current neuroscience methods',
-    'Motor learning shows 30-50% metabolic cost reductions, confirming thermodynamic optimization',
+    'Motor learning shows 30-50% metabolic cost reductions, confirming thermodynamic optimization [IMPORTED]',
+    'Practical validation: SSi, Zenjin, and Alexander implement these principles in working systems',
     'Clear falsification criteria maintain the framework\'s scientific status',
   ],
 };
+

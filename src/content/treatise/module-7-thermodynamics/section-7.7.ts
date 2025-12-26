@@ -117,10 +117,10 @@ export const section7_7: Section = {
     },
   ],
   keyPoints: [
-    'Heat death is not just physical stasis but the end of accessible reality',
-    'At maximum entropy, no free energy remains to maintain any distinctions',
-    'No OLUs can exist at equilibrium--differential response requires energy',
-    'Meaningful existence requires accessibility to some observer',
-    'The framework unifies epistemology and thermodynamics through distinction-making constraints',
+    '[INTERPRETED] Heat death is not just physical stasis but the end of accessible reality',
+    '[INTERPRETED] At maximum entropy, no free energy remains to maintain any distinctions',
+    '[INTERPRETED] No OLUs can exist at equilibrium—differential response requires energy',
+    '[INTERPRETED] Meaningful existence requires accessibility to some observer',
+    '[INTERPRETED] The framework unifies epistemology and thermodynamics through distinction-making constraints',
   ],
 };

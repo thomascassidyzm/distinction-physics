@@ -3,39 +3,63 @@ import type { Section } from '../types';
 export const section9_7: Section = {
   id: '9.7',
   title: 'Concluding Statement',
-  subtitle: 'Interpretive Vocabulary for Understanding Physics',
+  subtitle: 'What Distinction as Primitive Provides',
   epistemicStatus: 'interpreted',
   content: [
     {
       type: 'paragraph',
       content:
-        'We began with two axioms: All distinctions cost energy (grounded in Landauer). All observers-like-us have finite energy budgets. Through these axioms, we INTERPRETED the structures of mathematics, consciousness, learning, quantum mechanics, spacetime, and thermodynamics---while importing substantial physics from established theory.',
+        'We began with a transcendental observation: **you cannot state any theory without first making distinctions.** From this philosophical foundation, we grounded the framework in two physical axioms: distinctions cost energy [IMPORTS Landauer], and OLUs have finite energy budgets. Through this lens, we developed vocabulary for understanding physics, mathematics, and cognition.',
     },
     {
       type: 'paragraph',
       content:
-        'The interpretation revealed conceptual unity: these structures can be understood through common vocabulary---distinction-making under constraint. Physics, mathematics, and consciousness share this interpretive lens. However, the unity is conceptual, not derivational: we provide vocabulary while importing substantial physics.',
+        'The framework provides **conceptual unification through common vocabulary**, not derivation from first principles. Physics, mathematics, and cognition can be understood through distinction-making under constraint. We import substantial physics (Landauer, statistical mechanics, quantum formalism). The framework complements existing physics rather than replacing it.',
       emphasis: 'key',
     },
     {
       type: 'paragraph',
       content:
-        'This interpretation REFRAMES old problems and generates new questions. The hard problem is reframed (consciousness as distinction-making), but WHY it feels like something remains unexplained. The measurement problem is reframed (measurement as distinction creation), but we provide vocabulary, not mechanism. The framework provides perspective, not proof.',
+        'Classic problems are REFRAMED, not dissolved. The hard problem becomes: why does distinction-making feel like something? The measurement problem becomes: what is distinction creation? These are new questions, not answers. The framework provides perspective and vocabulary, not proof or mechanism.',
+    },
+    {
+      type: 'heading',
+      level: 2,
+      content: 'The Genuine Contributions',
+      id: 'genuine-contributions',
     },
     {
       type: 'paragraph',
       content:
-        'New questions emerge: What is the minimum energy for specific distinctions? What is the quantum gravity of distinction space? How do multiple observers\' distinctions interrelate? These questions are open, but they are tractable---they point toward experimental and theoretical programs.',
+        'Three contributions should not be overclaimed or underclaimed:',
+    },
+    {
+      type: 'list',
+      style: 'numbered',
+      items: [
+        {
+          content:
+            '**The Transcendental Argument [DERIVED]**: Distinction-making is necessarily prior to all theorizing. You cannot deny distinction-primacy without making distinctions in the denial. This is genuinely novel philosophical reasoning.',
+        },
+        {
+          content:
+            '**Learning as Key Domain [DERIVED + INTERPRETED]**: Understanding learning as anti-entropic distinction pattern building—novice to expert as few distinctions to many, skill as stable patterns, forgetting as entropy. This is the framework\'s most developed application.',
+        },
+        {
+          content:
+            '**Unifying Vocabulary [INTERPRETED]**: A common lens across physics, mathematics, and cognition. This illuminates connections without deriving domains from scratch.',
+        },
+      ],
     },
     {
       type: 'paragraph',
       content:
-        'The framework is bold but not grandiose. It offers a perspective, not a final theory. It invites investigation, not belief. It may be wrong in detail while right in direction. Only careful work---theoretical, experimental, philosophical---will determine its ultimate value.',
+        'The framework is a proposal, not a proof. It invites investigation, not belief. It may be wrong in detail while right in direction. Only careful work—theoretical, experimental, philosophical—will determine its ultimate value.',
     },
     {
       type: 'paragraph',
       content:
-        'But if the framework is even approximately correct, it offers something rare: a unified foundation for understanding reality from the inside, as observers who make distinctions under constraint. It offers not a view from nowhere but a view from somewhere---from the situated perspective of finite beings in a cosmos they are just beginning to understand.',
+        'But if the framework is even approximately correct, it offers something valuable: a perspective for understanding reality from the inside, as observers who make distinctions under constraint. Not a view from nowhere, but a view from somewhere—from the situated perspective of finite beings.',
       emphasis: 'key',
     },
     {
@@ -47,13 +71,13 @@ export const section9_7: Section = {
     {
       type: 'paragraph',
       content:
-        '**From two axioms, an interpretive vocabulary. From constraints, conceptual unity. From distinction-making, a unifying perspective (while importing substantial physics).**',
+        '**The transcendental priority of distinction. The energy cost of distinguishing. The finite budget of observers. From these, a unifying vocabulary for understanding physics, mathematics, and cognition—while importing substantial physics and acknowledging what we cannot do.**',
       emphasis: 'key',
     },
     {
       type: 'paragraph',
       content:
-        'This is what we offer: not certainty, but clarity; not answers, but better questions; not the end of inquiry, but its foundation.',
+        'This is what we offer: not certainty, but perspective; not final answers, but productive questions; not the end of inquiry, but vocabulary for continuing it.',
     },
     {
       type: 'paragraph',
@@ -66,25 +90,24 @@ export const section9_7: Section = {
       title: 'Module 9 Key Takeaways',
       variant: 'takeaways',
       points: [
-        'All modules share one interpretive strategy: understanding through distinction-making vocabulary',
-        'The framework provides conceptual unification while importing substantial physics (Landauer, stat mech, quantum formalism)',
-        'The hard problem is REFRAMED, not dissolved: why distinction-making feels like something remains unexplained',
-        'The measurement problem is REFRAMED: vocabulary, not mechanism',
-        'Most "confirmed predictions" are post-hoc consistency with established physics',
-        'The framework\'s genuine contribution is interpretive vocabulary and conceptual coherence',
-        'The framework is a proposal---its value is unification, not predictive novelty',
-        'From two axioms, an interpretive vocabulary. From constraints, conceptual unity.',
-        'Epistemic honesty: we provide vocabulary, not derivation from first principles',
+        'The transcendental argument is the genuine novelty [DERIVED]: you cannot state any theory without first making distinctions',
+        'Learning as distinction pattern building is the key contribution domain [DERIVED + INTERPRETED]',
+        'The framework provides unifying vocabulary across physics, mathematics, and cognition [INTERPRETED]',
+        'The framework imports substantial physics: Landauer, statistical mechanics, quantum formalism',
+        'The hard problem and measurement problem are REFRAMED, not dissolved',
+        'The framework is complementary to physics, not a replacement for it',
+        'Epistemic honesty: claims are labeled as DERIVED, INTERPRETED, IMPORTED, or CONJECTURED',
+        'The invitation: consider whether distinction-making vocabulary provides productive unification',
       ],
     },
   ],
   keyPoints: [
-    'From two axioms we INTERPRETED physics through distinction vocabulary (while importing Landauer, stat mech, quantum formalism)',
-    'The framework provides conceptual unification through shared vocabulary, not derivation from first principles',
-    'Old problems are REFRAMED, not dissolved: we provide vocabulary, not explanations of qualia or measurement mechanisms',
-    'Most "confirmed predictions" are post-hoc consistency with established physics; N4 (measurement energy) may be genuinely novel',
-    'The framework\'s genuine contribution is interpretive vocabulary and conceptual coherence',
-    'From two axioms, an interpretive vocabulary. From constraints, conceptual unity.',
-    'Epistemic honesty requires distinguishing interpretation from derivation, post-hoc from prediction',
+    'The transcendental argument [DERIVED]: distinction-making is necessarily prior to all theorizing',
+    'Learning as distinction pattern building is the key contribution domain [DERIVED + INTERPRETED]',
+    'Unifying vocabulary across domains [INTERPRETED], importing substantial physics',
+    'Problems are REFRAMED, not dissolved: vocabulary, not explanations',
+    'The framework is complementary to physics, not a replacement',
+    'Epistemic honesty: DERIVED, INTERPRETED, IMPORTED, CONJECTURED labels applied throughout',
+    'The framework is a proposal inviting investigation, not a proof demanding belief',
   ],
 };

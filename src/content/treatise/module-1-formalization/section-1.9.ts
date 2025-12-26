@@ -98,10 +98,10 @@ export const section1_9: Section = {
     },
   ],
   keyPoints: [
-    'Pure isolation is impossible for OLUs: distinction-making requires continuous energy coupling (Theorem 1.11)',
-    'OLU metabolism generalizes biological metabolism: $\\dot{E}_{\\text{metabolism}} = \\sum_{(i,j)} E_{ij}/\\tau_{ij}$',
-    'All distinction-making systems—living and non-living—share this metabolic requirement',
-    'No observer is truly independent; all are embedded in energy-exchange networks',
-    'Observation is inherently participatory and relational, not passive and detached',
+    '[DERIVED] Pure isolation is impossible for OLUs: distinction-making requires continuous energy coupling',
+    '[CONJECTURED] OLU metabolism formula is a proposed formalization, not strictly derived',
+    '[INTERPRETED] All distinction-making systems—living and non-living—share metabolic requirements',
+    '[DERIVED] No observer is truly independent; all are embedded in energy-exchange networks',
+    '[INTERPRETED] Observation is inherently participatory and relational, not passive and detached',
   ],
 };

@@ -2,18 +2,18 @@ import type { Section } from '../types';
 
 export const section7_3: Section = {
   id: '7.3',
-  title: 'The Second Law Interpreted',
+  title: 'The Second Law Interpreted [INTERPRETED]',
   epistemicStatus: 'interpreted',
   content: [
     {
       type: 'paragraph',
       content:
-        'The Second Law of Thermodynamics states that in closed systems, entropy tends to increase. In our framework, this empirically established law can be interpreted through the lens of distinction-making, though this interpretation requires importing statistical mechanics.',
+        'The Second Law of Thermodynamics states that in closed systems, entropy tends to increase. **We IMPORT the Second Law from thermodynamics and then INTERPRET it through distinction-vocabulary.** We do not derive the Second Law from our axioms alone—this requires statistical mechanics.',
     },
     {
       type: 'heading',
       level: 3,
-      content: 'Standard vs. Derived Formulation',
+      content: 'Standard vs. Framework Formulation',
     },
     {
       type: 'paragraph',
@@ -29,12 +29,12 @@ export const section7_3: Section = {
     {
       type: 'heading',
       level: 3,
-      content: 'The Four-Step Derivation',
+      content: 'The Four-Step Interpretation',
     },
     {
       type: 'paragraph',
       content:
-        'Here is how the Second Law can be understood through our axioms (note: Step 3 imports statistical mechanics, making this an interpretation rather than pure derivation):',
+        'Here is how the Second Law can be understood through our axioms. **Note: Step 3 imports statistical mechanics, making this an interpretation rather than pure derivation:**',
     },
     {
       type: 'derivation',
@@ -106,12 +106,12 @@ export const section7_3: Section = {
     },
   ],
   keyPoints: [
-    'The Second Law is interpreted through our axioms, but requires importing statistical mechanics',
+    '[INTERPRETED] The Second Law is interpreted through our axioms, but requires importing statistical mechanics',
     'Step 1: Maintenance requires energy (Axiom 1)',
     'Step 2: Energy budgets are finite (Axiom 2)',
-    'Step 3: Random fluctuations favor dispersion [IMPORTED from statistical mechanics, not from axioms]',
-    'Step 4: Therefore distinctions decay - this connects to entropy increase',
-    'Closed systems cannot maintain distinctions indefinitely; open systems can by importing energy',
-    'Living systems maintain local order by exporting disorder to their environment',
+    '[IMPORTED] Step 3: Random fluctuations favor dispersion—from statistical mechanics, not from axioms',
+    'Step 4: Therefore distinctions decay—this connects to entropy increase',
+    '[INTERPRETED] Closed systems cannot maintain distinctions indefinitely; open systems can by importing energy',
+    '[INTERPRETED] Living systems maintain local order by exporting disorder to their environment',
   ],
 };

@@ -2,13 +2,14 @@ import type { Section } from '../types';
 
 export const section4_3: Section = {
   id: '4.3',
-  title: 'Chunking: Compression for Efficiency',
+  title: 'Chunking: Compression for Efficiency [INTERPRETED]',
+  subtitle: 'Anti-Entropic Organization of Distinction Hierarchies',
   epistemicStatus: 'interpreted',
   content: [
     {
       type: 'paragraph',
       content:
-        'Chunking, the grouping of multiple elements into single units, emerges directly from thermodynamic constraints on distinction-making.',
+        'Chunking, the grouping of multiple elements into single units, emerges directly from thermodynamic constraints on distinction-making. It represents a fundamental **anti-entropic strategy**: instead of maintaining many separate distinctions (high entropy, high energy), the system organizes them into hierarchical structures (low entropy, lower maintenance cost).',
       emphasis: 'key',
     },
     {
@@ -156,10 +157,12 @@ export const section4_3: Section = {
     },
   ],
   keyPoints: [
+    'Chunking is an anti-entropic strategy: organizing distinctions into low-maintenance hierarchies [INTERPRETED]',
     'Working memory capacity derives from energy budget divided by per-distinction maintenance cost',
     'Chunks are higher-order distinctions encompassing multiple lower-order distinctions',
     'Chunking reduces energy cost by storing internal structure as compressed patterns',
-    'Expert advantage lies in chunking efficiency, not raw cognitive capacity',
+    'Expert advantage lies in chunking efficiency, not raw cognitive capacity [INTERPRETED]',
     'Learning progresses through increasingly sophisticated chunking hierarchies',
   ],
 };
+

@@ -163,10 +163,10 @@ export const section7_8: Section = {
     },
   ],
   keyPoints: [
-    'Work is directed distinction-making: $dW = P(D) \\cdot dB$',
-    'Heat is undirected energy that disperses boundaries: $dQ = T \\cdot dS$',
-    'The First Law conserves total boundary-maintenance capacity',
-    'The Second Law states that net distinction-making cannot exceed directed energy input',
-    'At equilibrium, no work is possible because no distinctions exist to exploit',
+    '[INTERPRETED] Work is directed distinction-making: $dW = P(D) \\cdot dB$',
+    '[INTERPRETED] Heat is undirected energy that disperses boundaries: $dQ = T \\cdot dS$',
+    '[INTERPRETED] The First Law conserves total boundary-maintenance capacity',
+    '[INTERPRETED] The Second Law states that net distinction-making cannot exceed directed energy input',
+    '[INTERPRETED] At equilibrium, no work is possible because no distinctions exist to exploit',
   ],
 };

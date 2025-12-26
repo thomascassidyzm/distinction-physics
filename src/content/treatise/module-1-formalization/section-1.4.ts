@@ -47,7 +47,7 @@ The OLU accesses an effectively discrete version of $Q$ with resolution determin
     {
       type: 'paragraph',
       content:
-        'This theorem establishes that the quantized nature of observable physics is not a mysterious fact about nature but a necessary consequence of finite-energy distinction-making. The precision with which an OLU can distinguish continuous quantities is bounded by available energy.',
+        '**Epistemic status [DERIVED]**: This theorem genuinely follows from the axioms (given the IMPORTED Landauer limit). The precision with which an OLU can distinguish continuous quantities is bounded by available energy. This is not a claim about what reality "is in itself" but about what any finite-energy observer can access.',
       emphasis: 'key',
     },
     {
@@ -96,10 +96,10 @@ The OLU accesses an effectively discrete version of $Q$ with resolution determin
     },
   ],
   keyPoints: [
-    'The precision with which an OLU can distinguish continuous quantities is bounded by available energy',
-    'Arbitrarily fine distinctions require arbitrarily large energy',
-    'All observable quantities must be effectively discrete for any finite-energy observer',
-    'Spatial resolution scales inversely with energy: finer distinctions require more energy',
-    'Quantization is derived from the axioms, not assumed',
+    '[DERIVED] The precision with which an OLU can distinguish continuous quantities is bounded by available energy',
+    '[DERIVED] Arbitrarily fine distinctions require arbitrarily large energy',
+    '[DERIVED] All observable quantities must be effectively discrete for any finite-energy observer',
+    '[DERIVED] Spatial resolution scales inversely with energy: finer distinctions require more energy',
+    'Effective discreteness follows from axioms + IMPORTED Landauer limit—not a claim about reality-in-itself but about accessible reality',
   ],
 };

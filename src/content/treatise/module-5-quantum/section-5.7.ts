@@ -8,7 +8,7 @@ export const section5_7: Section = {
     {
       type: 'paragraph',
       content:
-        'Quantum entanglement represents systems that share distinction structure - systems that cannot be fully distinguished from each other because their distinction patterns are intrinsically connected.',
+        'Quantum entanglement can be **interpreted** as systems that share distinction structure---systems that cannot be fully distinguished from each other because their distinction patterns are intrinsically connected. **Note: This is interpretation, not derivation. The entanglement formalism and Bell inequality violations are imported from quantum mechanics. We provide conceptual vocabulary for understanding these phenomena, not alternative physics.**',
     },
     {
       type: 'math',
@@ -117,10 +117,10 @@ export const section5_7: Section = {
     },
   ],
   keyPoints: [
-    'Entanglement represents systems that share distinction structure and cannot be fully distinguished from each other',
-    'Making a distinction about one subsystem constrains which distinctions remain available for the other',
-    'Non-locality is apparent, not real - correlations exist in the shared distinction pattern, not as physical signals',
-    'Bell inequality violations are expected because there are no pre-existing definite properties before distinction-making',
-    'The EPR paradox dissolves when we recognize that shared distinction structure IS the element of reality',
+    '[INTERPRETED] Entanglement can be understood as systems that share distinction structure',
+    '[INTERPRETED] Making a distinction about one subsystem can be seen as constraining available distinctions for the other',
+    '[IMPORTED] Bell inequality violations and EPR correlations are imported from quantum mechanics',
+    '[INTERPRETED] The distinction framework provides vocabulary for understanding non-locality without faster-than-light signaling',
+    'This is philosophical interpretation of entanglement, not derivation of the entanglement formalism',
   ],
 };

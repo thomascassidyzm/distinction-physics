@@ -2,14 +2,20 @@ import type { Section } from '../types';
 
 export const section3_9: Section = {
   id: '3.9',
-  title: 'Variations in Consciousness: States and Conditions',
-  subtitle: 'How Boundary Maintenance Explains Conscious State Variations',
-  epistemicStatus: 'derived',
+  title: 'Variations in Consciousness: States and Conditions [INTERPRETED]',
+  subtitle: 'Interpreting Conscious State Variations Through Distinction-Vocabulary',
+  epistemicStatus: 'interpreted',
   content: [
+    {
+      type: 'note',
+      variant: 'editorial',
+      content:
+        '**Epistemic status: INTERPRETED.** This section interprets variations in conscious states (waking, dreaming, meditation, psychedelics) through boundary-maintenance vocabulary. The phenomenology is IMPORTED from psychology and contemplative traditions. Our contribution is reframing these as variations in energy investment and boundary clarity—interpretation, not derivation.',
+    },
     {
       type: 'paragraph',
       content:
-        'Conscious experience varies dramatically across states (waking, sleeping, drugged) and conditions (meditation, disorder, altered physiology). The framework explains these variations as changes in the character and energy investment of boundary maintenance.',
+        'Conscious experience varies dramatically across states (waking, sleeping, drugged) and conditions (meditation, disorder, altered physiology). The framework **interprets** these variations as changes in the character and energy investment of boundary maintenance.',
     },
     {
       type: 'heading',
@@ -103,10 +109,11 @@ export const section3_9: Section = {
     },
   ],
   keyPoints: [
-    'Consciousness clarity is determined by the ratio of boundary energy to noise',
-    'Different conscious states reflect different energy investments in boundary maintenance',
-    'Drowsiness, dreaming, and deep sleep form a spectrum of declining boundary energy',
-    'Psychedelic and meditative states involve altered self/not-self boundary permeability',
-    'Flow states demonstrate that self-monitoring can be reduced while maintaining task integration',
+    '[INTERPRETED] Consciousness clarity as ratio of boundary energy to noise—proposed vocabulary',
+    '[INTERPRETED] Different states as different energy investments—interpretation, not derivation',
+    '[INTERPRETED] Drowsiness, dreaming, sleep as declining boundary energy spectrum—reframing',
+    '[INTERPRETED] Psychedelics and meditation as altered boundary permeability—philosophical vocabulary',
+    '[INTERPRETED] Flow states as reduced self-monitoring with maintained task integration—interpretive claim',
+    '[IMPORTED from psychology/contemplative traditions] Phenomenology of altered states',
   ],
 };

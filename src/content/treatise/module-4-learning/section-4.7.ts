@@ -2,13 +2,14 @@ import type { Section } from '../types';
 
 export const section4_7: Section = {
   id: '4.7',
-  title: 'Transfer Learning: When Distinction Structures Generalize',
+  title: 'Transfer Learning: Distinction Structure Reuse [INTERPRETED]',
+  subtitle: 'Leveraging Anti-Entropic Investment Across Domains',
   epistemicStatus: 'interpreted',
   content: [
     {
       type: 'paragraph',
       content:
-        'Transfer occurs when learning in one domain facilitates learning in another. This happens when the distinction structures developed for the first domain are applicable to the second.',
+        'Transfer occurs when learning in one domain facilitates learning in another. This happens when the distinction structures developed for the first domain are applicable to the second. Transfer is **leveraging prior anti-entropic investment**: the energy spent building distinction patterns in domain A reduces the energy needed to build related patterns in domain B.',
     },
     {
       type: 'heading',
@@ -141,10 +142,12 @@ export const section4_7: Section = {
     },
   ],
   keyPoints: [
+    'Transfer is leveraging prior anti-entropic investment across domains [INTERPRETED]',
     'Transfer occurs when distinction structures developed for one domain apply to another',
     'Positive transfer happens when domains share underlying distinction structures',
-    'Transfer efficiency equals the ratio of shared to total distinctions needed',
+    'Transfer efficiency equals the ratio of shared to total distinctions needed [INTERPRETED]',
     'Negative transfer occurs when existing distinctions interfere with new ones',
-    'Meta-learning is higher-order optimization that improves future learning efficiency',
+    'Meta-learning is higher-order optimization that improves future anti-entropic efficiency',
   ],
 };
+

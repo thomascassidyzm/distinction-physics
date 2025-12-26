@@ -2,13 +2,14 @@ import type { Section } from '../types';
 
 export const section4_4: Section = {
   id: '4.4',
-  title: 'Automatization: Migrating to Lower-Energy Circuits',
+  title: 'Automatization: Migrating to Lower-Energy Circuits [INTERPRETED]',
+  subtitle: 'Anti-Entropic Stabilization Through Neural Consolidation',
   epistemicStatus: 'interpreted',
   content: [
     {
       type: 'paragraph',
       content:
-        'As skills are practiced, they migrate from conscious to automatic processing. Within the thermodynamic framework, this represents a transfer of distinction-making from high-energy to low-energy neural circuits.',
+        'As skills are practiced, they migrate from conscious to automatic processing. Within the thermodynamic framework, this represents a transfer of distinction-making from high-energy to low-energy neural circuits. This migration is **anti-entropic stabilization**: the distinction patterns become more resistant to decay by embedding in specialized, low-maintenance neural structures.',
       emphasis: 'key',
     },
     {
@@ -180,10 +181,12 @@ export const section4_4: Section = {
     },
   ],
   keyPoints: [
+    'Automatization is anti-entropic stabilization: embedding patterns in decay-resistant structures [INTERPRETED]',
     'Automatization transfers distinction-making from high-energy to low-energy neural circuits',
-    'The neural energy hierarchy ranges from expensive prefrontal cortex to efficient primary cortices',
-    'fMRI and metabolic studies confirm 30-50% energy reductions with practice',
-    'Conscious processing is expensive because it requires explicit boundary maintenance',
+    'The neural energy hierarchy ranges from expensive prefrontal cortex to efficient primary cortices [IMPORTED from neuroscience]',
+    'fMRI and metabolic studies confirm 30-50% energy reductions with practice [CONSISTENT with framework]',
+    'Conscious processing is expensive because it requires explicit boundary maintenance [INTERPRETED]',
     'Automatization frees consciousness for new learning while maintaining old skills cheaply',
   ],
 };
+

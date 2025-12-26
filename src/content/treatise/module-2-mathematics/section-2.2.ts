@@ -3,18 +3,25 @@ import type { Section } from '../types';
 export const section2_2: Section = {
   id: '2.2',
   title: 'Effective Discreteness and the Primacy of Discrete Mathematics',
-  epistemicStatus: 'derived',
+  subtitle: 'Connecting Derived Physics to Interpreted Mathematics',
+  epistemicStatus: 'interpreted',
   content: [
     {
       type: 'heading',
       level: 2,
-      content: 'Consequences for Mathematical Foundations',
+      content: 'Consequences for Mathematical Foundations [INTERPRETED]',
       id: 'consequences-foundations',
     },
     {
       type: 'paragraph',
       content:
-        'Our derivation of effective discreteness from the two axioms has immediate consequences for the foundations of mathematics. It explains a deep puzzle: why is discrete mathematics (sets, natural numbers, logic) foundational, while continuous mathematics (real analysis, calculus) is built on top of it?',
+        'Our derivation of effective discreteness from the two axioms (see Section 0.3) has interpretive consequences for understanding mathematical foundations. It offers an explanation for a deep puzzle: why is discrete mathematics (sets, natural numbers, logic) foundational, while continuous mathematics (real analysis, calculus) is built on top of it?',
+    },
+    {
+      type: 'note',
+      variant: 'technical',
+      content:
+        '**Epistemic status**: Effective discreteness is [DERIVED] from the axioms. The connection to why discrete mathematics is foundational is [INTERPRETED]—we are showing consistency, not proving that mathematics must be this way from our axioms alone.',
     },
     {
       type: 'paragraph',
@@ -23,12 +30,12 @@ export const section2_2: Section = {
     {
       type: 'theorem',
       id: 'thm-discrete-primacy',
-      label: 'theorem',
+      label: 'proposition',
       number: '2.2',
-      name: 'Primacy of Discrete Mathematics',
+      name: 'Primacy of Discrete Mathematics [INTERPRETED]',
       statement:
-        'Discrete mathematics formalizes patterns that any OLU can access. Continuous mathematics formalizes idealized limits that no OLU can fully access.',
-      epistemicStatus: 'derived',
+        'Discrete mathematics formalizes patterns that any OLU can access. Continuous mathematics formalizes idealized limits that no OLU can fully access. **Epistemic note**: This is an interpretive claim connecting derived effective discreteness to the structure of mathematics—it is consistency, not derivation.',
+      epistemicStatus: 'interpreted',
       dependsOn: ['A1', 'A2', 'thm-effective-discreteness'],
     },
     {
@@ -128,25 +135,25 @@ export const section2_2: Section = {
       id: 'thm-accessibility-direction',
       label: 'proposition',
       number: '2.3',
-      name: 'Direction of Mathematical Accessibility',
+      name: 'Direction of Mathematical Accessibility [INTERPRETED]',
       statement:
-        'Accessibility flows from discrete to continuous, never the reverse. Continuous mathematics must be constructed from discrete foundations because discrete patterns are directly accessible to finite-energy observers while continuous structures are not.',
-      epistemicStatus: 'derived',
+        'Accessibility flows from discrete to continuous, never the reverse. Continuous mathematics must be constructed from discrete foundations because discrete patterns are directly accessible to finite-energy observers while continuous structures are not. **Epistemic note**: This interpretation illuminates why foundational programs work the way they do—it does not derive the necessity of those programs from our axioms.',
+      epistemicStatus: 'interpreted',
       dependsOn: ['thm-discrete-primacy', 'A1', 'A2'],
     },
     {
       type: 'paragraph',
       content:
-        'Our framework provides the physical reason why this direction of construction is necessary: accessibility flows from discrete to continuous, never the reverse.',
+        'Our framework provides interpretive vocabulary for understanding why this direction of construction is natural: accessibility flows from discrete to continuous, never the reverse. This is consistency with the framework, not proof that mathematics must be this way.',
       emphasis: 'conclusion',
     },
   ],
   keyPoints: [
-    'Discrete mathematics is foundational because OLUs can directly access discrete distinction patterns',
-    'The precision of continuous quantity distinctions is bounded by available energy',
-    'Arbitrarily fine distinctions require arbitrarily large energy investment',
-    'OLUs work with continuous mathematics through approximations, limits, compressed representations, and coarse-graining',
-    'Historical mathematics developed discrete structures first because they are more directly accessible',
-    'Foundational programs ground continuous in discrete because accessibility flows from discrete to continuous',
+    '[INTERPRETED] Discrete mathematics is foundational because OLUs can directly access discrete distinction patterns',
+    '[DERIVED] The precision of continuous quantity distinctions is bounded by available energy (from effective discreteness)',
+    '[DERIVED] Arbitrarily fine distinctions require arbitrarily large energy investment',
+    '[INTERPRETED] OLUs work with continuous mathematics through approximations, limits, compressed representations, and coarse-graining',
+    '[INTERPRETED] Historical mathematics developed discrete structures first because they are more directly accessible',
+    '[INTERPRETED] Foundational programs ground continuous in discrete—this is consistent with the framework',
   ],
 };

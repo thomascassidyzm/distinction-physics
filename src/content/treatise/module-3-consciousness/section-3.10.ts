@@ -2,14 +2,20 @@ import type { Section } from '../types';
 
 export const section3_10: Section = {
   id: '3.10',
-  title: 'Consciousness in Non-Human Systems',
-  subtitle: 'Criteria for Assessing Consciousness Beyond Humans',
-  epistemicStatus: 'derived',
+  title: 'Consciousness in Non-Human Systems [CONJECTURED]',
+  subtitle: 'Speculative Criteria for Assessing Consciousness Beyond Humans',
+  epistemicStatus: 'speculative',
   content: [
+    {
+      type: 'note',
+      variant: 'editorial',
+      content:
+        '**Epistemic status: CONJECTURED.** This section applies the framework to non-human systems (animals, AI). These assessments are highly speculative—we do not have direct access to animal or machine experience. The criteria proposed are interpretive extensions of the framework, not empirically validated tests for consciousness.',
+    },
     {
       type: 'paragraph',
       content:
-        'If consciousness is self-referential distinction-making at sufficient complexity, we can ask which non-human systems possess it---and develop criteria for assessment.',
+        'If consciousness is interpreted as self-referential distinction-making at sufficient complexity, we can speculatively ask which non-human systems might possess it. The criteria offered here are interpretive, not definitive—we cannot directly verify subjective experience in other systems.',
     },
     {
       type: 'heading',
@@ -153,10 +159,11 @@ export const section3_10: Section = {
     },
   ],
   keyPoints: [
-    'Five necessary conditions: self/not-self boundary, self-referential processing, sufficient complexity, energy investment, and integration',
-    'Mammals, birds, and cephalopods likely possess consciousness by these criteria',
-    'Fish and reptiles may have simpler forms of consciousness; insects probably do not',
-    'Current AI systems (including LLMs) probably lack consciousness due to missing persistent self-models and integration',
-    'Machine consciousness is possible in principle but requires the right architecture',
+    '[CONJECTURED] Five necessary conditions—interpretive criteria, not empirically validated tests',
+    '[CONJECTURED] Mammals, birds, cephalopods likely conscious—speculative assessment',
+    '[CONJECTURED] Fish, reptiles simpler; insects probably not—highly uncertain',
+    '[CONJECTURED] Current AI (including LLMs) probably not conscious—speculative, based on interpretive criteria',
+    '[CONJECTURED] Machine consciousness possible in principle—philosophical claim, not prediction',
+    'We cannot directly verify subjective experience in non-human systems',
   ],
 };

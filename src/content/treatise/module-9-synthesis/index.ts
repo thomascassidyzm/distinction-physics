@@ -11,9 +11,9 @@ import { section9_7 } from './section-9.7';
 export const module9: Module = {
   number: 9,
   id: 'synthesis',
-  title: 'Synthesis and Future Directions',
-  subtitle: 'From Two Axioms, One Physics',
-  epistemicStatus: 'derived',
+  title: 'Synthesis: Honest Assessment',
+  subtitle: 'What the Framework Achieves and Does Not Achieve',
+  epistemicStatus: 'interpreted',
   sections: [
     section9_1,
     section9_2,
@@ -24,18 +24,18 @@ export const module9: Module = {
     section9_7,
   ],
   keyInsights: [
-    'All modules share a single explanatory strategy: what structures must emerge for finite observers making costly distinctions?',
-    'Physics, mathematics, and consciousness are not three things but one thing seen from different perspectives',
-    'The hard problem of consciousness dissolves: consciousness IS distinction-making',
-    'The measurement problem dissolves: measurement IS distinction creation',
-    'The framework is bold but humble: a perspective, not a final theory',
-    'New questions emerge that are tractable and point toward experimental programs',
-    'The invitation: consider whether distinction-making under energy constraints is the foundation from which all else follows',
+    'The transcendental argument is the genuine novelty: you cannot state any theory without first making distinctions',
+    'The framework provides unifying vocabulary across physics, mathematics, and cognition [INTERPRETED]',
+    'Two axioms ground the framework: distinctions cost energy [IMPORTS Landauer], OLUs have finite energy budgets',
+    'The hard problem is REFRAMED, not dissolved: we provide vocabulary, not explanation of qualia',
+    'The measurement problem is REFRAMED: vocabulary for understanding, not mechanism of collapse',
+    'The key contribution domain is learning: anti-entropic distinction pattern building',
+    'The framework is complementary to existing physics, not a replacement for it',
   ],
   connectionsToNext: [
-    'This completes the V7 treatise',
-    'Future work includes formal axiomatization, multi-observer physics, and quantum gravity',
-    'The framework invites investigation, not belief',
+    'This completes the treatise with epistemic honesty about what is derived, interpreted, and imported',
+    'Future work includes formal axiomatization, multi-observer physics, and experimental programs',
+    'The framework invites investigation through the lens of distinction-making vocabulary',
   ],
 };
 

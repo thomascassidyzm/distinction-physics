@@ -2,13 +2,20 @@ import type { Section } from '../types';
 
 export const section8_1: Section = {
   id: '8.1',
-  title: 'The Logic of Prediction in the Distinction Framework',
-  epistemicStatus: 'established',
+  title: 'The Logic of Consistency and Prediction',
+  subtitle: 'Distinguishing Genuine Predictions from Post-Hoc Interpretations',
+  epistemicStatus: 'interpreted',
   content: [
     {
       type: 'paragraph',
       content:
-        'Before cataloging the empirical claims of the framework, we must clarify what counts as a prediction and how predictions differ from interpretations. This distinction is crucial for intellectual honesty.',
+        'This module provides an epistemically honest assessment of the framework\'s empirical standing. **Most of what might be called "predictions" are actually consistency demonstrations with established physics.** The framework was designed to be consistent with known physics; showing that consistency is necessary for credibility but provides no independent validation.',
+      emphasis: 'key',
+    },
+    {
+      type: 'paragraph',
+      content:
+        'Before cataloging the empirical claims of the framework, we must clarify what counts as a genuine prediction and how predictions differ from post-hoc interpretations. This distinction is crucial for intellectual honesty.',
     },
     {
       type: 'heading',
@@ -185,11 +192,12 @@ export const section8_1: Section = {
     },
   ],
   keyPoints: [
-    'Type 1 claims (derivations) follow necessarily from axioms - strongest epistemic status',
-    'Type 2 claims (interpretations) are consistent but not necessary - useful for unification',
-    'Type 3 claims (conjectures) extend speculatively - held loosely pending development',
-    'Many "confirmed predictions" are actually consistency demonstrations with known physics',
-    'Genuine validation requires novel predictions, unification, and clear falsifiability',
-    'The derivation chain proceeds: Axioms -> Discreteness -> Quantization/Uncertainty -> Domain phenomena',
+    '[EPISTEMIC HONESTY] Most "confirmed predictions" are post-hoc consistency demonstrations, not temporal predictions',
+    '[DERIVED] Type 1 claims follow from axioms, but most established physics was known first (post-hoc, not predictive)',
+    '[INTERPRETED] Type 2 claims provide conceptual vocabulary for understanding physics, not novel predictions',
+    '[CONJECTURED] Type 3 claims extend speculatively into domains where axiom connection is weak',
+    'Genuine validation requires novel predictions that differ from standard physics; very few such predictions exist',
+    'The framework\'s primary value is unifying vocabulary across domains, not predictive novelty for known physics',
+    'The derivation chain: Axioms -> Discreteness -> Quantization/Uncertainty -> Domain phenomena (mostly post-hoc)',
   ],
 };

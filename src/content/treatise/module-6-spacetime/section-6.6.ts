@@ -2,56 +2,62 @@ import type { Section } from '../types';
 
 export const section6_6: Section = {
   id: '6.6',
-  title: 'The Space of Possible Boundaries',
-  epistemicStatus: 'speculative',
+  title: 'The Space of Possible Boundaries [HIGHLY SPECULATIVE]',
+  epistemicStatus: 'conjectured',
   content: [
+    {
+      type: 'note',
+      variant: 'editorial',
+      content:
+        '**EPISTEMIC WARNING: HIGHLY SPECULATIVE.** This section introduces "boundary space"—a speculative mathematical construct. This is philosophical conjecture, not established physics or mathematics. The concepts here are exploratory and may not prove fruitful. Readers should treat this as imaginative philosophy, not science.',
+    },
     {
       type: 'heading',
       level: 3,
-      content: 'Boundary Space',
+      content: 'Boundary Space [CONJECTURED CONSTRUCT]',
     },
     {
       type: 'paragraph',
       content:
-        'To deepen our understanding, we introduce "boundary space" or "distinction space"—the abstract space of all possible boundaries that could be drawn. Physical spacetime represents a particular low-dimensional projection of this larger space, constrained by energy requirements and stability considerations.',
+        'To explore possible extensions, we speculatively introduce "boundary space" or "distinction space"—a proposed abstract space of all possible boundaries that could be drawn. Physical spacetime might represent a particular low-dimensional projection of this larger space. **This is pure conjecture with no established physical or mathematical basis.**',
     },
     {
       type: 'definition',
       id: 'def-boundary-space',
-      term: 'Boundary Space',
+      term: 'Boundary Space [HIGHLY SPECULATIVE]',
       symbol: '\\mathcal{B}',
       definition:
-        '$\\mathcal{B} = \\{\\diamond(x,y) \\mid x,y \\in \\Omega, E(\\diamond) < \\infty\\}$, where $\\Omega$ represents all potentially distinguishable entities and $E(\\diamond)$ represents the energy cost of each distinction.',
+        '[CONJECTURED] $\\mathcal{B} = \\{\\diamond(x,y) \\mid x,y \\in \\Omega, E(\\diamond) < \\infty\\}$, where $\\Omega$ represents all potentially distinguishable entities and $E(\\diamond)$ represents the energy cost of each distinction. **This is a speculative construct, not established mathematics.**',
       intuition:
-        'Physical spacetime consists of the stable, energetically accessible boundary patterns within this larger abstract space.',
-      epistemicStatus: 'speculative',
+        'We conjecture that physical spacetime might consist of stable, energetically accessible boundary patterns within this larger abstract space. This is speculation.',
+      epistemicStatus: 'conjectured',
     },
     {
       type: 'heading',
       level: 3,
-      content: 'Why Four Dimensions?',
+      content: 'Why Four Dimensions? [HIGHLY SPECULATIVE]',
     },
     {
       type: 'paragraph',
       content:
-        'Why does spacetime have four dimensions (three spatial, one temporal)? Our framework suggests this reflects an optimal balance:',
+        'Why does spacetime have four dimensions (three spatial, one temporal)? Our framework speculatively suggests this might reflect an optimal balance. **This is pure conjecture—we do NOT derive dimensionality:**',
     },
     {
       type: 'paragraph',
       content:
-        '**Connectivity vs. Stability:** More dimensions allow richer boundary networks (more possible distinctions) but make those networks harder to stabilize (more maintenance costs). Four dimensions may represent the optimal trade-off for the energy scales characteristic of our universe.',
+        '**[CONJECTURED] Connectivity vs. Stability:** More dimensions might allow richer boundary networks (more possible distinctions) but might make those networks harder to stabilize (more maintenance costs). Four dimensions might represent an optimal trade-off. **This is speculation, not derivation.**',
       emphasis: 'key',
     },
     {
       type: 'paragraph',
       content:
-        '**Asymmetric Evolution:** The (3+1) signature—three spatial dimensions with positive metric signature, one temporal with negative—emerges because boundary patterns evolve asymmetrically. Time represents the direction of boundary evolution; space represents the arena of simultaneous boundary configurations.',
+        '**[CONJECTURED] Asymmetric Evolution:** The (3+1) signature—three spatial dimensions with positive metric signature, one temporal with negative—might emerge because boundary patterns evolve asymmetrically. Time might represent the direction of boundary evolution; space might represent the arena of simultaneous boundary configurations. **This is speculation.**',
     },
     {
       type: 'note',
       variant: 'technical',
       content:
-        'This is speculative interpretation rather than strict derivation. We do not claim to have proven that four dimensions are necessary, only that the framework provides a conceptual home for understanding dimensionality in terms of boundary-pattern stability.',
+        '**IMPORTANT:** This is speculative interpretation rather than any kind of derivation. We do NOT claim to have proven or derived that four dimensions are necessary. We do NOT explain dimensionality. We merely offer speculative vocabulary that may or may not prove useful.',
     },
     {
       type: 'heading',
@@ -89,11 +95,11 @@ export const section6_6: Section = {
     },
   ],
   keyPoints: [
-    'Boundary space is the abstract space of all possible boundaries: $\\mathcal{B} = \\{\\diamond(x,y) \\mid x,y \\in \\Omega, E(\\diamond) < \\infty\\}$',
-    'Physical spacetime is a stable, energetically accessible projection of this larger boundary space',
-    'Four-dimensionality may reflect optimal connectivity-stability trade-off for boundary networks',
-    'The (3+1) signature emerges from asymmetric boundary evolution: time as evolution direction, space as simultaneous configurations',
-    'Apparent continuity emerges from coarse-graining, high boundary density, and rapid discrete updates',
-    'Discrete vs. continuous describes resolution scales, not fundamentally different realities',
+    '[HIGHLY SPECULATIVE] Boundary space is a conjectured abstract construct, not established mathematics',
+    '[CONJECTURED] Physical spacetime might be a projection of larger boundary space—speculation only',
+    '[CONJECTURED] Four-dimensionality claims are speculative—we do NOT derive or explain dimensionality',
+    '[CONJECTURED] The (3+1) signature interpretation is speculation, not derivation',
+    '[INTERPRETED] Apparent continuity from coarse-graining is consistent with but not derived from axioms',
+    'This entire section is exploratory philosophy, not established science',
   ],
 };

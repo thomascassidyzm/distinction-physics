@@ -2,13 +2,20 @@ import type { Section } from '../types';
 
 export const section4_2: Section = {
   id: '4.2',
-  title: 'The Same/Different Duality: Foundation of All Learning',
+  title: 'The Same/Different Duality: The Originating Insight',
+  subtitle: 'Where the Framework Began',
   epistemicStatus: 'interpreted',
   content: [
     {
       type: 'paragraph',
       content:
-        'All learning reduces to processing similarity and difference. This is not merely a psychological observation but follows directly from the nature of distinction itself.',
+        '**This section describes the framework\'s originating insight.** The entire Distinction as Primitive framework emerged from observing a simple but fundamental operation: when a learner encounters something new, they ask "Is this the SAME as something I know, or DIFFERENT?"',
+      emphasis: 'key',
+    },
+    {
+      type: 'paragraph',
+      content:
+        'All learning reduces to processing similarity and difference. This is not merely a psychological observation but follows directly from the nature of distinction itself. This same/different lensing IS distinction-making in its most immediate, observable form.',
     },
     {
       type: 'paragraph',
@@ -130,11 +137,13 @@ export const section4_2: Section = {
     },
   ],
   keyPoints: [
-    'All learning reduces to processing similarity (same) and difference',
+    'The same/different duality is the ORIGINATING INSIGHT of the entire framework',
+    'All learning reduces to processing similarity (same) and difference [INTERPRETED]',
     'Same processing establishes inclusion zones; difference processing establishes exclusion zones',
     'The same/different duality operates at every level of learning, from perception to abstraction',
-    'Difference processing is typically more energy-intensive than same processing',
+    'Difference processing is typically more energy-intensive than same processing [INTERPRETED]',
     'This energy asymmetry explains novelty effects, recognition advantages, and prototype effects',
     'Learning optimizes by minimizing unnecessary difference processing while maintaining task-relevant sensitivity',
   ],
 };
+

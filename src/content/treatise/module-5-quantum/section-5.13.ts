@@ -14,13 +14,13 @@ export const section5_13: Section = {
     {
       type: 'heading',
       level: 2,
-      content: 'What We Have Derived',
+      content: 'What We Derive vs. What We Interpret',
       id: 'what-derived',
     },
     {
       type: 'paragraph',
       content:
-        'From just two axioms---that distinctions cost energy and observers have finite energy---we have shown that:',
+        'From just two axioms---that distinctions cost energy and observers have finite energy---we **derive** that:',
     },
     {
       type: 'list',
@@ -28,57 +28,83 @@ export const section5_13: Section = {
       items: [
         {
           content:
-            'All properties must be **effectively quantized** for any observer',
+            '[DERIVED] All properties must be **effectively quantized** for any observer (finite energy cannot access infinite distinctions)',
         },
         {
           content:
-            'Superposition is simply **undistinguished possibility**',
+            '[DERIVED] Different observers access different **resolution scales** based on energy budgets',
+        },
+      ],
+    },
+    {
+      type: 'paragraph',
+      content:
+        'We **interpret** quantum mechanics through this lens, providing conceptual vocabulary:',
+    },
+    {
+      type: 'list',
+      style: 'numbered',
+      items: [
+        {
+          content:
+            '[INTERPRETED] Superposition as **undistinguished possibility**',
         },
         {
           content:
-            'Uncertainty is **resource allocation**, not metaphysical mystery',
+            '[INTERPRETED] Uncertainty as **resource allocation**',
         },
         {
           content:
-            'Measurement is **distinction-making** requiring energy expenditure',
+            '[INTERPRETED] Measurement as **distinction-making** requiring energy expenditure',
         },
         {
           content:
-            'Entanglement is **shared distinction structure**',
+            '[INTERPRETED] Entanglement as **shared distinction structure**',
         },
         {
           content:
-            'Classical emergence occurs through **resolution economics**',
+            '[INTERPRETED] Classical emergence through **resolution economics**',
         },
       ],
     },
     {
       type: 'heading',
       level: 2,
-      content: 'What We Have Honestly Acknowledged',
+      content: 'What We Import from Established Physics',
       id: 'honest-limits',
     },
     {
       type: 'paragraph',
       content:
-        'The Born rule ($|\\alpha|^2$ probabilities) remains interpretive rather than rigorously derived. The role of complex numbers in quantum amplitudes is not explained by our axioms. Some elements of quantum formalism await deeper understanding.',
+        '**[IMPORTED] The following are brought in from quantum mechanics, not derived from our axioms:**',
+    },
+    {
+      type: 'list',
+      style: 'bullet',
+      items: [
+        { content: 'The Born rule ($|\\alpha|^2$ probabilities)' },
+        { content: 'Hilbert space structure and complex amplitudes' },
+        { content: 'The Schrodinger equation and unitary evolution' },
+        { content: 'The measurement postulate and projection operators' },
+        { content: 'Planck\'s constant and its specific value' },
+      ],
     },
     {
       type: 'note',
       variant: 'editorial',
       content:
-        'This acknowledgment of limits is essential to intellectual integrity. The distinction framework does not claim to derive EVERYTHING about quantum mechanics---it claims to derive the core conceptual structure while honestly noting what remains unexplained.',
+        'This acknowledgment of what we import is essential to intellectual integrity. The distinction framework provides **conceptual vocabulary** for understanding quantum mechanics, not a derivation of quantum mechanics from first principles. Quantum mechanics remains as it is---we offer a philosophical lens, not replacement physics.',
     },
     {
       type: 'heading',
       level: 2,
-      content: 'The Profound Reframe',
+      content: 'The Interpretive Reframe',
       id: 'profound-reframe',
     },
     {
       type: 'paragraph',
       content:
-        'Quantum mechanics is not strange because reality is strange. Quantum mechanics is the inevitable signature of how finite-energy observers interact with reality.',
+        'Quantum mechanics, viewed through this lens, can be understood as describing how finite-energy observers interact with reality. This is a **philosophical interpretation**, not a claim that quantum mechanics is "derived" or "explained away."',
       emphasis: 'key',
     },
     {
@@ -87,22 +113,22 @@ export const section5_13: Section = {
       items: [
         {
           content:
-            'The "measurement problem" dissolves because measurement just IS distinction-making',
+            '[INTERPRETED] The "measurement problem" gains conceptual clarity when measurement is understood as distinction-making',
         },
         {
           content:
-            'The "collapse of the wavefunction" is just the actualization of previously undistinguished possibilities',
+            '[INTERPRETED] Wavefunction "collapse" can be viewed as the actualization of previously undistinguished possibilities',
         },
         {
           content:
-            '"Spooky action at distance" is just shared distinction structure',
+            '[INTERPRETED] "Spooky action at distance" can be understood through shared distinction structure',
         },
       ],
     },
     {
       type: 'paragraph',
       content:
-        'Every apparent paradox reflects our evolved intuitions colliding with resolution scales for which we have no intuitive experience. We evolved to make cheap, stable distinctions at human scales. Quantum mechanics describes what happens at scales where distinctions are expensive and unstable---where the energy economics of observation cannot be ignored.',
+        'The framework offers vocabulary for thinking about quantum phenomena, not definitive solutions to foundational questions. Quantum mechanics remains the established physics; we provide a philosophical lens for understanding its features.',
     },
     {
       type: 'heading',
@@ -113,13 +139,13 @@ export const section5_13: Section = {
     {
       type: 'paragraph',
       content:
-        'This module has shown that the two axioms about distinction and energy provide a conceptually coherent framework for understanding quantum mechanics. We have interpreted quantum mechanics through the lens of resource-constrained distinction-making. The axioms do not logically generate the mathematical structure of quantum mechanics (Hilbert spaces, complex amplitudes, the Born rule), but they provide a natural conceptual home for understanding why quantum mechanics takes the form it does.',
+        'This module has shown that the two axioms about distinction and energy provide a conceptually coherent framework for **interpreting** quantum mechanics. The axioms do not logically generate the mathematical structure of quantum mechanics (Hilbert spaces, complex amplitudes, the Born rule), but they provide conceptual vocabulary for understanding why quantum mechanics has the features it does.',
       emphasis: 'key',
     },
     {
       type: 'paragraph',
       content:
-        'The mystery of quantum mechanics was never about reality. It was about our failure to recognize that observation itself is an energetic process with thermodynamic constraints. Once we recognize that distinction precedes and enables existence-as-distinct, and that distinction costs energy, quantum mechanics follows as inevitably as thermodynamics.',
+        '**Key clarification:** We do not claim that quantum mechanics "follows inevitably" from our axioms. Quantum mechanics is established physics that we interpret through the distinction lens. The framework is complementary to physics, not a derivation of it.',
     },
     {
       type: 'heading',
@@ -179,13 +205,13 @@ export const section5_13: Section = {
     {
       type: 'heading',
       level: 2,
-      content: 'The Final Word',
+      content: 'The Framework\'s Contribution',
       id: 'final-word',
     },
     {
       type: 'paragraph',
       content:
-        'Quantum mechanics is not the strange substrate beneath classical reality. It is the signature of what reality looks like when you cannot afford infinite distinctions. For observers-like-us, that is the only reality we can ever access.',
+        'Quantum mechanics can be understood through the lens of finite-energy observation. This is a philosophical interpretation that provides conceptual vocabulary, not a claim to have "solved" quantum mechanics or derived it from more fundamental principles. The framework is complementary to established physics, offering a way of thinking about quantum phenomena rather than replacing the physics itself.',
       emphasis: 'conclusion',
     },
     {
@@ -193,25 +219,23 @@ export const section5_13: Section = {
       title: 'Module 5 Key Takeaways',
       variant: 'takeaways',
       points: [
-        'Quantum mechanics is INTERPRETED through, not derived from, the distinction framework',
-        'Two axioms (distinction costs energy + finite budgets) provide conceptual foundation for understanding quantum principles',
-        'Superposition = undistinguished possibilities; Uncertainty = resource allocation',
-        'Measurement = distinction-making; Entanglement = shared distinction structure',
-        'The Born rule is interpreted but not derived (honest about limits)',
-        'Classical emergence occurs through resolution economics (decoherence, amplification, redundancy)',
-        'Different OLUs access different effective physics based on energy budgets',
-        '"Quantum weirdness" is the signature of finite-energy observation, not fundamental strangeness',
-        'Novel predictions include specific scaling laws and modified uncertainty relations',
-        'The quantum module bridges philosophical foundations and applications across physics and cognition',
+        '[INTERPRETED] Quantum mechanics is interpreted through, not derived from, the distinction framework---QM remains as it is',
+        '[DERIVED] Effective discreteness genuinely follows from the two axioms (finite energy cannot access infinite distinctions)',
+        '[INTERPRETED] Superposition, uncertainty, measurement, and entanglement are reframed through distinction vocabulary',
+        '[IMPORTED] The Born rule, Hilbert space, Schrodinger equation, and Planck\'s constant are imported from established physics',
+        '[CONJECTURED] Novel predictions (modified uncertainty, scaling laws) are speculative extensions beyond standard QM',
+        'The framework provides philosophical vocabulary for understanding quantum phenomena, not replacement physics',
+        'This is a meta-theory complementary to physics, not an alternative theory of quantum mechanics',
+        'Epistemic honesty: we distinguish clearly what is derived, interpreted, imported, and conjectured',
       ],
     },
   ],
   keyPoints: [
-    'Quantum mechanics is interpreted through two axioms: distinction costs energy and observers have finite energy',
-    'Superposition, uncertainty, measurement, and entanglement are reframed as aspects of finite-energy distinction-making',
-    'The Born rule and Hilbert space structure are imported from established physics, not derived',
-    'Quantum mechanics is understood as the signature of finite-energy observation, not fundamental strangeness',
-    'The framework provides a conceptually coherent interpretation of quantum principles, not a derivation',
-    'Quantum mechanics connects to spacetime (Module 6), thermodynamics (Module 7), consciousness (Module 3), and learning (Module 4)',
+    '[INTERPRETED] Quantum mechanics is interpreted through the distinction framework---QM remains as it is',
+    '[DERIVED] Effective discreteness follows from the two axioms (this is genuinely derived)',
+    '[INTERPRETED] Superposition, uncertainty, measurement, and entanglement are reframed through distinction vocabulary',
+    '[IMPORTED] The Born rule, Hilbert space, Schrodinger equation, and Planck\'s constant are imported',
+    'The framework is a philosophical meta-theory complementary to physics, not replacement physics',
+    'Epistemic honesty is central: we distinguish derived, interpreted, imported, and conjectured claims',
   ],
 };

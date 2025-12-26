@@ -111,10 +111,10 @@ export const section7_12: Section = {
     },
   ],
   keyPoints: [
-    'The Jarzynski equality: $\\langle e^{-W/kT} \\rangle = e^{-\\Delta F/kT}$ relates work to free energy',
-    'The Crooks theorem quantifies forward/reverse asymmetry in boundary transformations',
-    'Entropy-decreasing fluctuations are possible but exponentially improbable at scale',
-    'The Second Law is statistical, not absolute, but statistics are overwhelmingly one-directional',
-    'Non-equilibrium steady states maintain distinctions through continuous energy flow',
+    '[IMPORTED] The Jarzynski equality: $\\langle e^{-W/kT} \\rangle = e^{-\\Delta F/kT}$ relates work to free energy',
+    '[IMPORTED] The Crooks theorem quantifies forward/reverse asymmetry in transformations',
+    '[IMPORTED] Entropy-decreasing fluctuations are possible but exponentially improbable at scale',
+    '[IMPORTED] The Second Law is statistical—this understanding comes from Boltzmann, Jarzynski, Crooks',
+    '[INTERPRETED] Non-equilibrium steady states can be understood as maintaining distinctions through continuous energy flow',
   ],
 };

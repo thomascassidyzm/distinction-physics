@@ -16,9 +16,9 @@ import { section4_11 } from './section-4.11';
 export const module4: Module = {
   number: 4,
   id: 'learning',
-  title: 'Learning as Thermodynamic Optimization',
-  subtitle: 'How Distinction Networks Restructure for Efficiency',
-  epistemicStatus: 'derived',
+  title: 'Learning as Anti-Entropic Distinction Building',
+  subtitle: 'The Key Contribution Domain: Same/Different Lensing and Thermodynamic Optimization',
+  epistemicStatus: 'interpreted',
   sections: [
     section4_0,
     section4_1,
@@ -34,18 +34,20 @@ export const module4: Module = {
     section4_11,
   ],
   keyInsights: [
-    'Learning is the optimization of distinction-making efficiency over time',
-    'Practice reduces energy cost per distinction—mastery is automatization',
-    'Chunking compresses multiple distinctions into single higher-order boundaries',
-    'Forgetting is boundary decay when energy is not invested in maintenance',
-    'The spacing effect emerges from thermodynamics of boundary reconstruction',
-    'Transfer occurs when distinction structures generalize across domains',
-    'Skill acquisition follows a thermodynamic trajectory from high to low energy cost',
+    'THE KEY CONTRIBUTION: Learning is the framework\'s most developed application domain',
+    'The framework originated from observing same/different lensing in learning—this IS the core insight',
+    'Learning is ANTI-ENTROPIC: creating and maintaining stable distinction patterns against decay [INTERPRETED]',
+    'Expertise = efficiently maintained distinctions at fine grain; Forgetting = distinction pattern decay (entropy)',
+    'Practice reduces energy cost per distinction—mastery is automatization [INTERPRETED]',
+    'Chunking compresses multiple distinctions into single higher-order boundaries [INTERPRETED]',
+    'The spacing effect emerges from thermodynamics of boundary reconstruction [INTERPRETED]',
+    'Practical validation: SSi, Zenjin, and Alexander learning systems implement these principles',
   ],
   connectionsToNext: [
-    'Module 5 shows how the same thermodynamic constraints shape quantum mechanics',
+    'Module 5 interprets quantum mechanics through the same thermodynamic constraints',
     'The learning framework applies to scientific knowledge acquisition itself',
     'Expertise thresholds connect to consciousness complexity bounds from Module 3',
+    'Learning as anti-entropy connects directly to thermodynamics interpretation in Module 7',
   ],
 };
 

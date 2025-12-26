@@ -4,13 +4,19 @@ export const section1_6: Section = {
   id: '1.6',
   title: 'Pattern Recognition and Distinction Networks',
   subtitle: 'From Individual Distinctions to Coherent Structures',
-  epistemicStatus: 'derived',
+  epistemicStatus: 'conjectured',
   content: [
     {
       type: 'heading',
       level: 2,
       content: 'The Pattern Recognition Operator',
       id: 'pattern-recognition-operator',
+    },
+    {
+      type: 'paragraph',
+      content:
+        '**Epistemic status [CONJECTURED]**: This section extends beyond what the axioms strictly force. The pattern recognition operator and distinction network formalism are speculative mathematical structures that may be useful for understanding learning and cognition, but are not rigorously derived from the two axioms. They represent a research direction, not established framework content.',
+      emphasis: 'key',
     },
     {
       type: 'paragraph',
@@ -180,10 +186,10 @@ export const section1_6: Section = {
     },
   ],
   keyPoints: [
-    'The pattern recognition operator identifies coherent structures within collections of distinctions',
-    'Distinction networks are weighted graphs representing an observer\'s maintained distinctions',
-    'Network dynamics are governed by decay, energy availability, information value, and centrality',
-    'Limited energy forces observers to prioritize which distinctions to maintain',
-    'Attention, learning, forgetting, and expertise are all manifestations of network dynamics',
+    '[CONJECTURED] The pattern recognition operator is a speculative extension beyond what axioms force',
+    '[CONJECTURED] Distinction networks are mathematical structures that may be useful for understanding cognition',
+    '[CONJECTURED] Network dynamics equations are proposed, not derived',
+    '[DERIVED] Limited energy forces observers to prioritize which distinctions to maintain (this follows from axioms)',
+    '[CONJECTURED] Attention, learning, forgetting, and expertise may be manifestations of network dynamics',
   ],
 };

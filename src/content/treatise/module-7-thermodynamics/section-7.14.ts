@@ -149,16 +149,16 @@ export const section7_14: Section = {
       style: 'bullet',
       items: [
         {
-          content: 'Every law of thermodynamics is a consequence of distinction-making constraints',
+          content: '[INTERPRETED] Every law of thermodynamics can be understood through distinction-making vocabulary',
         },
         {
-          content: 'Every thermodynamic system is a boundary-maintenance network',
+          content: '[INTERPRETED] Every thermodynamic system can be viewed as a boundary-maintenance network',
         },
         {
-          content: 'Every irreversible process is distinction-decay',
+          content: '[INTERPRETED] Every irreversible process can be understood as distinction-decay',
         },
         {
-          content: 'Every living system is fighting entropy through sophisticated boundary-maintenance',
+          content: '[INTERPRETED] Every living system can be understood as fighting entropy through boundary-maintenance',
         },
       ],
     },
@@ -167,11 +167,11 @@ export const section7_14: Section = {
       title: 'Module 7 Summary',
       variant: 'key-points',
       points: [
-        'Thermodynamics follows necessarily from two axioms: distinctions cost energy, and OLUs have finite energy',
-        'Entropy, the Second Law, Landauer\'s principle, and time\'s arrow are derived, not assumed',
-        'Quantum structure (Module 0) and thermodynamic dynamics (Module 7) share a common foundation',
-        'The framework unifies information theory, thermodynamics, and physics under distinction-making constraints',
-        'Heat death represents the end of accessible reality---no OLUs, no maintained distinctions, no observation',
+        '[INTERPRETED] Thermodynamics can be interpreted through our two axioms, importing statistical mechanics',
+        '[IMPORTED] Landauer\'s principle grounds Axiom 1; the Second Law and time\'s arrow are interpreted, not derived from scratch',
+        '[INTERPRETED] Quantum structure (Module 0) and thermodynamic dynamics (Module 7) share interpretive vocabulary',
+        'The framework provides conceptual unification of information theory and thermodynamics through distinction-vocabulary',
+        '[INTERPRETED] Heat death represents the end of accessible reality—no OLUs, no maintained distinctions, no observation',
       ],
     },
     {
@@ -182,10 +182,10 @@ export const section7_14: Section = {
     },
   ],
   keyPoints: [
-    'Thermodynamics can be interpreted through the two foundational axioms (but imports statistical mechanics)',
-    'Module 0 (structure) + Module 7 (dynamics) = conceptual unification of physics through distinction vocabulary',
-    'Quantum mechanics and thermodynamics share interpretive unification under distinction-making concepts',
-    'The Second Law, Landauer\'s limit, and time asymmetry are interpreted through the framework (not derived from axioms alone)',
-    'The framework\'s value is conceptual coherence and unification, not predictive novelty beyond established physics',
+    '[INTERPRETED] Thermodynamics can be interpreted through the two foundational axioms (but imports statistical mechanics)',
+    '[INTERPRETED] Module 0 (structure) + Module 7 (dynamics) = conceptual unification through distinction vocabulary',
+    '[INTERPRETED] Quantum mechanics and thermodynamics share interpretive vocabulary under distinction-making concepts',
+    '[IMPORTED] The Second Law, Landauer\'s limit, and time asymmetry are imported and interpreted through the framework',
+    'The framework\'s value is conceptual coherence and unification—it complements physics, not replaces it',
   ],
 };

@@ -2,14 +2,20 @@ import type { Section } from '../types';
 
 export const section8_4: Section = {
   id: '8.4',
-  title: 'Future Testable Predictions',
-  subtitle: 'Requires New Technology',
+  title: 'Speculative Future Claims [CONJECTURED]',
+  subtitle: 'Extensions Requiring Technological Advances Beyond Current Capability',
   epistemicStatus: 'speculative',
   content: [
     {
       type: 'paragraph',
       content:
-        'These predictions are in principle testable but require technological advances beyond current capabilities. We present them with appropriate epistemic humility: while they follow from the framework\'s logic, their confirmation lies beyond our present reach.',
+        '**Critical Epistemic Note**: These claims extend the framework speculatively into regimes where the connection to our axioms is suggestive but not rigorous. They are also NOT unique to this framework---many quantum gravity approaches make similar predictions. Confirmation would be consistent with the framework but would not uniquely validate it.',
+      emphasis: 'key',
+    },
+    {
+      type: 'paragraph',
+      content:
+        'We present these with appropriate epistemic humility: while they follow from extending the framework\'s logic, their confirmation lies beyond our present reach, and they are shared with many competing approaches.',
     },
     {
       type: 'heading',

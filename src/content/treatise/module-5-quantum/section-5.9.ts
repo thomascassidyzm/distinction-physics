@@ -8,7 +8,7 @@ export const section5_9: Section = {
     {
       type: 'paragraph',
       content:
-        'Quantum computing exploits superpositions of distinction patterns to perform operations that would be energetically prohibitive classically:',
+        'Quantum computing can be **interpreted** as exploiting superpositions of distinction patterns to perform operations that would be energetically prohibitive classically. **Note: This is interpretation, not derivation. Quantum computing theory, gate operations, and error correction are imported from established physics and computer science. We provide conceptual vocabulary for understanding quantum computation, not alternative theory.**',
     },
     {
       type: 'math',
@@ -86,10 +86,10 @@ export const section5_9: Section = {
     },
   ],
   keyPoints: [
-    'Quantum computing exploits superpositions to avoid the energy cost of actualizing intermediate distinctions',
-    'Classical computation requires exponential energy for N-bit problems; quantum computation maintains potential distinctions until final measurement',
-    'Each additional qubit doubles the distinction space, making coherence exponentially harder to maintain',
-    'Decoherence is premature distinction-making that destroys quantum advantage',
-    'Error correction embeds distinction patterns in redundant encodings to resist localized errors',
+    '[INTERPRETED] Quantum computing can be understood as exploiting superpositions to avoid actualizing intermediate distinctions',
+    '[IMPORTED] Quantum gate operations, qubit theory, and error correction are imported from established physics',
+    '[INTERPRETED] Decoherence can be viewed as premature distinction-making that destroys quantum advantage',
+    '[INTERPRETED] Error correction can be understood as embedding distinction patterns in redundant encodings',
+    'This is philosophical interpretation of quantum computing, not derivation of the computational formalism',
   ],
 };

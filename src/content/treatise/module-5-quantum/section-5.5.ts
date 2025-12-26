@@ -8,7 +8,7 @@ export const section5_5: Section = {
     {
       type: 'paragraph',
       content:
-        'What physicists call "measurement" is precisely the act of making a distinction - investing energy to determine that a system is in state A rather than state B. This identification dissolves the measurement problem by providing a physical account of what measurement actually is.',
+        'What physicists call "measurement" can be **interpreted** as the act of making a distinction---investing energy to determine that a system is in state A rather than state B. This interpretation provides conceptual vocabulary for understanding the measurement problem. **Note: This is interpretation, not derivation. The measurement postulate and projection operators are imported from quantum mechanics. We provide a philosophical lens, not alternative physics.**',
       emphasis: 'key',
     },
     {
@@ -247,11 +247,11 @@ export const section5_5: Section = {
     },
   ],
   keyPoints: [
-    'Measurement is precisely the act of energy-costly distinction-making',
-    'Wavefunction collapse is the transition from undistinguished to distinguished possibilities',
-    'Every measurement has minimum energy cost: at least $k_B T \\ln 2$ per binary distinction',
-    'Non-disturbing measurement is thermodynamically impossible',
-    'The measurement problem dissolves when measurement is understood as distinction-making',
-    'Observers are any physical systems that invest energy in making distinctions',
+    '[INTERPRETED] Measurement can be understood as energy-costly distinction-making',
+    '[INTERPRETED] Wavefunction collapse can be viewed as the transition from undistinguished to distinguished possibilities',
+    '[IMPORTED] The minimum energy cost ($k_B T \\ln 2$ per bit) is Landauer\'s limit, imported from thermodynamics',
+    '[INTERPRETED] The measurement problem gains conceptual clarity when measurement is understood as distinction-making',
+    '[INTERPRETED] Observers can be understood as physical systems that invest energy in making distinctions',
+    'This is philosophical interpretation of QM measurement, not derivation of the measurement postulate',
   ],
 };

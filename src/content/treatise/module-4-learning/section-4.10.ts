@@ -2,14 +2,14 @@ import type { Section } from '../types';
 
 export const section4_10: Section = {
   id: '4.10',
-  title: 'Implications for Educational Practice',
-  subtitle: 'Applying Thermodynamic Principles to Teaching and Learning',
+  title: 'Implications for Educational Practice [INTERPRETED]',
+  subtitle: 'Designing for Anti-Entropic Efficiency',
   epistemicStatus: 'interpreted',
   content: [
     {
       type: 'paragraph',
       content:
-        'The thermodynamic framework has immediate practical implications for education and skill training. If learning is fundamentally about optimizing the energy efficiency of distinction-making, then effective pedagogy should facilitate this optimization.',
+        'The thermodynamic framework has immediate practical implications for education and skill training. If learning is fundamentally **anti-entropic pattern building**—creating and maintaining stable distinction structures against natural decay—then effective pedagogy should facilitate this process. These principles have been implemented in working systems (SSi, Zenjin, Alexander), providing practical validation.',
     },
     {
       type: 'heading',
@@ -277,10 +277,12 @@ export const section4_10: Section = {
     },
   ],
   keyPoints: [
-    'Educational practice should be designed to optimize thermodynamic efficiency of learning',
+    'Educational practice should be designed to facilitate anti-entropic pattern building [INTERPRETED]',
     'Chunking, automatization, spacing, energy management, transfer, and meta-learning are key principles',
     'Effective teaching structures experience for building well-organized distinction networks',
     'The teacher\'s role is to facilitate efficient boundary construction, not merely transfer information',
+    'These principles are implemented in SSi, Zenjin, and Alexander learning systems',
     'These principles follow from the axioms of distinction cost and finite energy budgets',
   ],
 };
+

@@ -2,19 +2,20 @@ import type { Section } from '../types';
 
 export const section8_9: Section = {
   id: '8.9',
-  title: 'Conclusion: The Empirical Status of the Framework',
-  epistemicStatus: 'consistent',
+  title: 'Conclusion: Honest Assessment of Empirical Standing',
+  subtitle: 'What the Framework Can and Cannot Claim',
+  epistemicStatus: 'interpreted',
   content: [
     {
       type: 'paragraph',
       content:
-        'This module has provided a systematic accounting of the Distinction Framework\'s empirical standing. The framework is not advocacy but accounting --- what has been confirmed, what remains testable, what would falsify it.',
+        'This module has provided an epistemically honest accounting of the Distinction as Primitive framework\'s empirical standing. The primary finding: **the framework provides unifying vocabulary and conceptual coherence, not predictive novelty for established physics.** Most "predictions" are post-hoc consistency demonstrations.',
       emphasis: 'key',
     },
     {
       type: 'heading',
       level: 3,
-      content: 'Summary of Confirmed Predictions',
+      content: 'Summary: Post-Hoc Consistency Demonstrations (Not Predictions)',
     },
     {
       type: 'paragraph',
@@ -246,16 +247,16 @@ export const section8_9: Section = {
     },
     {
       type: 'summary',
-      title: 'Module 8 Summary',
+      title: 'Module 8 Summary: Honest Epistemic Accounting',
       variant: 'key-points',
       points: [
-        'Eight confirmed predictions validate the core axioms (Landauer, quantization, consciousness costs, learning efficiency, etc.)',
-        'Six near-term predictions await testing with current technology',
-        'Four future predictions require technological advances',
-        'Five falsification conditions could disprove the framework; none has been met',
-        'The framework is empirically grounded, falsifiable, generative, unifying, and honest about its limits',
-        'Predictions are distinguished from interpretations from conjectures; conflating them would undermine credibility',
-        'The framework is not proven but has survived its tests and makes testable claims about the future',
+        '[POST-HOC] Eight phenomena are CONSISTENT with the framework; ALL were known before it was developed (not predictions)',
+        '[IMPORTED] Landauer\'s principle grounds Axiom 1; claiming it as a "confirmed prediction" would be historically inaccurate',
+        '[CONTESTED] Six near-term claims might be testable, but few genuinely distinguish the framework from standard physics',
+        '[CONJECTURED] Four future claims are speculative and shared with many other quantum gravity approaches',
+        '[DERIVED] Five falsification conditions exist and remain unmet; the framework is genuinely falsifiable',
+        '[EPISTEMIC HONESTY] The framework\'s value is unifying vocabulary, not predictive novelty for established physics',
+        'Scientific credibility requires distinguishing post-hoc consistency from temporal prediction',
       ],
     },
     {
@@ -266,11 +267,12 @@ export const section8_9: Section = {
     },
   ],
   keyPoints: [
-    'C1-C8 are post-hoc consistency checks with established physics, not temporal predictions',
-    'C1 (Landauer) is IMPORTED to ground Axiom 1; C8 (Second Law) imports statistical mechanics',
-    'N4 (measurement energy scaling) represents the most promising genuinely novel prediction',
-    'Five falsification conditions could disprove the framework; none has been met',
-    'The framework provides conceptual unification and interpretive vocabulary, not predictive novelty for established physics',
-    'Epistemic honesty requires distinguishing post-hoc consistency from genuine prediction',
+    '[POST-HOC] C1-C8 are consistency checks with established physics that was known before the framework',
+    '[IMPORTED] C1 (Landauer) grounds Axiom 1; C8 (Second Law) imports statistical mechanics---neither is derived',
+    '[POTENTIALLY NOVEL] N4 (measurement energy scaling) may be the only genuinely distinguishing near-term claim',
+    '[DERIVED] Five falsification conditions exist and remain unmet; the framework is genuinely falsifiable',
+    '[EPISTEMIC HONESTY] The framework provides conceptual unification, not predictive novelty for established physics',
+    'The genuine contribution is unifying vocabulary across physics, cognition, and consciousness---not novel predictions',
+    'Scientific credibility requires this honest accounting; overclaiming would undermine the framework\'s integrity',
   ],
 };

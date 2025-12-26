@@ -1,5 +1,5 @@
 /**
- * Distinction Physics: Bibliography
+ * Distinction as Primitive: Bibliography
  *
  * Complete citation database for the treatise.
  * Citations are organized by relevance to framework domains.

@@ -2,22 +2,57 @@ import type { Section } from '../types';
 
 export const section6_7: Section = {
   id: '6.7',
-  title: 'Quantum Gravity Implications',
-  epistemicStatus: 'speculative',
+  title: 'Quantum Gravity Implications [MAXIMALLY SPECULATIVE]',
+  epistemicStatus: 'conjectured',
   content: [
+    {
+      type: 'note',
+      variant: 'editorial',
+      content:
+        '**EPISTEMIC WARNING: MAXIMALLY SPECULATIVE.** This section discusses quantum gravity—one of the hardest unsolved problems in physics. We do NOT solve quantum gravity. We do NOT derive a theory of quantum gravity. We offer speculative interpretations that may or may not prove useful. This is philosophical exploration at its most speculative. Readers should treat these claims with maximum skepticism.',
+    },
     {
       type: 'heading',
       level: 3,
-      content: 'A Path Toward Unification',
+      content: 'Connection to Module 5: Quantum-Spacetime Interface',
     },
     {
       type: 'paragraph',
       content:
-        'The notorious incompatibility of quantum mechanics and general relativity may be resolved if both emerge from the same underlying process: distinction-making under energy constraints.',
+        'Module 5 interpreted quantum mechanics through distinction-making constraints. This module offers parallel vocabulary for spacetime. The question arises: how do these connect? Here we make the relationship explicit:',
+    },
+    {
+      type: 'table',
+      id: 'tbl-qm-gr-connection',
+      caption: 'Parallel structure of QM and GR interpretations in the distinction framework',
+      headers: ['Feature', 'Module 5 (Quantum Mechanics)', 'Module 6 (Spacetime)'],
+      rows: [
+        ['Core constraint', 'Finite energy limits observable precision', 'Finite energy limits spacetime resolution'],
+        ['Resulting structure', 'Superposition of undistinguished states', 'Effective discreteness at Planck scale'],
+        ['Imported formalism', 'Hilbert space, Born rule, Schrodinger eq.', 'Lorentz group, Einstein field equations'],
+        ['Framework contribution', 'Interpretation of QM features', 'Interpretation of spacetime features'],
+        ['Open problem', 'Why complex amplitudes? Why Born rule?', 'Why 4D? Why SO(3,1)?'],
+      ],
+      alignment: ['left', 'left', 'left'],
     },
     {
       type: 'paragraph',
-      content: 'From our framework:',
+      content:
+        '**The unification question:** Can these parallel interpretations be unified? Module 5 concerns how observers access quantum states; Module 6 concerns how observers access spacetime. Both invoke energy-limited distinction-making. A full unification would require showing that the quantum formalism (Hilbert space) and the spacetime formalism (pseudo-Riemannian manifold) emerge from a common distinction-theoretic foundation. **We do not achieve this.** We identify the parallel structure as a research direction.',
+    },
+    {
+      type: 'heading',
+      level: 3,
+      content: 'A Path Toward Unification? [HIGHLY SPECULATIVE]',
+    },
+    {
+      type: 'paragraph',
+      content:
+        'The notorious incompatibility of quantum mechanics and general relativity is an unsolved problem in physics. We speculatively suggest—but do NOT prove—that both might be understood through distinction-making under energy constraints. **This is conjecture, not solution.**',
+    },
+    {
+      type: 'paragraph',
+      content: 'From our framework, we speculatively suggest:',
     },
     {
       type: 'list',
@@ -25,39 +60,43 @@ export const section6_7: Section = {
       items: [
         {
           content:
-            '**Quantum mechanics** (Module 5) emerges from effective discreteness—the impossibility of accessing continuous quantities with finite energy',
+            '[INTERPRETED] **Quantum mechanics** (Module 5) is interpreted through effective discreteness—we do NOT derive QM',
         },
         {
           content:
-            '**General relativity** (this module) emerges from how mass-energy alters distinction-maintenance costs',
+            '[CONJECTURED] **General relativity** (this module) might be interpreted through altered distinction-costs—we do NOT derive GR',
+        },
+        {
+          content:
+            '[CONNECTION] Both share the core constraint: finite-energy observers face limits on distinction-making. QM limits observable precision; GR (as interpreted) limits spacetime resolution.',
         },
       ],
     },
     {
       type: 'paragraph',
       content:
-        'Both reflect different aspects of the same thermodynamic constraints on boundary-drawing. Their apparent incompatibility may arise from treating them as independent theories rather than manifestations of a common foundation.',
+        '[HIGHLY SPECULATIVE] Both might reflect different aspects of the same thermodynamic constraints on boundary-drawing. Their apparent incompatibility might arise from treating them as independent theories. **This is speculation, not a solution to quantum gravity. We do NOT provide a unified theory.**',
       emphasis: 'key',
     },
     {
       type: 'heading',
       level: 3,
-      content: 'Specific Predictions',
+      content: 'Speculative Conjectures [HIGHLY SPECULATIVE]',
     },
     {
       type: 'theorem',
       id: 'pred-6-3',
       label: 'claim',
-      name: 'Prediction 6.3: Modified Dispersion Relations',
+      name: 'Conjecture 6.3: Modified Dispersion Relations [HIGHLY SPECULATIVE]',
       statement:
-        'There should exist a minimum length scale below which spatial distinctions are impossible, regardless of energy invested. This corresponds to the Planck length but should be detectable through modified dispersion relations in high-energy particles.',
-      epistemicStatus: 'speculative',
+        '[HIGHLY SPECULATIVE] There might exist a minimum length scale below which spatial distinctions are impossible. This might correspond to the Planck length and might be detectable through modified dispersion relations in high-energy particles. **This is speculation that may be wrong. We do NOT derive this from our axioms.**',
+      epistemicStatus: 'conjectured',
       dependsOn: ['A1', 'A2'],
     },
     {
       type: 'paragraph',
       content:
-        'The modified dispersion relation takes the form:',
+        'The modified dispersion relation might take the form:',
     },
     {
       type: 'math',
@@ -65,33 +104,33 @@ export const section6_7: Section = {
       display: 'block',
       label: 'eq:modified-dispersion',
       description:
-        'Modified dispersion relation with Planck-scale corrections, where $\\alpha$ is a small parameter encoding the correction magnitude and $E_P$ is the Planck energy.',
+        '[SPECULATIVE] Proposed modified dispersion relation with Planck-scale corrections. This is speculation, not a derived result.',
     },
     {
       type: 'theorem',
       id: 'pred-6-4',
       label: 'claim',
-      name: 'Prediction 6.4: Spacetime Foaminess',
+      name: 'Conjecture 6.4: Spacetime Foaminess [HIGHLY SPECULATIVE]',
       statement:
-        'Quantum spacetime should exhibit "foaminess" at scales approaching Planck length—the distinction-pattern structure should fluctuate in ways detectable through accumulated phase shifts in long-baseline interferometry or arrival-time variations in high-energy cosmic rays.',
-      epistemicStatus: 'speculative',
+        '[HIGHLY SPECULATIVE] Quantum spacetime might exhibit "foaminess" at scales approaching Planck length—the distinction-pattern structure might fluctuate in ways detectable through accumulated phase shifts or arrival-time variations. **This is speculation that may be wrong.**',
+      epistemicStatus: 'conjectured',
       dependsOn: ['A1', 'A2'],
     },
     {
       type: 'note',
       variant: 'technical',
       content:
-        'These predictions connect to research programs in quantum gravity phenomenology and may be testable with next-generation instruments. The framework provides specific quantitative predictions that distinguish it from purely philosophical accounts.',
+        'These conjectures connect to research programs in quantum gravity phenomenology but are HIGHLY SPECULATIVE. They may be testable with next-generation instruments but may also be wrong. The framework offers philosophical vocabulary, not proven physics.',
     },
     {
       type: 'heading',
       level: 3,
-      content: 'Resolution of the Incompatibility',
+      content: 'A Possible Resolution? [HIGHLY SPECULATIVE]',
     },
     {
       type: 'paragraph',
       content:
-        'The standard approaches to quantum gravity—string theory, loop quantum gravity, causal set theory—each attempt to reconcile quantum mechanics and general relativity by modifying one or both theories. Our framework suggests a different approach: both theories are correct but incomplete descriptions of distinction-making under energy constraints.',
+        'The standard approaches to quantum gravity—string theory, loop quantum gravity, causal set theory—each attempt to reconcile quantum mechanics and general relativity. Our framework speculatively suggests a possible conceptual approach (NOT a solution):',
     },
     {
       type: 'list',
@@ -99,31 +138,31 @@ export const section6_7: Section = {
       items: [
         {
           content:
-            'Quantum mechanics describes how finite-energy observers interact with systems where distinctions are energetically costly',
+            '[INTERPRETED] Quantum mechanics might describe how finite-energy observers interact with systems where distinctions are energetically costly',
         },
         {
           content:
-            'General relativity describes how mass-energy reconfigures the boundary landscape, altering distinction-maintenance costs',
+            '[CONJECTURED] General relativity might describe how mass-energy reconfigures the boundary landscape',
         },
         {
           content:
-            'A complete theory must describe both effects simultaneously, which occurs naturally when both are recognized as aspects of the same underlying distinction physics',
+            '[HIGHLY SPECULATIVE] A complete theory might describe both effects simultaneously. **We do NOT provide such a theory.**',
         },
       ],
     },
     {
       type: 'paragraph',
       content:
-        'This perspective does not claim to have solved quantum gravity but provides a conceptual framework within which a solution might be natural rather than forced.',
+        '**This perspective does NOT solve quantum gravity.** It offers conceptual vocabulary that might (or might not) prove useful. We provide philosophical exploration, not a unified theory. The actual solution to quantum gravity remains unknown.',
       emphasis: 'conclusion',
     },
   ],
   keyPoints: [
-    'Quantum mechanics and general relativity may both emerge from distinction-making under energy constraints',
-    'Their apparent incompatibility arises from treating them as independent rather than manifestations of common foundation',
-    'Prediction 6.3: Modified dispersion relations at Planck scale: $E^2 = p^2 c^2 + m^2 c^4 + \\alpha(E/E_P)^2$',
-    'Prediction 6.4: Spacetime foaminess detectable through phase shifts or cosmic ray arrival-time variations',
-    'Both theories are correct but incomplete descriptions of distinction physics',
-    'Framework provides testable predictions connecting to quantum gravity phenomenology research',
+    '[MAXIMALLY SPECULATIVE] This entire section is exploratory—we do NOT solve quantum gravity',
+    '[HIGHLY SPECULATIVE] QM and GR might both relate to distinction-making—this is conjecture, not derivation',
+    '[HIGHLY SPECULATIVE] Conjecture 6.3: Modified dispersion relations—may be wrong',
+    '[HIGHLY SPECULATIVE] Conjecture 6.4: Spacetime foaminess—may be wrong',
+    'We provide philosophical vocabulary, not a unified theory of quantum gravity',
+    'The actual solution to quantum gravity remains unknown; this is speculation only',
   ],
 };

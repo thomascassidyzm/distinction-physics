@@ -78,9 +78,9 @@ export const section1_7: Section = {
     },
   ],
   keyPoints: [
-    'The finitude bound limits simultaneous distinctions: $N_{\\max} \\leq E_{\\text{total}} / kT \\ln 2$',
+    '[DERIVED] The finitude bound limits simultaneous distinctions: $N_{\\max} \\leq E_{\\text{total}} / kT \\ln 2$',
     'Human brains operate far below thermodynamic limits, with most energy devoted to non-distinction processes',
-    'Omniscience is thermodynamically impossible due to finite energy budgets',
-    'Selective attention is a thermodynamic necessity, not a psychological quirk',
+    '[DERIVED] Omniscience is thermodynamically impossible due to finite energy budgets',
+    '[DERIVED] Selective attention is a thermodynamic necessity, not a psychological quirk',
   ],
 };

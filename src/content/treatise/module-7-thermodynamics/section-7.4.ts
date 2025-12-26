@@ -142,11 +142,11 @@ export const section7_4: Section = {
     },
   ],
   keyPoints: [
-    "Landauer's principle: erasing one bit requires at least $kT \\ln(2)$ energy",
-    'Our framework IMPORTS this limit as the grounding for Axiom 1; Landauer (1961) predates the framework',
-    'A bit is a distinction; erasing it is a physical process with thermodynamic cost',
-    'Berut et al. (2012) experimentally confirmed the limit - this validates what we imported',
+    '[IMPORTED] Landauer\'s principle: erasing one bit requires at least $kT \\ln(2)$ energy',
+    '[IMPORTED] Our framework IMPORTS this limit as the grounding for Axiom 1; Landauer (1961) predates the framework',
+    '[INTERPRETED] A bit is a distinction; erasing it is a physical process with thermodynamic cost',
+    '[IMPORTED] Berut et al. (2012) experimentally confirmed the limit—this validates what we imported',
     'This is a consistency check, not a prediction: the framework is grounded in Landauer, not vice versa',
-    'Implications extend to computation, Maxwell\'s demon, quantum computing, and black hole physics',
+    '[INTERPRETED] Implications extend to computation, Maxwell\'s demon, quantum computing, and black hole physics',
   ],
 };

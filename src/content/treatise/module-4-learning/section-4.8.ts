@@ -2,13 +2,14 @@ import type { Section } from '../types';
 
 export const section4_8: Section = {
   id: '4.8',
-  title: 'Skill Acquisition as Thermodynamic Trajectory',
+  title: 'Skill Acquisition: The Anti-Entropic Trajectory [INTERPRETED]',
+  subtitle: 'From Novice Disorder to Expert Efficiency',
   epistemicStatus: 'interpreted',
   content: [
     {
       type: 'paragraph',
       content:
-        'Skill acquisition follows a characteristic trajectory that the thermodynamic framework explains and predicts.',
+        'Skill acquisition follows a characteristic trajectory that the thermodynamic framework interprets as **progressive anti-entropic optimization**. The novice begins with high-entropy, inefficient distinction patterns; the expert has achieved low-entropy, highly efficient patterns. The journey from one to the other is the observable signature of anti-entropic pattern building.',
     },
     {
       type: 'heading',
@@ -158,10 +159,12 @@ export const section4_8: Section = {
     },
   ],
   keyPoints: [
+    'Skill acquisition is the anti-entropic trajectory from disorder to efficiency [INTERPRETED]',
     'Learning curves emerge from thermodynamic optimization with diminishing returns',
-    'Plateaus represent local optima in distinction structure space',
+    'Plateaus represent local optima in distinction structure space [INTERPRETED]',
     'Breakthroughs occur when reorganization energy overcomes the cost of structural change',
-    'Expertise is deep optimization: refined, pruned, organized, and automatized distinctions',
+    'Expertise is deep anti-entropic achievement: refined, pruned, organized, automatized distinctions',
     'Expert advantages in speed, accuracy, capacity, and flexibility derive from thermodynamic efficiency',
   ],
 };
+

@@ -2,13 +2,14 @@ import type { Section } from '../types';
 
 export const section4_6: Section = {
   id: '4.6',
-  title: 'Neural Plasticity as Boundary Reorganization',
+  title: 'Neural Plasticity as Boundary Reorganization [INTERPRETED]',
+  subtitle: 'The Physical Substrate of Anti-Entropic Pattern Building',
   epistemicStatus: 'interpreted',
   content: [
     {
       type: 'paragraph',
       content:
-        'Neural plasticity, the brain\'s ability to modify its structure in response to experience, is the physical substrate of learning. Within the thermodynamic framework, plasticity is the mechanism by which distinction networks are reorganized for greater efficiency.',
+        'Neural plasticity, the brain\'s ability to modify its structure in response to experience, is the physical substrate of learning. Within the thermodynamic framework, plasticity is the mechanism by which distinction networks are reorganized for greater efficiency. It is the **physical implementation of anti-entropic pattern building**—the brain literally restructuring itself to maintain more distinctions with less energy.',
     },
     {
       type: 'heading',
@@ -127,10 +128,11 @@ export const section4_6: Section = {
     },
   ],
   keyPoints: [
-    'Neural plasticity is the physical implementation of distinction network reorganization',
-    'Synaptic plasticity adjusts individual boundaries through Hebbian mechanisms',
+    'Neural plasticity is the physical implementation of anti-entropic pattern building [INTERPRETED]',
+    'Synaptic plasticity adjusts individual boundaries through Hebbian mechanisms [IMPORTED from neuroscience]',
     'Structural plasticity creates, connects, prunes, and optimizes entire distinction networks',
-    'Critical periods are windows when reorganization is energetically cheap',
+    'Critical periods are windows when reorganization is energetically cheap [INTERPRETED]',
     'Development progressively stabilizes distinction structures, trading plasticity for efficiency',
   ],
 };
+

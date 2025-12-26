@@ -2,13 +2,19 @@ import type { Section } from '../types';
 
 export const section6_2: Section = {
   id: '6.2',
-  title: 'Effective Discreteness at the Planck Scale',
-  epistemicStatus: 'consistent',  // The Planck scale values are imported from physics
+  title: 'Effective Discreteness at the Planck Scale [INTERPRETED]',
+  epistemicStatus: 'interpreted',  // The Planck scale values are imported from physics
   content: [
+    {
+      type: 'note',
+      variant: 'editorial',
+      content:
+        '**Epistemic Status: INTERPRETED.** This section applies the derived principle of effective discreteness (from Module 0) to spacetime. The existence of a minimum resolution is derived; the identification with the Planck scale is an interpretation based on imported physics.',
+    },
     {
       type: 'heading',
       level: 3,
-      content: 'The Universal Resolution Limit',
+      content: 'The Universal Resolution Limit [DERIVED + IMPORTED]',
     },
     {
       type: 'paragraph',
@@ -37,40 +43,59 @@ export const section6_2: Section = {
     {
       type: 'heading',
       level: 3,
-      content: 'Interpretation vs. Derivation',
+      content: 'What Is Derived vs. What Is Imported',
     },
     {
       type: 'paragraph',
       content:
-        'We must be careful here. What we **derive** from our axioms is:',
+        'We must be careful here about epistemic status:',
+    },
+    {
+      type: 'paragraph',
+      content:
+        '**What we DERIVE from our axioms:**',
     },
     {
       type: 'list',
       style: 'bullet',
       items: [
-        { content: 'There must be a minimum distinguishable separation for any OLU' },
-        { content: 'This minimum depends on the energy available for distinction-making' },
-        { content: 'There must be a universal lower bound where no amount of energy suffices' },
+        { content: '[DERIVED] There must be a minimum distinguishable separation for any OLU' },
+        { content: '[DERIVED] This minimum depends on the energy available for distinction-making' },
+        { content: '[DERIVED] There should be a universal lower bound where no amount of energy suffices' },
       ],
     },
     {
       type: 'paragraph',
       content:
-        'What we **interpret** (but do not strictly derive) is:',
+        '**What we IMPORT from established physics (do NOT derive):**',
     },
     {
       type: 'list',
       style: 'bullet',
       items: [
-        { content: 'This universal lower bound corresponds to the Planck scale as calculated from fundamental constants ($\\hbar$, $c$, $G$)' },
-        { content: 'The specific numerical values of Planck length and time' },
+        { content: '[IMPORTED] The Planck scale values ($\\ell_P$, $t_P$) from quantum mechanics, relativity, and gravity' },
+        { content: '[IMPORTED] The specific numerical values: $\\ell_P \\approx 1.6 \\times 10^{-35}$ m' },
+        { content: '[IMPORTED] The physics of black hole formation at high energy densities' },
+      ],
+    },
+    {
+      type: 'paragraph',
+      content:
+        '**What we INTERPRET (consistent with but not forced by axioms):**',
+    },
+    {
+      type: 'list',
+      style: 'bullet',
+      items: [
+        { content: '[INTERPRETED] The universal lower bound corresponds to the Planck scale' },
+        { content: '[INTERPRETED] This correspondence is "striking" but requires imported physics' },
       ],
     },
     {
       type: 'note',
       variant: 'editorial',
       content:
-        'The correspondence between our derived principle and the calculated Planck scale is striking but requires the additional assumption that quantum mechanics, relativity, and gravity combine in the specific way encoded in Planck units. Our framework predicts *that* there must be such a limit; physics tells us *what* that limit is numerically.',
+        'The correspondence between our derived principle and the calculated Planck scale is suggestive but requires the additional assumption that quantum mechanics, relativity, and gravity combine in the specific way encoded in Planck units. Our framework argues *that* there must be such a limit; physics tells us *what* that limit is numerically. We do NOT derive Planck units from our axioms.',
     },
     {
       type: 'heading',
@@ -104,11 +129,11 @@ export const section6_2: Section = {
     },
   ],
   keyPoints: [
-    'Every OLU has energy-dependent resolution limits; the Planck scale is the absolute limit',
-    'Planck length ($\\ell_P \\approx 1.6 \\times 10^{-35}$ m) and Planck time ($t_P \\approx 5.4 \\times 10^{-44}$ s) mark where distinction-making breaks down',
-    'We derive that a minimum distinguishable separation must exist; we interpret that it corresponds to Planck scale',
-    'The resolution hierarchy spans from human-scale (~0.1 mm) to Planck limit (~$10^{-35}$ m)',
-    'Finer resolution requires exponentially more energy—a thermodynamic necessity, not merely technological',
-    'There is no "view from nowhere" with infinite resolution',
+    '[DERIVED] Every OLU has energy-dependent resolution limits',
+    '[IMPORTED] The Planck scale values ($\\ell_P$, $t_P$) are imported from physics, not derived',
+    '[INTERPRETED] We derive that a minimum must exist; we interpret that it corresponds to Planck scale',
+    '[DERIVED] Finer resolution requires exponentially more energy—a thermodynamic necessity',
+    '[DERIVED] There is no "view from nowhere" with infinite resolution',
+    'The resolution hierarchy table uses imported physics data, not derived values',
   ],
 };

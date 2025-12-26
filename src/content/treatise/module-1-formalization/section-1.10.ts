@@ -4,13 +4,19 @@ export const section1_10: Section = {
   id: '1.10',
   title: 'Implications for Observable Physics',
   subtitle: 'Connecting the Framework to Physical Theory',
-  epistemicStatus: 'derived',
+  epistemicStatus: 'interpreted',
   content: [
     {
       type: 'heading',
       level: 2,
-      content: '1.10.1 Consistency with Quantum Mechanics',
+      content: '1.10.1 Consistency with Quantum Mechanics [INTERPRETED]',
       id: 'recovering-quantum-mechanics',
+    },
+    {
+      type: 'paragraph',
+      content:
+        '**Epistemic status**: This section provides conceptual vocabulary consistent with core features of quantum mechanics. We do NOT derive quantum mechanics from our axioms—rather, we interpret existing quantum physics through distinction-vocabulary. The framework is complementary to physics, not a replacement.',
+      emphasis: 'key',
     },
     {
       type: 'paragraph',
@@ -73,7 +79,7 @@ export const section1_10: Section = {
     {
       type: 'heading',
       level: 2,
-      content: '1.10.2 Recovering Thermodynamics',
+      content: '1.10.2 Interpreting Thermodynamics [INTERPRETED]',
       id: 'recovering-thermodynamics',
     },
     {
@@ -130,11 +136,11 @@ export const section1_10: Section = {
     },
   ],
   keyPoints: [
-    'Energy allocation trade-offs are consistent with (but do not derive) Heisenberg uncertainty',
-    'Bell violations show quantum uncertainty cannot be reduced to pure resource limitation',
+    '[INTERPRETED] Energy allocation trade-offs are consistent with (but do not derive) Heisenberg uncertainty',
+    '[CONSISTENT] Bell violations show quantum uncertainty cannot be reduced to pure resource limitation',
     'The framework provides interpretive vocabulary, not a replacement for quantum formalism',
-    'The Second Law can be understood as distinction decay in isolated systems',
-    'Information and energy are fundamentally linked through the cost of distinction-making',
+    '[INTERPRETED] The Second Law can be understood as distinction decay in isolated systems',
+    '[INTERPRETED] Information and energy are fundamentally linked through the cost of distinction-making',
   ],
   citations: ['landauer1961', 'shannon1948', 'bell1964'],
 };

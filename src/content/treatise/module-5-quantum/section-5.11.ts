@@ -148,11 +148,11 @@ export const section5_11: Section = {
     },
   ],
   keyPoints: [
-    'Different OLUs access reality at different effective grain sizes based on energy budgets',
-    'There is no "true" resolution---quantum mechanics describes finite-energy observer-reality interactions at any scale',
-    'Quantum weirdness appears strange because our intuitions evolved for millimeter-to-kilometer scales',
-    'We observe quantum effects as strange because quantum-scale distinction-making is possible but expensive for us',
-    'Different observers would find different resolution scales "strange" based on their energy constraints',
-    'Between OLU-dependent discreteness and universal Planck-scale discreteness lies all of accessible physics',
+    '[DERIVED] Different OLUs access reality at different effective grain sizes based on energy budgets',
+    '[INTERPRETED] Quantum mechanics can be understood as describing finite-energy observer-reality interactions at any scale',
+    '[INTERPRETED] Quantum "weirdness" can be viewed as reflecting unfamiliar distinction trade-offs',
+    '[INTERPRETED] The resolution hierarchy provides vocabulary for understanding observer-dependence',
+    '[IMPORTED] The Planck scale limit is imported from physics---consistent with our framework but not derived from it',
+    'This is philosophical interpretation of observer-dependent physics, not derivation of resolution limits',
   ],
 };

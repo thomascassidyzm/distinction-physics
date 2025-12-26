@@ -2,13 +2,19 @@ import type { Section } from '../types';
 
 export const section3_7: Section = {
   id: '3.7',
-  title: 'Attention: Allocating Finite Distinction Resources',
-  epistemicStatus: 'derived',
+  title: 'Attention: Allocating Finite Distinction Resources [INTERPRETED]',
+  epistemicStatus: 'interpreted',
   content: [
+    {
+      type: 'note',
+      variant: 'editorial',
+      content:
+        '**Epistemic status: INTERPRETED.** This section reframes attention through distinction-vocabulary. The phenomena (working memory limits, inattentional blindness, attentional blink) are IMPORTED from cognitive psychology. Our contribution is interpreting these as resource allocation for distinction-maintenance—this is reframing, not derivation.',
+    },
     {
       type: 'paragraph',
       content:
-        'Attention is not a mysterious spotlight that illuminates some information while leaving other information in darkness. Attention is the *allocation of finite distinction-maintenance resources* toward high-priority information.',
+        'Attention is not a mysterious spotlight that illuminates some information while leaving other information in darkness. We propose that attention is the *allocation of finite distinction-maintenance resources* toward high-priority information.',
       emphasis: 'key',
     },
     {
@@ -124,10 +130,10 @@ export const section3_7: Section = {
     },
   ],
   keyPoints: [
-    'Attention is the allocation of finite distinction-maintenance resources, not a mysterious spotlight',
-    'Four types of attention (selective, sustained, divided, executive) reflect different allocation strategies',
-    'Attentional limits (working memory, inattentional blindness, attentional blink) follow from energy constraints',
-    'Attention and consciousness are intimately related but not identical',
-    'Attention acts as the energetic gatekeeper for conscious integration',
+    '[INTERPRETED] Attention as allocation of distinction-maintenance resources—philosophical reframing',
+    '[INTERPRETED] Four attention types as different allocation strategies—vocabulary, not proof',
+    '[IMPORTED from cognitive psychology] Working memory, inattentional blindness, attentional blink phenomena',
+    '[INTERPRETED] Attentional limits explained through energy constraints—interpretation, not derivation',
+    '[INTERPRETED] Attention as energetic gatekeeper for conscious integration—proposed framing',
   ],
 };

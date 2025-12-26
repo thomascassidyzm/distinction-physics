@@ -3,7 +3,8 @@ import type { Section } from '../types';
 export const section1_2: Section = {
   id: '1.2',
   title: 'The Observer-Distinction-Observable Triad',
-  epistemicStatus: 'derived',
+  subtitle: 'Formalizing the OLU Concept',
+  epistemicStatus: 'interpreted',
   content: [
     {
       type: 'heading',
@@ -78,9 +79,10 @@ export const section1_2: Section = {
     },
   ],
   keyPoints: [
-    'Observer, distinction, and observable form a necessary triad',
-    'An observer is any system that can register at least one distinction',
-    'OLU complexity measures maximum simultaneous distinctions',
+    'Observer, distinction, and observable form a necessary triad—this is conceptual vocabulary, not new physics',
+    'An observer (OLU) is any system that can register at least one distinction',
+    'OLU complexity measures maximum simultaneous distinctions [DERIVED from axiomatic structure]',
     'The hierarchy ranges from minimal (thermostats) to high complexity (human brains)',
+    'This formalization matches the glossary definition of OLU as interpretive vocabulary',
   ],
 };

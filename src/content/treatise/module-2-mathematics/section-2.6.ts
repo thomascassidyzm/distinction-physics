@@ -2,13 +2,20 @@ import type { Section } from '../types';
 
 export const section2_6: Section = {
   id: '2.6',
-  title: 'The Emergence of Geometric Structures from Spatial Distinction',
-  epistemicStatus: 'derived',
+  title: 'Geometry Understood Through Spatial Distinction',
+  subtitle: 'An Interpretive Account [INTERPRETED]',
+  epistemicStatus: 'interpreted',
   content: [
     {
       type: 'paragraph',
       content:
-        'Geometry emerges when boundary-drawing applies to spatial relationships. Points, lines, shapes, and spaces are all patterns of spatial distinction—ways of organizing boundaries in extension.',
+        'Geometry can be understood through the lens of boundary-drawing applied to spatial relationships. Points, lines, shapes, and spaces can be interpreted as patterns of spatial distinction—ways of organizing boundaries in extension. We do not derive geometry from our axioms; we show consistency between geometric structure and distinction-primacy.',
+    },
+    {
+      type: 'note',
+      variant: 'sidenote',
+      content:
+        '**Epistemic note**: This entire section is [INTERPRETED]. Geometry exists independently; we offer a lens for understanding it through distinction-vocabulary.',
     },
     {
       type: 'heading',
@@ -120,12 +127,10 @@ export const section2_6: Section = {
       type: 'theorem',
       id: 'thm-parallel-postulate',
       label: 'proposition',
-      name: 'Parallel Postulate from Energy Stability',
+      name: 'Parallel Postulate Interpreted Through Energy Stability [INTERPRETED]',
       statement:
-        'Through a point not on a line, exactly one parallel can be drawn. This holds in flat space because it is the energetically stable configuration.',
-      proof:
-        'Deviations from Euclidean geometry require energy input (mass, radiation) that reshapes the boundary landscape.',
-      epistemicStatus: 'derived',
+        'Through a point not on a line, exactly one parallel can be drawn. **Interpretation**: This can be understood as holding in flat space because it represents an energetically stable configuration. Deviations require energy input that reshapes the boundary landscape.',
+      epistemicStatus: 'interpreted',
     },
     {
       type: 'heading',
@@ -185,11 +190,11 @@ export const section2_6: Section = {
     },
   ],
   keyPoints: [
-    'A geometric point is the minimal spatial distinction: "here" versus "not-here"',
-    'Lines, planes, and higher-dimensional spaces emerge from iterated spatial distinctions along independent axes',
-    'Distance reflects distinction strength—nearby points require more energy to distinguish than distant ones',
-    'Euclidean geometry is the lowest-energy spatial structure, stable in the absence of mass-energy',
-    'Non-Euclidean geometries emerge when mass-energy curves the boundary landscape',
-    'Topological invariants are the most robust distinction patterns, surviving continuous deformation',
+    '[INTERPRETED] A geometric point as the minimal spatial distinction: "here" versus "not-here"',
+    '[INTERPRETED] Lines, planes, and higher-dimensional spaces as iterated spatial distinctions along independent axes',
+    '[INTERPRETED] Distance reflects distinction strength—nearby points require more energy to distinguish than distant ones',
+    '[INTERPRETED] Euclidean geometry as the lowest-energy spatial structure, stable in the absence of mass-energy',
+    '[INTERPRETED] Non-Euclidean geometries as what occurs when mass-energy curves the boundary landscape',
+    '[INTERPRETED] Topological invariants as the most robust distinction patterns, surviving continuous deformation',
   ],
 };

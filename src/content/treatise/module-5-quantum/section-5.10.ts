@@ -8,7 +8,7 @@ export const section5_10: Section = {
     {
       type: 'paragraph',
       content:
-        'The distinction framework provides a unifying perspective on longstanding interpretation debates:',
+        'The distinction framework provides a unifying **interpretive lens** on longstanding interpretation debates. **Note: This section offers philosophical vocabulary for understanding existing interpretations of QM. It does not claim to resolve these debates definitively or to provide a superior "correct" interpretation. The framework is complementary to, not a replacement for, these ongoing discussions in foundations of physics.**',
     },
     {
       type: 'heading',
@@ -25,34 +25,34 @@ export const section5_10: Section = {
         [
           'Copenhagen',
           'Treats measurement as primitive and unexplained',
-          'EXPLAINS measurement as energy-costly distinction-making, providing mechanism where Copenhagen offers only description',
+          'Offers vocabulary for understanding measurement as energy-costly distinction-making, providing conceptual framing',
         ],
         [
           'Many-Worlds',
           'Posits endless branching universes for each measurement outcome',
-          'Explains apparent "branching" as the resolution of potential distinctions into actual ones, governed by resource constraints - without requiring ontological proliferation of worlds',
+          'Offers alternative vocabulary: "branching" can be understood as resolution of potential distinctions into actual ones, governed by resource constraints',
         ],
         [
           'QBism / Relational QM',
           'Emphasizes observer-dependence of quantum states',
-          'Provides the PHYSICAL FOUNDATION for this dependence through resource-constrained distinction-making',
+          'Provides complementary vocabulary for understanding observer-dependence through resource-constrained distinction-making',
         ],
         [
           'Pilot Wave Theories',
           'Proposes hidden variables guiding particle trajectories',
-          'Suggests the complete description includes both actualized distinctions and potential ones, with energy determining which become observable',
+          'Offers alternative framing: description includes both actualized distinctions and potential ones',
         ],
         [
           'Objective Collapse (GRW, Penrose)',
           'Posits physical collapse mechanisms',
-          'Identifies the physical mechanism as energy exchange required for distinction-making, connecting collapse to thermodynamics',
+          'Offers conceptual connection: collapse can be understood through energy exchange required for distinction-making',
         ],
       ],
     },
     {
       type: 'paragraph',
       content:
-        'Rather than adding another interpretation, the distinction framework reveals how existing interpretations capture different aspects of the same underlying process - the transformation of undistinguished possibilities into distinguished actualities through resource-constrained observation.',
+        'Rather than adding another interpretation that competes with existing ones, the distinction framework offers **complementary vocabulary** for understanding how different interpretations capture different aspects of quantum phenomena. This is a philosophical meta-perspective, not a claim to have solved the interpretation problem.',
       emphasis: 'key',
     },
     {
@@ -87,21 +87,21 @@ export const section5_10: Section = {
     {
       type: 'paragraph',
       content:
-        'The distinction framework resolves these by providing what was missing: a PHYSICAL ACCOUNT of what observation is (distinction-making), why it matters (it costs energy), and why reality appears different to different observers (different energy budgets enable different distinctions).',
+        'The distinction framework offers a **perspective** on these debates: observation can be understood as a thermodynamic process with fundamental constraints. This is a philosophical lens, not a definitive resolution of the interpretation problem.',
       emphasis: 'key',
     },
     {
       type: 'paragraph',
       content:
-        'The debates persisted because physicists were trying to interpret quantum mechanics without recognizing that observation itself is a thermodynamic process with fundamental constraints. Once this is recognized, the interpretive landscape simplifies dramatically.',
+        'The debates persist because the interpretation problem involves deep questions about the nature of reality, probability, and observation that may not have unique answers. The distinction framework offers vocabulary for thinking about these questions, not final solutions.',
       emphasis: 'conclusion',
     },
   ],
   keyPoints: [
-    'The distinction framework unifies existing interpretations by revealing their common foundation in distinction-making',
-    'Copenhagen lacks mechanism; the distinction framework provides it through energy-costly distinction-making',
-    'Many-Worlds branching is reframed as resolution of potential into actual distinctions without ontological proliferation',
-    'QBism and relational views gain physical foundation through resource-constrained distinction-making',
-    'Interpretive debates persisted because observation was not recognized as a thermodynamic process with fundamental constraints',
+    '[INTERPRETED] The distinction framework offers complementary vocabulary for existing QM interpretations',
+    '[INTERPRETED] Each interpretation can be understood through the lens of distinction-making',
+    'The framework provides a philosophical meta-perspective, not a definitive resolution of interpretation debates',
+    'This is conceptual vocabulary for understanding the interpretation landscape, not a claim to have solved it',
+    'The framework is complementary to, not a replacement for, ongoing foundational discussions',
   ],
 };

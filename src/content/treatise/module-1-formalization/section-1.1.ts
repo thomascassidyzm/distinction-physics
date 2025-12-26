@@ -3,7 +3,8 @@ import type { Section } from '../types';
 export const section1_1: Section = {
   id: '1.1',
   title: 'The Distinction Operator: Formal Definition',
-  epistemicStatus: 'derived',
+  subtitle: 'Mathematical Vocabulary for Distinction-Making',
+  epistemicStatus: 'interpreted',
   content: [
     {
       type: 'heading',
@@ -14,7 +15,7 @@ export const section1_1: Section = {
     {
       type: 'paragraph',
       content:
-        'We formalize the primitive operation of distinction-making with the distinction operator:',
+        'We formalize the primitive operation of distinction-making with the distinction operator. This is **interpretive vocabulary**—a mathematical structure that captures the philosophical insight of distinction-primacy, not a derivation of new physics:',
     },
     {
       type: 'definition',
@@ -134,9 +135,10 @@ export const section1_1: Section = {
     },
   ],
   keyPoints: [
-    'The distinction operator maps pairs of states to distinguishable (1) or indistinguishable (0)',
-    'Three necessary properties: non-reflexivity, symmetry, and non-transitivity',
-    'The energy-indexed operator captures that distinguishability depends on available energy',
+    'The distinction operator is interpretive vocabulary—a formal structure for the philosophical insight of distinction-primacy',
+    'Maps pairs of states to distinguishable (1) or indistinguishable (0)',
+    'Three properties follow from axiomatic structure: non-reflexivity, symmetry, and non-transitivity',
+    'The energy-indexed operator captures that distinguishability depends on available energy [connects to IMPORTED Landauer limit]',
     'Distinction-making is always observer-relative',
   ],
 };

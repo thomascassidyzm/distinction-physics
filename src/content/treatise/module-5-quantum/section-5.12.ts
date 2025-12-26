@@ -216,10 +216,10 @@ export const section5_12: Section = {
   ],
   keyPoints: [
     'Consistency demonstrations show compatibility with known physics but do not uniquely support the framework',
-    'Landauer limit, resolution-energy scaling, and decoherence-complexity observations are consistency demonstrations',
-    'Novel predictions include specific measurement energy scaling, coherence-complexity relationships, and modified uncertainty relations',
-    'The modified uncertainty prediction (Prediction 5) provides the strongest potential falsification test',
-    'Precision calorimetry and coherence time studies offer practical experimental approaches',
-    'Intellectual honesty requires distinguishing what the framework explains from what it uniquely predicts',
+    '[IMPORTED] Landauer limit, resolution-energy scaling, and decoherence observations are imported from established physics',
+    '[CONJECTURED] Novel predictions (measurement energy scaling, coherence-complexity, modified uncertainty) are speculative extensions',
+    '[CONJECTURED] The modified uncertainty prediction (Prediction 5) goes beyond established physics and could falsify the framework',
+    'Intellectual honesty requires distinguishing consistency demonstrations from novel predictions',
+    'Most claims in this module are interpretations, not predictions that distinguish the framework from standard QM',
   ],
 };

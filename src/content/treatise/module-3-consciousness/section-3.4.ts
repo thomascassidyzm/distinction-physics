@@ -2,9 +2,15 @@ import type { Section } from '../types';
 
 export const section3_4: Section = {
   id: '3.4',
-  title: 'The Hard Problem Transformed',
-  epistemicStatus: 'contested',
+  title: 'The Hard Problem: Relocated, Not Solved',
+  epistemicStatus: 'interpreted',
   content: [
+    {
+      type: 'note',
+      variant: 'editorial',
+      content:
+        '**Epistemic status: INTERPRETED.** This section is philosophically central to the module. We are explicit: the framework RELOCATES the hard problem—it does NOT solve, dissolve, or explain it away. The relocation itself may or may not be philosophically satisfying. We offer vocabulary, not proof.',
+    },
     {
       type: 'heading',
       level: 2,
@@ -20,7 +26,7 @@ export const section3_4: Section = {
       type: 'note',
       variant: 'editorial',
       content:
-        '**Critical Clarification (Antibody R4)**: This framework does not claim to *solve* the hard problem in the sense of explaining why consciousness exists at all. The hard problem—why there is something it is like to be a conscious system rather than nothing—remains genuinely outside the scope of this or any physical theory. What we offer is different: an explanation of the *thermodynamic cost* of consciousness, not its ultimate metaphysical ground.',
+        '**Critical Clarification**: This framework does NOT claim to solve the hard problem. The hard problem—why there is something it is like to be a conscious system rather than nothing—remains genuinely outside the scope of this or any physical theory. What we offer is different: a RELOCATION of the question (from "how does matter generate experience?" to "why does self-referential boundary maintenance have an inside?") and an account of the thermodynamic COST of consciousness. We do not explain why consciousness EXISTS.',
     },
     {
       type: 'heading',
@@ -158,10 +164,10 @@ export const section3_4: Section = {
       id: 'thm-hard-problem-transformation',
       label: 'claim',
       number: '3.3',
-      name: 'Transformation of the Hard Problem',
+      name: 'Relocation (Not Solution) of the Hard Problem [INTERPRETED]',
       statement:
-        'The framework transforms the hard problem from "how does matter generate experience?" (which suggests two different kinds of things) to "why does self-referential boundary maintenance have an inside perspective?" (which is more tractable). The framework explains the thermodynamic *cost* of consciousness, not its metaphysical *existence*.',
-      epistemicStatus: 'contested',
+        'The framework RELOCATES the hard problem from "how does matter generate experience?" to "why does self-referential boundary maintenance have an inside perspective?" This relocation may or may not be philosophically satisfying—it does NOT constitute a solution. The framework explains the thermodynamic COST of consciousness, not its metaphysical EXISTENCE.',
+      epistemicStatus: 'interpreted',
       dependsOn: ['def-consciousness', 'thm-boundary-energy-cost'],
     },
     {
@@ -178,10 +184,11 @@ export const section3_4: Section = {
     },
   ],
   keyPoints: [
-    'The framework does NOT claim to solve why consciousness exists—only to explain its thermodynamic cost',
-    'Inside/outside perspectives are access modes to the same process, not two different substances',
-    'This avoids both eliminativism (consciousness is real) and panpsychism (consciousness requires complexity)',
-    'The framework explains the cost, structure, and constraints of consciousness',
-    'Why there is an inside perspective at all remains genuinely open',
+    'The framework RELOCATES (does NOT solve) the hard problem—this is philosophical vocabulary, not proof',
+    '[INTERPRETED] Inside/outside as access modes to the same process—a reframing, not an explanation',
+    '[INTERPRETED] Avoids eliminativism and panpsychism—but does not prove consciousness exists or how',
+    '[INTERPRETED] Explains thermodynamic cost, structure, and constraints—not metaphysical existence',
+    'Why there is an inside perspective at all remains GENUINELY OPEN—we do not solve this',
+    'The relocation may or may not satisfy the intuitions that drive the hard problem',
   ],
 };

@@ -2,13 +2,19 @@ import type { Section } from '../types';
 
 export const section3_2: Section = {
   id: '3.2',
-  title: 'The Energy Budget of Consciousness',
+  title: 'The Energy Budget of Consciousness [IMPORTS Neuroscience]',
   epistemicStatus: 'imported',
   content: [
     {
+      type: 'note',
+      variant: 'editorial',
+      content:
+        '**Epistemic status: IMPORTED.** This section draws empirical data from neuroscience (20W brain power, ~8W conscious processing, ~10^7 neuron estimates). These figures are OBSERVATIONS, not predictions or derivations of our framework. We INTERPRET these findings through distinction-vocabulary but do not claim to have predicted them.',
+    },
+    {
       type: 'paragraph',
       content:
-        'This section **imports** empirical data from neuroscience to characterize the energy budget of consciousness. The figures presented (10^7 neurons, 8W power, etc.) are drawn from neuroscience research, not derived from our axioms. Our framework provides interpretive vocabulary for understanding these empirical findings.',
+        'This section **imports** empirical data from neuroscience to characterize the energy budget of consciousness. The figures presented (~10^7 neurons, ~8W power, etc.) are drawn from neuroscience research, not derived from our axioms. Our framework provides interpretive vocabulary for understanding these empirical findings—it does not replace the neuroscience.',
     },
     {
       type: 'heading',

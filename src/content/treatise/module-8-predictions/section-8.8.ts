@@ -2,13 +2,14 @@ import type { Section } from '../types';
 
 export const section8_8: Section = {
   id: '8.8',
-  title: 'Open Questions and Research Directions',
+  title: 'Open Questions and Limitations',
+  subtitle: 'What the Framework Does Not Explain',
   epistemicStatus: 'open',
   content: [
     {
       type: 'paragraph',
       content:
-        'Every scientific framework leaves questions unanswered. The Distinction Framework is no exception. Here we catalog what remains genuinely open and identify promising research directions.',
+        '**Epistemic Honesty Requires Acknowledging Limits**: Every framework leaves questions unanswered. The Distinction as Primitive framework is no exception. Here we catalog what remains genuinely open---these are not merely "gaps in current development" but may represent fundamental limitations of the approach.',
       emphasis: 'key',
     },
     {
@@ -258,10 +259,11 @@ export const section8_8: Section = {
     },
   ],
   keyPoints: [
-    'Open questions include: specific value of $\\hbar$, complex amplitudes, Born rule, specific qualia, 3+1 dimensions, consciousness threshold',
-    'Some questions may require additional axioms; others may be unanswerable in principle',
-    'Promising research: precision Landauer tests, gravity-coherence coupling, metabolic imaging, artificial consciousness, Planck-scale astrophysics',
-    'Different experimental outcomes have different implications for the framework',
-    'The framework is incomplete; these questions constitute its ongoing research program',
+    '[NOT DERIVED] The framework does not derive fundamental constants ($\\hbar$, c, G, k) or explain their specific values',
+    '[NOT DERIVED] Complex amplitudes and the Born rule are imported from QM, not derived from axioms',
+    '[NOT EXPLAINED] Specific qualia and 3+1 dimensions remain unexplained; some may be unanswerable in principle',
+    '[CONJECTURED] The consciousness threshold (~$10^7$ distinctions) is an order-of-magnitude estimate, not a derivation',
+    'Promising research directions exist, but many questions may require extending the axioms beyond current formulation',
+    '[EPISTEMIC HONESTY] These are genuine limitations, not merely "gaps awaiting development"',
   ],
 };

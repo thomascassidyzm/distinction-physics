@@ -2,13 +2,14 @@ import type { Section } from '../types';
 
 export const section4_1: Section = {
   id: '4.1',
-  title: 'Learning as Distinction Refinement',
+  title: 'Learning as Distinction Refinement [INTERPRETED]',
+  subtitle: 'The Four Modes of Anti-Entropic Pattern Building',
   epistemicStatus: 'interpreted',
   content: [
     {
       type: 'paragraph',
       content:
-        'Learning, in its most fundamental form, is the process by which an OLU refines its distinction-making capabilities. This refinement can take several forms:',
+        'Learning, understood through the distinction lens, is the process by which an OLU refines its distinction-making capabilities. This refinement is fundamentally **anti-entropic**: it builds and stabilizes patterns against the natural tendency toward dissolution. The refinement takes several forms:',
     },
     {
       type: 'list',
@@ -94,9 +95,11 @@ export const section4_1: Section = {
     },
   ],
   keyPoints: [
-    'Learning refines distinction-making through four modes: acquiring, sharpening, reorganizing, and automating distinctions',
-    'All learning modes share a common thermodynamic signature: improved efficiency',
+    'Learning refines distinction-making through four modes: acquiring, sharpening, reorganizing, and automating distinctions [INTERPRETED]',
+    'All learning is anti-entropic: building ordered patterns against natural dissolution',
+    'All learning modes share a common thermodynamic signature: improved efficiency [INTERPRETED]',
     'Learning is formally defined as decreased energy cost with maintained or improved distinction quality',
-    'The efficiency ratio Q/E provides a unified metric for all forms of learning',
+    'The efficiency ratio Q/E provides a unified metric for all forms of learning [INTERPRETED]',
   ],
 };
+

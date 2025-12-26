@@ -15,8 +15,8 @@ import { section2_11 } from './section-2.11';
 export const module2: Module = {
   number: 2,
   id: 'mathematics',
-  title: 'The Emergence of Mathematics from Distinction',
-  subtitle: 'Why Mathematical Structures Are Thermodynamically Necessary',
+  title: 'Mathematics as Consistent with Distinction-Primacy',
+  subtitle: 'How Mathematical Structures Fall Out from Distinction Thinking',
   epistemicStatus: 'interpreted',
   sections: [
     section2_1,
@@ -32,12 +32,12 @@ export const module2: Module = {
     section2_11,
   ],
   keyInsights: [
-    'Mathematics formalizes the most stable distinction patterns possible',
-    'Discrete mathematics is foundational because OLUs cannot fully access continuity',
-    'Sets, numbers, logic, and geometry all emerge from boundary-drawing operations',
-    'Mathematical necessity is thermodynamic stability—unstable patterns require more energy',
-    'The "unreasonable effectiveness" of mathematics is explained by shared thermodynamic origins with physics',
-    'Probability emerges from incomplete distinction—quantifying undistinguished possibilities',
+    '[INTERPRETED] Mathematics formalizes stable distinction patterns—this is consistency with distinction-primacy, not independent derivation',
+    '[DERIVED from axioms] Discrete mathematics is foundational because OLUs cannot fully access continuity (follows from finite energy)',
+    '[INTERPRETED] Sets, numbers, logic, and geometry can be understood as boundary-drawing operations—we do not derive mathematics from scratch',
+    '[INTERPRETED] Mathematical necessity viewed as thermodynamic stability—a proposed correspondence, not a proven equivalence',
+    '[INTERPRETED] The "unreasonable effectiveness" of mathematics is illuminated by shared thermodynamic constraints—interpretive vocabulary, not derivation',
+    '[INTERPRETED] Probability as formalization of incomplete distinction—consistent with, not derived from, the framework',
   ],
   connectionsToNext: [
     'Module 3 applies these mathematical structures to consciousness as self-referential distinction',

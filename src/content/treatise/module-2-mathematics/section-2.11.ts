@@ -2,19 +2,25 @@ import type { Section } from '../types';
 
 export const section2_11: Section = {
   id: '2.11',
-  title: 'Conclusion: Mathematics as the Stable Structure of Distinction',
-  subtitle: 'Summarizing the Emergence of Mathematics from Distinction',
-  epistemicStatus: 'derived',
+  title: 'Conclusion: Mathematics Consistent with Distinction-Primacy',
+  subtitle: 'Summarizing the Interpretive Account',
+  epistemicStatus: 'interpreted',
   content: [
     {
       type: 'paragraph',
       content:
-        'Mathematics, viewed through the lens of distinction-making under energy constraints, is neither a purely human invention nor a discovery of a Platonic realm. It is the necessary structure that emerges when any OLU formalizes stable patterns of boundary-drawing.',
+        'Mathematics, viewed through the lens of distinction-making under energy constraints, can be understood as neither purely human invention nor discovery of a Platonic realm. This module has shown that mathematical structure is **consistent with** distinction-primacy—when you think in terms of distinctions, mathematical structure falls out naturally. This is an interpretive account, not a derivation of mathematics from our axioms.',
+    },
+    {
+      type: 'note',
+      variant: 'technical',
+      content:
+        '**Critical distinction**: This module demonstrates CONSISTENCY, not DERIVATION. Mathematics exists independently. We have shown that number, set, logic, geometry, and probability can all be understood through distinction-vocabulary. This illuminates mathematics; it does not replace mathematics with something derived from our two axioms.',
     },
     {
       type: 'heading',
       level: 2,
-      content: 'Key Insights',
+      content: 'Key Insights [All INTERPRETED Unless Noted]',
       id: 'key-insights',
     },
     {
@@ -23,58 +29,58 @@ export const section2_11: Section = {
       items: [
         {
           content:
-            '**Effective discreteness explains foundational mathematics**: Because no OLU can access continuous quantities, discrete mathematics (natural numbers, finite sets, Boolean logic) is primary. Continuous mathematics is an idealization built from discrete foundations.',
+            '**[DERIVED] Effective discreteness**: Because no OLU can access continuous quantities (follows from axioms), discrete patterns are more directly accessible. This is genuinely derived.',
         },
         {
           content:
-            '**Sets emerge from boundary-drawing**: Set formation is literally the drawing of boundaries---first around individual members, then around the collection itself. Set operations are boundary operations.',
+            '**[INTERPRETED] Sets understood through boundary-drawing**: Set formation can be viewed as drawing boundaries—first around individual members, then around the collection itself. This is interpretive vocabulary.',
         },
         {
           content:
-            '**Numbers emerge from iterated distinction**: The natural numbers represent the stable sequence of distinction configurations 0, 1, 2, 3, ... Any OLU capable of iteration arrives at this structure.',
+            '**[INTERPRETED] Numbers understood through iterated distinction**: The natural numbers can be understood as stable sequences of distinction configurations. This is consistency, not derivation.',
         },
         {
           content:
-            '**Logic emerges from boundary stability**: Truth values are boundary states (maintained or not). Logical operations are boundary combinations. Logical laws describe maximally stable patterns.',
+            '**[INTERPRETED] Logic understood through boundary stability**: Truth values can be viewed as boundary states. Logical operations as boundary combinations. This illuminates logic; it does not derive it.',
         },
         {
           content:
-            '**Geometry emerges from spatial distinction**: Points, lines, and spaces are patterns of spatial boundary-drawing. Euclidean geometry is the low-energy default; curved geometries reflect mass-energy shaping the boundary landscape.',
+            '**[INTERPRETED] Geometry understood through spatial distinction**: Points, lines, and spaces can be viewed as patterns of spatial boundary-drawing. This is interpretive vocabulary.',
         },
         {
           content:
-            '**Probability emerges from incomplete distinction**: When OLUs cannot fully distinguish possibilities, probability quantifies the degree of boundary maintenance.',
+            '**[INTERPRETED] Probability understood through incomplete distinction**: When OLUs cannot fully distinguish possibilities, probability formalizes the degree of distinction. This is consistency.',
         },
         {
           content:
-            '**Advanced structures emerge from pattern recognition**: Complex numbers, groups, categories---all represent efficient ways to organize increasingly abstract distinction patterns.',
+            '**[INTERPRETED] Advanced structures as organized distinction patterns**: Complex numbers, groups, categories—all can be understood as efficient organization of distinction patterns.',
         },
         {
           content:
-            '**Mathematics is effective because it shares origins with physics**: Both emerge from thermodynamic constraints on distinction-making. Their alignment is necessary, not mysterious.',
+            '**[INTERPRETED] Mathematics effective because of shared constraints**: This interpretation suggests both mathematics and physics emerge from thermodynamic constraints on distinction-making.',
         },
         {
           content:
-            '**Mathematical truth is thermodynamic stability**: Mathematical statements are true when they describe stable distinction patterns---patterns that require minimal energy to maintain and that any OLU will converge upon.',
+            '**[INTERPRETED] Mathematical truth as thermodynamic stability**: A proposed correspondence—mathematical statements describe stable distinction patterns. This is philosophical interpretation.',
         },
       ],
     },
     {
       type: 'heading',
       level: 2,
-      content: 'The Transformation of Mathematical Understanding',
+      content: 'The Interpretive Account of Mathematical Understanding',
       id: 'transformation',
     },
     {
       type: 'paragraph',
       content:
-        'This framework transforms our understanding of mathematics. It is not a separate domain requiring its own metaphysics but an integral part of how finite-energy observers must organize their distinction-making. The structures of mathematics---from counting to calculus, from logic to topology---emerge necessarily for any system that draws and maintains boundaries under resource constraints.',
+        'This framework offers an interpretive lens on mathematical understanding. Mathematics can be seen not as a separate domain requiring its own metaphysics but as an integral part of how finite-energy observers organize their distinction-making. The structures of mathematics—from counting to calculus, from logic to topology—can be understood as stable patterns for systems that draw and maintain boundaries under resource constraints.',
       emphasis: 'key',
     },
     {
       type: 'paragraph',
       content:
-        'Mathematics is not the language of the universe in a mystical sense. It is the stable structure of distinction itself---the patterns that survive thermodynamic pressure and thus appear invariant across observers, contexts, and time. This is why mathematics feels necessary: its truths are thermodynamic necessities, not arbitrary conventions.',
+        'Through this lens, mathematics can be viewed as the stable structure of distinction itself—the patterns that survive thermodynamic pressure and thus appear invariant across observers, contexts, and time. This interpretation suggests why mathematics feels necessary: its truths can be understood as thermodynamic stabilities, not arbitrary conventions. **This is a proposed correspondence, not a derivation.**',
     },
     {
       type: 'heading',
@@ -106,25 +112,25 @@ export const section2_11: Section = {
     },
     {
       type: 'summary',
-      title: 'Module 2 Key Takeaways',
+      title: 'Module 2 Key Takeaways [INTERPRETED Unless Noted]',
       variant: 'takeaways',
       points: [
-        'Mathematics formalizes the most stable distinction patterns possible',
-        'Discrete mathematics is foundational because OLUs cannot fully access continuity',
-        'Sets, numbers, logic, and geometry all emerge from boundary-drawing operations',
-        'Mathematical necessity is thermodynamic stability---unstable patterns require more energy to maintain',
-        'The "unreasonable effectiveness" of mathematics is explained by shared thermodynamic origins with physics',
-        'Probability emerges from incomplete distinction---quantifying undistinguished possibilities',
-        'Mathematical truth corresponds to pattern stability, making it universal across all OLUs',
-        'The a priori status of mathematics reflects that distinction patterns are inherent in any observer',
+        '[INTERPRETED] Mathematics formalizes stable distinction patterns—this is consistency with the framework',
+        '[DERIVED] Discrete mathematics is foundational because OLUs cannot fully access continuity (from effective discreteness)',
+        '[INTERPRETED] Sets, numbers, logic, and geometry can be understood through boundary-drawing operations',
+        '[INTERPRETED] Mathematical necessity viewed as thermodynamic stability—a proposed correspondence',
+        '[INTERPRETED] The "unreasonable effectiveness" illuminated by shared thermodynamic constraints',
+        '[INTERPRETED] Probability as formalization of incomplete distinction',
+        '[INTERPRETED] Mathematical truth as pattern stability—interpretive vocabulary, not derivation',
+        '[INTERPRETED] The a priori status of mathematics as reflecting distinction patterns inherent in any observer',
       ],
     },
   ],
   keyPoints: [
-    'Mathematics emerges necessarily from distinction-making under energy constraints',
-    'It is neither pure invention nor Platonic discovery, but formalized stable patterns',
-    'All major mathematical domains have their origin in specific boundary operations',
-    'Mathematical necessity is thermodynamic stability',
-    'Mathematics connects to consciousness, learning, quantum mechanics, and spacetime through shared foundations',
+    '[INTERPRETED] Mathematics is consistent with distinction-primacy—it falls out naturally from distinction thinking',
+    '[INTERPRETED] Mathematics is neither pure invention nor Platonic discovery, but can be understood as formalized stable patterns',
+    '[INTERPRETED] Major mathematical domains can be understood through specific boundary operations',
+    '[INTERPRETED] Mathematical necessity viewed as thermodynamic stability—this is a proposed correspondence',
+    '[INTERPRETED] This module demonstrates consistency between mathematics and the framework, not derivation',
   ],
 };

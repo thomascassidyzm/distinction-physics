@@ -115,11 +115,11 @@ export const section7_10: Section = {
     },
   ],
   keyPoints: [
-    'Living systems are sophisticated boundary-maintenance networks operating far from equilibrium',
-    'Metabolism, homeostasis, membranes, reproduction, DNA/RNA, immune systems, and neural systems are all distinction operations',
-    'Life requires continuous energy flow because distinction-maintenance costs energy',
-    'Separation from environment prevents boundary pattern dilution',
-    'Life is defined thermodynamically: far-from-equilibrium systems maintaining internal distinctions via environmental energy',
-    'The search for extraterrestrial life should seek maintained boundaries against entropy, not specific chemistry',
+    '[INTERPRETED] Living systems are sophisticated boundary-maintenance networks operating far from equilibrium',
+    '[INTERPRETED] Metabolism, homeostasis, membranes, reproduction, DNA/RNA, immune systems, and neural systems as distinction operations',
+    '[INTERPRETED] Life requires continuous energy flow because distinction-maintenance costs energy',
+    '[INTERPRETED] Separation from environment prevents boundary pattern dilution',
+    '[INTERPRETED] Life defined thermodynamically: far-from-equilibrium systems maintaining internal distinctions via environmental energy',
+    '[INTERPRETED] The search for extraterrestrial life should seek maintained boundaries against entropy, not specific chemistry',
   ],
 };

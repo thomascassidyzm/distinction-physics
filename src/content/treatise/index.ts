@@ -1,5 +1,5 @@
 /**
- * Distinction Physics: Treatise Content System
+ * Distinction as Primitive: Treatise Content System
  *
  * Central export for all treatise content, types, and utilities.
  */

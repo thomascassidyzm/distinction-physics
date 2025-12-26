@@ -2,15 +2,20 @@ import type { Section } from '../types';
 
 export const section8_2: Section = {
   id: '8.2',
-  title: 'Phenomena Consistent with the Framework',
-  subtitle: 'Consistency Demonstrations with Established Physics',
-  epistemicStatus: 'established',
+  title: 'Post-Hoc Consistency Demonstrations',
+  subtitle: 'Phenomena Known Before the Framework That It Is Designed to Accommodate',
+  epistemicStatus: 'interpreted',
   content: [
     {
       type: 'paragraph',
       content:
-        'This section documents phenomena that the framework explains as necessary consequences of the axioms. We are careful to note that most of these phenomena were known before the framework was developed. The framework provides **interpretation and unification**, not prediction in the strict temporal sense.',
+        '**Critical Framing**: This section documents phenomena that the framework is CONSISTENT WITH. However, ALL of these phenomena were known before the framework was developed. The framework was DESIGNED to be consistent with them. Showing consistency is necessary for credibility but provides no independent validation. These are post-hoc interpretations, not predictions.',
       emphasis: 'key',
+    },
+    {
+      type: 'paragraph',
+      content:
+        'The framework provides **interpretation and unifying vocabulary**, not prediction in the strict temporal sense. A framework that failed to account for known physics would be immediately falsified, but accounting for known physics merely clears a necessary bar; it does not confirm the framework.',
     },
     {
       type: 'note',
@@ -424,12 +429,12 @@ export const section8_2: Section = {
     },
   ],
   keyPoints: [
-    'Eight phenomena are consistent with the framework and experimentally confirmed',
-    'ALL were known before the framework - these are consistency demonstrations, not predictions',
-    'C1 (Landauer) is IMPORTED as the grounding for Axiom 1, not derived from it',
-    'C8 (Second Law) interpretation imports statistical mechanics beyond the two axioms',
-    'Other phenomena (C2-C7) are interpreted through the framework vocabulary',
-    'The framework\'s value is conceptual unification, not predictive novelty for established physics',
-    'Honest assessment: post-hoc consistency, not temporal prediction',
+    '[POST-HOC] ALL eight phenomena were known before the framework; these are consistency demonstrations, not predictions',
+    '[IMPORTED] C1 (Landauer) grounds Axiom 1; claiming it as a "prediction" would be historically inaccurate',
+    '[IMPORTED] C8 (Second Law) interpretation requires importing statistical mechanics beyond the two axioms',
+    '[INTERPRETED] C2-C7 are existing physics reframed through distinction-vocabulary; the framework did not predict them',
+    '[EPISTEMIC HONESTY] The framework was DESIGNED to be consistent with known physics; consistency is necessary but not validating',
+    'The genuine value is unifying vocabulary across domains, not predictive novelty for established phenomena',
+    'Conflating post-hoc consistency with temporal prediction would undermine the framework\'s scientific credibility',
   ],
 };

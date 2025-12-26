@@ -157,11 +157,11 @@ export const section7_6: Section = {
     },
   ],
   keyPoints: [
-    'Temperature indexes distinction-stability: $1/T = dS/dE$',
-    'Higher temperature means more rapid boundary fluctuation and harder distinction-maintenance',
-    'Phase transitions reflect different regimes of boundary organization',
-    'Absolute zero is unattainable because eliminating all boundary fluctuations requires infinite precision',
-    'Free energy $F = E - TS$ measures the capacity to create and maintain new distinctions',
-    'Equilibrium is reached when free energy is exhausted--boundary creation equals dissolution',
+    '[INTERPRETED] Temperature indexes distinction-stability: $1/T = dS/dE$',
+    '[INTERPRETED] Higher temperature means more rapid boundary fluctuation and harder distinction-maintenance',
+    '[INTERPRETED] Phase transitions reflect different regimes of boundary organization',
+    '[INTERPRETED] Absolute zero is unattainable because eliminating all boundary fluctuations requires infinite precision',
+    '[INTERPRETED] Free energy $F = E - TS$ measures the capacity to create and maintain new distinctions',
+    '[INTERPRETED] Equilibrium is reached when free energy is exhausted—boundary creation equals dissolution',
   ],
 };

@@ -3,34 +3,34 @@ import type { Section } from '../types';
 export const section9_4: Section = {
   id: '9.4',
   title: 'Philosophical Implications',
-  subtitle: 'Ontology, Epistemology, and the Observer\'s Role',
+  subtitle: 'Ontology, Epistemology, and the Observer\'s Role [INTERPRETED]',
   epistemicStatus: 'interpreted',
   content: [
     {
       type: 'heading',
       level: 2,
-      content: 'For Ontology (What Exists)',
+      content: 'For Ontology (What Exists) [INTERPRETED]',
     },
     {
       type: 'paragraph',
       content:
-        'Distinction Physics implies a distinctive ontology - a view about what fundamentally exists.',
+        'Distinction as Primitive proposes a distinctive perspective on ontology—a way of understanding what fundamentally exists. This is interpretive vocabulary, not proof.',
     },
     {
       type: 'paragraph',
       content:
-        'Traditional materialism holds that matter exists fundamentally and everything else (including mind) emerges from or reduces to matter. Traditional idealism holds that mind exists fundamentally and matter emerges from or reduces to mind. Distinction Physics suggests a third option: distinction-making is fundamental, and both mind and matter are aspects of distinction-making processes.',
+        'Traditional materialism holds that matter exists fundamentally and everything else (including mind) emerges from or reduces to matter. Traditional idealism holds that mind exists fundamentally and matter emerges from or reduces to mind. The framework suggests a third option: distinction-making can be understood as fundamental, with both mind and matter as aspects of distinction-making processes.',
     },
     {
       type: 'paragraph',
       content:
-        'This is not quite neutral monism (the view that mind and matter are both aspects of some neutral substance). The "neutral" element in distinction physics is not a substance but a process - the process of distinguishing. Reality is not made of stuff but of distinctions. The appearance of stuff emerges from patterns of distinction-making.',
+        'This is not quite neutral monism (the view that mind and matter are both aspects of some neutral substance). The "neutral" element here is not a substance but a process—the process of distinguishing. Reality can be understood as constituted by distinctions. The appearance of stuff emerges from patterns of distinction-making.',
       emphasis: 'key',
     },
     {
       type: 'paragraph',
       content:
-        'What exists, on this view, is the web of distinctions and the energy relations that govern distinction-making. Physical objects are stable patterns of distinctions. Mental states are distinction-making processes. Mathematical structures are the abstract organization of possible distinctions. Everything is distinctions, all the way down.',
+        'On this view, what exists is the web of distinctions and the energy relations that govern distinction-making. Physical objects are stable patterns of distinctions. Mental states are distinction-making processes. Mathematical structures are the abstract organization of possible distinctions. However, this is a proposed perspective [INTERPRETED], not a demonstrated ontology.',
     },
     {
       type: 'note',
@@ -41,7 +41,7 @@ export const section9_4: Section = {
     {
       type: 'heading',
       level: 2,
-      content: 'For Epistemology (What Can Be Known)',
+      content: 'For Epistemology (What Can Be Known) [INTERPRETED]',
     },
     {
       type: 'paragraph',
@@ -87,7 +87,7 @@ export const section9_4: Section = {
     {
       type: 'heading',
       level: 2,
-      content: 'For the Observer\'s Role in Physics',
+      content: 'For the Observer\'s Role in Physics [INTERPRETED]',
     },
     {
       type: 'paragraph',
@@ -97,7 +97,7 @@ export const section9_4: Section = {
     {
       type: 'paragraph',
       content:
-        'Distinction Physics reverses this perspective. The observer is not an awkward addition to physics but its very foundation. Physics describes how observers make distinctions under energy constraints. Remove the observer and you remove physics - not because physics is subjective, but because distinction-making requires a distinguisher.',
+        'Distinction as Primitive proposes a different perspective. The observer is not an awkward addition to physics but part of its foundation. Physics can be understood as describing how observers make distinctions under energy constraints. This does not make physics subjective—the constraints are objective. But it places the observer centrally rather than marginally.',
       emphasis: 'key',
     },
     {
@@ -108,30 +108,30 @@ export const section9_4: Section = {
     {
       type: 'paragraph',
       content:
-        'The observer is not outside physics looking in; the observer is inside physics looking around. Physics is the view from within, the structure of experience for distinction-making beings. This is not idealism because the constraints are real and external to any particular observer\'s wishes. It is not materialism because the observer cannot be eliminated from the picture. It is something new.',
+        'The observer is not outside physics looking in; the observer is inside physics looking around. Physics becomes the view from within—the structure of experience for distinction-making beings. This is not idealism (the constraints are real and external) nor materialism (the observer cannot be eliminated). It is a proposed perspective [INTERPRETED] that may illuminate both.',
       emphasis: 'conclusion',
     },
     {
       type: 'table',
       id: 'tbl-ontological-positions',
-      caption: 'Comparison of ontological positions',
+      caption: 'Comparison of ontological positions [INTERPRETED]',
       headers: ['Position', 'What is Fundamental', 'Mind-Matter Relation'],
       rows: [
         ['Materialism', 'Matter/Physical stuff', 'Mind emerges from matter'],
         ['Idealism', 'Mind/Consciousness', 'Matter emerges from mind'],
         ['Neutral Monism', 'Neutral substance', 'Both aspects of neutral'],
-        ['Distinction Physics', 'Distinction-making (process)', 'Both aspects of distinguishing'],
+        ['Distinction as Primitive', 'Distinction-making (process)', 'Both aspects of distinguishing'],
       ],
       alignment: ['left', 'left', 'left'],
     },
   ],
   keyPoints: [
-    'Distinction-making is fundamental - both mind and matter are aspects of distinction-making processes',
-    'Reality is not made of stuff but of distinctions; the appearance of stuff emerges from patterns',
-    'Knowledge consists of distinction structures isomorphic to what is known',
-    'Knowledge is always partial (finite energy), perspectival (different observers), and energy-constrained',
+    'Distinction-making is proposed as fundamental [INTERPRETED]—mind and matter as aspects of distinction-making',
+    'Reality can be understood as constituted by distinctions; stuff as stable patterns [INTERPRETED]',
+    'Knowledge as distinction structures isomorphic to what is known [INTERPRETED]',
+    'Knowledge is partial (finite energy), perspectival (different observers), and energy-constrained [DERIVED]',
     'The framework is not skepticism: knowledge is real but structured by distinction-making capacities',
-    'The observer is not an awkward addition to physics but its very foundation',
-    'Physics is the view from within - neither idealism nor materialism but something new',
+    'The observer is placed centrally in physics, not marginally [INTERPRETED]',
+    'This is a proposed perspective, neither idealism nor materialism, that may illuminate both',
   ],
 };

@@ -2,34 +2,40 @@ import type { Section } from '../types';
 
 export const section6_5: Section = {
   id: '6.5',
-  title: 'Black Holes: Where Distinction-Maintenance Becomes Impossible',
-  epistemicStatus: 'speculative',
+  title: 'Black Holes [CONJECTURED INTERPRETATION]',
+  epistemicStatus: 'conjectured',
   content: [
+    {
+      type: 'note',
+      variant: 'editorial',
+      content:
+        '**EPISTEMIC WARNING: HIGHLY SPECULATIVE.** Black hole physics (event horizons, Hawking radiation, Bekenstein-Hawking entropy) is IMPORTED from established physics. We do NOT derive black hole physics. We offer CONJECTURED interpretations through distinction-vocabulary that may or may not prove useful. This is exploratory philosophy, not established science.',
+    },
     {
       type: 'paragraph',
       content:
-        'Black holes present a striking case for our framework. The event horizon is the boundary beyond which no information can escape - no distinctions made inside can propagate outside.',
+        'Black holes present a striking case for speculative extension of our framework. The event horizon is the boundary beyond which no information can escape—no distinctions made inside can propagate outside. **This is established physics; our interpretation is conjecture.**',
     },
     {
       type: 'heading',
       level: 3,
-      content: 'The Event Horizon as Thermodynamic Boundary',
+      content: 'The Event Horizon [IMPORTED + CONJECTURED INTERPRETATION]',
     },
     {
       type: 'paragraph',
       content:
-        'In our interpretation: **the event horizon marks where distinction-maintenance costs become infinite for external observers**. Inside the horizon, distinctions that would allow communication outward require more energy than is available in the accessible universe.',
+        'In our **speculative interpretation**: the event horizon might be understood as marking where distinction-maintenance costs become infinite for external observers. Inside the horizon, distinctions that would allow communication outward might require more energy than is available. **This is conjecture, not derivation.**',
       emphasis: 'key',
     },
     {
       type: 'definition',
       id: 'def-event-horizon-boundary',
-      term: 'Event Horizon (Distinction Framework)',
+      term: 'Event Horizon (Distinction Framework) [CONJECTURED]',
       definition:
-        'The boundary surface around a black hole where the energy cost of maintaining outward-propagating distinctions becomes infinite. Beyond this surface, no OLU outside the horizon can make distinctions about interior events.',
+        '[IMPORTED] The event horizon is established physics—the boundary beyond which light cannot escape. [CONJECTURED] We speculatively interpret this as where distinction-maintenance costs become infinite. This is vocabulary, not derivation.',
       intuition:
-        'The event horizon is not just a geometric or causal boundary - it is thermodynamic. The energy required to "send a message out" exceeds any finite budget.',
-      epistemicStatus: 'speculative',
+        'The event horizon is a causal boundary in established physics. Our interpretation as "thermodynamic distinction boundary" is speculative.',
+      epistemicStatus: 'conjectured',
     },
     {
       type: 'paragraph',
@@ -83,71 +89,71 @@ export const section6_5: Section = {
     {
       type: 'heading',
       level: 3,
-      content: 'Black Hole Thermodynamics',
+      content: 'Black Hole Thermodynamics [IMPORTED]',
     },
     {
       type: 'paragraph',
       content:
-        'Bekenstein and Hawking showed that black holes have entropy proportional to their surface area:',
+        'Bekenstein and Hawking showed that black holes have entropy proportional to their surface area. **This is IMPORTED physics—we do not derive it:**',
     },
     {
       type: 'math',
       latex: 'S = \\frac{k_B c^3 A}{4 G \\hbar}',
       display: 'block',
       label: 'eq:bekenstein-hawking',
-      description: 'The Bekenstein-Hawking entropy formula: entropy scales with horizon area',
+      description: '[IMPORTED] The Bekenstein-Hawking entropy formula: entropy scales with horizon area',
     },
     {
       type: 'paragraph',
       content:
-        'This is remarkable: entropy, usually a bulk property, scales with the surface. Our framework offers an interpretation: **the event horizon represents the maximum boundary capacity for distinction-making about the interior**.',
+        'This is remarkable: entropy, usually a bulk property, scales with the surface. Our framework offers a **speculative interpretation (CONJECTURED)**: the event horizon might represent the maximum boundary capacity for distinction-making about the interior. **This is vocabulary, not derivation.**',
     },
     {
       type: 'paragraph',
       content:
-        'The entropy measures how many distinct internal states are compatible with the external boundary configuration. The area-scaling follows because distinctions about the interior must propagate through the horizon surface - the surface area limits the "channel capacity" for distinctions.',
+        '[CONJECTURED] The entropy might measure how many distinct internal states are compatible with the external boundary configuration. The area-scaling might follow because distinctions about the interior must propagate through the horizon surface. **This is speculative interpretation of imported physics.**',
     },
     {
       type: 'heading',
       level: 3,
-      content: 'The Holographic Principle',
+      content: 'The Holographic Principle [IMPORTED + CONJECTURED]',
     },
     {
       type: 'paragraph',
       content:
-        'This connects to the holographic principle: the maximum information content of a region is bounded by its surface area because distinctions about interior content must be maintainable at the boundary.',
+        'The holographic principle is IMPORTED physics: the maximum information content of a region is bounded by its surface area. We offer a CONJECTURED interpretation: this might be because distinctions about interior content must be maintainable at the boundary.',
     },
     {
       type: 'theorem',
       id: 'thm-holographic-distinction',
       label: 'claim',
-      name: 'Holographic Principle from Boundary Capacity',
+      name: 'Holographic Principle Interpretation [CONJECTURED]',
       statement:
-        'The holographic bound on information storage follows naturally from the distinction framework: the surface area of a region limits how many interior distinctions can be maintained by external observers. Information is not "stored on the surface" but rather the surface represents the channel through which distinctions about the interior must propagate.',
-      epistemicStatus: 'speculative',
+        '[IMPORTED] The holographic bound on information storage is established physics. [CONJECTURED] We speculatively interpret this through distinction-vocabulary: the surface area of a region might limit how many interior distinctions can be maintained by external observers. **This is interpretation, not derivation. The holographic principle is imported, not derived from our axioms.**',
+      epistemicStatus: 'conjectured',
       dependsOn: ['A1', 'A2'],
     },
     {
       type: 'heading',
       level: 3,
-      content: 'Hawking Radiation',
+      content: 'Hawking Radiation [IMPORTED]',
     },
     {
       type: 'paragraph',
       content:
-        'Hawking\'s discovery that black holes radiate provides another connection to our framework. The Hawking temperature is:',
+        'Hawking\'s discovery that black holes radiate is IMPORTED physics. The Hawking temperature is:',
     },
     {
       type: 'math',
       latex: 'T_H = \\frac{\\hbar c^3}{8 \\pi G M k_B}',
       display: 'block',
-      label: 'eq:hawking-temperature',
-      description: 'Hawking temperature: black holes radiate at a temperature inversely proportional to mass',
+      label: 'eq-hawking-temperature',
+      description: '[IMPORTED] Hawking temperature: black holes radiate at a temperature inversely proportional to mass',
     },
     {
       type: 'paragraph',
       content:
-        'In the distinction framework, Hawking radiation can be interpreted as the "leakage" of distinction-patterns at the horizon boundary. The horizon is not a perfect barrier to distinction-propagation - quantum effects allow some distinctions to "tunnel" through, carrying energy away from the black hole.',
+        '[CONJECTURED] In the distinction framework, Hawking radiation might be interpreted as the "leakage" of distinction-patterns at the horizon boundary. The horizon might not be a perfect barrier to distinction-propagation—quantum effects might allow some distinctions to "tunnel" through. **This is speculative vocabulary applied to imported physics.**',
     },
     {
       type: 'paragraph',
@@ -237,12 +243,12 @@ export const section6_5: Section = {
     },
   ],
   keyPoints: [
-    'The event horizon marks where distinction-maintenance costs become infinite for external observers',
-    'Inside the horizon, outward-propagating distinctions require more energy than any finite budget',
-    'The classical singularity is replaced by a region where distinction itself becomes incoherent',
-    'Bekenstein-Hawking entropy scales with area because the surface limits distinction "channel capacity"',
-    'The holographic principle follows: interior information is bounded by surface area',
-    'Hawking radiation is the quantum leakage of distinction-patterns through the horizon',
-    'Black holes represent cosmic limits where the distinction framework encounters its own boundaries',
+    '[IMPORTED] Black hole physics (event horizons, Hawking radiation, Bekenstein-Hawking entropy) is established physics',
+    '[CONJECTURED] The event horizon might be interpreted as where distinction-costs become infinite—speculative vocabulary',
+    '[CONJECTURED] The classical singularity might be where distinction itself becomes incoherent—speculative',
+    '[IMPORTED] Bekenstein-Hawking entropy is established physics; our interpretation is conjectured',
+    '[IMPORTED] The holographic principle is established physics; we offer speculative interpretation',
+    '[CONJECTURED] Hawking radiation as distinction-pattern leakage is speculative vocabulary',
+    'Black holes represent cosmic limits—our interpretations are exploratory, not established',
   ],
 };

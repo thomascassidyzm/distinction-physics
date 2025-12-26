@@ -77,7 +77,7 @@ export const section1_5: Section = {
     {
       type: 'paragraph',
       content:
-        'The Planck scale represents a fundamental boundary where quantum mechanics and general relativity conspire to prevent any further refinement of distinctions. This is not merely a technological barrier but a physical impossibility.',
+        '**Epistemic note**: The Planck scale itself is IMPORTED from physics (the combination of h-bar, G, and c). What we DERIVE is that there must be some universal limit—the specific scale comes from established physics. The Planck scale represents a fundamental boundary where quantum mechanics and general relativity conspire to prevent any further refinement of distinctions.',
     },
     {
       type: 'heading',
@@ -128,10 +128,10 @@ export const section1_5: Section = {
     },
   ],
   keyPoints: [
-    'Different observers access reality at different effective resolutions based on their energy budgets',
-    'The effective grain size represents the finest distinction an observer can make',
-    'Each order of magnitude improvement in resolution requires roughly an order of magnitude more energy',
-    'The Planck scale represents an absolute floor: no OLU can make sub-Planckian distinctions',
+    '[DERIVED] Different observers access reality at different effective resolutions based on their energy budgets',
+    '[DERIVED] The effective grain size represents the finest distinction an observer can make',
+    '[DERIVED] Each order of magnitude improvement in resolution requires roughly an order of magnitude more energy',
+    'The Planck scale is IMPORTED from physics; we DERIVE that some universal limit must exist',
     'Two regimes exist: OLU-limited (practical) and Planck-limited (theoretical)',
   ],
 };

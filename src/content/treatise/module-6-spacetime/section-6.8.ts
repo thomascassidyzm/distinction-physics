@@ -2,49 +2,55 @@ import type { Section } from '../types';
 
 export const section6_8: Section = {
   id: '6.8',
-  title: 'Cosmological Implications',
-  epistemicStatus: 'speculative',
+  title: 'Cosmological Implications [MAXIMALLY SPECULATIVE]',
+  epistemicStatus: 'conjectured',
   content: [
+    {
+      type: 'note',
+      variant: 'editorial',
+      content:
+        '**EPISTEMIC WARNING: MAXIMALLY SPECULATIVE.** This section applies our speculative framework to cosmology—the study of the universe\'s largest scales. Standard cosmology (Big Bang, cosmic expansion, dark matter, dark energy) is IMPORTED physics. We do NOT derive cosmology. Our interpretations are highly speculative philosophy that may or may not prove useful. Treat these claims with maximum skepticism.',
+    },
     {
       type: 'heading',
       level: 3,
-      content: 'The Observable Universe as Accessible Boundary Network',
+      content: 'The Observable Universe [IMPORTED + CONJECTURED]',
     },
     {
       type: 'paragraph',
       content:
-        'Cosmology addresses the universe\'s largest scales. Our framework offers reinterpretation of fundamental cosmological concepts:',
+        'Cosmology addresses the universe\'s largest scales. Standard cosmology is IMPORTED physics. Our framework offers speculative reinterpretation (CONJECTURED) of fundamental cosmological concepts:',
     },
     {
       type: 'definition',
       id: 'def-cosmic-horizon-boundary',
-      term: 'Cosmic Horizon (Boundary Framework)',
+      term: 'Cosmic Horizon (Boundary Framework) [CONJECTURED]',
       definition:
-        'The observable universe is bounded not by a physical wall but by the limit of accessible distinctions. Beyond the horizon, events cannot be distinguished because their distinguishability cannot propagate to us faster than the universe expands.',
+        '[IMPORTED] The cosmic horizon is established physics—the limit of the observable universe. [CONJECTURED] We speculatively interpret this as the limit of accessible distinctions. **This is vocabulary, not derivation.**',
       intuition:
-        'The cosmic horizon is an information-theoretic boundary, not a material one—it marks the edge of what we can distinguish.',
-      epistemicStatus: 'speculative',
+        'The cosmic horizon is an information-theoretic boundary in standard cosmology. Our interpretation as "distinction-limit" is speculative vocabulary.',
+      epistemicStatus: 'conjectured',
     },
     {
       type: 'paragraph',
       content:
-        '**Big Bang:** Rather than emerging from a point of infinite density (singularity), the universe may have emerged from a state where distinction-making first became possible—a phase transition in the boundary landscape from undifferentiated potentiality to structured distinction-pattern.',
+        '**Big Bang [IMPORTED physics, CONJECTURED interpretation]:** Standard cosmology describes the Big Bang. We speculatively suggest it might be understood as a state where distinction-making first became possible. **This is speculation, not an alternative cosmology.**',
       emphasis: 'key',
     },
     {
       type: 'paragraph',
       content:
-        '**Cosmic expansion:** The expansion of space may represent the growth of the boundary network—increasing capacity for distinctions as the universe evolves. This reframes expansion not as stretching of a pre-existing fabric but as evolution of the distinction-pattern structure itself.',
+        '**Cosmic expansion [IMPORTED physics, CONJECTURED interpretation]:** The expansion of space is established physics. We speculatively suggest it might represent the growth of a boundary network. **This is speculative vocabulary, not a derivation or alternative physics.**',
     },
     {
       type: 'heading',
       level: 3,
-      content: 'Dark Matter and Dark Energy',
+      content: 'Dark Matter and Dark Energy [MAXIMALLY SPECULATIVE]',
     },
     {
       type: 'paragraph',
       content:
-        'Our framework does not immediately resolve dark matter and dark energy puzzles, but it suggests conceptual approaches:',
+        'Dark matter and dark energy are **unsolved problems in physics**. We do NOT solve them. We offer highly speculative interpretations that may be completely wrong:',
     },
     {
       type: 'list',
@@ -52,11 +58,11 @@ export const section6_8: Section = {
       items: [
         {
           content:
-            '**Dark matter:** Could represent mass-energy that alters the boundary landscape (producing gravitational effects) without directly participating in electromagnetic distinctions (making it invisible to light-based observation).',
+            '[HIGHLY SPECULATIVE] **Dark matter:** Might represent mass-energy that alters the boundary landscape without participating in electromagnetic distinctions. **This is wild speculation, not a solution.**',
         },
         {
           content:
-            '**Dark energy:** Could represent the "baseline cost" of maintaining the spacetime boundary structure—an irreducible energy expenditure required for any distinction-pattern to exist. As the universe expands, this baseline cost may drive accelerated expansion.',
+            '[HIGHLY SPECULATIVE] **Dark energy:** Might represent the "baseline cost" of maintaining spacetime boundary structure. **This is wild speculation, not a solution.**',
         },
       ],
     },
@@ -64,7 +70,7 @@ export const section6_8: Section = {
       type: 'note',
       variant: 'editorial',
       content:
-        'These are speculative interpretations requiring substantial further development. They illustrate how the framework might approach cosmological mysteries, not definitive solutions.',
+        '**IMPORTANT:** These are highly speculative interpretations that may be completely wrong. Dark matter and dark energy remain unsolved problems in physics. We do NOT claim to solve them. We offer philosophical vocabulary that may or may not prove useful.',
     },
     {
       type: 'heading',
@@ -121,11 +127,11 @@ export const section6_8: Section = {
     },
   ],
   keyPoints: [
-    'The cosmic horizon is an information-theoretic boundary marking the limit of accessible distinctions',
-    'The Big Bang may represent a phase transition from undifferentiated potentiality to structured distinction-pattern',
-    'Cosmic expansion reframes as growth of the boundary network\'s capacity for distinctions',
-    'Dark matter: mass-energy affecting boundary landscape without electromagnetic distinction participation',
-    'Dark energy: possible baseline cost of maintaining spacetime boundary structure',
-    'Framework transforms cosmological questions into questions about boundary-pattern dynamics',
+    '[MAXIMALLY SPECULATIVE] This entire section applies speculative vocabulary to established cosmology',
+    '[IMPORTED] Cosmological physics (Big Bang, expansion, dark matter, dark energy) is imported, not derived',
+    '[CONJECTURED] Interpretations of cosmic horizon, Big Bang, expansion are speculative vocabulary',
+    '[HIGHLY SPECULATIVE] Dark matter and dark energy interpretations are wild speculation, not solutions',
+    'We do NOT solve cosmological problems; we offer philosophical vocabulary',
+    'Standard cosmology remains as is; our interpretations are complementary speculation',
   ],
 };

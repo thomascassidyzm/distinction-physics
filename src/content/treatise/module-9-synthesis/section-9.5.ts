@@ -3,7 +3,7 @@ import type { Section } from '../types';
 export const section9_5: Section = {
   id: '9.5',
   title: 'Future Research Directions',
-  subtitle: 'Theoretical Development, Experimental Programs, and Connections',
+  subtitle: 'Open Problems, Experimental Programs, and Connections',
   epistemicStatus: 'open',
   content: [
     {
@@ -13,17 +13,17 @@ export const section9_5: Section = {
     },
     {
       type: 'paragraph',
-      content: 'Several areas require further theoretical work:',
+      content: 'The framework opens research directions rather than closing them. Several areas require further theoretical work:',
     },
     {
       type: 'heading',
       level: 3,
-      content: '1. Complete Quantum Gravity',
+      content: '1. Spacetime and Quantum Gravity [CONJECTURED]',
     },
     {
       type: 'paragraph',
       content:
-        'The framework suggests that spacetime emerges from distinction economics and that quantum mechanics describes small-scale distinctions. The full integration - a complete theory of quantum gravity within the distinction framework - remains the most important open theoretical problem.',
+        'Module 6 proposed spacetime as distinction-geometry [CONJECTURED]. The connection between distinction structure and spacetime metric remains speculative. A rigorous treatment of quantum gravity within this framework—if possible—remains the most important open theoretical problem.',
     },
     {
       type: 'heading',
@@ -53,17 +53,17 @@ export const section9_5: Section = {
     {
       type: 'paragraph',
       content:
-        'What does Distinction Physics say about the early universe, before observers existed? What about regions of the universe forever inaccessible to any observer? These questions push at the boundaries of the framework.',
+        'What does Distinction as Primitive say about the early universe, before observers existed? What about regions of the universe forever inaccessible to any observer? These questions push at the boundaries of the framework.',
     },
     {
       type: 'heading',
       level: 3,
-      content: '5. The Distinction-Making Substrate',
+      content: '5. Learning and Cognition',
     },
     {
       type: 'paragraph',
       content:
-        'What physical processes realize distinction-making? How does the brain make distinctions? What is the minimum physical complexity required for distinction-making? These questions connect the abstract framework to empirical neuroscience and physics.',
+        'The key contribution domain—learning as distinction pattern building—requires further development. What are the precise thermodynamic bounds on learning? How does the brain implement distinction-making? Can learning efficiency be improved through distinction-theoretic understanding? These questions connect the abstract framework to empirical cognitive science.',
     },
     {
       type: 'heading',
@@ -99,12 +99,12 @@ export const section9_5: Section = {
     {
       type: 'heading',
       level: 2,
-      content: 'Connections to Other Research',
+      content: 'Connections to Other Research Programs',
     },
     {
       type: 'paragraph',
       content:
-        'Distinction Physics connects to several active research programs:',
+        'Distinction as Primitive shares themes with several active research programs, suggesting it is part of a broader movement toward observer-centered, information-theoretic approaches:',
     },
     {
       type: 'heading',
@@ -124,7 +124,7 @@ export const section9_5: Section = {
     {
       type: 'paragraph',
       content:
-        'Tononi\'s IIT proposes that consciousness corresponds to integrated information ($\\Phi$). Distinction Physics offers a different but potentially compatible view: consciousness IS distinction-making, and $\\Phi$ may measure the richness of distinction structure.',
+        'Tononi\'s IIT proposes that consciousness corresponds to integrated information ($\\Phi$). Distinction as Primitive offers a different but potentially compatible view: consciousness IS distinction-making, and $\\Phi$ may measure the richness of distinction structure.',
     },
     {
       type: 'heading',
@@ -134,7 +134,7 @@ export const section9_5: Section = {
     {
       type: 'paragraph',
       content:
-        'Deutsch and Marletto\'s Constructor Theory focuses on what transformations are possible. This connects to Distinction Physics\' emphasis on energy constraints determining possible distinctions.',
+        'Deutsch and Marletto\'s Constructor Theory focuses on what transformations are possible. This connects to Distinction as Primitive\'s emphasis on energy constraints determining possible distinctions.',
     },
     {
       type: 'heading',
@@ -144,7 +144,7 @@ export const section9_5: Section = {
     {
       type: 'paragraph',
       content:
-        'QBism interprets quantum mechanics in terms of agents\' beliefs and actions. Distinction Physics shares the agent-centered perspective but grounds it in energy economics rather than subjective probability.',
+        'QBism interprets quantum mechanics in terms of agents\' beliefs and actions. Distinction as Primitive shares the agent-centered perspective but grounds it in energy economics rather than subjective probability.',
     },
     {
       type: 'heading',
@@ -154,35 +154,35 @@ export const section9_5: Section = {
     {
       type: 'paragraph',
       content:
-        'Friston\'s Free Energy Principle describes systems that minimize surprise through prediction. This connects to Distinction Physics\' emphasis on energy efficiency in distinction-making.',
+        'Friston\'s Free Energy Principle describes systems that minimize surprise through prediction. This connects to Distinction as Primitive\'s emphasis on energy efficiency in distinction-making.',
     },
     {
       type: 'paragraph',
       content:
-        'These connections suggest that Distinction Physics is not isolated but part of a broader movement toward observer-centered, information-theoretic, and thermodynamically grounded approaches to fundamental physics.',
+        'These connections suggest that Distinction as Primitive is not isolated but part of a broader movement toward observer-centered, information-theoretic, and thermodynamically grounded approaches to fundamental questions.',
       emphasis: 'conclusion',
     },
     {
       type: 'table',
       id: 'tbl-research-connections',
-      caption: 'Connections between Distinction Physics and related research programs',
-      headers: ['Research Program', 'Key Concept', 'Connection to Distinction Physics'],
+      caption: 'Connections between Distinction as Primitive and related research programs',
+      headers: ['Research Program', 'Key Concept', 'Potential Connection'],
       rows: [
-        ['Assembly Theory', 'Assembly index', 'May measure distinction depth'],
-        ['Integrated Information Theory', 'Phi ($\\Phi$)', 'May measure distinction structure richness'],
+        ['Assembly Theory', 'Assembly index', 'May relate to distinction depth'],
+        ['Integrated Information Theory', 'Phi ($\\Phi$)', 'May relate to distinction structure richness'],
         ['Constructor Theory', 'Possible transformations', 'Energy constraints on possible distinctions'],
-        ['QBism', 'Agent-centered quantum mechanics', 'Shared perspective, different grounding'],
+        ['QBism', 'Agent-centered quantum mechanics', 'Shared observer-centered perspective'],
         ['Free Energy Principle', 'Surprise minimization', 'Energy efficiency in distinction-making'],
       ],
       alignment: ['left', 'left', 'left'],
     },
   ],
   keyPoints: [
-    'Complete quantum gravity within the distinction framework is the most important open theoretical problem',
-    'Formal axiomatization using category theory or topos theory would strengthen the framework',
+    'Spacetime as distinction-geometry [CONJECTURED] requires rigorous development',
+    'Formal axiomatization would strengthen the framework\'s claims',
     'Multi-observer physics needs development for understanding intersubjective agreement',
-    'Experimental programs should test consciousness-energy signatures, quantum cognition effects, and thermodynamic bounds',
-    'Assembly Theory, IIT, Constructor Theory, QBism, and Free Energy Principle all show resonances with Distinction Physics',
-    'The framework is part of a broader movement toward observer-centered, thermodynamically grounded physics',
+    'Learning as distinction pattern building is the key contribution domain requiring further development',
+    'Experimental programs should test thermodynamic bounds on learning and consciousness-energy correlations',
+    'The framework connects to broader movements toward observer-centered, thermodynamically grounded approaches',
   ],
 };

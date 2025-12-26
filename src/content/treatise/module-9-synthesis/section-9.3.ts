@@ -3,43 +3,82 @@ import type { Section } from '../types';
 export const section9_3: Section = {
   id: '9.3',
   title: 'What Remains Open',
-  subtitle: 'Honest Limitations and Unanswered Questions',
+  subtitle: 'Honest Acknowledgment of Limitations and Scope',
   epistemicStatus: 'open',
   content: [
     {
       type: 'paragraph',
       content:
-        'Intellectual honesty requires acknowledging what the framework does NOT achieve and what questions it cannot answer.',
+        'Epistemic honesty requires clearly acknowledging what the framework does NOT achieve and what questions it cannot answer. These limitations are stated not as weaknesses to be hidden but as honest boundaries of the framework\'s scope.',
       emphasis: 'key',
     },
     {
       type: 'heading',
       level: 2,
-      content: 'Honest Limitations',
+      content: 'What the Framework Does Not Do',
+    },
+    {
+      type: 'list',
+      style: 'numbered',
+      items: [
+        {
+          content:
+            '**Does not derive physical constants**: We cannot derive why c, h, G, k have their specific values. These are imported from measurement, not derived from axioms. (But no physics derives these values—they are measured.)',
+        },
+        {
+          content:
+            '**Does not solve the hard problem**: We reframe consciousness as distinction-making, but we do not explain WHY distinction-making feels like something. The phenomenal character of experience remains unexplained.',
+        },
+        {
+          content:
+            '**Does not derive quantum mechanics**: We provide interpretive vocabulary (superposition as undistinguished, measurement as distinction creation), but the Born rule and quantum formalism are imported, not derived.',
+        },
+        {
+          content:
+            '**Does not replace physics**: The framework provides a lens, not alternative equations. QM, GR, thermodynamics remain as they are.',
+        },
+        {
+          content:
+            '**Does not explain existence**: We start with observers making distinctions; we do not explain why observers or distinctions exist at all.',
+        },
+      ],
+    },
+    {
+      type: 'heading',
+      level: 2,
+      content: 'The Assumption Defense',
     },
     {
       type: 'paragraph',
       content:
-        'The framework does not derive specific physical constants. We can show why there must be a maximum speed for distinction propagation but not why that speed is approximately $3 \\times 10^8$ meters per second. We can show why there must be a minimum action for distinction-making but not why that minimum is Planck\'s constant. The specific values may require additional principles or may simply be contingent features of our universe.',
+        'These limitations invite the criticism: "You don\'t derive physics from first principles." This is true. But it applies equally to ALL physics:',
+    },
+    {
+      type: 'list',
+      style: 'bullet',
+      items: [
+        { content: 'Quantum mechanics postulates the Born rule, Hilbert space, measurement axiom' },
+        { content: 'General relativity assumes the equivalence principle, Lorentzian metric' },
+        { content: 'Thermodynamics assumes the four laws, especially the Second Law' },
+        { content: 'Standard Model assumes specific gauge groups, particle content, Higgs mechanism' },
+      ],
     },
     {
       type: 'paragraph',
       content:
-        'The framework does not explain why there is something rather than nothing. We start with observers making distinctions; we do not explain why observers exist at all. This may be a question physics cannot answer, or it may require extensions we have not yet discovered.',
-    },
-    {
-      type: 'paragraph',
-      content:
-        'The framework does not yet provide a complete theory of quantum gravity. While we have shown how spacetime emerges from distinction economics, the full integration with quantum mechanics at the Planck scale remains incomplete. This is arguably the most important technical gap in the current formulation.',
+        '**No physics derives physics from nothing.** The right questions are: (1) Are our assumptions minimal? Yes—two axioms. (2) Are they unavoidable? Yes—you cannot state any alternative without first making distinctions. (3) Are they productive? Yes—they illuminate learning, consciousness, and physical constraints.',
+      emphasis: 'key',
     },
     {
       type: 'summary',
       title: 'Framework Limitations',
       variant: 'key-points',
       points: [
-        'Cannot derive specific physical constants (speed of light, Planck\'s constant)',
-        'Does not explain why there is something rather than nothing',
-        'Incomplete theory of quantum gravity at the Planck scale',
+        'Cannot derive specific physical constants (c, h, G, k)',
+        'Does not solve the hard problem—relocates it to distinction-making',
+        'Does not derive quantum mechanics—provides interpretive vocabulary only',
+        'Does not replace physics—provides complementary perspective',
+        'These limitations apply to all physics; our assumptions are minimal and unavoidable',
       ],
     },
     {
@@ -112,16 +151,16 @@ export const section9_3: Section = {
       type: 'note',
       variant: 'editorial',
       content:
-        'These limitations are stated not as weaknesses to be hidden but as honest acknowledgments of the framework\'s current state. A framework that claimed to answer all questions would be less trustworthy, not more.',
+        'These limitations are stated honestly, not defensively. A framework that claimed to answer all questions would be less trustworthy, not more. The framework\'s value lies in its minimal assumptions, unavoidable starting point, and productive applications—especially to learning.',
     },
   ],
   keyPoints: [
-    'The framework cannot derive specific physical constants like the speed of light or Planck\'s constant',
-    'It does not explain why there is something rather than nothing',
-    'Quantum gravity at the Planck scale remains incomplete',
-    'The framework cannot justify its own axioms - why distinction-making rather than something else?',
-    'The ultimate nature of undistinguished reality (superposition) remains open',
-    'The plurality and relationship of multiple observers needs further development',
-    'Formal mathematical axiomatization and experimental protocols require development',
+    'The framework cannot derive physical constants—these are imported from measurement',
+    'It does not solve the hard problem—it relocates it to distinction-making',
+    'It does not derive quantum mechanics—it provides interpretive vocabulary only',
+    'It does not replace physics—it provides a complementary perspective',
+    'The criticism "you don\'t derive physics" applies equally to ALL physics',
+    'Our assumptions are minimal (two axioms), unavoidable (distinction-primacy), and productive (learning domain)',
+    'Open questions include axiom justification, multi-observer physics, and formal axiomatization',
   ],
 };

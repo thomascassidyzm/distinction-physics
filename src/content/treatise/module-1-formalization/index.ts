@@ -16,8 +16,8 @@ import { section1_11 } from './section-1.11';
 export const module1: Module = {
   number: 1,
   id: 'formalization',
-  title: 'Formalization of Distinction Physics',
-  subtitle: 'From Philosophy to Mathematics',
+  title: 'Formalization of Distinction as Primitive',
+  subtitle: 'Mathematical Structures for a Philosophical Meta-Theory',
   epistemicStatus: 'interpreted',
   sections: [
     section1_0,
@@ -34,16 +34,17 @@ export const module1: Module = {
     section1_11,
   ],
   keyInsights: [
-    'The distinction operator formalizes the primitive act of differentiation',
-    'Landauer\'s limit (kT ln 2) is derived from first principles',
-    'Effective discreteness is a theorem, not an assumption',
-    'Resolution scales inversely with available energy',
-    'Finitude bounds the maximum simultaneous distinctions any observer can maintain',
-    'All OLUs require continuous energy coupling—isolation is impossible',
+    'The distinction operator formalizes the primitive act of differentiation [DERIVED from axioms]',
+    'Landauer\'s limit (kT ln 2) is IMPORTED from thermodynamics—not derived from axioms alone',
+    '[DERIVED] Effective discreteness: finite energy implies finite observable distinctions',
+    '[DERIVED] Resolution scales inversely with available energy',
+    '[DERIVED] Finitude bounds the maximum simultaneous distinctions any observer can maintain',
+    '[DERIVED] All OLUs require continuous energy coupling—isolation is impossible',
+    'The formalization supports interpretation of physics, not replacement of it',
   ],
   connectionsToNext: [
     'Module 2 develops the mathematical structures (spaces, measures) that emerge from distinction networks',
-    'The distinction operator becomes the foundation for quantum formalism in Module 5',
+    'The distinction operator becomes the foundation for interpreting quantum formalism in Module 5',
     'The finitude bound constrains consciousness complexity in Module 3',
   ],
 };

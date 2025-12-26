@@ -2,24 +2,24 @@ import type { Section } from '../types';
 
 export const section7_1: Section = {
   id: '7.1',
-  title: 'The Thermodynamic Revolution: An Interpretive Framework',
+  title: 'Thermodynamics Through the Distinction Lens',
   epistemicStatus: 'interpreted',
   content: [
     {
       type: 'paragraph',
       content:
-        'In Module 0, we established the revolutionary core of this framework from two axioms alone:',
+        'In Module 0, we established the two axioms that ground the Distinction as Primitive framework:',
     },
     {
       type: 'paragraph',
       content:
-        '**Axiom 1**: All distinctions cost energy',
+        '**Axiom 1**: All distinctions cost energy [IMPORTS Landauer]',
       emphasis: 'key',
     },
     {
       type: 'paragraph',
       content:
-        '**Axiom 2**: All observers-like-us (OLUs) have finite energy budgets',
+        '**Axiom 2**: All observers-like-us (OLUs) have finite energy budgets [OBSERVATION]',
       emphasis: 'key',
     },
     {
@@ -30,7 +30,7 @@ export const section7_1: Section = {
     {
       type: 'paragraph',
       content:
-        'This module completes the physics grounding. Where Module 0 showed that quantum structure can be interpreted through distinction-making under finite energy, Module 7 shows that thermodynamic dynamics can be understood through the same framework. The laws of thermodynamics, while discovered empirically, can be reinterpreted as manifestations of how distinction-patterns evolve when distinctions cost energy.',
+        'This module provides interpretive vocabulary for thermodynamics. Where Module 0 showed that quantum structure can be interpreted through distinction-making under finite energy, Module 7 shows that thermodynamic dynamics can be understood through the same conceptual lens. **The laws of thermodynamics are IMPORTED from statistical mechanics and then INTERPRETED through distinction-vocabulary**—we do not derive thermodynamics from scratch.',
     },
     {
       type: 'heading',
@@ -55,12 +55,12 @@ export const section7_1: Section = {
     {
       type: 'heading',
       level: 3,
-      content: 'The V7 View',
+      content: 'The Distinction as Primitive View',
     },
     {
       type: 'paragraph',
       content:
-        'In our framework, these can be understood as interconnected interpretations:',
+        'In our framework, thermodynamics can be understood through interconnected interpretations:',
     },
     {
       type: 'list',
@@ -90,10 +90,10 @@ export const section7_1: Section = {
     },
   ],
   keyPoints: [
-    'Module 0 established two axioms: distinctions cost energy, OLUs have finite energy budgets',
-    'Thermodynamic dynamics can be interpreted through the same framework as quantum structure',
-    'The Second Law, Landauer limit, and time arrow are interpreted through the framework, not derived from axioms alone',
+    'Module 0 established two axioms: distinctions cost energy [IMPORTS Landauer], OLUs have finite energy budgets',
+    '[INTERPRETED] Thermodynamic dynamics can be understood through the same framework as quantum structure',
+    '[INTERPRETED] The Second Law, Landauer limit, and time arrow are interpreted through the framework, not derived from axioms alone',
+    '[IMPORTED] We import the thermodynamic framework from statistical mechanics—we complement, not replace',
     'Information and thermodynamics unify through the common vocabulary of distinction',
-    'This is interpretive reframing - thermodynamics is consistent with the axioms but requires importing statistical mechanics',
   ],
 };

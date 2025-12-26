@@ -96,11 +96,11 @@ export const section7_9: Section = {
     },
   ],
   keyPoints: [
-    "Maxwell's demon must make distinctions: fast/slow molecules, let through/block, current/past states",
-    'Each distinction costs energy per Axiom 1',
-    'Observation costs at least $kT \\ln(2)$ per bit of information gathered',
-    'Finite memory requires erasure, which costs at least $kT \\ln(2)$ per bit',
-    'Full accounting shows entropy reduction is exactly compensated by information processing costs',
-    'The demon is subject to the same energy constraints as all distinction-making systems',
+    '[INTERPRETED] Maxwell\'s demon must make distinctions: fast/slow molecules, let through/block, current/past states',
+    '[IMPORTED] The resolution was historically achieved by Landauer (1961) and Bennett (1982)',
+    '[IMPORTED] Observation costs at least $kT \\ln(2)$ per bit of information gathered',
+    '[IMPORTED] Finite memory requires erasure, which costs at least $kT \\ln(2)$ per bit',
+    '[INTERPRETED] The framework provides interpretive vocabulary for why the demon is subject to thermodynamic constraints',
+    '[INTERPRETED] The demon is an OLU subject to the same energy constraints as all distinction-making systems',
   ],
 };

@@ -17,9 +17,9 @@ import { section5_13 } from './section-5.13';
 export const module5: Module = {
   number: 5,
   id: 'quantum',
-  title: 'Quantum Mechanics as the Signature of Finite-Energy Observation',
-  subtitle: 'Why Reality Looks This Way to Resource-Constrained Observers',
-  epistemicStatus: 'derived',
+  title: 'Quantum Mechanics Interpreted Through Distinction',
+  subtitle: 'A Philosophical Lens on Finite-Energy Observation',
+  epistemicStatus: 'interpreted',
   sections: [
     section5_1,
     section5_2,
@@ -36,18 +36,18 @@ export const module5: Module = {
     section5_13,
   ],
   keyInsights: [
-    'Quantum mechanics is DERIVED from, not interpreted through, the distinction framework',
-    'Superposition represents undistinguished possibilities awaiting energy investment',
-    'Uncertainty is a resource allocation constraint, not a fundamental mystery',
-    'Measurement is distinction-making, requiring energy expenditure',
-    'The Born rule is interpreted but not derived (honest about limits)',
-    'Classical emergence occurs through resolution economics',
-    'Quantum "weirdness" is the signature of finite-energy observation',
+    '[INTERPRETED] Quantum mechanics is interpreted through, not derived from, the distinction framework - QM remains as it is',
+    '[INTERPRETED] Superposition can be understood as undistinguished possibilities awaiting energy investment',
+    '[INTERPRETED] Uncertainty can be viewed as a resource allocation constraint - this is conceptual vocabulary, not derivation',
+    '[INTERPRETED] Measurement can be understood as distinction-making requiring energy expenditure',
+    '[IMPORTED] The Born rule, Hilbert space structure, and Schrodinger equation are imported from established physics',
+    '[INTERPRETED] Classical emergence is interpreted through resolution economics',
+    'The framework provides philosophical vocabulary for understanding quantum phenomena, not replacement physics',
   ],
   connectionsToNext: [
-    'Module 6 shows how spacetime itself emerges from distinction networks',
-    'The effective discreteness derived here implies spacetime must also be effectively discrete',
-    'Gravity may be understood as modifications to the distinction landscape',
+    'Module 6 interprets spacetime through distinction vocabulary',
+    'The effective discreteness principle provides interpretive vocabulary for understanding spacetime structure',
+    'Gravity may be interpreted as modifications to the distinction landscape',
   ],
 };
 

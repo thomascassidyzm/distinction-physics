@@ -1,5 +1,5 @@
 /**
- * Distinction Physics: Treatise Metadata
+ * Distinction as Primitive: Treatise Metadata
  */
 
 import type { TreatiseMeta } from './types';
@@ -7,7 +7,7 @@ import type { TreatiseMeta } from './types';
 export const treatiseMeta: TreatiseMeta = {
   title: 'Distinction as Primitive',
   subtitle: 'A Meta-Theoretical Framework for Reality Under Resource Constraints',
-  version: 'V7',
+  version: 'V8',
   date: 'December 2025',
   status: 'working-paper',
 
@@ -18,24 +18,24 @@ export const treatiseMeta: TreatiseMeta = {
     },
   ],
 
-  abstract: `This treatise presents a fundamental shift in how we understand the relationship
-between observers and reality. Rather than proposing another theory about what reality is,
-we advance a meta-theory explaining why theories about reality necessarily take the forms
-they do for observers-like-us (OLU).
+  abstract: `This treatise presents a philosophical meta-theory explaining why theories about
+reality necessarily take the forms they do for observers-like-us (OLU). We do not propose
+a new physics but offer interpretive vocabulary complementary to established science.
 
 Our central thesis is that the act of making and maintaining distinctions constitutes the
 most primitive operation possible for any finite observer. This operation—determining
 whether two states differ—necessarily precedes all other cognitive functions, including
 measurement, mathematics, and logic.
 
-From two axioms alone—that all distinctions cost energy, and that all observers have
-finite energy budgets—we derive the fundamental structure of accessible reality. What
-emerges is not merely consistent with known physics but generates the core principles
-of thermodynamics and quantum mechanics from pure ontology.
+From two axioms—that all distinctions cost energy (IMPORTED from Landauer's principle),
+and that all observers have finite energy budgets—we interpret the structure of accessible
+reality. The framework demonstrates consistency with known physics and offers a unified
+vocabulary for understanding mathematics, quantum mechanics, thermodynamics, spacetime,
+and consciousness through the lens of distinction-making under resource constraints.
 
-The framework demonstrates how mathematics, quantum mechanics, thermodynamics, spacetime,
-and consciousness must emerge in their observed forms, not as contingent theories but as
-necessary consequences of distinction-making under resource constraints.`,
+The key contribution domain is learning theory (Module 4), where the framework has been
+validated through practical implementation in educational systems (SSi, Zenjin, Alexander).
+Other domains offer philosophical interpretation rather than novel predictions.`,
 
   keywords: [
     'distinction',
@@ -66,70 +66,70 @@ export const moduleIndex = [
     number: 0,
     id: 'philosophical-foundations',
     title: 'Philosophical Foundations',
-    subtitle: 'The Ontological Primacy of Distinction',
-    sectionCount: 10,
+    subtitle: 'A Philosophical Meta-Theory Complementary to Physics',
+    sectionCount: 11,
   },
   {
     number: 1,
     id: 'formalization',
-    title: 'Foundations of Distinction',
-    subtitle: 'The Necessary Primitive',
-    sectionCount: 9,
+    title: 'Formalization of Distinction as Primitive',
+    subtitle: 'Mathematical Structures for a Philosophical Meta-Theory',
+    sectionCount: 12,
   },
   {
     number: 2,
     id: 'mathematics',
-    title: 'Mathematics',
-    subtitle: 'Necessary Emergence from Distinction',
-    sectionCount: 9,
+    title: 'Mathematics as Consistent with Distinction-Primacy',
+    subtitle: 'How Mathematical Structures Fall Out from Distinction Thinking',
+    sectionCount: 11,
   },
   {
     number: 3,
     id: 'consciousness',
-    title: 'Consciousness',
-    subtitle: 'Emergent Integrated Distinction Processing',
-    sectionCount: 11,
+    title: 'Consciousness as Self-Referential Distinction-Making',
+    subtitle: 'An Interpretive Framework for Understanding Subjective Experience',
+    sectionCount: 12,
   },
   {
     number: 4,
     id: 'learning',
-    title: 'Learning',
-    subtitle: 'Dynamic Boundary Evolution',
-    sectionCount: 10,
+    title: 'Learning as Anti-Entropic Distinction Building',
+    subtitle: 'The Key Contribution Domain',
+    sectionCount: 12,
   },
   {
     number: 5,
-    id: 'quantum-mechanics',
-    title: 'Quantum Mechanics',
-    subtitle: 'Distinction Potentiality',
-    sectionCount: 11,
+    id: 'quantum',
+    title: 'Quantum Mechanics Interpreted Through Distinction',
+    subtitle: 'A Philosophical Lens on Finite-Energy Observation',
+    sectionCount: 13,
   },
   {
     number: 6,
     id: 'spacetime',
-    title: 'Spacetime and Gravity',
-    subtitle: 'Boundary Network Structure',
+    title: 'Spacetime Interpreted Through Distinction [EXPLORATORY]',
+    subtitle: 'Speculative Interpretations of Geometry through Distinction-Vocabulary',
     sectionCount: 11,
   },
   {
     number: 7,
     id: 'thermodynamics',
-    title: 'Thermodynamics',
-    subtitle: 'Boundary Stability Dynamics',
-    sectionCount: 12,
+    title: 'Thermodynamics Interpreted Through Distinction',
+    subtitle: 'Understanding the Laws of Heat as Laws of Distinction-Making',
+    sectionCount: 14,
   },
   {
     number: 8,
     id: 'predictions',
-    title: 'Predictions and Experiments',
-    subtitle: 'Testable Implications',
-    sectionCount: 14,
+    title: 'Empirical Consistency and Testability',
+    subtitle: 'Consistency Demonstrations, Falsification Conditions, and Honest Assessment',
+    sectionCount: 9,
   },
   {
     number: 9,
     id: 'synthesis',
-    title: 'Synthesis',
-    subtitle: 'Unified Perspective',
-    sectionCount: 9,
+    title: 'Synthesis: Honest Assessment',
+    subtitle: 'What the Framework Achieves and Does Not Achieve',
+    sectionCount: 7,
   },
 ] as const;

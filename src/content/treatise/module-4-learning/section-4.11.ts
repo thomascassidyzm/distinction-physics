@@ -2,14 +2,20 @@ import type { Section } from '../types';
 
 export const section4_11: Section = {
   id: '4.11',
-  title: 'Learning Within the Broader Framework',
-  subtitle: 'Connections Across Modules',
+  title: 'The Key Contribution: Learning as Framework Foundation',
+  subtitle: 'Where the Framework Originated, and Connections Across Modules',
   epistemicStatus: 'interpreted',
   content: [
     {
       type: 'paragraph',
       content:
-        'Learning, understood as thermodynamic optimization of distinction-making, connects to every other module in this framework. It is not an isolated phenomenon but a manifestation of the same principles that govern all accessible reality.',
+        '**This module represents the framework\'s key contribution domain.** Learning, understood as anti-entropic distinction pattern building, is not merely one application of the framework—it is where the framework originated. The same/different lensing observed in learning led to the recognition that distinction-making is transcendentally prior to all theorizing.',
+      emphasis: 'key',
+    },
+    {
+      type: 'paragraph',
+      content:
+        'Learning connects to every other module in this framework. It is not an isolated phenomenon but a manifestation of the same principles that govern all accessible reality—and it is the clearest, most practically validated manifestation.',
     },
     {
       type: 'heading',
@@ -168,44 +174,53 @@ export const section4_11: Section = {
     {
       type: 'paragraph',
       content:
-        'This is why learning follows predictable patterns, why it has consistent neural substrates, why it can be enhanced by understanding its principles. Learning is physics. And the physics is the physics of distinction.',
+        'This is why learning follows predictable patterns, why it has consistent neural substrates, why it can be enhanced by understanding its principles. Learning is anti-entropic pattern building—the same thermodynamic process that underlies all ordered structure in the universe, made visible in the domain where we can most directly observe and engineer it.',
       emphasis: 'conclusion',
     },
     {
       type: 'heading',
       level: 2,
-      content: 'Module 4 Conclusion',
+      content: 'Module 4 Conclusion: The Key Contribution',
       id: 'module-conclusion',
     },
     {
       type: 'paragraph',
       content:
-        'We have shown that learning---in all its manifestations---emerges from thermodynamic optimization of distinction-making under finite energy constraints. From chunking to automatization, from the spacing effect to transfer, from skill acquisition curves to expert performance, every phenomenon finds a unified explanation in the physics of boundary maintenance.',
+        'This module represents the framework\'s most developed contribution. We have interpreted learning---in all its manifestations---as anti-entropic distinction pattern building under finite energy constraints. From chunking to automatization, from the spacing effect to transfer, from skill acquisition curves to expert performance, every phenomenon finds a unified interpretation through distinction-vocabulary.',
+    },
+    {
+      type: 'paragraph',
+      content:
+        'Critically, this is not merely theoretical. The principles described here have been **implemented in working learning systems** (SSi, Zenjin, Alexander) whose effectiveness provides practical validation. The framework\'s learning interpretation is productive—it generates systems that work.',
+      emphasis: 'key',
     },
     {
       type: 'summary',
       title: 'Module 4 Key Takeaways',
       variant: 'takeaways',
       points: [
-        'Learning is thermodynamic optimization of distinction-making efficiency',
-        'Practice reduces energy cost per distinction; mastery is automatization',
+        'Learning is the KEY CONTRIBUTION DOMAIN—where the framework originated and speaks most powerfully',
+        'Learning is ANTI-ENTROPIC: creating and maintaining stable distinction patterns against decay [INTERPRETED]',
+        'The same/different duality is the originating insight of the entire framework',
+        'Practice reduces energy cost per distinction; mastery is automatization [INTERPRETED]',
         'Chunking compresses multiple distinctions into single higher-order boundaries',
-        'Forgetting is boundary decay when energy is not invested in maintenance',
-        'The spacing effect emerges from reconstruction thermodynamics',
-        'Transfer occurs when distinction structures generalize across domains',
-        'Skill acquisition follows a characteristic thermodynamic trajectory',
-        'Educational practice should optimize for energy-efficient distinction acquisition',
-        'Learning connects to all other modules through the foundational axioms',
-        'Learning is physics---the physics of distinction under resource constraints',
+        'Forgetting is entropy reclaiming—natural direction reasserted when investment ceases',
+        'The spacing effect emerges from reconstruction thermodynamics [INTERPRETED]',
+        'Transfer leverages prior anti-entropic investment across domains',
+        'Skill acquisition follows the anti-entropic trajectory from disorder to efficiency',
+        'Practical validation: SSi, Zenjin, and Alexander implement these principles in working systems',
+        'The framework interprets known phenomena through distinction-vocabulary, not derives them [INTERPRETED]',
       ],
     },
   ],
   keyPoints: [
-    'Learning is grounded in Axiom 1 (distinction cost) and Axiom 2 (finite budgets)',
-    'Mathematical, physical, and conscious learning are all distinction optimization processes',
-    'Quantum uncertainty and learning constraints share the same thermodynamic foundation',
-    'Learning is what energy-constrained distinction-making looks like when optimizing over time',
-    'The brain must learn to survive within its energy constraints',
-    'Learning is physics---the physics of distinction',
+    'Learning is the KEY CONTRIBUTION DOMAIN of the Distinction as Primitive framework',
+    'Learning is ANTI-ENTROPIC: building ordered patterns against natural dissolution [INTERPRETED]',
+    'The same/different duality observed in learning is the framework\'s originating insight',
+    'Learning is grounded in Axiom 1 (distinction cost [IMPORTS Landauer]) and Axiom 2 (finite budgets)',
+    'Practical validation: SSi, Zenjin, and Alexander implement these principles in working systems',
+    'Mathematical, physical, and conscious learning are all distinction optimization processes [INTERPRETED]',
+    'The framework interprets existing learning science, it does not derive it from scratch',
   ],
 };
+

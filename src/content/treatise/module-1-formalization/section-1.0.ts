@@ -3,16 +3,20 @@ import type { Section } from '../types';
 export const section1_0: Section = {
   id: '1.0',
   title: 'Overview: From Philosophy to Mathematics',
-  epistemicStatus: 'derived',
+  subtitle: 'Formalizing Distinction as Primitive',
+  epistemicStatus: 'interpreted',
   content: [
+    // =========================================================================
+    // WHAT THIS MODULE DOES
+    // =========================================================================
     {
       type: 'paragraph',
       content:
-        'Module 0 established the philosophical foundation of distinction physics through two axioms and their derived consequences:',
+        'Module 0 established the philosophical foundation of **Distinction as Primitive** through two axioms:',
     },
     {
       type: 'paragraph',
-      content: '**Axiom 1**: All distinctions cost energy.',
+      content: '**Axiom 1**: All distinctions cost energy [IMPORTS Landauer].',
       emphasis: 'key',
     },
     {
@@ -22,7 +26,7 @@ export const section1_0: Section = {
     },
     {
       type: 'paragraph',
-      content: 'From these alone, Module 0 derived five fundamental principles:',
+      content: 'From these axioms, Module 0 derived five fundamental principles [DERIVED]:',
     },
     {
       type: 'list',
@@ -52,13 +56,48 @@ export const section1_0: Section = {
     {
       type: 'paragraph',
       content:
-        'This module provides the **mathematical formalization** of these principles. Where Module 0 offered philosophical argumentation and conceptual derivation, we now develop the precise operators, equations, and structures that make distinction physics rigorous and quantitative.',
+        'This module provides the **mathematical formalization** of these principles. Where Module 0 offered philosophical argumentation and conceptual derivation, we now develop precise operators, equations, and structures. The mathematics serves clarity and rigor, not obscure overclaiming.',
       emphasis: 'key',
+    },
+
+    // =========================================================================
+    // COMPLEMENTARY POSITIONING
+    // =========================================================================
+    {
+      type: 'heading',
+      level: 2,
+      content: 'The Complementary Role of Formalization',
+      id: 'complementary-role',
     },
     {
       type: 'paragraph',
       content:
-        'The central achievement of this formalization is to show that what appears in physics as the mysterious fact of quantization is, mathematically, a necessary consequence of our two axioms. We will derive:',
+        'This formalization is designed to **support the framework\'s complementary relationship to physics**, not to replace mathematical physics. The distinction operator and its associated structures provide vocabulary for understanding why physics has certain features, not alternative equations.',
+    },
+    {
+      type: 'paragraph',
+      content:
+        '**What we genuinely derive** from the axioms: effective discreteness, resolution limits, finitude bounds. These follow logically from the two axioms plus the imported Landauer limit.',
+    },
+    {
+      type: 'paragraph',
+      content:
+        '**What we interpret** through this formalization: quantum uncertainty, thermodynamic irreversibility, information-energy connections. We provide conceptual vocabulary consistent with established physics, not independent derivations.',
+    },
+
+    // =========================================================================
+    // WHAT THE MODULE COVERS
+    // =========================================================================
+    {
+      type: 'heading',
+      level: 2,
+      content: 'Module Structure',
+      id: 'module-structure',
+    },
+    {
+      type: 'paragraph',
+      content:
+        'The module develops:',
     },
     {
       type: 'list',
@@ -66,26 +105,37 @@ export const section1_0: Section = {
       items: [
         {
           content:
-            "The minimum energy cost per distinction (recovering Landauer's limit)",
+            'The distinction operator and its properties [DERIVED from axiomatic structure]',
         },
         {
           content:
-            'The functional relationship between energy budget and accessible resolution',
+            "The minimum energy cost per distinction [IMPORTS Landauer's limit]",
         },
         {
           content:
-            'The mathematics of distinction networks under resource constraints',
+            'The functional relationship between energy budget and accessible resolution [DERIVED]',
         },
         {
-          content: 'The formal structure of observer-relative reality',
+          content:
+            'The mathematics of distinction networks under resource constraints [DERIVED]',
+        },
+        {
+          content: 'Connections to physics [INTERPRETED through distinction-vocabulary]',
         },
       ],
     },
+    {
+      type: 'paragraph',
+      content:
+        '**Epistemic honesty note**: We do not claim to derive quantum mechanics or thermodynamics from the axioms alone. The specific mathematical form of quantum uncertainty (the Heisenberg relation) and the Second Law come from established physics. What the formalization shows is that core features of observable physics—discreteness, resolution limits, entropy increase—are consistent with and conceptually illuminated by the distinction-making perspective.',
+      emphasis: 'conclusion',
+    },
   ],
   keyPoints: [
-    'Module 1 provides the mathematical formalization of the philosophical foundations from Module 0',
-    'Two axioms (distinctions cost energy; observers have finite budgets) yield five fundamental principles',
-    'Quantization emerges as a mathematical necessity, not a mysterious empirical fact',
-    "The formalization recovers Landauer's limit and energy-resolution scaling from first principles",
+    'Module 1 provides mathematical formalization of the philosophical foundations from Module 0',
+    'Axiom 1 IMPORTS Landauer\'s principle; Axiom 2 is observational (finite energy budgets)',
+    '[DERIVED] Effective discreteness, resolution limits, finitude follow from the axioms',
+    '[INTERPRETED] Quantum uncertainty and thermodynamics are interpreted, not derived from scratch',
+    'The formalization supports complementary positioning—interpretive vocabulary, not replacement physics',
   ],
 };

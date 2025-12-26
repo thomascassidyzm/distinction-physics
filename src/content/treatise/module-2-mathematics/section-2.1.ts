@@ -3,8 +3,29 @@ import type { Section } from '../types';
 export const section2_1: Section = {
   id: '2.1',
   title: 'Mathematics as Stable Distinction Patterns',
+  subtitle: 'How Mathematical Structure Falls Out from Distinction Thinking',
   epistemicStatus: 'interpreted',
   content: [
+    // =========================================================================
+    // CRITICAL FRAMING: FALLS OUT, NOT DERIVED
+    // =========================================================================
+    {
+      type: 'heading',
+      level: 2,
+      content: 'What This Module Claims (and Does Not Claim)',
+      id: 'what-we-claim',
+    },
+    {
+      type: 'paragraph',
+      content:
+        '**Critical framing**: This module shows that mathematical structures are **consistent with** distinction-primacy and **fall out naturally** when thinking in terms of distinctions. We do NOT claim to derive mathematics independently from the two axioms. Mathematics exists; it works; we show how it fits with distinction thinking.',
+      emphasis: 'key',
+    },
+    {
+      type: 'paragraph',
+      content:
+        'The relationship is interpretive: when you think about number, set, logic, and geometry through the lens of boundary-drawing under energy constraints, mathematical structure appears as a natural manifestation of distinction-making. This is **consistency**, not derivation from scratch.',
+    },
     {
       type: 'heading',
       level: 2,
@@ -14,7 +35,7 @@ export const section2_1: Section = {
     {
       type: 'paragraph',
       content:
-        'Mathematics is traditionally viewed either as a human invention (conventionalism) or as a discovered property of an abstract Platonic realm (Platonism). This module demonstrates an alternative: mathematics necessarily emerges as the formalization of the most stable distinction patterns possible for observers-like-us (OLUs) operating under energy constraints.',
+        'Mathematics is traditionally viewed either as a human invention (conventionalism) or as a discovered property of an abstract Platonic realm (Platonism). This module offers an interpretive alternative: mathematics can be understood as the formalization of stable distinction patterns for observers-like-us (OLUs) operating under energy constraints.',
     },
     {
       type: 'paragraph',
@@ -103,24 +124,24 @@ export const section2_1: Section = {
       id: 'thm-math-as-attractors',
       label: 'proposition',
       number: '2.1',
-      name: 'Mathematics as Thermodynamic Attractors',
+      name: 'Mathematics as Thermodynamic Attractors [INTERPRETED]',
       statement:
-        'Mathematical structures are thermodynamic attractors in distinction-space—the most stable configurations of boundary-drawing that any finite-energy observer will converge upon.',
+        'Mathematical structures can be understood as thermodynamic attractors in distinction-space—the most stable configurations of boundary-drawing that any finite-energy observer will converge upon. **Epistemic note**: This is an interpretive claim showing consistency between mathematics and distinction-primacy, not a derivation of mathematics from the axioms.',
       epistemicStatus: 'interpreted',
       dependsOn: ['A1', 'A2', 'thm-effective-discreteness'],
     },
     {
       type: 'paragraph',
       content:
-        'Mathematics works because it formalizes thermodynamic attractors in distinction-space.',
+        'This interpretation suggests that mathematics works because it formalizes thermodynamic attractors in distinction-space. We are not claiming to have derived mathematics—we are showing that mathematical structure is consistent with the framework.',
       emphasis: 'conclusion',
     },
   ],
   keyPoints: [
-    'Mathematics emerges as the formalization of stable distinction patterns under energy constraints',
-    'All mathematical structures—numbers, sets, proofs, functions—are patterns of distinction',
-    'Mathematical patterns are selected for being energetically cheap, stable, universal, and compositional',
-    'Mathematical necessity is thermodynamic necessity—unstable patterns require more energy to maintain',
-    'Mathematics formalizes thermodynamic attractors in distinction-space',
+    '[INTERPRETED] Mathematics can be understood as the formalization of stable distinction patterns under energy constraints',
+    '[INTERPRETED] Numbers, sets, proofs, and functions can be viewed as patterns of distinction',
+    '[INTERPRETED] Mathematical patterns appear selected for being energetically cheap, stable, universal, and compositional',
+    '[INTERPRETED] Mathematical necessity viewed as thermodynamic stability—a proposed correspondence',
+    '[INTERPRETED] This module shows consistency with distinction-primacy, not derivation of mathematics from scratch',
   ],
 };

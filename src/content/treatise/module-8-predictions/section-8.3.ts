@@ -2,15 +2,20 @@ import type { Section } from '../types';
 
 export const section8_3: Section = {
   id: '8.3',
-  title: 'Near-Term Testable Predictions',
-  subtitle: 'Claims Testable with Current Technology',
-  epistemicStatus: 'derived',
+  title: 'Near-Term Testable Claims',
+  subtitle: 'Potentially Novel Claims Testable with Current Technology',
+  epistemicStatus: 'contested',
   content: [
     {
       type: 'paragraph',
       content:
-        'This section presents predictions that can be tested with current or near-future technology. Unlike the consistency demonstrations of Section 8.2, these represent claims where the framework makes specific, testable assertions that could in principle be falsified.',
+        '**Epistemic Caveat**: This section presents claims that MIGHT represent genuinely novel predictions. However, many of these are extensions or specifications of known phenomena rather than claims that standard physics would reject. We must be honest about which predictions, if any, genuinely distinguish this framework from standard physics.',
       emphasis: 'key',
+    },
+    {
+      type: 'paragraph',
+      content:
+        'Unlike the post-hoc consistency demonstrations of Section 8.2, these claims could in principle be falsified. However, falsification of these specific claims would not necessarily falsify the core axioms; it might instead prompt refinement of how the axioms are applied.',
     },
     {
       type: 'note',
@@ -360,12 +365,12 @@ export const section8_3: Section = {
     },
   ],
   keyPoints: [
-    'Six predictions are testable with current or near-future technology',
-    'N1 (gravity-coherence coupling) predicts effects beyond standard time dilation',
-    'N2-N3 test the energy-optimization account of learning and cognition',
-    'N4 specifies exact energy scaling for quantum measurements',
-    'N5-N6 test metabolic correlates of memory and attention',
-    'Negative results would constitute genuine evidence against the framework',
-    'Several predictions make claims that distinguish the framework from standard physics',
+    '[CONTESTED] Six claims are testable with current or near-future technology, but their novelty varies',
+    '[POTENTIALLY NOVEL] N1 (gravity-coherence coupling) might predict effects beyond standard time dilation, but this needs careful formulation',
+    '[INTERPRETED] N2-N3 (learning efficiency, complexity scaling) extend known neuroscience; novelty is the thermodynamic framing',
+    '[POTENTIALLY NOVEL] N4 (measurement energy scaling) represents perhaps the most distinctive testable claim',
+    '[INTERPRETED] N5-N6 (forgetting, attention) specify known phenomena through distinction-vocabulary',
+    'Negative results would prompt refinement; only systematic failure would falsify core axioms',
+    '[EPISTEMIC HONESTY] Very few predictions genuinely distinguish this framework from standard physics in currently testable ways',
   ],
 };

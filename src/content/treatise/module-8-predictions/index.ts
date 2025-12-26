@@ -13,9 +13,9 @@ import { section8_9 } from './section-8.9';
 export const module8: Module = {
   number: 8,
   id: 'predictions',
-  title: 'Empirical Predictions and Tests',
-  subtitle: 'The Framework\'s Testable Claims and Falsification Conditions',
-  epistemicStatus: 'derived',
+  title: 'Empirical Consistency and Testability',
+  subtitle: 'Consistency Demonstrations, Falsification Conditions, and Honest Assessment',
+  epistemicStatus: 'interpreted',
   sections: [
     section8_1,
     section8_2,
@@ -28,18 +28,19 @@ export const module8: Module = {
     section8_9,
   ],
   keyInsights: [
-    'Distinguishes Type 1 (derivations), Type 2 (interpretations), and Type 3 (conjectures)',
-    'Documents phenomena consistent with the framework (Landauer, quantization, metabolic costs)',
-    'Specifies near-term testable predictions with current technology',
-    'Identifies future predictions requiring technological advances',
-    'Provides clear falsification conditions for the framework',
-    'Compares honestly with competing theories (IIT, GWT, Wolfram, RQM)',
-    'Acknowledges what remains genuinely open and unexplained',
+    '[EPISTEMIC HONESTY] Most "predictions" are post-hoc consistency demonstrations with established physics',
+    '[IMPORTED] Landauer\'s principle grounds Axiom 1; we do not derive it',
+    '[INTERPRETED] Quantization, entropy, consciousness costs are interpreted through distinction-vocabulary, not independently predicted',
+    '[DERIVED] Only a few claims (measurement energy scaling, distinction complexity scaling) may represent genuinely novel predictions',
+    '[CONJECTURED] Planck-scale effects and cosmological implications are speculative extensions',
+    'The framework provides unifying vocabulary and conceptual coherence, not predictive novelty for established physics',
+    'Clear falsification conditions exist and remain unmet; the framework is genuinely falsifiable',
+    'Honest comparison with competing theories (IIT, GWT, Wolfram, RQM) acknowledges limited distinguishing tests',
   ],
   connectionsToNext: [
-    'Module 9 synthesizes the complete framework',
-    'The empirical status established here informs the overall assessment',
-    'Open questions point toward future research directions',
+    'Module 9 synthesizes the complete framework with proper epistemic calibration',
+    'The empirical status established here informs the honest overall assessment',
+    'Open questions point toward future research directions, not solved problems',
   ],
 };
 

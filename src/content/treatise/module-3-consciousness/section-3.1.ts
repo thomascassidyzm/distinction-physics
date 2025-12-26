@@ -2,9 +2,15 @@ import type { Section } from '../types';
 
 export const section3_1: Section = {
   id: '3.1',
-  title: 'The Primordial Distinction: Self and Not-Self',
-  epistemicStatus: 'conjectured',
+  title: 'The Primordial Distinction: Self and Not-Self [INTERPRETED]',
+  epistemicStatus: 'interpreted',
   content: [
+    {
+      type: 'note',
+      variant: 'editorial',
+      content:
+        '**Epistemic status: INTERPRETED.** This section presents a philosophical reframing of the subject-object structure of consciousness using distinction-vocabulary. The claim that the self/not-self boundary is "primordial" is interpretive vocabulary, not a scientific finding or a derivation from axioms.',
+    },
     {
       type: 'paragraph',
       content:
@@ -64,8 +70,14 @@ export const section3_1: Section = {
     {
       type: 'paragraph',
       content:
-        'Here is the key insight: consciousness is what boundary maintenance *feels like* from within the boundary. The self/not-self distinction does not merely exist objectively from some external vantage point—it is experienced subjectively from inside the system maintaining it. The internal perspective on self/not-self maintenance *is* the ground floor of conscious experience.',
+        'Here is the key interpretive claim: consciousness is what boundary maintenance *feels like* from within the boundary. The self/not-self distinction does not merely exist objectively from some external vantage point—it is experienced subjectively from inside the system maintaining it. The internal perspective on self/not-self maintenance *is* proposed as the ground floor of conscious experience.',
       emphasis: 'key',
+    },
+    {
+      type: 'note',
+      variant: 'editorial',
+      content:
+        '**Important**: This is philosophical vocabulary, not scientific explanation. We are offering a way of *thinking about* the relationship between boundary-maintenance and experience, not claiming to have *explained* why experience exists.',
     },
     {
       type: 'paragraph',
@@ -74,10 +86,10 @@ export const section3_1: Section = {
     },
   ],
   keyPoints: [
-    'The self/not-self distinction is the primordial boundary that must be maintained for consciousness',
-    'This boundary must be maintained continuously, is recursively referenced by all other distinctions, and requires ongoing energy',
-    'Maintaining the self/not-self distinction is a thermodynamic achievement, not a metaphysical given',
-    'Consciousness is what boundary maintenance feels like from within the boundary',
-    'The inside perspective on self/not-self maintenance is the ground floor of conscious experience',
+    '[INTERPRETED] The self/not-self distinction is framed as the primordial boundary for consciousness',
+    '[INTERPRETED] This boundary is continuously maintained, recursively referenced, and requires ongoing energy',
+    '[INTERPRETED] Maintaining the self/not-self distinction is a thermodynamic achievement—this is reframing, not derivation',
+    '[INTERPRETED] Consciousness as what boundary maintenance feels like from within—philosophical vocabulary, not proof',
+    '[INTERPRETED] The inside perspective on self/not-self maintenance as ground floor of experience—interpretive claim',
   ],
 };

@@ -103,11 +103,11 @@ export const section7_2: Section = {
     },
   ],
   keyPoints: [
-    'Entropy is the measure of distinction-decay - tendency toward indistinguishability',
-    'Entropy increase means boundaries that made parts distinguishable are dissolving',
-    'The formula $S = -k \\sum P(D) \\ln[P(D)]$ measures distinguishability of states',
-    'Information entropy and thermodynamic entropy are unified - they measure the same thing',
-    'High-entropy states are more probable because dissolution is combinatorially favored over maintenance',
-    'Entropy measures what distinctions CAN be maintained, not what an observer happens to know',
+    '[INTERPRETED] Entropy is the measure of distinction-decay—tendency toward indistinguishability',
+    '[INTERPRETED] Entropy increase means boundaries that made parts distinguishable are dissolving',
+    '[INTERPRETED] The formula $S = -k \\sum P(D) \\ln[P(D)]$ measures distinguishability of states',
+    '[INTERPRETED] Information entropy and thermodynamic entropy are unified—they measure the same thing',
+    '[IMPORTED] The probability-based formulation comes from statistical mechanics (Boltzmann, Shannon)',
+    '[INTERPRETED] Entropy measures what distinctions CAN be maintained, not what an observer happens to know',
   ],
 };

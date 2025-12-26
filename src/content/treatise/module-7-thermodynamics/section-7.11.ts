@@ -132,11 +132,11 @@ export const section7_11: Section = {
     },
   ],
   keyPoints: [
-    'Every computational operation requires making or maintaining distinctions',
-    'The Landauer limit sets the minimum energy at $kT \\ln(2)$ per irreversible bit operation',
-    'Reversible operations approach minimum energy by preserving rather than erasing distinctions',
-    'Memory costs scale with number of bits, duration, and fidelity of distinction-maintenance',
-    'Omniscience, perfect simulation, and entropy reversal are impossible in principle, not just practice',
-    'Computational limits are thermodynamic necessities following from the energy cost of distinctions',
+    '[INTERPRETED] Every computational operation requires making or maintaining distinctions',
+    '[IMPORTED] The Landauer limit sets the minimum energy at $kT \\ln(2)$ per irreversible bit operation',
+    '[INTERPRETED] Reversible operations approach minimum energy by preserving rather than erasing distinctions',
+    '[INTERPRETED] Memory costs scale with number of bits, duration, and fidelity of distinction-maintenance',
+    '[INTERPRETED] Omniscience, perfect simulation, and entropy reversal are impossible in principle, not just practice',
+    '[IMPORTED] These limits were established by Landauer, Bremermann, Bekenstein, and Lloyd; the framework provides interpretive unification',
   ],
 };

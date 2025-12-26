@@ -2,8 +2,8 @@ import type { Section } from '../types';
 
 export const section8_5: Section = {
   id: '8.5',
-  title: 'Crucial Tests',
-  subtitle: 'Would Falsify the Framework if Negative',
+  title: 'Falsification Conditions',
+  subtitle: 'What Would Require Abandoning or Substantially Revising the Framework',
   epistemicStatus: 'derived',
   content: [
     {
@@ -197,11 +197,11 @@ export const section8_5: Section = {
     },
   ],
   keyPoints: [
-    'The framework specifies five falsification conditions that would require abandoning or substantially revising it',
-    'F1 (continuous access) and F3 (infinite complexity) face practical asymmetry - hard to demonstrate infinities',
-    'F2 (zero-energy distinctions) is the most tractable test - violations of Landauer limit would falsify Axiom 1',
-    'F4 (non-optimizing learning) and F5 (zero-energy consciousness) are empirically accessible but might prompt refinement rather than abandonment',
-    'Isolated counterexamples prompt refinement; systematic patterns prompt falsification',
-    'The framework is falsifiable in principle though not easily falsifiable in practice - a common feature of foundational frameworks',
+    '[DERIVED] Five falsification conditions follow from the axioms and would require abandoning or substantially revising the framework',
+    '[IMPORTED] F2 (zero-energy distinctions) is the most tractable---violations of Landauer limit would directly falsify the imported foundation of Axiom 1',
+    'F1 (continuous access) and F3 (infinite complexity) face practical asymmetry---hard to demonstrate infinities or perfect precision',
+    'F4 and F5 are empirically accessible but might prompt refinement of applications rather than abandonment of core axioms',
+    '[EPISTEMIC HONESTY] Isolated counterexamples prompt refinement; only systematic patterns warrant falsification',
+    'The framework is falsifiable in principle though not easily falsifiable in practice---common for foundational frameworks',
   ],
 };

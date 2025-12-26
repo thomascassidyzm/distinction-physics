@@ -2,9 +2,15 @@ import type { Section } from '../types';
 
 export const section6_3: Section = {
   id: '6.3',
-  title: 'Relativity as Observer-Dependence of Distinction-Patterns',
-  epistemicStatus: 'imported',  // Special relativity is imported, then interpreted
+  title: 'Relativity as Observer-Dependence [IMPORTED + CONJECTURED]',
+  epistemicStatus: 'conjectured',  // Special relativity is imported, interpretation is conjectured
   content: [
+    {
+      type: 'note',
+      variant: 'editorial',
+      content:
+        '**Epistemic Status: IMPORTED + CONJECTURED.** Special relativity (Lorentz invariance, time dilation, length contraction) is IMPORTED as established physics. We do NOT derive it. The interpretation through "boundary propagation" vocabulary is CONJECTURED—a speculative reframing that may or may not prove useful.',
+    },
     {
       type: 'paragraph',
       content:
@@ -13,44 +19,50 @@ export const section6_3: Section = {
     {
       type: 'paragraph',
       content:
-        'Our framework offers an interpretation: **Lorentz invariance emerges from consistency requirements on boundary propagation**.',
+        'Our framework offers a **speculative interpretation** (not a derivation): **Lorentz invariance might be understood as consistency requirements on boundary propagation**. This is conjecture, not proof.',
       emphasis: 'key',
+    },
+    {
+      type: 'note',
+      variant: 'technical',
+      content:
+        '**Honest acknowledgment:** This interpretation adds philosophical vocabulary, not predictive content. We cannot derive the Lorentz group SO(3,1) from our axioms, nor explain why the invariant speed equals c = 299,792,458 m/s rather than some other value. The value of c is empirical input, not framework output. Our contribution is conceptual: *if* Lorentz invariance holds, it *might* be understood as consistency constraints on distinction-propagation. This is interpretation, not explanation.',
     },
     {
       type: 'heading',
       level: 3,
-      content: 'Lorentz Invariance from Consistency',
+      content: 'Lorentz Invariance: Imported, Then Interpreted [CONJECTURED]',
     },
     {
       type: 'paragraph',
       content:
-        'Consider what it means for distinction-patterns to propagate. When an event occurs, the possibility of distinguishing it propagates outward. Other OLUs can make distinctions about this event only after the "information" (the distinguishability) reaches them. There must be a maximum speed at which distinguishability can propagate - otherwise, the very notion of "event" would be incoherent.',
+        'Consider what it might mean for distinction-patterns to propagate. When an event occurs, the possibility of distinguishing it propagates outward. Other OLUs can make distinctions about this event only after the "information" (the distinguishability) reaches them. There must be a maximum speed at which distinguishability can propagate—otherwise, the very notion of "event" would be incoherent.',
     },
     {
       type: 'paragraph',
       content:
-        'This maximum propagation speed for distinctions corresponds to $c$, the speed of light. The invariance of $c$ across reference frames reflects not an arbitrary physical constant but a fundamental constraint on how boundary patterns can propagate consistently.',
+        'This maximum propagation speed for distinctions corresponds to $c$, the speed of light. **We do NOT derive that c exists or has its specific value**—this is imported from physics. We conjecture that the invariance of $c$ might reflect a fundamental constraint on how boundary patterns propagate consistently.',
     },
     {
       type: 'definition',
       id: 'def-distinction-propagation-speed',
-      term: 'Maximum Distinction Propagation Speed',
+      term: 'Maximum Distinction Propagation Speed [IMPORTED + CONJECTURED]',
       symbol: 'c',
       definition:
-        'The maximum speed at which the possibility of distinguishing an event can propagate to other observers. This speed must be finite and invariant for the notion of "event" to be coherent.',
+        '[IMPORTED] The speed of light c = 299,792,458 m/s is imported from physics. [CONJECTURED] We speculatively interpret this as the maximum speed at which the possibility of distinguishing an event can propagate to other observers.',
       intuition:
-        'If distinguishability could propagate infinitely fast, all events would be simultaneously distinguishable by all observers, and the structure of "before" and "after" would collapse.',
-      epistemicStatus: 'imported',
+        'If distinguishability could propagate infinitely fast, all events would be simultaneously distinguishable by all observers. This is a motivation for the conjecture, not a proof.',
+      epistemicStatus: 'conjectured',
     },
     {
       type: 'heading',
       level: 3,
-      content: 'Lorentz Transformations as Consistency Conditions',
+      content: 'Lorentz Transformations [IMPORTED]',
     },
     {
       type: 'paragraph',
       content:
-        'We can interpret the Lorentz transformations as **consistency conditions on distinction-patterns across observers**:',
+        'The Lorentz transformations are **imported from special relativity**. We offer the conjecture that they might be interpreted as consistency conditions on distinction-patterns across observers:',
     },
     {
       type: 'list',
@@ -119,12 +131,12 @@ export const section6_3: Section = {
     {
       type: 'heading',
       level: 3,
-      content: 'Time Dilation and Length Contraction',
+      content: 'Time Dilation and Length Contraction [IMPORTED + CONJECTURED]',
     },
     {
       type: 'paragraph',
       content:
-        'The relativistic effects of time dilation and length contraction acquire natural interpretations:',
+        'Time dilation and length contraction are **established physics (IMPORTED)**. We offer **speculative interpretations (CONJECTURED)**:',
     },
     {
       type: 'list',
@@ -132,11 +144,11 @@ export const section6_3: Section = {
       items: [
         {
           content:
-            '**Time dilation**: Moving clocks tick slower because the "cost" of maintaining temporal distinctions changes with velocity. The energy required to distinguish successive moments depends on the observer\'s relationship to the clock.',
+            '[CONJECTURED] **Time dilation interpretation**: Moving clocks might tick slower because the "cost" of maintaining temporal distinctions changes with velocity. This is a speculative reframing.',
         },
         {
           content:
-            '**Length contraction**: Moving objects appear shorter because the spatial distinction-patterns accessible to a given observer depend on relative velocity. Different observers access different "slices" of the boundary network.',
+            '[CONJECTURED] **Length contraction interpretation**: Moving objects might appear shorter because the spatial distinction-patterns accessible to a given observer depend on relative velocity. This is speculative vocabulary.',
         },
       ],
     },
@@ -144,72 +156,82 @@ export const section6_3: Section = {
       type: 'note',
       variant: 'technical',
       content:
-        'These interpretations preserve all quantitative predictions of special relativity. The Lorentz factor $\\gamma = 1/\\sqrt{1 - v^2/c^2}$ measures how distinction-maintenance costs scale with relative velocity.',
+        'These interpretations preserve all quantitative predictions of special relativity because they are reframings, not alternatives. The Lorentz factor $\\gamma = 1/\\sqrt{1 - v^2/c^2}$ is imported from physics. We conjecture it might measure how distinction-maintenance costs scale with relative velocity—but this is interpretation, not derivation.',
     },
     {
       type: 'heading',
       level: 3,
-      content: 'What We Derive vs. What We Interpret',
+      content: 'Summary: What Is Derived, Imported, and Conjectured',
     },
     {
       type: 'paragraph',
-      content: 'We must be careful to distinguish levels of certainty:',
+      content: 'We must be maximally clear about epistemic status:',
     },
     {
       type: 'paragraph',
-      content: 'We **derive** from our axioms:',
+      content: '**What we DERIVE from our axioms (genuinely follows):**',
     },
     {
       type: 'list',
       style: 'bullet',
       items: [
-        { content: 'There must be constraints on how distinction-patterns propagate' },
+        { content: '[DERIVED] There must be constraints on observer access to continuous quantities' },
         {
           content:
-            'Different OLUs may access different effective resolutions (observer-dependence)',
-        },
-        {
-          content:
-            'Consistency across observers imposes constraints on allowable transformations',
+            '[DERIVED] Different OLUs may access different effective resolutions (observer-dependence)',
         },
       ],
     },
     {
       type: 'paragraph',
-      content: 'We **interpret** (consistent with but not strictly derived from axioms):',
+      content: '**What we IMPORT from established physics (do NOT derive):**',
     },
     {
       type: 'list',
       style: 'bullet',
       items: [
-        { content: 'These constraints take the specific form of Lorentz transformations' },
-        { content: 'The invariant speed corresponds to $c = 299,792,458$ m/s' },
-        { content: 'The specific mathematical structure of special relativity' },
+        { content: '[IMPORTED] The Lorentz transformations' },
+        { content: '[IMPORTED] The invariant speed $c = 299,792,458$ m/s' },
+        { content: '[IMPORTED] The entire mathematical structure of special relativity' },
+        { content: '[IMPORTED] Time dilation and length contraction as physical phenomena' },
+      ],
+    },
+    {
+      type: 'paragraph',
+      content: '**What we CONJECTURE (speculative interpretation):**',
+    },
+    {
+      type: 'list',
+      style: 'bullet',
+      items: [
+        { content: '[CONJECTURED] Lorentz invariance might reflect boundary propagation consistency' },
+        { content: '[CONJECTURED] Time dilation might be interpreted as distinction-cost changes' },
+        { content: '[CONJECTURED] The light cone might be understood as a distinction-exchange boundary' },
       ],
     },
     {
       type: 'theorem',
       id: 'thm-lorentz-consistency',
       label: 'claim',
-      name: 'Lorentz Invariance as Boundary Consistency',
+      name: 'Lorentz Invariance Interpretation [CONJECTURED]',
       statement:
-        'The interpretation is well-motivated because the framework naturally accommodates relativity, but we do not claim to have *derived* special relativity from pure first principles. Rather, we show how it fits coherently within the distinction framework. The invariance of $c$ and the Lorentz transformations are imported from special relativity; we interpret them as consistency constraints on boundary propagation.',
-      epistemicStatus: 'imported',
+        'We do NOT claim to derive special relativity from our axioms. The invariance of $c$ and the Lorentz transformations are IMPORTED from established physics. We offer a CONJECTURED interpretation: they might be understood as consistency constraints on boundary propagation. This is speculative vocabulary, not a derivation.',
+      epistemicStatus: 'conjectured',
       dependsOn: ['A1', 'A2'],
     },
     {
       type: 'paragraph',
       content:
-        'This reframing provides conceptual unity: special relativity describes how different observers access the same underlying boundary network from different perspectives. The "strangeness" of relativity is no more mysterious than the fact that different observers see different perspectives of the same object.',
+        'This reframing provides conceptual vocabulary: special relativity might be understood as describing how different observers access distinction-patterns from different perspectives. Whether this vocabulary proves useful remains to be seen. It is complementary to physics, not a replacement.',
       emphasis: 'conclusion',
     },
   ],
   keyPoints: [
-    'Lorentz invariance emerges from consistency requirements on how distinction-patterns propagate across observers',
-    'The speed of light $c$ represents the maximum speed at which distinguishability can propagate',
-    'Light cones divide spacetime into regions that can and cannot exchange distinction-patterns',
-    'Time dilation and length contraction reflect how distinction-maintenance costs depend on relative velocity',
-    'This is interpretation, not strict derivation: we show how relativity fits coherently within the distinction framework',
-    'The invariant interval $ds^2$ measures distinction-pattern relationships between events',
+    '[IMPORTED] Special relativity (Lorentz transformations, c, time dilation, length contraction) is established physics—not derived here',
+    '[CONJECTURED] Lorentz invariance might be interpreted as consistency requirements on boundary propagation',
+    '[CONJECTURED] The speed of light might represent maximum distinction-propagation speed—speculative interpretation',
+    '[CONJECTURED] Time dilation and length contraction might reflect distinction-maintenance cost changes',
+    'This is speculative interpretation, not derivation: we offer vocabulary, not proofs',
+    'The framework complements special relativity; it does NOT derive or replace it',
   ],
 };

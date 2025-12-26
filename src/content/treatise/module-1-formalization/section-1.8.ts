@@ -95,10 +95,10 @@ export const section1_8: Section = {
     },
   ],
   keyPoints: [
-    'Distinctions decay exponentially without energy maintenance: $\\diamond(x, y, t) = \\diamond(x, y, 0) \\cdot \\exp(-t/\\tau(E))$',
-    'Decay time increases with energy investment: $\\tau(E) = \\tau_0 \\exp(E/kT)$',
-    'Existence is processual: maintaining identity requires continuous energy expenditure proportional to complexity',
-    'Living organisms, complex systems, and all structured entities require ongoing energy input to persist',
-    'There are no eternal, unchanging forms—all patterns are temporary and energy-dependent',
+    '[DERIVED] Distinctions decay without energy maintenance (specific exponential form uses IMPORTED thermodynamics)',
+    '[DERIVED] Decay time increases with energy investment',
+    '[DERIVED] Existence is processual: maintaining identity requires continuous energy expenditure proportional to complexity',
+    '[INTERPRETED] Living organisms, complex systems, and all structured entities require ongoing energy input to persist',
+    '[DERIVED] There are no eternal, unchanging forms—all patterns are temporary and energy-dependent',
   ],
 };

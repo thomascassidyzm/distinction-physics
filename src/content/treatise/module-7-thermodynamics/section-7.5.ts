@@ -128,10 +128,11 @@ export const section7_5: Section = {
     },
   ],
   keyPoints: [
-    'Time\'s arrow emerges from boundary dispersion statistics, not special initial conditions',
+    '[INTERPRETED] Time\'s arrow can be understood through boundary dispersion statistics',
+    '[IMPORTED] The arrow requires boundary conditions (low-entropy past) not derived from axioms',
     'Four mechanisms drive dispersion: combinatorial asymmetry, resource competition, interaction spreading, memory limits',
-    'Boundary evolution follows a diffusion equation: $dP(D)/dt = -\\nabla \\cdot J(D)$',
-    'Reversal requires exponentially more resources as dispersion increases',
-    'Memory of the past exists because past boundaries leave traces; the future is indeterminate because its boundaries are not yet drawn',
+    '[INTERPRETED] Boundary evolution follows a diffusion equation: $dP(D)/dt = -\\nabla \\cdot J(D)$',
+    '[INTERPRETED] Reversal requires exponentially more resources as dispersion increases',
+    '[INTERPRETED] Memory of the past exists because past boundaries leave traces; the future is indeterminate',
   ],
 };

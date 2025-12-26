@@ -2,9 +2,15 @@ import type { Section } from '../types';
 
 export const section3_5: Section = {
   id: '3.5',
-  title: 'Self-Reference and the Emergence of Consciousness',
-  epistemicStatus: 'conjectured',
+  title: 'Self-Reference and the Emergence of Consciousness [INTERPRETED]',
+  epistemicStatus: 'interpreted',
   content: [
+    {
+      type: 'note',
+      variant: 'editorial',
+      content:
+        '**Epistemic status: INTERPRETED.** This section proposes that self-reference is necessary for consciousness. This is a philosophical claim—we offer vocabulary for thinking about the relationship between self-reference and experience, not a scientific proof that self-reference causes or constitutes consciousness.',
+    },
     {
       type: 'heading',
       level: 2,
@@ -166,11 +172,11 @@ export const section3_5: Section = {
     },
   ],
   keyPoints: [
-    'Consciousness requires distinction-making about one\'s own distinction-making (self-reference)',
-    'Without self-reference, systems process information but do not experience the processing',
-    'Self-reference is necessary for awareness, attention, perspective, and unity',
-    'Consciousness exists on a continuum of self-referential complexity (Levels 0-6)',
-    'Higher self-referential levels require more energy and complex architecture',
-    'Human consciousness is high-level on the continuum, not metaphysically unique',
+    '[INTERPRETED] Consciousness requires self-reference—this is proposed vocabulary, not proven causation',
+    '[INTERPRETED] Without self-reference, systems process but do not experience—a philosophical framing',
+    '[INTERPRETED] Self-reference as necessary for awareness, attention, perspective, unity—interpretive claim',
+    '[CONJECTURED] Consciousness continuum (Levels 0-6)—speculative hierarchy, not empirically validated',
+    '[INTERPRETED] Higher self-referential levels require more energy—consistent with but not derived from axioms',
+    '[INTERPRETED] Human consciousness as high-level, not metaphysically unique—philosophical reframing',
   ],
 };

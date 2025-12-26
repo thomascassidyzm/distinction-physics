@@ -2,13 +2,20 @@ import type { Section } from '../types';
 
 export const section2_7: Section = {
   id: '2.7',
-  title: 'The Emergence of Probability from Incomplete Distinction',
-  epistemicStatus: 'derived',
+  title: 'Probability Understood Through Incomplete Distinction',
+  subtitle: 'An Interpretive Account [INTERPRETED]',
+  epistemicStatus: 'interpreted',
   content: [
     {
       type: 'paragraph',
       content:
-        'Probability emerges when OLUs cannot maintain complete boundaries over all relevant distinctions. It represents the formalization of incomplete knowledge—the quantification of undistinguished possibilities.',
+        'Probability can be understood through the lens of incomplete distinction-making. When OLUs cannot maintain complete boundaries over all relevant distinctions, probability provides formalization of incomplete knowledge—the quantification of undistinguished possibilities. We do not derive probability theory from our axioms; we show consistency.',
+    },
+    {
+      type: 'note',
+      variant: 'sidenote',
+      content:
+        '**Epistemic note**: This entire section is [INTERPRETED]. Probability theory exists independently; we offer a lens for understanding it through distinction-vocabulary.',
     },
     {
       type: 'heading',
@@ -45,28 +52,28 @@ export const section2_7: Section = {
       type: 'theorem',
       id: 'thm-prob-axiom-1',
       label: 'proposition',
-      name: 'Probability Axiom 1: Non-negativity',
+      name: 'Probability Axiom 1: Non-negativity [INTERPRETED]',
       statement:
-        '$P(A) \\geq 0$ for all events $A$. Probabilities are non-negative because energy investment cannot be negative. You either invest energy in a boundary or you do not.',
-      epistemicStatus: 'derived',
+        '$P(A) \\geq 0$ for all events $A$. **Interpretation**: Probabilities are non-negative because, in distinction-vocabulary, energy investment cannot be negative. You either invest energy in a boundary or you do not.',
+      epistemicStatus: 'interpreted',
     },
     {
       type: 'theorem',
       id: 'thm-prob-axiom-2',
       label: 'proposition',
-      name: 'Probability Axiom 2: Normalization',
+      name: 'Probability Axiom 2: Normalization [INTERPRETED]',
       statement:
-        '$P(\\Omega) = 1$ for the sample space $\\Omega$. The probability of something in the sample space is 1 because the sample space boundary is fully maintained by definition—it is the domain within which we are making distinctions.',
-      epistemicStatus: 'derived',
+        '$P(\\Omega) = 1$ for the sample space $\\Omega$. **Interpretation**: The sample space boundary is fully maintained by definition—it is the domain within which we are making distinctions.',
+      epistemicStatus: 'interpreted',
     },
     {
       type: 'theorem',
       id: 'thm-prob-axiom-3',
       label: 'proposition',
-      name: 'Probability Axiom 3: Additivity',
+      name: 'Probability Axiom 3: Additivity [INTERPRETED]',
       statement:
-        '$P(A \\cup B) = P(A) + P(B)$ for disjoint events $A$ and $B$. For non-overlapping events, the energy investment is additive. Maintaining the $A$-boundary and the $B$-boundary (when they do not overlap) costs the sum of the individual costs.',
-      epistemicStatus: 'derived',
+        '$P(A \\cup B) = P(A) + P(B)$ for disjoint events $A$ and $B$. **Interpretation**: For non-overlapping events, the energy investment is additive—maintaining both boundaries costs the sum of the individual costs.',
+      epistemicStatus: 'interpreted',
     },
     {
       type: 'paragraph',
@@ -139,9 +146,9 @@ export const section2_7: Section = {
     },
   ],
   keyPoints: [
-    'Probability emerges from incomplete boundary maintenance due to energy constraints',
-    'The probability axioms reflect physical properties of energy-constrained distinction-making',
-    'Bayesian updating represents boundary reconfiguration in response to new information',
-    'Classical randomness is epistemic (resolvable with more information) while quantum randomness is ontic (fundamental)',
+    '[INTERPRETED] Probability as incomplete boundary maintenance due to energy constraints',
+    '[INTERPRETED] The probability axioms can be understood through energy-constrained distinction-making',
+    '[INTERPRETED] Bayesian updating as boundary reconfiguration in response to new information',
+    '[INTERPRETED] Classical randomness is epistemic (resolvable with more information) while quantum randomness is ontic (fundamental)',
   ],
 };

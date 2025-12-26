@@ -2,14 +2,20 @@ import type { Section } from '../types';
 
 export const section2_10: Section = {
   id: '2.10',
-  title: 'Mathematical Truth as Thermodynamic Necessity',
-  subtitle: 'Why Mathematical Truths Feel Necessary',
+  title: 'Mathematical Truth Viewed Through Thermodynamic Stability',
+  subtitle: 'An Interpretive Account of Why Mathematical Truths Feel Necessary',
   epistemicStatus: 'interpreted',
   content: [
     {
       type: 'paragraph',
       content:
-        'We can now understand what mathematical truth is and why it feels necessary.',
+        'This section offers an interpretive account of what mathematical truth is and why it feels necessary. We propose a correspondence between mathematical necessity and thermodynamic stability—this is a philosophical interpretation, not a derivation from axioms.',
+    },
+    {
+      type: 'note',
+      variant: 'sidenote',
+      content:
+        '**Epistemic note**: This entire section is [INTERPRETED]. The proposed correspondence between mathematical truth and thermodynamic stability is a philosophical claim, not something proven from the two axioms.',
     },
     {
       type: 'heading',

@@ -2,12 +2,18 @@ import type { Section } from '../types';
 
 export const section3_8: Section = {
   id: '3.8',
-  title: 'Agency and Free Will: Choosing Where to Draw Boundaries',
-  epistemicStatus: 'derived',
+  title: 'Agency and Free Will: Choosing Where to Draw Boundaries [INTERPRETED]',
+  epistemicStatus: 'interpreted',
   content: [
     {
+      type: 'note',
+      variant: 'editorial',
+      content:
+        '**Epistemic status: INTERPRETED.** This section offers a philosophical reframing of agency and free will through distinction-vocabulary. We propose a compatibilist view where free will is a causal pattern of self-referential evaluation. This is philosophical interpretation, not scientific proof—the free will debate remains open.',
+    },
+    {
       type: 'paragraph',
-      content: 'Agency emerges when a system:',
+      content: 'Agency, in our interpretive framing, emerges when a system:',
     },
     {
       type: 'list',
@@ -165,10 +171,11 @@ export const section3_8: Section = {
     },
   ],
   keyPoints: [
-    'Agency emerges from self-referential distinction-making about possible futures',
-    'Free will is not freedom from causation but a particular causal pattern of self-referential evaluation',
-    'Choice is yours because it flows from your boundary-patterns—you are a distinctive way of making distinctions',
-    'Responsibility is preserved: actions express character (stable distinction-making tendencies)',
-    'Agency admits of degrees, from thermostats to humans, with complexity and energy requirements scaling together',
+    '[INTERPRETED] Agency as self-referential distinction-making about futures—philosophical reframing',
+    '[INTERPRETED] Free will as a causal pattern (compatibilism)—a philosophical position, not proof',
+    '[INTERPRETED] Choice as flowing from boundary-patterns—vocabulary for thinking about agency',
+    '[INTERPRETED] Responsibility preserved through character—philosophical interpretation',
+    '[INTERPRETED] Degrees of agency from thermostats to humans—interpretive continuum',
+    'The free will debate remains philosophically contested—this is one interpretive approach',
   ],
 };

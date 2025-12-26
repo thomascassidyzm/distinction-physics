@@ -2,20 +2,31 @@ import type { Section } from '../types';
 
 export const section3_11: Section = {
   id: '3.11',
-  title: 'Conclusion: What the Framework Explains, Transforms, and Leaves Open',
+  title: 'Conclusion: What the Framework Interprets, Relocates, and Leaves Open',
   subtitle: 'An Honest Assessment of Module 3',
-  epistemicStatus: 'derived',
+  epistemicStatus: 'interpreted',
   content: [
+    {
+      type: 'note',
+      variant: 'editorial',
+      content:
+        '**Epistemic status: INTERPRETED.** This conclusion honestly assesses what the module offers. Key point: we provide interpretive vocabulary for consciousness, not a scientific explanation. We RELOCATE the hard problem—we do NOT solve it. The 8W/20W figures are IMPORTED from neuroscience, not derived.',
+    },
     {
       type: 'paragraph',
       content:
-        'Let us be honest about what this module has accomplished.',
+        'Let us be honest about what this module has accomplished—and what it has not.',
     },
     {
       type: 'heading',
       level: 2,
-      content: 'What We Explain',
+      content: 'What We Interpret [INTERPRETED]',
       id: 'what-we-explain',
+    },
+    {
+      type: 'paragraph',
+      content:
+        '**Important framing**: The following are INTERPRETATIONS—we offer vocabulary for thinking about consciousness, not scientific explanations that derive consciousness from physics. The distinction-framework provides a lens, not a solution.',
     },
     {
       type: 'list',
@@ -54,8 +65,13 @@ export const section3_11: Section = {
     {
       type: 'heading',
       level: 2,
-      content: 'What We Transform',
+      content: 'What We Relocate (Not Solve)',
       id: 'what-we-transform',
+    },
+    {
+      type: 'paragraph',
+      content:
+        '**Critical clarification**: The following are RELOCATIONS, not solutions. We reframe questions—we do not answer the deepest "why" of consciousness.',
     },
     {
       type: 'list',
@@ -63,7 +79,7 @@ export const section3_11: Section = {
       items: [
         {
           content:
-            '**The hard problem**: We do not eliminate the puzzlement but transform it from "how does matter generate experience?" to "why does self-referential boundary maintenance have an inside perspective?" Our answer---that having an inside is what self-referential boundary maintenance *means*---reframes the problem from an explanatory gap to a perspective shift.',
+            '**The hard problem [RELOCATES, NOT SOLVES]**: We RELOCATE the question from "how does matter generate experience?" to "why does self-referential boundary maintenance have an inside perspective?" Our answer—that having an inside is what self-referential boundary maintenance *means*—is a reframing, not an explanation. Whether this satisfies the intuitions behind the hard problem is for the reader to judge. We do NOT claim to have solved why consciousness exists.',
         },
         {
           content:
@@ -110,19 +126,19 @@ export const section3_11: Section = {
     {
       type: 'heading',
       level: 2,
-      content: 'The Central Insight',
+      content: 'The Central Interpretive Claim',
       id: 'central-insight',
     },
     {
       type: 'paragraph',
       content:
-        'Consciousness is not a mysterious substance added to matter, not an emergent property beyond physical explanation, not an illusion to be explained away. Consciousness is **self-referential distinction-making at sufficient complexity**---what it feels like from inside when a system maintains an integrated boundary between self and not-self, continuously renewed through energy expenditure.',
+        'Our central interpretive claim: Consciousness can be understood as **self-referential distinction-making at sufficient complexity**—what it feels like from inside when a system maintains an integrated boundary between self and not-self, continuously renewed through energy expenditure. This is vocabulary for thinking about consciousness, not a derivation of consciousness from physics.',
       emphasis: 'key',
     },
     {
       type: 'paragraph',
       content:
-        'The 8W of power your brain spends on conscious processing is the thermodynamic price of having an inside. The $\\sim 10^7$ simultaneously maintained distinction-states are the substrate of your unified experience. The self/not-self boundary you maintain each moment is the ground floor of your existence as a conscious being.',
+        'The ~8W of power your brain spends on conscious processing (IMPORTED from neuroscience, not derived) is interpreted as the thermodynamic price of having an inside. The ~10^7 simultaneously maintained distinction-states (CONJECTURED threshold) are interpreted as the substrate of unified experience. The self/not-self boundary you maintain each moment is proposed as the ground floor of conscious existence.',
     },
     {
       type: 'paragraph',
@@ -140,24 +156,26 @@ export const section3_11: Section = {
       title: 'Module 3 Key Takeaways',
       variant: 'takeaways',
       points: [
-        'Consciousness is self-referential distinction-making at sufficient complexity (~10^7 distinction-states)',
-        'The self/not-self boundary is the primordial distinction that defines the observer',
-        'Conscious processing costs approximately 8W in humans---the thermodynamic price of having an inside',
-        'Qualia are the interior perspective on boundary maintenance, explaining their ineffability, privacy, and immediacy',
-        'The hard problem transforms from an explanatory gap to a perspective shift: having an inside *is* what self-referential boundary maintenance means',
-        'Free will is preserved as agency: actions flowing from self-referential evaluative processes',
-        'Attention is the allocation of finite distinction-maintenance resources',
-        'Different conscious states reflect different energy investments in boundary maintenance',
-        'Machine consciousness is possible in principle but requires the right architecture',
-        'Open questions remain: why these specific qualia, the precise threshold for consciousness, and detailed binding mechanisms',
+        '[INTERPRETED] Consciousness as self-referential distinction-making—philosophical vocabulary, not scientific proof',
+        '[INTERPRETED] The self/not-self boundary as primordial distinction—interpretive framing',
+        '[IMPORTED from neuroscience] ~20W brain power, ~8W conscious processing—observations, not derivations',
+        '[INTERPRETED] Qualia as interior perspective on boundary maintenance—reframing, not explanation',
+        'The hard problem is RELOCATED, not solved—we do NOT explain why consciousness exists',
+        '[INTERPRETED] Free will as agency through self-referential evaluation—one philosophical position',
+        '[INTERPRETED] Attention as allocation of distinction-maintenance resources',
+        '[INTERPRETED] Conscious states as varying energy investments in boundaries',
+        '[CONJECTURED] Machine consciousness possible in principle—speculative',
+        'Open questions remain: why consciousness exists, why specific qualia, precise thresholds, binding mechanisms',
+        'This module offers vocabulary, not proof—it complements neuroscience, not replaces it',
       ],
     },
   ],
   keyPoints: [
-    'The framework explains why consciousness requires energy, has limited capacity, and is unified',
-    'It transforms the hard problem, free will, and mind-body relation into tractable questions',
-    'Open questions remain about specific qualia, binding mechanisms, and the exact complexity threshold',
-    'Consciousness is self-referential distinction-making at sufficient complexity',
-    'This grounds consciousness in thermodynamics without explaining it away',
+    '[INTERPRETED] The framework offers vocabulary for why consciousness requires energy, has limits, is unified',
+    'The hard problem is RELOCATED, not solved—free will and mind-body are reframed, not explained',
+    'Open questions remain: why consciousness exists, specific qualia, binding mechanisms, thresholds',
+    '[INTERPRETED] Consciousness as self-referential distinction-making—vocabulary, not proof',
+    'This module grounds consciousness in thermodynamic vocabulary without claiming to explain it away',
+    'Epistemic honesty: most claims are INTERPRETED or CONJECTURED, not DERIVED',
   ],
 };

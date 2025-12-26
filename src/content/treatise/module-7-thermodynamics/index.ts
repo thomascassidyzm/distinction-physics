@@ -18,9 +18,9 @@ import { section7_14 } from './section-7.14';
 export const module7: Module = {
   number: 7,
   id: 'thermodynamics',
-  title: 'Thermodynamics as Distinction Dynamics',
-  subtitle: 'Why the Laws of Heat Are Laws of Distinction-Making',
-  epistemicStatus: 'derived',
+  title: 'Thermodynamics Interpreted Through Distinction',
+  subtitle: 'Understanding the Laws of Heat as Laws of Distinction-Making',
+  epistemicStatus: 'interpreted',
   sections: [
     section7_1,
     section7_2,
@@ -38,19 +38,19 @@ export const module7: Module = {
     section7_14,
   ],
   keyInsights: [
-    'Entropy is the measure of distinction-decay—tendency toward indistinguishability',
-    'The Second Law is DERIVED: distinctions naturally disperse without energy input',
-    'Landauer Principle predicted and confirmed: kT ln(2) per bit erasure',
-    'Time arrow emerges from statistics of boundary dispersion',
-    'Temperature indexes distinction-stability; free energy measures maintenance capacity',
-    'Heat death = state without OLUs, where no distinctions are maintainable',
-    'Living systems are sophisticated boundary-maintenance networks far from equilibrium',
-    'Computational limits follow from thermodynamic constraints on distinction-making',
+    '[INTERPRETED] Entropy as the measure of distinction-decay—tendency toward indistinguishability',
+    '[INTERPRETED] The Second Law understood as: distinctions naturally disperse without energy input (imports statistical mechanics)',
+    '[IMPORTED] Landauer Principle (kT ln 2 per bit erasure) grounds Axiom 1—we build on it, not derive it',
+    '[INTERPRETED] Time arrow understood through statistics of boundary dispersion (requires boundary conditions)',
+    '[INTERPRETED] Temperature indexes distinction-stability; free energy measures maintenance capacity',
+    '[INTERPRETED] Heat death = state without OLUs, where no distinctions are maintainable',
+    '[INTERPRETED] Living systems as sophisticated boundary-maintenance networks far from equilibrium',
+    '[INTERPRETED] Computational limits follow from thermodynamic constraints on distinction-making',
   ],
   connectionsToNext: [
     'Module 8 compiles all testable predictions and empirical status',
-    'The thermodynamic foundations developed here inform all experimental predictions',
-    'The unification of information and thermodynamics enables cross-domain testing',
+    'The thermodynamic interpretations developed here inform consistency demonstrations',
+    'The unification of information and thermodynamics provides conceptual vocabulary across domains',
   ],
 };
 

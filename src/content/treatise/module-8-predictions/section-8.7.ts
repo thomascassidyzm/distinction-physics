@@ -2,8 +2,9 @@ import type { Section } from '../types';
 
 export const section8_7: Section = {
   id: '8.7',
-  title: 'Honest Assessment: Predictions vs. Interpretations',
-  epistemicStatus: 'consistent',
+  title: 'Honest Assessment: What the Framework Actually Claims',
+  subtitle: 'Distinguishing Genuine Predictions from Post-Hoc Interpretations',
+  epistemicStatus: 'interpreted',
   content: [
     {
       type: 'paragraph',
@@ -202,11 +203,11 @@ export const section8_7: Section = {
     },
   ],
   keyPoints: [
-    'Most "Type 1 derivations" are actually post-hoc: Landauer (imported), quantization (interpretation), Second Law (imports stat mech)',
-    'Type 2 (interpretations) are consistent but not uniquely derivable: gravity, Born rule, qualia, time\'s arrow',
-    'Type 3 (conjectures) are speculative extensions: dark energy, consciousness threshold, Big Bang',
-    'Only N4 (measurement energy) and similar near-term predictions might represent genuine novel claims',
-    'The framework cannot claim to have derived established physics; it provides interpretive vocabulary',
-    'Acknowledging limits maintains scientific credibility; conflating post-hoc with prediction would undermine it',
+    '[IMPORTED] Most "Type 1" claims are post-hoc: Landauer (imported), quantization (interpretation of established QM), Second Law (imports stat mech)',
+    '[INTERPRETED] Type 2 claims are consistent but not uniquely derivable: gravity interpretation, Born rule, qualia, time\'s arrow',
+    '[CONJECTURED] Type 3 claims are speculative extensions with weak axiom connection: dark energy, consciousness threshold, Big Bang',
+    '[POTENTIALLY NOVEL] Only N4 (measurement energy scaling) might represent a genuinely distinguishing testable claim',
+    '[EPISTEMIC HONESTY] The framework interprets established physics; it does not derive it independently or predict it in advance',
+    'Scientific credibility requires distinguishing post-hoc consistency from temporal prediction; conflating them would undermine the framework',
   ],
 };
