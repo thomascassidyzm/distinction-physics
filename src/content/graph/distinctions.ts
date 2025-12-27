@@ -1,7 +1,7 @@
 /**
  * Distinction Network: Distinction Edges
  *
- * Key comparisons between concepts in the Distinction Physics framework.
+ * Key comparisons between concepts in the Distinction as Primitive framework.
  * These distinctions are pedagogically crucial—understanding WHY concepts differ
  * illuminates the structure of the theory.
  */

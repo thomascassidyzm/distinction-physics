@@ -1,7 +1,7 @@
 /**
  * Distinction Network Graph
  *
- * The complete conceptual structure of Distinction Physics as a navigable graph.
+ * The complete conceptual structure of Distinction as Primitive as a navigable graph.
  * Concepts are nodes, distinctions are comparisons, relationships are edges.
  */
 

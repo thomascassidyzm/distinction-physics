@@ -13,10 +13,10 @@ export const relationships: Relationship[] = [
   // ===========================================================================
   // Axiom 1 implications
   {
-    id: 'axiom1-implies-landauer',
-    source: 'axiom-1',
-    target: 'landauer-limit',
-    type: 'implies',
+    id: 'axiom1-imports-landauer',
+    source: 'landauer-limit',
+    target: 'axiom-1',
+    type: 'depends_on',
     strength: 'strong',
     explanation: 'If all distinctions cost energy, there must be a minimum cost—Landauer\'s limit.',
   },
@@ -399,6 +399,186 @@ export const relationships: Relationship[] = [
     type: 'contrasts_with',
     strength: 'moderate',
     explanation: 'Both address thermodynamic optimization in cognition.',
+  },
+
+  // ===========================================================================
+  // LEARNING RELATIONSHIPS (V8 additions)
+  // ===========================================================================
+  {
+    id: 'same-different-to-distinction',
+    source: 'same-different-duality',
+    target: 'distinction',
+    type: 'exemplifies',
+    strength: 'strong',
+    explanation: 'Same/different processing is distinction-making in its most observable form.',
+  },
+  {
+    id: 'expertise-from-automatization',
+    source: 'expertise',
+    target: 'automatization',
+    type: 'derives_from',
+    strength: 'strong',
+    explanation: 'Expertise emerges from automatization of distinction-making.',
+  },
+  {
+    id: 'transfer-from-learning',
+    source: 'positive-transfer',
+    target: 'learning-thermodynamic',
+    type: 'derives_from',
+    strength: 'moderate',
+    explanation: 'Transfer leverages prior anti-entropic investment.',
+  },
+  {
+    id: 'meta-learning-to-self-reference',
+    source: 'meta-learning',
+    target: 'self-referential-distinction',
+    type: 'derives_from',
+    strength: 'strong',
+    explanation: 'Meta-learning requires distinction-making about distinction-making.',
+  },
+  {
+    id: 'working-memory-from-axiom2',
+    source: 'working-memory-capacity',
+    target: 'axiom-2',
+    type: 'depends_on',
+    strength: 'strong',
+    explanation: 'Working memory capacity is bounded by finite energy.',
+  },
+
+  // ===========================================================================
+  // THERMODYNAMICS RELATIONSHIPS (V8 additions)
+  // ===========================================================================
+  {
+    id: 'temperature-to-entropy',
+    source: 'temperature',
+    target: 'entropy',
+    type: 'derives_from',
+    strength: 'strong',
+    explanation: 'Temperature indexes distinction-stability relative to entropy.',
+  },
+  {
+    id: 'free-energy-to-work',
+    source: 'free-energy',
+    target: 'work',
+    type: 'implies',
+    strength: 'strong',
+    explanation: 'Free energy is capacity for directed distinction-making (work).',
+  },
+  {
+    id: 'heat-death-from-entropy',
+    source: 'heat-death',
+    target: 'entropy',
+    type: 'derives_from',
+    strength: 'strong',
+    explanation: 'Heat death is maximum entropy—end of distinction-making.',
+  },
+  {
+    id: 'maxwell-demon-to-landauer',
+    source: 'maxwell-demon',
+    target: 'landauer-limit',
+    type: 'depends_on',
+    strength: 'strong',
+    explanation: 'The demon resolution relies on Landauer\'s principle.',
+  },
+  {
+    id: 'life-from-entropy',
+    source: 'thermodynamic-life',
+    target: 'entropy',
+    type: 'contrasts_with',
+    strength: 'strong',
+    explanation: 'Life maintains distinctions against entropic decay.',
+  },
+  {
+    id: 'time-arrow-from-entropy',
+    source: 'time-arrow',
+    target: 'entropy',
+    type: 'derives_from',
+    strength: 'strong',
+    explanation: 'Time asymmetry emerges from distinction dispersion.',
+  },
+
+  // ===========================================================================
+  // SPACETIME RELATIONSHIPS (V8 additions)
+  // ===========================================================================
+  {
+    id: 'light-cone-from-speed',
+    source: 'light-cone',
+    target: 'max-distinction-speed',
+    type: 'derives_from',
+    strength: 'strong',
+    explanation: 'Light cone structure follows from maximum distinction propagation speed.',
+  },
+  {
+    id: 'holographic-from-bekenstein',
+    source: 'holographic-principle',
+    target: 'bekenstein-hawking-entropy',
+    type: 'derives_from',
+    strength: 'strong',
+    explanation: 'Holographic principle generalizes black hole entropy bounds.',
+  },
+  {
+    id: 'event-horizon-to-axiom1',
+    source: 'event-horizon',
+    target: 'axiom-1',
+    type: 'exemplifies',
+    strength: 'moderate',
+    explanation: 'Event horizon is where distinction costs become infinite.',
+  },
+
+  // ===========================================================================
+  // CONSCIOUSNESS RELATIONSHIPS (V8 additions)
+  // ===========================================================================
+  {
+    id: 'attention-from-axiom2',
+    source: 'attention',
+    target: 'axiom-2',
+    type: 'depends_on',
+    strength: 'strong',
+    explanation: 'Attention is necessary because energy is finite.',
+  },
+  {
+    id: 'agency-from-self-reference',
+    source: 'agency',
+    target: 'self-referential-distinction',
+    type: 'derives_from',
+    strength: 'strong',
+    explanation: 'Agency requires self-referential evaluation.',
+  },
+  {
+    id: 'consciousness-threshold-to-olu',
+    source: 'consciousness-complexity-threshold',
+    target: 'olu',
+    type: 'specializes',
+    strength: 'moderate',
+    explanation: 'Consciousness threshold defines a particular level of OLU complexity.',
+  },
+  {
+    id: 'global-workspace-to-integration',
+    source: 'global-workspace',
+    target: 'integration',
+    type: 'derives_from',
+    strength: 'strong',
+    explanation: 'Global workspace enables integration of distinctions.',
+  },
+
+  // ===========================================================================
+  // QUANTUM RELATIONSHIPS (V8 additions)
+  // ===========================================================================
+  {
+    id: 'decoherence-to-classical',
+    source: 'decoherence',
+    target: 'classical-emergence',
+    type: 'implies',
+    strength: 'strong',
+    explanation: 'Decoherence drives classical emergence.',
+  },
+  {
+    id: 'complementary-to-uncertainty',
+    source: 'complementary-observables',
+    target: 'uncertainty-principle',
+    type: 'derives_from',
+    strength: 'strong',
+    explanation: 'Uncertainty applies to complementary observables.',
   },
 ];
 

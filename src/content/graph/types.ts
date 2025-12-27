@@ -1,7 +1,7 @@
 /**
  * Distinction Network Graph Types
  *
- * The distinction network represents the conceptual structure of Distinction Physics
+ * The distinction network represents the conceptual structure of Distinction as Primitive
  * as a graph where nodes are concepts and edges are relationships.
  */
 

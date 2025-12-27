@@ -699,8 +699,9 @@ const links = relationships.map(rel => ({
         }
 
         currentIndex++;
-        const baseDelay = currentIndex <= 2 ? 1000 : currentIndex <= 5 ? 700 : currentIndex <= 15 ? 450 : 300;
-        demoTimeout = setTimeout(illuminateNext, baseDelay + Math.random() * 150 - 75);
+        // 2.5 seconds per node so viewers can follow along
+        const baseDelay = 2500;
+        demoTimeout = setTimeout(illuminateNext, baseDelay + Math.random() * 200 - 100);
       }
 
       demoTimeout = setTimeout(illuminateNext, 500);
