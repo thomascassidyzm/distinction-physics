@@ -61,12 +61,40 @@ const links = relationships.map(rel => ({
       <p class="network-subtitle">Each node is a concept. Click to explore. Understanding illuminates.</p>
     </div>
     <div class="header-right">
-      <button class="demo-btn" id="demo-btn">
-        <svg class="demo-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <polygon points="5 3 19 12 5 21 5 3"></polygon>
-        </svg>
-        <span class="demo-text">Watch it Grow</span>
-      </button>
+      <div class="demo-controls" id="demo-controls">
+        <button class="demo-ctrl-btn" id="demo-reset" title="Reset">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"></path>
+            <path d="M3 3v5h5"></path>
+          </svg>
+        </button>
+        <button class="demo-ctrl-btn" id="demo-prev" title="Previous (←)">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polygon points="19 20 9 12 19 4 19 20"></polygon>
+            <line x1="5" y1="19" x2="5" y2="5"></line>
+          </svg>
+        </button>
+        <button class="demo-ctrl-btn demo-play-btn" id="demo-play" title="Play/Pause (Space)">
+          <svg class="play-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polygon points="5 3 19 12 5 21 5 3"></polygon>
+          </svg>
+          <svg class="pause-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:none">
+            <rect x="6" y="4" width="4" height="16"></rect>
+            <rect x="14" y="4" width="4" height="16"></rect>
+          </svg>
+        </button>
+        <button class="demo-ctrl-btn" id="demo-next" title="Next (→)">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polygon points="5 4 15 12 5 20 5 4"></polygon>
+            <line x1="19" y1="5" x2="19" y2="19"></line>
+          </svg>
+        </button>
+        <div class="speed-control">
+          <label class="speed-label">Speed</label>
+          <input type="range" id="speed-slider" min="0" max="3" value="1" step="1" class="speed-slider">
+          <span class="speed-value" id="speed-value">1x</span>
+        </div>
+      </div>
       <div class="progress-indicator">
         <span class="progress-count" id="progress-count">0</span>
         <span class="progress-total">/ {concepts.length}</span>
@@ -185,7 +213,12 @@ const links = relationships.map(rel => ({
     const panelClose = document.getElementById('panel-close');
     const understandBtn = document.getElementById('understand-btn');
     const progressCount = document.getElementById('progress-count');
-    const demoBtn = document.getElementById('demo-btn');
+    const demoPlayBtn = document.getElementById('demo-play');
+    const demoPrevBtn = document.getElementById('demo-prev');
+    const demoNextBtn = document.getElementById('demo-next');
+    const demoResetBtn = document.getElementById('demo-reset');
+    const speedSlider = document.getElementById('speed-slider');
+    const speedValue = document.getElementById('speed-value');
     const demoLabel = document.getElementById('demo-label');
     const demoLabelText = demoLabel.querySelector('.demo-label-text');
 
@@ -591,8 +624,15 @@ const links = relationships.map(rel => ({
     // ========================================
     // DEMO MODE
     // ========================================
-    let isDemoRunning = false;
+    let isDemoPlaying = false;
     let demoTimeout = null;
+    let demoIndex = 0;
+    let learningOrder = [];
+
+    // Speed settings: 0.5x, 1x, 2x, 4x
+    const speedSettings = [4000, 2500, 1200, 500];
+    const speedLabels = ['0.5x', '1x', '2x', '4x'];
+    let currentSpeed = 1; // Default to 1x (2500ms)
 
     function getLearningOrder() {
       const order = [];
@@ -624,52 +664,35 @@ const links = relationships.map(rel => ({
       return order;
     }
 
-    function stopDemo() {
-      isDemoRunning = false;
-      if (demoTimeout) clearTimeout(demoTimeout);
-      demoBtn.classList.remove('running');
-      demoBtn.querySelector('.demo-text').textContent = 'Watch it Grow';
-      demoLabel.classList.remove('visible');
+    // Initialize learning order
+    learningOrder = getLearningOrder();
+
+    function updatePlayButton() {
+      const playIcon = demoPlayBtn.querySelector('.play-icon');
+      const pauseIcon = demoPlayBtn.querySelector('.pause-icon');
+      if (isDemoPlaying) {
+        playIcon.style.display = 'none';
+        pauseIcon.style.display = 'block';
+        demoPlayBtn.classList.add('playing');
+      } else {
+        playIcon.style.display = 'block';
+        pauseIcon.style.display = 'none';
+        demoPlayBtn.classList.remove('playing');
+      }
     }
 
-    function runDemo() {
-      if (isDemoRunning) {
-        stopDemo();
-        return;
-      }
+    function illuminateNode(index, animate = true) {
+      if (index < 0 || index >= learningOrder.length) return;
 
-      isDemoRunning = true;
-      demoBtn.classList.add('running');
-      demoBtn.querySelector('.demo-text').textContent = 'Stop Demo';
+      const id = learningOrder[index];
+      const nodeData = nodes.find(n => n.id === id);
 
-      understood.clear();
-      applyUnderstoodState();
-      detailPanel.classList.remove('open');
-      node.classed('selected', false);
+      if (nodeData) {
+        // Add to understood set
+        understood.add(id);
+        applyUnderstoodState();
 
-      const learningOrder = getLearningOrder();
-      let currentIndex = 0;
-
-      function illuminateNext() {
-        if (!isDemoRunning || currentIndex >= learningOrder.length) {
-          if (isDemoRunning) {
-            demoLabel.classList.add('complete');
-            demoLabelText.textContent = 'Understanding Complete';
-            setTimeout(() => {
-              demoLabel.classList.remove('complete');
-              stopDemo();
-            }, 2000);
-          }
-          return;
-        }
-
-        const id = learningOrder[currentIndex];
-        const nodeData = nodes.find(n => n.id === id);
-
-        if (nodeData) {
-          understood.add(id);
-          applyUnderstoodState();
-
+        if (animate) {
           // Celebration animation
           node.filter(n => n.id === id)
             .select('.node-core')
@@ -679,35 +702,169 @@ const links = relationships.map(rel => ({
             .transition()
             .duration(300)
             .attr('r', d => d.isAxiom ? 14 : 10);
-
-          // Show label
-          demoLabelText.textContent = nodeData.title;
-          demoLabel.classList.add('visible');
-
-          // Position near node
-          const nodeEl = node.filter(n => n.id === id).node();
-          if (nodeEl) {
-            const transform = nodeEl.getAttribute('transform');
-            const match = transform.match(/translate\(([^,]+),([^)]+)\)/);
-            if (match) {
-              const x = parseFloat(match[1]);
-              const y = parseFloat(match[2]);
-              demoLabel.style.left = `${x}px`;
-              demoLabel.style.top = `${y - 40}px`;
-            }
-          }
         }
 
-        currentIndex++;
-        // 2.5 seconds per node so viewers can follow along
-        const baseDelay = 2500;
-        demoTimeout = setTimeout(illuminateNext, baseDelay + Math.random() * 200 - 100);
-      }
+        // Show label
+        demoLabelText.textContent = nodeData.title;
+        demoLabel.classList.add('visible');
 
-      demoTimeout = setTimeout(illuminateNext, 500);
+        // Position near node
+        const nodeEl = node.filter(n => n.id === id).node();
+        if (nodeEl) {
+          const transform = nodeEl.getAttribute('transform');
+          const match = transform.match(/translate\(([^,]+),([^)]+)\)/);
+          if (match) {
+            const x = parseFloat(match[1]);
+            const y = parseFloat(match[2]);
+            demoLabel.style.left = `${x}px`;
+            demoLabel.style.top = `${y - 40}px`;
+          }
+        }
+      }
     }
 
-    demoBtn.addEventListener('click', runDemo);
+    function removeNode(index) {
+      if (index < 0 || index >= learningOrder.length) return;
+      const id = learningOrder[index];
+      understood.delete(id);
+      applyUnderstoodState();
+    }
+
+    function scheduleNext() {
+      if (!isDemoPlaying) return;
+
+      if (demoIndex >= learningOrder.length) {
+        // Demo complete
+        demoLabel.classList.add('complete');
+        demoLabelText.textContent = 'Understanding Complete';
+        isDemoPlaying = false;
+        updatePlayButton();
+        setTimeout(() => {
+          demoLabel.classList.remove('complete');
+        }, 2000);
+        return;
+      }
+
+      const baseDelay = speedSettings[currentSpeed];
+      const jitter = baseDelay * 0.08; // 8% jitter
+      demoTimeout = setTimeout(() => {
+        illuminateNode(demoIndex);
+        demoIndex++;
+        scheduleNext();
+      }, baseDelay + (Math.random() * jitter * 2 - jitter));
+    }
+
+    function playDemo() {
+      if (demoIndex >= learningOrder.length) {
+        // Reset if at end
+        resetDemo();
+      }
+      isDemoPlaying = true;
+      updatePlayButton();
+      scheduleNext();
+    }
+
+    function pauseDemo() {
+      isDemoPlaying = false;
+      if (demoTimeout) {
+        clearTimeout(demoTimeout);
+        demoTimeout = null;
+      }
+      updatePlayButton();
+    }
+
+    function togglePlay() {
+      if (isDemoPlaying) {
+        pauseDemo();
+      } else {
+        playDemo();
+      }
+    }
+
+    function stepNext() {
+      pauseDemo();
+      if (demoIndex < learningOrder.length) {
+        illuminateNode(demoIndex);
+        demoIndex++;
+      }
+    }
+
+    function stepPrev() {
+      pauseDemo();
+      if (demoIndex > 0) {
+        demoIndex--;
+        removeNode(demoIndex);
+        // Show previous node label if exists
+        if (demoIndex > 0) {
+          const prevId = learningOrder[demoIndex - 1];
+          const prevNode = nodes.find(n => n.id === prevId);
+          if (prevNode) {
+            demoLabelText.textContent = prevNode.title;
+            const nodeEl = node.filter(n => n.id === prevId).node();
+            if (nodeEl) {
+              const transform = nodeEl.getAttribute('transform');
+              const match = transform.match(/translate\(([^,]+),([^)]+)\)/);
+              if (match) {
+                demoLabel.style.left = `${parseFloat(match[1])}px`;
+                demoLabel.style.top = `${parseFloat(match[2]) - 40}px`;
+              }
+            }
+          }
+        } else {
+          demoLabel.classList.remove('visible');
+        }
+      }
+    }
+
+    function resetDemo() {
+      pauseDemo();
+      demoIndex = 0;
+      understood.clear();
+      applyUnderstoodState();
+      demoLabel.classList.remove('visible');
+      demoLabel.classList.remove('complete');
+      detailPanel.classList.remove('open');
+      node.classed('selected', false);
+    }
+
+    // Event listeners
+    demoPlayBtn.addEventListener('click', togglePlay);
+    demoNextBtn.addEventListener('click', stepNext);
+    demoPrevBtn.addEventListener('click', stepPrev);
+    demoResetBtn.addEventListener('click', resetDemo);
+
+    // Speed slider
+    speedSlider.addEventListener('input', (e) => {
+      currentSpeed = parseInt(e.target.value);
+      speedValue.textContent = speedLabels[currentSpeed];
+    });
+
+    // Keyboard controls
+    document.addEventListener('keydown', (e) => {
+      // Don't trigger if typing in an input
+      if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
+
+      switch (e.code) {
+        case 'Space':
+          e.preventDefault();
+          togglePlay();
+          break;
+        case 'ArrowRight':
+          e.preventDefault();
+          stepNext();
+          break;
+        case 'ArrowLeft':
+          e.preventDefault();
+          stepPrev();
+          break;
+        case 'KeyR':
+          if (!e.metaKey && !e.ctrlKey) {
+            e.preventDefault();
+            resetDemo();
+          }
+          break;
+      }
+    });
   });
 </script>
 
@@ -757,35 +914,118 @@ const links = relationships.map(rel => ({
     gap: 1.5rem;
   }
 
-  .demo-btn {
+  .demo-controls {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
-    padding: 0.5rem 1rem;
-    background: rgba(74, 158, 255, 0.1);
-    border: 1px solid rgba(74, 158, 255, 0.3);
-    border-radius: 6px;
-    color: #4a9eff;
-    font-family: 'Sora', sans-serif;
-    font-size: 0.8125rem;
-    cursor: pointer;
-    transition: all 0.2s;
+    gap: 0.25rem;
+    padding: 0.375rem;
+    background: rgba(18, 18, 26, 0.9);
+    border: 1px solid #2a2a3a;
+    border-radius: 8px;
   }
 
-  .demo-btn:hover {
+  .demo-ctrl-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    background: transparent;
+    border: 1px solid transparent;
+    border-radius: 6px;
+    color: #606080;
+    cursor: pointer;
+    transition: all 0.15s;
+  }
+
+  .demo-ctrl-btn:hover {
+    background: rgba(74, 158, 255, 0.1);
+    border-color: rgba(74, 158, 255, 0.3);
+    color: #4a9eff;
+  }
+
+  .demo-ctrl-btn:active {
+    transform: scale(0.95);
+  }
+
+  .demo-play-btn {
+    width: 40px;
+    height: 40px;
+    background: rgba(74, 158, 255, 0.1);
+    border-color: rgba(74, 158, 255, 0.3);
+    color: #4a9eff;
+  }
+
+  .demo-play-btn:hover {
     background: rgba(74, 158, 255, 0.2);
     border-color: #4a9eff;
   }
 
-  .demo-btn.running {
-    background: rgba(239, 68, 68, 0.1);
-    border-color: rgba(239, 68, 68, 0.3);
-    color: #ef4444;
+  .demo-play-btn.playing {
+    background: rgba(80, 200, 120, 0.15);
+    border-color: rgba(80, 200, 120, 0.4);
+    color: #50c878;
   }
 
-  .demo-icon {
-    width: 14px;
-    height: 14px;
+  .demo-play-btn.playing:hover {
+    background: rgba(80, 200, 120, 0.25);
+    border-color: #50c878;
+  }
+
+  .speed-control {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-left: 0.5rem;
+    padding-left: 0.75rem;
+    border-left: 1px solid #2a2a3a;
+  }
+
+  .speed-label {
+    font-size: 0.625rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #606080;
+  }
+
+  .speed-slider {
+    width: 60px;
+    height: 4px;
+    -webkit-appearance: none;
+    appearance: none;
+    background: #2a2a3a;
+    border-radius: 2px;
+    cursor: pointer;
+  }
+
+  .speed-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 12px;
+    height: 12px;
+    background: #4a9eff;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.15s;
+  }
+
+  .speed-slider::-webkit-slider-thumb:hover {
+    transform: scale(1.2);
+  }
+
+  .speed-slider::-moz-range-thumb {
+    width: 12px;
+    height: 12px;
+    background: #4a9eff;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+
+  .speed-value {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.75rem;
+    color: #4a9eff;
+    min-width: 2rem;
   }
 
   .progress-indicator {
