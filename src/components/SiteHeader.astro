@@ -7,7 +7,7 @@
 import { VERSION, BUILD } from '../lib/version';
 
 interface Props {
-  currentPage?: 'essay' | 'explore' | 'treatise' | 'home';
+  currentPage?: 'intro' | 'essay' | 'explore' | 'treatise' | 'home';
 }
 
 const { currentPage } = Astro.props;
@@ -19,6 +19,7 @@ const { currentPage } = Astro.props;
   </nav>
 
   <div class="header-center">
+    <a href="/intro" class:list={["nav-link", { active: currentPage === 'intro' }]}>Intro</a>
     <a href="/essay" class:list={["nav-link", { active: currentPage === 'essay' }]}>Essay</a>
     <a href="/explore" class:list={["nav-link", { active: currentPage === 'explore' }]}>Explore</a>
     <a href="/treatise" class:list={["nav-link", { active: currentPage === 'treatise' }]}>Treatise</a>
