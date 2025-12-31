@@ -43,6 +43,21 @@ import { VERSION, BUILD } from '../lib/version';
       </section>
 
       <section class="entry-points">
+        <a href="/intro" class="entry-card intro">
+          <div class="card-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+              <path d="M2 17l10 5 10-5"/>
+              <path d="M2 12l10 5 10-5"/>
+            </svg>
+          </div>
+          <div class="card-content">
+            <h2>Start Here</h2>
+            <p>A conversational introduction to the framework. What it is, where it came from, and why it matters.</p>
+          </div>
+          <span class="card-arrow">→</span>
+        </a>
+
         <a href="/essay" class="entry-card primary">
           <div class="card-icon">
             <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
@@ -89,7 +104,7 @@ import { VERSION, BUILD } from '../lib/version';
       <section class="status-block">
         <div class="status-header">
           <span class="status-label">Framework Status</span>
-          <span class="status-badge">V7 · Anti-fragile</span>
+          <span class="status-badge">V8 · Anti-fragile</span>
         </div>
         <p class="status-text">
           This framework has survived 36 adversarial attacks across 7 rounds of systematic critique.
@@ -257,6 +272,15 @@ import { VERSION, BUILD } from '../lib/version';
   .entry-card:hover {
     border-color: var(--accent);
     background: var(--depth-2);
+  }
+
+  .entry-card.intro {
+    border-color: #f0a050;
+    background: linear-gradient(135deg, var(--depth-1) 0%, rgba(240, 160, 80, 0.08) 100%);
+  }
+
+  .entry-card.intro .card-icon {
+    color: #f0a050;
   }
 
   .entry-card.primary {
