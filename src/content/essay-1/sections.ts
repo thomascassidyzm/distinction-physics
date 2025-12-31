@@ -11,11 +11,11 @@ export const sections: Section[] = [
     id: 'foundations',
     content: `This framework begins with a single observation: **distinction is primitive**.
 
-Before anything can exist *for* an observer—before it can be perceived, measured, interacted with, or known—it must be *distinguishable* from what it is not. This is not a claim about how minds work or how science proceeds. It is a claim about the structure of reality-as-accessible.
+Before anything can exist *for* an observer—before it can be perceived, measured, interacted with, or known—it must be *distinguishable* from what it is not. The claim concerns the structure of reality-as-accessible, not how minds work or science proceeds.
 
 The argument is transcendental: we identify what must be true for any possible thought, experience, or claim to occur, and show that distinction-making is this necessary condition. Even the attempt to deny distinction employs distinction—using words (which are distinct from other words), forming concepts (which are distinct from other concepts), making claims (which are distinct from their negations).
 
-This self-referential necessity is not a bug but the demonstration. Distinction operates at a level more primitive than language, more primitive than thought, more primitive than any conceptual scheme we can construct.
+This self-referential necessity is precisely the demonstration. Distinction operates at a level more primitive than language, more primitive than thought, more primitive than any conceptual scheme we can construct.
 
 **Two Axioms**
 
@@ -27,7 +27,7 @@ To maintain that a system is in state A rather than state B requires that states
 **Axiom 2**: All observers-like-us (OLUs) have finite energy budgets.
 Every observer operates with limited energy resources. Whether a thermometer drawing milliwatts, a human brain using 20 watts, or a particle collider consuming megawatts, no OLU has access to infinite energy.
 
-From these two axioms alone, we derive the fundamental structure of accessible reality. What emerges is not merely consistent with known physics but *generates* the core principles of thermodynamics and quantum mechanics from pure ontology.`,
+From these two axioms alone, we derive the fundamental structure of accessible reality. What emerges *generates* the core principles of thermodynamics and quantum mechanics from pure ontology.`,
     keyPoints: [
       'Distinction is transcendentally necessary—the condition of possibility for any thought or experience',
       'To deny distinction is to use distinction, demonstrating its primitive status',
@@ -81,11 +81,9 @@ But it goes deeper. Perception requires distinguishing figure from ground, signa
 
 Haven't we just proved our argument is circular? We're using distinction to argue for distinction?
 
-No. Our argument is not: "Assume distinction exists, therefore distinction exists."
+No. The argument is: "Even the attempt to think, argue, or claim anything whatsoever—including skeptical thoughts about distinction—necessarily employs distinction-making. Therefore distinction-making must be real and fundamental."
 
-Rather, our argument is: "Even the attempt to think, argue, or claim anything whatsoever—including skeptical thoughts about distinction—necessarily employs distinction-making. Therefore distinction-making must be real and fundamental."
-
-The skeptic's use of distinction is not a rhetorical trick we're exploiting—it demonstrates that distinction-making is *unavoidable*. It is the bedrock operation that makes all other operations possible.
+The skeptic's use of distinction demonstrates that distinction-making is *unavoidable*. It is the bedrock operation that makes all other operations possible.
 
 **From Cognition to Ontology**
 
@@ -129,7 +127,7 @@ At sufficiently small scales, the energy required to probe finer resolution beco
 - Planck length: ℓₚ ≈ 1.6 × 10⁻³⁵ meters
 - Planck time: tₚ ≈ 5.4 × 10⁻⁴⁴ seconds
 
-The Planck scale represents a universal resolution limit—not just a practical limitation but a principled boundary where distinction-making becomes impossible even in principle.
+The Planck scale represents a universal resolution limit—a principled boundary where distinction-making becomes impossible.
 
 **Additional Implications**
 
@@ -216,7 +214,7 @@ This explains why counting requires effort and has limits—each distinction cos
 
 **Geometric Necessity**
 
-Geometric truths are not arbitrary conventions but constraints on how spatial distinctions can coherently combine. The Pythagorean theorem holds because any other relationship would make spatial distinctions inconsistent.
+Geometric truths are constraints on how spatial distinctions can coherently combine. The Pythagorean theorem holds because any other relationship would make spatial distinctions inconsistent.
 
 Euclidean geometry represents the minimum-energy configuration for local spatial distinctions. Curved geometries (Riemannian, etc.) represent how this configuration changes under different energy distributions—precisely what general relativity describes.
 
@@ -264,9 +262,9 @@ This explains:
 
 The hard problem asks: why should physical processes give rise to subjective experience at all?
 
-Our framework suggests this isn't a hard problem but a conceptual confusion. Self-referential distinction-making *is* what consciousness is. There's no additional mystery of why it "feels like something"—the phenomenal character arises from the self-referential loop viewed from inside.
+Our framework reframes this as a conceptual confusion. Self-referential distinction-making *is* what consciousness is. The phenomenal character arises from the self-referential loop viewed from inside.
 
-The question becomes tractable: not "why does matter become conscious?" but "what organizational patterns of distinction-making enable self-reference?"`,
+The tractable question is: what organizational patterns of distinction-making enable self-reference?`,
     keyPoints: [
       'Consciousness is self-referential distinction-making—observing oneself observing',
       'Human consciousness requires approximately 8 watts of continuous power',
@@ -302,7 +300,7 @@ This is why we built SSi (our spaced repetition system) and Zenjin (our structur
 
 **Why Chunking Is Necessary**
 
-Given finite energy and effective discreteness, learners must group related distinctions into manageable units. "Chunking" is not a cognitive trick but thermodynamic necessity: maintaining individual distinctions costs more than maintaining bundled patterns.
+Given finite energy and effective discreteness, learners must group related distinctions into manageable units. "Chunking" is thermodynamic necessity: maintaining individual distinctions costs more than maintaining bundled patterns.
 
 **Knowledge as Collaborative Achievement**
 
@@ -329,7 +327,7 @@ The uncertainty relation ΔxΔp ≥ ℏ/2 is typically presented as a fundamenta
 - OLUs have finite energy, must allocate it between position and momentum distinctions
 - Greater precision in position means less energy for momentum, and vice versa
 
-**Uncertainty is not mysterious—it's the signature of energy-limited distinction-making.**
+**Uncertainty is the signature of energy-limited distinction-making.**
 
 **Wave Function and Superposition**
 
@@ -430,7 +428,7 @@ This was confirmed experimentally in 2012 (Bérut et al.).
 
 Living systems maintain complex distinction patterns far from thermodynamic equilibrium. This requires continuous energy throughput—metabolism.
 
-Life is not mysterious: it's thermodynamically expensive distinction-maintenance. The complexity of a living system reflects how many boundaries it maintains and the energy flow required to maintain them.
+Life is thermodynamically expensive distinction-maintenance. The complexity of a living system reflects how many boundaries it maintains and the energy flow required to maintain them.
 
 **Heat Death**
 
@@ -478,7 +476,7 @@ The framework predicts that OLUs discovering physics would necessarily encounter
 - Entropy increase (distinction decay)
 - Relativity (observer-dependent distinctions)
 
-This is not coincidence—it's what finite-energy observers must find when they examine reality.`,
+Finite-energy observers necessarily encounter these features when examining reality.`,
     keyPoints: [
       'Energy signatures, complexity-energy scaling, and Landauer\'s limit are confirmed',
       'Learning efficiency and gravitational decoherence effects are actively testable',
