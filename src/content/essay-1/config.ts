@@ -1,4 +1,4 @@
-// Essay configuration for Distinction Physics V7
+// Essay configuration for Distinction as Primitive V8
 
 export type EpistemicStatus = 'established' | 'derived' | 'contested' | 'open';
 
@@ -11,11 +11,11 @@ export interface SectionMeta {
 }
 
 export const essayMeta = {
-  id: 'distinction-physics-v7',
-  title: 'Distinction Physics: Reality Under Resource Constraints',
+  id: 'distinction-as-primitive-v8',
+  title: 'Distinction as Primitive: Reality Under Resource Constraints',
   subtitle: 'A Meta-Theoretical Framework',
-  version: 'V7',
-  date: 'December 2025',
+  version: 'V8',
+  date: 'January 2026',
   status: 'Working Draft' as const,
 };
 

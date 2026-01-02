@@ -1,4 +1,4 @@
-// Propositions (concept nodes) for Distinction Physics
+// Propositions (concept nodes) for Distinction as Primitive
 
 export interface Proposition {
   id: string;

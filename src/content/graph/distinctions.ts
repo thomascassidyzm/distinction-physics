@@ -18,7 +18,7 @@ export const distinctions: Distinction[] = [
     conceptB: 'resolution-limit',
     dimension: 'ontological status',
     explanation:
-      'The central insight of Distinction Physics: what appears continuous is effectively discrete for any finite observer. True continuity requires infinite precision, hence infinite energy—forever inaccessible.',
+      'The central insight: what appears continuous is effectively discrete for any finite observer. True continuity requires infinite precision, hence infinite energy—forever inaccessible.',
     epistemicStatus: 'derived',
     comparison: {
       shared: 'Both describe limits on what can be observed',
@@ -157,7 +157,7 @@ export const distinctions: Distinction[] = [
       'The framework distinguishes between well-established claims (like energy cost of information) and speculative extensions (like spacetime emerging from distinctions).',
     epistemicStatus: 'established',
     comparison: {
-      shared: 'Both are claims within the Distinction Physics framework',
+      shared: 'Both are claims within the framework',
       differingProperty: 'degree of justification',
       aPosition: 'Established: grounded in thermodynamics and information theory',
       bPosition: 'Speculative: an intriguing but unproven extension',

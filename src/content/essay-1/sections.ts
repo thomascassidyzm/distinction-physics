@@ -1,4 +1,4 @@
-// Essay sections for Distinction Physics V7
+// Essay sections for Distinction as Primitive V8
 
 export interface Section {
   id: string;
