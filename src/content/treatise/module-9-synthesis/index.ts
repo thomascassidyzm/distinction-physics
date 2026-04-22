@@ -24,12 +24,12 @@ export const module9: Module = {
     section9_7,
   ],
   keyInsights: [
-    'The transcendental argument is the genuine novelty: you cannot state any theory without first making distinctions',
+    'The transcendental priority of distinction-making is foundational; this treatise adds a specific thermodynamic grounding via Landauer + finite budgets [DERIVED]',
+    'The load-bearing theoretical content is §4.2 (Module 4): the variational account of acquisition, with an action functional derived from the axioms and HISE identified as approximate least-action pedagogy',
     'The framework provides unifying vocabulary across physics, mathematics, and cognition [INTERPRETED]',
     'Two axioms ground the framework: distinctions cost energy [IMPORTS Landauer], OLUs have finite energy budgets',
-    'The hard problem is REFRAMED, not dissolved: we provide vocabulary, not explanation of qualia',
-    'The measurement problem is REFRAMED: vocabulary for understanding, not mechanism of collapse',
-    'The key contribution domain is learning: anti-entropic distinction pattern building',
+    'The hard problem and the measurement problem are REFRAMED, not dissolved: the framework provides vocabulary, not explanations of qualia or mechanisms of collapse',
+    'Module 6\'s Conjecture 6.1 (gravity-coherence coupling) is the treatise\'s single concrete novel empirical prediction at this stage',
     'The framework is complementary to existing physics, not a replacement for it',
   ],
   connectionsToNext: [

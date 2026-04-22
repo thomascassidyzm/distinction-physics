@@ -9,80 +9,39 @@ export const section9_7: Section = {
     {
       type: 'paragraph',
       content:
-        'We began with a transcendental observation: **you cannot state any theory without first making distinctions.** From this philosophical foundation, we grounded the framework in two physical axioms: distinctions cost energy [IMPORTS Landauer], and OLUs have finite energy budgets. Through this lens, we developed vocabulary for understanding physics, mathematics, and cognition.',
+        'The treatise began with a transcendental observation — that distinction-making is necessarily prior to all theorizing — and grounded it in two physical axioms: distinctions cost energy (imports Landauer), and OLUs have finite energy budgets. From that foundation, it developed vocabulary for understanding physics, mathematics, and cognition, and one quantitatively specific theoretical account: the variational structure of learning developed in §4.2.',
     },
     {
       type: 'paragraph',
       content:
-        'The framework provides **conceptual unification through common vocabulary**, not derivation from first principles. Physics, mathematics, and cognition can be understood through distinction-making under constraint. We import substantial physics (Landauer, statistical mechanics, quantum formalism). The framework complements existing physics rather than replacing it.',
+        'The framework provides **conceptual unification through common vocabulary**, not derivation from first principles. Physics, mathematics, and cognition share structure when viewed as distinction-making under constraint. Substantial physics is imported (Landauer, statistical mechanics, quantum formalism, relativity). The framework complements existing physics rather than replacing it.',
       emphasis: 'key',
     },
     {
       type: 'paragraph',
       content:
-        'Classic problems are REFRAMED, not dissolved. The hard problem becomes: why does distinction-making feel like something? The measurement problem becomes: what is distinction creation? These are new questions, not answers. The framework provides perspective and vocabulary, not proof or mechanism.',
+        'Classic problems are REFRAMED, not dissolved. The hard problem becomes: why does self-referential distinction-making feel like something from the inside? The measurement problem becomes: what is distinction creation energetically? These are new formulations, not answers. The framework provides perspective and vocabulary, not proof or mechanism.',
     },
     {
       type: 'heading',
       level: 2,
-      content: 'The Genuine Contributions',
-      id: 'genuine-contributions',
+      content: 'The Load-Bearing Content',
+      id: 'load-bearing-content',
     },
     {
       type: 'paragraph',
       content:
-        'Three contributions should not be overclaimed or underclaimed:',
-    },
-    {
-      type: 'list',
-      style: 'numbered',
-      items: [
-        {
-          content:
-            '**The Transcendental Argument [DERIVED]**: Distinction-making is necessarily prior to all theorizing. You cannot deny distinction-primacy without making distinctions in the denial. This is genuinely novel philosophical reasoning.',
-        },
-        {
-          content:
-            '**Learning as Key Domain [DERIVED + INTERPRETED]**: Understanding learning as anti-entropic distinction pattern building—novice to expert as few distinctions to many, skill as stable patterns, forgetting as entropy. This is the framework\'s most developed application.',
-        },
-        {
-          content:
-            '**Unifying Vocabulary [INTERPRETED]**: A common lens across physics, mathematics, and cognition. This illuminates connections without deriving domains from scratch.',
-        },
-      ],
+        'Of what the treatise contains, the most theoretically concrete and directly testable content is §4.2\'s variational account of acquisition: an action functional $S = \\int E \\, dt$ derived from the two axioms, HISE\'s design rules identified as action-reducing choices, specific predictions about short-timescale sprint output, and explicit falsification conditions. This is where the framework has the most to offer and the most at stake.',
     },
     {
       type: 'paragraph',
       content:
-        'The framework is a proposal, not a proof. It invites investigation, not belief. It may be wrong in detail while right in direction. Only careful work—theoretical, experimental, philosophical—will determine its ultimate value.',
+        'Beyond §4.2, the framework\'s contribution is vocabulary — a common lens across domains that illuminates connections without deriving them. Module 6\'s Conjecture 6.1 (gravity-coherence coupling) is the one additional place where a specific framework-native empirical claim is on the table.',
     },
     {
       type: 'paragraph',
       content:
-        'But if the framework is even approximately correct, it offers something valuable: a perspective for understanding reality from the inside, as observers who make distinctions under constraint. Not a view from nowhere, but a view from somewhere—from the situated perspective of finite beings.',
-      emphasis: 'key',
-    },
-    {
-      type: 'heading',
-      level: 2,
-      content: 'The Core Insight',
-      id: 'the-core-insight',
-    },
-    {
-      type: 'paragraph',
-      content:
-        '**The transcendental priority of distinction. The energy cost of distinguishing. The finite budget of observers. From these, a unifying vocabulary for understanding physics, mathematics, and cognition—while importing substantial physics and acknowledging what we cannot do.**',
-      emphasis: 'key',
-    },
-    {
-      type: 'paragraph',
-      content:
-        'This is what we offer: not certainty, but perspective; not final answers, but productive questions; not the end of inquiry, but vocabulary for continuing it.',
-    },
-    {
-      type: 'paragraph',
-      content:
-        '**The distinction is yours to make.**',
+        'The framework is a proposal, not a proof. It may be wrong in detail while right in direction; it may be productively wrong in ways that point toward better accounts. What matters is that its claims are specific enough to be tested. §4.2.5, Module 6\'s Conjecture 6.1, and Module 8 collectively specify what would count as a negative result.',
       emphasis: 'conclusion',
     },
     {
@@ -90,24 +49,26 @@ export const section9_7: Section = {
       title: 'Module 9 Key Takeaways',
       variant: 'takeaways',
       points: [
-        'The transcendental argument is the genuine novelty [DERIVED]: you cannot state any theory without first making distinctions',
-        'Learning as distinction pattern building is the key contribution domain [DERIVED + INTERPRETED]',
+        'The transcendental priority of distinction-making is foundational; this treatise adds a specific thermodynamic grounding [DERIVED]',
+        'The variational account of acquisition (§4.2) is the framework\'s most concrete theoretical content [DERIVED + INTERPRETED]',
+        'HISE is identified as an approximate least-action pedagogy, empirically tested by 17 years of SSi deployment',
         'The framework provides unifying vocabulary across physics, mathematics, and cognition [INTERPRETED]',
-        'The framework imports substantial physics: Landauer, statistical mechanics, quantum formalism',
-        'The hard problem and measurement problem are REFRAMED, not dissolved',
+        'Substantial physics is imported: Landauer, statistical mechanics, quantum formalism, relativity',
+        'Module 6\'s Conjecture 6.1 is the treatise\'s single concrete novel empirical prediction',
+        'Problems are REFRAMED, not dissolved: vocabulary, not explanations',
+        'Claims are tagged [DERIVED], [INTERPRETED], [IMPORTED], [CONJECTURED], [SPECULATIVE] throughout',
         'The framework is complementary to physics, not a replacement for it',
-        'Epistemic honesty: claims are labeled as DERIVED, INTERPRETED, IMPORTED, or CONJECTURED',
-        'The invitation: consider whether distinction-making vocabulary provides productive unification',
+        'Falsification conditions are specified in §4.2.5, Module 6, and Module 8',
       ],
     },
   ],
   keyPoints: [
-    'The transcendental argument [DERIVED]: distinction-making is necessarily prior to all theorizing',
-    'Learning as distinction pattern building is the key contribution domain [DERIVED + INTERPRETED]',
-    'Unifying vocabulary across domains [INTERPRETED], importing substantial physics',
-    'Problems are REFRAMED, not dissolved: vocabulary, not explanations',
+    'The transcendental priority of distinction-making is combined here with a specific thermodynamic grounding',
+    'The variational account of acquisition (§4.2) is the load-bearing theoretical content',
+    'Module 6 Conjecture 6.1 is the one additional concrete novel empirical prediction',
+    'The framework provides unifying vocabulary [INTERPRETED], importing substantial physics',
+    'Problems are REFRAMED, not dissolved',
+    'Epistemic honesty: every claim is tagged',
     'The framework is complementary to physics, not a replacement',
-    'Epistemic honesty: DERIVED, INTERPRETED, IMPORTED, CONJECTURED labels applied throughout',
-    'The framework is a proposal inviting investigation, not a proof demanding belief',
   ],
 };
