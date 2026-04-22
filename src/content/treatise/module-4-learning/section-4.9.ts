@@ -157,6 +157,11 @@ export const section4_9: Section = {
         'Skill acquisition is not mysterious—it is the observable trajectory of an energy-constrained system optimizing its distinction-making efficiency over time. Every expert was once a novice whose brain had not yet optimized; every novice is a system with vast optimization potential awaiting investment.',
       emphasis: 'conclusion',
     },
+    {
+      type: 'paragraph',
+      content:
+        'In variational terms (§4.2), skill acquisition *is* the large-scale trajectory from $n_{\\text{zero}}$ to $n^*$ in a given domain. The power-law or exponential learning curve reflects that early in the trajectory many action-reducing moves remain available; later, the trajectory is already near a local optimum in $\\mathcal{N}$ and further reductions require structural reorganization (which itself has $E_{\\text{work}}$ cost). Plateaus are regions where the trajectory has saturated a local optimum; breakthroughs are reorganizations that move the trajectory to a different, globally-more-efficient local optimum. Expertise is the state of having executed most of the domain\'s available action-reducing moves.',
+    },
   ],
   keyPoints: [
     'Skill acquisition is the anti-entropic trajectory from disorder to efficiency [INTERPRETED]',

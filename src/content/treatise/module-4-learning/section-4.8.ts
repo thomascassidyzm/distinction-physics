@@ -140,6 +140,11 @@ export const section4_8: Section = {
         'This meta-learning improves the efficiency of future learning—a higher-order thermodynamic optimization that compounds over time.',
       emphasis: 'conclusion',
     },
+    {
+      type: 'paragraph',
+      content:
+        'In variational terms (§4.2), transfer is action reduction by reuse. A distinction structure already present in the learner\'s network supports acquisition in a second domain at reduced $E_{\\text{work}}$ cost — the learner does not have to construct from scratch what overlaps with existing structure. The transfer-efficiency ratio defined above is precisely the factor by which integrated $E_{\\text{work}}$ in the new domain is reduced. Negative transfer is the opposite: existing distinctions on the wrong trajectory add $E_{\\text{work}}$ cost to suppress before the new structure can form.',
+    },
   ],
   keyPoints: [
     'Transfer is leveraging prior anti-entropic investment across domains [INTERPRETED]',

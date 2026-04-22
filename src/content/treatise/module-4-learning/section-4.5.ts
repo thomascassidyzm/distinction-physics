@@ -179,6 +179,12 @@ export const section4_5: Section = {
       ],
       variant: 'key-points',
     },
+    {
+      type: 'paragraph',
+      content:
+        'In variational terms (§4.2), automatization is an $E_{\\text{work}}$ investment that buys a permanent reduction in $E_{\\text{maint}}$. Migrating a distinction from explicit circuits (high $E_{\\text{maint}}$) to automatic ones (low $E_{\\text{maint}}$) costs work at the moment of migration but saves maintenance cost for all subsequent trajectory time. The integrated saving more than offsets the one-time work cost, which is why HISE\'s BUILD/USE duality (§4.2.3) forces automatization to begin during novelty rather than after: the earlier the migration, the larger the integrated saving along the trajectory to $n^*$.',
+      emphasis: 'conclusion',
+    },
   ],
   keyPoints: [
     'Automatization is anti-entropic stabilization: embedding patterns in decay-resistant structures [INTERPRETED]',

@@ -155,6 +155,12 @@ export const section4_4: Section = {
       ],
       variant: 'key-points',
     },
+    {
+      type: 'paragraph',
+      content:
+        'In variational terms (§4.2), chunking reduces $E_{\\text{maint}}(n)$ along the trajectory: the same production range is sustained with fewer concurrent active distinctions, so the integrand $E[n, \\dot{n}]$ is lower at every subsequent time step. The action reduction compounds — each new chunk lowers maintenance cost for all trajectory time that follows its formation, not just at the moment of chunking. HISE\'s hierarchical M-LEGO tiling is the chunking operation specialized to language acquisition.',
+      emphasis: 'conclusion',
+    },
   ],
   keyPoints: [
     'Chunking is an anti-entropic strategy: organizing distinctions into low-maintenance hierarchies [INTERPRETED]',

@@ -213,6 +213,12 @@ export const section4_6: Section = {
       ],
       variant: 'key-points',
     },
+    {
+      type: 'paragraph',
+      content:
+        'In variational terms (§4.2), forgetting is not action-reducing in itself — it is the natural direction $E_{\\text{maint}}$ points when energy is withdrawn. But *selective* forgetting is action-reducing: allowing low-utility distinctions to decay while reinforcing high-utility ones frees $E_{\\text{maint}}$ capacity for distinctions on the critical path to $n^*$. Sleep-pruning is the system offloading maintenance cost from distinctions that do not contribute to the trajectory\'s forward progress. The spacing effect similarly redistributes $E_{\\text{work}}$ across time so that reconstruction events fall where decay has opened the largest saving.',
+      emphasis: 'conclusion',
+    },
   ],
   keyPoints: [
     'Forgetting is entropy reclaiming: the natural thermodynamic direction reasserted [INTERPRETED]',

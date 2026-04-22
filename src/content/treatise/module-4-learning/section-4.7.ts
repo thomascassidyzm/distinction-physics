@@ -126,6 +126,11 @@ export const section4_7: Section = {
         'After critical periods close, the same reorganization would require dismantling stabilized structures—a much higher energy cost. This is why learning a first language in childhood is effortless while learning a second language as an adult requires sustained effort.',
       emphasis: 'conclusion',
     },
+    {
+      type: 'paragraph',
+      content:
+        'In variational terms (§4.2), plasticity is the physical substrate on which $\\dot{n}$ — the rate at which the network is modified — is implemented. Synaptic changes are the biological mechanism of $E_{\\text{work}}$ expenditure; structural changes (dendritic growth, axonal extension, pruning, myelination) are the mechanisms by which the network topology is reshaped to reduce future $E_{\\text{maint}}$. The critical-period phenomenon follows directly: during windows when structural plasticity is cheap, large reductions in future $E_{\\text{maint}}$ are attainable at low $E_{\\text{work}}$ cost. After the window closes, the same reduction costs substantially more work — the trajectory is constrained to a higher-action region of $\\mathcal{N}$.',
+    },
   ],
   keyPoints: [
     'Neural plasticity is the physical implementation of anti-entropic pattern building [INTERPRETED]',
