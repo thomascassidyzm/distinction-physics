@@ -9,6 +9,11 @@ export const section4_1: Section = {
     {
       type: 'paragraph',
       content:
+        'Section 4.0 announced the module\'s explanandum and named §4.2 as its central theoretical move. This section introduces learning\'s local structure — the kinds of modifications a learner makes to their distinction network over time. The four modes developed below (acquiring, sharpening, reorganizing, automating) will each be recognized in §4.2 as local moves within the trajectory $n(t)$ through configuration space $\\mathcal{N}$ — increments of $\\dot{n}$ contributing to the cost integrand $E[n, \\dot{n}]$.',
+    },
+    {
+      type: 'paragraph',
+      content:
         'Learning, understood through the distinction lens, is the process by which an OLU refines its distinction-making capabilities. This refinement is fundamentally **anti-entropic**: it builds and stabilizes patterns against the natural tendency toward dissolution. The refinement takes several forms:',
     },
     {
