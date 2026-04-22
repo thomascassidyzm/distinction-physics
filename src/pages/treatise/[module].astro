@@ -166,7 +166,10 @@ const nextModule = moduleNumber < 9 ? modules[moduleNumber + 1] : null;
     </article>
   </main>
 
-  <GuidePanel />
+  <GuidePanel
+    currentSection={`Module ${currentModule.number} — ${currentModule.title}`}
+    epistemicStatus={currentModule.epistemicStatus}
+  />
 
   <script is:inline define:vars={{ moduleNumber: currentModule.number, moduleTitle: currentModule.title, moduleStatus: currentModule.epistemicStatus }}>
     // Initialize context for Alexander
@@ -198,7 +201,7 @@ const nextModule = moduleNumber < 9 ? modules[moduleNumber + 1] : null;
             window.currentStatus = status;
           }
         });
-      }, { threshold: 0.2, rootMargin: '-80px 0px -60% 0px' });
+      }, { threshold: 0, rootMargin: '-80px 0px -70% 0px' });
 
       sections.forEach(section => observer.observe(section));
     });
