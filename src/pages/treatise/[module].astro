@@ -168,11 +168,11 @@ const nextModule = moduleNumber < 9 ? modules[moduleNumber + 1] : null;
 
   <GuidePanel />
 
-  <script is:inline define:vars={{ moduleNumber: currentModule.number, moduleTitle: currentModule.title }}>
+  <script is:inline define:vars={{ moduleNumber: currentModule.number, moduleTitle: currentModule.title, moduleStatus: currentModule.epistemicStatus }}>
     // Initialize context for Alexander
     window.currentSectionId = moduleNumber + '.0';
     window.currentSection = 'Module ' + moduleNumber + ' — ' + moduleTitle;
-    window.currentStatus = 'derived';
+    window.currentStatus = moduleStatus || 'interpreted';
 
     // Track current section for navigation highlighting and Alexander context
     document.addEventListener('DOMContentLoaded', () => {
