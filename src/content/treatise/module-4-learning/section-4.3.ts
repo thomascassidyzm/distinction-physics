@@ -9,7 +9,12 @@ export const section4_3: Section = {
     {
       type: 'paragraph',
       content:
-        '**This section describes the framework\'s originating insight.** The entire Distinction as Primitive framework emerged from observing a simple but fundamental operation: when a learner encounters something new, they ask "Is this the SAME as something I know, or DIFFERENT?"',
+        'Section 4.2 derived the action functional $S = \\int E \\, dt$ and identified the least-action trajectory as the target any pedagogy should approximate. That structure assumed a ground-level operation — the distinction-making step encoded in each coordinate of $\\mathcal{N}$ — without examining what that operation looks like from the learner\'s side. This section returns to it.',
+    },
+    {
+      type: 'paragraph',
+      content:
+        '**The framework\'s originating observation was that the single cognitive move underlying all learning is a same/different judgment.** When a learner encounters something new, they ask *"is this the same as something I already know, or different?"* This is the primitive operation on which the variational structure of §4.2 runs — the step whose repeated local increments, under energy constraints, give rise to the trajectories and cost integrands of acquisition.',
       emphasis: 'key',
     },
     {
