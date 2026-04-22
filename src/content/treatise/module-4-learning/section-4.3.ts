@@ -2,167 +2,148 @@ import type { Section } from '../types';
 
 export const section4_3: Section = {
   id: '4.3',
-  title: 'Chunking: Compression for Efficiency [INTERPRETED]',
-  subtitle: 'Anti-Entropic Organization of Distinction Hierarchies',
+  title: 'The Same/Different Duality: The Originating Insight',
+  subtitle: 'Where the Framework Began',
   epistemicStatus: 'interpreted',
   content: [
     {
       type: 'paragraph',
       content:
-        'Chunking, the grouping of multiple elements into single units, emerges directly from thermodynamic constraints on distinction-making. It represents a fundamental **anti-entropic strategy**: instead of maintaining many separate distinctions (high entropy, high energy), the system organizes them into hierarchical structures (low entropy, lower maintenance cost).',
+        '**This section describes the framework\'s originating insight.** The entire Distinction as Primitive framework emerged from observing a simple but fundamental operation: when a learner encounters something new, they ask "Is this the SAME as something I know, or DIFFERENT?"',
       emphasis: 'key',
     },
     {
-      type: 'heading',
-      level: 2,
-      content: 'The Energy Cost of Maintaining Distinctions',
-      id: 'energy-cost-maintaining-distinctions',
+      type: 'paragraph',
+      content:
+        'All learning reduces to processing similarity and difference. This is not merely a psychological observation but follows directly from the nature of distinction itself. This same/different lensing IS distinction-making in its most immediate, observable form.',
     },
     {
       type: 'paragraph',
       content:
-        'From Axiom 1, maintaining each distinction costs energy. For an OLU with energy budget $B$ and per-distinction maintenance cost $c$, the maximum number of simultaneously maintainable distinctions is:',
-    },
-    {
-      type: 'math',
-      latex: 'N_{\\max} = \\frac{B}{c}',
-      display: 'block',
-      label: 'eq:working-memory-capacity',
-      description:
-        'Working memory capacity derived from energy budget and per-distinction cost',
-    },
-    {
-      type: 'paragraph',
-      content:
-        'This is working memory capacity, grounded in thermodynamics rather than arbitrary cognitive limits.',
-      emphasis: 'conclusion',
-    },
-    {
-      type: 'heading',
-      level: 2,
-      content: 'How Chunking Reduces Energy Cost',
-      id: 'chunking-reduces-energy-cost',
+        'Recall that distinction is the primitive operation that enables all cognition. When encountering any new input, an OLU must perform two complementary evaluations:',
     },
     {
       type: 'definition',
-      id: 'def-chunk',
-      term: 'Chunk',
+      id: 'def-difference-processing',
+      term: 'Difference Processing',
       definition:
-        'A higher-order distinction that encompasses multiple lower-order distinctions. Instead of maintaining $n$ separate boundaries, the OLU maintains one boundary with internal structure that can be unpacked when needed.',
+        'The cognitive operation of determining how a new input differs from what is already distinguished—what boundaries it crosses, what categories it fails to match.',
       intuition:
-        'A chunk is like a compressed file—the information is preserved but stored more efficiently, requiring less active maintenance energy.',
+        'Difference processing establishes what something is *not* (its exclusion zone).',
+    },
+    {
+      type: 'definition',
+      id: 'def-same-processing',
+      term: 'Same Processing',
+      definition:
+        'The cognitive operation of determining how a new input resembles what is already distinguished—what boundaries contain it, what categories it matches.',
+      intuition:
+        'Same processing establishes what something *is* (its inclusion zone).',
     },
     {
       type: 'paragraph',
       content:
-        'Consider memorizing a phone number: 5-5-5-1-2-3-4. Maintaining seven distinct digit-boundaries costs $7c$. But if chunked as 555-1234, only two boundaries need active maintenance ($2c$), with the internal structure stored as compressed patterns that require minimal energy until accessed.',
-    },
-    {
-      type: 'paragraph',
-      content: 'The energy savings from chunking can be expressed as:',
-    },
-    {
-      type: 'math',
-      latex:
-        'E_{\\text{chunked}} = E_{\\text{boundaries}} + E_{\\text{internal}}',
-      display: 'block',
-    },
-    {
-      type: 'math',
-      latex: 'E_{\\text{unchunked}} = n \\times E_{\\text{boundaries}}',
-      display: 'block',
-    },
-    {
-      type: 'paragraph',
-      content:
-        'When $E_{\\text{internal}} \\ll (n-1) \\times E_{\\text{boundaries}}$, chunking provides significant efficiency gains.',
+        'These are the two sides of boundary-drawing. Together, they locate the new input within the existing distinction network.',
       emphasis: 'key',
     },
     {
       type: 'heading',
-      level: 2,
-      content: 'Chunking as Learning',
-      id: 'chunking-as-learning',
+      level: 3,
+      content: 'Why This Duality Is Fundamental',
     },
     {
       type: 'paragraph',
       content:
-        'Learning often proceeds by building increasingly sophisticated chunking structures:',
+        'Consider learning to recognize a new category, such as learning to identify a particular bird species. The learner must process:',
     },
     {
       type: 'list',
-      style: 'numbered',
+      style: 'bullet',
       items: [
         {
           content:
-            '**Initial stage**: Many low-level distinctions maintained simultaneously (high energy cost)',
+            'Differences that separate this species from similar species (distinctive markings, size, behavior)',
         },
         {
           content:
-            '**Intermediate stage**: Some distinctions grouped into chunks (reduced energy cost)',
+            'Similarities that unite members of this species (common features across individuals)',
         },
         {
           content:
-            '**Expert stage**: Complex hierarchical chunking (minimal energy for maximum distinction capacity)',
+            'Differences that separate all birds from non-birds (wings, feathers, flight)',
+        },
+        {
+          content:
+            'Similarities that place this in the broader category of birds',
         },
       ],
     },
     {
       type: 'paragraph',
       content:
-        'Chess masters exemplify this progression. Where novices see individual pieces requiring separate distinctions, masters see meaningful configurations—entire opening sequences, strategic patterns—each a single chunk encompassing what would require dozens of distinctions for a novice.',
+        'At every level, the same/different duality operates. Even the most basic perceptual learning—distinguishing figure from ground—requires simultaneously processing what makes the figure the same across its extent and what makes it different from the ground.',
+    },
+    {
+      type: 'heading',
+      level: 3,
+      content: 'Energy Implications of the Duality',
+    },
+    {
+      type: 'theorem',
+      id: 'thm-difference-asymmetry',
+      label: 'proposition',
+      name: 'Energy Asymmetry of Same/Different Processing',
+      statement:
+        'Difference processing is typically more energy-intensive than same processing. Detecting difference requires actively comparing inputs to stored patterns and registering mismatches. Detecting sameness often relies on pattern completion—a lower-energy process where partial matches activate existing structures.',
+      epistemicStatus: 'interpreted',
+      dependsOn: ['A1', 'def-difference-processing', 'def-same-processing'],
+    },
+    {
+      type: 'paragraph',
+      content:
+        'This asymmetry explains several well-documented learning phenomena:',
+    },
+    {
+      type: 'table',
+      id: 'tbl-same-different-phenomena',
+      caption: 'Learning Phenomena Explained by Same/Different Energy Asymmetry',
+      headers: ['Phenomenon', 'Same/Different Explanation'],
+      rows: [
+        [
+          'Novelty effects',
+          'Novel stimuli (high difference) capture attention and consume more processing resources than familiar stimuli (high same)',
+        ],
+        [
+          'Recognition vs. recall',
+          'Recognition (same detection) is easier than recall (difference detection among possible memories)',
+        ],
+        [
+          'Prototype effects',
+          'Central category members (high same to prototype) are processed more efficiently than peripheral members (higher difference)',
+        ],
+      ],
+    },
+    {
+      type: 'paragraph',
+      content:
+        'Learning optimizes this duality by building distinction structures that minimize unnecessary difference processing while maintaining sensitivity to task-relevant differences.',
+      emphasis: 'conclusion',
     },
     {
       type: 'note',
       variant: 'technical',
       content:
-        "This explains the finding that chess masters don't have larger working memories for random piece configurations, only for meaningful positions. Their advantage lies in chunking efficiency, not raw capacity.",
-    },
-    {
-      type: 'table',
-      id: 'table-chunking-progression',
-      caption: 'Chunking Progression Across Expertise Levels',
-      headers: ['Stage', 'Distinctions', 'Energy Cost', 'Capacity'],
-      rows: [
-        [
-          'Novice',
-          'Many individual low-level',
-          'High ($n \\times c$)',
-          'Limited',
-        ],
-        [
-          'Intermediate',
-          'Some grouped into chunks',
-          'Medium',
-          'Increased',
-        ],
-        [
-          'Expert',
-          'Hierarchical chunking',
-          'Low ($k \\times c$, $k \\ll n$)',
-          'Maximal',
-        ],
-      ],
-      alignment: ['left', 'left', 'center', 'center'],
-    },
-    {
-      type: 'summary',
-      title: 'Key Insight',
-      points: [
-        'Chunking is thermodynamic compression: reducing boundary-maintenance costs by grouping related distinctions',
-        'Working memory capacity is energy-limited, not slot-limited',
-        'Expertise involves developing efficient hierarchical chunking structures',
-      ],
-      variant: 'key-points',
+        'The same/different duality maps directly onto the boundary concept from Module 0. A boundary simultaneously defines what is inside (same) and what is outside (different). Learning adjusts these boundaries to optimize the trade-off between processing costs.',
     },
   ],
   keyPoints: [
-    'Chunking is an anti-entropic strategy: organizing distinctions into low-maintenance hierarchies [INTERPRETED]',
-    'Working memory capacity derives from energy budget divided by per-distinction maintenance cost',
-    'Chunks are higher-order distinctions encompassing multiple lower-order distinctions',
-    'Chunking reduces energy cost by storing internal structure as compressed patterns',
-    'Expert advantage lies in chunking efficiency, not raw cognitive capacity [INTERPRETED]',
-    'Learning progresses through increasingly sophisticated chunking hierarchies',
+    'The same/different duality is the ORIGINATING INSIGHT of the entire framework',
+    'All learning reduces to processing similarity (same) and difference [INTERPRETED]',
+    'Same processing establishes inclusion zones; difference processing establishes exclusion zones',
+    'The same/different duality operates at every level of learning, from perception to abstraction',
+    'Difference processing is typically more energy-intensive than same processing [INTERPRETED]',
+    'This energy asymmetry explains novelty effects, recognition advantages, and prototype effects',
+    'Learning optimizes by minimizing unnecessary difference processing while maintaining task-relevant sensitivity',
   ],
 };
 

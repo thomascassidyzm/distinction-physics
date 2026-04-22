@@ -2,25 +2,26 @@ import type { Section } from '../types';
 
 export const section4_6: Section = {
   id: '4.6',
-  title: 'Neural Plasticity as Boundary Reorganization [INTERPRETED]',
-  subtitle: 'The Physical Substrate of Anti-Entropic Pattern Building',
+  title: 'Forgetting: Entropy Reclaiming Distinction Patterns [INTERPRETED]',
+  subtitle: 'The Natural Thermodynamic Direction Reasserted',
   epistemicStatus: 'interpreted',
   content: [
     {
       type: 'paragraph',
       content:
-        'Neural plasticity, the brain\'s ability to modify its structure in response to experience, is the physical substrate of learning. Within the thermodynamic framework, plasticity is the mechanism by which distinction networks are reorganized for greater efficiency. It is the **physical implementation of anti-entropic pattern building**—the brain literally restructuring itself to maintain more distinctions with less energy.',
+        '**Forgetting is entropy winning.** It is not a system failure but the natural thermodynamic direction reasserting itself when anti-entropic investment ceases. From the dynamism implication of Section 0.3, we know that all boundaries require continuous energy investment to maintain. When energy is withdrawn, boundaries decay—entropy reclaims the ordered patterns that learning had built.',
+      emphasis: 'key',
     },
     {
       type: 'heading',
       level: 2,
-      content: 'Synaptic Plasticity as Boundary Adjustment',
-      id: 'synaptic-plasticity-boundary-adjustment',
+      content: 'The Mechanism of Forgetting',
+      id: 'mechanism-of-forgetting',
     },
     {
       type: 'paragraph',
       content:
-        'Individual synapses implement distinction boundaries. Synaptic strengthening (long-term potentiation) sharpens a boundary; synaptic weakening (long-term depression) relaxes a boundary.',
+        'Each stored distinction—each memory, each learned pattern—is a maintained boundary. Maintaining these boundaries has ongoing metabolic cost. When:',
     },
     {
       type: 'list',
@@ -28,111 +29,199 @@ export const section4_6: Section = {
       items: [
         {
           content:
-            '**Strengthen boundaries that are repeatedly activated**: Frequently made distinctions become sharper and more reliable',
+            'Energy is redirected to other boundaries (attention shifts), or',
         },
         {
           content:
-            '**Weaken boundaries that are rarely activated**: Rarely made distinctions fade, freeing energy for other purposes',
+            'Total energy budget decreases (fatigue, sleep), or',
         },
         {
-          content:
-            '**Create new boundaries for novel patterns**: New experiences drive the formation of new distinction structures',
-        },
-        {
-          content:
-            '**Eliminate boundaries that consume energy without providing useful distinctions**: Inefficient structures are pruned away',
+          content: 'Maintenance signals weaken (disuse)',
         },
       ],
     },
     {
       type: 'paragraph',
       content:
-        'This is precisely the Hebbian rule, "neurons that fire together wire together," but grounded in thermodynamic efficiency rather than arbitrary association.',
-      emphasis: 'key',
-    },
-    {
-      type: 'heading',
-      level: 2,
-      content: 'Structural Plasticity as Network Reorganization',
-      id: 'structural-plasticity-network-reorganization',
-    },
-    {
-      type: 'paragraph',
-      content:
-        'Beyond synaptic changes, the brain exhibits structural plasticity: dendrites grow and retract, axons extend to new targets, entire networks are pruned or expanded. This represents more radical boundary reorganization:',
-    },
-    {
-      type: 'list',
-      style: 'bullet',
-      items: [
-        {
-          content:
-            '**Dendritic growth**: Creating capacity for new distinctions',
-        },
-        {
-          content:
-            '**Axonal extension**: Connecting previously separate distinction networks',
-        },
-        {
-          content:
-            '**Network pruning**: Eliminating inefficient or redundant boundaries',
-        },
-        {
-          content:
-            '**Myelination**: Reducing energy cost of frequently used distinction pathways',
-        },
-      ],
-    },
-    {
-      type: 'example',
-      title: 'London Taxi Drivers',
-      content:
-        'London taxi drivers provide a dramatic example: years of navigating complex city streets produces measurable hippocampal growth. The brain literally reorganizes its structure to accommodate the rich spatial distinction networks required for expert navigation.',
-      illustrates: 'Structural plasticity in response to learning demands',
-    },
-    {
-      type: 'heading',
-      level: 2,
-      content: 'Critical Periods and Plasticity Windows',
-      id: 'critical-periods-plasticity-windows',
-    },
-    {
-      type: 'paragraph',
-      content:
-        'Why are certain types of learning easier during particular developmental periods? The thermodynamic framework suggests an answer:',
-    },
-    {
-      type: 'paragraph',
-      content:
-        'Early in development, energy allocation to distinction-making is highly flexible. The system has not yet committed to particular boundary structures. This makes radical reorganization possible but also makes the system vulnerable to inefficient encodings.',
-    },
-    {
-      type: 'paragraph',
-      content:
-        'As development proceeds, the most frequently used boundaries become stabilized in low-energy circuits. This reduces plasticity but improves efficiency for established distinctions.',
+        'The boundary begins to decay. The distinction that was once sharp becomes fuzzy, then undetectable.',
     },
     {
       type: 'definition',
-      id: 'def-critical-period',
-      term: 'Critical Period',
+      id: 'def-passive-decay',
+      term: 'Passive Decay',
       definition:
-        'An optimal window where the energy cost of boundary reorganization is low relative to the benefit of new distinctions.',
+        'The gradual dissolution of distinction boundaries when energy is not invested in their maintenance. Passive decay is thermodynamically free—it is the natural dissipation of boundary structure in the absence of maintenance energy.',
       intuition:
-        'Like wet cement that can be easily shaped before it sets, the developing brain has periods where major structural changes are energetically cheap.',
+        'Like a sandcastle eroding in the tide, boundaries dissolve when not actively maintained. The dissolution itself requires no energy expenditure.',
+    },
+    {
+      type: 'note',
+      variant: 'technical',
+      content:
+        'Passive decay is thermodynamically free—boundaries naturally dissipate when maintenance energy is withdrawn. Active forgetting, by contrast, requires energy expenditure to selectively accelerate the removal of specific boundaries.',
+    },
+    {
+      type: 'heading',
+      level: 2,
+      content: 'Forgetting Rate Depends on Boundary Type',
+      id: 'forgetting-rate-boundary-type',
     },
     {
       type: 'paragraph',
       content:
-        'After critical periods close, the same reorganization would require dismantling stabilized structures—a much higher energy cost. This is why learning a first language in childhood is effortless while learning a second language as an adult requires sustained effort.',
+        'Different distinctions have different maintenance costs and different decay rates:',
+    },
+    {
+      type: 'table',
+      id: 'table-forgetting-rates',
+      caption: 'Forgetting Rates by Distinction Type',
+      headers: [
+        'Distinction Type',
+        'Maintenance Cost',
+        'Decay Rate',
+        'Examples',
+      ],
+      rows: [
+        [
+          'High-cost distinctions',
+          'Continuous active',
+          'Fast without rehearsal',
+          'Arbitrary associations, rote memories',
+        ],
+        [
+          'Low-cost distinctions',
+          'Reinforced by multiple boundaries',
+          'Slow',
+          'Meaningful patterns, integrated knowledge',
+        ],
+        [
+          'Structural distinctions',
+          'Encoded in low-energy circuits',
+          'Highly resistant',
+          'Fundamental categories, procedural skills',
+        ],
+      ],
+      alignment: ['left', 'left', 'center', 'left'],
+    },
+    {
+      type: 'paragraph',
+      content:
+        'This explains why we forget phone numbers quickly but never forget how to ride a bicycle. The latter has been encoded in low-maintenance cerebellar circuits; the former requires continuous hippocampal-cortical maintenance.',
+    },
+    {
+      type: 'heading',
+      level: 2,
+      content: 'The Wisdom of Forgetting',
+      id: 'wisdom-of-forgetting',
+    },
+    {
+      type: 'paragraph',
+      content:
+        'Given finite energy budgets, forgetting is adaptive. An OLU that maintained every distinction it ever made would quickly exhaust its energy budget, unable to make new distinctions. Forgetting clears boundary-maintenance resources for new learning.',
+      emphasis: 'key',
+    },
+    {
+      type: 'theorem',
+      id: 'thm-forgetting-necessity',
+      label: 'proposition',
+      number: '4.2',
+      name: 'Necessity of Forgetting',
+      statement:
+        'For any finite-energy observer, forgetting is not merely inevitable but adaptive. The capacity for new distinction-making requires releasing maintenance energy from old distinctions. Perfect memory would preclude new learning.',
+      epistemicStatus: 'interpreted',
+      dependsOn: ['A1', 'A2'],
+    },
+    {
+      type: 'paragraph',
+      content:
+        'This is why sleep involves active forgetting. During sleep, the brain selectively prunes distinctions, maintaining those with high utility while allowing low-utility distinctions to decay. The result is more efficient use of finite boundary-maintenance resources.',
+    },
+    {
+      type: 'note',
+      variant: 'editorial',
+      content:
+        'Learning redistributes costs across time, not just reduces them. The energy saved by forgetting low-utility distinctions is reallocated to maintaining high-utility ones and acquiring new ones. This is why learning is a continuous process of optimization, not a simple accumulation.',
+    },
+    {
+      type: 'heading',
+      level: 2,
+      content: 'The Spacing Effect Explained',
+      id: 'spacing-effect-explained',
+    },
+    {
+      type: 'paragraph',
+      content:
+        'The spacing effect—where distributed practice produces better retention than massed practice—emerges from thermodynamic considerations:',
+    },
+    {
+      type: 'list',
+      style: 'numbered',
+      items: [
+        {
+          content:
+            '**Massed practice**: Maintains distinctions at high intensity briefly, then allows full decay',
+        },
+        {
+          content:
+            '**Spaced practice**: Allows partial decay, then re-energizes boundaries just before complete decay',
+        },
+      ],
+    },
+    {
+      type: 'paragraph',
+      content:
+        'Each re-energizing event after partial decay strengthens the boundary through a process of reconstruction. The OLU must re-distinguish what was becoming fuzzy, and this active re-distinction creates more robust encoding than simple maintenance.',
+    },
+    {
+      type: 'paragraph',
+      content:
+        'Formally: If $E_m$ is maintenance energy and $E_r$ is reconstruction energy ($E_r > E_m$), then:',
+    },
+    {
+      type: 'math',
+      latex:
+        '\\text{Massed: Total energy} = n \\times E_m \\quad \\text{(all during one session)}',
+      display: 'block',
+    },
+    {
+      type: 'math',
+      latex:
+        '\\text{Spaced: Total energy} = n \\times (E_m + E_r) \\quad \\text{(spread over multiple sessions)}',
+      display: 'block',
+    },
+    {
+      type: 'paragraph',
+      content:
+        'But the spaced approach produces more durable boundaries because reconstruction engages deeper encoding mechanisms than mere maintenance.',
       emphasis: 'conclusion',
+    },
+    {
+      type: 'note',
+      variant: 'technical',
+      content:
+        'The spacing effect demonstrates that learning redistributes energy costs across time rather than simply minimizing them. Higher total energy expenditure (spaced) produces better outcomes than lower total energy (massed) because reconstruction creates stronger boundaries than maintenance alone.',
+    },
+    {
+      type: 'summary',
+      title: 'Key Insight',
+      points: [
+        'Forgetting is adaptive, not pathological—it frees resources for new learning',
+        'Passive decay is thermodynamically free; active forgetting costs energy',
+        'Learning redistributes energy costs across time, not just reduces them',
+        'The spacing effect emerges from reconstruction being more effective than mere maintenance',
+        'Sleep involves selective pruning to optimize boundary-maintenance allocation',
+      ],
+      variant: 'key-points',
     },
   ],
   keyPoints: [
-    'Neural plasticity is the physical implementation of anti-entropic pattern building [INTERPRETED]',
-    'Synaptic plasticity adjusts individual boundaries through Hebbian mechanisms [IMPORTED from neuroscience]',
-    'Structural plasticity creates, connects, prunes, and optimizes entire distinction networks',
-    'Critical periods are windows when reorganization is energetically cheap [INTERPRETED]',
-    'Development progressively stabilizes distinction structures, trading plasticity for efficiency',
+    'Forgetting is entropy reclaiming: the natural thermodynamic direction reasserted [INTERPRETED]',
+    'Forgetting is boundary decay when energy is not invested in maintenance',
+    'Passive decay is thermodynamically free; active forgetting costs energy',
+    'Different distinction types have different maintenance costs and decay rates [INTERPRETED]',
+    'Forgetting is adaptive: it frees resources for new anti-entropic building',
+    'Learning redistributes costs across time, not just reduces them',
+    'The spacing effect emerges from reconstruction being more effective than maintenance [INTERPRETED]',
   ],
 };
 

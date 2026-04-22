@@ -12,6 +12,7 @@ import { section4_8 } from './section-4.8';
 import { section4_9 } from './section-4.9';
 import { section4_10 } from './section-4.10';
 import { section4_11 } from './section-4.11';
+import { section4_12 } from './section-4.12';
 
 export const module4: Module = {
   number: 4,
@@ -32,10 +33,13 @@ export const module4: Module = {
     section4_9,
     section4_10,
     section4_11,
+    section4_12,
   ],
   keyInsights: [
     'THE KEY CONTRIBUTION: Learning is the framework\'s most developed application domain',
     'The framework originated from observing same/different lensing in learning—this IS the core insight',
+    'The two axioms combine to give any learning trajectory a natural action functional $S = \\int E \\, dt$ [DERIVED]',
+    'HISE (High-Intensity Speaking Exercises) approximates the least-action trajectory to conversational production [INTERPRETED]',
     'Learning is ANTI-ENTROPIC: creating and maintaining stable distinction patterns against decay [INTERPRETED]',
     'Expertise = efficiently maintained distinctions at fine grain; Forgetting = distinction pattern decay (entropy)',
     'Practice reduces energy cost per distinction—mastery is automatization [INTERPRETED]',

@@ -2,152 +2,137 @@ import type { Section } from '../types';
 
 export const section4_7: Section = {
   id: '4.7',
-  title: 'Transfer Learning: Distinction Structure Reuse [INTERPRETED]',
-  subtitle: 'Leveraging Anti-Entropic Investment Across Domains',
+  title: 'Neural Plasticity as Boundary Reorganization [INTERPRETED]',
+  subtitle: 'The Physical Substrate of Anti-Entropic Pattern Building',
   epistemicStatus: 'interpreted',
   content: [
     {
       type: 'paragraph',
       content:
-        'Transfer occurs when learning in one domain facilitates learning in another. This happens when the distinction structures developed for the first domain are applicable to the second. Transfer is **leveraging prior anti-entropic investment**: the energy spent building distinction patterns in domain A reduces the energy needed to build related patterns in domain B.',
+        'Neural plasticity, the brain\'s ability to modify its structure in response to experience, is the physical substrate of learning. Within the thermodynamic framework, plasticity is the mechanism by which distinction networks are reorganized for greater efficiency. It is the **physical implementation of anti-entropic pattern building**—the brain literally restructuring itself to maintain more distinctions with less energy.',
     },
     {
       type: 'heading',
       level: 2,
-      content: 'Positive Transfer: Efficient Boundary Reuse',
-      id: 'positive-transfer-efficient-boundary-reuse',
+      content: 'Synaptic Plasticity as Boundary Adjustment',
+      id: 'synaptic-plasticity-boundary-adjustment',
     },
     {
       type: 'paragraph',
       content:
-        'If domain A and domain B share underlying distinction structures, then developing those structures for A reduces the energy cost of learning B. The OLU doesn\'t need to build new boundaries; it can reuse existing ones.',
-    },
-    {
-      type: 'list',
-      style: 'bullet',
-      items: [
-        {
-          content:
-            'Learning one Romance language facilitates learning others (shared phonological and grammatical distinctions)',
-        },
-        {
-          content:
-            'Learning mathematics facilitates learning physics (shared quantitative and relational distinctions)',
-        },
-        {
-          content:
-            'Learning one musical instrument facilitates learning others (shared auditory-motor distinctions)',
-        },
-      ],
-    },
-    {
-      type: 'paragraph',
-      content:
-        'The transfer efficiency depends on the overlap between distinction structures:',
-    },
-    {
-      type: 'math',
-      latex:
-        '\\text{Transfer\\_efficiency} = \\frac{\\text{Overlap}(\\text{distinctions}_A, \\text{distinctions}_B)}{\\text{Total\\_distinctions}_B}',
-      display: 'block',
-      label: 'eq:transfer-efficiency',
-      description:
-        'Transfer efficiency as a ratio of shared distinctions to total distinctions needed',
-    },
-    {
-      type: 'paragraph',
-      content:
-        'When overlap is high, transfer is substantial. When overlap is low, there is little advantage.',
-      emphasis: 'key',
-    },
-    {
-      type: 'heading',
-      level: 2,
-      content: 'Negative Transfer: Boundary Interference',
-      id: 'negative-transfer-boundary-interference',
-    },
-    {
-      type: 'paragraph',
-      content:
-        'Sometimes existing distinctions interfere with new learning. This occurs when domain A uses distinctions that are incompatible with domain B.',
-    },
-    {
-      type: 'list',
-      style: 'bullet',
-      items: [
-        {
-          content:
-            'English speakers learning Mandarin tones (must learn to distinguish what English treats as same)',
-        },
-        {
-          content:
-            'Tennis players learning badminton (similar but different motor distinctions)',
-        },
-        {
-          content:
-            'Experts in one field approaching another with inappropriate categories',
-        },
-      ],
-    },
-    {
-      type: 'paragraph',
-      content:
-        'Negative transfer has a clear thermodynamic signature: the OLU must expend extra energy to inhibit existing boundaries while forming new ones. This is more costly than learning without prior distinctions.',
-      emphasis: 'key',
-    },
-    {
-      type: 'heading',
-      level: 2,
-      content: 'Meta-Learning: Learning to Transfer',
-      id: 'meta-learning-learning-to-transfer',
-    },
-    {
-      type: 'paragraph',
-      content:
-        'Experienced learners develop meta-cognitive distinctions about their own distinction-making. They learn to:',
+        'Individual synapses implement distinction boundaries. Synaptic strengthening (long-term potentiation) sharpens a boundary; synaptic weakening (long-term depression) relaxes a boundary.',
     },
     {
       type: 'list',
       style: 'numbered',
       items: [
         {
-          content: 'Recognize when existing boundaries are applicable',
-        },
-        {
-          content: 'Inhibit inappropriate boundaries',
-        },
-        {
-          content: 'Identify structural similarities across domains',
+          content:
+            '**Strengthen boundaries that are repeatedly activated**: Frequently made distinctions become sharper and more reliable',
         },
         {
           content:
-            'Build modular distinction structures that maximize transfer potential',
+            '**Weaken boundaries that are rarely activated**: Rarely made distinctions fade, freeing energy for other purposes',
+        },
+        {
+          content:
+            '**Create new boundaries for novel patterns**: New experiences drive the formation of new distinction structures',
+        },
+        {
+          content:
+            '**Eliminate boundaries that consume energy without providing useful distinctions**: Inefficient structures are pruned away',
         },
       ],
     },
     {
-      type: 'definition',
-      id: 'def-meta-learning',
-      term: 'Meta-Learning',
-      definition:
-        'The development of higher-order distinctions about one\'s own distinction-making processes, enabling more efficient future learning.',
-      intuition:
-        'Learning how to learn—acquiring strategies that make all future learning more efficient.',
+      type: 'paragraph',
+      content:
+        'This is precisely the Hebbian rule, "neurons that fire together wire together," but grounded in thermodynamic efficiency rather than arbitrary association.',
+      emphasis: 'key',
+    },
+    {
+      type: 'heading',
+      level: 2,
+      content: 'Structural Plasticity as Network Reorganization',
+      id: 'structural-plasticity-network-reorganization',
     },
     {
       type: 'paragraph',
       content:
-        'This meta-learning improves the efficiency of future learning—a higher-order thermodynamic optimization that compounds over time.',
+        'Beyond synaptic changes, the brain exhibits structural plasticity: dendrites grow and retract, axons extend to new targets, entire networks are pruned or expanded. This represents more radical boundary reorganization:',
+    },
+    {
+      type: 'list',
+      style: 'bullet',
+      items: [
+        {
+          content:
+            '**Dendritic growth**: Creating capacity for new distinctions',
+        },
+        {
+          content:
+            '**Axonal extension**: Connecting previously separate distinction networks',
+        },
+        {
+          content:
+            '**Network pruning**: Eliminating inefficient or redundant boundaries',
+        },
+        {
+          content:
+            '**Myelination**: Reducing energy cost of frequently used distinction pathways',
+        },
+      ],
+    },
+    {
+      type: 'example',
+      title: 'London Taxi Drivers',
+      content:
+        'London taxi drivers provide a dramatic example: years of navigating complex city streets produces measurable hippocampal growth. The brain literally reorganizes its structure to accommodate the rich spatial distinction networks required for expert navigation.',
+      illustrates: 'Structural plasticity in response to learning demands',
+    },
+    {
+      type: 'heading',
+      level: 2,
+      content: 'Critical Periods and Plasticity Windows',
+      id: 'critical-periods-plasticity-windows',
+    },
+    {
+      type: 'paragraph',
+      content:
+        'Why are certain types of learning easier during particular developmental periods? The thermodynamic framework suggests an answer:',
+    },
+    {
+      type: 'paragraph',
+      content:
+        'Early in development, energy allocation to distinction-making is highly flexible. The system has not yet committed to particular boundary structures. This makes radical reorganization possible but also makes the system vulnerable to inefficient encodings.',
+    },
+    {
+      type: 'paragraph',
+      content:
+        'As development proceeds, the most frequently used boundaries become stabilized in low-energy circuits. This reduces plasticity but improves efficiency for established distinctions.',
+    },
+    {
+      type: 'definition',
+      id: 'def-critical-period',
+      term: 'Critical Period',
+      definition:
+        'An optimal window where the energy cost of boundary reorganization is low relative to the benefit of new distinctions.',
+      intuition:
+        'Like wet cement that can be easily shaped before it sets, the developing brain has periods where major structural changes are energetically cheap.',
+    },
+    {
+      type: 'paragraph',
+      content:
+        'After critical periods close, the same reorganization would require dismantling stabilized structures—a much higher energy cost. This is why learning a first language in childhood is effortless while learning a second language as an adult requires sustained effort.',
       emphasis: 'conclusion',
     },
   ],
   keyPoints: [
-    'Transfer is leveraging prior anti-entropic investment across domains [INTERPRETED]',
-    'Transfer occurs when distinction structures developed for one domain apply to another',
-    'Positive transfer happens when domains share underlying distinction structures',
-    'Transfer efficiency equals the ratio of shared to total distinctions needed [INTERPRETED]',
-    'Negative transfer occurs when existing distinctions interfere with new ones',
-    'Meta-learning is higher-order optimization that improves future anti-entropic efficiency',
+    'Neural plasticity is the physical implementation of anti-entropic pattern building [INTERPRETED]',
+    'Synaptic plasticity adjusts individual boundaries through Hebbian mechanisms [IMPORTED from neuroscience]',
+    'Structural plasticity creates, connects, prunes, and optimizes entire distinction networks',
+    'Critical periods are windows when reorganization is energetically cheap [INTERPRETED]',
+    'Development progressively stabilizes distinction structures, trading plasticity for efficiency',
   ],
 };
 

@@ -2,26 +2,72 @@ import type { Section } from '../types';
 
 export const section4_5: Section = {
   id: '4.5',
-  title: 'Forgetting: Entropy Reclaiming Distinction Patterns [INTERPRETED]',
-  subtitle: 'The Natural Thermodynamic Direction Reasserted',
+  title: 'Automatization: Migrating to Lower-Energy Circuits [INTERPRETED]',
+  subtitle: 'Anti-Entropic Stabilization Through Neural Consolidation',
   epistemicStatus: 'interpreted',
   content: [
     {
       type: 'paragraph',
       content:
-        '**Forgetting is entropy winning.** It is not a system failure but the natural thermodynamic direction reasserting itself when anti-entropic investment ceases. From the dynamism implication of Section 0.3, we know that all boundaries require continuous energy investment to maintain. When energy is withdrawn, boundaries decay—entropy reclaims the ordered patterns that learning had built.',
+        'As skills are practiced, they migrate from conscious to automatic processing. Within the thermodynamic framework, this represents a transfer of distinction-making from high-energy to low-energy neural circuits. This migration is **anti-entropic stabilization**: the distinction patterns become more resistant to decay by embedding in specialized, low-maintenance neural structures.',
       emphasis: 'key',
     },
     {
       type: 'heading',
       level: 2,
-      content: 'The Mechanism of Forgetting',
-      id: 'mechanism-of-forgetting',
+      content: 'The Neural Energy Hierarchy',
+      id: 'neural-energy-hierarchy',
     },
     {
       type: 'paragraph',
       content:
-        'Each stored distinction—each memory, each learned pattern—is a maintained boundary. Maintaining these boundaries has ongoing metabolic cost. When:',
+        'Different brain regions have different energy requirements for the same computational operations:',
+    },
+    {
+      type: 'table',
+      id: 'table-neural-energy-hierarchy',
+      caption: 'Neural Energy Hierarchy for Distinction-Making',
+      headers: ['Brain Region', 'Energy Cost', 'Characteristics'],
+      rows: [
+        [
+          'Prefrontal cortex',
+          'Highest',
+          'Flexible but metabolically expensive',
+        ],
+        [
+          'Basal ganglia',
+          'Lower',
+          'Specialized for procedural patterns',
+        ],
+        [
+          'Cerebellum',
+          'Very low',
+          'Specialized for automated motor sequences',
+        ],
+        [
+          'Primary sensory/motor cortices',
+          'Lowest',
+          'Direct stimulus-response mappings',
+        ],
+      ],
+      alignment: ['left', 'center', 'left'],
+    },
+    {
+      type: 'paragraph',
+      content:
+        'Learning involves progressively shifting distinction-making operations down this hierarchy.',
+      emphasis: 'conclusion',
+    },
+    {
+      type: 'heading',
+      level: 2,
+      content: 'The Automatization Process',
+      id: 'automatization-process',
+    },
+    {
+      type: 'paragraph',
+      content:
+        'When a skill is first learned, prefrontal cortex is heavily engaged, making explicit distinctions about each step. With practice:',
     },
     {
       type: 'list',
@@ -29,199 +75,118 @@ export const section4_5: Section = {
       items: [
         {
           content:
-            'Energy is redirected to other boundaries (attention shifts), or',
+            'Repeated patterns are encoded in basal ganglia (habit formation)',
+        },
+        {
+          content: 'Motor sequences are stored in cerebellum',
         },
         {
           content:
-            'Total energy budget decreases (fatigue, sleep), or',
-        },
-        {
-          content: 'Maintenance signals weaken (disuse)',
+            'Sensory-motor mappings become direct in primary cortices',
         },
       ],
     },
     {
       type: 'paragraph',
       content:
-        'The boundary begins to decay. The distinction that was once sharp becomes fuzzy, then undetectable.',
+        'Each migration reduces the energy cost of the distinction-making operation.',
     },
     {
       type: 'definition',
-      id: 'def-passive-decay',
-      term: 'Passive Decay',
+      id: 'def-automatization',
+      term: 'Automatization',
       definition:
-        'The gradual dissolution of distinction boundaries when energy is not invested in their maintenance. Passive decay is thermodynamically free—it is the natural dissipation of boundary structure in the absence of maintenance energy.',
+        'The progressive transfer of distinction-making operations from high-energy neural circuits (prefrontal cortex) to low-energy circuits (basal ganglia, cerebellum, primary cortices) through repeated practice.',
       intuition:
-        'Like a sandcastle eroding in the tide, boundaries dissolve when not actively maintained. The dissolution itself requires no energy expenditure.',
-    },
-    {
-      type: 'note',
-      variant: 'technical',
-      content:
-        'Passive decay is thermodynamically free—boundaries naturally dissipate when maintenance energy is withdrawn. Active forgetting, by contrast, requires energy expenditure to selectively accelerate the removal of specific boundaries.',
+        'Like water finding the path of least resistance, cognitive operations naturally migrate to circuits where they can be performed with minimal energy expenditure.',
     },
     {
       type: 'heading',
       level: 2,
-      content: 'Forgetting Rate Depends on Boundary Type',
-      id: 'forgetting-rate-boundary-type',
+      content: 'Testable Prediction (Already Confirmed)',
+      id: 'testable-prediction-confirmed',
     },
     {
       type: 'paragraph',
       content:
-        'Different distinctions have different maintenance costs and different decay rates:',
+        'If automatization is energy optimization, then practiced tasks should show measurably reduced metabolic activity in higher brain regions. This prediction is extensively confirmed:',
     },
     {
-      type: 'table',
-      id: 'table-forgetting-rates',
-      caption: 'Forgetting Rates by Distinction Type',
-      headers: [
-        'Distinction Type',
-        'Maintenance Cost',
-        'Decay Rate',
-        'Examples',
+      type: 'list',
+      style: 'bullet',
+      items: [
+        {
+          content:
+            'fMRI studies show reduced prefrontal activation for practiced tasks',
+        },
+        {
+          content:
+            'Glucose consumption decreases in task-relevant regions with expertise',
+        },
+        {
+          content: 'Oxygen uptake becomes more efficient with practice',
+        },
       ],
-      rows: [
-        [
-          'High-cost distinctions',
-          'Continuous active',
-          'Fast without rehearsal',
-          'Arbitrary associations, rote memories',
-        ],
-        [
-          'Low-cost distinctions',
-          'Reinforced by multiple boundaries',
-          'Slow',
-          'Meaningful patterns, integrated knowledge',
-        ],
-        [
-          'Structural distinctions',
-          'Encoded in low-energy circuits',
-          'Highly resistant',
-          'Fundamental categories, procedural skills',
-        ],
-      ],
-      alignment: ['left', 'left', 'center', 'left'],
     },
     {
       type: 'paragraph',
       content:
-        'This explains why we forget phone numbers quickly but never forget how to ride a bicycle. The latter has been encoded in low-maintenance cerebellar circuits; the former requires continuous hippocampal-cortical maintenance.',
-    },
-    {
-      type: 'heading',
-      level: 2,
-      content: 'The Wisdom of Forgetting',
-      id: 'wisdom-of-forgetting',
-    },
-    {
-      type: 'paragraph',
-      content:
-        'Given finite energy budgets, forgetting is adaptive. An OLU that maintained every distinction it ever made would quickly exhaust its energy budget, unable to make new distinctions. Forgetting clears boundary-maintenance resources for new learning.',
+        'The energy reduction is not slight. Studies of motor learning show 30-50% reductions in metabolic cost for practiced vs. novel movements. This is thermodynamic optimization in action.',
       emphasis: 'key',
     },
     {
+      type: 'heading',
+      level: 2,
+      content: 'The Cost of Consciousness',
+      id: 'cost-of-consciousness',
+    },
+    {
+      type: 'paragraph',
+      content:
+        'Conscious processing is energetically expensive because it requires maintaining explicit distinctions in working memory, which has high metabolic overhead. Automatization bypasses this by encoding distinctions in specialized circuits that operate without conscious access.',
+    },
+    {
       type: 'theorem',
-      id: 'thm-forgetting-necessity',
+      id: 'thm-consciousness-limitation',
       label: 'proposition',
-      number: '4.2',
-      name: 'Necessity of Forgetting',
+      number: '4.1',
+      name: 'Consciousness Limitation Principle',
       statement:
-        'For any finite-energy observer, forgetting is not merely inevitable but adaptive. The capacity for new distinction-making requires releasing maintenance energy from old distinctions. Perfect memory would preclude new learning.',
+        'The scope of conscious processing is limited by the energy cost of maintaining explicit distinctions. Only a small subset of ongoing distinction-making can be conscious at any moment because conscious processing requires high-energy prefrontal maintenance.',
       epistemicStatus: 'interpreted',
       dependsOn: ['A1', 'A2'],
     },
     {
       type: 'paragraph',
       content:
-        'This is why sleep involves active forgetting. During sleep, the brain selectively prunes distinctions, maintaining those with high utility while allowing low-utility distinctions to decay. The result is more efficient use of finite boundary-maintenance resources.',
+        'Automatization frees consciousness for new learning while maintaining previously learned distinctions at low energy cost. This explains the characteristic signature of expertise: experts make fewer conscious decisions while achieving superior outcomes.',
+      emphasis: 'conclusion',
     },
     {
       type: 'note',
       variant: 'editorial',
       content:
-        'Learning redistributes costs across time, not just reduces them. The energy saved by forgetting low-utility distinctions is reallocated to maintaining high-utility ones and acquiring new ones. This is why learning is a continuous process of optimization, not a simple accumulation.',
-    },
-    {
-      type: 'heading',
-      level: 2,
-      content: 'The Spacing Effect Explained',
-      id: 'spacing-effect-explained',
-    },
-    {
-      type: 'paragraph',
-      content:
-        'The spacing effect—where distributed practice produces better retention than massed practice—emerges from thermodynamic considerations:',
-    },
-    {
-      type: 'list',
-      style: 'numbered',
-      items: [
-        {
-          content:
-            '**Massed practice**: Maintains distinctions at high intensity briefly, then allows full decay',
-        },
-        {
-          content:
-            '**Spaced practice**: Allows partial decay, then re-energizes boundaries just before complete decay',
-        },
-      ],
-    },
-    {
-      type: 'paragraph',
-      content:
-        'Each re-energizing event after partial decay strengthens the boundary through a process of reconstruction. The OLU must re-distinguish what was becoming fuzzy, and this active re-distinction creates more robust encoding than simple maintenance.',
-    },
-    {
-      type: 'paragraph',
-      content:
-        'Formally: If $E_m$ is maintenance energy and $E_r$ is reconstruction energy ($E_r > E_m$), then:',
-    },
-    {
-      type: 'math',
-      latex:
-        '\\text{Massed: Total energy} = n \\times E_m \\quad \\text{(all during one session)}',
-      display: 'block',
-    },
-    {
-      type: 'math',
-      latex:
-        '\\text{Spaced: Total energy} = n \\times (E_m + E_r) \\quad \\text{(spread over multiple sessions)}',
-      display: 'block',
-    },
-    {
-      type: 'paragraph',
-      content:
-        'But the spaced approach produces more durable boundaries because reconstruction engages deeper encoding mechanisms than mere maintenance.',
-      emphasis: 'conclusion',
-    },
-    {
-      type: 'note',
-      variant: 'technical',
-      content:
-        'The spacing effect demonstrates that learning redistributes energy costs across time rather than simply minimizing them. Higher total energy expenditure (spaced) produces better outcomes than lower total energy (massed) because reconstruction creates stronger boundaries than maintenance alone.',
+        'This provides a thermodynamic grounding for the common observation that conscious attention is a limited resource. The limitation is not arbitrary—it reflects the metabolic cost of maintaining explicit boundaries in working memory.',
     },
     {
       type: 'summary',
       title: 'Key Insight',
       points: [
-        'Forgetting is adaptive, not pathological—it frees resources for new learning',
-        'Passive decay is thermodynamically free; active forgetting costs energy',
-        'Learning redistributes energy costs across time, not just reduces them',
-        'The spacing effect emerges from reconstruction being more effective than mere maintenance',
-        'Sleep involves selective pruning to optimize boundary-maintenance allocation',
+        'Automatization is energy optimization through neural circuit migration',
+        'Lower brain regions perform the same computations with less metabolic cost',
+        'Empirical evidence confirms 30-50% energy reductions for practiced skills',
+        'Consciousness is limited precisely because explicit distinction-making is expensive',
       ],
       variant: 'key-points',
     },
   ],
   keyPoints: [
-    'Forgetting is entropy reclaiming: the natural thermodynamic direction reasserted [INTERPRETED]',
-    'Forgetting is boundary decay when energy is not invested in maintenance',
-    'Passive decay is thermodynamically free; active forgetting costs energy',
-    'Different distinction types have different maintenance costs and decay rates [INTERPRETED]',
-    'Forgetting is adaptive: it frees resources for new anti-entropic building',
-    'Learning redistributes costs across time, not just reduces them',
-    'The spacing effect emerges from reconstruction being more effective than maintenance [INTERPRETED]',
+    'Automatization is anti-entropic stabilization: embedding patterns in decay-resistant structures [INTERPRETED]',
+    'Automatization transfers distinction-making from high-energy to low-energy neural circuits',
+    'The neural energy hierarchy ranges from expensive prefrontal cortex to efficient primary cortices [IMPORTED from neuroscience]',
+    'fMRI and metabolic studies confirm 30-50% energy reductions with practice [CONSISTENT with framework]',
+    'Conscious processing is expensive because it requires explicit boundary maintenance [INTERPRETED]',
+    'Automatization frees consciousness for new learning while maintaining old skills cheaply',
   ],
 };
 
