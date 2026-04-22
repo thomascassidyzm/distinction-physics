@@ -698,7 +698,9 @@ function processInlineContent(text: string): string {
 
   .content-blocks :global(strong) {
     font-weight: 600;
-    color: var(--text-primary, #e8e8f0);
+    /* inherit color from parent — bold in blue key/conclusion paragraphs
+       should stay blue, just heavier; bold in regular paragraphs stays
+       text-primary */
   }
 
   .content-blocks :global(em) {
