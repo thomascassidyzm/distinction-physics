@@ -60,12 +60,26 @@ function processInlineContent(text: string): string {
       }
     });
 
+    // Process bold: **text** -> <strong>text</strong>
+    // Must come before italic so ** isn't consumed as two single *
+    processed = processed.replace(/\*\*([^*]+?)\*\*/g, '<strong>$1</strong>');
+
+    // Process italic: *text* -> <em>text</em>
+    // After bold, any remaining single * is italic
+    processed = processed.replace(/(?<!\*)\*(?!\*)([^*]+?)\*(?!\*)/g, '<em>$1</em>');
+
+    // Process epistemic tags: [IMPORTS ...], [DERIVED], [INTERPRETED], [CONJECTURED], etc.
+    // Must come before citations and glossary so epistemic tags aren't styled as glossary terms
+    processed = processed.replace(/\[([A-Z]{2,}[^\]]*)\]/g, (_, tag) => {
+      return `<span class="epistemic-tag">[${tag}]</span>`;
+    });
+
     // Process citations: [@key] -> link
     processed = processed.replace(/\[@([^\]]+)\]/g, (_, key) => {
       return `<a href="#ref-${key}" class="citation-ref">[${key}]</a>`;
     });
 
-    // Process glossary refs: [term] -> tooltip (simple version)
+    // Process glossary refs: [Term] -> tooltip (remaining bracketed capitalized terms)
     processed = processed.replace(/\[([A-Z][^[\]]+)\]/g, (_, term) => {
       return `<span class="glossary-term" data-term="${term.toLowerCase().replace(/\s+/g, '-')}">${term}</span>`;
     });
@@ -666,6 +680,29 @@ function processInlineContent(text: string): string {
   .content-blocks :global(.glossary-term) {
     border-bottom: 1px dotted var(--text-muted, #606080);
     cursor: help;
+  }
+
+  .content-blocks :global(.epistemic-tag) {
+    display: inline-block;
+    font-family: var(--font-mono, 'JetBrains Mono', monospace);
+    font-size: 0.78em;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    color: var(--text-secondary, #a0a0b8);
+    background: rgba(74, 158, 255, 0.08);
+    border: 1px solid rgba(74, 158, 255, 0.18);
+    padding: 0.05em 0.45em;
+    border-radius: 3px;
+    vertical-align: 0.08em;
+  }
+
+  .content-blocks :global(strong) {
+    font-weight: 600;
+    color: var(--text-primary, #e8e8f0);
+  }
+
+  .content-blocks :global(em) {
+    font-style: italic;
   }
 
   /* KaTeX inline styling */
