@@ -86,7 +86,7 @@ export const section4_0: Section = {
     },
     {
       type: 'paragraph',
-      content: '**Axiom 1**: All distinctions cost energy. [IMPORTS Landauer]',
+      content: '**Axiom 1**: All distinctions accessible to OLUs cost energy. [IMPORTS Landauer; scoped to OLU-accessibility — see §0.3]',
       emphasis: 'key',
     },
     {

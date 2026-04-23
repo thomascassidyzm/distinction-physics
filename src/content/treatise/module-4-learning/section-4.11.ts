@@ -9,7 +9,7 @@ export const section4_11: Section = {
     {
       type: 'paragraph',
       content:
-        'The thermodynamic framework has immediate practical implications for education and skill training. If learning is fundamentally **anti-entropic pattern building**—creating and maintaining stable distinction structures against natural decay—then effective pedagogy should facilitate this process. These principles have been implemented in working systems (SSi, Zenjin, Alexander), providing practical validation.',
+        'The thermodynamic framework has practical implications for education and skill training. If learning is fundamentally **anti-entropic pattern building** — creating and maintaining stable distinction structures against natural decay — then effective pedagogy should facilitate this process. The principles below are consistent with the design rules of long-deployed systems (SSi since 2009, Zenjin, Alexander), whose operational practice §4.10 treats as the explanandum the framework attempts to explain. The discipline runs from pedagogy to theoretical interpretation, not the reverse.',
     },
     {
       type: 'heading',
@@ -281,7 +281,7 @@ export const section4_11: Section = {
     'Chunking, automatization, spacing, energy management, transfer, and meta-learning are key principles',
     'Effective teaching structures experience for building well-organized distinction networks',
     'The teacher\'s role is to facilitate efficient boundary construction, not merely transfer information',
-    'These principles are implemented in SSi, Zenjin, and Alexander learning systems',
+    'These principles are consistent with the design rules of long-deployed systems (SSi, Zenjin, Alexander), whose practice the framework treats as the explanandum (§4.10)',
     'These principles follow from the axioms of distinction cost and finite energy budgets',
   ],
 };

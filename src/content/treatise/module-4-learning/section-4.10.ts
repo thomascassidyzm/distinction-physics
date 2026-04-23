@@ -132,7 +132,7 @@ export const section4_10: Section = {
     {
       type: 'paragraph',
       content:
-        'Beyond theoretical consistency, the framework\'s learning interpretation has been validated through **working implementations**:',
+        'A note on the direction of inference. The deployed pedagogies referenced throughout this module — SSi (since 2009), Zenjin, Alexander — were built and refined on operational design rules well before the theoretical articulation here. They are the *explanandum* the framework attempts to explain (per §4.0 and §4.2), not engineered implementations of principles articulated after the fact:',
     },
     {
       type: 'list',
@@ -140,22 +140,22 @@ export const section4_10: Section = {
       items: [
         {
           content:
-            '**SSi (Spaced Repetition System)** — Implements the spacing effect as thermodynamically optimal reconstruction timing. Items are reviewed at intervals calculated to maximize the boundary-reconstruction benefit.',
+            '**SSi (Say Something in Welsh, Spanish, and other languages)** — The spacing-effect-driven scheduling and BUILD/USE production-first design predate the variational account. The framework offers an interpretation of *why* such scheduling sits near a least-action trajectory; SSi is not derived from the framework.',
         },
         {
           content:
-            '**Zenjin (Structured Learning)** — Implements hierarchical chunking principles. Content is organized into consolidatable units with explicit structure to facilitate anti-entropic pattern building.',
+            '**Zenjin** — The hierarchical chunking architecture was designed on operational pedagogical reasoning. The framework offers vocabulary in which to read its design rules as $E_{\\text{maint}}$-reductions; the design rules themselves are prior.',
         },
         {
           content:
-            '**Alexander (AI Tutoring)** — Implements adaptive distinction-building. The system assesses where a learner\'s distinction boundaries are fuzzy and targets instruction to sharpen those boundaries efficiently.',
+            '**Alexander** — The adaptive distinction-building approach reflects long-running pedagogical practice. The framework provides interpretive vocabulary, not a derivation of the system\'s design.',
         },
       ],
     },
     {
       type: 'paragraph',
       content:
-        'These systems are not merely tools that "happen to work"—they are **engineered implementations of the thermodynamic learning principles** described in this module. Their effectiveness provides practical validation that the anti-entropic interpretation of learning is productive.',
+        'These deployments are evidence the explanandum exists and has the shape §4.0 describes. They are not testimonials, and the framework is not validated by their existence — at most, the consistency between the variational account and the design rules that work in practice is suggestive. The directional discipline is important: pedagogy → theoretical interpretation, not the reverse.',
       emphasis: 'key',
     },
     {
@@ -214,7 +214,7 @@ export const section4_10: Section = {
     'Consistency demonstrations show the framework does not contradict known results',
     'Novel predictions await experimental investigation with current neuroscience methods',
     'Motor learning shows 30-50% metabolic cost reductions, confirming thermodynamic optimization [IMPORTED]',
-    'Practical validation: SSi, Zenjin, and Alexander implement these principles in working systems',
+    'Deployed pedagogy as explanandum: SSi/Zenjin/Alexander design rules predate the framework; the framework attempts to explain why they work, not the reverse',
     'Clear falsification criteria maintain the framework\'s scientific status',
   ],
 };

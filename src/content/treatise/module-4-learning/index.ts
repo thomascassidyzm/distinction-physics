@@ -45,7 +45,7 @@ export const module4: Module = {
     'Practice reduces energy cost per distinction—mastery is automatization [INTERPRETED]',
     'Chunking compresses multiple distinctions into single higher-order boundaries [INTERPRETED]',
     'The spacing effect emerges from thermodynamics of boundary reconstruction [INTERPRETED]',
-    'Practical validation: SSi, Zenjin, and Alexander learning systems implement these principles',
+    'Deployed pedagogy as explanandum: SSi outcomes are the data the framework attempts to explain — design rules came first, theoretical articulation followed (see §4.0, §4.10)',
   ],
   connectionsToNext: [
     'Module 5 interprets quantum mechanics through the same thermodynamic constraints',
