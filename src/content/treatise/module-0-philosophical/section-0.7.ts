@@ -11,7 +11,7 @@ export const section0_7: Section = {
     },
     {
       type: 'paragraph',
-      content: "Our framework offers a novel answer: **consciousness is self-referential distinction-making**. A conscious system is an OLU that can make distinctions not only about external entities but about its own distinction-making processes.",
+      content: "The framework offers an interpretive proposal: **consciousness is associated with self-referential distinction-making** — a conscious system is an OLU that can make distinctions not only about external entities but about its own distinction-making processes. This is offered as a *reframing* of the question, not a solution to the hard problem; the residual mystery is relocated, not eliminated (developed below and in Module 3).",
     },
     {
       type: 'heading',
@@ -95,16 +95,16 @@ export const section0_7: Section = {
     },
     {
       type: 'paragraph',
-      content: "Our answer: phenomenal experience is the internal perspective of a self-monitoring boundary system. When a system makes distinctions about its own distinction-making, it creates an internal model of itself as a distinction-maker. This internal perspective—the view from inside the self-referential loop—**is** what we call phenomenal experience.",
+      content: "The framework's interpretive proposal: phenomenal experience is the internal perspective of a self-monitoring boundary system. When a system makes distinctions about its own distinction-making, it sustains an internal model of itself as a distinction-maker. The view from inside the self-referential loop is offered as a candidate account of what we call phenomenal experience. The proposal is interpretive — it does not close the explanatory gap, only relocates it.",
     },
     {
       type: 'paragraph',
-      content: "There's \"something it is like\" to be you because you are a system that models itself, that observes itself observing, that makes distinctions about its own states. The phenomenal character arises from the particular pattern of self-referential distinctions your brain maintains.",
+      content: "There may be \"something it is like\" to be you because you are a system that models itself, that observes itself observing, that makes distinctions about its own states. The phenomenal character would, on this proposal, arise from the particular pattern of self-referential distinctions your brain maintains.",
     },
     {
       type: 'heading',
       level: 3,
-      content: 'The Hard Problem Dissolved?',
+      content: 'The Hard Problem Relocated, Not Solved',
     },
     {
       type: 'paragraph',
@@ -112,11 +112,11 @@ export const section0_7: Section = {
     },
     {
       type: 'paragraph',
-      content: "Our framework suggests this isn't a hard problem but a conceptual confusion. **Self-referential distinction-making just is what consciousness is.** There's no additional mystery of why it \"feels like something\"—the feeling is the self-referential loop, viewed from inside.",
+      content: "The framework does **not** solve this problem. What it does is *relocate* the question. Instead of \"why does matter give rise to experience?\", the question becomes: **\"why does self-referential boundary maintenance have an inside perspective?\"** The relocation may be useful — the new question may be more empirically tractable, in the sense that organizational patterns enabling self-reference are at least the kind of thing one can investigate. But it may also be the same mystery in different clothing. The framework is honest about this: it does not claim that self-referential distinction-making *just is* consciousness, in a way that closes the explanatory gap. The strong identity claim is not made.",
     },
     {
       type: 'paragraph',
-      content: "This doesn't eliminate the explanatory gap entirely, but it transforms it: instead of asking \"why does matter become conscious?\", we ask \"what organizational patterns of distinction-making enable self-reference?\" This is a tractable scientific question.",
+      content: "What the framework does claim is that self-reference is the right *operational handle* — the empirically accessible feature to investigate — and that the residual mystery, while not removed, sits in a more workable place than it does in the original framing.",
     },
     {
       type: 'heading',
@@ -141,14 +141,14 @@ export const section0_7: Section = {
     },
     {
       type: 'paragraph',
-      content: "The foundational principle established here is: consciousness is not mysterious substance or inexplicable emergence, but a particular organization of the same boundary-drawing processes that constitute all existence-as-distinct—specifically, organization that enables self-reference.",
+      content: "The proposal offered here is interpretive: consciousness is treated, for theoretical purposes, as a particular organization of the same boundary-drawing processes that constitute all existence-as-distinct — specifically, organization that enables self-reference. Whether this gives consciousness, or merely names where to look for it, is a question the framework does not foreclose.",
     },
   ],
   keyPoints: [
-    "Consciousness is self-referential distinction-making—an OLU that makes distinctions about its own distinction-making processes",
-    "Self-reference is energetically expensive, explaining why we cannot be conscious of everything simultaneously",
-    "The unity of consciousness arises from maintaining a coherent self-referential loop",
-    "Phenomenal experience ('what it is like') is the internal perspective of a self-monitoring boundary system",
-    "The hard problem of consciousness is reframed as a tractable question about organizational patterns enabling self-reference",
+    "Interpretive proposal: consciousness is associated with self-referential distinction-making — an OLU making distinctions about its own distinction-making",
+    "Self-reference is energetically expensive, which is consistent with the observation that we cannot be conscious of everything simultaneously",
+    "The unity of consciousness is consistent with maintaining a coherent self-referential loop",
+    "Phenomenal experience ('what it is like') is offered as a candidate account: the internal perspective of a self-monitoring boundary system",
+    "The hard problem is *relocated* (to: why does self-referential boundary maintenance have an inside perspective?), not solved or dissolved. The strong identity claim that self-reference IS consciousness is deliberately not made",
   ],
 };

@@ -3,18 +3,13 @@ import type { Section } from '../types';
 export const section0_2: Section = {
   id: '0.2',
   title: 'The Transcendental Necessity of Distinction',
-  subtitle: 'From Cognition to Ontology',
+  subtitle: 'From Expressibility to Reality-as-Accessible',
   epistemicStatus: 'derived',
   content: [
     {
       type: 'paragraph',
       content:
-        "The central claim of this framework—that distinction is ontologically primitive—requires careful justification. We must address an obvious objection: aren't we using distinction to argue for distinction? Doesn't this make our argument circular?",
-    },
-    {
-      type: 'paragraph',
-      content:
-        'The answer is no. Our argument has the structure of a **transcendental argument**: we identify what must be true for any possible thought, experience, or claim to occur, and show that distinction-making is this necessary condition.',
+        '§0.0 stated the transcendental claim and scoped it carefully: any theory expressible-to-OLUs in any meaningful way presupposes distinction-making, and any attempted denial is itself such a theory. This section does two further things. First, it works through the obvious circularity objection — aren\'t we using distinction to argue for distinction? Second, it makes the careful Kantian move from a claim about *expressibility* to a claim about *reality-as-accessible* — without overreaching into a claim about reality-in-itself.',
     },
     {
       type: 'heading',
@@ -78,12 +73,12 @@ export const section0_2: Section = {
     {
       type: 'paragraph',
       content:
-        'Our argument is **not**: "Assume distinction exists, therefore distinction exists" (which would be circular).',
+        'The argument is **not**: "Assume distinction exists, therefore distinction exists" (which would be circular).',
     },
     {
       type: 'paragraph',
       content:
-        'Rather, our argument is: "**Even the attempt to think, argue, or claim anything whatsoever—including skeptical thoughts about distinction—necessarily employs distinction-making. Therefore distinction-making must be real and fundamental.**"',
+        'Rather, the argument is: "**Even the attempt to think, argue, or claim anything whatsoever — including skeptical thoughts about distinction — necessarily employs distinction-making. Therefore distinction-making is presupposed by any theory expressible-to-OLUs.**"',
       emphasis: 'key',
     },
     {
@@ -110,7 +105,7 @@ export const section0_2: Section = {
     {
       type: 'paragraph',
       content:
-        "This is why we say distinction is **ontologically primitive** within our framework: not because we've deduced it from more basic principles (there are none), but because any attempt to think about reality—including attempts to deny or explain distinction—must already employ it.",
+        "This is why distinction is treated as **primitive within reality-as-accessible-to-OLUs**: not because it has been deduced from more basic principles (there are none on offer), but because any attempt to articulate any theory of reality — including attempts to deny or explain distinction — must already employ it. The strength of the claim should not exceed this: distinction is primitive *within the scope of what an OLU can express, observe, or test*. Whether something more basic underlies that scope, in a reality-in-itself beyond all possible observation, is a question on which the framework is deliberately silent (see *Status of the Claim* below).",
     },
     {
       type: 'paragraph',
@@ -322,13 +317,13 @@ export const section0_2: Section = {
     {
       type: 'heading',
       level: 2,
-      content: 'The Ontological Primacy of Distinction',
+      content: 'The Primacy of Distinction Within Reality-as-Accessible',
       id: 'ontological-primacy',
     },
     {
       type: 'paragraph',
       content:
-        'We conclude: **distinction-making is ontologically primitive for observers-like-us**. It is:',
+        'The conclusion, stated with its scope intact: **within reality-as-accessible-to-OLUs, distinction-making is primitive.** Within that scope, it is:',
     },
     {
       type: 'list',
@@ -336,41 +331,41 @@ export const section0_2: Section = {
       items: [
         {
           content:
-            '**Transcendentally necessary**: The condition of possibility for any thought or experience',
+            '**Transcendentally necessary** for expressibility: the condition of possibility for any theory expressible to or by an OLU',
         },
         {
           content:
-            '**Operationally unavoidable**: Cannot be coherently denied (denial requires distinction)',
+            '**Operationally unavoidable**: cannot be coherently denied — any denial is itself a theory expressible-to-OLUs and so presupposes the very thing being denied',
         },
         {
           content:
-            '**Ontologically fundamental**: Constitutes existence-as-accessible rather than merely describing it',
+            '**Constitutive of accessibility**: an entity in-principle indistinguishable from everything else cannot be perceived, thought about, interacted with, or measured by any OLU. To exist-as-accessible is to be distinct',
         },
         {
           content:
-            '**Universally applicable**: Operates at all scales where OLUs exist (which is nearly everywhere)',
+            '**Applicable wherever OLUs exist**: which is nearly everywhere far from thermodynamic equilibrium, but not "universal" in the stronger sense of applying to a hypothetical reality-in-itself beyond all possible observation. The framework is silent on that question by design',
         },
       ],
     },
     {
       type: 'paragraph',
       content:
-        'This is the foundation upon which everything else in this framework builds. In subsequent modules, we will show how mathematics, consciousness, learning, quantum mechanics, thermodynamics, and spacetime all emerge from this singular foundation—not as separate domains requiring distinct explanations but as different manifestations of the same underlying principle: **boundary-drawing under resource constraints**.',
+        'This is one of two foundations on which the rest of the framework builds. In subsequent modules, mathematics, consciousness, learning, quantum mechanics, thermodynamics, and spacetime are interpreted through distinction-vocabulary — different manifestations of the same underlying principle: **boundary-drawing under resource constraints**.',
     },
     {
       type: 'paragraph',
       content:
-        'But first, we must address the energetic dimension that makes this foundation physical rather than merely conceptual.',
+        'The other foundation — the energetic dimension that makes distinction-making physical rather than merely conceptual — is developed in §0.3.',
       emphasis: 'conclusion',
     },
   ],
   keyPoints: [
-    'Distinction-making is transcendentally necessary—the condition of possibility for any thought or experience',
-    'The circularity objection fails: we are not assuming distinction but showing it cannot be coherently denied',
-    'To be (accessible to any possible OLU) is to be distinct',
-    'Three thought experiments (homogeneous object, property-less substrate, boundary-less universe) demonstrate distinction is required for existence-as-accessible',
+    'Builds on §0.0\'s expressibility-scoped transcendental claim and works through the circularity objection',
+    'The argument is not "assume distinction, therefore distinction"; it is that any theory expressible-to-OLUs (including skeptical denials) already employs distinction-making',
+    'Within reality-as-accessible-to-OLUs, distinction is primitive — but the framework is deliberately silent on reality-in-itself beyond all possible observation',
+    'To be accessible to any possible OLU is to be distinct — not a claim about reality-in-itself',
+    'Three thought experiments (homogeneous object, property-less substrate, boundary-less universe) demonstrate that without distinction there is no accessible reality',
     'Even attempting to imagine alternatives to distinction requires distinction-making',
-    'This is not idealism, anthropocentrism, or eliminativism—it is a claim about the structure of accessible reality',
-    'Distinction-making is ontologically primitive: transcendentally necessary, operationally unavoidable, ontologically fundamental, and universally applicable',
+    'This is not idealism, anthropocentrism, or eliminativism — the claim is scoped to the structure of accessible reality',
   ],
 };

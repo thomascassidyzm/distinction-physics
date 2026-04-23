@@ -174,7 +174,7 @@ export const section0_6: Section = {
     {
       type: 'paragraph',
       content:
-        'The learning systems we\'ve built—**SSi** (spaced repetition), **Zenjin** (structured learning), **Alexander** (AI tutoring)—are implementations of these thermodynamic principles. They\'re not just tools that "seem to work"—they\'re engineered to optimize distinction-making efficiency.',
+        'The deployed learning systems referenced throughout this treatise — **SSi** (Say Something in Welsh, Spanish, and other languages), **Zenjin**, **Alexander** — were built and refined on operational design rules well before the theoretical articulation here. The framework treats their outcomes as the *explanandum* — data the variational/least-action account in §4.2 attempts to explain — not as confirmations engineered after the fact. The direction of inference runs from observed pedagogy → theoretical interpretation, not the reverse.',
     },
     {
       type: 'heading',

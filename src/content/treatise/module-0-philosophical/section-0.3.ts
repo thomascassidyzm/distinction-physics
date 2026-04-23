@@ -29,14 +29,14 @@ export const section0_3: Section = {
       type: 'axiom',
       id: 'A1',
       name: 'Energy Cost of Distinction [IMPORTS Landauer]',
-      statement: 'All distinctions cost energy. To maintain that a system is in state A rather than state B requires that states A and B be physically distinguishable. But distinguishability is not free. Making or maintaining any distinction—any boundary, any difference, any observable property—requires energy expenditure.',
-      grounding: 'This is not a contingent fact about our particular technology or biology but a necessary feature of physical distinction-making. Distinguishability requires physical instantiation, and physical instantiation requires energy.',
-      physicalBasis: '**IMPORTANT: This axiom IMPORTS Landauer\'s principle** (kT ln 2 per bit erasure) from thermodynamics. We do not derive Landauer\'s limit—we build upon it. This is not a weakness: all physics frameworks import some foundational principles. Ours imports one of the most well-established results in information thermodynamics, experimentally confirmed in 2012 (Bérut et al.).',
+      statement: 'All distinctions accessible to OLUs cost energy. For an OLU to maintain that a system is in state A rather than state B — to record, retain, or act on the distinction — states A and B must be physically distinguishable in a form the OLU can read. Distinguishability of that kind is not free: making, recording, or maintaining any such distinction requires energy expenditure.',
+      grounding: 'This is not a contingent fact about our particular technology or biology, but a feature of physical distinction-making as it must appear to any finite observer. Recording requires physical instantiation; physical instantiation requires energy.',
+      physicalBasis: 'This axiom **imports Landauer\'s principle** (kT ln 2 per irreversible bit erasure) from information thermodynamics — experimentally confirmed in 2012 (Bérut et al.) — and uses it to ground the energy cost of distinction-making. Scope acknowledgment: Landauer bounds the energy cost of *irreversible* operations (erasure, recording into a thermodynamically equilibrated medium). Purely reversible computation has no Landauer floor. The axiom is therefore framed for OLU-relevant distinctions, which by their nature involve recording — a record that cannot be read by an OLU is not a distinction the OLU has access to. Reversible computations that leave no readable trace fall outside the scope where the axiom does work, and the framework does not claim otherwise.',
       implications: [
-        'No distinction can be made or maintained without energy expenditure',
+        'No OLU-accessible distinction can be made, recorded, or maintained without energy expenditure',
         'More precise distinctions require more energy',
-        'Distinction-making is fundamentally a physical process',
-        'Information and energy are inextricably linked',
+        'Distinction-making, in the sense relevant to observers, is fundamentally a physical process',
+        'Information and energy are inextricably linked once readability is required',
       ],
     },
     {
@@ -56,25 +56,20 @@ export const section0_3: Section = {
     {
       type: 'heading',
       level: 3,
-      content: 'The Assumption Defense',
-      id: 'assumption-defense',
+      content: 'A Note on the Imports',
+      id: 'imports-note',
     },
     {
       type: 'paragraph',
-      content: 'Before proceeding, we address the objection: "You import Landauer\'s principle; you don\'t derive physics from nothing."',
+      content: 'Both axioms import. Axiom 1 imports Landauer\'s principle from information thermodynamics; Axiom 2 imports the empirical observation that physical observers operate under finite free-energy budgets. The framework does not derive physics from first principles, and §0.0 set out plainly what it does instead — providing interpretive vocabulary and deriving a small number of structural consequences for OLUs.',
     },
     {
       type: 'paragraph',
-      content: '**This objection applies equally to ALL physics.** Quantum mechanics postulates the Born rule without deriving it. General relativity assumes the equivalence principle. Thermodynamics posits the Second Law. No physics derives physics from nothing.',
+      content: 'The Landauer scope question deserves restating here, where the axiom is actually stated. Landauer\'s bound applies to *irreversible* operations — erasures and recordings into thermodynamically equilibrated media. Purely reversible computation has no such floor. The axiom is framed for distinctions accessible to OLUs precisely because OLU-accessibility requires reading a recorded state, which in turn requires irreversible operations somewhere in the chain. A distinction that leaves no readable trace is not a distinction an OLU has access to, and the axiom is silent on it. The framework neither claims that *all* logical or physical distinctions cost energy, nor papers over the gap between Landauer\'s strict scope and what Axiom 1 asserts.',
     },
     {
       type: 'paragraph',
-      content: 'The right questions are: (1) Are our assumptions **minimal**? Yes—two axioms. (2) Are they **unavoidable**? Yes—you cannot deny distinction-primacy without invoking distinctions. (3) Are they **productive**? Yes—they illuminate learning, consciousness, and physical constraints. Our assumptions are remarkably minimal, genuinely unavoidable, and productively illuminating.',
-      emphasis: 'key',
-    },
-    {
-      type: 'paragraph',
-      content: 'From these two axioms—that distinctions cost energy and observers have finite energy—we will show what **genuinely follows** (effective discreteness, resolution limits) and what we **interpret** through this lens (quantum phenomena, thermodynamic behavior). We maintain epistemic honesty about which is which.',
+      content: 'From these two axioms — distinctions accessible to OLUs cost energy, OLUs have finite energy — the framework shows what **genuinely follows** (effective discreteness, resolution limits) and what it **interprets** through this lens (quantum phenomena, thermodynamic behavior). The boundary between the two is maintained throughout.',
     },
 
     // =========================================================================
@@ -618,7 +613,7 @@ export const section0_3: Section = {
     },
     {
       type: 'paragraph',
-      content: '**Epistemic note**: Landauer\'s limit is imported from thermodynamics, not derived from our axioms. Our framework interprets why this limit exists through the lens of distinction-making: if distinctions have physical reality and cost energy, then information erasure must dissipate energy. The specific value $kT \\ln(2)$ comes from thermodynamics, not from our axioms alone.',
+      content: '**Epistemic note**: Landauer\'s limit is imported from thermodynamics, not derived from the framework\'s axioms. The interpretive gloss is that *if* distinctions have physical reality and cost energy, *then* erasure (collapsing a previously maintained distinction) must dissipate energy. The specific value $kT \\ln(2)$ comes from thermodynamics, not from the axioms alone. Note also that Landauer\'s bound applies specifically to *irreversible* operations; reversible computation has no such floor (see Axiom 1\'s scope acknowledgment above). The framework\'s use of Landauer is consistent with this: distinctions an OLU can read or maintain require irreversible operations somewhere, and so do hit the bound.',
     },
 
     // HEAT DEATH
@@ -993,16 +988,17 @@ export const section0_3: Section = {
     },
   ],
   keyPoints: [
-    'Two axioms ground the framework: (1) All distinctions cost energy [IMPORTS Landauer]; (2) All OLUs have finite energy budgets',
-    '[DERIVED] Effective Discreteness: No continuous quantity can be accessed by any observer—infinite precision would require infinite energy',
-    '[DERIVED] The Resolution Hierarchy: Different OLUs access reality at different effective resolutions based on energy budgets',
-    '[DERIVED] The Planck scale represents a universal resolution limit beyond which no observer can make distinctions',
-    '[DERIVED] Finitude: Only finitely many distinctions can be maintained simultaneously',
-    '[DERIVED] Dynamism: Distinctions require continuous energy maintenance',
-    '[DERIVED] Relationality: All OLUs must draw energy from their environments',
+    'Two axioms ground the framework: (1) All distinctions accessible to OLUs cost energy [IMPORTS Landauer]; (2) All OLUs have finite energy budgets',
+    'Axiom 1 is scoped to OLU-accessible distinctions because OLU-accessibility requires reading a recorded state, which involves irreversible operations and so hits the Landauer bound. Reversible computations leaving no readable trace fall outside this scope; the framework does not claim otherwise',
+    '[DERIVED] Effective Discreteness: no continuous quantity can be accessed by any OLU — infinite precision would require infinite energy',
+    '[DERIVED] The Resolution Hierarchy: different OLUs access reality at different effective resolutions based on energy budgets',
+    '[DERIVED] The Planck scale represents a universal resolution limit beyond which no OLU can make distinctions',
+    '[DERIVED] Finitude: only finitely many distinctions can be maintained simultaneously',
+    '[DERIVED] Dynamism: distinctions require continuous energy maintenance',
+    '[DERIVED] Relationality: all OLUs must draw energy from their environments',
     '[INTERPRETED] Quantum mechanics (uncertainty, quantization, superposition) viewed through distinction-vocabulary',
     '[INTERPRETED] Thermodynamics (second law, entropy) as distinction-decay without energy input',
-    '[IMPORTED] Landauer\'s principle (kT ln 2 per bit) is foundational, not derived',
-    'The framework complements existing physics—it interprets rather than replaces',
+    '[IMPORTED] Landauer\'s principle (kT ln 2 per irreversible bit erasure) is foundational, not derived',
+    'The framework complements existing physics — it interprets rather than replaces',
   ],
 };

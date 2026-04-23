@@ -20,6 +20,11 @@ export const section0_1: Section = {
     {
       type: 'paragraph',
       content:
+        'The phrase "observers like us" is borrowed from Wolfram, who uses it in the Wolfram Physics Project and Ruliad work to refer to observers with limited computational bandwidth who experience the entangled space of all possible computations as a coherent slice. The framework here shares Wolfram\'s observer-relativization sympathy — that physics looks the way it does in part because of what kind of system is doing the observing. The two framings differ in starting move: Wolfram\'s computational universalism *presupposes* distinguishability (the slicing operation requires it); the framework here makes distinguishability the primitive and grounds its energetic cost thermodynamically via Landauer (§0.3). The "OLU" abbreviation is local to this treatise; the underlying concept is shared.',
+    },
+    {
+      type: 'paragraph',
+      content:
         "This definition might seem broad, but it captures the essence of distinction-making: if a system cannot respond differently to different inputs, then no distinction is being made by that system. The capacity for differential response IS the capacity for distinction-making.",
     },
     {

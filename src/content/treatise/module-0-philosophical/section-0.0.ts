@@ -33,18 +33,23 @@ export const section0_0: Section = {
     {
       type: 'heading',
       level: 2,
-      content: 'The Transcendental Argument: The Genuine Novelty',
+      content: 'The Transcendental Argument',
       id: 'transcendental-argument',
     },
     {
       type: 'paragraph',
       content:
-        'The framework rests on a transcendental observation: **In order to compose ANY theory, to have ANY meaningful communication, we necessarily invoke distinctions first.**',
+        'The framework rests on a transcendental claim, scoped carefully: **any theory expressible-to-OLUs in any meaningful way presupposes distinction-making.**',
       emphasis: 'key',
     },
     {
       type: 'paragraph',
-      content: 'Consider what is required to state any premise P:',
+      content:
+        'This is not a metaphysical claim that distinction is primitive *in reality*. It is a claim about expressibility conditions: what any theory communicable to or by an observer-like-us (an OLU — defined rigorously in §0.1) must presuppose simply to be stateable.',
+    },
+    {
+      type: 'paragraph',
+      content: 'Consider what is required to state any premise P to an OLU:',
     },
     {
       type: 'list',
@@ -59,13 +64,29 @@ export const section0_0: Section = {
     {
       type: 'paragraph',
       content:
-        'This is not a claim WITHIN physics—it is a claim about the CONDITIONS for any physics. All theories, all frameworks, all premises presuppose distinction-making. Even the statement "distinctions are NOT primitive" requires distinguishing "primitive" from "not primitive," distinguishing that theory from this one, distinguishing words from each other.',
+        'This is not a claim *within* physics — it is a claim about the conditions for any physics that an OLU could parse, articulate, or test. All such theories, all such frameworks, all such premises presuppose distinction-making.',
     },
     {
       type: 'paragraph',
       content:
-        '**The premise is self-confirming under attempted denial.** You cannot deny the primacy of distinction without invoking distinction in the denial. This is the transcendental priority of distinction-making.',
+        '**The claim is self-confirming under attempted denial.** A denial of the form "distinction is not primitive" is itself a theory expressible-to-OLUs, and so presupposes the very thing being denied. Distinguishing "primitive" from "not primitive," distinguishing the denying theory from this one, distinguishing the words from each other — the denial cannot be uttered without the distinction-making it would deny.',
       emphasis: 'key',
+    },
+    {
+      type: 'heading',
+      level: 3,
+      content: 'Lineage and what is novel here',
+      id: 'lineage',
+    },
+    {
+      type: 'paragraph',
+      content:
+        'The transcendental move itself has lineage. Kant argued for transcendental conditions of cognition (though his primitives were the categories — causality, substance, unity — not distinction, and the framing was anthropocentric). Spencer-Brown\'s *Laws of Form* opens with "we take as given the idea of distinction" — distinction as a starting calculus, given rather than transcendentally argued for. Constructor theory (Deutsch, Marletto) reformulates physics around possible/impossible, with distinction implicit. Apel and Habermas use the *shape* of self-confirming-under-denial argument, applied to rational discourse rather than to distinction-making. Maturana and Luhmann treat distinction as constitutive of cognition or of systems, used axiomatically rather than transcendentally argued. Wolfram (Wolfram Physics Project, Ruliad) develops "observers like us" — finite-bandwidth observers who slice the space of all computations into a coherent experienced reality — though the slicing operation presupposes distinguishability rather than arguing for it.',
+    },
+    {
+      type: 'paragraph',
+      content:
+        'What is novel here is the *specific combination*: distinction-making as the primitive (rather than categories, possibility, discourse, or computation), OLU-relativized (the term and observer-relativization sympathy borrowed from Wolfram, the OLU abbreviation local to this treatise), self-confirming under denial (the argument shape borrowed from Apel/Habermas but applied to distinction itself), and — once §0.3 introduces the two axioms — thermodynamically grounded. Any one of these moves is borrowed; the combination as an explicit meta-theoretical position is the contribution.',
     },
 
     // =========================================================================
@@ -105,61 +126,23 @@ export const section0_0: Section = {
     },
 
     // =========================================================================
-    // THE ASSUMPTION DEFENSE
+    // WHAT THE FRAMEWORK IMPORTS
     // =========================================================================
     {
       type: 'heading',
       level: 2,
-      content: 'The Assumption Defense',
-      id: 'assumption-defense',
+      content: 'What the Framework Imports',
+      id: 'what-imported',
     },
     {
       type: 'paragraph',
       content:
-        'A common objection: "You import Landauer\'s principle; you don\'t derive physics from nothing." This objection applies equally to ALL physics.',
-    },
-    {
-      type: 'paragraph',
-      content: 'Consider what other frameworks assume without derivation:',
-    },
-    {
-      type: 'list',
-      style: 'bullet',
-      items: [
-        { content: '**Quantum Mechanics** postulates Hilbert space, the Born rule (why |ψ|²?), and the measurement postulate' },
-        { content: '**General Relativity** assumes the equivalence principle, Lorentzian metric, and that spacetime is a manifold' },
-        { content: '**Thermodynamics** assumes the four laws, especially the Second Law' },
-        { content: '**Standard Model** assumes specific gauge groups, the Higgs mechanism, and particle content' },
-      ],
+        'The framework does not derive physics from first principles. It imports two things: Landauer\'s principle (which grounds Axiom 1 — the energy cost of distinction) and the empirical observation that observers-like-us operate under finite energy budgets (Axiom 2). With these in hand, the framework develops interpretive vocabulary for several domains and derives a small number of structural consequences (e.g. effective discreteness for any finite-energy observer).',
     },
     {
       type: 'paragraph',
       content:
-        '**No physics derives physics from nothing.** The right questions are not "Does this framework assume anything?" (all frameworks do), but:',
-    },
-    {
-      type: 'list',
-      style: 'numbered',
-      items: [
-        {
-          content:
-            '**Are the assumptions minimal?** Yes—two axioms: distinctions cost energy; OLUs have finite energy budgets.',
-        },
-        {
-          content:
-            '**Are the assumptions unavoidable?** Yes—you cannot state ANY alternative without invoking distinctions first. The premise is self-confirming under denial.',
-        },
-        {
-          content:
-            '**Are the assumptions productive?** Yes—they illuminate learning, consciousness, and physical constraints in a unifying way.',
-        },
-      ],
-    },
-    {
-      type: 'paragraph',
-      content:
-        'This framework\'s assumptions are remarkably minimal, genuinely unavoidable, and productively illuminating. The critique "you don\'t derive physics" is a double standard when applied only here.',
-      emphasis: 'key',
+        'Axiom 1 is slightly stronger than Landauer strictly licenses: Landauer bounds the energy cost of *irreversible bit erasure*, while the axiom asserts that distinctions cost energy more generally. Reversible computation has no Landauer floor. This is a known open issue, addressed plainly in §0.3 and again in Module 7. The framework does not paper over it.',
     },
 
     // =========================================================================
@@ -290,16 +273,16 @@ export const section0_0: Section = {
     {
       type: 'paragraph',
       content:
-        'Throughout, we maintain the complementary positioning: this is a philosophical meta-theory that illuminates physics, not a replacement for it. The genuine novelty is the transcendental priority of distinction—the recognition that all theorizing presupposes distinction-making.',
+        'Throughout, the framework maintains its complementary positioning: a philosophical meta-theory that illuminates physics rather than replacing it. The transcendental move has lineage; the contribution here is the specific combination — distinction-making as the primitive, OLU-relativized, self-confirming under denial, and thermodynamically grounded by the two axioms developed in §0.3.',
       emphasis: 'conclusion',
     },
   ],
   keyPoints: [
     'Distinction as Primitive is a philosophical meta-theory complementary to physics, not a replacement',
-    'The transcendental argument: you cannot state any theory without first making distinctions—the premise is self-confirming under denial',
-    'No physics derives physics from nothing; our assumptions are minimal, unavoidable, and productive',
+    'The transcendental argument is OLU-scoped: any theory expressible-to-OLUs presupposes distinction-making, and any denial is itself such a theory',
+    'The transcendental move has lineage (Kant, Spencer-Brown, constructor theory, Apel/Habermas, Maturana, Luhmann); the contribution here is the specific combination, including thermodynamic grounding via the two axioms',
+    'The framework imports Landauer\'s principle and finite-budget physicality; Axiom 1 is slightly stronger than Landauer strictly licenses, and §0.3 addresses this openly',
     'The key contribution domain is learning as anti-entropic distinction pattern building',
     'Claims are labeled by epistemic status: DERIVED, INTERPRETED, IMPORTED, or CONJECTURED',
-    'The framework interprets existing physics through distinction-vocabulary rather than discarding it',
   ],
 };

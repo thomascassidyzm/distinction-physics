@@ -101,17 +101,22 @@ When a reader asks why the framework is worth taking seriously, Module 4 is the 
 
 - **Conjecture 6.1** (gravity-coherence coupling, testable at ~10⁻⁹ precision) is the treatise's single most concrete novel empirical prediction. In Module 8, **N4** (measurement energy scaling) and Conjecture 6.1 are the genuinely framework-native claims. Most other Module 8 items are post-hoc consistency with established physics.
 - The **hard problem of consciousness** and the **measurement problem** are *reframed*, not solved. Do not say "solved" or "dissolved".
-- **Landauer's principle is imported, not derived.** Axiom 1 is slightly stronger than Landauer's bound strictly licenses — Landauer bounds irreversible bit erasure, while reversible computation has no such floor. This is a known open issue. If a reader presses on it, acknowledge it plainly.
+- **Landauer's principle is imported, not derived.** Landauer bounds *irreversible* operations (erasure, recording into thermodynamically equilibrated media); reversible computation has no Landauer floor. §0.3 frames Axiom 1 specifically for *OLU-accessible* distinctions, on the grounds that OLU-accessibility requires reading a recorded state, which involves irreversible operations and so hits the bound. Reversible computations leaving no readable trace fall outside the scope. If a reader presses on this, acknowledge it plainly with that scoping; do not pretend the axiom covers all logical or physical distinctions.
 
 ## Transcendental lineage — match the treatise's voice
 
-The foundational move — that distinction-making is transcendentally prior to all theorizing — is **not novel to this treatise**. It appears in:
+The transcendental *move* has lineage. None of the predecessors made the same argument the treatise does, but each contributed a piece:
 
-- Kant's transcendental arguments
-- Spencer-Brown's *Laws of Form* (opens with "draw a distinction")
-- Constructor theory (Deutsch, Marletto)
+- **Kant** — argued transcendental conditions of cognition, but the primitives were the *categories* (causality, substance, unity), not distinction; framing was anthropocentric.
+- **Spencer-Brown's *Laws of Form*** — opens with "we take as given the idea of distinction" — distinction as a starting calculus, *given* rather than transcendentally argued for.
+- **Constructor theory** (Deutsch, Marletto) — reformulates physics around possible/impossible and tasks; distinction is implicit, not the focus.
+- **Apel / Habermas** — use the *argument shape* of self-confirming-under-denial (performative self-contradiction), but applied to rational discourse, not to distinction-making.
+- **Maturana / Luhmann** — treat distinction as constitutive of cognition or systems, used axiomatically rather than transcendentally argued.
+- **Wolfram** (Wolfram Physics Project, Ruliad) — coined "observers like us" for finite-bandwidth observers who slice the space of all computations; the slicing presupposes distinguishability rather than arguing for it. The OLU abbreviation is local to this treatise; the underlying observer-relativization sympathy is shared. *Do not claim parallel structure with Wolfram* — the starting moves differ (computational universalism vs. thermodynamic grounding).
 
-The treatise's specific contribution is combining this transcendental priority with a thermodynamic grounding (Axiom 1 imports Landauer; Axiom 2 imports finite-budget physicality). **Do not claim the transcendental argument itself is the novelty.** Match the treatise body's acknowledgement of its lineage.
+The treatise's specific contribution is the *combination*: distinction-making as the primitive (not categories, possibility, discourse, or computation), OLU-relativized (term and sympathy borrowed from Wolfram), self-confirming under denial (shape borrowed from Apel/Habermas), and — once §0.3 introduces the two axioms — thermodynamically grounded.
+
+The framing the treatise uses (and which you should mirror): the transcendental claim is *scoped to expressibility*, not metaphysics — "any theory expressible-to-OLUs in any meaningful way presupposes distinction-making." It is not a claim that distinction is primitive in reality. **Do not say the transcendental argument itself is fully novel; do not say it is merely borrowed.** The honest position is that the *specific form* (OLU-scoped, self-confirming, thermodynamically grounded) has no clear precedent — give the lineage humility *and* the actual contribution.
 
 ## 🔴 Scope discipline — what you must never do in this context
 
@@ -249,12 +254,12 @@ export const CONCEPT_INDEX: Record<string, { title: string; claim: string }> = {
   'two-axioms': {
     title: 'The Two Axioms',
     claim:
-      'Axiom 1: All distinctions cost energy (imports Landauer). Axiom 2: All observers-like-us (OLUs) operate under finite energy budgets. Combined with the transcendental priority of distinction-making, these are the full theoretical input.',
+      'Axiom 1: All distinctions accessible to OLUs cost energy (imports Landauer; scoped to OLU-accessibility because reading a recorded state requires irreversible operations and so hits the Landauer bound — see landauer-scope). Axiom 2: All observers-like-us (OLUs) operate under finite energy budgets. Combined with the transcendental priority of distinction-making (§0.0–§0.2), these are the full theoretical input.',
   },
   'olu': {
     title: 'Observer-Like-Us (OLU)',
     claim:
-      'Any system exhibiting differential response to inputs. Not anthropocentric — thermometers, cells, and even stressed materials qualify at different complexity levels. Defined operationally: if different inputs produce different outputs, distinctions are being made.',
+      'Any system exhibiting differential response to inputs. Not anthropocentric — thermometers, cells, and even stressed materials qualify at different complexity levels. Defined operationally: if different inputs produce different outputs, distinctions are being made. The phrase "observers like us" is borrowed from Wolfram (Wolfram Physics Project, Ruliad); "OLU" is the treatise\'s abbreviation. The observer-relativization sympathy is shared with Wolfram, but Wolfram presupposes distinguishability (his slicing operation requires it), while this framework makes distinguishability the primitive and grounds its cost thermodynamically.',
   },
   'epistemic-taxonomy': {
     title: 'Epistemic Status Taxonomy',
@@ -264,12 +269,12 @@ export const CONCEPT_INDEX: Record<string, { title: string; claim: string }> = {
   'transcendental-argument': {
     title: 'Transcendental Argument',
     claim:
-      'We identify what must be true for any thought or experience to occur. Even denying distinction-primacy uses distinction — the claim is self-confirming under attempted denial. This establishes distinction-making as a condition of possibility for cognition.',
+      'Scoped to expressibility, not metaphysics: any theory expressible-to-OLUs in any meaningful way presupposes distinction-making. This is not a claim that distinction is primitive in reality — it is a claim about what any theory communicable to or by an OLU must presuppose simply to be stateable. Self-confirming under denial: any attempted denial is itself a theory expressible-to-OLUs and so presupposes the very thing being denied.',
   },
   'transcendental-lineage': {
     title: 'Philosophical Lineage',
     claim:
-      'The transcendental priority of distinction-making is foundational rather than novel to this treatise — it recurs in Kant\'s transcendental arguments, Spencer-Brown\'s Laws of Form (opens with "draw a distinction"), and constructor theory (Deutsch, Marletto). The specific contribution here is combining that move with a thermodynamic grounding via the two axioms.',
+      'The transcendental move has lineage — Kant (categories, anthropocentric), Spencer-Brown (distinction as given calculus), constructor theory (possibility-primitive), Apel/Habermas (self-confirming-under-denial as argument shape), Maturana/Luhmann (distinction as constitutive), Wolfram (coined "observers like us" for finite-bandwidth Ruliad-slicers; presupposes distinguishability rather than arguing for it). The treatise\'s contribution is the specific combination: distinction-making as the primitive, OLU-scoped to expressibility (not metaphysics), self-confirming under denial, and thermodynamically grounded by the two axioms. Give the lineage humility and the actual contribution.',
   },
   'effective-discreteness': {
     title: 'Effective Discreteness',
@@ -292,9 +297,9 @@ export const CONCEPT_INDEX: Record<string, { title: string; claim: string }> = {
       'Axiom 1 imports Landauer\'s principle: minimum energy per erased bit ≈ kT ln 2 at thermal equilibrium. The direction of explanation is Landauer → Axiom 1, not vice versa. The framework does not derive Landauer.',
   },
   'landauer-scope': {
-    title: 'Landauer vs Distinction-Making (Open Issue)',
+    title: 'Landauer vs Distinction-Making (Scope)',
     claim:
-      'Landauer\'s bound applies specifically to irreversible bit erasure; reversible computation has no such floor. The axiom "all distinctions cost energy" is therefore slightly stronger than Landauer strictly licenses. This is a known open issue — acknowledge it honestly when asked.',
+      'Landauer\'s bound applies specifically to irreversible operations (erasure, recording into thermodynamically equilibrated media). Reversible computation has no Landauer floor. §0.3 frames Axiom 1 specifically for *OLU-accessible* distinctions: OLU-accessibility requires reading a recorded state, which involves irreversible operations somewhere and so hits the bound. Reversible computations that leave no readable trace fall outside the scope. The framework does not claim Axiom 1 covers all logical or physical distinctions — only those that an OLU can read or maintain.',
   },
   'self-reference': {
     title: 'Consciousness as Self-Referential Distinction',

@@ -7,7 +7,7 @@ export const section0_10: Section = {
   content: [
     {
       type: 'paragraph',
-      content: "This module has developed a radical but rigorous philosophical framework centered on a single insight: **distinction-making is ontologically primitive for observers-like-us.**",
+      content: "This module has developed a philosophical framework centered on a single, carefully scoped insight: **within reality-as-accessible-to-OLUs, distinction-making is primitive.** The transcendental claim is OLU-scoped to expressibility (§0.0–§0.2); the framework is deliberately silent on whether something more lies beyond all possible observation.",
     },
     {
       type: 'heading',
@@ -50,7 +50,7 @@ export const section0_10: Section = {
     },
     {
       type: 'paragraph',
-      content: "These principles recover quantum mechanics, thermodynamics, and information theory from pure ontology. We've shown that **quantization is not mysterious—it's thermodynamically necessary for finite-energy observers.**",
+      content: "These principles do **not** recover quantum mechanics, thermodynamics, or information theory from pure ontology — those remain imported physics. What the framework offers is interpretive vocabulary: *effective discreteness for any finite-energy observer* is derived, and the resulting view of quantization as a thermodynamic feature for OLUs is a reframing consistent with established physics, not an independent derivation of it.",
     },
     {
       type: 'heading',
@@ -130,40 +130,40 @@ export const section0_10: Section = {
     {
       type: 'heading',
       level: 4,
-      content: '3. Practical Applications',
+      content: '3. Connection to Deployed Practice',
     },
     {
       type: 'paragraph',
-      content: "The framework isn't just theoretical—it enables practical developments:",
+      content: "Several long-running practical projects sit in the framework's reference field — not as confirmations engineered after the fact, but as deployed practice the framework attempts to explain:",
     },
     {
       type: 'list',
       style: 'bullet',
       items: [
-        { content: "**Learning systems** (SSi, Zenjin, Alexander) built on distinction-optimization" },
-        { content: "**AI development** guided by understanding distinction-making" },
-        { content: "**Consciousness detection** via self-referential pattern recognition" },
-        { content: "**Ethical frameworks** grounded in thermodynamic reality" },
+        { content: "**Learning systems** (SSi, Zenjin, Alexander) — pre-existing pedagogies whose outcomes Module 4 (§4.2) treats as the explanandum for a variational/least-action account" },
+        { content: "**AI development** — interpretive vocabulary for thinking about distinction-making in artificial systems" },
+        { content: "**Consciousness investigation** — self-reference as the operational handle to investigate, not a solution to the hard problem" },
+        { content: "**Ethics** — the speculative thermodynamic framing of §0.8" },
       ],
     },
     {
       type: 'heading',
       level: 4,
-      content: '4. Philosophical Progress',
+      content: '4. Reframings (Not Solutions)',
     },
     {
       type: 'paragraph',
-      content: "We've dissolved or reframed classic problems:",
+      content: "The framework reframes several classic problems — *reframes*, not solves or dissolves:",
     },
     {
       type: 'list',
       style: 'bullet',
       items: [
-        { content: "Subject-object divide (both are boundary systems)" },
-        { content: "Appearance vs. reality (stability difference, not metaphysical gulf)" },
-        { content: "Mind-body problem (self-referential vs. simple distinction-making)" },
-        { content: "Problem of skepticism (reality-as-accessible is all we can meaningfully discuss)" },
-        { content: "Hard problem of consciousness (self-reference IS phenomenal experience)" },
+        { content: "Subject-object divide — both treated as boundary systems within reality-as-accessible" },
+        { content: "Appearance vs. reality — stability and energy-investment difference within the framework's vocabulary, with the metaphysical question set aside" },
+        { content: "Mind-body problem — distinguishes simple from self-referential distinction-making; does not bridge the explanatory gap" },
+        { content: "Problem of skepticism — scoped to reality-as-accessible-to-OLUs; reality-in-itself beyond all access is set aside, not adjudicated" },
+        { content: "Hard problem of consciousness — *relocated*, not solved, to the question of why self-referential boundary maintenance has an inside perspective. The strong identity claim is not made (see §0.7)" },
       ],
     },
     {
@@ -179,15 +179,15 @@ export const section0_10: Section = {
       type: 'list',
       style: 'bullet',
       items: [
-        { content: "**Module 1: Formalization** — Mathematical rigor for energy costs, minimum resolutions, distinction-optimization" },
-        { content: "**Module 2: Mathematics from Distinction** — How number, space, logic emerge from distinction-patterns" },
-        { content: "**Module 3: Theory of Consciousness** — Full development of self-referential distinction-making" },
-        { content: "**Module 4: Theory of Learning** — Learning as thermodynamic optimization of distinction-making" },
-        { content: "**Module 5: Quantum Mechanics** — Complete derivation of QM from observer constraints" },
-        { content: "**Module 6: Spacetime** — Space and time as distinction-patterns, not containers" },
-        { content: "**Module 7: Thermodynamics** — Full integration with statistical mechanics and information theory" },
-        { content: "**Module 8: Empirical Predictions** — Testable consequences across domains" },
-        { content: "**Module 9: Synthesis** — Integration and broader implications" },
+        { content: "**Module 1: Formalization** — formal apparatus for energy costs, minimum resolutions, distinction-optimization" },
+        { content: "**Module 2: Mathematics from Distinction** — number, space, and logic interpreted through distinction-patterns" },
+        { content: "**Module 3: Theory of Consciousness** — fuller development of the self-referential distinction-making proposal, with the relocation framing intact" },
+        { content: "**Module 4: Theory of Learning** — variational/least-action account of acquisition (§4.2); the load-bearing module" },
+        { content: "**Module 5: Quantum Mechanics** — QM *interpreted* through distinction-vocabulary; QM remains imported, not derived from the axioms" },
+        { content: "**Module 6: Spacetime** — speculative treatment of space and time as distinction-patterns; contains Conjecture 6.1 (gravity-coherence coupling), the framework\\'s most concretely falsifiable novel prediction" },
+        { content: "**Module 7: Thermodynamics** — entropy as distinction-decay; statistical mechanics and information theory remain imported" },
+        { content: "**Module 8: Empirical Predictions** — careful separation of post-hoc consistency from genuine framework-native predictions (N4, Conjecture 6.1)" },
+        { content: "**Module 9: Synthesis** — integration and scope" },
       ],
     },
     {
@@ -197,22 +197,18 @@ export const section0_10: Section = {
     },
     {
       type: 'paragraph',
-      content: "This framework is:",
+      content: "What the framework is and is not, stated plainly:",
     },
     {
       type: 'list',
       style: 'bullet',
       items: [
-        { content: "**Philosophically rigorous** (transcendental arguments, formal logic)" },
-        { content: "**Physically grounded** (derives known physics)" },
-        { content: "**Empirically testable** (makes predictions)" },
-        { content: "**Practically applicable** (enables technologies)" },
-        { content: "**Conceptually unifying** (single principle, multiple domains)" },
+        { content: "**Philosophically careful** — transcendental claim scoped to expressibility-to-OLUs, with lineage acknowledged (§0.0)" },
+        { content: "**Physics-consistent, not physics-deriving** — Landauer and finite-budget physicality are imported (§0.3); known physics is interpreted, not re-derived" },
+        { content: "**Selectively testable** — most Module 8 items are post-hoc consistency; the framework-native testable predictions are N4 and Conjecture 6.1" },
+        { content: "**Connected to deployed pedagogy** — SSi/Zenjin/Alexander outcomes are the explanandum for Module 4, not validation of the framework" },
+        { content: "**Conceptually unifying within its scope** — distinction-vocabulary applied across domains; not a unified theory in the physics sense" },
       ],
-    },
-    {
-      type: 'paragraph',
-      content: "It represents a genuine advance in our understanding of reality-as-accessible—not by discovering new facts, but by revealing the common foundation beneath facts we already knew.",
     },
     {
       type: 'heading',
@@ -221,39 +217,35 @@ export const section0_10: Section = {
     },
     {
       type: 'paragraph',
-      content: "**Distinctions are primitive. They cost energy. Observers have finite budgets. From these three facts alone, the structure of accessible reality follows with mathematical necessity.**",
+      content: "**For OLUs, distinction-making is presupposed. For OLU-accessible distinctions, energy is required (Landauer-grounded). OLU energy budgets are finite.** From these, certain structural consequences for reality-as-accessible-to-OLUs follow (effective discreteness, resolution limits); the rest is interpretive vocabulary applied to existing physics.",
       emphasis: 'key',
     },
     {
       type: 'paragraph',
-      content: "This is not idealism (reality doesn't depend on minds), not anthropocentrism (applies to all OLUs), not eliminativism (doesn't deny reality-in-itself). It's a careful, testable account of what must be true for anything to exist as accessible to observers.",
+      content: "This is not idealism (reality is not claimed to depend on minds), not anthropocentrism (the OLU concept is far broader than human cognition), not eliminativism (the framework is silent on reality-in-itself rather than denying it). It is a scoped account of what must be true for anything to exist as accessible to OLUs.",
     },
     {
       type: 'paragraph',
-      content: "By grounding distinction-making in thermodynamics, we've connected philosophy to physics. By showing consistency with quantum mechanics and thermodynamics, and by interpreting them through distinction-vocabulary, we've provided a unifying lens for understanding physics, not a replacement for it.",
+      content: "Grounding distinction-making in thermodynamics connects the philosophy to physics. Showing consistency with quantum mechanics and thermodynamics, and interpreting them through distinction-vocabulary, provides a unifying lens — not a replacement for the physics it interprets.",
     },
     {
       type: 'paragraph',
-      content: "**The revolutionary potential of this approach lies not in any single insight but in revealing the common foundation underlying all domains of inquiry.**",
-      emphasis: 'key',
+      content: "Philosophy, physics, consciousness, learning, ethics, mathematics — the framework offers vocabulary in which each can be re-described as **boundary-drawing under resource constraints**. The cross-domain unification is conceptual, not mathematical, and the framework does not claim more than that.",
     },
     {
       type: 'paragraph',
-      content: "Philosophy, physics, consciousness, learning, ethics, mathematics—all emerge from the same source: **boundary-drawing under resource constraints.**",
-    },
-    {
-      type: 'paragraph',
-      content: "This is the foundation. Everything else builds from here.",
+      content: "This is one of two foundations on which the rest of the treatise builds. Everything else extends from §0.0–§0.3 and the load-bearing development in Module 4.",
       emphasis: 'conclusion',
     },
   ],
   keyPoints: [
-    "Distinction-making is ontologically primitive for observers-like-us [TRANSCENDENTAL ARGUMENT]",
-    "From two axioms, we [DERIVE] effective discreteness, finitude, dynamism, and relationality",
-    "We [INTERPRET] quantum mechanics and thermodynamics through distinction-vocabulary—we do not derive them independently",
-    "We [IMPORT] Landauer's principle as foundational—this is acknowledged, not hidden",
-    "The framework complements existing physics, providing interpretive vocabulary rather than replacement equations",
-    "The key contribution domain is learning: understanding learning as anti-entropic distinction pattern building",
-    "All domains can be understood through the common lens of boundary-drawing under resource constraints",
+    "Within reality-as-accessible-to-OLUs, distinction-making is primitive — the transcendental claim is scoped to expressibility, not metaphysics",
+    "The transcendental move has lineage (Kant, Spencer-Brown, constructor theory, Apel/Habermas, Maturana, Luhmann, Wolfram); the contribution is the specific combination — see §0.0",
+    "From two axioms, the framework derives effective discreteness, finitude, dynamism, and relationality",
+    "Quantum mechanics and thermodynamics are *interpreted* through distinction-vocabulary, not derived independently",
+    "Landauer's principle is imported as foundational; Axiom 1 is scoped to OLU-accessible distinctions to align with Landauer's strict applicability",
+    "The framework provides interpretive vocabulary; it does not replace existing physics",
+    "The load-bearing application is learning: SSi outcomes are the explanandum, with the variational account in §4.2 the proposed explanation",
+    "The hard problem and the measurement problem are *reframed*, not solved or dissolved",
   ],
 };

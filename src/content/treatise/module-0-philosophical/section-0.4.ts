@@ -85,12 +85,12 @@ export const section0_4: Section = {
     {
       type: 'paragraph',
       content:
-        '**The Problem of Skepticism:** Can we ever truly know the external world? Our framework reframes this: we can know reality-as-accessible-to-OLUs. This is not "merely" phenomenal or "merely" mental—it includes all of physics, all measurable properties, all stable patterns. The skeptical worry about "reality beyond all possible access" is dissolved: what would such a notion even mean?',
+        '**The Problem of Skepticism:** Can we ever truly know the external world? The framework reframes the question: we can know reality-as-accessible-to-OLUs. This is not "merely" phenomenal or "merely" mental — it includes all of physics, all measurable properties, all stable patterns. The traditional skeptical worry about "reality beyond all possible access" is set aside as outside the framework\'s scope rather than answered: what could such a notion mean operationally? Whether something more lies beyond all possible observation is a question the framework deliberately does not adjudicate.',
     },
     {
       type: 'paragraph',
       content:
-        '**The Problem of Other Minds:** How do we know other beings are conscious? We observe them as OLUs making distinctions about their own distinction-making (self-reference). The energy signature of consciousness (~20W for human brains) is observable and measurable. Consciousness is not hidden "inside"—it\'s manifest in the pattern of self-referential distinctions.',
+        '**The Problem of Other Minds:** How do we recognize other beings as conscious? Within the framework, the operational handle is to observe them as OLUs that make distinctions about their own distinction-making (self-reference). The energy signature of consciousness (~20W for human brains) is observable. The hard problem is not solved by this observation; it is *relocated* — see §0.7 — to the question of why self-referential boundary-maintenance has an inside perspective at all. Distinct question; same care needed.',
     },
     {
       type: 'paragraph',
