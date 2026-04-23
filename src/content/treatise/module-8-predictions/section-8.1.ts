@@ -107,7 +107,7 @@ export const section8_1: Section = {
       steps: [
         {
           number: 1,
-          statement: 'Axiom 1 (distinctions cost energy) + Axiom 2 (finite budgets)',
+          statement: 'Axiom 1 (OLU-accessible distinctions cost energy — Landauer scope) + Axiom 2 (finite budgets)',
           justification: 'Starting point: the two foundational axioms',
         },
         {

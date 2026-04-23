@@ -260,7 +260,7 @@ export const section8_2: Section = {
       type: 'note',
       variant: 'technical',
       content:
-        'The resolution hierarchy is empirically obvious to experimentalists. The framework provides the principled reason: resolution IS distinction-making, and distinctions cost energy. This is not discovery but explanation.',
+        'The resolution hierarchy is empirically obvious to experimentalists. The framework offers an interpretive reading — resolution understood as distinction-making, and OLU-accessible distinctions costing energy (§0.3). This is not independent discovery but a conceptual lens on established practice.',
     },
     {
       type: 'heading',
@@ -379,7 +379,7 @@ export const section8_2: Section = {
     {
       type: 'paragraph',
       content:
-        '**Framework Account**: The interpretation requires: (1) Axiom 1 (distinctions cost energy), (2) Axiom 2 (finite budgets), (3) [IMPORTED] Statistical mechanics (equiprobability, typicality arguments). Step 3 is not derived from axioms; it is imported from Boltzmann. The Second Law was established empirically before this framework.',
+        '**Framework Account**: The interpretation requires: (1) Axiom 1 (OLU-accessible distinctions cost energy — Landauer scope), (2) Axiom 2 (finite budgets), (3) [IMPORTED] Statistical mechanics (equiprobability, typicality arguments). Step 3 is not derived from axioms; it is imported from Boltzmann. The Second Law was established empirically before this framework.',
     },
     {
       type: 'paragraph',

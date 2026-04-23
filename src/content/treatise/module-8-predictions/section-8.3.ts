@@ -143,7 +143,7 @@ export const section8_3: Section = {
     {
       type: 'paragraph',
       content:
-        '**Framework Account**: From Axiom 1: Each distinction costs energy. More distinctions = more energy. Complex distinctions involve multiple simultaneous boundaries.',
+        '**Framework Account**: From Axiom 1 (OLU-accessible distinctions cost energy — §0.3): more distinctions maintained by an OLU imply more irreversible recording, hence more energy. Complex distinctions involve multiple simultaneous boundaries.',
     },
     {
       type: 'paragraph',

@@ -186,7 +186,7 @@ export const section8_9: Section = {
     {
       type: 'paragraph',
       content:
-        'From two axioms --- distinctions cost energy, observers have finite budgets --- we derive constraints on all observation. These constraints manifest as the fundamental features of physics:',
+        'From two axioms --- OLU-accessible distinctions cost energy (Landauer scope), observers have finite budgets --- we derive constraints on all observation accessible to OLUs. These constraints manifest as the fundamental features of physics:',
       emphasis: 'key',
     },
     {
