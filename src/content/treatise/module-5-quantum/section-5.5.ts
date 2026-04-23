@@ -171,8 +171,8 @@ export const section5_5: Section = {
     {
       type: 'heading',
       level: 2,
-      content: 'Dissolving the Measurement Problem',
-      id: 'dissolving-measurement-problem',
+      content: 'Reframing the Measurement Problem',
+      id: 'reframing-measurement-problem',
     },
     {
       type: 'paragraph',
@@ -182,7 +182,7 @@ export const section5_5: Section = {
     {
       type: 'paragraph',
       content:
-        'The distinction framework dissolves these questions:',
+        'The distinction framework offers an interpretive reading of these questions — it does not claim to solve them, but it reframes them in energy-cost vocabulary:',
     },
     {
       type: 'list',
@@ -205,7 +205,7 @@ export const section5_5: Section = {
     {
       type: 'paragraph',
       content:
-        'The measurement problem dissolves when we recognize that measurement just IS distinction-making, and distinction-making just IS energy investment. There was never a separate "collapse" process requiring explanation - only the thermodynamics of observation.',
+        'Read this way, the measurement problem is relocated rather than dissolved: "collapse" is not a separate physical process on top of the thermodynamics of recording, but neither is the framework *deriving* the Born rule or the Hilbert-space formalism from first principles. The claim is interpretive — that measurement-as-irreversible-recording is a productive lens, consistent with Landauer — not that measurement has been reduced away.',
       emphasis: 'conclusion',
     },
     {
@@ -241,7 +241,7 @@ export const section5_5: Section = {
         'Non-commuting observables compete for the same distinction resources',
         'The quantum Zeno effect is continuous energy investment in maintaining a distinction',
         'Minimum measurement energy is bounded by Landauer\'s limit',
-        'The measurement problem dissolves when measurement is recognized as distinction-making',
+        'The measurement problem is reframed (not dissolved) when measurement is read as irreversible distinction-recording',
       ],
       variant: 'key-points',
     },

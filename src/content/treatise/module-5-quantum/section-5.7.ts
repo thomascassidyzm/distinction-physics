@@ -105,14 +105,14 @@ export const section5_7: Section = {
           content: 'Making one distinction necessitates a corresponding distinction elsewhere',
         },
         {
-          content: 'This coupling IS the reality, not hidden definite properties',
+          content: 'The framework reads this coupling as the relevant physical content rather than as a sign of hidden definite properties — this is interpretive preference, not a proof against hidden-variable accounts',
         },
       ],
     },
     {
       type: 'paragraph',
       content:
-        'The EPR paradox dissolves not by denying realism but by refining what "element of reality" means in a framework where distinction precedes existence-as-distinct.',
+        'The EPR paradox is not dissolved here — Bell inequality violations remain as they are in quantum mechanics. The framework offers interpretive vocabulary: "element of reality" gets read through a lens in which OLU-accessible distinction precedes existence-as-distinct, which makes the correlations less paradoxical to articulate without altering any predictions.',
       emphasis: 'conclusion',
     },
   ],

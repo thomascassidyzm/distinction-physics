@@ -13,7 +13,7 @@ export const section5_1: Section = {
     {
       type: 'paragraph',
       content:
-        '**Axiom 1: All distinctions cost energy.** To maintain that a system is in state A rather than state B requires that states A and B be physically distinguishable. Distinguishability is not free. Making or maintaining any distinction requires energy expenditure.',
+        '**Axiom 1: All distinctions accessible to OLUs cost energy.** To maintain that a system is in state A rather than state B in a way that an OLU can read requires irreversibly recording the difference. Recording is not free — Landauer applies to irreversible operations, which is precisely the regime OLU-accessible distinctions occupy (see §0.3, §1.3).',
       emphasis: 'key',
     },
     {

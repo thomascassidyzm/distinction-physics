@@ -97,7 +97,7 @@ export const section5_3: Section = {
     {
       type: 'paragraph',
       content:
-        'The famous wave-particle duality dissolves under this framework. Consider the double-slit experiment:',
+        'The framework offers an interpretive reading of wave-particle duality. Consider the double-slit experiment:',
     },
     {
       type: 'list',
@@ -115,7 +115,7 @@ export const section5_3: Section = {
       type: 'list',
       style: 'bullet',
       items: [
-        { content: '"Which slit?" is a distinction that costs energy to make' },
+        { content: '"Which slit?" is an OLU-accessible distinction — it requires an irreversible recording, and therefore an energy cost' },
         { content: 'Without that energy investment, the distinction is not made' },
         { content: 'The wave function represents UNDISTINGUISHED possibilities about which slit' },
         { content: 'Interference occurs because both possibilities contribute to the outcome' },
