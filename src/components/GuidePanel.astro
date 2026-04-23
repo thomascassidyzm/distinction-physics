@@ -242,33 +242,45 @@ const {
     font-size: 0.85em;
   }
 
-  /* Follow-up buttons after each assistant message */
-  .message.assistant :global(.follow-ups) {
+  /* "Also see" — idle-triggered cross-references after a thread winds down */
+  .message.assistant :global(.also-see) {
+    margin-top: 18px;
+    padding-top: 12px;
+    border-top: 1px dashed var(--border, rgba(255, 255, 255, 0.06));
     display: flex;
     flex-wrap: wrap;
-    gap: 8px;
-    margin-top: 16px;
-    padding-top: 14px;
-    border-top: 1px solid var(--border, rgba(255, 255, 255, 0.08));
+    align-items: baseline;
+    gap: 6px 12px;
+    opacity: 0;
+    animation: also-see-fade 600ms ease forwards;
   }
 
-  .message.assistant :global(.follow-up-btn) {
+  @keyframes also-see-fade {
+    to { opacity: 1; }
+  }
+
+  .message.assistant :global(.also-see-label) {
     font-family: 'JetBrains Mono', monospace;
     font-size: 0.6875rem;
-    letter-spacing: 0.03em;
-    padding: 6px 12px;
-    border-radius: 4px;
-    border: 1px solid var(--accent, #4a9eff);
-    background: transparent;
-    color: var(--accent, #4a9eff);
-    cursor: pointer;
-    transition: all 0.2s ease;
+    letter-spacing: 0.05em;
     text-transform: uppercase;
+    color: var(--text-muted, #606080);
   }
 
-  .message.assistant :global(.follow-up-btn:hover) {
-    background: rgba(74, 158, 255, 0.15);
-    color: #fff;
+  .message.assistant :global(.also-see-link) {
+    background: none;
+    border: none;
+    padding: 0;
+    font: inherit;
+    font-size: 0.8125rem;
+    color: var(--accent, #4a9eff);
+    cursor: pointer;
+    border-bottom: 1px dotted var(--accent, #4a9eff);
+    transition: opacity 0.15s ease;
+  }
+
+  .message.assistant :global(.also-see-link:hover) {
+    opacity: 0.7;
   }
 
   /* Typing indicator */
@@ -456,6 +468,14 @@ const {
 </style>
 
 <script>
+  import { CONCEPT_INDEX, MODULE_CONCEPTS } from '../lib/guide-prompt';
+
+  const MODULE_KEY_BY_NUMBER: Record<number, string> = {
+    0: 'philosophical-foundations', 1: 'formalization', 2: 'mathematics',
+    3: 'consciousness', 4: 'learning', 5: 'quantum', 6: 'spacetime',
+    7: 'thermodynamics', 8: 'predictions', 9: 'synthesis',
+  };
+
   // Small markdown parser for assistant replies (bold/italic/code/lists/quotes).
   function parseMarkdown(text: string): string {
     let html = text;
@@ -634,32 +654,89 @@ const {
       }
     });
 
-    // After each assistant message, offer four follow-up paths
-    function createFollowUpButtons(): HTMLElement {
-      const container = document.createElement('div');
-      container.className = 'follow-ups';
-      const options = [
-        { label: 'Say more', query: 'Can you expand on that?' },
-        { label: 'Related concepts', query: 'What concepts relate to this?' },
-        { label: 'How does this fit in?', query: 'How does this fit into the broader framework?' },
-        { label: 'What follows?', query: 'What are the logical consequences?' },
-      ];
-      options.forEach(opt => {
-        const btn = document.createElement('button');
-        btn.className = 'follow-up-btn';
-        btn.textContent = opt.label;
-        btn.addEventListener('click', () => {
-          document.querySelectorAll('.follow-ups').forEach(el => el.remove());
-          sendMessage(opt.query);
-        });
-        container.appendChild(btn);
-      });
-      return container;
+    // "Also see" — appears only when a thread winds down (idle after the last
+    // assistant reply), surfacing related concepts the reader hasn't yet
+    // touched in this conversation.
+    const ALSO_SEE_IDLE_MS = 20000;
+    let alsoSeeTimer: ReturnType<typeof setTimeout> | null = null;
+
+    function clearAlsoSee() {
+      if (alsoSeeTimer) {
+        clearTimeout(alsoSeeTimer);
+        alsoSeeTimer = null;
+      }
+      document.querySelectorAll('.also-see').forEach(el => el.remove());
     }
+
+    function scheduleAlsoSee() {
+      if (alsoSeeTimer) clearTimeout(alsoSeeTimer);
+      alsoSeeTimer = setTimeout(showAlsoSee, ALSO_SEE_IDLE_MS);
+    }
+
+    function findRelatedConcepts(): Array<{ title: string }> {
+      const conversationText = conversationHistory
+        .map(m => m.content.toLowerCase())
+        .join(' ');
+
+      // Concepts already named in the conversation — don't re-surface
+      const mentioned = new Set<string>();
+      for (const [id, concept] of Object.entries(CONCEPT_INDEX)) {
+        if (conversationText.includes(concept.title.toLowerCase())) {
+          mentioned.add(id);
+        }
+      }
+
+      const sectionId = (window as any).currentSectionId;
+      const moduleNumber = sectionId ? parseInt(sectionId, 10) : NaN;
+      const moduleKey = !isNaN(moduleNumber) ? MODULE_KEY_BY_NUMBER[moduleNumber] : undefined;
+      const moduleConceptIds = moduleKey ? (MODULE_CONCEPTS[moduleKey] || []) : [];
+
+      return moduleConceptIds
+        .filter(id => !mentioned.has(id) && id in CONCEPT_INDEX)
+        .slice(0, 3)
+        .map(id => ({ title: CONCEPT_INDEX[id].title }));
+    }
+
+    function showAlsoSee() {
+      alsoSeeTimer = null;
+      if (isLoading) return;
+      const related = findRelatedConcepts();
+      if (related.length === 0) return;
+
+      const assistantMessages = messagesContainer?.querySelectorAll('.message.assistant');
+      const lastAssistant = assistantMessages?.[assistantMessages.length - 1] as HTMLElement | undefined;
+      if (!lastAssistant || lastAssistant.querySelector('.also-see')) return;
+
+      const tray = document.createElement('div');
+      tray.className = 'also-see';
+      const label = document.createElement('span');
+      label.className = 'also-see-label';
+      label.textContent = 'Also see';
+      tray.appendChild(label);
+      related.forEach(({ title }) => {
+        const link = document.createElement('button');
+        link.className = 'also-see-link';
+        link.textContent = title;
+        link.addEventListener('click', () => {
+          clearAlsoSee();
+          sendMessage(`Tell me about ${title}.`);
+        });
+        tray.appendChild(link);
+      });
+      lastAssistant.appendChild(tray);
+      updateScrollIndicator();
+    }
+
+    // Dismiss the tray (and cancel a pending one) as soon as the reader
+    // starts composing — they're no longer "winding down".
+    input?.addEventListener('input', () => {
+      if (input.value.trim().length > 0) clearAlsoSee();
+    });
 
     async function sendMessage(message: string) {
       if (isLoading) return;
       isLoading = true;
+      clearAlsoSee();
 
       const welcome = messagesContainer?.querySelector('.guide-welcome');
       if (welcome) welcome.remove();
@@ -700,9 +777,6 @@ const {
         const data = await response.json();
         typingEl.innerHTML = parseMarkdown(data.message);
 
-        const followUps = createFollowUpButtons();
-        typingEl.appendChild(followUps);
-
         scrollToElement(typingEl);
         updateScrollIndicator();
 
@@ -717,6 +791,7 @@ const {
         }
 
         saveConversation();
+        scheduleAlsoSee();
       } catch (error) {
         typingEl.remove();
         const errorEl = document.createElement('div');
