@@ -4,12 +4,12 @@ import { execSync } from 'child_process';
 
 function getBuildNumber() {
   try {
-    if (process.env.VERCEL) {
-      try { execSync('git fetch --unshallow', { stdio: 'ignore' }); } catch {}
-    }
-    const count = execSync('git rev-list --count HEAD', { encoding: 'utf8' }).trim();
     const shortHash = execSync('git rev-parse --short HEAD', { encoding: 'utf8' }).trim();
-    return `${count}.${shortHash}`;
+    // Build timestamp (YYMMDD-HHMM, UTC). Monotonic across deploys even when
+    // the git clone is shallow (as it is on Vercel), so the indicator always
+    // moves when a new build ships.
+    const stamp = new Date().toISOString().slice(2, 16).replace(/[-:T]/g, '').replace(/(\d{6})(\d{4})/, '$1-$2');
+    return `${stamp}.${shortHash}`;
   } catch {
     return 'dev';
   }
