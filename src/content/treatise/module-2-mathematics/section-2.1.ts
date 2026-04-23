@@ -39,13 +39,13 @@ export const section2_1: Section = {
     },
     {
       type: 'paragraph',
-      content: 'We begin from our two axioms:',
+      content: 'The starting point is the two axioms (developed in §0.3):',
     },
     {
       type: 'list',
       style: 'bullet',
       items: [
-        { content: '**Axiom 1**: All distinctions cost energy.' },
+        { content: '**Axiom 1**: All distinctions accessible to OLUs cost energy. (Imports Landauer; scoped to OLU-accessibility because reading a recorded state requires irreversible operations and so hits the Landauer bound.)' },
         { content: '**Axiom 2**: All OLUs have finite energy budgets.' },
       ],
     },
