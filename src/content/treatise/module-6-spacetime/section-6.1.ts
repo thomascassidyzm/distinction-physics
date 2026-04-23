@@ -49,7 +49,7 @@ export const section6_1: Section = {
       items: [
         { content: '**What makes a distinction?** Any physical interaction that creates a record, changes a degree of freedom, or establishes a correlation. This includes measurement, decoherence, and thermodynamic irreversibility.' },
         { content: '**What are distinctions between?** Events—localized occurrences that can be correlated or differentiated. Events are defined by their distinguishability relations, not by pre-existing coordinates.' },
-        { content: '**What substrate carries the pattern?** The distinction-pattern IS the substrate. This is relational: patterns are constituted by relations between events, like a graph is constituted by edges between nodes. No further substrate is required (or posited).' },
+        { content: '**What substrate carries the pattern?** The framework reads the pattern relationally — like a graph constituted by edges between nodes — and declines to posit a further substrate. This is an interpretive stance (see the caveat further down), not a proof that no substrate exists.' },
       ],
     },
     {

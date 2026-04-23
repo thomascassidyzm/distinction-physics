@@ -90,7 +90,7 @@ export const section6_6: Section = {
     {
       type: 'paragraph',
       content:
-        'The discrete/continuous tension dissolves once we recognize that "continuous" and "discrete" describe different resolution scales, not fundamentally different types of reality.',
+        'Under this reading, the discrete/continuous tension eases (rather than dissolves) once "continuous" and "discrete" are understood as descriptions at different resolution scales. This is interpretive vocabulary — not a proof that the underlying reality is one or the other.',
       emphasis: 'conclusion',
     },
   ],
