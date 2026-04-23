@@ -9,7 +9,7 @@ export const section9_1: Section = {
     {
       type: 'paragraph',
       content:
-        'The framework begins with a transcendental observation — that distinction-making is necessarily prior to all theorizing — and grounds that observation in two physical axioms: distinctions cost energy (imports Landauer), and observers-like-us operate under finite energy budgets. From these, a unifying vocabulary for understanding physics, mathematics, and cognition has been developed. Epistemic honesty requires distinguishing what the framework derives, interprets, and imports.',
+        'The framework begins with a transcendental observation — scoped to expressibility-to-OLUs, that any distinction an OLU can state has already been made (§0.1, §0.3) — and grounds that observation in two physical axioms: OLU-accessible distinctions cost energy (imports Landauer, whose scope is precisely irreversible recording), and observers-like-us operate under finite energy budgets. From these, a unifying vocabulary for understanding physics, mathematics, and cognition has been developed. Epistemic honesty requires distinguishing what the framework derives, interprets, and imports.',
       emphasis: 'key',
     },
     {
@@ -21,7 +21,7 @@ export const section9_1: Section = {
     {
       type: 'paragraph',
       content:
-        'The framework\'s foundational claim is the transcendental priority of distinction-making: **you cannot state any theory without first making distinctions.** To state any premise P, you must distinguish P from not-P. To communicate any theory, you must distinguish terms. Even to deny that distinctions are primitive requires distinguishing "primitive" from "not primitive." The claim is self-confirming under attempted denial.',
+        'The framework\'s foundational claim is the transcendental priority of distinction-making, scoped to expressibility-to-OLUs: **you cannot state any theory to an OLU without first making distinctions.** To state any premise P, you must distinguish P from not-P. To communicate any theory, you must distinguish terms. Even to deny that distinctions are primitive requires distinguishing "primitive" from "not primitive." The claim is self-confirming under attempted articulation — it is a claim about what can be expressed to OLUs, not a metaphysical claim about what exists prior to expressibility.',
     },
     {
       type: 'paragraph',

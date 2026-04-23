@@ -9,7 +9,7 @@ export const section9_7: Section = {
     {
       type: 'paragraph',
       content:
-        'The treatise began with a transcendental observation — that distinction-making is necessarily prior to all theorizing — and grounded it in two physical axioms: distinctions cost energy (imports Landauer), and OLUs have finite energy budgets. From that foundation, it developed vocabulary for understanding physics, mathematics, and cognition, and one quantitatively specific theoretical account: the variational structure of learning developed in §4.2.',
+        'The treatise began with a transcendental observation — scoped to expressibility-to-OLUs, that distinction-making is prior to any theorizing an OLU can articulate (§0.1, §0.3) — and grounded it in two physical axioms: OLU-accessible distinctions cost energy (imports Landauer, whose scope is irreversible recording), and OLUs have finite energy budgets. From that foundation, it developed vocabulary for understanding physics, mathematics, and cognition, and one quantitatively specific theoretical account: the variational structure of learning developed in §4.2.',
     },
     {
       type: 'paragraph',

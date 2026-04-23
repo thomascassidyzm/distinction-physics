@@ -66,7 +66,7 @@ export const section9_3: Section = {
     {
       type: 'paragraph',
       content:
-        '**No physics derives physics from nothing.** The right questions are: (1) Are our assumptions minimal? Yes—two axioms. (2) Are they unavoidable? Yes—you cannot state any alternative without first making distinctions. (3) Are they productive? Yes—they illuminate learning, consciousness, and physical constraints.',
+        '**No physics derives physics from nothing.** The right questions are: (1) Are our assumptions minimal? Yes — two axioms. (2) Are they unavoidable at the level of what can be expressed to OLUs? Yes — any alternative has to be stated using distinctions, which makes the axioms transcendental for expressibility rather than for metaphysics (§0.1, §0.3). (3) Are they productive? Yes — they illuminate learning (Module 4, the module carrying the load-bearing theoretical content), and give vocabulary in consciousness and physics.',
       emphasis: 'key',
     },
     {

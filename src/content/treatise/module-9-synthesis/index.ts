@@ -27,7 +27,7 @@ export const module9: Module = {
     'The transcendental priority of distinction-making is foundational; this treatise adds a specific thermodynamic grounding via Landauer + finite budgets [DERIVED]',
     'The load-bearing theoretical content is §4.2 (Module 4): the variational account of acquisition, with an action functional derived from the axioms and HISE identified as approximate least-action pedagogy',
     'The framework provides unifying vocabulary across physics, mathematics, and cognition [INTERPRETED]',
-    'Two axioms ground the framework: distinctions cost energy [IMPORTS Landauer], OLUs have finite energy budgets',
+    'Two axioms ground the framework: OLU-accessible distinctions cost energy [IMPORTS Landauer — irreversible recording is the Landauer regime; see §0.3, §1.3], OLUs have finite energy budgets',
     'The hard problem and the measurement problem are REFRAMED, not dissolved: the framework provides vocabulary, not explanations of qualia or mechanisms of collapse',
     'Module 6\'s Conjecture 6.1 (gravity-coherence coupling) is the treatise\'s single concrete novel empirical prediction at this stage',
     'The framework is complementary to existing physics, not a replacement for it',

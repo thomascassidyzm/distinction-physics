@@ -15,7 +15,7 @@ export const section9_6: Section = {
     {
       type: 'paragraph',
       content:
-        'Stated cleanly: Distinction as Primitive provides a unifying vocabulary for understanding physics, mathematics, and cognition based on the transcendental priority of distinction-making and two physical axioms — that distinctions cost energy (imports Landauer), and that OLUs have finite energy budgets.',
+        'Stated cleanly: Distinction as Primitive provides a unifying vocabulary for understanding physics, mathematics, and cognition, based on the transcendental priority of distinction-making (scoped to expressibility-to-OLUs; §0.1, §0.3) and two physical axioms — that OLU-accessible distinctions cost energy (imports Landauer, whose scope is irreversible recording), and that OLUs have finite energy budgets.',
       emphasis: 'key',
     },
     {

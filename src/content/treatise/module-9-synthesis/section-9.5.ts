@@ -124,7 +124,7 @@ export const section9_5: Section = {
     {
       type: 'paragraph',
       content:
-        'Tononi\'s IIT proposes that consciousness corresponds to integrated information ($\\Phi$). Distinction as Primitive offers a different but potentially compatible view: consciousness IS distinction-making, and $\\Phi$ may measure the richness of distinction structure.',
+        'Tononi\'s IIT proposes that consciousness corresponds to integrated information ($\\Phi$). Distinction as Primitive offers a different but potentially compatible reading — consciousness understood *as* self-referential distinction-making (§3.0, §9.2), with $\\Phi$ a candidate measure of distinction-structure richness. This is relocation of the hard problem into different vocabulary, not an identity claim that explains qualia.',
     },
     {
       type: 'heading',
