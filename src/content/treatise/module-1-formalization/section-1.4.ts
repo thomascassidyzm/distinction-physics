@@ -47,7 +47,7 @@ The OLU accesses an effectively discrete version of $Q$ with resolution determin
     {
       type: 'paragraph',
       content:
-        '**Epistemic status [DERIVED]**: This theorem genuinely follows from the axioms (given the IMPORTED Landauer limit). The precision with which an OLU can distinguish continuous quantities is bounded by available energy. This is not a claim about what reality "is in itself" but about what any finite-energy observer can access.',
+        '**Epistemic status [DERIVED]**: This theorem follows from the axioms (given the IMPORTED Landauer limit, applied within its proper scope). Step 1 of the proof uses $E(\\diamond(q_1, q_2)) \\geq D_{\\min}$; this holds because the theorem concerns distinctions an OLU can *access* — values it can read, record, or maintain — and OLU-accessibility involves irreversible recording, which is exactly where Landauer\'s bound bites (§0.3). The conclusion is therefore a claim about what any finite-energy observer can access, not about what reality is "in itself," and not about reversible computations that leave no readable trace.',
       emphasis: 'key',
     },
     {

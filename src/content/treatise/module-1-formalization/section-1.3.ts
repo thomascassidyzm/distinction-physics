@@ -14,7 +14,7 @@ export const section1_3: Section = {
     {
       type: 'paragraph',
       content:
-        "We now formalize the minimum energy cost of distinction-making by **importing** Landauer's limit from thermodynamics. This is not a derivation from our axioms alone but an incorporation of established physics that our framework interprets.",
+        "We now formalize the minimum energy cost of distinction-making by **importing** Landauer's limit from thermodynamics. This is not a derivation from the axioms alone but an incorporation of established physics that the framework interprets. Note the scope (developed in §0.3): Landauer bounds *irreversible* operations — erasure and recording into thermodynamically equilibrated media. The framework applies the bound to OLU-accessible distinctions, on the grounds that an OLU accessing a distinction must read a recorded state, which involves irreversible operations and so hits the bound. The bound does not apply to purely reversible computations that leave no readable trace.",
     },
     {
       type: 'definition',
@@ -31,7 +31,7 @@ export const section1_3: Section = {
       number: '1.2',
       name: 'Landauer Limit (Imported)',
       statement:
-        'For a binary distinction at temperature $T$: $D_{\\min}(T) \\geq kT \\ln 2$, where $k$ is Boltzmann\'s constant ($1.38 \\times 10^{-23}$ J/K).',
+        'For an OLU-accessible binary distinction (one that involves an irreversible recording or erasure step) at temperature $T$: $D_{\\min}(T) \\geq kT \\ln 2$, where $k$ is Boltzmann\'s constant ($1.38 \\times 10^{-23}$ J/K). The bound does not apply to purely reversible operations, which is why the framework restricts its claim to OLU-accessible distinctions (§0.3).',
       epistemicStatus: 'imported',
       dependsOn: ['A1'],
     },
@@ -99,6 +99,7 @@ export const section1_3: Section = {
   ],
   keyPoints: [
     "Landauer's limit ($kT \\ln 2$) is IMPORTED from thermodynamics, not derived from axioms alone",
+    "Landauer applies to *irreversible* operations (erasure, recording); the framework scopes Axiom 1 to OLU-accessible distinctions because reading a recorded state requires irreversibility (see §0.3)",
     'The grounding uses thermodynamic stability requirements from standard physics',
     'Energy cost scales with reliability: perfect reliability requires infinite energy',
     'Consistency with information theory supports (but does not prove) the distinction physics interpretation',

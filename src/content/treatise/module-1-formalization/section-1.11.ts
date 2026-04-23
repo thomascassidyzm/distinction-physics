@@ -136,7 +136,7 @@ export const section1_11: Section = {
       variant: 'takeaways',
       points: [
         'The distinction operator provides interpretive vocabulary for the philosophical insights of Module 0',
-        "Landauer's limit is IMPORTED as the minimum energy cost per distinction—not derived from axioms alone",
+        "Landauer's limit is IMPORTED as the minimum energy cost per OLU-accessible distinction (which involves irreversible recording — see §0.3) — not derived from axioms alone",
         '[DERIVED] Effective discreteness: continuous quantities are inaccessible to finite-energy observers',
         '[DERIVED] Resolution and energy are inversely related; the Planck scale (IMPORTED) is the absolute limit',
         '[DERIVED] All observers require continuous energy coupling; isolation is thermodynamically impossible',

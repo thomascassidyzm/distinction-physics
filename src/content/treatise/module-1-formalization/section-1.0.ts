@@ -16,7 +16,7 @@ export const section1_0: Section = {
     },
     {
       type: 'paragraph',
-      content: '**Axiom 1**: All distinctions cost energy [IMPORTS Landauer].',
+      content: '**Axiom 1**: All distinctions accessible to OLUs cost energy [IMPORTS Landauer; scoped to OLU-accessibility because reading a recorded state requires irreversible operations and so hits the Landauer bound — see §0.3].',
       emphasis: 'key',
     },
     {
@@ -133,7 +133,7 @@ export const section1_0: Section = {
   ],
   keyPoints: [
     'Module 1 provides mathematical formalization of the philosophical foundations from Module 0',
-    'Axiom 1 IMPORTS Landauer\'s principle; Axiom 2 is observational (finite energy budgets)',
+    'Axiom 1 IMPORTS Landauer\'s principle and is scoped to OLU-accessible distinctions (which involve recording, hence irreversibility, hence the Landauer bound — see §0.3); Axiom 2 is observational (finite energy budgets)',
     '[DERIVED] Effective discreteness, resolution limits, finitude follow from the axioms',
     '[INTERPRETED] Quantum uncertainty and thermodynamics are interpreted, not derived from scratch',
     'The formalization supports complementary positioning—interpretive vocabulary, not replacement physics',
