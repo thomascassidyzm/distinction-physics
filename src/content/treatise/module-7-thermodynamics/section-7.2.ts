@@ -42,7 +42,7 @@ export const section7_2: Section = {
     {
       type: 'paragraph',
       content:
-        'In each case, entropy increase IS distinction-decay. The boundaries that made parts distinguishable are dissolving.',
+        'In each case, entropy increase can be read as distinction-decay: the boundaries that made parts distinguishable are blurring. This is interpretive vocabulary — statistical mechanics is imported; the framework offers a conceptual lens for it, not a replacement.',
       emphasis: 'key',
     },
     {

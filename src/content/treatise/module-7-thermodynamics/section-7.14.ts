@@ -14,7 +14,7 @@ export const section7_14: Section = {
     {
       type: 'paragraph',
       content:
-        '**Axiom 1**: All distinctions cost energy.',
+        '**Axiom 1**: All distinctions accessible to OLUs cost energy (OLU-accessibility → irreversible recording → Landauer applies; see §0.3).',
       emphasis: 'key',
     },
     {

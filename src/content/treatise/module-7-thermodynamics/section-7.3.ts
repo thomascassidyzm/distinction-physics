@@ -45,7 +45,7 @@ export const section7_3: Section = {
         {
           number: 1,
           statement: 'Every distinction costs energy to maintain',
-          justification: 'Axiom 1: All distinctions cost energy. A boundary between "here" and "there," between "hot" and "cold," between "this state" and "that state" - each requires continuous energy expenditure to preserve.',
+          justification: 'Axiom 1: All OLU-accessible distinctions cost energy (§0.3). A boundary between "here" and "there," "hot" and "cold," or "this state" and "that state," once it is made readable to an OLU, involves irreversible recording — which is the Landauer regime.',
         },
         {
           number: 2,
