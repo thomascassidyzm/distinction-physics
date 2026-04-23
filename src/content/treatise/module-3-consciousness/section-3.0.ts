@@ -28,7 +28,7 @@ export const section3_0: Section = {
     },
     {
       type: 'paragraph',
-      content: '**Axiom 1**: All distinctions cost energy [IMPORTS Landauer].',
+      content: '**Axiom 1**: All distinctions accessible to OLUs cost energy [IMPORTS Landauer; scoped to OLU-accessibility — see §0.3].',
       emphasis: 'key',
     },
     {
@@ -92,7 +92,7 @@ export const section3_0: Section = {
     {
       type: 'paragraph',
       content:
-        'Our answer—that having an inside perspective just IS what self-referential boundary maintenance means—may or may not satisfy the intuitions that drive the hard problem. We offer this as philosophical vocabulary, not as proof.',
+        'The framework\'s candidate answer — that having an inside perspective is *what self-referential boundary maintenance is from inside*, by definition of the relevant boundary — may or may not satisfy the intuitions that drive the hard problem. The framework deliberately stops short of the strong identity claim ("inside perspective IS consciousness") that would close the explanatory gap; it offers vocabulary for thinking about consciousness, not proof, and not a guarantee that the relocation is fully satisfying.',
     },
 
     // =========================================================================

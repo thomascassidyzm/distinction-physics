@@ -87,7 +87,7 @@ export const section3_11: Section = {
         },
         {
           content:
-            '**Mind-body relation**: We transform it from "how do two substances interact?" to "how does one process appear when accessed from inside versus outside?" This dissolves the interaction problem.',
+            '**Mind-body relation**: We transform it from "how do two substances interact?" to "how does one process appear when accessed from inside versus outside?" This reframes the interaction problem rather than dissolving it; whether the reframe is fully satisfying is for the reader to judge.',
         },
       ],
     },
