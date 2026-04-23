@@ -4,6 +4,9 @@ import { execSync } from 'child_process';
 
 function getBuildNumber() {
   try {
+    if (process.env.VERCEL) {
+      try { execSync('git fetch --unshallow', { stdio: 'ignore' }); } catch {}
+    }
     const count = execSync('git rev-list --count HEAD', { encoding: 'utf8' }).trim();
     const shortHash = execSync('git rev-parse --short HEAD', { encoding: 'utf8' }).trim();
     return `${count}.${shortHash}`;
