@@ -221,84 +221,99 @@ const {
   }
 
   .message.assistant {
-    background: rgba(255, 255, 255, 0.05);
-    color: var(--text-primary, #e8e8f0);
+    background: rgba(255, 255, 255, 0.04);
+    color: var(--text-secondary, #a0a0b8);
     align-self: flex-start;
     border-bottom-left-radius: 4px;
-    border: 1px solid rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    /* Alexander reads as a separate voice: serif italic, lighter than body */
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 1.0625rem;
+    line-height: 1.6;
   }
 
-  .message.assistant :global(p) { margin: 0 0 0.75em 0; }
-  .message.assistant :global(p:last-child) { margin-bottom: 0; }
-  .message.assistant :global(strong) { color: var(--text-primary, #e8e8f0); font-weight: 600; }
-  .message.assistant :global(em) { font-style: italic; opacity: 0.9; }
-  .message.assistant :global(ul), .message.assistant :global(ol) { margin: 0.5em 0; padding-left: 1.5em; }
-  .message.assistant :global(li) { margin-bottom: 0.25em; }
-  .message.assistant :global(code) {
-    background: rgba(255, 255, 255, 0.1);
+  /* All the rules below target dynamically-injected elements (markdown
+     parsed assistant text, also-see tray, deeper buttons, tier divider).
+     They have to use :global() on the full selector because the JS-created
+     parent .message.assistant doesn't carry Astro's scoped data attribute. */
+  :global(.message.assistant p) { margin: 0 0 0.75em 0; }
+  :global(.message.assistant p:last-child) { margin-bottom: 0; }
+  :global(.message.assistant strong) { color: var(--text-primary, #e8e8f0); font-weight: 600; font-style: normal; }
+  :global(.message.assistant em) { font-style: normal; opacity: 0.95; }
+  :global(.message.assistant ul), :global(.message.assistant ol) { margin: 0.5em 0; padding-left: 1.5em; }
+  :global(.message.assistant li) { margin-bottom: 0.25em; }
+  :global(.message.assistant code) {
+    background: rgba(255, 255, 255, 0.08);
     padding: 0.15em 0.4em;
     border-radius: 3px;
     font-family: 'JetBrains Mono', monospace;
+    font-style: normal;
     font-size: 0.85em;
   }
 
   /* "Also see" — idle-triggered cross-references after a thread winds down */
-  .message.assistant :global(.also-see) {
+  :global(.message.assistant .also-see) {
     margin-top: 18px;
     padding-top: 12px;
-    border-top: 1px dashed var(--border, rgba(255, 255, 255, 0.06));
+    border-top: 1px dashed rgba(255, 255, 255, 0.06);
     display: flex;
     flex-wrap: wrap;
     align-items: baseline;
     gap: 6px 12px;
     opacity: 0;
     animation: also-see-fade 600ms ease forwards;
+    font-style: normal;
   }
 
   @keyframes also-see-fade {
     to { opacity: 1; }
   }
 
-  .message.assistant :global(.also-see-label) {
+  :global(.message.assistant .also-see-label) {
     font-family: 'JetBrains Mono', monospace;
     font-size: 0.6875rem;
     letter-spacing: 0.05em;
     text-transform: uppercase;
-    color: var(--text-muted, #606080);
+    color: #606080;
+    font-style: normal;
   }
 
-  .message.assistant :global(.also-see-link) {
+  :global(.message.assistant .also-see-link) {
     background: none;
     border: none;
     padding: 0;
-    font: inherit;
+    font-family: 'Sora', system-ui, sans-serif;
     font-size: 0.8125rem;
-    color: var(--accent, #4a9eff);
+    font-style: normal;
+    color: #4a9eff;
     cursor: pointer;
-    border-bottom: 1px dotted var(--accent, #4a9eff);
+    border-bottom: 1px dotted #4a9eff;
     transition: opacity 0.15s ease;
   }
 
-  .message.assistant :global(.also-see-link:hover) {
+  :global(.message.assistant .also-see-link:hover) {
     opacity: 0.7;
   }
 
   /* Deeper-tier escalation buttons under each Alexander response */
-  .deeper-actions {
+  :global(.message.assistant .deeper-actions) {
     display: flex;
     gap: 8px;
-    margin-top: 10px;
-    padding-top: 10px;
+    margin-top: 14px;
+    padding-top: 12px;
     border-top: 1px dashed rgba(255, 255, 255, 0.06);
   }
 
-  .deeper-btn {
-    background: none;
+  :global(.message.assistant .deeper-btn) {
+    background: transparent;
     border: 1px solid rgba(255, 255, 255, 0.1);
-    color: var(--text-muted, #606080);
-    font: inherit;
+    color: #a0a0b8;
+    font-family: 'JetBrains Mono', monospace;
+    font-style: normal;
     font-size: 0.6875rem;
-    letter-spacing: 0.04em;
+    letter-spacing: 0.06em;
     text-transform: uppercase;
     padding: 4px 10px;
     border-radius: 12px;
@@ -306,19 +321,20 @@ const {
     transition: all 0.15s ease;
   }
 
-  .deeper-btn:hover {
-    border-color: var(--accent, #4a9eff);
-    color: var(--text-primary, #e8e8f0);
+  :global(.message.assistant .deeper-btn:hover) {
+    border-color: #4a9eff;
+    color: #e8e8f0;
   }
 
-  .tier-divider {
+  :global(.tier-divider) {
     align-self: center;
     font-family: 'JetBrains Mono', monospace;
+    font-style: normal;
     font-size: 0.6875rem;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.08em;
     text-transform: uppercase;
-    color: var(--text-muted, #606080);
-    padding: 4px 0;
+    color: #606080;
+    padding: 6px 0 2px;
     opacity: 0.7;
   }
 
