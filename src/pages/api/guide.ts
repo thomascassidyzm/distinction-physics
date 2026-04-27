@@ -1,5 +1,6 @@
 import type { APIRoute } from 'astro';
 import { buildPromptWithContext } from '../../lib/guide-prompt';
+import { extractAndRenderMath } from '../../lib/math';
 
 interface ChatMessage {
   role: 'user' | 'assistant';
@@ -83,9 +84,17 @@ export const POST: APIRoute = async ({ request }) => {
 
     const data = await response.json();
     const assistantMessage = data.content?.[0]?.text || 'No response generated';
+    const { text: messageWithTokens, math: mathBlocks } = extractAndRenderMath(assistantMessage);
 
     return new Response(JSON.stringify({
-      message: assistantMessage,
+      // Display version (math replaced with XXMATH<n>XX tokens). Used by the
+      // client for rendering with substituteMath().
+      message: messageWithTokens,
+      math: mathBlocks,
+      // Raw version (original LaTeX intact). The client stores this in
+      // conversation history so subsequent turns send the model real LaTeX,
+      // not opaque placeholder tokens.
+      rawMessage: assistantMessage,
       tier: selectedTier,
       context: {
         section: context.currentSectionTitle || context.currentSection,

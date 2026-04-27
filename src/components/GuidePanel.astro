@@ -253,6 +253,23 @@ const {
     font-size: 0.85em;
   }
 
+  /* KaTeX-rendered math should not inherit the italic-serif prose voice */
+  :global(.message.assistant .katex) {
+    font-style: normal;
+    color: var(--text-primary, #e8e8f0);
+    font-size: 1em;
+  }
+
+  :global(.message.assistant .katex-display) {
+    margin: 0.75em 0;
+    overflow-x: auto;
+    overflow-y: hidden;
+  }
+
+  :global(.message.assistant .katex-display > .katex) {
+    font-size: 1.05em;
+  }
+
   /* "Also see" — idle-triggered cross-references after a thread winds down */
   :global(.message.assistant .also-see) {
     margin-top: 18px;
@@ -554,6 +571,16 @@ const {
     return html;
   }
 
+  // Substitute KaTeX-rendered math placeholders (XXMATH<n>XX) with the
+  // corresponding pre-rendered HTML returned from the API. Math is rendered
+  // server-side so we don't ship KaTeX in the client bundle.
+  function substituteMath(html: string, mathBlocks: string[] = []): string {
+    return html.replace(/XXMATH(\d+)XX/g, (_match, idx) => {
+      const i = parseInt(idx, 10);
+      return mathBlocks[i] !== undefined ? mathBlocks[i] : `[math ${i}]`;
+    });
+  }
+
   document.addEventListener('DOMContentLoaded', () => {
     const panel = document.getElementById('guide-panel');
     const mobileTrigger = document.getElementById('guide-mobile-trigger');
@@ -565,9 +592,20 @@ const {
     const sectionEl = document.getElementById('guide-section');
     const statusEl = document.getElementById('guide-status');
 
-    // Session-scoped conversation history
+    // Session-scoped conversation history. Each assistant entry stores:
+    //   content       — raw LaTeX-intact text (sent back to the model on
+    //                   subsequent turns)
+    //   displayContent — placeholder-tokenised text (XXMATH<n>XX) used for
+    //                    re-rendering math after a page reload
+    //   math          — array of pre-rendered KaTeX HTML
     const STORAGE_KEY = 'guide-conversation';
-    let conversationHistory: Array<{ role: 'user' | 'assistant'; content: string }> = [];
+    interface HistoryEntry {
+      role: 'user' | 'assistant';
+      content: string;
+      displayContent?: string;
+      math?: string[];
+    }
+    let conversationHistory: HistoryEntry[] = [];
     let isLoading = false;
 
     // Restore previous conversation if the user navigated away and came back
@@ -583,7 +621,8 @@ const {
             const el = document.createElement('div');
             el.className = `message ${msg.role === 'user' ? 'user' : 'assistant'}`;
             if (msg.role === 'assistant') {
-              el.innerHTML = parseMarkdown(msg.content);
+              const displayText = msg.displayContent || msg.content;
+              el.innerHTML = substituteMath(parseMarkdown(displayText), msg.math);
             } else {
               el.textContent = msg.content;
             }
@@ -852,7 +891,9 @@ const {
       const context = getCurrentContext();
       const requestPayload = {
         message,
-        history: conversationHistory,
+        // Only send role + content to the API. displayContent and math are
+        // client-side rendering aids; the model just needs the raw text.
+        history: conversationHistory.map(({ role, content }) => ({ role, content })),
         context: {
           currentSection: context.sectionId || context.section,
           currentSectionTitle: context.section,
@@ -871,7 +912,8 @@ const {
         if (!response.ok) throw new Error('Guide unavailable');
 
         const data = await response.json();
-        typingEl.innerHTML = parseMarkdown(data.message);
+        const mathBlocks: string[] = Array.isArray(data.math) ? data.math : [];
+        typingEl.innerHTML = substituteMath(parseMarkdown(data.message), mathBlocks);
 
         const respondedTier: Tier = (data.tier as Tier) || tier;
         appendDeeperActions(typingEl, respondedTier);
@@ -879,9 +921,14 @@ const {
         scrollToElement(typingEl);
         updateScrollIndicator();
 
+        // Store the raw (LaTeX-intact) version in history so subsequent
+        // turns send the model real LaTeX instead of opaque placeholder
+        // tokens. data.message (with tokens) is kept on the assistant entry
+        // for re-display after page reload, alongside the math array.
+        const rawMessage: string = typeof data.rawMessage === 'string' ? data.rawMessage : data.message;
         conversationHistory.push(
           { role: 'user', content: message },
-          { role: 'assistant', content: data.message },
+          { role: 'assistant', content: rawMessage, displayContent: data.message, math: mathBlocks },
         );
 
         // Cap history length to keep payloads small and costs predictable
