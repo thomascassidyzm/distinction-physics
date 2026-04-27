@@ -31,6 +31,7 @@
 //   Edit the TREATISE_OVERLAY const below.
 
 import { PEDAGOGY_CORE } from './pedagogy-core.generated';
+import { getSectionMarkdown, getModuleOverview } from './section-renderer';
 
 const TREATISE_OVERLAY = `## In this deployment
 
@@ -417,6 +418,26 @@ export function buildPromptWithContext(
           enrichedPrompt += `\n**${concept.title}**: ${concept.claim}`;
         }
       }
+    }
+  }
+
+  // Inject the live section text and module overview the reader is currently
+  // viewing. This is the source of truth — the static concept cards above are
+  // a thin cross-reference layer; the markdown below is the actual treatise
+  // content. Edit the section .ts files and Alexander automatically reads the
+  // new text on the next request.
+  if (context.currentSection) {
+    const sectionMd = getSectionMarkdown(context.currentSection);
+    const moduleOverview = getModuleOverview(context.currentSection);
+    if (sectionMd) {
+      enrichedPrompt += '\n\n## CURRENT SECTION TEXT\n\n';
+      enrichedPrompt += 'Below is the live text of the section the reader is viewing. Ground answers in this content; quote or paraphrase from it directly when relevant.\n\n---\n\n';
+      enrichedPrompt += sectionMd;
+      enrichedPrompt += '\n\n---\n';
+    }
+    if (moduleOverview) {
+      enrichedPrompt += '\n\n## MODULE CONTEXT\n\n';
+      enrichedPrompt += moduleOverview;
     }
   }
 

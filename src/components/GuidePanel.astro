@@ -283,6 +283,45 @@ const {
     opacity: 0.7;
   }
 
+  /* Deeper-tier escalation buttons under each Alexander response */
+  .deeper-actions {
+    display: flex;
+    gap: 8px;
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px dashed rgba(255, 255, 255, 0.06);
+  }
+
+  .deeper-btn {
+    background: none;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--text-muted, #606080);
+    font: inherit;
+    font-size: 0.6875rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    padding: 4px 10px;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.15s ease;
+  }
+
+  .deeper-btn:hover {
+    border-color: var(--accent, #4a9eff);
+    color: var(--text-primary, #e8e8f0);
+  }
+
+  .tier-divider {
+    align-self: center;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.6875rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--text-muted, #606080);
+    padding: 4px 0;
+    opacity: 0.7;
+  }
+
   /* Typing indicator */
   :global(.typing-indicator) {
     display: flex;
@@ -733,7 +772,45 @@ const {
       if (input.value.trim().length > 0) clearAlsoSee();
     });
 
-    async function sendMessage(message: string) {
+    type Tier = 'haiku' | 'sonnet' | 'opus';
+
+    // Append deeper-tier escalation buttons under an assistant message.
+    // 'haiku' shows both Sonnet and Opus; 'sonnet' shows only Opus;
+    // 'opus' shows nothing (already at top).
+    function appendDeeperActions(messageEl: HTMLElement, currentTier: Tier) {
+      if (currentTier === 'opus') return;
+      const actions = document.createElement('div');
+      actions.className = 'deeper-actions';
+
+      if (currentTier === 'haiku') {
+        const sonnetBtn = document.createElement('button');
+        sonnetBtn.className = 'deeper-btn';
+        sonnetBtn.textContent = '↗ Deeper';
+        sonnetBtn.title = 'Reanswer with Sonnet 4.6';
+        sonnetBtn.addEventListener('click', () => escalate('sonnet'));
+        actions.appendChild(sonnetBtn);
+      }
+
+      const opusBtn = document.createElement('button');
+      opusBtn.className = 'deeper-btn';
+      opusBtn.textContent = '↗↗ Deeper still';
+      opusBtn.title = 'Reanswer with Opus 4.7';
+      opusBtn.addEventListener('click', () => escalate('opus'));
+      actions.appendChild(opusBtn);
+
+      messageEl.appendChild(actions);
+    }
+
+    async function escalate(tier: Tier) {
+      if (isLoading) return;
+      const divider = document.createElement('div');
+      divider.className = 'tier-divider';
+      divider.textContent = tier === 'sonnet' ? '⤵ Deeper (Sonnet 4.6)' : '⤵ Deeper still (Opus 4.7)';
+      messagesContainer?.appendChild(divider);
+      await sendMessage('Could you go deeper on that?', tier, true);
+    }
+
+    async function sendMessage(message: string, tier: Tier = 'haiku', hideUserBubble: boolean = false) {
       if (isLoading) return;
       isLoading = true;
       clearAlsoSee();
@@ -742,11 +819,13 @@ const {
       if (welcome) welcome.remove();
       suggestionsContainer?.classList.add('hidden');
 
-      const userEl = document.createElement('div');
-      userEl.className = 'message user';
-      userEl.textContent = message;
-      messagesContainer?.appendChild(userEl);
-      scrollToBottom();
+      if (!hideUserBubble) {
+        const userEl = document.createElement('div');
+        userEl.className = 'message user';
+        userEl.textContent = message;
+        messagesContainer?.appendChild(userEl);
+        scrollToBottom();
+      }
 
       const typingEl = document.createElement('div');
       typingEl.className = 'message assistant';
@@ -763,6 +842,7 @@ const {
           currentSectionTitle: context.section,
           epistemicStatus: context.status,
         },
+        tier,
       };
 
       try {
@@ -776,6 +856,9 @@ const {
 
         const data = await response.json();
         typingEl.innerHTML = parseMarkdown(data.message);
+
+        const respondedTier: Tier = (data.tier as Tier) || tier;
+        appendDeeperActions(typingEl, respondedTier);
 
         scrollToElement(typingEl);
         updateScrollIndicator();
