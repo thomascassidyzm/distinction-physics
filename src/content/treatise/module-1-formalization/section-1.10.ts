@@ -129,6 +129,54 @@ export const section1_10: Section = {
         'This connects Shannon information theory to thermodynamics through distinction physics. Information is not abstract: it consists of maintained distinctions, each with physical energy cost.',
     },
     {
+      type: 'heading',
+      level: 3,
+      content: 'The OLU as Information Channel',
+      id: 'olu-as-channel',
+    },
+    {
+      type: 'paragraph',
+      content:
+        'The 4-tuple OLU $O = (S, E_{\\text{total}}, \\diamond_O, \\Phi)$ from §1.2 is a Shannon channel by construction: $\\Phi: \\Delta \\rightarrow S$ maps external states to internal states, and the registration faithfulness constraint guarantees that distinguished external pairs land on distinct internal symbols. We can therefore quantify what this channel transmits.',
+    },
+    {
+      type: 'definition',
+      id: 'def-olu-channel-capacity',
+      term: 'OLU Channel Capacity',
+      symbol: 'C(O)_{\\text{Sh}}',
+      definition:
+        'The Shannon channel capacity of an OLU $O$ is $C(O)_{\\text{Sh}} = \\sup_{p(\\cdot)} I(X; \\Phi(X))$, where the supremum is over input distributions $p$ on $\\Delta$ and $I$ is the mutual information between an external state $X$ and its registered image $\\Phi(X)$.',
+      intuition:
+        'Capacity measures how many bits about the external world the OLU can transmit into its internal state. Distinguishing more pairs means transmitting more bits.',
+    },
+    {
+      type: 'theorem',
+      id: 'prop-channel-capacity-bound',
+      label: 'proposition',
+      number: '1.5',
+      name: 'Channel Capacity Bound',
+      statement:
+        'For any OLU $O = (S, E_{\\text{total}}, \\diamond_O, \\Phi)$ at temperature $T$: $$C(O)_{\\text{Sh}} \\leq \\frac{E_{\\text{total}}}{k_B T \\ln 2} \\text{ bits}$$',
+      proof: `1. Mutual information is bounded by the entropy of the output: $I(X; \\Phi(X)) \\leq H(\\Phi(X)) \\leq \\log_2 |\\Phi(\\Delta)|$, with equality when $\\Phi(X)$ is uniform on its image.
+
+2. By Proposition 1.3 (§1.2), $\\log_2 |\\Phi(\\Delta)| \\leq E_{\\text{total}} / (k_B T \\ln 2)$.
+
+3. Composing the two bounds gives the result. $\\square$`,
+      epistemicStatus: 'derived',
+      dependsOn: ['def-olu-channel-capacity', 'def-olu-tuple', 'prop-complexity-bounds'],
+    },
+    {
+      type: 'paragraph',
+      content:
+        'This is the **Shannon-Landauer ceiling**: an OLU\'s capacity to extract information about the world is bounded above by its energy budget divided by the thermal floor, in bits. The bound is independent of what is being observed, what physical implementation the OLU uses, or what task it is performing — it is a structural feature of finite-energy observation.',
+    },
+    {
+      type: 'note',
+      variant: 'technical',
+      content:
+        '**On the Shannon-Landauer ceiling.** The bound $C \\leq E_{\\text{total}}/(k_B T \\ln 2)$ also appears in resource theories of quantum thermodynamics (Brandao et al.) and in foundational work on the thermodynamics of computation (Bennett, Bérut et al.). What distinction physics adds is interpretation: the bound holds because *every bit of information acquired by an OLU is a maintained distinction*, and every maintained distinction costs at least $k_B T \\ln 2$ to record. This makes the framework a natural setting for results from quantitative learning theory (Module 4): a learner is an OLU spending its channel capacity on distinctions that anti-entropically organize structure rather than dissipate it.',
+    },
+    {
       type: 'paragraph',
       content:
         'The information-energy nexus explains why computation has thermodynamic costs, why memory requires ongoing energy expenditure, and why the universe cannot store infinite information in finite regions.',
@@ -141,6 +189,9 @@ export const section1_10: Section = {
     'The framework provides interpretive vocabulary, not a replacement for quantum formalism',
     '[INTERPRETED] The Second Law can be understood as distinction decay in isolated systems',
     '[INTERPRETED] Information and energy are fundamentally linked through the cost of distinction-making',
+    '[NEW] An OLU is a Shannon channel from $\\Delta$ to $S$ via $\\Phi$',
+    '[NEW, DERIVED] Channel capacity $C(O)_{\\text{Sh}} \\leq E_{\\text{total}}/(k_B T \\ln 2)$ bits — the Shannon-Landauer ceiling, linear in budget',
+    '[NEW] Sets up Module 4: a learner is an OLU spending its channel capacity on anti-entropic distinctions',
   ],
   citations: ['landauer1961', 'shannon1948', 'bell1964'],
 };
