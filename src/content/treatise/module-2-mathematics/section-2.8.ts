@@ -55,7 +55,7 @@ export const section2_8: Section = {
       id: 'def-group-emergence',
       term: 'Group Structure',
       definition:
-        'Groups emerge because OLUs need to track "what stays the same under change." A square has 8-fold rotational symmetry—8 transformations that leave it looking identical. These form a group. The group structure is not imposed from outside but emerges from the boundary patterns of the square itself.',
+        'Groups emerge because OLUs need to track "what stays the same under change." A square has 4-fold rotational symmetry, and its full symmetry group (the dihedral group $D_4$) has 8 transformations that leave it looking identical—4 rotations and 4 reflections. These form a group. The group structure is not imposed from outside but emerges from the boundary patterns of the square itself.',
       intuition:
         'Group theory is powerful across physics because physical laws exhibit symmetries—they are unchanged under certain transformations. These symmetries are descriptions of which boundaries are preserved under which changes.',
     },

@@ -385,7 +385,7 @@ export const section0_3: Section = {
         { content: '**Entities are finite in complexity.** An infinitely complex entity would require infinite energy to maintain all its internal distinctions. No such entity can exist as accessible to any OLU. All observable entities have bounded complexity.' },
         { content: '**Knowledge is necessarily incomplete.** To know everything would require maintaining distinctions for every fact, relationship, possibility, and their combinations—an infinite set. No OLU has sufficient energy for this. Omniscience is thermodynamically impossible.' },
         { content: '**Observation is selective.** OLUs must allocate limited energy across possible distinctions, necessarily ignoring most potential information. Attention, focus, and selective observation are not psychological quirks but thermodynamic necessities.' },
-        { content: '**Computation has limits.** Every computational step requires making or maintaining distinctions. Finite energy implies finite computational capacity. This grounds Church-Turing thesis—some functions are not computable because computing them would require infinite distinctions.' },
+        { content: '**Computation has limits.** Every computational step requires making or maintaining distinctions. Finite energy implies finite computational capacity—a *resource* bound on what an OLU can actually compute. This is distinct from the *logical* limits of computability theory (e.g. the uncomputability of the halting problem), which hold even for idealized machines with unbounded resources; we make no claim to ground those.' },
       ],
     },
     {

@@ -30,7 +30,7 @@ export const section6_9: Section = {
     {
       type: 'paragraph',
       content:
-        'Measuring how gravitational fields affect quantum coherence times, testing whether decoherence rates vary with gravitational potential. **Framework-specific prediction (Conjecture 6.1):** Coherence times should scale with gravitational time dilation: $\\tau(\\phi) = \\tau(0) \\times \\sqrt{1 - 2\\phi/c^2}$. **Falsification criterion:** If coherence times do NOT correlate with gravitational time dilation, this specific conjecture is falsified. **Current status:** Atomic clocks show gravitational time dilation; extending to quantum coherence is near-term feasible (~10^-9 precision needed).',
+        'Measuring how gravitational fields affect quantum coherence times, testing whether decoherence rates vary with gravitational potential. **Framework-specific prediction (Conjecture 6.1):** Coherence times should scale with gravitational time dilation: $\\tau(\\phi) = \\tau(0) \\times \\sqrt{1 + 2\\phi/c^2}$ (with $\\phi$ the negative gravitational potential, so the factor is $<1$ deeper in the well). **Falsification criterion:** If coherence times do NOT correlate with gravitational time dilation, this specific conjecture is falsified. **Current status:** Atomic clocks show gravitational time dilation; extending to quantum coherence is near-term feasible (~10^-9 precision needed).',
     },
     {
       type: 'heading',
