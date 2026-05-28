@@ -314,7 +314,44 @@ export const section4_2: Section = {
     {
       type: 'paragraph',
       content:
-        'Conditions 2 and 3 are empirically accessible with the sprint transcripts in hand. Condition 1 requires comparative deployment evidence against alternative methodologies at matched intensity; it is accessible but has not been systematically measured.',
+        'Conditions 2 and 3 are empirically accessible with the sprint transcripts in hand. Condition 1 requires comparative deployment evidence against alternative methodologies at matched intensity; it is accessible but has not been systematically measured. The audit reporting on Conditions 2 and 3, with citation-level evidence from both transcripts, is in §4.2.5.1 below.',
+    },
+
+    // =========================================================================
+    // 4.2.5.1 — SPRINT FINDINGS (MAY 2026)
+    // =========================================================================
+    {
+      type: 'heading',
+      level: 3,
+      content: '4.2.5.1 Sprint Findings (May 2026)',
+      id: 'sprint-findings',
+    },
+    {
+      type: 'paragraph',
+      content:
+        'The two sprints named in §4.2.4 have now been audited against the four predictions and the §4.2.5 falsification conditions. Clean transcripts of both — the Irish radio interview and the Japanese video-call segment — exist. The cross-sprint summary is reported here; within-sprint detail and citation-level evidence are in the accompanying evidence pack (`docs/evidence/sprint-findings-may-2026.md`).',
+    },
+    {
+      type: 'paragraph',
+      content:
+        'Across both recordings, all four §4.2.4 predictions are positively visible: generative-overlap errors at chunk-selection points rather than paradigm-gap silence; flexible M-LEGO use across novel positions and combinations; disfluency located at selection points rather than mid-chunk; activity-talk dominant over rule-talk when learners describe what they did. The two §4.2.5 falsification conditions assessable from transcripts — F2 (paradigm-gap silence) and F3 (high metalinguistic knowledge / low production capacity) — are absent in both recordings.',
+    },
+    {
+      type: 'paragraph',
+      content:
+        'The signal beyond within-sprint consistency is the cross-typology convergence. Irish and Japanese diverge on word order (VSO / SOV), morphology (initial mutation / agglutinative suffixes), particle density, phonology, and script. The same error / disfluency / M-LEGO signature appears in both. This is the §4.0 typological-robustness claim in its strongest available form: cross-typological convergence on the same production signature, despite divergent target-language structures, under the same methodology.',
+    },
+    {
+      type: 'note',
+      variant: 'editorial',
+      content:
+        'The honest claim is corroboration, not confirmation. Two recordings with $n=2$ sprints (four learners audible in one, one learner in the other), no control group, no comparative deployment data, no native-speaker error-typology audit. Status remains [INTERPRETED] in the calibration set out in §4.10. What the recordings establish is that the framework\'s named test data, when confronted with the predictions, exhibited them rather than their falsifiers. Strengthening this further requires the steps the §4.2.5 falsification table already named: a matched-intensity comparison methodology (Condition 1), and a fluent-speaker error-typology audit of both transcripts.',
+    },
+    {
+      type: 'paragraph',
+      content:
+        'The framework was confronted with both named test recordings and the predictions did not fail; the predictions were positively visible across both. The interpreted-status story about HISE survives confrontation with its named test data, across two typologically divergent target languages.',
+      emphasis: 'conclusion',
     },
 
     // =========================================================================
@@ -352,5 +389,6 @@ export const section4_2: Section = {
     'Predicted features of sprint output: generative-overlap errors, flexible M-LEGO use, disfluency at selection points, production/metalinguistic-knowledge gap',
     'The variational structure is derived from the axioms, not imported from physics — the convergence with classical mechanics is structural, not metaphorical',
     'Falsification conditions: lower-$S$ alternative methodology, paradigm-gap error patterns, or high-metalinguistic-knowledge/low-production profiles',
+    'Sprint findings (May 2026 audit, $n=2$): all four §4.2.4 predictions positively visible across both sprints; both transcript-assessable §4.2.5 falsifiers absent; cross-typology convergence on the same production signature; status remains [INTERPRETED] per §4.10 calibration',
   ],
 };
