@@ -97,6 +97,29 @@ export const section0_4: Section = {
       content:
         '**The Realism Debate:** Our position is a form of **structural realism**: what\'s real are the patterns of distinctions, the boundary structures, the stable relationships between distinction-making systems. These are not "mere constructions"—they\'re thermodynamically real, energetically costly, physically constrained.',
     },
+    {
+      type: 'heading',
+      level: 3,
+      content: 'A Note on "Reality-in-Itself"',
+      id: 'reality-in-itself',
+    },
+    {
+      type: 'paragraph',
+      content:
+        'It is worth being clear about the one thing the framework keeps setting aside. The boundary between what is accessible and what lies beyond all access is itself a distinction — one an OLU draws. And it is a peculiar one. The moment we point at "the in-itself," we have brought it inside the web of distinctions, contradicting the very definition that placed it outside. So the framework neither asserts that a reality-in-itself exists nor that it does not. It observes something narrower and firmer: a putative reality that could generate *no distinction any observer could ever access — even in principle —* does no work. Nothing downstream turns on it. We set it aside, not as a humble silence before a hidden country, but as the recognition that the concept was a distinction we drew, pointing nowhere we could ever go.',
+      emphasis: 'key',
+    },
+    {
+      type: 'paragraph',
+      content:
+        'This is not idealism, and it leaves structural realism intact. The *structure* of the accessible is thermodynamically real (above). It is the *intrinsic nature beyond all relation* — not the structure — that does no work. The mature form of the position is ontic structural realism (Russell, Ladyman and Ross): we know the relational structure of the world, not the intrinsic natures of the relata — and perhaps there are only relations.',
+    },
+    {
+      type: 'note',
+      variant: 'editorial',
+      content:
+        'This is a *chosen* stance, not a result the framework proves, and it has live opposition. It sits beside Rovelli\'s relational interpretation of quantum mechanics, Wheeler\'s "it from bit," and QBism, all of which decline observer-independent facts; scientific and metaphysical realists reject the move. The framework does not adjudicate that debate — it states which side it stands on and why, using its own criterion: a distinction that is ungeneratable even in principle lies outside its scope.',
+    },
   ],
   keyPoints: [
     'Both observers and observed are constituted by the same fundamental process: distinction-making under energy constraints',
@@ -105,5 +128,6 @@ export const section0_4: Section = {
     'Access is constrained by thermodynamics (energy budget), not metaphysics',
     'Different OLUs access reality at different effective resolutions based on their energy budgets',
     'Our position is structural realism: what is real are the patterns of distinctions and stable boundary structures',
+    '"Reality-in-itself" is a distinction OLUs draw; one that could generate no accessible distinction even in principle does no work, so the framework sets it aside — neither affirming nor denying it. A chosen, quietist stance, not a proof, with live realist opposition',
   ],
 };

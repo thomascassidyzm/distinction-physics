@@ -62,7 +62,7 @@ export const section5_4: Section = {
         },
         {
           content:
-            'Accessing continuous properties with infinite precision requires infinite energy (from Axiom 1 and effective discreteness)',
+            'Accessing continuous properties to arbitrary precision requires recording unbounded information, and each bit carries the Landauer cost—so the energy required grows without bound (from Axiom 1 and effective discreteness)',
         },
         {
           content:

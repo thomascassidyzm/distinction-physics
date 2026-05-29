@@ -96,7 +96,7 @@ export const section7_11: Section = {
       rows: [
         [
           'Omniscience',
-          'Knowing everything would require infinite distinctions, which would require infinite energy.',
+          'Knowing everything would require recording unbounded information, and each bit carries the Landauer cost — so the energy required grows without bound.',
         ],
         [
           'Perfect simulation',

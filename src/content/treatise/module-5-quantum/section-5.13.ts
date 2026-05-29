@@ -28,7 +28,7 @@ export const section5_13: Section = {
       items: [
         {
           content:
-            '[DERIVED] All properties must be **effectively quantized** for any observer (finite energy cannot access infinite distinctions)',
+            '[DERIVED] All properties must be **effectively quantized** for any observer (arbitrary precision demands unbounded information, which finite energy cannot record)',
         },
         {
           content:
@@ -220,7 +220,7 @@ export const section5_13: Section = {
       variant: 'takeaways',
       points: [
         '[INTERPRETED] Quantum mechanics is interpreted through, not derived from, the distinction framework---QM remains as it is',
-        '[DERIVED] Effective discreteness genuinely follows from the two axioms (finite energy cannot access infinite distinctions)',
+        '[DERIVED] Effective discreteness genuinely follows from the two axioms (arbitrary precision demands unbounded information, which finite energy cannot record)',
         '[INTERPRETED] Superposition, uncertainty, measurement, and entanglement are reframed through distinction vocabulary',
         '[IMPORTED] The Born rule, Hilbert space, Schrodinger equation, and Planck\'s constant are imported from established physics',
         '[CONJECTURED] Novel predictions (modified uncertainty, scaling laws) are speculative extensions beyond standard QM',

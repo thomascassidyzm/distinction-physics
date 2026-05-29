@@ -84,7 +84,7 @@ export const glossary: GlossaryEntry[] = [
   {
     id: 'reality-as-accessible',
     term: 'Reality-as-Accessible',
-    definition: 'The domain of what can be observed, experienced, interacted with, or known by any possible OLU. The framework makes claims about this domain, not about a hypothetical "reality-in-itself" beyond all possible observation.',
+    definition: 'The domain of what can be observed, experienced, interacted with, or known by any possible OLU. The framework makes claims about this domain, not about a hypothetical "reality-in-itself" beyond all possible observation — which it sets aside on its own criterion: a putative reality that could generate no accessible distinction even in principle does no work, and the concept of it is itself a distinction an OLU draws (§0.4). Quietist, not eliminativist: the question is set aside, not declared false.',
     firstAppearance: '0.2',
     relatedTerms: ['existence-as-distinct', 'olu'],
     category: 'foundational',

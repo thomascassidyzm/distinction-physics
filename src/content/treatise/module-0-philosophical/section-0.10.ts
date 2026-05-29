@@ -7,7 +7,7 @@ export const section0_10: Section = {
   content: [
     {
       type: 'paragraph',
-      content: "One insight has carried this whole module, and it is worth restating in its careful form: **within reality-as-accessible-to-OLUs, distinction-making is primitive.** The transcendental claim is scoped to expressibility (§0.0–§0.2). On whether something more lies beyond all possible observation, the framework stays deliberately — and honestly — silent.",
+      content: "One insight has carried this whole module, and it is worth restating in its careful form: **within reality-as-accessible-to-OLUs, distinction-making is primitive.** The transcendental claim is scoped to expressibility (§0.0–§0.2). On whether something more lies beyond all possible observation, the framework does not stay silent out of mere caution — it applies its own criterion: a putative reality that could generate no distinction any observer could ever access, even in principle, does no work, and the concept of it was itself a distinction we drew (§0.4). That is set aside, neither affirmed nor denied.",
     },
     {
       type: 'heading',

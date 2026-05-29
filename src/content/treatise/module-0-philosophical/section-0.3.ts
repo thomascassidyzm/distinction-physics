@@ -219,7 +219,7 @@ export const section0_3: Section = {
     },
     {
       type: 'paragraph',
-      content: 'To distinguish two temporal moments $t_1$ and $t_2$ with perfect precision requires distinguishing all infinitely many intermediate moments. No OLU can access truly continuous time. All temporal resolution is finite, determined by energy available for temporal distinctions.',
+      content: 'To pin down a temporal moment to ever-finer precision is to record ever more bits about where in the interval it lies; arbitrary precision demands unbounded information, and each recorded bit carries the Landauer cost. No OLU can access truly continuous time. All temporal resolution is finite, determined by energy available for temporal distinctions.',
     },
     {
       type: 'list',
@@ -246,7 +246,7 @@ export const section0_3: Section = {
     },
     {
       type: 'paragraph',
-      content: 'A continuous temperature scale would contain infinitely many distinguishable thermal states. No thermometer, no matter how sensitive, can distinguish all of these. Temperature is effectively discrete for all observers, with resolution depending on instrument sensitivity (which requires energy investment).',
+      content: 'Reading a temperature to arbitrary precision means recording unbounded information about which interval of the scale the value falls in. No thermometer, no matter how sensitive, has the energy budget for that. Temperature is effectively discrete for all observers, with resolution depending on instrument sensitivity (which requires energy investment).',
     },
     {
       type: 'heading',
@@ -255,7 +255,7 @@ export const section0_3: Section = {
     },
     {
       type: 'paragraph',
-      content: 'Electric fields, magnetic fields, gravitational fields—all appear continuous in classical field theory. But for any OLU to measure field strength with perfect precision at a point would require infinite energy to distinguish all possible field values. Fields must be effectively discrete for observers.',
+      content: 'Electric fields, magnetic fields, gravitational fields—all appear continuous in classical field theory. But for any OLU to measure field strength to arbitrary precision at a point would require recording unbounded information about its value, and each bit carries the Landauer cost—so the energy demanded grows without bound. Fields must be effectively discrete for observers.',
     },
     {
       type: 'heading',
@@ -264,7 +264,7 @@ export const section0_3: Section = {
     },
     {
       type: 'paragraph',
-      content: 'Even energy, which we\'ve posited as the resource enabling distinctions, cannot be measured continuously. To distinguish energy level $E_1$ from $E_2$ with perfect precision, especially when $|E_1 - E_2|$ is arbitrarily small, requires distinguishing infinitely many intermediate values—which requires infinite energy. Energy measurements themselves have fundamental resolution limits.',
+      content: 'Even energy, which we\'ve posited as the resource enabling distinctions, cannot be measured continuously. To resolve energy level $E_1$ from $E_2$ when $|E_1 - E_2|$ is arbitrarily small requires recording unbounded information to specify the value that finely—and each bit carries the Landauer cost, so the energy required grows without bound. Energy measurements themselves have fundamental resolution limits.',
     },
     {
       type: 'paragraph',

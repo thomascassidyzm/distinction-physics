@@ -113,7 +113,7 @@ export const section8_1: Section = {
         {
           number: 2,
           statement: 'Effective discreteness: no continuous quantities accessible to any OLU',
-          justification: 'Accessing continuous quantities requires infinite distinctions, hence infinite energy (Module 0)',
+          justification: 'Accessing continuous quantities to arbitrary precision requires recording unbounded information, hence unbounded energy via the Landauer cost (Module 0)',
         },
         {
           number: 3,

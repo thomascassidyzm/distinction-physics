@@ -65,7 +65,7 @@ export const section5_1: Section = {
     {
       type: 'paragraph',
       content:
-        'Any seemingly continuous property - position, momentum, energy, spin direction - would need infinite distinctions to pin down perfectly. No OLU can make infinite distinctions. So every property is effectively quantized for every observer. The "quantum" is just the smallest unit you can still tell apart on your energy budget.',
+        'Any seemingly continuous property - position, momentum, energy, spin direction - would need unbounded information to pin down perfectly, and each recorded bit carries the Landauer cost. No OLU has the energy budget for unbounded bits. So every property is effectively quantized for every observer. The "quantum" is just the smallest unit you can still tell apart on your energy budget.',
     },
     {
       type: 'heading',

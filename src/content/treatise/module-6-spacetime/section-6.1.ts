@@ -96,12 +96,12 @@ export const section6_1: Section = {
         {
           number: 3,
           statement: 'Infinite-precision access is impossible.',
-          justification: '[DERIVED] To specify an exact continuous position would require distinguishing it from infinitely many arbitrarily close positions—requiring infinite energy. **NOTE:** This constrains observation, not ontology. Continuous space may exist; we cannot access it with infinite precision.',
+          justification: '[DERIVED] To specify an exact continuous position would require recording unbounded information — log₂ of the number of distinguishable cells — and each recorded bit carries the Landauer cost, so a finite budget fixes a finite resolution. **NOTE:** this constrains observation, not ontology: no OLU can access a continuum with unbounded precision.',
         },
         {
           number: 4,
           statement: 'Same constraint applies to temporal precision.',
-          justification: '[DERIVED] Continuous time access would require distinguishing infinitely many moments—impossible for finite-energy observers.',
+          justification: '[DERIVED] Resolving continuous time to arbitrary precision would likewise demand unbounded information, hence unbounded energy — out of reach for any finite-energy observer.',
         },
         {
           number: 5,
@@ -128,7 +128,7 @@ export const section6_1: Section = {
       type: 'note',
       variant: 'technical',
       content:
-        'This derivation does not tell us what spacetime is "in itself" apart from observation. It tells us that spacetime-as-accessible-to-OLUs must have a relational, distinction-based structure. We remain agnostic about whether there is a "deeper" spacetime behind this accessible structure, because such a notion would be operationally meaningless—inaccessible by definition.',
+        'This derivation does not tell us what spacetime is "in itself" apart from observation — and by the framework\'s own criterion (§0.4) it need not. What it establishes is firm: for any OLU there is no accessible spatial continuum; accessible space has a finite-resolution, distinction-based structure. Whether a "deeper" continuous spacetime lies behind it is a question that generates no distinction any observer could ever access, even in principle — so it does no work, and is set aside, neither affirmed nor denied. Read this way, the framework\'s effective discreteness of accessible space converges with the discrete-space programmes of Wolfram (A New Kind of Science; the Wolfram Physics Project), where space is a hypergraph rather than a continuum. The framework registers that convergence as [CONSISTENT-WITH], not as a shared derivation: it derives discreteness *for observers* and brackets the in-itself, whereas Wolfram posits an ontically discrete substrate. Same picture, approached from two directions.',
     },
   ],
   keyPoints: [

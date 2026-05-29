@@ -52,7 +52,7 @@ export const section2_1: Section = {
     {
       type: 'paragraph',
       content:
-        'From these axioms, we derived in Section 0.3 a profound consequence: **effective discreteness**. No continuous quantity can be fully accessed by any OLU. Between any two values in a supposedly continuous property lie infinitely many intermediate values, and distinguishing among infinitely many values would require infinite energy. Since all OLUs have finite energy, all accessible properties must be effectively discrete.',
+        'From these axioms, we derived in Section 0.3 a profound consequence: **effective discreteness**. No continuous quantity can be fully accessed by any OLU. Specifying a value in a supposedly continuous property to arbitrary precision requires recording unbounded information (the log of the number of cells), and each recorded bit carries the Landauer cost—so the energy demanded grows without bound. Since all OLUs have finite energy, all accessible properties must be effectively discrete.',
     },
     {
       type: 'heading',
