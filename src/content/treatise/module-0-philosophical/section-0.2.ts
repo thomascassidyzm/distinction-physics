@@ -20,7 +20,7 @@ export const section0_2: Section = {
     {
       type: 'paragraph',
       content:
-        'Consider what you are doing right now: reading and comprehending these words. Each word is a distinction operator—"distinction" is distinct from "word," "this" is distinct from "that," "reading" is distinct from "writing." The very capacity to parse this sentence requires you to distinguish:',
+        'Consider what you are doing right now: reading these words. Each one is a distinction at work — "distinction" is not "word," "this" is not "that," "reading" is not "writing." To parse this sentence at all, you are already distinguishing:',
     },
     {
       type: 'list',

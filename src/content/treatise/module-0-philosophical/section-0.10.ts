@@ -7,7 +7,7 @@ export const section0_10: Section = {
   content: [
     {
       type: 'paragraph',
-      content: "This module has developed a philosophical framework centered on a single, carefully scoped insight: **within reality-as-accessible-to-OLUs, distinction-making is primitive.** The transcendental claim is OLU-scoped to expressibility (§0.0–§0.2); the framework is deliberately silent on whether something more lies beyond all possible observation.",
+      content: "One insight has carried this whole module, and it is worth restating in its careful form: **within reality-as-accessible-to-OLUs, distinction-making is primitive.** The transcendental claim is scoped to expressibility (§0.0–§0.2). On whether something more lies beyond all possible observation, the framework stays deliberately — and honestly — silent.",
     },
     {
       type: 'heading',

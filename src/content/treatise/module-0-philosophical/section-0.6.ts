@@ -8,7 +8,7 @@ export const section0_6: Section = {
     {
       type: 'paragraph',
       content:
-        'In this framework, knowledge is not the passive reception of information from an external world, nor is it the mental construction of reality. Rather, **knowledge is the active refinement of distinction-making processes** to achieve greater stability, precision, and energy efficiency.',
+        'Knowledge, here, is not information poured into a waiting mind, nor reality assembled inside one. It is something you *do*: **the active refinement of distinction-making** — toward greater stability, finer precision, lower energy cost.',
       emphasis: 'key',
     },
     {
@@ -92,7 +92,7 @@ export const section0_6: Section = {
     {
       type: 'paragraph',
       content:
-        'Each refinement doesn\'t "falsify" the previous knowledge—it shows the previous distinctions were energy-scale specific approximations of more general patterns.',
+        'Each refinement doesn\'t *falsify* what came before. It shows the older distinctions for what they always were — approximations that held at one energy scale, special cases of something more general.',
     },
     {
       type: 'heading',
@@ -198,7 +198,7 @@ export const section0_6: Section = {
     {
       type: 'paragraph',
       content:
-        'Knowledge-seeking is not culturally contingent—it\'s thermodynamically advantageous for any OLU. Better distinctions = more efficient interaction with environment = better resource acquisition = survival advantage.',
+        'So the hunger for knowledge isn\'t a cultural accident. It pays, thermodynamically, for any OLU at all. Better distinctions, cheaper interaction with the world, better resources, a survival edge. The drive to know is the drive to distinguish, all the way down.',
     },
   ],
   keyPoints: [

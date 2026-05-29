@@ -15,7 +15,7 @@ export const section0_1: Section = {
     {
       type: 'paragraph',
       content:
-        'Before proceeding, we must precisely define what we mean by "observer." In this framework, an **observer-like-us (OLU)** is any system that **responds differentially to energy, matter, or information from its environment in a way that changes its state**.',
+        'Everything that follows hangs on what we mean by "observer," so let\'s pin it down — and pin it down broadly. An **observer-like-us (OLU)** is any system that **responds differently to energy, matter, or information from its environment in a way that changes its own state.** That\'s it. Deliberately, that lets a great deal in.',
     },
     {
       type: 'paragraph',
@@ -25,7 +25,7 @@ export const section0_1: Section = {
     {
       type: 'paragraph',
       content:
-        "This definition might seem broad, but it captures the essence of distinction-making: if a system cannot respond differently to different inputs, then no distinction is being made by that system. The capacity for differential response IS the capacity for distinction-making.",
+        "Broad, yes — but it catches exactly what matters. If a system can't respond differently to different inputs, then no distinction is being made there at all. Take that capacity away and there is nothing left to make a distinction with. The capacity for differential response just is the capacity for distinction-making.",
     },
     {
       type: 'definition',
@@ -173,7 +173,7 @@ export const section0_1: Section = {
     {
       type: 'paragraph',
       content:
-        'Our framework makes claims about **reality-as-accessible-to-systems-capable-of-differential-response**. Since this includes nearly all far-from-equilibrium physical systems, our scope is not narrow but encompasses the vast majority of physics and all of experience.',
+        'So the framework speaks about **reality as it is accessible to anything capable of differential response.** That might sound like a narrow corner to claim. It isn\'t. It takes in nearly every far-from-equilibrium system there is — the vast bulk of physics, and the whole of experience.',
       emphasis: 'conclusion',
     },
     {
@@ -185,7 +185,7 @@ export const section0_1: Section = {
     {
       type: 'paragraph',
       content:
-        '**Important clarification:** The OLU concept is not a new physical entity or force. It is interpretive vocabulary—a lens for understanding systems that already exist and are already described by physics. A thermometer is described by thermodynamics; we are not replacing that description. We are providing additional vocabulary for understanding what the thermometer does: it makes distinctions about temperature.',
+        '**One clarification, because it is easy to over-read.** An OLU is not a new entity or a new force. It is vocabulary — a lens on systems that already exist and are already fully described by physics. Thermodynamics already accounts for the thermometer; we are not touching that. We are adding a second way to say what the thermometer is *doing*: making a distinction about temperature.',
     },
     {
       type: 'paragraph',

@@ -18,13 +18,13 @@ export const section0_0: Section = {
     {
       type: 'paragraph',
       content:
-        '**Distinction as Primitive** is a philosophical meta-theory establishing that distinction-making is logically and ontologically prior to all theorizing. It is not a replacement for physics, but a lens through which physics, mathematics, and cognition can be understood as sharing a common foundation.',
+        '**Distinction as Primitive** is a philosophical meta-theory with one claim at its core: distinction-making comes before all theorising — first in the order of what can be *expressed*, not as a pronouncement about what reality is made of. It is not a rival to physics. It is a lens, and through it physics, mathematics, and cognition turn out to share a single foundation.',
       emphasis: 'key',
     },
     {
       type: 'paragraph',
       content:
-        'The framework is designed to **play nicely with existing physics**. Quantum mechanics, general relativity, thermodynamics, and information theory remain as they are. The framework provides interpretive vocabulary for understanding WHY physics has certain features, not alternative equations.',
+        'It is built to **sit alongside existing physics, not over it.** Quantum mechanics, relativity, thermodynamics, information theory — all of it stays exactly as it is. What the framework adds is vocabulary for *why* physics wears the features it does. Not new equations. A new way of reading the ones we already have.',
     },
 
     // =========================================================================
@@ -45,7 +45,7 @@ export const section0_0: Section = {
     {
       type: 'paragraph',
       content:
-        'This is not a metaphysical claim that distinction is primitive *in reality*. It is a claim about expressibility conditions: what any theory communicable to or by an observer-like-us (an OLU — defined rigorously in §0.1) must presuppose simply to be stateable.',
+        'Be careful with that claim — it is *not* the metaphysical one that distinction is primitive *in reality*. That would be a stronger thing, and we don\'t need it. It is a claim about a condition of expressibility: whatever any theory an observer-like-us (an OLU, defined rigorously in §0.1) could state must already presuppose, simply to be sayable at all.',
     },
     {
       type: 'paragraph',
@@ -69,7 +69,7 @@ export const section0_0: Section = {
     {
       type: 'paragraph',
       content:
-        '**The claim is self-confirming under attempted denial.** A denial of the form "distinction is not primitive" is itself a theory expressible-to-OLUs, and so presupposes the very thing being denied. Distinguishing "primitive" from "not primitive," distinguishing the denying theory from this one, distinguishing the words from each other — the denial cannot be uttered without the distinction-making it would deny.',
+        '**And the claim confirms itself the moment you try to deny it.** A denial — "distinction is not primitive" — is itself a theory stated to an observer, so it leans on the very thing it sets out to reject. To say it you must hold "primitive" apart from "not primitive," the denying theory apart from this one, each word apart from the next. The denial cannot be uttered without the distinction-making it would deny. There is no outside to step to.',
       emphasis: 'key',
     },
     {
@@ -157,7 +157,7 @@ export const section0_0: Section = {
     {
       type: 'paragraph',
       content:
-        'The framework originated from observing **same/different lensing** when encountering novel information. When a learner encounters something new, the fundamental operation is: "Is this the SAME as something I know, or DIFFERENT?" This same/different operation IS distinction-making.',
+        'The framework grew out of watching one thing happen, over and over, when someone meets something new. The first move is always the same: *is this the SAME as something I already know, or DIFFERENT?* That single same/different move is distinction-making, caught in the act.',
     },
     {
       type: 'paragraph',
@@ -182,7 +182,7 @@ export const section0_0: Section = {
     {
       type: 'paragraph',
       content:
-        'Creating and maintaining stable distinction patterns is **anti-entropic**: entropy is distinction-decay (boundaries dissolve), while learning is distinction-building (boundaries created and maintained). This frames learning as a thermodynamic achievement—active maintenance of ordered patterns against dissolution.',
+        'Building and holding stable distinction patterns is **anti-entropic** work. Entropy is distinction *decay* — boundaries blurring, dissolving. Learning is distinction *building* — boundaries drawn and then kept. So learning is not a metaphor borrowed from thermodynamics. It is a thermodynamic achievement: ordered patterns held, by effort, against the pull toward sameness.',
     },
 
     // =========================================================================
@@ -242,7 +242,7 @@ export const section0_0: Section = {
     {
       type: 'paragraph',
       content:
-        '**Honest statement of the framework:** We do not derive physics from nothing. No one does. We start from the observation that distinction-making is logically and ontologically prior to all theorizing—you cannot state any premise without first making distinctions. Given that distinctions cost energy (Landauer) and energy budgets are finite (observation), we show that certain features follow necessarily and others are naturally interpretable through this lens. The framework complements existing physics rather than replacing it.',
+        '**So here is the honest statement of what this is.** We do not derive physics from nothing. No one does, and anyone who says they do is selling something. We start from one observation — that distinction-making comes before all theorising, since you cannot state a single premise without first drawing distinctions. Add that distinctions cost energy (Landauer) and that budgets are finite (observation), and a small number of features follow necessarily while a great many more become naturally readable through the lens. That is the whole claim. It complements existing physics; it does not replace it.',
       emphasis: 'key',
     },
 

@@ -8,12 +8,12 @@ export const section0_5: Section = {
     {
       type: 'paragraph',
       content:
-        'Classical philosophy distinguished sharply between appearance (how things seem) and reality (how things are). This distinction has generated endless debates: Are appearances veils hiding reality? Are they illusions to be overcome? Or are they our only access to reality?',
+        'Classical philosophy drew a hard line between appearance — how things seem — and reality — how things are. Centuries of debate followed. Are appearances a veil over the real? Illusions to see past? Or the only access to reality we will ever get?',
     },
     {
       type: 'paragraph',
       content:
-        'Our framework suggests a different view: what we call "appearance" versus "reality" reflects differences in the **stability and energy investment** of boundary patterns, not a categorical metaphysical divide.',
+        'The framework offers a different read. What we call "appearance" and what we call "reality" are not two metaphysical categories with a wall between them. They are two ends of one scale — the **stability and energy investment** of a boundary pattern. Appearance is not false reality. It is cheaper, less stable reality.',
       emphasis: 'key',
     },
     {
@@ -103,7 +103,7 @@ export const section0_5: Section = {
     {
       type: 'paragraph',
       content:
-        'The ultimate test of which boundaries are "real" versus "apparent" is **thermodynamic efficiency**: which distinctions enable successful interaction with minimal energy waste? Scientific distinctions win this test—they let us build bridges that stand, medicines that cure, technologies that function. This doesn\'t make them "absolutely true" but it makes them **thermodynamically validated**.',
+        'So the test of which boundaries are "real" and which "apparent" is **thermodynamic efficiency**: which distinctions let an observer act successfully, with the least energy wasted? Scientific distinctions win that test — they build bridges that stand, medicines that cure, machines that run. That does not make them absolutely true. Nothing earns that. It makes them **thermodynamically validated**, which is the most any distinction can claim.',
     },
   ],
   keyPoints: [

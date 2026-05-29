@@ -7,7 +7,7 @@ export const section0_9: Section = {
   content: [
     {
       type: 'paragraph',
-      content: "In this framework, scientific laws are not descriptions of an independent reality \"out there,\" waiting to be discovered. Rather, they are characterizations of **stable boundary patterns**—regularities in how distinctions can be reliably drawn and maintained across different observers and contexts.",
+      content: "Scientific laws, on this reading, are not descriptions of an independent reality sitting \"out there\" waiting to be found. They are characterisations of **stable boundary patterns** — regularities in which distinctions can be drawn reliably, and held, across observers and contexts.",
     },
     {
       type: 'paragraph',
@@ -39,7 +39,7 @@ export const section0_9: Section = {
     },
     {
       type: 'paragraph',
-      content: "Mathematics is effective because it formalizes the structure of distinction-making itself. When we \"apply mathematics to physics,\" we're not discovering mysterious correspondences—we're recognizing that **both mathematics and physics are about patterns of distinguishability**.",
+      content: "Mathematics works because it formalises the structure of distinction-making itself. So when we \"apply maths to physics,\" there is no mysterious correspondence to marvel at. We are noticing that **both are about the same thing — patterns of distinguishability.** The fit stops looking like a miracle and starts looking like a tautology.",
     },
     {
       type: 'paragraph',
@@ -83,7 +83,7 @@ export const section0_9: Section = {
     },
     {
       type: 'paragraph',
-      content: "This doesn't mean \"reality is subjective.\" It means reality-as-accessible has a structure that depends on the observer's energy-constrained distinction-making capacity.",
+      content: "This is not \"reality is subjective.\" It is something more precise: reality-as-accessible has a structure, and that structure depends on the energy-constrained distinction-making of whoever is doing the accessing.",
     },
     {
       type: 'paragraph',

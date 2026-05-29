@@ -7,7 +7,7 @@ export const section0_7: Section = {
   content: [
     {
       type: 'paragraph',
-      content: "Consciousness presents what many consider philosophy's hardest problem: how and why do physical processes give rise to subjective experience? What is it like to be conscious? Why is there \"something it is like\" at all?",
+      content: "Consciousness is widely held to be philosophy's hardest problem, and the difficulty is easy to feel. How, and why, do physical processes give rise to subjective experience? What is it like to be conscious? Why is there \"something it is like\" to be anything at all?",
     },
     {
       type: 'paragraph',

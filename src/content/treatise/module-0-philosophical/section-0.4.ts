@@ -8,12 +8,12 @@ export const section0_4: Section = {
     {
       type: 'paragraph',
       content:
-        'Traditional philosophy has struggled with the relationship between observers and the observed world. How can subjects access objects? How can minds know an external reality? The very framing of these questions presupposes a fundamental separation—a gulf between knower and known that must somehow be bridged. Our framework dissolves this apparent problem by showing it rests on a false premise.',
+        'Philosophy has worried for centuries about the relationship between the observer and the observed. How can a subject reach an object? How can a mind know a world outside it? Notice what the question smuggles in before it is even asked: a gulf between knower and known, present from the start, waiting to be bridged. The framework does not bridge that gulf. It asks whether the premise that dug it was ever sound.',
     },
     {
       type: 'paragraph',
       content:
-        'In our view, both observers and observed are constituted by the same fundamental process: distinction-making under energy constraints. An observer is an OLU—a system that responds differentially to inputs, making distinctions about its environment. The observed entity is also a system of maintained boundaries, a pattern of distinctions distinguishable from other patterns. Both are boundary-systems; both require energy to maintain their existence-as-distinct.',
+        'On this reading, observer and observed are made of the same stuff: distinction-making under an energy constraint. The observer is an OLU — responding differentially, drawing distinctions about its surroundings. But the thing observed is also a pattern of maintained boundaries, distinguishable from other patterns, also paying energy to stay distinct. Not a knower on one side and a world on the other. The same process, met twice.',
       emphasis: 'key',
     },
     {
@@ -38,7 +38,7 @@ export const section0_4: Section = {
     {
       type: 'paragraph',
       content:
-        'This inverts the traditional epistemological problem. Rather than asking "How can observers bridge the gap to access reality?", we ask: "What kinds of distinctions are possible given the observer\'s energy constraints?" The "problem of access" dissolves because:',
+        'That turns the old epistemological question on its head. Instead of "how does an observer bridge the gap to reality?", the question becomes "what distinctions are available, given this observer\'s energy budget?" The problem of access loosens its grip — for three reasons:',
     },
     {
       type: 'list',
@@ -61,7 +61,7 @@ export const section0_4: Section = {
     {
       type: 'paragraph',
       content:
-        'This does not imply idealism—we are not claiming that minds create reality. Rather, we recognize that **reality-as-accessible** is necessarily structured by the energy-constrained distinction-making process through which it becomes accessible. Any entity capable of being known must be:',
+        'None of this is idealism. We are not saying minds conjure reality. The point is narrower, and stranger: **reality-as-accessible** is shaped, unavoidably, by the energy-constrained distinction-making that lets it be accessed at all. Anything capable of being known has to be:',
     },
     {
       type: 'list',
@@ -75,7 +75,7 @@ export const section0_4: Section = {
     {
       type: 'paragraph',
       content:
-        'The observer-observed relationship is not a problem to be solved but a special case of the general principle: all existence-as-accessible involves distinction-making, and all distinction-making is constrained by available energy.',
+        'So the observer-observed relationship was never a special problem needing its own solution. It is one instance of the general rule: everything accessible involves distinction-making, and all distinction-making runs on a finite budget.',
     },
     {
       type: 'heading',
