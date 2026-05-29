@@ -48,13 +48,13 @@ export const section0_7: Section = {
       style: 'bullet',
       items: [
         { content: "**Total power consumption**: ~20 watts" },
-        { content: "**Proportion for basic processing**: ~60% (12W) - sensory input, motor control, homeostasis" },
-        { content: "**Proportion for conscious processing**: ~40% (8W) - attention, working memory, self-monitoring" },
+        { content: "**Basic processing** — sensory input, motor control, homeostasis — draws a large share of that budget" },
+        { content: "**Conscious processing** — attention, working memory, self-monitoring — draws a further substantial fraction (the precise split is not a measured partition; treat any specific percentage as illustrative)" },
       ],
     },
     {
       type: 'paragraph',
-      content: "The energy cost of consciousness is not trivial—it's a significant portion of the brain's total budget. This explains several features:",
+      content: "The energy cost of consciousness is not trivial—it's a significant portion of the brain's total budget. This is consistent with several features:",
     },
     {
       type: 'paragraph',

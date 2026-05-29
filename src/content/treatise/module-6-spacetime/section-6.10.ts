@@ -180,7 +180,7 @@ export const section6_10: Section = {
     {
       type: 'paragraph',
       content:
-        'Spacetime, in this framework, is not separate from the entities that inhabit it but constituted by the boundary relationships between these entities. The geometric properties we observe—distances, durations, curvature—are patterns in how distinctions relate to each other under the thermodynamic constraints that govern all boundary-drawing.',
+        'In this framework\'s speculative reading, spacetime may be interpreted as not separate from the entities that inhabit it but as constituted by the boundary relationships between them. The geometric properties we observe—distances, durations, and curvature (the last imported from GR)—might then be understood as patterns in how distinctions relate to each other under the thermodynamic constraints that govern all boundary-drawing.',
     },
     {
       type: 'paragraph',
@@ -205,7 +205,7 @@ export const section6_10: Section = {
     {
       type: 'paragraph',
       content:
-        'By recognizing spacetime as a relational structure emerging from boundary-drawing operations, we gain a unified perspective bridging quantum and relativistic domains. The framework provides conceptual unity while making specific, testable predictions for future experimental investigation.',
+        'By reading spacetime as a relational structure emerging from boundary-drawing operations, we gain a unified interpretive perspective bridging quantum and relativistic domains. The framework provides conceptual unity; its one framework-specific prediction (Conjecture 6.1) remains untested, and most of the other connections it draws are shared with rival quantum-gravity approaches rather than unique to it.',
       emphasis: 'conclusion',
     },
     {

@@ -9,7 +9,7 @@ export const section4_12: Section = {
     {
       type: 'paragraph',
       content:
-        '**This module\'s central theoretical move is §4.2: the two axioms combine to give any learning trajectory a natural action functional $S = \\int E \\, dt$, and the design rules of HISE can be derived as choices that approximately minimize action along the path to conversational production.** The surrounding sections situate the move. §4.3 names the cognitive primitive the variational structure runs on (same/different as the ground-level operation). §4.6 names its thermodynamic direction (anti-entropic boundary maintenance). §4.4, §4.5, §4.7–4.9 interpret individual phenomena — chunking, automatization, plasticity, transfer, skill acquisition — through the distinction vocabulary that the variational structure makes specific.',
+        '**This module\'s central theoretical move is §4.2: the two axioms combine to give any learning trajectory a natural action functional $S = \\int E \\, dt$ (this functional follows from the axioms), and the empirically-evolved design rules of HISE can be interpreted as choices that approximately minimize action along the path to conversational production.** The surrounding sections situate the move. §4.3 names the cognitive primitive the variational structure runs on (same/different as the ground-level operation). §4.6 names its thermodynamic direction (anti-entropic boundary maintenance). §4.4, §4.5, §4.7–4.9 interpret individual phenomena — chunking, automatization, plasticity, transfer, skill acquisition — through the distinction vocabulary that the variational structure makes specific.',
       emphasis: 'key',
     },
     {
@@ -124,7 +124,7 @@ export const section4_12: Section = {
       variant: 'takeaways',
       points: [
         'Axioms 1 and 2 combine to give any learning trajectory a natural action functional $S = \\int E \\, dt$ with units of energy × time [DERIVED]',
-        'HISE\'s design rules — fixed LEGO form, bundled particles, BUILD/USE duality, production-before-recognition, hierarchical tiling, same/different as organizing primitive — can each be derived as local reductions of the cost integrand [INTERPRETED]',
+        'HISE\'s design rules — fixed LEGO form, bundled particles, BUILD/USE duality, production-before-recognition, hierarchical tiling, same/different as organizing primitive — can each be read as local reductions of the cost integrand [INTERPRETED]; only the action functional itself is [DERIVED]',
         'The same/different duality is the cognitive primitive on which the variational structure runs; it is named in §4.3',
         'Learning is anti-entropic in direction: boundaries decay without energy; learning sustains them through continuous investment [INTERPRETED]',
         'Chunking, automatization, spacing, transfer, and skill acquisition are recognizable as action-reducing strategies within the trajectory [INTERPRETED]',

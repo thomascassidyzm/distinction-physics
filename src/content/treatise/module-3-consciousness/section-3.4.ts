@@ -151,7 +151,7 @@ export const section3_4: Section = {
         },
         {
           content:
-            '**The necessity of experience**: We have explained that self-referential boundary maintenance has an inside perspective, and that this is consciousness. But someone might still ask: why is there an inside at all? Our answer is that "inside" is just what self/not-self boundary maintenance means—there is no further fact to explain. But whether this fully satisfies the intuition pump behind the hard problem is debatable.',
+            '**The necessity of experience**: We have proposed that self-referential boundary maintenance has an inside perspective, and that this is what we interpret as consciousness. But someone might still ask: why is there an inside at all? Our proposal is that "inside" is just what self/not-self boundary maintenance means—we suggest there is no further fact to explain. Whether that satisfies the intuition pump behind the hard problem is genuinely debatable, and the framework does not claim to settle it.',
         },
         {
           content:
@@ -168,7 +168,7 @@ export const section3_4: Section = {
       statement:
         'The framework RELOCATES the hard problem from "how does matter generate experience?" to "why does self-referential boundary maintenance have an inside perspective?" This relocation may or may not be philosophically satisfying—it does NOT constitute a solution. The framework explains the thermodynamic COST of consciousness, not its metaphysical EXISTENCE.',
       epistemicStatus: 'interpreted',
-      dependsOn: ['def-consciousness', 'thm-boundary-energy-cost'],
+      dependsOn: ['def-n-conscious', 'A1'],
     },
     {
       type: 'note',

@@ -73,7 +73,7 @@ export const section7_14: Section = {
     {
       type: 'paragraph',
       content:
-        'This module completes the physics grounding begun in Module 0:',
+        'This module completes the thermodynamic interpretation begun alongside Module 0\'s structural interpretation:',
     },
     {
       type: 'list',

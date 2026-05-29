@@ -32,7 +32,7 @@ export const section7_13: Section = {
       items: [
         {
           content:
-            '**Landauer\'s Principle (Berut et al., 2012)**: Experiments measuring heat dissipation from bit erasure confirmed the minimum energy cost of approximately $kT \\ln(2)$ per bit. This is consistent with our framework\'s claim that distinctions have minimum energy costs. The framework would have predicted such a limit from first principles, though historically Landauer proposed it in 1961 and experimental confirmation came later.',
+            '**Landauer\'s Principle (Berut et al., 2012)**: Experiments measuring heat dissipation from bit erasure confirmed the minimum energy cost of approximately $kT \\ln(2)$ per bit. The framework is consistent with the existence of a minimum, temperature-proportional energy cost for erasing distinctions; the specific value $kT \\ln(2)$ is imported from Landauer (1961), not predicted by the framework — indeed it is the content of Axiom 1, so the framework cannot claim to derive it.',
         },
         {
           content:

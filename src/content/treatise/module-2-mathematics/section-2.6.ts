@@ -109,7 +109,7 @@ export const section2_6: Section = {
     {
       type: 'paragraph',
       content:
-        'This explains the uncertainty principle\'s spatial component: distinguishing two nearby positions requires more energy than distinguishing distant positions. At the limit, the Planck length $\\ell_P$ represents the minimum distinguishable separation—beyond which no OLU can make spatial distinctions.',
+        'This is consistent with the uncertainty principle\'s spatial character: distinguishing two nearby positions requires more energy than distinguishing distant positions. At the limit, the Planck length $\\ell_P$ is often conjectured to mark a minimum distinguishable separation—beyond which no OLU could make spatial distinctions.',
       emphasis: 'key',
     },
     {

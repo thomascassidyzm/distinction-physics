@@ -129,7 +129,7 @@ export const section9_4: Section = {
     'Distinction-making is proposed as fundamental [INTERPRETED]—mind and matter as aspects of distinction-making',
     'Reality can be understood as constituted by distinctions; stuff as stable patterns [INTERPRETED]',
     'Knowledge as distinction structures isomorphic to what is known [INTERPRETED]',
-    'Knowledge is partial (finite energy), perspectival (different observers), and energy-constrained [DERIVED]',
+    'Knowledge is partial and energy-constrained [DERIVED for OLUs from the axioms]; that it is perspectival (observer-dependent) is an [INTERPRETED] reading',
     'The framework is not skepticism: knowledge is real but structured by distinction-making capacities',
     'The observer is placed centrally in physics, not marginally [INTERPRETED]',
     'This is a proposed perspective, neither idealism nor materialism, that may illuminate both',

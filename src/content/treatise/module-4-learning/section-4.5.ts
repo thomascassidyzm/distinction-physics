@@ -103,13 +103,13 @@ export const section4_5: Section = {
     {
       type: 'heading',
       level: 2,
-      content: 'Testable Prediction (Already Confirmed)',
+      content: 'Consistency with Known Metabolic Findings',
       id: 'testable-prediction-confirmed',
     },
     {
       type: 'paragraph',
       content:
-        'If automatization is energy optimization, then practiced tasks should show measurably reduced metabolic activity in higher brain regions. This prediction is extensively confirmed:',
+        'If automatization is energy optimization, then practiced tasks should show measurably reduced metabolic activity in higher brain regions. The framework is consistent with the established finding that they do — a finding documented independently of this framework, so what follows is retrodiction/consistency, not a confirmed forward prediction:',
     },
     {
       type: 'list',
@@ -131,7 +131,7 @@ export const section4_5: Section = {
     {
       type: 'paragraph',
       content:
-        'The energy reduction is not slight. Studies of motor learning show 30-50% reductions in metabolic cost for practiced vs. novel movements. This is thermodynamic optimization in action.',
+        'The energy reduction is not slight. Studies of motor learning report reductions on the order of 30-50% in metabolic cost for practiced vs. novel movements (figures vary by task and measure). This is consistent with thermodynamic optimization.',
       emphasis: 'key',
     },
     {

@@ -1,13 +1,13 @@
 # Distinction Physics
 
-A meta-theoretical framework deriving the structure of accessible reality from two axioms about distinction-making under energy constraints.
+A meta-theoretical framework that reads the structure of accessible reality through two axioms about distinction-making under energy constraints — offering interpretive vocabulary complementary to established science, not a new physics.
 
 ## The Framework
 
-**Axiom 1**: All distinctions cost energy
+**Axiom 1**: All distinctions cost energy *(imported from Landauer's principle)*
 **Axiom 2**: All observers have finite energy budgets
 
-From these alone, we derive:
+From these the framework genuinely derives one structural result — *effective discreteness* — and then offers a unified interpretive reading (consistent with, not replacing, established physics) of:
 - Quantization and uncertainty (quantum mechanics)
 - Entropy and the Second Law (thermodynamics)
 - Consciousness as self-referential distinction
@@ -34,5 +34,5 @@ This site deploys to Vercel. Add your `ANTHROPIC_API_KEY` as an environment vari
 
 ## Status
 
-V7 · Anti-fragile after 36 adversarial attacks across 7 rounds.
-# Trigger redeploy
+V8 · Working paper. The transcendental core has held up under repeated rounds of adversarial
+critique; downstream physics claims are scoped as interpretation/consistency, not derivation.

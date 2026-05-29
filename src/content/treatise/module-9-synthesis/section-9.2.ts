@@ -113,7 +113,7 @@ export const section9_2: Section = {
     {
       type: 'paragraph',
       content:
-        'Instead of asking how mental states relate to brain states, we recognize that this framing presupposes the distinction it asks about. Mind IS distinction-making; body IS the physical substrate enabling distinction-making. The question becomes: How does the distinction-making process structure its own substrate? This is an empirical question with tractable answers.',
+        'Instead of asking how mental states relate to brain states, we recognize that this framing presupposes the distinction it asks about. On this framework, mind is interpreted as distinction-making and body as the substrate that enables it [INTERPRETED]. The question becomes: how does the distinction-making process structure its own substrate? This reframing supplies new vocabulary for the same question rather than dissolving it; what becomes tractable is the empirical study of substrate–process coupling, not the underlying mind–body problem itself.',
     },
     {
       type: 'heading',
@@ -235,7 +235,7 @@ export const section9_2: Section = {
     {
       type: 'paragraph',
       content:
-        'Mental states are not epiphenomenal accompaniments to physical states but are CONSTITUTED by physical distinction-making. Cognitive science and physics study the same process at different scales and from different perspectives.',
+        'On this framework, mental states are most economically described as physical distinction-making rather than as epiphenomena [INTERPRETED]; cognitive science and physics can then be read as studying the same process at different scales and from different perspectives.',
     },
     {
       type: 'heading',
@@ -246,7 +246,7 @@ export const section9_2: Section = {
     {
       type: 'paragraph',
       content:
-        'The unreasonable effectiveness becomes reasonable. Mathematics and physics are both about distinction structure. One studies the abstract structure; the other studies its physical realization. They match because they describe the same thing.',
+        'The unreasonable effectiveness becomes less surprising. Mathematics and physics can both be read as being about distinction structure: one studies the abstract structure, the other its physical realization. On this reading they match because both can be described as distinction structure [INTERPRETED] — an interpretive reframing, not an explanation that closes Wigner\'s puzzle.',
     },
     {
       type: 'heading',

@@ -112,7 +112,7 @@ export const section3_5: Section = {
       statement:
         'Self-referential distinction-making is a necessary condition for consciousness. A system that cannot make distinctions about its own distinction-making processes cannot be conscious, regardless of its computational power or behavioral complexity.',
       epistemicStatus: 'conjectured',
-      dependsOn: ['def-consciousness', 'def-self-referential-distinction'],
+      dependsOn: ['def-n-conscious', 'def-self-referential-distinction'],
     },
     {
       type: 'heading',

@@ -97,12 +97,12 @@ export const section4_0: Section = {
     {
       type: 'paragraph',
       content:
-        '§4.2 develops the core theoretical move: the two axioms combine to give any learning trajectory a natural action functional $S = \\int E[n, \\dot{n}] \\, dt$ with units of energy × time. The least-action trajectory is the one that reaches conversational production with minimum total resource expenditure. HISE\'s design rules — fixed LEGO form, M-LEGOs with bundled particles, BUILD/USE duality, production-before-recognition, hierarchical tiling, same/different as organizing primitive — can each be derived as local reductions of the cost integrand. The account is therefore quantitative in form, not merely descriptive.',
+        '§4.2 develops the core theoretical move: the two axioms combine to give any learning trajectory a natural action functional $S = \\int E[n, \\dot{n}] \\, dt$ with units of energy × time. The least-action trajectory is the one that reaches conversational production with minimum total resource expenditure. HISE\'s design rules — fixed LEGO form, M-LEGOs with bundled particles, BUILD/USE duality, production-before-recognition, hierarchical tiling, same/different as organizing primitive — can each be read as local reductions of the cost integrand. The functional follows from the axioms; the fit of the empirically-evolved rules to it is interpretive. The account is therefore quantitative in form, not merely descriptive.',
     },
     {
       type: 'paragraph',
       content:
-        'The explanandum patterns follow as consequences. Production-threshold crossing is the direct effect of BUILD/USE duality forcing automatization during novelty. Generative-overlap errors are what sprint-length trajectories produce when they cover the production region of $\\mathcal{N}$ without dwelling off-trajectory. Retention follows from automatization migrating distinctions into low-maintenance circuits. Typological robustness follows from the axioms not depending on features of any specific language. The derivations are worked through in §4.2 and elaborated in the phenomenon-specific sections that follow.',
+        'The explanandum patterns are interpretable as consequences. Production-threshold crossing can be read as the effect of BUILD/USE duality forcing automatization during novelty. Generative-overlap errors are what sprint-length trajectories produce when they cover the production region of $\\mathcal{N}$ without dwelling off-trajectory. Retention tracks automatization migrating distinctions into low-maintenance circuits. Typological robustness follows from the axioms not depending on features of any specific language. These are observed outcomes the account fits, not theorems forced by it; the interpretive account is worked through in §4.2 and elaborated in the phenomenon-specific sections that follow.',
     },
 
     // =========================================================================

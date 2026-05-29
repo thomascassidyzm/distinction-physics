@@ -24,7 +24,7 @@ export const section8_6: Section = {
     {
       type: 'paragraph',
       content:
-        '**Our Addition**: We provide ontological grounding for quantization. Standard QM takes quantization as given; we derive it from the axioms. We explain WHY properties must be quantized rather than simply postulating that they are.',
+        '**Our Addition**: We provide an interpretive/ontological grounding for quantization. Standard QM takes quantization as given; the framework derives *effective discreteness* from the axioms and reads observed quantization through it, offering an account of WHY properties are effectively quantized rather than simply postulating that they are. The detailed QM formalism is imported, not regenerated.',
     },
     {
       type: 'paragraph',
@@ -54,7 +54,7 @@ export const section8_6: Section = {
     {
       type: 'paragraph',
       content:
-        '**Our Addition**: We derive thermodynamic laws from information-theoretic principles grounded in distinction-making. Standard thermodynamics takes the laws as empirical; we derive them from the axioms.',
+        '**Our Addition**: We offer an interpretive reading of the thermodynamic laws in terms of distinction-making, with Landauer (the content of Axiom 1) imported as the anchor. Standard thermodynamics takes the laws as empirical; the framework re-describes them in distinction vocabulary rather than deriving them from the axioms alone.',
     },
     {
       type: 'paragraph',
@@ -232,7 +232,7 @@ export const section8_6: Section = {
     {
       type: 'paragraph',
       content:
-        'We acknowledge that for standard physics (QM and thermodynamics), our framework offers interpretive depth rather than novel predictions. We derive what standard physics assumes, but we do not predict different experimental outcomes.',
+        'We acknowledge that for standard physics (QM and thermodynamics), our framework offers interpretive depth rather than novel predictions. We offer an interpretive/ontological grounding for what standard physics assumes, and we do not predict different experimental outcomes.',
     },
     {
       type: 'paragraph',

@@ -34,7 +34,7 @@ export const module1: Module = {
     section1_11,
   ],
   keyInsights: [
-    'The distinction operator formalizes the primitive act of differentiation [DERIVED from axioms]',
+    'The distinction operator formalizes the primitive act of differentiation [FORMAL DEFINITION — a formalization, not a result derived from the axioms]',
     'Landauer\'s limit (kT ln 2) is IMPORTED from thermodynamics—not derived from axioms alone',
     '[DERIVED] Effective discreteness: finite energy implies finite observable distinctions',
     '[DERIVED] Resolution scales inversely with available energy',

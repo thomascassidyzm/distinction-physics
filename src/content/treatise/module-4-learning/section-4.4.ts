@@ -34,7 +34,7 @@ export const section4_4: Section = {
     {
       type: 'paragraph',
       content:
-        'This is working memory capacity, grounded in thermodynamics rather than arbitrary cognitive limits.',
+        'For OLUs, working-memory capacity is most economically described as energy-budget-limited ($N \\approx B/c$) rather than slot-limited — an interpretation consistent with the chunking data, not a derivation of the specific capacity figure.',
       emphasis: 'conclusion',
     },
     {

@@ -178,11 +178,11 @@ The minimum distinguishable spatial separation for an OLU with energy budget E s
 
 **δₓ(E) ∝ ℏc/E**
 
-This explains why particle colliders require gigawatts to probe femtometer scales. The complete formula combines OLU-dependent and universal limits:
+This is consistent with why particle colliders require gigawatts to probe femtometer scales. The complete formula combines OLU-dependent and (conjecturally) universal limits:
 
 **g_x(E) = max(ℏc/E, ℓ_P)**
 
-Below the Planck length, distinction becomes impossible regardless of energy investment.`,
+Below the Planck length, distinction is conjectured to become impossible regardless of energy investment — a floor imported from quantum gravity, not derived from the axioms.`,
     keyPoints: [
       'The distinction operator ⋄ formalizes the primitive operation of differentiating states',
       'Distinction is non-reflexive, symmetric, and non-transitive',
@@ -250,8 +250,8 @@ Under the framework's vocabulary, this self-referential loop is what "conscious"
 
 Self-referential distinction-making is energetically expensive, and OLU-accessible distinctions cost energy in the regime of irreversible recording (where Landauer applies). The human brain:
 - Total power: ~20 watts
-- Basic processing (sensory, motor, homeostasis): ~60% (12W)
-- Conscious processing (attention, working memory, self-monitoring): ~40% (8W)
+- Basic processing (sensory, motor, homeostasis) takes a large share of that budget
+- Conscious processing (attention, working memory, self-monitoring) takes a further substantial fraction (any specific split, e.g. 60/40 or ~8W, is illustrative — not a measured partition)
 
 This is consistent with:
 - Why we can't attend to everything simultaneously (finite energy budget)
@@ -267,7 +267,7 @@ The framework does not solve, answer, or dissolve this. It **reframes the hard p
 That is a clarification of where the mystery sits; it is not a theory of consciousness. The tractable question the framework *does* open is the organizational one: which patterns of distinction-making, and at which energy scales, support the self-referential loop this vocabulary picks out?`,
     keyPoints: [
       'Consciousness is read as self-referential distinction-making — an interpretive vocabulary the framework offers, not a metaphysical identification',
-      'Human self-referential processing draws on the order of 8 watts of continuous power — consistent with OLU-accessible distinctions costing energy in the Landauer regime',
+      'Human self-referential processing draws a substantial fraction of the brain\'s ~20W (a specific figure such as 8W is illustrative, not a measured partition) — consistent with OLU-accessible distinctions costing energy in the Landauer regime',
       'The hard problem is RELOCATED, not solved or dissolved: reframed as "why does self-referential distinction-making feel like something from the inside?" — a new formulation, not an answer',
       'The framework opens a tractable organizational question — which patterns of distinction-making support self-reference — while leaving the phenomenal gap in place',
     ],
@@ -494,10 +494,10 @@ This framework began with a single observation: **distinction is primitive for w
 
 **What each module contributes**
 
-- **Quantum mechanics** (Module 7): interprets quantization, uncertainty, superposition and measurement in the vocabulary of finite-energy, energy-allocated distinction — consistent with standard QM, not a replacement for it.
-- **Thermodynamics** (Module 8): reads entropy as distinction decay and imports Landauer as the canonical empirical anchor of Axiom 1. These are consistency demonstrations with established physics.
-- **Mathematics** (Module 5): re-narrates number, logic and geometry as patterns of distinction — an interpretive angle on Wigner's puzzle, not a rebuild of mathematics.
-- **Consciousness** (Module 9): reads conscious systems as self-referential distinction-makers. The hard problem is RELOCATED, not solved — reframed as "why does self-referential distinction-making feel like something from the inside?", a new formulation, not an answer.
+- **Quantum mechanics** (Module 5): interprets quantization, uncertainty, superposition and measurement in the vocabulary of finite-energy, energy-allocated distinction — consistent with standard QM, not a replacement for it.
+- **Thermodynamics** (Module 7): reads entropy as distinction decay and imports Landauer as the canonical empirical anchor of Axiom 1. These are consistency demonstrations with established physics.
+- **Mathematics** (Module 2): re-narrates number, logic and geometry as patterns of distinction — an interpretive angle on Wigner's puzzle, not a rebuild of mathematics.
+- **Consciousness** (Module 3): reads conscious systems as self-referential distinction-makers. The hard problem is RELOCATED, not solved — reframed as "why does self-referential distinction-making feel like something from the inside?", a new formulation, not an answer.
 - **Learning** (Module 4): carries the **load-bearing theoretical content** of the framework — a variational account of acquisition under Landauer-regime recording costs that is quantitatively specific and directly connects to practice design (spaced repetition, chunking). Module 4 is where the framework does the most theoretical work.
 - **Spacetime and gravity** (Module 6): relates geometry to a boundary landscape and offers **Conjecture 6.1** — gravity–coherence coupling — the single concrete forward prediction on the table, offered as a testable conjecture.
 

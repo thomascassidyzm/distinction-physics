@@ -135,7 +135,7 @@ export const section5_3: Section = {
     {
       type: 'paragraph',
       content:
-        'Complementarity is not a mysterious feature of nature but a direct consequence of distinction economics.',
+        'For OLUs, complementarity can be read as a natural consequence of distinction economics rather than a brute mystery — an interpretive reframing, not a derivation of the formalism.',
       emphasis: 'conclusion',
     },
   ],

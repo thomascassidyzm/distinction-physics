@@ -28,15 +28,15 @@ export const section5_2: Section = {
     {
       type: 'paragraph',
       content:
-        'Consider spatial position. To specify position $x_1$ with perfect precision in continuous space means distinguishing $x_1$ from all other possible positions. But "all other possible positions" is an infinite set. Between $x_1$ and any nearby position $x_2$, no matter how close, there exist infinitely many intermediate positions. Each distinction requires energy. Therefore:',
+        'Consider spatial position. To pin $x_1$ down to a precision $\\Delta$ within a region of size $L$ is to select one cell among $L/\\Delta$ — which is to record $\\log_2(L/\\Delta)$ bits of information about where it is. As the demanded precision sharpens ($\\Delta \\to 0$), the information required grows without bound. Each recorded bit carries the Landauer cost (Axiom 1). Therefore:',
     },
     {
       type: 'list',
       style: 'bullet',
       items: [
-        { content: 'To distinguish $x_1$ from infinitely many nearby positions requires infinite energy' },
+        { content: 'Specifying $x_1$ to arbitrary precision requires recording unbounded information, hence unbounded energy' },
         { content: 'Every OLU has only finite energy' },
-        { content: 'Therefore: No OLU can access truly continuous space' },
+        { content: 'Therefore: No OLU can access truly continuous space (the point is informational — unbounded bits — not infinitely many distinctions drawn at once)' },
       ],
     },
     {
@@ -101,7 +101,7 @@ export const section5_2: Section = {
   ],
   keyPoints: [
     '[DERIVED] No continuous quantity can be accessed by any OLU---this follows necessarily from the two axioms',
-    '[DERIVED] Specifying continuous position requires infinite distinctions, hence infinite energy',
+    '[DERIVED] Specifying continuous position to arbitrary precision requires recording unbounded information, hence unbounded energy',
     '[DERIVED] All properties (time, momentum, energy, fields) must be effectively discrete for any observer',
     '[DERIVED] Different observers access different resolution scales based on energy budgets',
     '[INTERPRETED] The Planck scale represents an absolute limit---this is consistent with our framework but the specific value is imported from physics',

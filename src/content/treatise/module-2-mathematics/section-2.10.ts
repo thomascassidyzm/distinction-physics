@@ -89,7 +89,7 @@ export const section2_10: Section = {
       statement:
         'A mathematical statement $P$ is necessarily true if and only if the distinction pattern it describes is thermodynamically stable---requiring minimal energy to maintain and representing the lowest-energy configuration among alternatives. **Epistemic note**: This is an interpretation, not a derivation. The equivalence between mathematical necessity and thermodynamic stability is a proposed correspondence, not something proven from axioms.',
       epistemicStatus: 'interpreted',
-      dependsOn: ['thm-distinction-stability', 'A1'],
+      dependsOn: ['thm-effective-discreteness', 'A1'],
     },
     {
       type: 'heading',

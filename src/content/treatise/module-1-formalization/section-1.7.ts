@@ -28,7 +28,7 @@ export const section1_7: Section = {
       statement:
         'For an OLU with total energy budget $E_{\\text{total}}$ at temperature $T$:\n\n$$N_{\\max} \\leq \\frac{E_{\\text{total}}}{kT \\ln 2}$$\n\nThis sets an absolute limit on simultaneous distinctions maintainable by any observer.',
       epistemicStatus: 'derived',
-      dependsOn: ['A1', 'A2', 'thm-landauer'],
+      dependsOn: ['A1', 'A2', 'thm-landauer-limit'],
     },
     {
       type: 'example',

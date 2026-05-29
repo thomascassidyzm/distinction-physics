@@ -4,7 +4,7 @@ export const section0_2: Section = {
   id: '0.2',
   title: 'The Transcendental Necessity of Distinction',
   subtitle: 'From Expressibility to Reality-as-Accessible',
-  epistemicStatus: 'derived',
+  epistemicStatus: 'interpreted',
   content: [
     {
       type: 'paragraph',
@@ -51,7 +51,7 @@ export const section0_2: Section = {
     {
       type: 'paragraph',
       content:
-        'To deny that distinction is fundamental is to use distinction in the very act of denial. This is not a logical trap we have set but a demonstration of **transcendental necessity**—distinction-making is the condition of possibility for any thought whatsoever.',
+        'To deny that distinction is fundamental is to use distinction in the very act of denial. This is not a logical trap we have set but a demonstration of **transcendental necessity**—for any OLU, distinction-making is the condition of possibility for any thought expressible to or by such an observer.',
       emphasis: 'key',
     },
     {

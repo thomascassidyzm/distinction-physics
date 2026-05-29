@@ -40,7 +40,7 @@ export const section2_5: Section = {
     {
       type: 'paragraph',
       content:
-        'These are not abstract Platonic values but descriptions of physical states—whether a boundary is maintained or not. The binary nature of classical logic reflects the discrete nature of boundary-maintenance for finite-energy OLUs.',
+        'On this interpretation, truth values can be read not as abstract Platonic values but as descriptions of physical boundary states—whether a boundary is maintained or not. The binary nature of classical logic then reflects the discrete character of boundary-maintenance for finite-energy OLUs.',
       emphasis: 'key',
     },
     {

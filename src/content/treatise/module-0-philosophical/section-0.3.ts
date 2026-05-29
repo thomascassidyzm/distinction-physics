@@ -98,7 +98,7 @@ export const section0_3: Section = {
     },
     {
       type: 'paragraph',
-      content: 'This follows with mathematical necessity from our two axioms. Consider any seemingly continuous property—spatial position, temporal location, velocity, temperature, field strength. We will show that perfect access to continuity would require infinite energy, which no OLU possesses. Therefore, all such properties must be effectively discrete for any observer.',
+      content: 'This follows from our two axioms. Consider any seemingly continuous property—spatial position, temporal location, velocity, temperature, field strength. We will show that accessing it to arbitrary precision would require recording unbounded information, and hence unbounded energy, which no OLU possesses. Therefore, all such properties must be effectively discrete for any observer.',
     },
     {
       type: 'heading',
@@ -116,7 +116,7 @@ export const section0_3: Section = {
     },
     {
       type: 'paragraph',
-      content: 'To specify position $x_1$ with perfect precision in continuous space means distinguishing $x_1$ from all other possible positions. But "all other possible positions" in a continuous space is an infinite set. Moreover, between $x_1$ and any nearby position $x_2$, no matter how close, there exist infinitely many intermediate positions: $x_{1.1}$, $x_{1.11}$, $x_{1.111}$, and so on without end.',
+      content: 'To pin down a position to a precision $\\Delta$ within a bounded region of size $L$ is to select one cell out of $L/\\Delta$ — which is to record $\\log_2(L/\\Delta)$ bits of information about where the object is. The point is not that there are infinitely many neighbours to be checked off one by one; it is that as the demanded precision sharpens ($\\Delta \\to 0$), the amount of information that must be recorded to specify the position grows without bound.',
     },
     {
       type: 'derivation',
@@ -126,41 +126,36 @@ export const section0_3: Section = {
       steps: [
         {
           number: 1,
-          statement: 'To specify position $x_1$ with perfect precision requires distinguishing $x_1$ from all other possible positions.',
-          justification: 'Definition of precise specification—requires distinguishability from alternatives.',
+          statement: 'Specifying a position to precision $\\Delta$ within a region of size $L$ requires recording $\\log_2(L/\\Delta)$ bits of information.',
+          justification: 'Identifying one cell among $L/\\Delta$ equiprobable alternatives requires exactly that many bits (information content of a choice).',
         },
         {
           number: 2,
-          statement: 'In continuous space, between any two positions $x_1$ and $x_2$, there exist infinitely many intermediate positions.',
-          justification: 'Definition of mathematical continuity (density of the real numbers).',
+          statement: 'As the demanded precision sharpens ($\\Delta \\to 0$), the number of bits required grows without bound.',
+          justification: '$\\log_2(L/\\Delta) \\to \\infty$ as $\\Delta \\to 0$.',
         },
         {
           number: 3,
-          statement: 'Each position must be distinguished from every other position.',
-          justification: 'From step 1—specification requires distinguishability.',
+          statement: 'Recording or maintaining each bit of that information costs at least $kT\\ln 2$ of energy.',
+          justification: 'Axiom 1, via the Landauer bound it imports.',
         },
         {
           number: 4,
-          statement: 'Each distinction costs energy $E > 0$.',
-          justification: 'Axiom 1 (Energy Cost of Distinction).',
+          statement: 'Specifying the position to precision $\\Delta$ therefore costs at least $kT\\ln 2 \\cdot \\log_2(L/\\Delta)$.',
+          justification: 'From steps 1–3: bits required × minimum energy per bit.',
         },
         {
           number: 5,
-          statement: 'Distinguishing infinitely many positions requires infinite energy.',
-          justification: 'From steps 2, 3, 4: infinite distinctions × positive energy per distinction = infinite total energy.',
-        },
-        {
-          number: 6,
-          statement: 'Every OLU has only finite energy.',
+          statement: 'Every OLU has only a finite energy budget $E$.',
           justification: 'Axiom 2 (Finite Energy Budgets).',
         },
         {
-          number: 7,
-          statement: 'No OLU can access truly continuous space.',
-          justification: 'From steps 5 and 6: infinite energy required, only finite energy available.',
+          number: 6,
+          statement: 'A finite budget caps the recordable bits at $E/(kT\\ln 2)$, fixing a finite minimum resolution $\\Delta_{\\min} = L \\cdot 2^{-E/(kT\\ln 2)} > 0$.',
+          justification: 'From steps 4–5: arbitrary precision would demand unbounded energy, so resolution bottoms out at the budget-set floor.',
         },
       ],
-      conclusion: 'No OLU can access truly continuous space. Space must be effectively discrete for any observer, with a minimum distinguishable separation determined by the observer\'s energy budget.',
+      conclusion: 'No OLU can access truly continuous space. Space must be effectively discrete for any observer, with a minimum distinguishable separation $\\Delta_{\\min}$ set by the observer\'s energy budget. The argument is informational — unbounded precision demands unbounded bits, and each bit carries the Landauer cost — not a claim that infinitely many distinctions are drawn at once.',
       epistemicStatus: 'derived',
     },
     {
@@ -319,7 +314,7 @@ export const section0_3: Section = {
     },
     {
       type: 'paragraph',
-      content: 'The Planck scale represents a **universal resolution limit**—not just a practical limitation but a principled boundary where the concepts of measurement, distinction, and even spacetime break down.',
+      content: 'Axioms 1 and 2 yield *observer-dependent* resolution limits. The existence of a single *universal* floor is a further claim: the Planck scale follows from $\\hbar$, $c$, and $G$ and is imported from quantum gravity, not derived from the two axioms. The framework is consistent with such a floor and interprets it as a universal distinction limit — a principled boundary where the concepts of measurement, distinction, and even spacetime are conjectured to break down.',
     },
     {
       type: 'paragraph',
@@ -485,11 +480,14 @@ export const section0_3: Section = {
       style: 'bullet',
       items: [
         { content: 'Both position ($x$) and momentum ($p$) are continuous properties in classical description' },
-        { content: 'Accessing continuous properties with infinite precision requires infinite energy' },
+        { content: 'Accessing continuous properties to arbitrary precision requires recording unbounded information, hence unbounded energy' },
         { content: 'OLUs have finite energy, must allocate it between position and momentum distinctions' },
         { content: 'Greater precision in position (more energy invested in spatial distinctions) means less energy available for momentum distinctions, and vice versa' },
-        { content: 'The trade-off is quantified by $\\hbar/2$' },
       ],
+    },
+    {
+      type: 'paragraph',
+      content: 'Standard QM quantifies this trade-off as $\\Delta x \\cdot \\Delta p \\geq \\hbar/2$. The framework offers a reason such a trade-off is unsurprising for finite-energy observers, but it does not derive the value $\\hbar/2$ — that constant is imported from quantum mechanics, not produced by the two axioms.',
     },
     {
       type: 'paragraph',
@@ -990,9 +988,9 @@ export const section0_3: Section = {
   keyPoints: [
     'Two axioms ground the framework: (1) All distinctions accessible to OLUs cost energy [IMPORTS Landauer]; (2) All OLUs have finite energy budgets',
     'Axiom 1 is scoped to OLU-accessible distinctions because OLU-accessibility requires reading a recorded state, which involves irreversible operations and so hits the Landauer bound. Reversible computations leaving no readable trace fall outside this scope; the framework does not claim otherwise',
-    '[DERIVED] Effective Discreteness: no continuous quantity can be accessed by any OLU — infinite precision would require infinite energy',
+    '[DERIVED] Effective Discreteness: no continuous quantity can be accessed by any OLU — arbitrary precision would require recording unbounded information, hence unbounded energy',
     '[DERIVED] The Resolution Hierarchy: different OLUs access reality at different effective resolutions based on energy budgets',
-    '[DERIVED] The Planck scale represents a universal resolution limit beyond which no OLU can make distinctions',
+    '[IMPORTED + INTERPRETED] The Planck scale (from ℏ, c, G) is consistent with a universal resolution floor; the framework reads it as a universal distinction limit but does not derive it from the two axioms',
     '[DERIVED] Finitude: only finitely many distinctions can be maintained simultaneously',
     '[DERIVED] Dynamism: distinctions require continuous energy maintenance',
     '[DERIVED] Relationality: all OLUs must draw energy from their environments',

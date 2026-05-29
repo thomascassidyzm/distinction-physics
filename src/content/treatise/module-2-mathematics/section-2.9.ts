@@ -214,4 +214,5 @@ export const section2_9: Section = {
     '[INTERPRETED] Different physical domains require different mathematics reflecting their distinct boundary conditions',
     '[INTERPRETED] New physics may require new mathematics as we encounter novel distinction patterns',
   ],
+  citations: ['wigner1960'],
 };

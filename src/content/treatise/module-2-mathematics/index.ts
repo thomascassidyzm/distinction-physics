@@ -33,7 +33,7 @@ export const module2: Module = {
   ],
   keyInsights: [
     '[INTERPRETED] Mathematics formalizes stable distinction patterns—this is consistency with distinction-primacy, not independent derivation',
-    '[DERIVED from axioms] Discrete mathematics is foundational because OLUs cannot fully access continuity (follows from finite energy)',
+    '[DERIVED] OLUs cannot fully access continuity (effective discreteness, from finite energy); [INTERPRETED] this is read as why discrete mathematics is so directly accessible to OLUs',
     '[INTERPRETED] Sets, numbers, logic, and geometry can be understood as boundary-drawing operations—we do not derive mathematics from scratch',
     '[INTERPRETED] Mathematical necessity viewed as thermodynamic stability—a proposed correspondence, not a proven equivalence',
     '[INTERPRETED] The "unreasonable effectiveness" of mathematics is illuminated by shared thermodynamic constraints—interpretive vocabulary, not derivation',

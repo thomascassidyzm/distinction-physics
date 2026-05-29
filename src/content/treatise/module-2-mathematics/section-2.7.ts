@@ -141,7 +141,7 @@ export const section2_7: Section = {
     {
       type: 'paragraph',
       content:
-        'Quantum randomness (Module 5) is the limiting case: at the quantum level, no additional energy investment can predict which boundary will be actualized. Classical randomness is typically epistemic—additional information would resolve it—but quantum randomness is ontic—it reflects fundamental limits on boundary actualization.',
+        'Quantum randomness (Module 5) is the limiting case: at the quantum level, no additional energy investment can predict which boundary will be actualized. Classical randomness is typically epistemic—additional information would resolve it—whereas quantum randomness is most economically interpreted, for OLUs, as ontic (reflecting limits on boundary actualization rather than missing information). This interpretive stance is argued in Module 5; it is not established physics, and it does not adjudicate hidden-variable accounts.',
       emphasis: 'conclusion',
     },
   ],

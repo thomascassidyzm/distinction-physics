@@ -33,9 +33,11 @@ reality. The framework demonstrates consistency with known physics and offers a 
 vocabulary for understanding mathematics, quantum mechanics, thermodynamics, spacetime,
 and consciousness through the lens of distinction-making under resource constraints.
 
-The key contribution domain is learning theory (Module 4), where the framework has been
-validated through practical implementation in educational systems (SSi, Zenjin, Alexander).
-Other domains offer philosophical interpretation rather than novel predictions.`,
+The key contribution domain is learning theory (Module 4), where the framework's design
+rules are instantiated in deployed educational systems (SSi, Zenjin, Alexander) — a
+consistency check against practice, not a confirmation of the derivation. The directional
+discipline matters: those systems came first and the framework interprets them, rather than
+the reverse. Other domains offer philosophical interpretation rather than novel predictions.`,
 
   keywords: [
     'distinction',
@@ -51,9 +53,9 @@ Other domains offer philosophical interpretation rather than novel predictions.`
   ],
 
   acknowledgments: `This framework has been developed through extensive dialogue and
-adversarial testing. The transcendental core—that distinction is necessary for any
-thought or experience—has survived 36 adversarial attacks across 7 rounds of
-systematic critique.`,
+sustained adversarial testing. The transcendental core—that distinction is necessary for any
+thought or experience expressible to an OLU—has so far held up under repeated rounds of
+systematic critique; what remains scoped or conjectured is flagged as such throughout.`,
 
   license: 'CC BY-NC-SA 4.0',
 };

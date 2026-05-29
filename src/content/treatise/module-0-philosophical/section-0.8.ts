@@ -38,7 +38,7 @@ export const section0_8: Section = {
     },
     {
       type: 'paragraph',
-      content: "Practical implication: **A human life is more valuable than a bacterium's** because a human maintains vastly more distinctions (10^15 synapses vs. 10^3 genes), has self-referential consciousness, and participates in cultural complexity. This isn't arbitrary—it's thermodynamic accounting.",
+      content: "Practical implication: the framework suggests one reason we tend to weight **a human life above a bacterium's** — a human maintains vastly more distinctions (10^15 synapses vs. 10^3 genes), has self-referential consciousness, and participates in cultural complexity. This offers a thermodynamic gloss on the intuition, not a derivation of value: reading a moral worth off a complexity count is itself a contestable move, and the speculative flag stays on it.",
     },
     {
       type: 'heading',

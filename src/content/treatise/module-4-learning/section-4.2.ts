@@ -4,7 +4,7 @@ export const section4_2: Section = {
   id: '4.2',
   title: 'The Variational Structure of Language Acquisition',
   subtitle: 'Action Functionals and the Least-Action Pedagogy',
-  epistemicStatus: 'derived',
+  epistemicStatus: 'interpreted',
   content: [
     // =========================================================================
     // OPENING
@@ -12,7 +12,7 @@ export const section4_2: Section = {
     {
       type: 'paragraph',
       content:
-        'The two axioms established in Module 0 — that distinctions cost energy, and that observers-like-us operate on finite energy budgets — combine to give any learning trajectory a natural cost functional. That functional has units of energy × time. In classical mechanics this quantity is called **action**, and trajectories that extremize action are the ones physical systems actually follow. Here we show that language acquisition admits an analogous variational structure, and that the design rules of High-Intensity Speaking Exercises (HISE) can be derived as choices that approximately minimize action along the path from zero competence to conversational production.',
+        'The two axioms established in Module 0 — that distinctions cost energy, and that observers-like-us operate on finite energy budgets — combine to give any learning trajectory a natural cost functional. That functional has units of energy × time. In classical mechanics this quantity is called **action**, and trajectories that extremize action are the ones physical systems actually follow. Here we show that language acquisition admits an analogous variational structure — the action functional itself follows from the two axioms — and that the design rules of High-Intensity Speaking Exercises (HISE) can be interpreted as choices that approximately minimize action along the path from zero competence to conversational production.',
       emphasis: 'key',
     },
     {
@@ -152,7 +152,7 @@ export const section4_2: Section = {
     {
       type: 'paragraph',
       content:
-        'The design rules of HISE — refined over seventeen years of deployment across tens of thousands of learners — can each be derived as choices that reduce action along the trajectory from $n_{\\text{zero}}$ to conversational production. They are not pedagogical features bolted onto a general method. They are local reductions of the cost integrand, each of which either shrinks $E_{\\text{maint}}(n)$, redirects $E_{\\text{work}}(\\dot{n})$ toward on-trajectory regions, or both.',
+        'The design rules of HISE — refined over seventeen years of deployment across tens of thousands of learners — can each be read as choices that reduce action along the trajectory from $n_{\\text{zero}}$ to conversational production. The directional discipline matters: the rules came first, refined empirically, and the framework interprets them after the fact as local reductions of the cost integrand — each of which either shrinks $E_{\\text{maint}}(n)$, redirects $E_{\\text{work}}(\\dot{n})$ toward on-trajectory regions, or both. This is an interpretive fit, not a derivation of the rules from the axioms.',
     },
     {
       type: 'table',
@@ -384,7 +384,7 @@ export const section4_2: Section = {
     'Axioms 1 and 2 combine to give any learning trajectory a natural action functional $S = \\int E[n, \\dot{n}] \\, dt$ with units of energy × time',
     'The least-action acquisition trajectory minimizes $S$ subject to reaching $n^*$ within time $T$',
     'Three characteristic sources of excess action: off-trajectory maintenance, premature distinction-load, high-action automatization paths',
-    'Each HISE design rule can be derived as a local reduction of the cost integrand, not as a bolted-on pedagogical feature',
+    'Each HISE design rule can be read as a local reduction of the cost integrand [INTERPRETED] — the rules came first and are interpreted after the fact, not derived from the axioms; only the action functional itself is [DERIVED]',
     'The 10-day Japanese and Irish sprints are short-timescale probes where trajectory choice dominates over total effort',
     'Predicted features of sprint output: generative-overlap errors, flexible M-LEGO use, disfluency at selection points, production/metalinguistic-knowledge gap',
     'The variational structure is derived from the axioms, not imported from physics — the convergence with classical mechanics is structural, not metaphorical',

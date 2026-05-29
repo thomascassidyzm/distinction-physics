@@ -24,8 +24,8 @@ export const module9: Module = {
     section9_7,
   ],
   keyInsights: [
-    'The transcendental priority of distinction-making is foundational; this treatise adds a specific thermodynamic grounding via Landauer + finite budgets [DERIVED]',
-    'The load-bearing theoretical content is §4.2 (Module 4): the variational account of acquisition, with an action functional derived from the axioms and HISE identified as approximate least-action pedagogy',
+    'The transcendental priority of distinction-making is foundational; this treatise adds a specific thermodynamic grounding via Landauer + finite budgets [FOUNDATIONAL + IMPORTED — the [DERIVED] label belongs to downstream consequences like effective discreteness and the §4.2 action functional, not to the transcendental claim or the axioms themselves]',
+    'The load-bearing theoretical content is §4.2 (Module 4): the variational account of acquisition, with an action functional derived from the axioms and HISE interpreted as approximate least-action pedagogy',
     'The framework provides unifying vocabulary across physics, mathematics, and cognition [INTERPRETED]',
     'Two axioms ground the framework: OLU-accessible distinctions cost energy [IMPORTS Landauer — irreversible recording is the Landauer regime; see §0.3, §1.3], OLUs have finite energy budgets',
     'The hard problem and the measurement problem are REFRAMED, not dissolved: the framework provides vocabulary, not explanations of qualia or mechanisms of collapse',

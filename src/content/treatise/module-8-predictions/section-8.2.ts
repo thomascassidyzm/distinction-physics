@@ -93,12 +93,12 @@ export const section8_2: Section = {
     {
       type: 'paragraph',
       content:
-        '**Framework Account**: From Module 0: Accessing a continuous quantity with perfect precision requires distinguishing infinitely many values, requiring infinite energy. Axiom 2 prohibits this. Therefore, all accessible quantities must be effectively discrete.',
+        '**Framework Account**: From Module 0: accessing a continuous quantity to arbitrary precision requires recording unbounded information, hence unbounded energy. Axiom 2 prohibits this. Therefore, all accessible quantities must be effectively discrete. (Effective discreteness is the framework\'s one genuinely derived structural result.)',
     },
     {
       type: 'paragraph',
       content:
-        '**Experimental Status**: CONFIRMED',
+        '**Experimental Status**: CONSISTENT WITH (the derived result is effective discreteness; observed QM quantization predates the framework and is interpreted post-hoc, not predicted)',
     },
     {
       type: 'list',
@@ -128,13 +128,13 @@ export const section8_2: Section = {
       name: 'Consciousness Requires Energy',
       statement:
         'Consciousness requires significant continuous energy expenditure because self-referential distinction-making is thermodynamically costly.',
-      epistemicStatus: 'derived',
+      epistemicStatus: 'interpreted',
       dependsOn: ['A1', 'A2', 'def-olu'],
     },
     {
       type: 'paragraph',
       content:
-        '**Derivation Type**: Type 1 (Derivation)',
+        '**Derivation Type**: Type 2 (post-hoc consistency — rests on the conjectured consciousness model of Module 3)',
     },
     {
       type: 'paragraph',
@@ -144,12 +144,12 @@ export const section8_2: Section = {
     {
       type: 'paragraph',
       content:
-        '**Quantitative Estimate**: Approximately 8W for conscious processing in humans (40% of the brain\'s ~20W total budget).',
+        '**Quantitative Estimate**: A substantial fraction of the brain\'s ~20W budget supports conscious processing (any specific split, e.g. ~8W, is illustrative — not a measured partition).',
     },
     {
       type: 'paragraph',
       content:
-        '**Experimental Status**: CONFIRMED',
+        '**Experimental Status**: CONSISTENT WITH (the metabolic cost of cognition was documented independently)',
     },
     {
       type: 'list',
@@ -180,13 +180,13 @@ export const section8_2: Section = {
       name: 'Learning as Energy Optimization',
       statement:
         'Learning reduces the energy cost per distinction. Practiced tasks require measurably less glucose consumption, less oxygen uptake, and reduced metabolic activity compared to novel tasks.',
-      epistemicStatus: 'derived',
+      epistemicStatus: 'interpreted',
       dependsOn: ['A1', 'A2'],
     },
     {
       type: 'paragraph',
       content:
-        '**Derivation Type**: Type 1 (Derivation)',
+        '**Derivation Type**: Type 2 (post-hoc consistency — the efficiency gains were documented before the framework)',
     },
     {
       type: 'paragraph',
@@ -196,7 +196,7 @@ export const section8_2: Section = {
     {
       type: 'paragraph',
       content:
-        '**Experimental Status**: CONFIRMED',
+        '**Experimental Status**: CONSISTENT WITH (the efficiency gains were documented independently)',
     },
     {
       type: 'list',
@@ -212,7 +212,7 @@ export const section8_2: Section = {
       type: 'note',
       variant: 'technical',
       content:
-        'The efficiency gains from practice were documented before our framework. The contribution is identifying learning AS energy optimization - not merely correlated with it, but constitutively defined by it.',
+        'The efficiency gains from practice were documented before our framework. Its contribution is to RE-DESCRIBE learning as energy optimization (an interpretive identity) — a lens consistent with, though not uniquely entailed by, the correlational evidence.',
     },
     {
       type: 'heading',
@@ -227,23 +227,23 @@ export const section8_2: Section = {
       name: 'Resolution Requires Energy',
       statement:
         'Finer measurement resolution requires higher energy investment. The relationship is monotonic and steep.',
-      epistemicStatus: 'derived',
+      epistemicStatus: 'interpreted',
       dependsOn: ['A1', 'A2'],
     },
     {
       type: 'paragraph',
       content:
-        '**Derivation Type**: Type 1 (Derivation)',
+        '**Derivation Type**: Type 2 (post-hoc consistency — the resolution hierarchy is empirically obvious to experimentalists)',
     },
     {
       type: 'paragraph',
       content:
-        '**Framework Account**: From Module 0: Distinguishing finer separations requires distinguishing more positions, each costing energy. The energy requirement scales at least as the number of distinguishable positions.',
+        '**Framework Account**: From Module 0: resolving finer separations requires recording more information about position — $\\log_2(L/\\Delta)$ bits to reach precision $\\Delta$ — and each bit carries the Landauer cost. The energy requirement therefore rises steeply as resolution sharpens.',
     },
     {
       type: 'paragraph',
       content:
-        '**Experimental Status**: CONFIRMED',
+        '**Experimental Status**: CONSISTENT WITH (a conceptual lens on established measurement practice)',
     },
     {
       type: 'list',

@@ -158,7 +158,7 @@ export const section2_4: Section = {
       statement:
         'Any OLU that can (1) make at least one distinction, (2) iterate the distinction-making process, and (3) distinguish one iteration count from another will arrive at a structure isomorphic to the natural numbers. **Epistemic note**: This shows consistency between number and distinction-making, not a derivation of number from axioms. Number exists; we show it fits with the framework.',
       epistemicStatus: 'interpreted',
-      dependsOn: ['axiom-1', 'axiom-2', 'def-successor'],
+      dependsOn: ['A1', 'A2', 'def-successor'],
     },
     {
       type: 'paragraph',

@@ -15,7 +15,7 @@ export const glossary: GlossaryEntry[] = [
   {
     id: 'distinction',
     term: 'Distinction',
-    definition: 'The primordial operation that separates one thing from another; the fundamental act of boundary-drawing that enables existence-as-distinct. Distinction is ontologically primitive—it cannot be derived from more basic operations.',
+    definition: 'The primordial operation that separates one thing from another; the fundamental act of boundary-drawing that enables existence-as-distinct. For any theory expressible to or by an OLU, distinction-making is presupposed and cannot be derived from more basic operations within that theory. This is a claim about expressibility, not a metaphysical claim that distinction is primitive in reality.',
     symbol: '\\diamond',
     firstAppearance: '0.1',
     relatedTerms: ['distinction-operator', 'boundary', 'existence-as-distinct'],
@@ -96,7 +96,7 @@ export const glossary: GlossaryEntry[] = [
   {
     id: 'axiom-1',
     term: 'Axiom 1 (Energy Cost)',
-    definition: 'All distinctions cost energy. Making or maintaining any distinction—any boundary, any difference, any observable property—requires energy expenditure. This is not contingent but a necessary feature of physical distinction-making.',
+    definition: 'All distinctions cost energy. Making or maintaining any distinction an OLU can read or hold—any boundary, any difference, any observable property—requires energy expenditure, because OLU-accessibility involves irreversible operations that hit the Landauer bound. Imported from Landauer\'s principle, not self-derived, and scoped to OLU-accessible distinctions rather than asserted as an unconditional law of reality.',
     firstAppearance: '0.3',
     relatedTerms: ['landauer-limit', 'distinction'],
     category: 'foundational',
@@ -122,7 +122,7 @@ export const glossary: GlossaryEntry[] = [
   {
     id: 'effective-discreteness',
     term: 'Effective Discreteness',
-    definition: 'The principle that no continuous quantity can be accessed by any OLU with infinite precision. All observable properties are effectively quantized because perfect access to continuity would require infinite energy, which no OLU possesses.',
+    definition: 'The principle that no continuous quantity can be accessed by any OLU with infinite precision. Resolving a continuous quantity to arbitrary precision would require recording unbounded information, and each recorded bit carries a positive energy cost (Axiom 1, via Landauer); a finite budget therefore fixes a finite resolution. This is the framework\'s one genuinely derived structural result.',
     firstAppearance: '0.3',
     relatedTerms: ['axiom-1', 'axiom-2', 'resolution-limit'],
     category: 'foundational',
@@ -166,7 +166,7 @@ export const glossary: GlossaryEntry[] = [
   {
     id: 'planck-scale',
     term: 'Planck Scale',
-    definition: 'The universal resolution limit: ℓ_P ≈ 1.6 × 10⁻³⁵ m. Below this scale, distinction becomes impossible regardless of energy available. Represents the absolute limit of accessibility.',
+    definition: 'A candidate universal resolution limit: ℓ_P ≈ 1.6 × 10⁻³⁵ m. The framework interprets the Planck scale as a plausible absolute floor on accessibility; whether distinction becomes strictly impossible below it is conjectural — consistent with, but not established by, current physics. The scale itself follows from ℏ, c, G and is imported from quantum gravity, not derived from the two axioms.',
     symbol: '\\ell_P \\approx 1.6 \\times 10^{-35} \\text{ m}',
     firstAppearance: '0.3',
     relatedTerms: ['resolution-limit', 'effective-discreteness'],
@@ -196,7 +196,7 @@ export const glossary: GlossaryEntry[] = [
   {
     id: 'ontological-primacy',
     term: 'Ontological Primacy',
-    definition: 'The status of distinction as the most fundamental operation—not derivable from more basic principles. We say distinction is ontologically primitive because any attempt to explain or deny it must already employ it.',
+    definition: 'The status of distinction as the most fundamental operation available to an OLU—not derivable from more basic principles within any theory an OLU can express, because any attempt to explain or deny it must already employ it. This is a transcendental/expressibility claim, not a metaphysical assertion that distinction is the primitive constituent of reality-in-itself.',
     firstAppearance: '0.2',
     relatedTerms: ['distinction', 'transcendental-argument'],
     category: 'philosophical',
@@ -255,7 +255,7 @@ export const glossary: GlossaryEntry[] = [
   {
     id: 'measurement',
     term: 'Measurement (Quantum)',
-    definition: 'The process by which potential boundaries become actual through energy investment. In quantum mechanics, measurement "collapses" superposition into definite outcomes—this is boundary actualization.',
+    definition: 'The process by which potential boundaries become actual through energy investment. In quantum mechanics, measurement "collapses" superposition into definite outcomes—the framework interprets this collapse as boundary actualization.',
     firstAppearance: '5.2',
     relatedTerms: ['superposition', 'collapse'],
     category: 'physical',

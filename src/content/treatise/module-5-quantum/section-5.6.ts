@@ -170,7 +170,7 @@ export const section5_6: Section = {
       statement:
         'The Born rule $P(i) = |\\alpha_i|^2$ is consistent with interpreting probability as reflecting the relative energy cost of actualizing different distinctions. However, this consistency does not constitute a derivation of the specific $|\\alpha|^2$ form from first principles.',
       epistemicStatus: 'imported',
-      dependsOn: ['A1', 'A2'],
+      dependsOn: [],
     },
     {
       type: 'heading',
@@ -216,7 +216,7 @@ export const section5_6: Section = {
     {
       type: 'paragraph',
       content:
-        'This honesty about limits is essential to the integrity of the distinction framework. We claim to derive the CORE CONCEPTUAL STRUCTURE of quantum mechanics - quantization, superposition, uncertainty, measurement, entanglement - from our two axioms. We do NOT claim to derive every mathematical detail.',
+        'This honesty about limits is essential to the integrity of the distinction framework. We DERIVE only effective discreteness (quantization) from the two axioms. Superposition, uncertainty, measurement, and entanglement are INTERPRETED through the framework, not derived from it — and the mathematical machinery (Hilbert space, the Born rule, Planck\'s constant) is IMPORTED outright. The framework offers a unifying vocabulary for why QM has the shape it does; it does not regenerate QM from first principles.',
     },
     {
       type: 'paragraph',
@@ -276,7 +276,7 @@ export const section5_6: Section = {
         'Amplitudes plausibly reflect relative energy costs of distinctions, but the $|\\alpha|^2$ form is not derived',
         'The role of complex numbers and the specific squaring operation remain unexplained by our axioms',
         'Intellectual honesty requires distinguishing what is derived from what is merely interpreted',
-        'The core conceptual structure of QM (quantization, superposition, uncertainty, measurement) IS derived',
+        'Only effective discreteness/quantization is derived from the axioms; superposition, uncertainty, measurement and entanglement are interpreted through the framework, not derived',
         'The specific mathematical details (Born rule, complex structure) remain open questions',
         'This honesty strengthens rather than weakens the framework\'s credibility',
       ],

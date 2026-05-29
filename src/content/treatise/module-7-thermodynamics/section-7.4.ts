@@ -84,7 +84,7 @@ export const section7_4: Section = {
     {
       type: 'paragraph',
       content:
-        'The specific value $kT \\ln(2)$ follows from the thermodynamic connection between information and entropy established by our unified framework.',
+        'The specific value $kT \\ln(2)$ comes from statistical mechanics — the entropy of reducing two equiprobable states to one — and the framework imports it (it is the content of Axiom 1) rather than establishing it.',
     },
     {
       type: 'heading',

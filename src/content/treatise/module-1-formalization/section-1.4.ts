@@ -31,17 +31,18 @@ export const section1_4: Section = {
 
 2. A continuous property contains infinitely many distinct values between any two points $q_a$ and $q_b$.
 
-3. The precision with which an OLU can distinguish continuous quantities is bounded by available energy. To make $N$ distinct measurements within any interval requires:
-$$E_{\\text{required}} \\geq N \\cdot D_{\\min}$$
+3. Resolving the property to one of $N$ cells within an interval is selecting one alternative among $N$, which requires recording $\\log_2 N$ bits of information. Each recorded bit costs at least $D_{\\min}$ (the Landauer floor of Axiom 1), so:
+$$E_{\\text{required}} \\geq D_{\\min} \\cdot \\log_2 N$$
+(This is the *informational* cost — it is not a claim that $N$ separate pairwise distinctions are drawn at once, which would give the looser $N \\cdot D_{\\min}$.)
 
 4. By Axiom 2, $E_{\\text{total}} < \\infty$, therefore:
-$$N_{\\max} \\leq \\frac{E_{\\text{total}}}{D_{\\min}}$$
+$$N_{\\max} \\leq 2^{\\,E_{\\text{total}}/D_{\\min}}$$
 
-5. Arbitrarily fine distinctions ($N \\to \\infty$) would require arbitrarily large energy ($E \\to \\infty$), which no OLU possesses.
+5. Arbitrarily fine distinctions ($N \\to \\infty$) would require recording unbounded information, hence arbitrarily large energy ($E \\to \\infty$), which no OLU possesses.
 
 The OLU accesses an effectively discrete version of $Q$ with resolution determined by $E_{\\text{total}}$. $\\square$`,
       epistemicStatus: 'derived',
-      dependsOn: ['axiom-1', 'axiom-2', 'thm-landauer-limit'],
+      dependsOn: ['A1', 'A2', 'thm-landauer-limit'],
       usedIn: ['thm-spatial-resolution', 'thm-complete-resolution'],
     },
     {
@@ -92,7 +93,7 @@ The OLU accesses an effectively discrete version of $Q$ with resolution determin
     {
       type: 'paragraph',
       content:
-        'This explains why particle colliders require enormous energy (gigawatts) to probe femtometer scales ($10^{-15}$ m). The inverse relationship between energy and resolution is not merely a technological limitation but a fundamental consequence of distinction physics.',
+        'This is consistent with why particle colliders require enormous energy (gigawatts) to probe femtometer scales ($10^{-15}$ m). The inverse relationship between energy and resolution follows from established physics (de Broglie, relativistic kinematics) and is conceptually illuminated by — not independently derived from — the two axioms.',
     },
   ],
   keyPoints: [

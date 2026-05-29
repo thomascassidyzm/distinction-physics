@@ -237,7 +237,7 @@ export const bibliography: Citation[] = [
     note: 'The "hard problem" of consciousness',
   },
   {
-    id: 'dehaene2011',
+    id: 'dehaene2014',
     type: 'book',
     authors: ['Dehaene, S.'],
     title: 'Consciousness and the Brain: Deciphering How the Brain Codes Our Thoughts',
@@ -329,6 +329,18 @@ export const bibliography: Citation[] = [
   // ===========================================================================
   // MATHEMATICS AND COMPUTATION
   // ===========================================================================
+  {
+    id: 'godel1931',
+    type: 'article',
+    authors: ['Gödel, K.'],
+    title: 'Über formal unentscheidbare Sätze der Principia Mathematica und verwandter Systeme I',
+    year: 1931,
+    journal: 'Monatshefte für Mathematik und Physik',
+    volume: '38',
+    pages: '173-198',
+    relevantTo: ['2.10'],
+    note: 'Incompleteness theorems',
+  },
   {
     id: 'wigner1960',
     type: 'article',

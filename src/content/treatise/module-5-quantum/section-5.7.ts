@@ -72,7 +72,7 @@ export const section5_7: Section = {
     {
       type: 'paragraph',
       content:
-        'The violation of Bell inequalities demonstrates that entangled systems cannot be described by local hidden variables - pre-existing definite properties that we simply don\'t know. In the distinction framework, this is expected: there ARE no pre-existing definite properties because no one has paid the energy cost to distinguish them. The correlations are in the shared distinction structure itself, not in hidden definite states.',
+        'The violation of Bell inequalities demonstrates that entangled systems cannot be described by local hidden variables - pre-existing definite properties that we simply don\'t know. On this framework\'s reading, OLU-accessible definite properties are not taken to pre-exist the distinction that would resolve them: the correlations are read as residing in the shared distinction structure itself rather than in hidden definite states. This is an interpretive stance, offered alongside — not above — other interpretations; it does not by itself adjudicate the hidden-variable question.',
     },
     {
       type: 'heading',

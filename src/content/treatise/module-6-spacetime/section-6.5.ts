@@ -235,7 +235,7 @@ export const section6_5: Section = {
         'The classical singularity may be an artifact of assuming continuous spacetime below Planck scale',
         'Where distinction fails, existence-as-distinct breaks down - the framework reaches its limit',
         'Bekenstein-Hawking entropy reflects the horizon\'s capacity as a channel for interior distinctions',
-        'The holographic principle follows from surface-bounded distinction propagation',
+        'The holographic principle might be interpreted through surface-bounded distinction propagation (conjectured; the principle itself is imported, not derived here)',
         'Hawking radiation represents quantum "leakage" of distinction-patterns through the horizon',
         'Black holes mark where the distinction framework encounters its own boundaries',
       ],

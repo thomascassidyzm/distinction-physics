@@ -8,7 +8,7 @@ export const section7_11: Section = {
     {
       type: 'paragraph',
       content:
-        'Every computational operation requires making or maintaining distinctions. From our axioms, fundamental limits on computation follow:',
+        'Every computational operation requires making or maintaining distinctions. From our axioms together with imported results (Landauer, Bekenstein, Lloyd), fundamental limits on computation can be understood:',
     },
     {
       type: 'heading',
@@ -122,7 +122,7 @@ export const section7_11: Section = {
       statement:
         'All computation is subject to thermodynamic constraints on distinction-making. The minimum energy cost of irreversible computation is $kT \\ln(2)$ per bit (imported from Landauer). Perfect computation (omniscience, perfect simulation, entropy reversal) is impossible in principle. These limits were established by Landauer, Bremermann, Bekenstein, and Lloyd; the framework provides interpretive unification, not novel derivation.',
       epistemicStatus: 'interpreted',
-      dependsOn: ['A1', 'A2', 'thm-landauer-principle', 'thm-second-law'],
+      dependsOn: ['A1', 'A2', 'deriv-landauer', 'thm-second-law'],
     },
     {
       type: 'note',

@@ -81,12 +81,12 @@ export const section7_9: Section = {
       statement:
         'The framework interprets why the Second Law holds for the demon: the demon is a distinction-making system subject to energy constraints. However, this resolution was historically achieved by Landauer (1961) and Bennett (1982); we provide interpretation, not novel derivation.',
       epistemicStatus: 'interpreted',
-      dependsOn: ['A1', 'A2', 'thm-landauer-principle'],
+      dependsOn: ['A1', 'A2', 'deriv-landauer'],
     },
     {
       type: 'paragraph',
       content:
-        'This resolution was historically achieved by Landauer and Bennett, but our framework shows WHY it had to be this way: distinction-making necessarily costs energy, making information processing subject to thermodynamic constraints.',
+        'This resolution was achieved by Landauer and Bennett. Our framework offers an interpretive account of why the demon is bound by these constraints: under Axiom 1 (imported from Landauer), distinction-making carries an energy cost, so information processing is subject to thermodynamic constraints. The account reframes the result; it does not independently establish it.',
     },
     {
       type: 'note',

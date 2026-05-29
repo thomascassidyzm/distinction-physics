@@ -117,10 +117,10 @@ export const section1_10: Section = {
       id: 'thm-information-energy',
       label: 'theorem',
       number: '1.12',
-      name: 'Information-Energy Equivalence',
+      name: 'Information-Energy Bound',
       statement:
-        'Information content $I$ (in bits) and minimum energy cost $E_{\\min}$ are related by:\n\n$$E_{\\min} = I \\cdot kT \\ln 2$$',
-      epistemicStatus: 'established',
+        'Recording information content $I$ (in bits) carries a minimum energy cost:\n\n$$E_{\\min} \\geq I \\cdot kT \\ln 2$$\n\nwith equality only in the optimal/reversible idealisation.',
+      epistemicStatus: 'imported',
       dependsOn: ['thm-landauer-limit'],
     },
     {

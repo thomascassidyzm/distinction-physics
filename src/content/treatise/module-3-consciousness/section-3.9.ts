@@ -93,7 +93,7 @@ export const section3_9: Section = {
       type: 'note',
       variant: 'technical',
       content:
-        'Each state represents a different configuration of energy allocation across the distinction-maintenance system. The framework predicts that measuring metabolic activity in relevant brain regions should correlate with these theoretical categories.',
+        'Each state represents a different configuration of energy allocation across the distinction-maintenance system. [CONSISTENT-WITH] On this reading, one would expect measured metabolic activity in the relevant brain regions to correlate with these theoretical categories.',
     },
     {
       type: 'heading',

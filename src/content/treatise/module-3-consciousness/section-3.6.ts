@@ -138,7 +138,7 @@ export const section3_6: Section = {
     {
       type: 'paragraph',
       content:
-        'These phenomena support the framework: consciousness correlates with integration of distinction-states into a unified field, and disrupting integration disrupts consciousness.',
+        'These phenomena are consistent with the framework\'s reframing: consciousness correlates with integration of distinction-states into a unified field, and disrupting integration disrupts consciousness.',
       emphasis: 'conclusion',
     },
   ],

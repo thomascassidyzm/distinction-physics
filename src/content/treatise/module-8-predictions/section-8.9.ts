@@ -186,7 +186,7 @@ export const section8_9: Section = {
     {
       type: 'paragraph',
       content:
-        'From two axioms --- OLU-accessible distinctions cost energy (Landauer scope), observers have finite budgets --- we derive constraints on all observation accessible to OLUs. These constraints manifest as the fundamental features of physics:',
+        'From two axioms --- OLU-accessible distinctions cost energy (Landauer scope), observers have finite budgets --- the framework derives effective discreteness and reads a wider set of constraints on OLU-accessible observation. It then interprets the fundamental features of physics through this lens (rather than regenerating them):',
       emphasis: 'key',
     },
     {
@@ -262,7 +262,7 @@ export const section8_9: Section = {
     {
       type: 'paragraph',
       content:
-        'Whether the framework ultimately succeeds depends on future experiments. But the predictions it has made are specific, the confirmations genuine, and the research program viable. That is all one can ask of a scientific theory in progress.',
+        'Whether the framework ultimately succeeds depends on future experiments. But its consistency with established physics is genuine, its few novel testable claims (e.g. N4, and Conjecture 6.1) are specific, and the research program is viable. That is all one can ask of a meta-theory in progress.',
       emphasis: 'conclusion',
     },
   ],
