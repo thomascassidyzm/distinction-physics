@@ -9,13 +9,13 @@ export const section8_3: Section = {
     {
       type: 'paragraph',
       content:
-        '**Epistemic Caveat**: This section presents claims that MIGHT represent genuinely novel predictions. However, many of these are extensions or specifications of known phenomena rather than claims that standard physics would reject. We must be honest about which predictions, if any, genuinely distinguish this framework from standard physics.',
+        '**Epistemic Caveat**: the claims here MIGHT be genuinely novel predictions. Many, though, are extensions or sharpenings of known phenomena rather than anything standard physics would reject. So we have to be honest about which predictions, if any, actually set this framework apart from standard physics.',
       emphasis: 'key',
     },
     {
       type: 'paragraph',
       content:
-        'Unlike the post-hoc consistency demonstrations of Section 8.2, these claims could in principle be falsified. However, falsification of these specific claims would not necessarily falsify the core axioms; it might instead prompt refinement of how the axioms are applied.',
+        'Unlike the post-hoc consistency demonstrations of Section 8.2, these claims could in principle be falsified. But falsifying one of them would not necessarily down the core axioms - it might only force a refinement in how the axioms are applied.',
     },
     {
       type: 'note',
@@ -355,12 +355,12 @@ export const section8_3: Section = {
     {
       type: 'paragraph',
       content:
-        'The predictions marked "Novel" make claims that standard physics either does not make or makes differently. These are the strongest tests of the framework. Predictions marked "Partially" novel extend or specify known phenomena in ways specific to the framework.',
+        'The predictions marked "Novel" say something standard physics either does not say or says differently. These are the framework\'s sharpest tests. The ones marked "Partially" novel extend or specify known phenomena in ways particular to the framework.',
     },
     {
       type: 'paragraph',
       content:
-        'We invite empirical researchers to design and conduct tests of these predictions. The framework stands ready to be falsified by negative results.',
+        'We invite experimenters to design and run these tests. The framework stands ready to be proven wrong - that is the point of putting the claims on the table.',
       emphasis: 'conclusion',
     },
   ],

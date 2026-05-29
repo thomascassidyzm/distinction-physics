@@ -9,7 +9,7 @@ export const section5_12: Section = {
     {
       type: 'paragraph',
       content:
-        'The quantum distinction framework generates testable predictions. Following R8 (Intellectual Integrity), we must distinguish carefully between "consistency demonstrations"---showing that our framework is compatible with already-known phenomena---and "novel predictions"---claims that go beyond standard quantum mechanics and could be empirically falsified.',
+        'The framework does make testable claims. But following R8 (Intellectual Integrity), two kinds have to be kept strictly apart. A *consistency demonstration* shows the framework sits comfortably with something we already knew. A *novel prediction* goes past standard quantum mechanics and could, in principle, be proven wrong. Only the second kind earns the framework anything.',
     },
     {
       type: 'heading',
@@ -53,7 +53,7 @@ export const section5_12: Section = {
     {
       type: 'paragraph',
       content:
-        'These confirmations establish that the distinction framework is consistent with known physics. They do not uniquely support our framework over alternatives---standard quantum mechanics and thermodynamics also predict these phenomena.',
+        'These confirmations establish that the framework is consistent with known physics, and no more than that. They do not pick it out from the alternatives - standard quantum mechanics and thermodynamics predict every one of them too.',
     },
     {
       type: 'heading',
@@ -210,7 +210,7 @@ export const section5_12: Section = {
     {
       type: 'paragraph',
       content:
-        'The novel predictions (Predictions 1, 2, and 5) provide the strongest potential tests of the distinction framework. If the specific scaling relationships are confirmed, this would provide significant support. If the modified uncertainty relation is not observed at extreme precision, this could falsify the framework or constrain its domain of applicability.',
+        'Predictions 1, 2 and 5 are where the framework is most exposed - and being exposed is the point. Confirm the specific scaling laws and the support is real, not borrowed. Fail to see the modified uncertainty relation at extreme precision and the framework is either falsified or pinned to a narrower domain. Either way, the claim is the kind that can lose.',
       emphasis: 'conclusion',
     },
   ],

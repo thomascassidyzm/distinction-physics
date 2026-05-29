@@ -9,7 +9,7 @@ export const section9_3: Section = {
     {
       type: 'paragraph',
       content:
-        'Epistemic honesty requires clearly acknowledging what the framework does NOT achieve and what questions it cannot answer. These limitations are stated not as weaknesses to be hidden but as honest boundaries of the framework\'s scope.',
+        'Now, the other side of the ledger: what the framework does NOT do, and what it cannot answer. These are not weaknesses to be tucked away. They are the boundaries of its scope, stated plainly. A framework that knew its own edges is more trustworthy than one that claimed none.',
       emphasis: 'key',
     },
     {
@@ -51,7 +51,7 @@ export const section9_3: Section = {
     {
       type: 'paragraph',
       content:
-        'These limitations invite the criticism: "You don\'t derive physics from first principles." This is true. But it applies equally to ALL physics:',
+        'These limitations invite an obvious charge: "You don\'t derive physics from first principles." True. But it lands just as hard on ALL physics:',
     },
     {
       type: 'list',
@@ -98,7 +98,7 @@ export const section9_3: Section = {
     {
       type: 'paragraph',
       content:
-        'We take distinction-making and energy constraints as primitive. But one might ask why reality is constituted by distinction-making rather than something else. The framework describes what follows from our axioms but cannot justify the axioms themselves.',
+        'We take distinction-making and energy constraints as primitive. But why should reality be made of distinction-making rather than something else? The framework describes what follows from the axioms. It cannot reach behind them to justify the axioms themselves.',
     },
     {
       type: 'heading',
@@ -108,7 +108,7 @@ export const section9_3: Section = {
     {
       type: 'paragraph',
       content:
-        'What IS superposition, really? What IS the quantum state before observation? The framework describes how distinctions emerge from undistinguished potential but remains agnostic about the ultimate nature of that potential. We may be approaching limits of what can be said.',
+        'What IS superposition, really? What IS the quantum state before observation? The framework describes how distinctions emerge from undistinguished potential, and then stops — agnostic about what that potential ultimately is. Here we may be brushing against the limit of what can be said at all.',
     },
     {
       type: 'heading',
@@ -151,7 +151,7 @@ export const section9_3: Section = {
       type: 'note',
       variant: 'editorial',
       content:
-        'These limitations are stated honestly, not defensively. A framework that claimed to answer all questions would be less trustworthy, not more. The framework\'s value lies in its minimal assumptions, unavoidable starting point, and productive applications—especially to learning.',
+        'These limitations are stated honestly, not defensively. A framework that claimed to answer everything would be less trustworthy, not more. The value lies in three things: minimal assumptions, an unavoidable starting point, and productive applications — above all, to learning.',
     },
   ],
   keyPoints: [

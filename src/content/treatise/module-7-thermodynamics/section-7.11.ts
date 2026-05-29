@@ -8,7 +8,7 @@ export const section7_11: Section = {
     {
       type: 'paragraph',
       content:
-        'Every computational operation requires making or maintaining distinctions. From our axioms together with imported results (Landauer, Bekenstein, Lloyd), fundamental limits on computation can be understood:',
+        'Every computational step comes down to making or holding a distinction. Put the two axioms together with the imported results - Landauer, Bekenstein, Lloyd - and the hard limits on computation come into view, not as engineering hurdles but as features of the territory:',
     },
     {
       type: 'heading',

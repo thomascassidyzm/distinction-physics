@@ -90,19 +90,19 @@ export const section7_3: Section = {
     {
       type: 'paragraph',
       content:
-        'A closed system is one that receives no external energy to maintain its boundaries. In such systems, distinctions must decay.',
+        'A closed system is one that receives no outside energy to hold its boundaries up. Cut off the supply, and the distinctions must decay. There is nothing left to pay for them.',
     },
     {
       type: 'paragraph',
       content:
-        'An open system can maintain or even increase distinctions locally by drawing energy from its environment (while increasing entropy elsewhere). Living systems are the paradigm case - they maintain internal order by exporting disorder to their surroundings.',
+        'An open system can hold its distinctions, or even sharpen them, by drawing energy from its environment - and paying for it with extra entropy dumped elsewhere. Living systems are the paradigm case: they keep their inner order by exporting disorder to everything around them.',
       emphasis: 'key',
     },
     {
       type: 'note',
       variant: 'technical',
       content:
-        'The distinction framework reveals that the Second Law is not about heat or temperature per se, but about the fundamental dynamics of any distinction-maintaining system. Heat is merely the most common physical manifestation of distinction-decay.',
+        'Read this way, the Second Law is not really about heat or temperature at all. It is about the dynamics of any system that maintains distinctions under finite means. Heat is simply the most familiar face of distinction-decay, not its essence.',
     },
   ],
   keyPoints: [

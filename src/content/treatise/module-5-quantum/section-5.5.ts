@@ -8,7 +8,7 @@ export const section5_5: Section = {
     {
       type: 'paragraph',
       content:
-        'What physicists call "measurement" can be **interpreted** as the act of making a distinction---investing energy to determine that a system is in state A rather than state B. This interpretation provides conceptual vocabulary for understanding the measurement problem. **Note: This is interpretation, not derivation. The measurement postulate and projection operators are imported from quantum mechanics. We provide a philosophical lens, not alternative physics.**',
+        'What physicists call "measurement" can be **read** as the act of making a distinction - spending energy to settle that a system is in state A rather than state B. That reading gives us vocabulary for the measurement problem. **Note: this is interpretation, not derivation. The measurement postulate and the projection operators are imported from quantum mechanics. We offer a philosophical lens, not alternative physics.**',
       emphasis: 'key',
     },
     {
@@ -70,7 +70,7 @@ export const section5_5: Section = {
     {
       type: 'paragraph',
       content:
-        'Measurement projects onto eigenstates because these represent stable distinction patterns that can be maintained over time with minimal ongoing energy cost. Other states would require continuous energy input to maintain against natural decay toward eigenstates. Eigenstates are the "natural joints" of the system - the distinctions that the system itself supports most easily.',
+        'Measurement lands on eigenstates because eigenstates are the cheap distinctions to hold. They stay put with almost no ongoing energy; anything else would need topping up continuously to resist the slide back toward them. Eigenstates are the natural joints of the system - the distinctions it supports most easily.',
     },
     {
       type: 'note',
@@ -87,7 +87,7 @@ export const section5_5: Section = {
     {
       type: 'paragraph',
       content:
-        'Observables that do not commute ($[A, B] \\neq 0$) represent distinction patterns that cannot be simultaneously actualized due to resource constraints. The mathematical non-commutativity reflects a physical constraint on distinction-making: you cannot make both distinctions simultaneously with full precision because they require the same limited resources.',
+        'Observables that do not commute ($[A, B] \\neq 0$) are distinction patterns you cannot actualise at once, because they draw on the same limited resource. The mathematics of non-commutativity is the bookkeeping of a physical fact: you cannot make both distinctions to full precision together when both are billed to the same account.',
     },
     {
       type: 'math',
@@ -99,7 +99,7 @@ export const section5_5: Section = {
     {
       type: 'paragraph',
       content:
-        'When $[A, B] \\neq 0$, measuring A first and then B gives different results than measuring B first and then A. This is because each measurement actualizes distinctions that were previously potential, and the order of actualization affects what possibilities remain available for subsequent distinction.',
+        'When $[A, B] \\neq 0$, measuring A then B gives a different result from measuring B then A. Each measurement actualises distinctions that were merely potential, and the order you do it in changes which possibilities are left standing for the next one. Order is not incidental here - it is the whole point.',
     },
     {
       type: 'heading',
@@ -110,7 +110,7 @@ export const section5_5: Section = {
     {
       type: 'paragraph',
       content:
-        'Repeated rapid measurements freeze a system in a particular state by continuously reinforcing the same distinction pattern, preventing alternatives from developing. This requires ongoing energy investment to maintain the same distinction against the system\'s natural tendency toward superposition.',
+        'Measure fast enough and often enough and the system freezes, because you keep re-asserting the same distinction before any alternative can take hold. That freezing is not free: it is ongoing energy, spent to pin one distinction down against the system\'s natural drift back into superposition.',
     },
     {
       type: 'definition',
@@ -217,12 +217,12 @@ export const section5_5: Section = {
     {
       type: 'paragraph',
       content:
-        'The distinction framework clarifies the role of the observer in quantum mechanics. The observer is not a conscious entity whose awareness somehow collapses wavefunctions. Rather, the observer is any physical system (OLU) that invests energy in making distinctions.',
+        'This clears up what the observer actually is. The observer is not a conscious mind whose awareness somehow collapses a wavefunction. The observer is any physical system - any OLU - that spends energy to make a distinction. That is the whole job description.',
     },
     {
       type: 'paragraph',
       content:
-        'A Geiger counter is as much an "observer" as a physicist, because it invests energy to distinguish "particle detected" from "no particle detected." Consciousness plays no special role - what matters is energy expenditure in distinction-making.',
+        'A Geiger counter is as much an observer as the physicist holding it, because it too spends energy to tell "particle detected" from "nothing detected." Consciousness has no special part to play. What matters is the energy spent drawing the distinction.',
     },
     {
       type: 'note',

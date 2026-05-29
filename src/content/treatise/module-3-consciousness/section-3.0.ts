@@ -39,7 +39,7 @@ export const section3_0: Section = {
     {
       type: 'paragraph',
       content:
-        'From these axioms, we derived that all accessible reality must be effectively discrete, that only finitely many distinctions can be maintained simultaneously, and that distinctions require continuous energy investment to persist. Now we **interpret** consciousness through this lens—offering vocabulary, not proof.',
+        'From these two, we derived that accessible reality must be effectively discrete, that only finitely many distinctions can be held at once, and that every distinction has to be paid for, continuously, or it decays. Now we turn that same lens on consciousness. Note what we are doing: we **interpret**, we do not prove.',
     },
 
     // =========================================================================
@@ -76,7 +76,7 @@ export const section3_0: Section = {
     {
       type: 'paragraph',
       content:
-        'The "hard problem of consciousness" asks: why do physical processes give rise to subjective experience at all? Why is there "something it is like" to be a conscious system?',
+        'The "hard problem of consciousness" asks one thing: why do physical processes give rise to subjective experience at all? Why is there "something it is like" to be a conscious system, rather than nothing at all?',
     },
     {
       type: 'paragraph',
@@ -87,7 +87,7 @@ export const section3_0: Section = {
     {
       type: 'paragraph',
       content:
-        'What we DO is **relocate** the hard problem. Instead of asking "how does matter generate experience?" we ask "why does self-referential boundary maintenance have an inside perspective?" This may be more tractable—or it may simply be the same mystery in different clothing. We are honest that this relocation does not constitute a solution.',
+        'What we DO is **relocate** it. Instead of "how does matter generate experience?" we ask "why does self-referential boundary maintenance have an inside perspective?" That may be more tractable - or it may be the same mystery in different clothing. A relocation is not a solution, and we will not pretend otherwise.',
     },
     {
       type: 'paragraph',
@@ -144,7 +144,7 @@ export const section3_0: Section = {
     {
       type: 'paragraph',
       content:
-        'This module is **complementary** to neuroscience, not a replacement for it. Neuroscience tells us WHAT happens in conscious brains—neural correlates, metabolic costs, anatomical structures. Our framework offers vocabulary for INTERPRETING these findings through the lens of distinction-making.',
+        'This module **complements** neuroscience; it does not replace it. Neuroscience tells us WHAT happens in conscious brains - the neural correlates, the metabolic costs, the anatomy. Our framework offers vocabulary for reading those findings through the lens of distinction-making. Two jobs, not one job done twice.',
     },
     {
       type: 'paragraph',
@@ -182,7 +182,7 @@ export const section3_0: Section = {
     {
       type: 'paragraph',
       content:
-        'Throughout, we maintain epistemic honesty: this is a philosophical reframing of consciousness using distinction-vocabulary. The genuine novelty is the vocabulary itself and the connections it reveals—not a scientific solution to the mystery of consciousness.',
+        'Throughout, the honesty is the point: this is a reframing of consciousness in distinction-vocabulary, and nothing more. The novelty is the vocabulary, and the connections it lets you see. It is not a scientific solution to the mystery of consciousness, and we will not dress it as one.',
       emphasis: 'conclusion',
     },
   ],

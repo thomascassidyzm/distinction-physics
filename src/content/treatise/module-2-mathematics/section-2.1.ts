@@ -35,7 +35,7 @@ export const section2_1: Section = {
     {
       type: 'paragraph',
       content:
-        'Mathematics is traditionally viewed either as a human invention (conventionalism) or as a discovered property of an abstract Platonic realm (Platonism). This module offers an interpretive alternative: mathematics can be understood as the formalization of stable distinction patterns for observers-like-us (OLUs) operating under energy constraints.',
+        'For two thousand years the argument has run between two camps. Either mathematics is something we made up - a convention, a useful fiction - or it is something we found, waiting for us in an abstract Platonic realm. This module offers a third reading: mathematics can be understood as the formalisation of stable distinction patterns, for observers-like-us (OLUs) working under energy constraints. Not invented, not discovered. Settled into.',
     },
     {
       type: 'paragraph',
@@ -63,7 +63,7 @@ export const section2_1: Section = {
     {
       type: 'paragraph',
       content:
-        'This single insight transforms how we understand mathematics. Consider what mathematics fundamentally does: it studies structures, patterns, and relationships. But structures, patterns, and relationships are all patterns of distinction.',
+        'That single insight changes the picture. Consider what mathematics actually does: it studies structures, patterns, relationships. But a structure is a pattern of distinction. So is a pattern. So is a relationship. There is nothing else there to study.',
     },
     {
       type: 'list',
@@ -105,7 +105,7 @@ export const section2_1: Section = {
     {
       type: 'paragraph',
       content:
-        'These are precisely the patterns that become **mathematics**. Mathematical structures are not arbitrary human inventions, nor are they discoveries of a Platonic realm. They are the distinction patterns that survive thermodynamic pressure—the patterns that any distinction-making system will converge upon because they represent the most stable configurations of boundary-drawing possible.',
+        'These are the patterns that become **mathematics**. Not arbitrary inventions, not finds from a Platonic shelf. They are the distinction patterns that survive thermodynamic pressure - the ones any distinction-making system drifts toward, because they are the most stable boundary-drawing there is. What survives gets a name. That is the selection.',
       emphasis: 'key',
     },
     {
@@ -117,7 +117,7 @@ export const section2_1: Section = {
     {
       type: 'paragraph',
       content:
-        'This explains why mathematics feels necessary. The statement "2 + 2 = 4" is not necessary because of abstract logical laws floating in Platonic space. It is necessary because any OLU that draws the distinction pattern we call "2" and combines it with another instance of the same pattern using the operation we call "addition" will, with minimal energy expenditure, arrive at the pattern we call "4." The alternatives would require vastly more energy to maintain against the natural stability of this pattern.',
+        'So, why does mathematics feel necessary? Not because of abstract laws floating in Platonic space. "2 + 2 = 4" is necessary because any OLU that draws the pattern we call "2", and combines it with another instance of that pattern using the operation we call "addition", lands - at minimal energy cost - on the pattern we call "4". The alternatives are not forbidden by decree. They are simply far more expensive to hold against the grain of how boundaries combine. Necessity here is just the cheapest road being the only one anyone takes.',
     },
     {
       type: 'theorem',

@@ -9,13 +9,13 @@ export const section8_4: Section = {
     {
       type: 'paragraph',
       content:
-        '**Critical Epistemic Note**: These claims extend the framework speculatively into regimes where the connection to our axioms is suggestive but not rigorous. They are also NOT unique to this framework---many quantum gravity approaches make similar predictions. Confirmation would be consistent with the framework but would not uniquely validate it.',
+        '**Critical Epistemic Note**: these claims push the framework into regimes where its tie to the axioms is suggestive, not rigorous. And they are NOT ours alone - many quantum gravity approaches predict much the same thing. Confirmation would be consistent with the framework. It would not single it out.',
       emphasis: 'key',
     },
     {
       type: 'paragraph',
       content:
-        'We present these with appropriate epistemic humility: while they follow from extending the framework\'s logic, their confirmation lies beyond our present reach, and they are shared with many competing approaches.',
+        'So we present these with the humility they earn: they follow from extending the framework\'s logic, but their confirmation sits beyond our present reach, and they belong to many competing approaches at once.',
     },
     {
       type: 'heading',
@@ -212,7 +212,7 @@ export const section8_4: Section = {
       type: 'note',
       variant: 'editorial',
       content:
-        'This is explicitly a Type 3 conjecture. The framework provides a conceptual lens for understanding black hole thermodynamics, but the specific mechanisms remain speculative. We do not claim to solve the black hole information paradox; we offer a perspective consistent with our axioms.',
+        'This is, plainly, a Type 3 conjecture. The framework offers a conceptual lens on black hole thermodynamics, but the mechanisms stay speculative. We do not claim to solve the black hole information paradox; we offer a perspective consistent with our axioms.',
     },
     {
       type: 'heading',
@@ -222,7 +222,7 @@ export const section8_4: Section = {
     {
       type: 'paragraph',
       content:
-        'These future predictions share a common limitation: they probe regimes far beyond current experimental access. While they follow from extending the framework\'s logic, we must be clear about their status:',
+        'These future predictions share one limitation: they probe regimes far beyond what any experiment can reach today. They follow from extending the framework\'s logic - but their status needs stating plainly:',
     },
     {
       type: 'table',
@@ -239,7 +239,7 @@ export const section8_4: Section = {
     {
       type: 'paragraph',
       content:
-        'These predictions illustrate how the framework extends to extreme regimes, but none would uniquely confirm the Distinction Framework if observed. They represent consistency checks rather than decisive tests.',
+        'These predictions show how the framework reaches into extreme regimes. But not one of them, if observed, would single out the Distinction Framework. They are consistency checks, not decisive tests.',
       emphasis: 'conclusion',
     },
   ],

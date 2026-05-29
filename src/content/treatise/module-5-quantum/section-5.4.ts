@@ -8,7 +8,7 @@ export const section5_4: Section = {
     {
       type: 'paragraph',
       content:
-        'The uncertainty principle is typically presented as a fundamental limit on what can be known. The distinction framework reveals this as a RESOURCE ALLOCATION CONSTRAINT rather than a metaphysical mystery.',
+        'The uncertainty principle is usually presented as a fundamental limit on what can be known. Read through the distinction framework, it looks like something humbler and clearer: a *resource allocation constraint*, not a metaphysical mystery.',
       emphasis: 'key',
     },
     {
@@ -33,7 +33,7 @@ export const section5_4: Section = {
     {
       type: 'paragraph',
       content:
-        'This relation is standardly interpreted as a fundamental limitation on nature itself, or on the disturbance caused by measurement. The distinction framework offers a different perspective: uncertainty reflects the thermodynamic impossibility of infinite-precision distinction-making with finite energy resources.',
+        'The standard reading takes this as a limit on nature itself, or on the disturbance measurement inflicts. The distinction framework reads it differently: uncertainty is what infinite-precision distinction-making looks like when you try to pay for it with finite energy. It is thermodynamic, not metaphysical.',
     },
     {
       type: 'heading',
@@ -93,7 +93,7 @@ export const section5_4: Section = {
     {
       type: 'paragraph',
       content:
-        'The constant $\\hbar$ represents the minimum actionable boundary granularity - the fundamental exchange rate between complementary distinction types. Position-momentum, energy-time, and other complementary pairs represent different ways of allocating finite distinction-making resources.',
+        'The constant $\\hbar$ is the minimum actionable boundary granularity - the exchange rate between one kind of distinction and another. Position-momentum, energy-time, the rest: each pair is a different way of spending the same finite distinction-making budget.',
     },
     {
       type: 'definition',
@@ -129,7 +129,7 @@ export const section5_4: Section = {
     {
       type: 'paragraph',
       content:
-        'Systems with more available energy can achieve finer-grained distinctions, approaching (but never reaching) the uncertainty limit. More energy allows more precise distinction-making, but the trade-off between complementary properties remains. A particle collider achieves finer resolution than an optical microscope not by violating uncertainty, but by having vastly more energy to invest in distinctions.',
+        'More energy buys finer distinctions, approaching the uncertainty limit but never reaching it. The trade-off between complementary properties never goes away; it only gets pushed further out. A particle collider out-resolves an optical microscope not by cheating uncertainty but by having vastly more energy to pour into distinctions.',
     },
     {
       type: 'heading',
@@ -140,7 +140,7 @@ export const section5_4: Section = {
     {
       type: 'paragraph',
       content:
-        'Higher temperatures increase effective uncertainty by raising the energy cost of maintaining reliable distinctions against thermal fluctuations. Quantum effects are more observable at lower temperatures because maintaining precise distinctions is cheaper when thermal noise is reduced.',
+        'Heat raises the price of every distinction, because each one now has to be held against thermal fluctuation. So higher temperatures mean more effective uncertainty. Quantum effects show up more readily in the cold for the same reason: with the noise turned down, precise distinctions come cheaper.',
     },
     {
       type: 'heading',
@@ -151,7 +151,7 @@ export const section5_4: Section = {
     {
       type: 'paragraph',
       content:
-        'Systems with many interacting components exhibit stronger uncertainty effects because distinction resources must be spread across more dimensions. The more aspects being distinguished simultaneously, the less precision available for each. This connects to why quantum coherence is harder to maintain in complex systems.',
+        'Systems with many interacting parts feel uncertainty more sharply, because the distinction budget now has to stretch across more dimensions. The more you try to distinguish at once, the less precision each one gets. This is part of why coherence is so hard to hold in a complex system.',
     },
     {
       type: 'heading',
@@ -168,12 +168,12 @@ export const section5_4: Section = {
     {
       type: 'paragraph',
       content:
-        'The energy-time uncertainty relation has a particularly natural interpretation in the distinction framework. To distinguish a system\'s energy precisely requires observing it over extended time (many cycles of any oscillatory behavior). Rapid measurements, which require brief observation windows, necessarily have less energy resolution.',
+        'The energy-time relation reads especially naturally here. To pin a system\'s energy down precisely, you have to watch it for a while - many cycles of whatever it does. A quick look, taken in a brief window, can only ever return a blurry energy. Resolution in energy is bought with time.',
     },
     {
       type: 'paragraph',
       content:
-        'This relation constrains the lifetime of unstable states: a state with well-defined energy must persist long enough for that energy to be distinguishable. Short-lived states necessarily have uncertain energies. The "width" of a quantum state is directly related to its lifetime through this relation.',
+        'This is what sets the lifetime of unstable states. A state with a sharp energy has to hang around long enough for that energy to be told apart; a short-lived state can only have a fuzzy one. The "width" of a quantum state and how long it lasts are two faces of the same relation.',
     },
     {
       type: 'theorem',
@@ -201,7 +201,7 @@ export const section5_4: Section = {
     {
       type: 'paragraph',
       content:
-        'Uncertainty arises not from nature\'s fundamental fuzziness but from the thermodynamic impossibility of infinite-precision distinction-making. The universe is not inherently uncertain; rather, certainty would require infinite energy that no observer possesses. This reframing removes the metaphysical strangeness while preserving all the empirical content of the uncertainty principle.',
+        'Uncertainty is not the universe being fuzzy. It is the thermodynamic impossibility of infinite-precision distinction-making. The world is not inherently uncertain - it is that certainty would cost infinite energy, and no observer has it. The strangeness goes; every prediction stays.',
       emphasis: 'conclusion',
     },
     {

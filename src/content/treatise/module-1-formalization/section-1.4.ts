@@ -15,7 +15,7 @@ export const section1_4: Section = {
     {
       type: 'paragraph',
       content:
-        'We now prove the central result that connects our axioms to the quantized nature of observable physics.',
+        'This is the result the module was built to reach. It connects the two axioms to the quantized look of observable physics - and it is one of the few things here we genuinely prove.',
     },
     {
       type: 'theorem',
@@ -48,7 +48,7 @@ The OLU accesses an effectively discrete version of $Q$ with resolution determin
     {
       type: 'paragraph',
       content:
-        '**Epistemic status [DERIVED]**: This theorem follows from the axioms (given the IMPORTED Landauer limit, applied within its proper scope). Step 1 of the proof uses $E(\\diamond(q_1, q_2)) \\geq D_{\\min}$; this holds because the theorem concerns distinctions an OLU can *access* — values it can read, record, or maintain — and OLU-accessibility involves irreversible recording, which is exactly where Landauer\'s bound bites (§0.3). The conclusion is therefore a claim about what any finite-energy observer can access, not about what reality is "in itself," and not about reversible computations that leave no readable trace.',
+        '**Epistemic status [DERIVED]**: this theorem follows from the axioms, given the IMPORTED Landauer limit applied inside its proper scope. Step 1 leans on $E(\\diamond(q_1, q_2)) \\geq D_{\\min}$, and that holds because the theorem is about distinctions an OLU can *access* - values it can read, record, or hold - and access means irreversible recording, which is where Landauer bites (§0.3). So read the conclusion carefully. It is a claim about what any finite-energy observer can reach. It is not a claim about reality "in itself," and it is not a claim about reversible computations that leave no trace.',
       emphasis: 'key',
     },
     {
@@ -93,7 +93,7 @@ The OLU accesses an effectively discrete version of $Q$ with resolution determin
     {
       type: 'paragraph',
       content:
-        'This is consistent with why particle colliders require enormous energy (gigawatts) to probe femtometer scales ($10^{-15}$ m). The inverse relationship between energy and resolution follows from established physics (de Broglie, relativistic kinematics) and is conceptually illuminated by — not independently derived from — the two axioms.',
+        'This is why a particle collider burns gigawatts to see femtometres ($10^{-15}$ m): finer means dearer, and the price climbs fast. The inverse relation between energy and resolution comes from established physics - de Broglie, relativistic kinematics. The axioms do not derive it. They make it look inevitable rather than coincidental.',
     },
   ],
   keyPoints: [

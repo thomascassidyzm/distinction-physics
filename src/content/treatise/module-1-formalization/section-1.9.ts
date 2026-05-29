@@ -30,7 +30,7 @@ export const section1_9: Section = {
     {
       type: 'paragraph',
       content:
-        'This theorem establishes that no distinction-making system can exist in complete isolation. The very capacity to observe—to make and maintain distinctions—requires ongoing energy exchange with an environment. An observer cut off from all energy sources would experience complete distinction-decay, losing its capacity to function as an OLU.',
+        'No distinction-making system can stand alone. The bare capacity to observe - to make distinctions and hold them - runs on a continuous exchange of energy with an environment. Cut an observer off from every source and its distinctions decay, one after another, until there is nothing left that could be called an observer. Isolation is not a hardship for an OLU. It is a death sentence.',
     },
 
     // =========================================================================
@@ -61,12 +61,12 @@ export const section1_9: Section = {
     {
       type: 'paragraph',
       content:
-        'This definition generalizes the biological concept of metabolism to all OLUs. Even non-living observers (thermostats, sensors, computers) have metabolic requirements proportional to their distinction-making activity. The "metabolism" of any system is the energy flow required to maintain its structure against entropic decay.',
+        'Metabolism is usually a word for the living. Here it stretches to cover every OLU. A thermostat, a sensor, a computer - each has a metabolism too, an energy draw set by how much distinction-making it does. The metabolism of anything is simply the flow it must keep up to hold its structure against decay.',
     },
     {
       type: 'paragraph',
       content:
-        'The metabolism principle reveals a deep unity between living and non-living distinction-making systems. Both require continuous energy throughput; both face trade-offs between complexity and sustainability; both dissolve when energy flow ceases. The difference between a living cell and a thermostat is one of degree and complexity, not of fundamental kind.',
+        'So the line between living and non-living blurs at exactly this point. Both need a steady throughput of energy; both trade complexity against what they can afford to sustain; both dissolve the moment the flow stops. A cell and a thermostat differ in degree and in complexity. They do not differ in kind.',
       emphasis: 'key',
     },
     {

@@ -20,7 +20,7 @@ export const section4_3: Section = {
     {
       type: 'paragraph',
       content:
-        'All learning reduces to processing similarity and difference. This is not merely a psychological observation but follows directly from the nature of distinction itself. This same/different lensing IS distinction-making in its most immediate, observable form.',
+        'All learning reduces to processing similarity and difference. This is not just a psychological observation — it follows from the nature of distinction itself. The same/different judgement is not *like* distinction-making. It is distinction-making, caught in its most immediate, observable form.',
     },
     {
       type: 'paragraph',
@@ -86,7 +86,7 @@ export const section4_3: Section = {
     {
       type: 'paragraph',
       content:
-        'At every level, the same/different duality operates. Even the most basic perceptual learning—distinguishing figure from ground—requires simultaneously processing what makes the figure the same across its extent and what makes it different from the ground.',
+        'At every level, the duality is running. Even the most basic perceptual learning — pulling figure from ground — demands both moves at once: what holds the figure the same across its extent, and what sets it apart from the ground. Same and different are never separate operations. They are two readings of one boundary.',
     },
     {
       type: 'heading',
@@ -131,7 +131,7 @@ export const section4_3: Section = {
     {
       type: 'paragraph',
       content:
-        'Learning optimizes this duality by building distinction structures that minimize unnecessary difference processing while maintaining sensitivity to task-relevant differences.',
+        'Learning works this asymmetry. It builds distinction structures that spend as little as possible on difference-processing the task does not need, while staying sharp to the differences the task does. The aim is not to notice everything. It is to notice what matters, cheaply.',
       emphasis: 'conclusion',
     },
     {

@@ -8,7 +8,7 @@ export const section7_9: Section = {
     {
       type: 'paragraph',
       content:
-        "Maxwell's famous thought experiment imagines a tiny being (demon) that sorts fast and slow gas molecules, apparently violating the Second Law by creating temperature differences without work input.",
+        "Maxwell's famous thought experiment puts a tiny being - the demon - at a trapdoor, sorting fast molecules from slow. It builds a temperature difference out of nothing, with no work going in, and the Second Law seems to break. The puzzle held for a century.",
     },
     {
       type: 'paragraph',
@@ -71,7 +71,7 @@ export const section7_9: Section = {
     {
       type: 'paragraph',
       content:
-        "When all distinction costs are included, the demon's entropy-reducing activity is exactly compensated by entropy increase from information gathering and erasure.",
+        "Add up every distinction cost and the books balance. The order the demon makes in the gas is paid for, to the last bit, by the entropy of gathering and erasing its information. The Second Law was never in danger; the demon was simply being charged for a bill it had hidden from view.",
     },
     {
       type: 'theorem',
@@ -86,7 +86,7 @@ export const section7_9: Section = {
     {
       type: 'paragraph',
       content:
-        'This resolution was achieved by Landauer and Bennett. Our framework offers an interpretive account of why the demon is bound by these constraints: under Axiom 1 (imported from Landauer), distinction-making carries an energy cost, so information processing is subject to thermodynamic constraints. The account reframes the result; it does not independently establish it.',
+        'The resolution itself belongs to Landauer and Bennett. What the framework adds is an account of *why* the demon is bound: under Axiom 1, imported from Landauer, making a distinction costs energy, so information processing falls under thermodynamic constraint like everything else. The account reframes the result. It does not establish it independently, and does not pretend to.',
     },
     {
       type: 'note',

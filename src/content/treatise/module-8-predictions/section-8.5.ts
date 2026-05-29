@@ -9,13 +9,13 @@ export const section8_5: Section = {
     {
       type: 'paragraph',
       content:
-        'A scientific framework must specify conditions under which it would be falsified. These are tests where negative results would directly contradict the axioms or core derivations. The Distinction Framework is falsifiable because these tests could fail.',
+        'A scientific framework owes you the conditions under which it would be wrong. These are the tests where a negative result contradicts the axioms or the core derivations outright. The Distinction Framework is falsifiable for one reason: these tests could fail.',
     },
     {
       type: 'note',
       variant: 'editorial',
       content:
-        'We present these falsification conditions with full awareness that some are extremely difficult to test. A framework can be falsifiable in principle while remaining practically difficult to falsify. We distinguish between logical falsifiability and practical testability.',
+        'We set out these conditions knowing some of them are brutally hard to test. A framework can be falsifiable in principle and stubbornly hard to falsify in practice - those are two different things, and we keep them apart: logical falsifiability on one side, practical testability on the other.',
     },
     {
       type: 'heading',
@@ -172,7 +172,7 @@ export const section8_5: Section = {
     {
       type: 'paragraph',
       content:
-        'The framework is genuinely falsifiable: these conditions could in principle be demonstrated, and their demonstration would require abandoning or substantially revising the framework.',
+        'The framework is genuinely falsifiable. Each of these conditions could in principle be demonstrated, and any one of them, demonstrated, would force us to abandon or substantially revise the framework.',
     },
     {
       type: 'heading',
@@ -182,17 +182,17 @@ export const section8_5: Section = {
     {
       type: 'paragraph',
       content:
-        'We acknowledge an asymmetry in these tests. Tests F1 and F3 face practical difficulties because they require demonstrating infinities or perfect precisions. Tests F4 and F5 are more practically accessible but could potentially be accommodated by framework refinements rather than outright falsification.',
+        'There is an asymmetry here, and we own it. F1 and F3 are hard because they ask you to demonstrate an infinity or a perfect precision - and you cannot. F4 and F5 are far more accessible, but a determined framework could absorb a bad result as a refinement rather than take it as outright falsification.',
     },
     {
       type: 'paragraph',
       content:
-        'The strongest falsification test is F2: demonstrating that distinctions can be made without energy expenditure. This directly contradicts Axiom 1 and is empirically tractable via precision tests of Landauer\'s limit. Consistent violations of the Landauer bound would require abandoning the framework.',
+        'The strongest test is F2: show that a distinction can be made without spending energy. That contradicts Axiom 1 head-on, and it is empirically tractable through precision tests of Landauer\'s limit. Consistent violations of the Landauer bound would end the framework.',
     },
     {
       type: 'paragraph',
       content:
-        'We do not claim the framework is easily falsifiable. We claim it is falsifiable in principle and that the tests are meaningful rather than trivial. The framework makes genuine empirical commitments that could be shown wrong.',
+        'We do not claim the framework is easy to falsify. We claim it is falsifiable in principle, and that these tests are meaningful rather than empty. The framework makes real empirical commitments - the kind that could be shown wrong.',
       emphasis: 'conclusion',
     },
   ],

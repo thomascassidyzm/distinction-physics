@@ -20,7 +20,7 @@ export const section9_7: Section = {
     {
       type: 'paragraph',
       content:
-        'Classic problems are REFRAMED, not dissolved. The hard problem becomes: why does self-referential distinction-making feel like something from the inside? The measurement problem becomes: what is distinction creation energetically? These are new formulations, not answers. The framework provides perspective and vocabulary, not proof or mechanism.',
+        'Classic problems are reframed, not dissolved. The hard problem becomes: why does self-referential distinction-making feel like something from the inside? The measurement problem becomes: what, energetically, is the creation of a distinction? New formulations, not answers. The framework hands you perspective and vocabulary — not proof, not mechanism.',
     },
     {
       type: 'heading',

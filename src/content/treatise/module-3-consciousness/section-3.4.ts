@@ -20,7 +20,7 @@ export const section3_4: Section = {
     {
       type: 'paragraph',
       content:
-        'The "hard problem of consciousness" asks: why should physical processes give rise to subjective experience at all? Why isn\'t everything "dark inside"?',
+        'The "hard problem of consciousness" asks one stubborn question: why should physical processes give rise to subjective experience at all? Why isn\'t everything just dark inside?',
     },
     {
       type: 'note',
@@ -53,7 +53,7 @@ export const section3_4: Section = {
     {
       type: 'paragraph',
       content:
-        'The framework challenges this framing. There are not two fundamentally different kinds of things that must somehow be connected. There is *one* kind of process—boundary maintenance through distinction-making—accessed from two different perspectives:',
+        'The framework challenges that framing. There are not two different kinds of thing waiting to be bolted together. There is *one* process - boundary maintenance through distinction-making - met from two sides:',
     },
     {
       type: 'list',
@@ -72,7 +72,7 @@ export const section3_4: Section = {
     {
       type: 'paragraph',
       content:
-        'The "gap" is not between two types of substance or property but between two access modes to the same process. This is a *perspective shift*, not an explanatory lacuna.',
+        'The "gap", on this reading, is not between two substances or two properties. It is between two ways of accessing the same process. That is a *shift of perspective*, not a hole in the explanation.',
       emphasis: 'key',
     },
     {
@@ -84,7 +84,7 @@ export const section3_4: Section = {
     {
       type: 'paragraph',
       content:
-        'We are not claiming that consciousness doesn\'t exist or that qualia are illusions. The internal perspective is real—it is what exists for any system that maintains self-referential boundaries. We are claiming that the apparent mystery arises from treating inside and outside perspectives as if they were descriptions of different things, then wondering how they connect.',
+        'We are not saying consciousness does not exist, or that qualia are illusions. The inside perspective is real - it is simply what there is, for any system that maintains self-referential boundaries. What we are saying is narrower: the mystery is manufactured by treating inside and outside as descriptions of *different* things, and then puzzling over how they connect.',
     },
     {
       type: 'heading',
@@ -95,7 +95,7 @@ export const section3_4: Section = {
     {
       type: 'paragraph',
       content:
-        'We are not claiming that all matter is conscious or that electrons have experiences. Consciousness requires *self-referential* distinction-making at *sufficient complexity*. A thermostat makes distinctions but not about its own distinction-making. A simple feedback loop lacks the complexity (~10^7 states) for integrated conscious experience. Most systems in the universe are not conscious—only those with sufficient energy, complexity, and self-referential architecture.',
+        'Nor are we saying all matter is conscious, or that electrons have a felt life. Consciousness, on this account, needs *self-referential* distinction-making at *sufficient complexity*. A thermostat makes distinctions, but none about its own distinction-making. A simple feedback loop never reaches the complexity (~10^7 states) for integrated experience. Most of the universe is not conscious - only those rare systems with the energy, the complexity, and the self-referential architecture to be.',
     },
     {
       type: 'heading',
@@ -179,7 +179,7 @@ export const section3_4: Section = {
     {
       type: 'paragraph',
       content:
-        'The framework transforms the hard problem while remaining honest about its limits: we explain the thermodynamic structure and cost of consciousness, while acknowledging that the deepest "why" of existence may transcend physical explanation.',
+        'So the framework moves the hard problem without overreaching. We can speak to the thermodynamic structure and cost of consciousness. The deepest "why" - why there is an inside to anything at all - may lie beyond the reach of any physical theory, and we leave it there, openly.',
       emphasis: 'conclusion',
     },
   ],

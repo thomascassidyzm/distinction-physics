@@ -37,7 +37,7 @@ export const section6_2: Section = {
     {
       type: 'paragraph',
       content:
-        'Below these scales, the distinction-making process breaks down. To probe spatial separations smaller than $\\ell_P$ would require energy concentrations sufficient to create black holes. The concepts of "smaller separation" or "shorter duration" become operationally incoherent at sub-Planckian scales.',
+        'Below these scales, distinction-making breaks down. To probe separations smaller than $\\ell_P$ you would have to concentrate enough energy to make a black hole - the probe swallows the thing it was meant to measure. So "smaller separation" and "shorter duration" do not become hard to measure at sub-Planckian scales; they become operationally meaningless.',
       emphasis: 'key',
     },
     {
@@ -124,7 +124,7 @@ export const section6_2: Section = {
     {
       type: 'paragraph',
       content:
-        'Each step toward finer resolution requires exponentially more energy. This is not merely a technological limitation but a **thermodynamic necessity** following from our axioms. There is no "view from nowhere" with infinite resolution. Every observation of spacetime occurs from some energy-constrained position with corresponding resolution limits.',
+        'Each step toward finer resolution costs exponentially more energy. This is not a limit of our instruments waiting to be engineered away - it is a **thermodynamic necessity** that follows from the axioms. There is no view from nowhere, no observer with infinite resolution. Every look at spacetime is taken from somewhere, on a budget, and the budget sets the grain.',
       emphasis: 'key',
     },
   ],

@@ -106,7 +106,7 @@ export const section4_6: Section = {
     {
       type: 'paragraph',
       content:
-        'This explains why we forget phone numbers quickly but never forget how to ride a bicycle. The latter has been encoded in low-maintenance cerebellar circuits; the former requires continuous hippocampal-cortical maintenance.',
+        'So we forget a phone number in minutes but never forget how to ride a bicycle. The bicycle lives in low-maintenance cerebellar circuits and costs almost nothing to keep. The phone number leans on continuous hippocampal-cortical upkeep — withdraw it, and the boundary dissolves.',
     },
     {
       type: 'heading',
@@ -117,7 +117,7 @@ export const section4_6: Section = {
     {
       type: 'paragraph',
       content:
-        'Given finite energy budgets, forgetting is adaptive. An OLU that maintained every distinction it ever made would quickly exhaust its energy budget, unable to make new distinctions. Forgetting clears boundary-maintenance resources for new learning.',
+        'Under a finite budget, forgetting is not a flaw. It is housekeeping. An OLU that held every distinction it ever made would spend its whole budget on upkeep and have nothing left to learn anything new. Forgetting clears maintenance resources for the next round of building.',
       emphasis: 'key',
     },
     {
@@ -170,7 +170,7 @@ export const section4_6: Section = {
     {
       type: 'paragraph',
       content:
-        'Each re-energizing event after partial decay strengthens the boundary through a process of reconstruction. The OLU must re-distinguish what was becoming fuzzy, and this active re-distinction creates more robust encoding than simple maintenance.',
+        'Each re-energizing event after partial decay strengthens the boundary by reconstruction. The learner has to re-draw what was going fuzzy, and re-drawing encodes more robustly than mere holding. The effort of recovery is the point — not a cost to be avoided, but the mechanism that does the work.',
     },
     {
       type: 'paragraph',

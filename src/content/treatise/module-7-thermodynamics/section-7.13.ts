@@ -8,13 +8,13 @@ export const section7_13: Section = {
     {
       type: 'paragraph',
       content:
-        'Our thermodynamic framework makes contact with empirical physics at multiple points. This section examines phenomena consistent with the framework and identifies testable predictions that could further probe its validity.',
+        'The framework touches empirical physics at several points. This section sorts them honestly: which phenomena are merely consistent with the framework, and which are genuine testable predictions that could still go against it.',
     },
     {
       type: 'note',
       variant: 'editorial',
       content:
-        'Epistemic honesty requires acknowledging that many results discussed here were discovered before this framework was developed. The framework provides interpretation and unification of known phenomena rather than novel prediction in the strict sense. Where applicable, we distinguish between "consistency demonstrations" (known results that align with framework expectations) and genuine testable predictions.',
+        'Honesty first: most of the results below were found long before this framework existed. So the framework interprets and unifies what was already known - it does not predict it, in the strict sense. Throughout, we keep two piles apart: "consistency demonstrations," known results that happen to line up with what the framework expects, and genuine testable predictions, which could still fail.',
     },
     {
       type: 'heading',
@@ -126,7 +126,7 @@ export const section7_13: Section = {
       type: 'note',
       variant: 'technical',
       content:
-        'These predictions are not unique to our framework in isolation---they follow from the combination of our axioms with established thermodynamics. However, the framework provides a unified conceptual basis for these predictions that could guide experimental design.',
+        'None of these predictions is the framework\'s alone - each follows from the axioms taken together with established thermodynamics. What the framework offers is a single conceptual basis under which they all sit, and that is enough to guide where one might point an experiment.',
     },
     {
       type: 'heading',

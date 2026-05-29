@@ -8,7 +8,7 @@ export const section6_10: Section = {
     {
       type: 'paragraph',
       content:
-        'This module has developed a framework where spacetime **may be interpreted** through networks of distinction relationships established under energy constraints. We adopt a transcendental stance: describing necessary structure for physics-accessible-to-observers, not claiming to derive spacetime\'s causal origins.',
+        'This module has built a way of reading spacetime in which it **may be interpreted** through networks of distinction relationships, drawn under energy constraints. The stance throughout has been transcendental, not causal: we describe the structure any physics must have to be accessible to observers - we do not claim to have derived where spacetime came from.',
       emphasis: 'key',
     },
     {
@@ -180,19 +180,19 @@ export const section6_10: Section = {
     {
       type: 'paragraph',
       content:
-        'In this framework\'s speculative reading, spacetime may be interpreted as not separate from the entities that inhabit it but as constituted by the boundary relationships between them. The geometric properties we observe—distances, durations, and curvature (the last imported from GR)—might then be understood as patterns in how distinctions relate to each other under the thermodynamic constraints that govern all boundary-drawing.',
+        'On this framework\'s speculative reading, spacetime is not a stage standing apart from the things that move on it. It is the boundary relationships between them. The geometry we measure - distances, durations, and curvature (the last of these imported from GR) - might then be read as patterns in how distinctions relate to each other, under the same thermodynamic constraints that govern every act of boundary-drawing.',
     },
     {
       type: 'paragraph',
       content:
-        'This perspective resolves several deep puzzles:',
+        'This perspective reframes several deep puzzles — reframes, not resolves:',
     },
     {
       type: 'list',
       style: 'bullet',
       items: [
         {
-          content: '**The container paradox:** Spacetime doesn\'t exist "within" anything; it is the structure of distinction-relationships itself',
+          content: '**The container paradox:** spacetime might be read not as existing "within" anything, but as the structure of distinction-relationships itself',
         },
         {
           content: '**Discreteness/continuity tension:** Spacetime appears continuous at macroscopic scales while being effectively discrete at microscopic scales because boundary networks with sufficient density approximate continuity',
@@ -205,7 +205,7 @@ export const section6_10: Section = {
     {
       type: 'paragraph',
       content:
-        'By reading spacetime as a relational structure emerging from boundary-drawing operations, we gain a unified interpretive perspective bridging quantum and relativistic domains. The framework provides conceptual unity; its one framework-specific prediction (Conjecture 6.1) remains untested, and most of the other connections it draws are shared with rival quantum-gravity approaches rather than unique to it.',
+        'Read spacetime as a relational structure that emerges from boundary-drawing, and the quantum and relativistic worlds start to look like two views of one thing rather than two theories at war. That is the prize on offer: conceptual unity. But let us be plain about what it is not. Its one framework-specific prediction, Conjecture 6.1, remains untested; and most of the other bridges it draws are shared with rival quantum-gravity approaches, not unique to it.',
       emphasis: 'conclusion',
     },
     {

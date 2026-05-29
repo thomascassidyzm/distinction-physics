@@ -14,7 +14,7 @@ export const section4_1: Section = {
     {
       type: 'paragraph',
       content:
-        'Learning, understood through the distinction lens, is the process by which an OLU refines its distinction-making capabilities. This refinement is fundamentally **anti-entropic**: it builds and stabilizes patterns against the natural tendency toward dissolution. The refinement takes several forms:',
+        'Through the distinction lens, learning is one thing: an OLU refining its own capacity to tell things apart. That refinement is **anti-entropic** — it draws boundaries and holds them, against the pull toward dissolution. It takes several forms:',
     },
     {
       type: 'list',
@@ -41,7 +41,7 @@ export const section4_1: Section = {
     {
       type: 'paragraph',
       content:
-        'Each of these processes has a common thermodynamic signature: they alter the relationship between energy expenditure and distinction-making capacity. Learning succeeds when more distinctions can be made, or the same distinctions made more reliably, for less energy.',
+        'All four share one thermodynamic signature: each shifts the relationship between energy spent and distinctions made. So learning is not the accumulation of facts. It is an efficiency gain — more distinctions for the same energy, or the same distinctions held more reliably for less.',
       emphasis: 'key',
     },
     {

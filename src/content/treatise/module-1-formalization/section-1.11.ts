@@ -9,7 +9,7 @@ export const section1_11: Section = {
     {
       type: 'paragraph',
       content:
-        'This module has formalized the philosophical insights of Module 0 into precise mathematics. The formalization supports the complementary positioning of Distinction as Primitive—providing interpretive vocabulary for physics, not replacement equations.',
+        'This module took the philosophy of Module 0 and gave it teeth - precise operators, precise bounds. None of it changes the standing of the framework: it provides interpretive vocabulary for physics, not a rival set of equations. The maths makes the position clearer. It does not make it bigger.',
     },
     {
       type: 'heading',
@@ -99,13 +99,13 @@ export const section1_11: Section = {
     {
       type: 'paragraph',
       content:
-        'The mathematics confirms what Module 0 established philosophically: **the structure of observable physics is consistent with distinction-making under finite energy constraints**. Discreteness, resolution limits, and finitude are derived consequences. Quantum uncertainty and entropy are interpreted through this lens.',
+        'The mathematics backs what Module 0 argued in prose: **the structure of observable physics is consistent with distinction-making under finite energy**. Three things we genuinely derive - discreteness, resolution limits, finitude. The rest - quantum uncertainty, entropy - we read through the lens, no more. Keep the two apart, and the claim stays honest.',
       emphasis: 'key',
     },
     {
       type: 'paragraph',
       content:
-        '**Epistemic honesty**: This is not a claim that we have derived quantum mechanics or thermodynamics from first principles. The specific mathematical form of the Heisenberg uncertainty principle, the Born rule, and the Second Law come from established physics. What the formalization shows is that core features—discreteness, resolution limits, entropy increase—are **consistent with** and **conceptually illuminated by** the distinction-making perspective. The framework complements physics; it does not replace it.',
+        '**Epistemic honesty**: we have not derived quantum mechanics or thermodynamics from first principles, and we say so plainly. The specific form of the Heisenberg uncertainty principle, the Born rule, the Second Law - all come from established physics, taken as given. What the formalization shows is narrower: core features such as discreteness, resolution limits, and entropy increase are **consistent with** and **conceptually illuminated by** the distinction-making view. The framework complements physics. It does not replace it.',
     },
     {
       type: 'heading',

@@ -9,13 +9,13 @@ export const section8_2: Section = {
     {
       type: 'paragraph',
       content:
-        '**Critical Framing**: This section documents phenomena that the framework is CONSISTENT WITH. However, ALL of these phenomena were known before the framework was developed. The framework was DESIGNED to be consistent with them. Showing consistency is necessary for credibility but provides no independent validation. These are post-hoc interpretations, not predictions.',
+        '**Critical Framing**: This section documents phenomena the framework is CONSISTENT WITH. Note the date stamp on every one of them: ALL were known before the framework existed, and the framework was DESIGNED to fit them. Consistency here is necessary for credibility and validates nothing on its own. These are post-hoc interpretations, not predictions.',
       emphasis: 'key',
     },
     {
       type: 'paragraph',
       content:
-        'The framework provides **interpretation and unifying vocabulary**, not prediction in the strict temporal sense. A framework that failed to account for known physics would be immediately falsified, but accounting for known physics merely clears a necessary bar; it does not confirm the framework.',
+        'What the framework offers here is **interpretation and unifying vocabulary** - not prediction in the strict temporal sense. A framework that failed to account for known physics would be falsified on the spot. But clearing that bar confirms nothing; it only earns the right to keep talking.',
     },
     {
       type: 'note',
@@ -47,7 +47,7 @@ export const section8_2: Section = {
     {
       type: 'paragraph',
       content:
-        '**Framework Account**: Landauer\'s principle (1961) predates the framework. Axiom 1 imports Landauer by stipulating the minimum kT ln 2 cost. We do not derive Landauer; Landauer grounds our axiom. The direction of explanation is: Landauer -> Axiom 1, not vice versa.',
+        '**Framework Account**: Landauer\'s principle (1961) predates the framework. Axiom 1 imports it by stipulating the minimum kT ln 2 cost. We do not derive Landauer - Landauer grounds the axiom. The arrow of explanation runs Landauer -> Axiom 1, never the other way.',
     },
     {
       type: 'paragraph',
@@ -67,7 +67,7 @@ export const section8_2: Section = {
       type: 'note',
       variant: 'technical',
       content:
-        'EPISTEMIC HONESTY: Landauer\'s principle was established in 1961, decades before this framework. We import it as the grounding for Axiom 1; we do not derive it. Claiming Landauer as a "confirmed prediction" would be historically inaccurate. The framework is consistent with Landauer because it was designed to be.',
+        'EPISTEMIC HONESTY: Landauer\'s principle was established in 1961, decades before this framework. We import it as the grounding for Axiom 1; we do not derive it. To call Landauer a "confirmed prediction" would simply be false to the historical record. The framework agrees with Landauer because it was built to.',
     },
     {
       type: 'heading',
@@ -113,7 +113,7 @@ export const section8_2: Section = {
       type: 'note',
       variant: 'technical',
       content:
-        'EPISTEMIC HONESTY: Quantum mechanics predates our framework by a century. We provide an INTERPRETATION of quantization through distinction-making vocabulary, not a novel derivation. The framework is consistent with quantization; it did not predict it.',
+        'EPISTEMIC HONESTY: Quantum mechanics predates this framework by a century. What we add is an INTERPRETATION of quantization in the language of distinction-making - not a novel derivation. The framework is consistent with quantization. It did not predict it.',
     },
     {
       type: 'heading',
@@ -165,7 +165,7 @@ export const section8_2: Section = {
       type: 'note',
       variant: 'technical',
       content:
-        'The metabolic cost of brain function was known independently. The framework\'s contribution is explaining WHY consciousness is energetically expensive through the thermodynamics of self-referential distinction-making.',
+        'That the brain is metabolically expensive was known independently. What the framework adds is the WHY: consciousness is costly because self-referential distinction-making is, thermodynamically, costly.',
     },
     {
       type: 'heading',
@@ -212,7 +212,7 @@ export const section8_2: Section = {
       type: 'note',
       variant: 'technical',
       content:
-        'The efficiency gains from practice were documented before our framework. Its contribution is to RE-DESCRIBE learning as energy optimization (an interpretive identity) — a lens consistent with, though not uniquely entailed by, the correlational evidence.',
+        'The efficiency gains from practice were on record long before this framework. Its contribution is to RE-DESCRIBE learning as energy optimisation - an interpretive identity, a lens consistent with the correlational evidence though not uniquely entailed by it.',
     },
     {
       type: 'heading',
@@ -260,7 +260,7 @@ export const section8_2: Section = {
       type: 'note',
       variant: 'technical',
       content:
-        'The resolution hierarchy is empirically obvious to experimentalists. The framework offers an interpretive reading — resolution understood as distinction-making, and OLU-accessible distinctions costing energy (§0.3). This is not independent discovery but a conceptual lens on established practice.',
+        'The resolution hierarchy is obvious to any experimentalist. The framework offers an interpretive reading - resolution understood as distinction-making, and OLU-accessible distinctions costing energy (§0.3). This is not independent discovery. It is a conceptual lens laid over established practice.',
     },
     {
       type: 'heading',
@@ -307,7 +307,7 @@ export const section8_2: Section = {
     {
       type: 'paragraph',
       content:
-        'Reality does not have one "true" resolution but appears differently to observers with different energy budgets, as the framework requires.',
+        'Reality has no one "true" resolution. It appears differently to observers with different energy budgets - exactly as the framework requires.',
     },
     {
       type: 'heading',
@@ -353,7 +353,7 @@ export const section8_2: Section = {
       type: 'note',
       variant: 'technical',
       content:
-        'The spacing effect is one of the most robust findings in psychology. The framework offers a thermodynamic interpretation but does not uniquely predict it - other explanations exist. This is Type 2: consistent interpretation, not necessary derivation.',
+        'The spacing effect is about as robust as findings in psychology get. The framework offers a thermodynamic interpretation of it, but does not uniquely predict it - other explanations sit alongside ours. This is Type 2: consistent interpretation, not necessary derivation.',
     },
     {
       type: 'heading',
@@ -399,7 +399,7 @@ export const section8_2: Section = {
       type: 'note',
       variant: 'technical',
       content:
-        'EPISTEMIC HONESTY: The Second Law was established long before our framework. We provide an INTERPRETATION through distinction vocabulary, but the "derivation" imports statistical mechanics (Step 3 in Module 7.3). This is post-hoc consistency, not genuine prediction.',
+        'EPISTEMIC HONESTY: the Second Law was established long before this framework. We provide an INTERPRETATION in distinction vocabulary, but the "derivation" imports statistical mechanics (Step 3 in Module 7.3). This is post-hoc consistency, not genuine prediction.',
     },
     {
       type: 'heading',
@@ -409,7 +409,7 @@ export const section8_2: Section = {
     {
       type: 'paragraph',
       content:
-        'All eight phenomena documented above were known before the Distinction Framework was developed. The framework does not "predict" them in the temporal sense. Instead, it:',
+        'All eight phenomena above were on the books before the Distinction Framework existed. It does not "predict" them in the temporal sense. What it does instead is this:',
       emphasis: 'key',
     },
     {
@@ -425,7 +425,7 @@ export const section8_2: Section = {
     {
       type: 'paragraph',
       content:
-        'The value of these consistency demonstrations is not predictive novelty but unifying explanation. Disparate phenomena from quantum mechanics, thermodynamics, neuroscience, and learning theory are revealed as facets of the same underlying constraint: finite-energy observers can only make finite distinctions.',
+        'The value of these demonstrations is not novelty but unification. Phenomena that look unrelated - drawn from quantum mechanics, thermodynamics, neuroscience, learning theory - turn out to be facets of one constraint. A finite-energy observer can only make finite distinctions. That is the thread running through all eight.',
     },
   ],
   keyPoints: [

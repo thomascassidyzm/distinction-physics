@@ -33,7 +33,7 @@ export const section5_6: Section = {
     {
       type: 'paragraph',
       content:
-        'This rule connects the mathematical formalism of quantum mechanics to experimental observations. It tells us how to extract predictions from the wavefunction. The Born rule is extraordinarily well-confirmed experimentally.',
+        'This is the bridge between the formalism and the experiment - the rule that turns a wavefunction into a prediction. It is among the most thoroughly confirmed statements in all of physics.',
     },
     {
       type: 'heading',
@@ -94,12 +94,12 @@ export const section5_6: Section = {
     {
       type: 'paragraph',
       content:
-        'The precise functional form $|\\alpha|^2$ (rather than $|\\alpha|$, $|\\alpha|^3$, or some other function of $\\alpha$) does not follow obviously from energy considerations alone. Why should probability be the square of the amplitude rather than some other power?',
+        'Why $|\\alpha|^2$, and not $|\\alpha|$, or $|\\alpha|^3$, or any other function of $\\alpha$? Energy considerations on their own do not single out the square. Why should probability be the *square* of the amplitude rather than some other power? We do not have a first-principles answer.',
     },
     {
       type: 'paragraph',
       content:
-        'Various mathematical arguments (such as Gleason\'s theorem) constrain the probability rule to be $|\\alpha|^2$ given certain assumptions about the structure of Hilbert space. But these arguments assume the Hilbert space formalism rather than deriving it from more fundamental principles.',
+        'There are arguments - Gleason\'s theorem chief among them - that force the rule to be $|\\alpha|^2$ once you grant certain things about Hilbert space. But that is the catch: they help themselves to the Hilbert space formalism rather than earning it from anything deeper.',
     },
     {
       type: 'heading',
@@ -110,12 +110,12 @@ export const section5_6: Section = {
     {
       type: 'paragraph',
       content:
-        'Complex amplitudes rather than real numbers encode quantum states. The role of the complex phase is not derived from our axioms. Why should quantum mechanics use $\\mathbb{C}$ rather than $\\mathbb{R}$?',
+        'Quantum states are encoded in complex amplitudes, not real numbers, and the role of the complex phase is nowhere derived from our axioms. Why $\\mathbb{C}$ and not $\\mathbb{R}$? Again, we cannot say.',
     },
     {
       type: 'paragraph',
       content:
-        'Complex numbers naturally arise in oscillatory systems and interference phenomena. The phase encodes information about relative timing that affects interference. But our axioms about distinction and energy do not obviously require complex amplitudes.',
+        'Complex numbers turn up naturally wherever there is oscillation and interference - the phase carries the relative timing that makes interference happen. That is suggestive. But suggestive is not the same as required, and our axioms about distinction and energy do not force complex amplitudes on us.',
     },
     {
       type: 'heading',
@@ -126,7 +126,7 @@ export const section5_6: Section = {
     {
       type: 'paragraph',
       content:
-        'The normalization condition $\\sum_i |\\alpha_i|^2 = 1$ is assumed rather than derived. While it is natural to require probabilities to sum to 1, this does not follow from our axioms without additional assumptions about the measurement process.',
+        'The normalization $\\sum_i |\\alpha_i|^2 = 1$ is assumed, not derived. Requiring probabilities to sum to one is reasonable enough, but reasonableness is not derivation: it does not fall out of our axioms without extra assumptions about what measurement does.',
     },
     {
       type: 'heading',
@@ -266,7 +266,7 @@ export const section5_6: Section = {
     {
       type: 'paragraph',
       content:
-        'Until such derivations are achieved, we maintain that the Born rule is interpreted within, but not derived from, the distinction framework.',
+        'Until one of these pays off, the position holds: the Born rule is interpreted within the distinction framework, not derived from it.',
     },
     {
       type: 'summary',

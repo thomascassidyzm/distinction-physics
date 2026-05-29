@@ -9,7 +9,7 @@ export const section2_11: Section = {
     {
       type: 'paragraph',
       content:
-        'Mathematics, viewed through the lens of distinction-making under energy constraints, can be understood as neither purely human invention nor discovery of a Platonic realm. This module has shown that mathematical structure is **consistent with** distinction-primacy—when you think in terms of distinctions, mathematical structure falls out naturally. This is an interpretive account, not a derivation of mathematics from our axioms.',
+        'Seen through distinction-making under energy constraints, mathematics is neither something we invented nor something we found in a Platonic realm. It is something we kept arriving at. This module has shown that mathematical structure is **consistent with** distinction-primacy - think in terms of distinctions, and the structure falls out on its own. That is the claim, and the whole of it. An interpretive account, not a derivation of mathematics from the two axioms.',
     },
     {
       type: 'note',
@@ -74,13 +74,13 @@ export const section2_11: Section = {
     {
       type: 'paragraph',
       content:
-        'This framework offers an interpretive lens on mathematical understanding. Mathematics can be seen not as a separate domain requiring its own metaphysics but as an integral part of how finite-energy observers organize their distinction-making. The structures of mathematics—from counting to calculus, from logic to topology—can be understood as stable patterns for systems that draw and maintain boundaries under resource constraints.',
+        'So mathematics need not be a separate domain with its own metaphysics, parked beside the physical world. It can be read as part of how finite-energy observers organise their distinction-making. The whole sweep of it - counting to calculus, logic to topology - read as the stable patterns available to any system that draws and holds boundaries under resource constraints.',
       emphasis: 'key',
     },
     {
       type: 'paragraph',
       content:
-        'Through this lens, mathematics can be viewed as the stable structure of distinction itself—the patterns that survive thermodynamic pressure and thus appear invariant across observers, contexts, and time. This interpretation suggests why mathematics feels necessary: its truths can be understood as thermodynamic stabilities, not arbitrary conventions. **This is a proposed correspondence, not a derivation.**',
+        'Through this lens, mathematics can be viewed as the stable structure of distinction itself - the patterns that survive thermodynamic pressure, and so look invariant across observers, contexts, and time. That is why its truths feel necessary: read as thermodynamic stabilities, they could hardly be arbitrary conventions. **This is a proposed correspondence, not a derivation.**',
     },
     {
       type: 'heading',
@@ -91,7 +91,7 @@ export const section2_11: Section = {
     {
       type: 'paragraph',
       content:
-        'In connecting mathematics to the broader distinction framework, we see how it relates to consciousness, learning, quantum mechanics, and spacetime through a common foundation. Mathematics is not isolated from these domains but represents the formal aspect of the same boundary-drawing process that constitutes all accessible reality.',
+        'Set against the broader framework, mathematics turns out to share a foundation with consciousness, learning, quantum mechanics, and spacetime. It is not a thing apart. It is the formal face of the same boundary-drawing process that makes up all the reality we can reach.',
       emphasis: 'conclusion',
     },
     {

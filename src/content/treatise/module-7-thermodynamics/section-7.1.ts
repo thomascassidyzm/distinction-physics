@@ -30,7 +30,7 @@ export const section7_1: Section = {
     {
       type: 'paragraph',
       content:
-        'This module provides interpretive vocabulary for thermodynamics. Where Module 0 showed that quantum structure can be interpreted through distinction-making under finite energy, Module 7 shows that thermodynamic dynamics can be understood through the same conceptual lens. **The laws of thermodynamics are IMPORTED from statistical mechanics and then INTERPRETED through distinction-vocabulary**—we do not derive thermodynamics from scratch.',
+        'This module offers interpretive vocabulary for thermodynamics, nothing more. Module 0 read quantum structure through distinction-making under finite energy; Module 7 reads thermodynamic dynamics through the same lens. **The laws of thermodynamics are IMPORTED from statistical mechanics and then INTERPRETED through distinction-vocabulary**—we do not derive thermodynamics from scratch. The substantive physics is borrowed; the lens is what is ours.',
     },
     {
       type: 'heading',
@@ -40,7 +40,7 @@ export const section7_1: Section = {
     {
       type: 'paragraph',
       content:
-        'Standard physics treats thermodynamics as empirical laws discovered through observation:',
+        'Standard physics treats thermodynamics as a set of empirical laws, found by watching the world and writing down what it does:',
     },
     {
       type: 'list',

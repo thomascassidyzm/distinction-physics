@@ -9,7 +9,7 @@ export const section8_9: Section = {
     {
       type: 'paragraph',
       content:
-        'This module has provided an epistemically honest accounting of the Distinction as Primitive framework\'s empirical standing. The primary finding: **the framework provides unifying vocabulary and conceptual coherence, not predictive novelty for established physics.** Most "predictions" are post-hoc consistency demonstrations.',
+        'This module set out to account, honestly, for where the Distinction as Primitive framework stands against the evidence. The finding, plainly stated: **the framework gives us unifying vocabulary and conceptual coherence, not predictive novelty for established physics.** Most "predictions" are post-hoc consistency demonstrations.',
       emphasis: 'key',
     },
     {
@@ -42,7 +42,7 @@ export const section8_9: Section = {
     {
       type: 'paragraph',
       content:
-        'These consistency checks show the framework aligns with established physics, but this is necessary, not sufficient, for validation. The framework was designed to be consistent with these phenomena.',
+        'These checks show the framework lines up with established physics. That is necessary for validation and nowhere near sufficient - the framework was built to line up with these phenomena in the first place.',
     },
     {
       type: 'heading',
@@ -135,7 +135,7 @@ export const section8_9: Section = {
     {
       type: 'paragraph',
       content:
-        'None of these falsification conditions has been met. The framework has survived the tests it has faced.',
+        'Not one of these conditions has been met. The framework has survived the tests it has faced so far.',
     },
     {
       type: 'heading',
@@ -186,7 +186,7 @@ export const section8_9: Section = {
     {
       type: 'paragraph',
       content:
-        'From two axioms --- OLU-accessible distinctions cost energy (Landauer scope), observers have finite budgets --- the framework derives effective discreteness and reads a wider set of constraints on OLU-accessible observation. It then interprets the fundamental features of physics through this lens (rather than regenerating them):',
+        'From two axioms --- OLU-accessible distinctions cost energy (Landauer scope), and observers have finite budgets --- the framework derives effective discreteness and reads off a wider set of constraints on OLU-accessible observation. It then interprets the fundamental features of physics through that lens, rather than regenerating them:',
       emphasis: 'key',
     },
     {
@@ -210,7 +210,7 @@ export const section8_9: Section = {
     {
       type: 'paragraph',
       content:
-        'The framework makes these connections explicit, testable, and falsifiable.',
+        'What the framework does is make these connections explicit - and with that, testable and falsifiable.',
     },
     {
       type: 'heading',
@@ -243,7 +243,7 @@ export const section8_9: Section = {
     {
       type: 'paragraph',
       content:
-        'This is what scientific progress requires. The framework stands or falls on its empirical consequences, and this module has laid those consequences bare.',
+        'That is what scientific progress asks of a proposal. The framework stands or falls on its empirical consequences - and this module has laid them bare.',
     },
     {
       type: 'summary',
@@ -262,7 +262,7 @@ export const section8_9: Section = {
     {
       type: 'paragraph',
       content:
-        'Whether the framework ultimately succeeds depends on future experiments. But its consistency with established physics is genuine, its few novel testable claims (e.g. N4, and Conjecture 6.1) are specific, and the research program is viable. That is all one can ask of a meta-theory in progress.',
+        'Whether the framework ultimately succeeds is for future experiments to decide. But its consistency with established physics is genuine, its few novel testable claims (N4, and Conjecture 6.1) are specific, and the research programme is viable. That is all one can ask of a meta-theory still in progress.',
       emphasis: 'conclusion',
     },
   ],

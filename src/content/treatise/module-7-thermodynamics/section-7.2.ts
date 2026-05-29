@@ -8,7 +8,7 @@ export const section7_2: Section = {
     {
       type: 'paragraph',
       content:
-        'The concept of entropy has caused confusion for over a century. Is it disorder? Uncertainty? Missing information? Probability of macrostates? Our framework provides the clarifying definition:',
+        'Entropy has confused people for over a century. Is it disorder? Uncertainty? Missing information? The probability of a macrostate? Each answer captures something and settles nothing. The framework offers one clarifying reading:',
     },
     {
       type: 'definition',
@@ -28,7 +28,7 @@ export const section7_2: Section = {
     {
       type: 'paragraph',
       content:
-        'Consider what it means for entropy to increase. A system moves from states where many boundaries exist (low entropy) to states where fewer boundaries can be maintained (high entropy):',
+        'Consider what it means for entropy to increase. A system drifts from states where many boundaries hold (low entropy) toward states where fewer can be maintained (high entropy):',
     },
     {
       type: 'list',
@@ -42,7 +42,7 @@ export const section7_2: Section = {
     {
       type: 'paragraph',
       content:
-        'In each case, entropy increase can be read as distinction-decay: the boundaries that made parts distinguishable are blurring. This is interpretive vocabulary — statistical mechanics is imported; the framework offers a conceptual lens for it, not a replacement.',
+        'In each case, the same thing is happening: the boundaries that made the parts distinguishable are blurring. Entropy increase reads as distinction-decay. This is interpretive vocabulary, no more - the statistical mechanics is imported, and the framework offers a lens for it, not a replacement.',
       emphasis: 'key',
     },
     {
@@ -99,7 +99,7 @@ export const section7_2: Section = {
       type: 'note',
       variant: 'technical',
       content:
-        'The distinction framework resolves the long-standing debate about whether entropy is "subjective" or "objective." It is neither - entropy measures what distinctions are maintainable, which depends on both the system and the available resources for distinction-making.',
+        'This reframes the old quarrel over whether entropy is "subjective" or "objective." It is neither. Entropy measures what distinctions are maintainable - and that turns on both the system and the resources available to make distinctions. The dichotomy was the wrong question.',
     },
   ],
   keyPoints: [

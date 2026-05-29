@@ -9,7 +9,7 @@ export const section4_9: Section = {
     {
       type: 'paragraph',
       content:
-        'Skill acquisition follows a characteristic trajectory that the thermodynamic framework interprets as **progressive anti-entropic optimization**. The novice begins with high-entropy, inefficient distinction patterns; the expert has achieved low-entropy, highly efficient patterns. The journey from one to the other is the observable signature of anti-entropic pattern building.',
+        'Skill acquisition runs a characteristic shape, and the thermodynamic framing reads it as **progressive anti-entropic optimization**. The novice starts with costly, disordered distinction patterns; the expert holds lean, well-organized ones. The road between them is anti-entropic pattern building, made visible.',
     },
     {
       type: 'heading',
@@ -43,7 +43,7 @@ export const section4_9: Section = {
     {
       type: 'paragraph',
       content:
-        'The standard learning curve (power law or exponential) emerges from this process. Each optimization reduces the remaining optimization opportunities, producing diminishing returns.',
+        'The familiar learning curve — power law or exponential — falls out of this. Each optimization uses up some of the room left to optimize, so the returns diminish. The plateau is not the learner stalling; it is the trajectory running out of cheap moves.',
       emphasis: 'key',
     },
     {
@@ -78,7 +78,7 @@ export const section4_9: Section = {
     {
       type: 'paragraph',
       content:
-        'Plateaus occur because moving from one structural configuration to another requires temporary disruption of existing boundaries—an energy cost that must be paid before the benefits of the new structure are realized. Breakthroughs occur when sufficient reorganization energy has accumulated.',
+        'A plateau is the price of admission to the next structure. Moving from one configuration to another means tearing down working boundaries first — a cost paid up front, before any benefit shows. The breakthrough comes when enough reorganization energy has built up to finish the move. The flat stretch is not nothing happening; it is the bill being paid.',
     },
     {
       type: 'heading',
@@ -154,7 +154,7 @@ export const section4_9: Section = {
     {
       type: 'paragraph',
       content:
-        'Skill acquisition is not mysterious—it is the observable trajectory of an energy-constrained system optimizing its distinction-making efficiency over time. Every expert was once a novice whose brain had not yet optimized; every novice is a system with vast optimization potential awaiting investment.',
+        'There is nothing mysterious in skill. It is the visible trajectory of an energy-constrained system getting better at telling things apart, over time. Every expert was once a novice whose network had not yet been optimized; every novice is a system carrying enormous unspent potential, waiting only for the investment.',
       emphasis: 'conclusion',
     },
     {

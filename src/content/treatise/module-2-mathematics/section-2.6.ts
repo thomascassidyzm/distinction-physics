@@ -9,7 +9,7 @@ export const section2_6: Section = {
     {
       type: 'paragraph',
       content:
-        'Geometry can be understood through the lens of boundary-drawing applied to spatial relationships. Points, lines, shapes, and spaces can be interpreted as patterns of spatial distinction—ways of organizing boundaries in extension. We do not derive geometry from our axioms; we show consistency between geometric structure and distinction-primacy.',
+        'Geometry is boundary-drawing turned outward, onto where things are rather than how many. Points, lines, shapes, spaces - all of them read as patterns of spatial distinction, ways of organising boundaries in extension. We do not derive geometry from the axioms; we show that geometric structure sits comfortably with distinction-primacy.',
     },
     {
       type: 'note',
@@ -35,7 +35,7 @@ export const section2_6: Section = {
     {
       type: 'paragraph',
       content:
-        'For any OLU, points are never truly dimensionless. They have effective size determined by the OLU\'s spatial resolution, which depends on available energy. The mathematical idealization of zero-dimensional points is a limit that no finite observer can access.',
+        'For any OLU, a point is never truly dimensionless. It has an effective size, set by the observer\'s spatial resolution, which is set in turn by available energy. The zero-dimensional point is a limit, like the continuum before it - useful, and out of reach. No finite observer ever touches it.',
     },
     {
       type: 'heading',
@@ -121,7 +121,7 @@ export const section2_6: Section = {
     {
       type: 'paragraph',
       content:
-        'Euclidean geometry—flat, parallel lines never meeting, Pythagorean theorem—represents the lowest-energy spatial structure. In the absence of mass-energy that curves the boundary landscape (as in general relativity), spatial boundaries naturally organize in Euclidean patterns because these require minimal energy to maintain.',
+        'Euclidean geometry - flat, parallels that never meet, the Pythagorean theorem - is the lowest-energy spatial structure. Where there is no mass-energy to curve the boundary landscape (as there is in general relativity), spatial boundaries settle into Euclidean patterns, because those are the cheapest to hold. Flat is not the special case. Flat is the default, and curvature is what energy buys.',
     },
     {
       type: 'theorem',
@@ -163,7 +163,7 @@ export const section2_6: Section = {
     {
       type: 'paragraph',
       content:
-        'These are not "different geometries" in the sense of alternative axiom systems. They are the geometries that emerge when the spatial boundary landscape is shaped by energy density. General relativity describes how mass-energy curves the boundary landscape, changing what spatial distinctions are stable and accessible.',
+        'These are not "different geometries" in the sense of rival axiom systems you might pick between. They are what geometry becomes when energy density shapes the spatial boundary landscape. General relativity is the account of how mass-energy curves that landscape, changing which spatial distinctions are stable and which are accessible.',
     },
     {
       type: 'heading',

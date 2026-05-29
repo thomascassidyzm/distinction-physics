@@ -15,7 +15,7 @@ export const section9_2: Section = {
     {
       type: 'paragraph',
       content:
-        'Some problems in philosophy and physics are genuine puzzles requiring solutions. Others may be reframed through new vocabulary. Distinction as Primitive proposes that several famous problems can be understood differently through distinction vocabulary—but epistemic honesty requires acknowledging that reframing is not the same as solving.',
+        'Some problems in philosophy and physics are genuine puzzles waiting on a solution. Others are waiting on a better way of being asked. Distinction as Primitive proposes that several famous problems can be understood differently through distinction vocabulary. But reframing is not solving, and saying so is not a confession - it is the claim.',
     },
     {
       type: 'definition',
@@ -40,7 +40,7 @@ export const section9_2: Section = {
     {
       type: 'paragraph',
       content:
-        'Distinction as Primitive proposes that consciousness can be understood AS distinction-making—specifically, self-referential distinction-making. However, the hard problem—WHY there is something it is like—is REFRAMED, not dissolved. We provide vocabulary, not explanation. The question "why does distinction-making feel like something?" remains as mysterious as "why does matter generate mind?" We relocate the problem, we do not solve it.',
+        'Distinction as Primitive proposes that consciousness can be understood AS distinction-making — specifically, self-referential distinction-making. But the hard problem — WHY there is something it is like — is reframed, not dissolved. We supply vocabulary, not explanation. "Why does distinction-making feel like something?" is exactly as mysterious as "why does matter generate mind?" The mystery has moved; it has not gone. We relocate the problem. We do not solve it.',
       emphasis: 'key',
     },
     {
@@ -74,7 +74,7 @@ export const section9_2: Section = {
     {
       type: 'paragraph',
       content:
-        'However, this is interpretation [INTERPRETED], not proof. WHY distinction-making exists, and WHY it has mathematical structure, remains unexplained. We provide a perspective that makes the match less mysterious, not an explanation of why the match exists.',
+        'But this is interpretation [INTERPRETED], not proof. WHY distinction-making exists, and WHY it carries mathematical structure, stays unexplained. We make the match look less like a miracle. We do not explain why the match is there at all.',
       emphasis: 'key',
     },
     {
@@ -86,7 +86,7 @@ export const section9_2: Section = {
     {
       type: 'paragraph',
       content:
-        'Some problems are not dissolved but transformed—reframed in ways that make progress possible.',
+        'Some problems are not dissolved but transformed — reframed in ways that let work begin again.',
     },
     {
       type: 'heading',
@@ -97,7 +97,7 @@ export const section9_2: Section = {
     {
       type: 'paragraph',
       content:
-        'The traditional debate assumes a dichotomy between determinism and libertarian free will. Distinction as Primitive offers different vocabulary: an observer MUST allocate finite energy among possible distinctions. This allocation IS what we call choice.',
+        'The traditional debate forces a choice between determinism and libertarian free will. Distinction as Primitive offers a different vocabulary. An observer MUST allocate finite energy among possible distinctions. That allocation IS what we call choice.',
     },
     {
       type: 'paragraph',
@@ -224,7 +224,7 @@ export const section9_2: Section = {
     {
       type: 'paragraph',
       content:
-        'Living systems are no longer mysteriously different from physical systems. They are physical systems optimized for distinction-making—for extracting information from their environments at minimal energy cost. Evolution is the optimization of distinction economics.',
+        'Living systems stop looking mysteriously unlike physical systems. They are physical systems tuned for distinction-making — for pulling information out of their surroundings at the lowest energy cost they can manage. Evolution is the optimisation of distinction economics.',
     },
     {
       type: 'heading',
@@ -284,7 +284,7 @@ export const section9_2: Section = {
     {
       type: 'paragraph',
       content:
-        'This is where the framework\'s vocabulary is most productively applied. Learning as anti-entropic achievement—active maintenance of ordered patterns against dissolution—connects thermodynamics to cognition in a testable way.',
+        'This is where the vocabulary earns its keep. Learning as an anti-entropic achievement — ordered patterns held, by effort, against dissolution — connects thermodynamics to cognition in a way you can actually test.',
       emphasis: 'key',
     },
     {

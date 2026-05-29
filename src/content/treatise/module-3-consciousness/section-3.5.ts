@@ -20,7 +20,7 @@ export const section3_5: Section = {
     {
       type: 'paragraph',
       content:
-        'Consciousness requires not merely distinction-making but *distinction-making about one\'s own distinction-making*. This self-referential loop is what distinguishes conscious systems from merely reactive ones.',
+        'Consciousness is not just distinction-making. It is *distinction-making about one\'s own distinction-making*. That self-referential loop is the line between a conscious system and a merely reactive one.',
     },
     {
       type: 'heading',
@@ -58,7 +58,7 @@ export const section3_5: Section = {
     {
       type: 'paragraph',
       content:
-        'The system observes itself observing. This recursive loop—making distinctions about one\'s own distinction-making—constitutes the minimum requirement for consciousness.',
+        'The system observes itself observing. That recursive loop - making distinctions about one\'s own distinction-making - is the minimum requirement for consciousness. Below it, the lights are on but nobody is home.',
       emphasis: 'key',
     },
     {
@@ -144,7 +144,7 @@ export const section3_5: Section = {
     {
       type: 'paragraph',
       content:
-        'Higher levels require more energy and more complex neural architecture. Human consciousness is not metaphysically unique—it is a high-level position on a continuum of self-referential complexity.',
+        'Each higher level costs more energy and more architecture. So human consciousness is not metaphysically special. It is simply a high position on a continuum of self-referential complexity - the same kind of thing, run deeper.',
       emphasis: 'key',
     },
     {
@@ -167,7 +167,7 @@ export const section3_5: Section = {
     {
       type: 'paragraph',
       content:
-        'Self-reference is the architectural key that transforms mere distinction-making into conscious experience. The depth of self-referential recursion determines the richness and complexity of that experience.',
+        'Self-reference is the architectural key: it is what turns mere distinction-making into felt experience. How deep the recursion runs is what sets the richness of that experience. That is the proposal.',
       emphasis: 'conclusion',
     },
   ],

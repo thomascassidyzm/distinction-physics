@@ -9,7 +9,7 @@ export const section2_5: Section = {
     {
       type: 'paragraph',
       content:
-        'Logical operations can be understood through the lens of boundary stability. This section offers an interpretation of logic through distinction-vocabulary, showing consistency between logical structure and the framework. We do not derive logic from our axioms—we show that logic is consistent with distinction-primacy.',
+        'Logic, on this reading, is bookkeeping for boundaries: which ones hold, which ones fall, and what follows when. This section interprets logic through distinction-vocabulary, showing it sits comfortably with the framework. We do not derive logic from the axioms - we show that logic is consistent with distinction-primacy.',
     },
     {
       type: 'note',
@@ -40,7 +40,7 @@ export const section2_5: Section = {
     {
       type: 'paragraph',
       content:
-        'On this interpretation, truth values can be read not as abstract Platonic values but as descriptions of physical boundary states—whether a boundary is maintained or not. The binary nature of classical logic then reflects the discrete character of boundary-maintenance for finite-energy OLUs.',
+        'So, truth values need not be abstract Platonic tokens. They can be read as descriptions of physical boundary states - whether a boundary is being held or not. The binary character of classical logic then follows from the discrete character of boundary-maintenance for finite-energy OLUs. True and false are not two values in a void. They are a boundary up and a boundary down.',
       emphasis: 'key',
     },
     {
@@ -127,7 +127,7 @@ export const section2_5: Section = {
     {
       type: 'paragraph',
       content:
-        'These laws hold because alternatives are thermodynamically unstable. A system that violates non-contradiction would be attempting to maintain a boundary that is simultaneously maintained and not maintained—an energy state that cannot persist.',
+        'These laws hold because the alternatives cannot persist. A system that violates non-contradiction is trying to hold a boundary that is up and down at once - an energy state that simply will not sit still. The law is not enforced. It is what is left standing.',
       emphasis: 'key',
     },
     {
@@ -170,7 +170,7 @@ export const section2_5: Section = {
     {
       type: 'paragraph',
       content:
-        'These non-classical logics are not rival theories but reflections of different boundary conditions. Classical logic holds in domains of robust, binary boundary maintenance. Non-classical logics hold when boundary stability conditions are different.',
+        'These are not rival theories competing for the one true logic. They are what you get under different boundary conditions. Classical logic holds where boundaries are robust and binary. The non-classical logics hold where stability conditions change. Same bookkeeping, different ledger.',
     },
     {
       type: 'heading',

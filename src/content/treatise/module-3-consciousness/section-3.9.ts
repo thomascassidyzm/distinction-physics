@@ -15,7 +15,7 @@ export const section3_9: Section = {
     {
       type: 'paragraph',
       content:
-        'Conscious experience varies dramatically across states (waking, sleeping, drugged) and conditions (meditation, disorder, altered physiology). The framework **interprets** these variations as changes in the character and energy investment of boundary maintenance.',
+        'Conscious experience changes enormously - waking, sleeping, dreaming, drugged, in meditation, in disorder. The framework **interprets** all of this as one variable moving: the character and energy investment of boundary maintenance.',
     },
     {
       type: 'heading',
@@ -41,7 +41,7 @@ export const section3_9: Section = {
     {
       type: 'paragraph',
       content:
-        'This ratio determines experienced clarity. When energy investment is high relative to noise, consciousness is sharp and vivid. When the ratio drops, experience becomes fuzzy, fragmented, or disappears entirely.',
+        'That ratio is what you feel as clarity. Pour in energy against the noise, and consciousness sharpens and brightens. Let the ratio fall, and experience goes soft, then fragmented, then dark.',
       emphasis: 'key',
     },
     {
@@ -104,7 +104,7 @@ export const section3_9: Section = {
     {
       type: 'paragraph',
       content:
-        'This analysis suggests that altered states of consciousness are not mysterious departures from "normal" consciousness but predictable consequences of altered energy allocation in boundary maintenance. The profound experiences reported in meditation, psychedelic states, and near-death experiences may all reflect genuine variations in the self/not-self boundary structure.',
+        'On this reading, altered states are not mysterious departures from some "normal" baseline. They are what you would expect when you alter how energy is allocated to boundary maintenance. The profound experiences reported in meditation, in psychedelic states, in near-death accounts may all reflect genuine variations in the self/not-self boundary structure - the same machinery, set differently.',
       emphasis: 'conclusion',
     },
   ],

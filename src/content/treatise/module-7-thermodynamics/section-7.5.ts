@@ -8,7 +8,7 @@ export const section7_5: Section = {
     {
       type: 'paragraph',
       content:
-        'Why does time have a direction? Why do we remember the past and not the future? Why do eggs break but not unbreak? The "arrow of time" has puzzled physicists because the fundamental laws of physics are time-symmetric.',
+        'Why does time point one way? Why do we remember the past and not the future? Why does an egg break but never unbreak? The puzzle is sharp because the underlying laws of physics do not care about direction - run them backwards and they hold just as well. The asymmetry we live inside is nowhere in the equations.',
     },
     {
       type: 'paragraph',
@@ -98,7 +98,7 @@ export const section7_5: Section = {
     {
       type: 'paragraph',
       content:
-        'Each requirement becomes exponentially more demanding as dispersion increases. The "past" is recoverable because its boundaries still exist (as memories, records, physical traces). The "future" is indeterminate because its boundaries have not yet been drawn.',
+        'Each demand grows exponentially harsher as dispersion runs on. The past is recoverable because its boundaries are still here - as memories, records, physical traces. The future is open because its boundaries have not yet been drawn. That is the difference, and it is not a difference in the laws.',
     },
     {
       type: 'heading',
@@ -108,7 +108,7 @@ export const section7_5: Section = {
     {
       type: 'paragraph',
       content:
-        'We perceive time as flowing from past to future precisely because this is the direction of boundary dispersion. Memory is possible because past boundaries leave traces (maintained distinctions about what was). Anticipation is uncertain because future boundaries are not yet drawn.',
+        'We feel time flow from past to future because that is the direction boundaries disperse. Memory works because past boundaries leave traces - maintained distinctions about what was. Anticipation stays uncertain because the boundaries of the future have not yet been drawn. The felt arrow and the thermodynamic one are not two facts. They are one.',
     },
     {
       type: 'theorem',

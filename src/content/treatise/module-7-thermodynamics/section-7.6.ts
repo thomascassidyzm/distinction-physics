@@ -13,7 +13,7 @@ export const section7_6: Section = {
     {
       type: 'paragraph',
       content:
-        'Temperature is traditionally defined through average kinetic energy. In our framework, temperature indexes the stability of distinction-maintenance:',
+        'Temperature is usually defined through average kinetic energy - how fast things jiggle. Read through distinction, it indexes something else: how stable a maintained distinction can be.',
     },
     {
       type: 'math',
@@ -126,7 +126,7 @@ export const section7_6: Section = {
     {
       type: 'paragraph',
       content:
-        'When free energy is exhausted, no new distinctions can be created. The system has reached equilibrium--not stasis, but dynamic balance where boundary creation equals boundary dissolution.',
+        'Spend the free energy down to nothing and no new distinction can be made. The system has reached equilibrium - not stillness, but balance: boundary creation exactly cancelled by boundary dissolution.',
     },
     {
       type: 'heading',

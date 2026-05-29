@@ -84,7 +84,7 @@ export const section7_4: Section = {
     {
       type: 'paragraph',
       content:
-        'The specific value $kT \\ln(2)$ comes from statistical mechanics — the entropy of reducing two equiprobable states to one — and the framework imports it (it is the content of Axiom 1) rather than establishing it.',
+        'The specific value $kT \\ln(2)$ comes from statistical mechanics — the entropy of collapsing two equiprobable states into one. The framework does not establish it. It imports it. That value *is* the content of Axiom 1, not a consequence the framework can claim to have won.',
     },
     {
       type: 'heading',

@@ -21,7 +21,7 @@ export const section1_10: Section = {
     {
       type: 'paragraph',
       content:
-        'Our formalization provides conceptual vocabulary consistent with core features of quantum mechanics, though it does not derive quantum mechanics from first principles.',
+        'What follows is vocabulary that sits comfortably beside the core features of quantum mechanics. It is not a derivation of them from first principles, and nothing below should be read as one.',
     },
     {
       type: 'heading',
@@ -32,7 +32,7 @@ export const section1_10: Section = {
     {
       type: 'paragraph',
       content:
-        'Position and momentum are conjugate continuous properties. An OLU with energy $E$ must allocate it between spatial and momentum distinctions:',
+        'Position and momentum are conjugate, both continuous. An OLU with energy $E$ cannot pour it into both at once - it has to split the budget between resolving where and resolving how fast:',
     },
     {
       type: 'math',
@@ -67,7 +67,7 @@ export const section1_10: Section = {
     {
       type: 'paragraph',
       content:
-        'The energy allocation trade-off provides a conceptual framework **consistent with** Heisenberg uncertainty, though it does not derive the specific form of the uncertainty principle. Bell inequality violations demonstrate that quantum uncertainty cannot be reduced purely to resource limitations---the framework offers interpretive vocabulary, not a replacement for quantum formalism.',
+        'The energy-allocation trade-off gives a picture **consistent with** Heisenberg uncertainty - a reason finite observers might face such a trade-off at all. It does not derive the specific form of the principle, and it would be wrong to claim it does. Bell inequality violations settle that: quantum uncertainty cannot be reduced to mere resource limitation. So the framework offers interpretive vocabulary here, not a replacement for the quantum formalism.',
       emphasis: 'key',
     },
     {
@@ -103,7 +103,7 @@ export const section1_10: Section = {
     {
       type: 'paragraph',
       content:
-        'The Second Law is thus interpreted through our framework: without energy input (isolation), distinctions decay, and entropy increases. This provides a conceptual understanding of entropy as the degradation of distinguishable structure.',
+        'Read this way, the Second Law stops being a brute decree. Cut off the energy and distinctions decay; as they decay, entropy climbs. Entropy is not a mysterious quantity sitting on top of the world - it is the degradation of distinguishable structure, counted.',
       emphasis: 'key',
     },
     {
@@ -126,7 +126,7 @@ export const section1_10: Section = {
     {
       type: 'paragraph',
       content:
-        'This connects Shannon information theory to thermodynamics through distinction physics. Information is not abstract: it consists of maintained distinctions, each with physical energy cost.',
+        'This ties Shannon information to thermodynamics, with distinction-making as the knot between them. Information is not a free-floating abstraction. It is a set of maintained distinctions, and every one of them has a price paid in energy.',
     },
     {
       type: 'heading',
@@ -179,7 +179,7 @@ export const section1_10: Section = {
     {
       type: 'paragraph',
       content:
-        'The information-energy nexus explains why computation has thermodynamic costs, why memory requires ongoing energy expenditure, and why the universe cannot store infinite information in finite regions.',
+        'This is why computation costs heat, why memory has to be paid for again and again, and why no finite region of the universe can hold unlimited information. Each is the same fact wearing different clothes: information is distinction, and distinction is never free.',
       emphasis: 'conclusion',
     },
   ],

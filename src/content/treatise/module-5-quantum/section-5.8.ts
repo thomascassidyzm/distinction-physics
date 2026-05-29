@@ -20,7 +20,7 @@ export const section5_8: Section = {
     {
       type: 'paragraph',
       content:
-        'But this mathematical limit obscures the physical mechanism. Classical behavior emerges through three resolution-economic processes:',
+        'But the limit hides the mechanism. Classical behaviour does not arrive by $\\hbar$ shrinking; it arrives through three resolution-economic processes:',
     },
     {
       type: 'heading',
@@ -53,7 +53,7 @@ export const section5_8: Section = {
     {
       type: 'paragraph',
       content:
-        'Measurement devices exploit this process. A single photon striking a detector triggers a cascade of atomic and molecular transitions, each reinforcing the same distinction until it becomes macroscopically stable. The amplification makes the distinction energetically cheap to maintain because so many systems are coordinated to support it.',
+        'This is exactly what a measurement device is built to do. One photon hits a detector and sets off a cascade - atomic transition, molecular transition, on up - each link reasserting the same distinction until it stands at macroscopic scale. By the end the distinction is cheap to hold, because a whole crowd of systems is now holding it together.',
     },
     {
       type: 'heading',
@@ -69,7 +69,7 @@ export const section5_8: Section = {
     {
       type: 'paragraph',
       content:
-        'When many environmental particles record the same information about a system, the distinction becomes effectively classical. Any single particle\'s contribution can fluctuate without destroying the overall pattern. This redundancy creates effectively classical behavior even though underlying processes remain quantum mechanical.',
+        'Once many environmental particles have all recorded the same fact about a system, the distinction is effectively classical. Any one of them can wobble, or drop out entirely, and the pattern survives. The behaviour reads as classical even though every process underneath it is still quantum mechanical.',
     },
     {
       type: 'heading',
@@ -80,7 +80,7 @@ export const section5_8: Section = {
     {
       type: 'paragraph',
       content:
-        'Different OLUs access reality at different effective grain sizes based on their energy budgets. A human observing a table does not need to distinguish individual atoms - coarse-grained distinctions are energetically cheap and practically sufficient. The same reality that is quantum at fine resolution appears classical at coarse resolution, not because different physics applies, but because the energetically efficient distinction patterns are different at different scales.',
+        'Different OLUs meet reality at different grain sizes, set by their energy budgets. Look at a table and you do not need to tell one atom from the next - the coarse distinction is cheap and it is enough. The same reality that is quantum up close looks classical from arm\'s length. Not because the physics changed. Because the cheap distinctions are different at different scales.',
     },
     {
       type: 'paragraph',

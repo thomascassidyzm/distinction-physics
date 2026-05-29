@@ -60,7 +60,7 @@ export const section7_7: Section = {
     {
       type: 'paragraph',
       content:
-        'This is not mere metaphor. An OLU is defined as any system capable of differential response to inputs (Section 0.1). Differential response requires energy to maintain the distinction between "this input" and "that input." At equilibrium, no such energy is available.',
+        'This is not a turn of phrase. An OLU is, by definition, any system that can respond differently to different inputs (Section 0.1). And responding differently means holding a distinction between "this input" and "that input" - which costs energy. At equilibrium there is no such energy to be had. The condition is not hostile to observers. It simply leaves no room for one.',
     },
     {
       type: 'heading',
@@ -80,13 +80,13 @@ export const section7_7: Section = {
     {
       type: 'paragraph',
       content:
-        '"Existence" in any operationally meaningful sense requires accessibility to some OLU. A universe at perfect equilibrium would contain no OLUs, hence no accessible reality, hence no meaningful existence.',
+        'Existence, in any sense we can operate with, requires accessibility to some OLU. A universe at perfect equilibrium holds no OLUs - so no accessible reality, and nothing that existence could be predicated of. We stay agnostic about reality-in-itself; what ends is the part we could ever reach.',
     },
     {
       type: 'note',
       variant: 'editorial',
       content:
-        'This connects the framework\'s epistemology (what can be known) to its thermodynamics (what can be maintained) through the common constraint of distinction-making under finite energy.',
+        'Here the framework\'s epistemology and its thermodynamics meet: what can be known and what can be maintained turn out to be the same constraint, seen from two sides - distinction-making under finite energy.',
     },
     {
       type: 'heading',
@@ -96,12 +96,12 @@ export const section7_7: Section = {
     {
       type: 'paragraph',
       content:
-        'The framework reveals heat death not as mere physical stasis but as the dissolution of the conditions for experience, knowledge, and meaning. Without distinctions, there is nothing to know and no one to know it.',
+        'So heat death is not just the machine winding down. It is the dissolution of the very conditions for experience, knowledge, and meaning. With no distinctions left, there is nothing to know - and no one left to know it.',
     },
     {
       type: 'paragraph',
       content:
-        'This is not nihilistic but clarifying: it shows that the very possibility of "mattering" requires ongoing distinction-maintenance. Value, meaning, and experience are thermodynamically grounded in the capacity to maintain boundaries against entropy.',
+        'This is not a counsel of despair. It is a clarification. The very possibility of anything *mattering* rests on distinctions being held, moment by moment, against the pull toward sameness. Value, meaning, experience - all of it is grounded, thermodynamically, in the capacity to keep boundaries up against entropy. Mattering is an achievement, not a given.',
     },
     {
       type: 'summary',

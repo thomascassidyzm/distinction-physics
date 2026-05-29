@@ -14,7 +14,7 @@ export const section3_7: Section = {
     {
       type: 'paragraph',
       content:
-        'Attention is not a mysterious spotlight that illuminates some information while leaving other information in darkness. We propose that attention is the *allocation of finite distinction-maintenance resources* toward high-priority information.',
+        'Attention is not a mysterious spotlight, picking out some information and leaving the rest in the dark. We propose something plainer: attention is the *allocation of finite distinction-maintenance resources* toward what matters most. Not a beam - a budget.',
       emphasis: 'key',
     },
     {
@@ -26,7 +26,7 @@ export const section3_7: Section = {
     {
       type: 'paragraph',
       content:
-        'From Axiom 2 (finite energy budgets), a conscious system cannot maintain all possible distinctions simultaneously. Choices must be made. Attention is the mechanism by which these choices are implemented:',
+        'From Axiom 2 - finite energy budgets - a conscious system cannot hold every possible distinction at once. Something has to give. Attention is the mechanism by which that choosing gets done:',
     },
     {
       type: 'definition',
@@ -125,7 +125,7 @@ export const section3_7: Section = {
     {
       type: 'paragraph',
       content:
-        'Attention is the energetic gatekeeper that determines which distinctions get the resources needed for conscious integration.',
+        'So attention is the gatekeeper, and the gate is energetic: it decides which distinctions get the resources to be integrated into consciousness, and which go without.',
       emphasis: 'conclusion',
     },
   ],

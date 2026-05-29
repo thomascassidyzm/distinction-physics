@@ -67,7 +67,7 @@ export const section6_6: Section = {
     {
       type: 'paragraph',
       content:
-        'A central puzzle in physics is reconciling the apparent continuity of spacetime with quantum discreteness. Our framework addresses this through several mechanisms:',
+        'One of the standing puzzles in physics is how to square the apparent smoothness of spacetime with the discreteness quantum theory keeps finding underneath it. Our framework eases the tension - it does not abolish it - through a few simple mechanisms:',
     },
     {
       type: 'list',

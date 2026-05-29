@@ -110,7 +110,7 @@ export const section6_8: Section = {
     {
       type: 'paragraph',
       content:
-        'These reframings do not immediately answer the questions but may open new avenues for theoretical development and empirical investigation.',
+        'These reframings answer nothing on their own. What they might do is change the shape of the question - and a better-shaped question is sometimes where the work begins.',
     },
     {
       type: 'summary',

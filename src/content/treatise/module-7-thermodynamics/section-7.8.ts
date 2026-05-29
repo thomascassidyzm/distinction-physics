@@ -30,7 +30,7 @@ export const section7_8: Section = {
     {
       type: 'paragraph',
       content:
-        'If no distinctions exist, no work can be extracted. This is why at equilibrium, no work is possible despite potentially enormous total energy.',
+        'No distinctions, no work - however much total energy is lying around. That is why equilibrium is barren even when it is hot: the energy is there, but there is no gradient left to lean on.',
       emphasis: 'key',
     },
     {
@@ -147,7 +147,7 @@ export const section7_8: Section = {
       type: 'note',
       variant: 'technical',
       content:
-        'The distinction between work and heat is not about the energy itself but about how it couples to boundary patterns. Work transfers energy while preserving or creating distinctions; heat transfers energy while dissolving them.',
+        'Work and heat differ not in the energy itself but in how it couples to boundary patterns. Work moves energy while preserving or creating distinctions; heat moves energy while dissolving them. Same currency, opposite effect on the books.',
     },
     {
       type: 'summary',

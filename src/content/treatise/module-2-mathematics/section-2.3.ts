@@ -15,7 +15,7 @@ export const section2_3: Section = {
     {
       type: 'paragraph',
       content:
-        'The concept of a set—a collection of distinct entities considered as a single object—can be understood through the lens of boundary-drawing. This section offers an interpretation of set theory through distinction-vocabulary, showing consistency between set-theoretic structure and the framework. We do not derive set theory from our axioms.',
+        'A set is a collection of distinct things treated as one thing. Read that again: distinct things, made into one. That is boundary-drawing twice over, and the rest of this section follows from noticing it. What follows is an interpretation of set theory in distinction-vocabulary - showing it sits comfortably with the framework. We do not derive set theory from the axioms.',
     },
     {
       type: 'note',
@@ -88,7 +88,7 @@ export const section2_3: Section = {
     {
       type: 'paragraph',
       content:
-        'Set membership is binary—an element is either in the set or not. This discreteness is not an arbitrary logical convention but reflects the discrete nature of boundary-drawing. The boundary separating members from non-members is maintained or not maintained. There is no "partial membership" because boundaries do not come in degrees for finite-energy observers.',
+        'Membership is binary. An element is in the set or it is not. This is not a convention someone chose; it reflects the discrete nature of boundary-drawing. The boundary between members and non-members is either maintained or it is not. There is no half-in. Boundaries do not come in degrees for finite-energy observers.',
     },
     {
       type: 'heading',
@@ -178,7 +178,7 @@ export const section2_3: Section = {
     {
       type: 'paragraph',
       content:
-        'The algebraic properties of sets—associativity, commutativity, distributivity, De Morgan\'s laws—are not arbitrary axioms imposed from outside. They reflect the stable patterns in how boundaries can be combined, overlapped, and inverted. These properties hold because alternatives would be thermodynamically unstable—they would require more energy to maintain against the natural dynamics of boundary combination.',
+        'The algebra of sets - associativity, commutativity, distributivity, De Morgan\'s laws - is not a set of rules imposed from outside. It reflects the stable patterns in how boundaries combine, overlap, and invert. These laws hold because the alternatives would be thermodynamically unstable: more expensive to maintain against the natural dynamics of boundary combination. The law is just the cheap path made explicit.',
     },
     {
       type: 'theorem',

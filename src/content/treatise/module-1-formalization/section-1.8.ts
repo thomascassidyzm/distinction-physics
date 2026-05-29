@@ -17,7 +17,7 @@ export const section1_8: Section = {
     {
       type: 'paragraph',
       content:
-        'Without continuous energy input, distinctions decay toward indistinguishability:',
+        'Stop feeding a distinction and it does not simply persist. It decays - drifts back toward sameness:',
     },
     {
       type: 'theorem',
@@ -33,7 +33,7 @@ export const section1_8: Section = {
     {
       type: 'paragraph',
       content:
-        'This exponential decay law captures the fundamental thermodynamic tendency toward equilibrium. Distinctions that are not actively maintained will fade, with the decay rate determined by the ambient thermal environment and the energy invested in preservation.',
+        'This exponential law is just the pull toward equilibrium written for distinctions. Leave one untended and it fades; how fast it fades is set by two things - the warmth of the surroundings, working to erase it, and the energy you spend holding it in place.',
     },
 
     // =========================================================================
@@ -59,7 +59,7 @@ export const section1_8: Section = {
     {
       type: 'paragraph',
       content:
-        'This theorem formalizes the processual nature of existence. An entity is not a static substance but a dynamic pattern of distinction-maintenance. The minimum energy rate required to persist scales with the complexity of the entity (the number of boundaries it maintains).',
+        'This theorem puts a number on a metaphysical claim. To exist as a distinct thing is not to *be* a substance; it is to *keep doing* something - holding a pattern of distinctions against the drift. An entity is a verb wearing the costume of a noun. And the minimum rate it must spend to go on existing rises with its complexity, with the number of boundaries it has to hold.',
     },
     {
       type: 'paragraph',
@@ -90,7 +90,7 @@ export const section1_8: Section = {
     {
       type: 'paragraph',
       content:
-        'The dynamism principle reveals that persistence through time is not a passive property but an active achievement. Identity requires continuous work against the entropic tendency toward dissolution.',
+        'So persistence is not something a thing has. It is something a thing does. Lasting through time is not a passive property but an active achievement - identity held by continuous work against the pull toward dissolution.',
       emphasis: 'key',
     },
     {
@@ -102,7 +102,7 @@ export const section1_8: Section = {
     {
       type: 'paragraph',
       content:
-        'The finitude bound of §1.7 limits how many distinctions an OLU can hold *simultaneously*. The decay law above limits how long held distinctions persist. A third question remains: how *fast* can an OLU make new distinctions? This is governed by the OLU\'s instantaneous power, not its cumulative budget — and it yields a fundamental speed limit on observation that complements the cumulative finitude bound.',
+        'Three questions, three bounds. §1.7 capped how many distinctions an OLU can hold at once. The decay law capped how long they last. Now the third: how *fast* can it make new ones? That is set not by the total budget but by instantaneous power - and it gives a speed limit on observation, sitting alongside the cumulative finitude bound rather than replacing it.',
     },
     {
       type: 'axiom',

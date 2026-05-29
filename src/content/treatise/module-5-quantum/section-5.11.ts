@@ -9,7 +9,7 @@ export const section5_11: Section = {
     {
       type: 'paragraph',
       content:
-        'Different OLUs access quantum reality at different effective grain sizes, creating a resolution hierarchy that spans from simple sensors to the most sophisticated instruments. This hierarchy emerges directly from our two axioms: different energy budgets enable different distinction-making capabilities.',
+        'Different OLUs meet quantum reality at different grain sizes. The result is a resolution hierarchy running from the simplest sensor to the most elaborate instrument, and it falls straight out of the two axioms: a different energy budget buys a different power to distinguish.',
     },
     {
       type: 'heading',
@@ -40,7 +40,7 @@ export const section5_11: Section = {
     {
       type: 'paragraph',
       content:
-        'Simple mechanical sensors represent minimal OLUs. They cannot distinguish quantum effects and experience the world as effectively classical at their resolution. A thermostat, for example, has no access to atomic-scale phenomena. Its energy budget affords only coarse-grained temperature distinctions.',
+        'A simple mechanical sensor is about as minimal as an OLU gets. It cannot tell quantum effects apart at all; its world is effectively classical. A thermostat reaches nothing at the atomic scale - its budget pays for coarse temperature distinctions and nothing finer.',
     },
     {
       type: 'heading',
@@ -51,7 +51,7 @@ export const section5_11: Section = {
     {
       type: 'paragraph',
       content:
-        'Basic measuring instruments may detect aggregate quantum effects (such as electrical resistance, which arises from quantum transport) but cannot distinguish individual quantum states. An analog voltmeter shows averaged quantum transport properties without resolving individual electron tunneling events.',
+        'A basic instrument can pick up quantum effects in aggregate - electrical resistance, say, which comes out of quantum transport - while still being blind to any individual quantum state. An analogue voltmeter reads the averaged behaviour of the transport; it never resolves a single electron tunnelling.',
     },
     {
       type: 'heading',
@@ -62,7 +62,7 @@ export const section5_11: Section = {
     {
       type: 'paragraph',
       content:
-        'Human sensory systems access reality at micrometer to millimeter resolution. Quantum effects are averaged into classical appearance. We see interference patterns, but not individual photon paths. Our ~6 watt visual processing budget determines the grain size at which we experience the world.',
+        'Our own senses work at micrometre-to-millimetre resolution, and at that scale quantum effects average into a classical surface. We see the interference pattern; we never see the path of a single photon. A roughly six-watt visual budget fixes the grain at which the world arrives to us.',
     },
     {
       type: 'heading',
@@ -73,7 +73,7 @@ export const section5_11: Section = {
     {
       type: 'paragraph',
       content:
-        'Advanced scientific instruments can distinguish individual quantum events, but require significant energy investment per distinction. Single-photon detectors and scanning tunneling microscopes operate at kilowatt scales to achieve nanometer resolution.',
+        'An advanced instrument can finally tell individual quantum events apart - but it pays heavily, distinction by distinction. Single-photon detectors and scanning tunnelling microscopes run at kilowatt scales to reach nanometre resolution.',
     },
     {
       type: 'heading',
@@ -84,7 +84,7 @@ export const section5_11: Section = {
     {
       type: 'paragraph',
       content:
-        'Particle colliders represent the most energetically resourced OLUs, accessing the finest achievable distinctions (~$10^{-19}$ meters). Even at gigawatt scales, they approach but never reach Planck-scale resolution. At the Planck scale (~$10^{-35}$ meters), even infinite energy would not help---probe energy would create black holes, and spacetime itself becomes operationally meaningless.',
+        'A particle collider is the most lavishly resourced OLU we build, reaching the finest distinctions we can make at all (~$10^{-19}$ meters). Even so, at gigawatt scales it only approaches the Planck floor; it never touches it. At the Planck scale (~$10^{-35}$ meters) infinite energy would not save you - the probe energy would collapse into black holes, and spacetime itself stops meaning anything operationally.',
     },
     {
       type: 'heading',
@@ -107,7 +107,7 @@ export const section5_11: Section = {
     {
       type: 'paragraph',
       content:
-        'This explains why "quantum weirdness" appears strange to us: we evolved as moderate-complexity OLUs optimized for navigating a world at millimeter-to-kilometer scales. Our intuitions are calibrated for the resolution scales where our energy budget provides good distinctions. At scales far from this optimum, our intuitions fail because we have no evolutionary experience with the relevant distinction trade-offs.',
+        'This is why "quantum weirdness" feels weird. We evolved as middling OLUs, tuned for a world at millimetre-to-kilometre scales, and our intuitions are calibrated for exactly the resolutions where our budget buys good distinctions. Step far from that optimum and the intuitions fail - not because the world misbehaves, but because we have no evolutionary experience of the trade-offs that rule there.',
     },
     {
       type: 'heading',
@@ -118,7 +118,7 @@ export const section5_11: Section = {
     {
       type: 'paragraph',
       content:
-        'This resolution hierarchy connects to broader questions about observers in physics. We observe quantum mechanics precisely because we are OLUs whose energy budgets place us between the Planck scale and the classical limit.',
+        'The hierarchy touches a larger question about observers in physics. We see quantum mechanics at all only because our energy budget lands us between the Planck floor and the classical limit - close enough to probe below the classical, far enough that probing still costs us.',
     },
     {
       type: 'list',

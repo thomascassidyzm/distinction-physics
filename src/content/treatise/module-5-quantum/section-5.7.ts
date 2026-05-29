@@ -61,7 +61,7 @@ export const section5_7: Section = {
     {
       type: 'paragraph',
       content:
-        'This perspective maintains compatibility with relativity because no information is transmitted faster than light. The measurement reveals pre-existing correlation structure in the distinction pattern rather than causing a remote physical change.',
+        'Nothing here picks a fight with relativity, because nothing travels faster than light. The measurement uncovers correlation that was already written into the shared distinction pattern; it does not reach across space to change anything at the far end.',
     },
     {
       type: 'heading',

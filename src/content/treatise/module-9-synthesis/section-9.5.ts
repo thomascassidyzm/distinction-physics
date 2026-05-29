@@ -13,7 +13,7 @@ export const section9_5: Section = {
     },
     {
       type: 'paragraph',
-      content: 'The framework opens research directions rather than closing them. Several areas require further theoretical work:',
+      content: 'A framework is judged partly by the work it opens, not just the work it closes. This one opens a good deal. Several areas need further theoretical work:',
     },
     {
       type: 'heading',
@@ -159,7 +159,7 @@ export const section9_5: Section = {
     {
       type: 'paragraph',
       content:
-        'These connections suggest that Distinction as Primitive is not isolated but part of a broader movement toward observer-centered, information-theoretic, and thermodynamically grounded approaches to fundamental questions.',
+        'So the framework does not stand alone. It sits inside a broader movement — observer-centred, information-theoretic, thermodynamically grounded — that has been converging on the same fundamental questions from several directions at once.',
       emphasis: 'conclusion',
     },
     {

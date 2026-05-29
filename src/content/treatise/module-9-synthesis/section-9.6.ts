@@ -73,7 +73,7 @@ export const section9_6: Section = {
     {
       type: 'paragraph',
       content:
-        '**For self-understanding**: if the framework is approximately correct, observers-like-us are distinction-making systems operating under energy constraints. Experience, knowledge, and choice are structured by distinction economics.',
+        '**For self-understanding**: if the framework is even roughly right, then observers-like-us are distinction-making systems running under an energy budget. Experience, knowledge, choice — all of it shaped by distinction economics. That is a claim about what you are, not only about what you study.',
     },
     {
       type: 'paragraph',

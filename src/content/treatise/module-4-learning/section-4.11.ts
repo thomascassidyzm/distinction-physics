@@ -9,7 +9,7 @@ export const section4_11: Section = {
     {
       type: 'paragraph',
       content:
-        'The thermodynamic framework has practical implications for education and skill training. If learning is fundamentally **anti-entropic pattern building** — creating and maintaining stable distinction structures against natural decay — then effective pedagogy should facilitate this process. The principles below are consistent with the design rules of long-deployed systems (SSi since 2009, Zenjin, Alexander), whose operational practice §4.10 treats as the explanandum the framework attempts to explain. The discipline runs from pedagogy to theoretical interpretation, not the reverse.',
+        'The framework has consequences for how we teach. If learning is **anti-entropic pattern building** — drawing stable distinction structures and holding them against decay — then good teaching is whatever makes that process easier. The principles below are consistent with the design rules of long-deployed systems (SSi since 2009, Zenjin, Alexander), whose practice §4.10 treats as the explanandum the framework sets out to explain. Keep the direction straight: pedagogy first, theoretical reading after — never the reverse.',
     },
     {
       type: 'heading',
@@ -119,7 +119,7 @@ export const section4_11: Section = {
     {
       type: 'paragraph',
       content:
-        'Be aware that distinction-making consumes metabolic resources. Learning sessions that exhaust available energy will fail. Rest, nutrition, and pacing matter.',
+        'Distinction-making burns metabolic resources — this is not a figure of speech. A session that runs the budget dry will fail, however well designed. Rest, nutrition, and pacing are not soft extras; they set the ceiling on how much can be learned at all.',
       emphasis: 'key',
     },
     {
@@ -219,7 +219,7 @@ export const section4_11: Section = {
     {
       type: 'paragraph',
       content:
-        'Effective education, on this view, is not about maximizing information transfer but about optimizing the thermodynamic efficiency of distinction acquisition. The teacher\'s role is to structure experience so that learners can build well-organized, low-maintenance distinction networks with appropriate hierarchical chunking and automatization.',
+        'On this view, teaching is not the maximizing of information transfer. It is the optimizing of how efficiently distinctions get built and held. The teacher\'s job is to shape experience so the learner can grow a well-organized, low-maintenance network — properly chunked, properly automatized. Not to pour in more, but to make what goes in cost less to keep.',
       emphasis: 'conclusion',
     },
     {

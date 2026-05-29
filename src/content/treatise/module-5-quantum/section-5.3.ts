@@ -8,7 +8,7 @@ export const section5_3: Section = {
     {
       type: 'paragraph',
       content:
-        'Quantum superposition is often presented as a deep mystery: How can a particle be "in two places at once"? The distinction framework offers an **interpretive lens** for understanding this phenomenon. **Note: This is interpretation, not derivation. The mathematical structure of superposition (Hilbert space, complex amplitudes) is imported from quantum mechanics. We provide conceptual vocabulary, not replacement physics.**',
+        'Superposition is usually sold as a deep mystery: how can a particle be "in two places at once"? The distinction framework offers an **interpretive lens** on it. **Note: this is interpretation, not derivation. The mathematics of superposition - Hilbert space, complex amplitudes - is imported from quantum mechanics. We supply conceptual vocabulary, not replacement physics.**',
     },
     {
       type: 'definition',
@@ -87,7 +87,7 @@ export const section5_3: Section = {
     {
       type: 'paragraph',
       content:
-        'Superposition persists because the energetically expensive act of distinction has not occurred. This is not strange but obvious once the energy cost of distinction is recognized.',
+        'Superposition persists because the expensive act of distinction has not happened yet. Once you grant that distinction costs energy, this stops being strange and starts being obvious.',
     },
     {
       type: 'heading',

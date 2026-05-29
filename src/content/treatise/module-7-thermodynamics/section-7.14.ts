@@ -8,7 +8,7 @@ export const section7_14: Section = {
     {
       type: 'paragraph',
       content:
-        'We have shown that thermodynamics can be interpreted through the lens of the two axioms established in Module 0 (though this interpretation imports statistical mechanics rather than deriving thermodynamics from scratch):',
+        'So: thermodynamics can be read through the two axioms set down in Module 0. Read, not derived - the interpretation imports statistical mechanics rather than spinning thermodynamics out of nothing. That distinction is the whole honesty of the chapter:',
       emphasis: 'key',
     },
     {
@@ -90,7 +90,7 @@ export const section7_14: Section = {
     {
       type: 'paragraph',
       content:
-        'Both can be understood through the same conceptual lens: distinction-making under finite energy. Quantum mechanics and thermodynamics share interpretive unification under this framework. However, this is conceptual unification, not derivation from scratch---both domains import substantial physics from established theory.',
+        'Both yield to the same lens: distinction-making under finite energy. Quantum mechanics and thermodynamics, usually kept in separate rooms, turn out to be speaking one vocabulary. But the unification is conceptual, not foundational - both domains import substantial physics from established theory, and the framework supplies the reading, not the results.',
     },
     {
       type: 'theorem',
@@ -105,7 +105,7 @@ export const section7_14: Section = {
     {
       type: 'paragraph',
       content:
-        'This is interpretive reframing, not derivation from axioms alone. The framework provides conceptual unification: thermodynamic laws can be understood as expressing what it means to be an observer in a universe where observation costs energy. The framework\'s value is this unifying perspective, not predictive novelty beyond established physics.',
+        'This is reframing, not derivation from the axioms alone. What it buys is a way of seeing: the laws of thermodynamics as a statement of what it costs to be an observer in a universe where observation itself runs on energy. The value is the perspective - not a prediction beyond what established physics already gives.',
       emphasis: 'conclusion',
     },
     {
@@ -141,7 +141,7 @@ export const section7_14: Section = {
     {
       type: 'paragraph',
       content:
-        'Thermodynamics is not a science of heat engines and gas laws. It is the science of how distinctions evolve under finite resources---the dynamics of reality-as-accessible.',
+        'Thermodynamics is not the science of heat engines and gas laws. It is the science of how distinctions evolve under finite resources - the dynamics of reality-as-accessible. That is the whole reframe.',
       emphasis: 'key',
     },
     {
@@ -177,7 +177,7 @@ export const section7_14: Section = {
     {
       type: 'paragraph',
       content:
-        'Through the two axioms plus imported statistical mechanics, thermodynamics can be interpreted coherently. This provides conceptual unification: Module 0\'s structure plus Module 7\'s dynamics offer a unified vocabulary for understanding accessible reality, while acknowledging that substantial physics is imported rather than derived.',
+        'Two axioms, plus the statistical mechanics we openly import, are enough to read thermodynamics coherently. Module 0 gave the structure; Module 7 gives the dynamics; together they offer one vocabulary for accessible reality. Substantial physics is borrowed, not derived - and saying so plainly is part of the claim, not a retreat from it.',
       emphasis: 'conclusion',
     },
   ],

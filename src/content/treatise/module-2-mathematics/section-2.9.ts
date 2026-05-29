@@ -9,7 +9,7 @@ export const section2_9: Section = {
     {
       type: 'paragraph',
       content:
-        'Eugene Wigner\'s famous 1960 essay asked why mathematics is so unreasonably effective in describing physical reality. Our framework offers an interpretive lens for understanding this puzzle—not a derivation from axioms, but a way of seeing consistency.',
+        'In 1960 Eugene Wigner asked why mathematics is so unreasonably effective at describing the physical world. The word that did the work was "unreasonable" - the fit looked like a gift no one had earned. Our framework offers a lens on the puzzle. Not a derivation from axioms, but a way of seeing why the fit might not be a gift at all.',
     },
     {
       type: 'note',
@@ -43,7 +43,7 @@ export const section2_9: Section = {
     {
       type: 'paragraph',
       content:
-        'These are not two separate domains that mysteriously align. They are two aspects of the same underlying process. Mathematics is effective in physics because both are constrained by the same thermodynamics of distinction-making.',
+        'These are not two separate domains that happen, against the odds, to line up. They are two faces of one process. Mathematics works in physics because both are held under the same thermodynamics of distinction-making. The fit stops looking like a coincidence and starts looking like a shared cause.',
       emphasis: 'key',
     },
     {
@@ -75,7 +75,7 @@ export const section2_9: Section = {
     {
       type: 'paragraph',
       content:
-        'But such a world would be inaccessible to any observer. The very conditions that make observation possible—stable patterns, distinguishable states, reproducible phenomena—are the conditions that make mathematics applicable.',
+        'But no observer could live in such a world. The very conditions that make observation possible - stable patterns, distinguishable states, reproducible phenomena - are the same conditions that make mathematics apply. A world maths could not describe is a world no one could be in to notice.',
     },
     {
       type: 'heading',
@@ -203,7 +203,7 @@ export const section2_9: Section = {
     {
       type: 'paragraph',
       content:
-        'This is expected in our framework: as we probe new domains with different boundary conditions, the stable distinction patterns may differ, requiring new mathematical formalizations.',
+        'This is what the framework would expect. Probe a new domain with different boundary conditions, and the stable distinction patterns may differ - and new mathematics is what it takes to formalise them. The toolkit grows because the territory does.',
       emphasis: 'conclusion',
     },
   ],

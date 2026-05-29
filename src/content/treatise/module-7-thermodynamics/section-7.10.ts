@@ -8,7 +8,7 @@ export const section7_10: Section = {
     {
       type: 'paragraph',
       content:
-        'Living systems represent sophisticated networks of boundary-maintenance operating far from equilibrium. They locally decrease entropy (maintain internal distinctions) by increasing entropy elsewhere (metabolizing food, dissipating heat).',
+        'A living thing is a network of boundary-maintenance running hard, far from equilibrium. It drives its own entropy down - holding its internal distinctions - by driving entropy up everywhere else: food broken apart, heat thrown off. Life does not break the Second Law. It pays it, somewhere out of sight, and keeps the change.',
     },
     {
       type: 'heading',
@@ -104,7 +104,7 @@ export const section7_10: Section = {
     {
       type: 'paragraph',
       content:
-        'This explains why we seek signs of disequilibrium when looking for extraterrestrial life. The question is not "is there carbon?" but "are there maintained boundaries against entropy?"',
+        'This is why, when we hunt for life elsewhere, we look for signs of disequilibrium. The question is not "is there carbon?" It is "are there boundaries being held against entropy?" Chemistry is the medium. Maintenance is the thing.',
       emphasis: 'key',
     },
     {

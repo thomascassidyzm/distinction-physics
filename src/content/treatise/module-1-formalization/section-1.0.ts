@@ -56,7 +56,7 @@ export const section1_0: Section = {
     {
       type: 'paragraph',
       content:
-        'This module provides the **mathematical formalization** of these principles. Where Module 0 offered philosophical argumentation and conceptual derivation, we now develop precise operators, equations, and structures. The mathematics serves clarity and rigor, not obscure overclaiming.',
+        'This module provides the **mathematical formalization** of these principles. Module 0 argued in prose; here we build the operators, equations, and structures the prose was pointing at. The mathematics is in service of clarity, not of overclaiming - it earns its place by making the argument sharper, not by dressing it up.',
       emphasis: 'key',
     },
 
@@ -72,7 +72,7 @@ export const section1_0: Section = {
     {
       type: 'paragraph',
       content:
-        'This formalization is designed to **support the framework\'s complementary relationship to physics**, not to replace mathematical physics. The distinction operator and its associated structures provide vocabulary for understanding why physics has certain features, not alternative equations.',
+        'This formalization is built to **support the framework\'s complementary relationship to physics**, not to compete with it. The distinction operator and the structures around it are vocabulary for understanding why physics has the features it has. They are not a rival set of equations.',
     },
     {
       type: 'paragraph',
@@ -127,7 +127,7 @@ export const section1_0: Section = {
     {
       type: 'paragraph',
       content:
-        '**Epistemic honesty note**: We do not claim to derive quantum mechanics or thermodynamics from the axioms alone. The specific mathematical form of quantum uncertainty (the Heisenberg relation) and the Second Law come from established physics. What the formalization shows is that core features of observable physics—discreteness, resolution limits, entropy increase—are consistent with and conceptually illuminated by the distinction-making perspective.',
+        '**Epistemic honesty note**: We do not derive quantum mechanics or thermodynamics from the axioms alone, and we will not pretend to. The specific form of quantum uncertainty - the Heisenberg relation - and the Second Law come from established physics; we take them as given. What the formalization shows is narrower and, we think, more honest: core features of observable physics - discreteness, resolution limits, entropy increase - are consistent with the distinction-making perspective, and look less arbitrary when seen through it. Consistency is the claim. Not derivation.',
       emphasis: 'conclusion',
     },
   ],

@@ -37,7 +37,7 @@ export const section3_8: Section = {
     {
       type: 'paragraph',
       content:
-        'This self-referential loop creates genuine agency—not because it violates physical causation but because it implements a particular causal pattern where boundary-making about possibilities influences physical outcomes through energy allocation.',
+        'This self-referential loop is what makes agency genuine - not because it breaks physical causation, but because it *is* a particular pattern of causation, one in which boundary-making about possibilities shapes physical outcomes through where the energy goes.',
       emphasis: 'key',
     },
     {
@@ -115,7 +115,7 @@ export const section3_8: Section = {
     {
       type: 'paragraph',
       content:
-        'The choice is *yours* because it flows from *your* boundary-patterns. You are not free from causation—you *are* a particular pattern of causation, a distinctive way of making distinctions.',
+        'The choice is *yours* because it flows from *your* boundary-patterns. You are not free *from* causation. You *are* a particular pattern of causation - a distinctive way of making distinctions. That is what free will can honestly mean.',
       emphasis: 'key',
     },
     {
@@ -132,7 +132,7 @@ export const section3_8: Section = {
     {
       type: 'paragraph',
       content:
-        'This is not eliminativism about responsibility. The claim is not that "free will is an illusion and therefore nobody is responsible." The claim is that free will is *real* as a particular kind of causal structure (self-referential distinction-making about alternatives), and responsibility is grounded in this structure.',
+        'This is not eliminativism about responsibility. The claim is not that free will is an illusion and so no one is to blame. The claim is the opposite: free will is *real*, as a particular kind of causal structure - self-referential distinction-making about alternatives - and responsibility is grounded in exactly that structure.',
       emphasis: 'key',
     },
     {
@@ -166,7 +166,7 @@ export const section3_8: Section = {
     {
       type: 'paragraph',
       content:
-        'Greater agency requires greater complexity and greater energy—which is why only some systems in the universe are meaningfully called "agents."',
+        'More agency takes more complexity and more energy. That is why only some systems in the universe earn the word "agent" - the rest simply respond.',
       emphasis: 'conclusion',
     },
   ],

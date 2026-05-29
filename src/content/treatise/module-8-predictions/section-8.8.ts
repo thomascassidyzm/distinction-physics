@@ -9,7 +9,7 @@ export const section8_8: Section = {
     {
       type: 'paragraph',
       content:
-        '**Epistemic Honesty Requires Acknowledging Limits**: Every framework leaves questions unanswered. The Distinction as Primitive framework is no exception. Here we catalog what remains genuinely open---these are not merely "gaps in current development" but may represent fundamental limitations of the approach.',
+        '**Epistemic Honesty Requires Acknowledging Limits**: every framework leaves questions open, and this one is no exception. Here we catalogue what remains genuinely unanswered. These are not "gaps awaiting development" - some may be limits built into the approach itself.',
       emphasis: 'key',
     },
     {
@@ -20,7 +20,7 @@ export const section8_8: Section = {
     {
       type: 'paragraph',
       content:
-        'These are gaps in the framework, not merely gaps in our current development. Answering them may require extending the axioms or introducing additional principles.',
+        'These are gaps in the framework, not in our diligence. Closing them may demand extending the axioms, or bringing in principles the two axioms do not contain.',
     },
     {
       type: 'heading',
@@ -30,7 +30,7 @@ export const section8_8: Section = {
     {
       type: 'paragraph',
       content:
-        'We derive that there must be a minimum action scale --- the quantum of action that sets the resolution limit for any OLU. But we do not derive its specific numerical value $\\hbar \\approx 1.055 \\times 10^{-34}$ J$\\cdot$s. The framework constrains the existence of such a constant without determining its magnitude.',
+        'We derive that there must be a minimum action scale --- the quantum of action that sets the resolution limit for any OLU. What we do not derive is its number, $\\hbar \\approx 1.055 \\times 10^{-34}$ J$\\cdot$s. The framework forces the constant to exist. It says nothing about how big it is.',
     },
     {
       type: 'heading',
@@ -40,7 +40,7 @@ export const section8_8: Section = {
     {
       type: 'paragraph',
       content:
-        'Quantum mechanics employs complex numbers essentially. Probability amplitudes $\\alpha \\in \\mathbb{C}$ with phases $e^{i\\theta}$ are not derivable from our axioms. Why complex rather than real? Why this specific algebraic structure? These questions remain open.',
+        'Quantum mechanics needs complex numbers, not as a convenience but essentially. Probability amplitudes $\\alpha \\in \\mathbb{C}$ with phases $e^{i\\theta}$ do not fall out of our axioms. Why complex and not real? Why this algebraic structure and no other? We do not know. The questions stay open.',
     },
     {
       type: 'heading',
@@ -50,7 +50,7 @@ export const section8_8: Section = {
     {
       type: 'paragraph',
       content:
-        'We interpret $|\\alpha|^2$ as reflecting the "energetic ease" of particular distinctions. But we do not derive why probabilities take this specific form rather than $|\\alpha|$, $|\\alpha|^3$, or some other function. The Born rule is compatible with the framework but not derived from it.',
+        'We read $|\\alpha|^2$ as the "energetic ease" of particular distinctions. But we do not derive why probability takes this form rather than $|\\alpha|$, $|\\alpha|^3$, or anything else. The Born rule is compatible with the framework. It is not derived from it.',
     },
     {
       type: 'heading',
@@ -60,7 +60,7 @@ export const section8_8: Section = {
     {
       type: 'paragraph',
       content:
-        'We explain why there must be felt qualities accompanying self-referential distinction-making --- boundary maintenance must "feel like something" from inside. But we do not explain why red feels like THIS rather than THAT. The specific phenomenal character of experiences remains beyond current reach.',
+        'We explain why there must be felt qualities at all --- self-referential distinction-making, boundary maintenance, must "feel like something" from the inside. But we do not explain why red feels like THIS rather than THAT. The particular character of an experience stays beyond reach.',
     },
     {
       type: 'heading',
@@ -70,7 +70,7 @@ export const section8_8: Section = {
     {
       type: 'paragraph',
       content:
-        'We speculate that 3+1 dimensions might represent optimal stability for distinction-patterns, but this remains speculation. The framework does not derive why spacetime has three spatial and one temporal dimension rather than some other configuration.',
+        'We speculate that 3+1 dimensions might be the most stable arrangement for distinction-patterns - but speculation is all it is. The framework does not derive why spacetime has three spatial dimensions and one of time rather than some other count.',
     },
     {
       type: 'heading',
@@ -80,7 +80,7 @@ export const section8_8: Section = {
     {
       type: 'paragraph',
       content:
-        'The ~$10^7$ figure for the number of integrated distinctions required for consciousness is an order-of-magnitude estimate based on neural integration capacity. It is not derived from axioms and may be substantially wrong.',
+        'The ~$10^7$ figure for the integrated distinctions consciousness requires is an order-of-magnitude estimate, read off neural integration capacity. It is not derived from the axioms, and it may be wrong by a wide margin.',
     },
     {
       type: 'note',
@@ -254,7 +254,7 @@ export const section8_8: Section = {
     {
       type: 'paragraph',
       content:
-        'The framework is not complete. These open questions and research directions constitute the framework\'s ongoing scientific program. Progress on any of these fronts would advance our understanding of the framework\'s scope and limits.',
+        'The framework is not finished. These open questions and research directions are its ongoing scientific programme. Progress on any one front tells us more about where the framework reaches - and where it stops.',
       emphasis: 'conclusion',
     },
   ],

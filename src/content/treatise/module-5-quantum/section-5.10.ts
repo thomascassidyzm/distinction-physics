@@ -64,7 +64,7 @@ export const section5_10: Section = {
     {
       type: 'paragraph',
       content:
-        'The distinction framework explains why interpretive debates have proven so intractable for nearly a century. Each interpretation implicitly assumes a different stance on the relationship between observers and reality:',
+        'The framework also offers a reading of why these debates have stayed deadlocked for the better part of a century. Each interpretation quietly takes a different stance on how observer and reality stand to one another:',
     },
     {
       type: 'list',

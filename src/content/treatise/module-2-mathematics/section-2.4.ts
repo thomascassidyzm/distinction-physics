@@ -9,7 +9,7 @@ export const section2_4: Section = {
     {
       type: 'paragraph',
       content:
-        'The natural numbers can be understood through the lens of iterated boundary-drawing. This section offers an interpretation of number through distinction-vocabulary, showing consistency between arithmetic and the framework. We do not derive the natural numbers from our axioms—we show that number is consistent with distinction-primacy.',
+        'Draw a boundary. Now draw another, and keep the two apart. Do it again. That is counting, and the natural numbers are what you get when you do it carefully. This section reads number through distinction-vocabulary, showing arithmetic sits comfortably with the framework. We do not derive the natural numbers from the axioms - we show that number is consistent with distinction-primacy.',
     },
     {
       type: 'heading',
@@ -57,7 +57,7 @@ export const section2_4: Section = {
     {
       type: 'paragraph',
       content:
-        'This construction is not arbitrary. It represents the most energy-efficient way to build up discrete quantity. Each natural number is a stable configuration of iterated boundaries. The sequence $0, 1, 2, 3, \\ldots$ represents the ladder of minimal-energy distinction configurations.',
+        'This construction is not arbitrary. It is the cheapest way to build up discrete quantity. Each natural number is a stable configuration of iterated boundaries, and the sequence $0, 1, 2, 3, \\ldots$ is the ladder of minimal-energy distinction configurations. Each rung costs one more boundary than the last. Nothing else.',
       emphasis: 'key',
     },
     {
@@ -163,7 +163,7 @@ export const section2_4: Section = {
     {
       type: 'paragraph',
       content:
-        'This interpretation suggests why counting feels so fundamental—it is consistent with the capacity for iterated distinction-making, which is the minimal capacity for any OLU.',
+        'This is why counting feels so fundamental. It rides on the capacity to make a distinction and do it again - which is the minimal capacity any OLU has at all. Count, and you are exercising the one ability you cannot lack.',
       emphasis: 'key',
     },
     {

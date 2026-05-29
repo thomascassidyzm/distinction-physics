@@ -90,7 +90,7 @@ export const section5_2: Section = {
     {
       type: 'paragraph',
       content:
-        'At the Planck scale (~$10^{-35}$ meters), even infinite energy would not help - the probe energy would create black holes, and spacetime itself becomes operationally meaningless. This represents the absolute limit where all OLUs, regardless of energy, cannot distinguish finer structure.',
+        'At the Planck scale (~$10^{-35}$ meters), even infinite energy buys you nothing - the probe energy would collapse into black holes, and spacetime itself stops meaning anything operationally. This is the absolute floor, the point past which no OLU, however resourced, can tell finer structure apart.',
     },
     {
       type: 'paragraph',

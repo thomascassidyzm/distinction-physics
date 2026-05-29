@@ -15,7 +15,7 @@ export const section3_11: Section = {
     {
       type: 'paragraph',
       content:
-        'Let us be honest about what this module has accomplished—and what it has not.',
+        'So, let us be honest about what this module has done - and, just as plainly, what it has not.',
     },
     {
       type: 'heading',
@@ -132,23 +132,23 @@ export const section3_11: Section = {
     {
       type: 'paragraph',
       content:
-        'Our central interpretive claim: Consciousness can be understood as **self-referential distinction-making at sufficient complexity**—what it feels like from inside when a system maintains an integrated boundary between self and not-self, continuously renewed through energy expenditure. This is vocabulary for thinking about consciousness, not a derivation of consciousness from physics.',
+        'Here is the central claim, stated once and plainly. Consciousness can be understood as **self-referential distinction-making at sufficient complexity** - what it feels like, from inside, when a system holds an integrated boundary between self and not-self, renewed each moment by spending energy. That is vocabulary for thinking about consciousness. It is not a derivation of consciousness from physics, and we have not dressed it as one.',
       emphasis: 'key',
     },
     {
       type: 'paragraph',
       content:
-        'The ~8W of power your brain spends on conscious processing (IMPORTED from neuroscience, not derived) is interpreted as the thermodynamic price of having an inside. The ~10^7 simultaneously maintained distinction-states (CONJECTURED threshold) are interpreted as the substrate of unified experience. The self/not-self boundary you maintain each moment is proposed as the ground floor of conscious existence.',
+        'The ~8W your brain spends on conscious processing (IMPORTED from neuroscience, not derived) we read as the thermodynamic price of having an inside. The ~10^7 distinction-states held at once (CONJECTURED threshold) we read as the substrate of unified experience. And the self/not-self boundary you are maintaining at this very moment is what we propose as the ground floor of conscious existence.',
     },
     {
       type: 'paragraph',
       content:
-        'This is not reductionism in the sense of explaining away consciousness. It is grounding consciousness in the same thermodynamic framework that grounds all accessible reality: distinctions cost energy, observers have finite budgets, and the structure of experience reflects these fundamental constraints.',
+        'This is not reductionism in the sense of explaining consciousness away. It grounds consciousness in the same thermodynamic frame that grounds all accessible reality: distinctions cost energy, observers have finite budgets, and the shape of experience follows from those two facts.',
     },
     {
       type: 'paragraph',
       content:
-        'What makes consciousness special among boundary-maintaining systems is its self-referential structure: consciousness involves boundaries that reference themselves, creating the recursive architecture that transforms boundary maintenance into felt experience. This self-reference is not an arbitrary feature but the defining characteristic that constitutes the interior perspective we call awareness.',
+        'What sets consciousness apart from other boundary-maintaining systems is one thing: self-reference. Here the boundaries refer to themselves, and that recursive turn is what converts boundary maintenance into felt experience. The self-reference is not an incidental flourish. It is the defining feature - the thing that constitutes the interior perspective we call awareness.',
       emphasis: 'conclusion',
     },
     {

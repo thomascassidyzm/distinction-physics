@@ -21,7 +21,7 @@ export const section1_6: Section = {
     {
       type: 'paragraph',
       content:
-        'While the distinction operator $\\diamond$ provides the primitive capacity to differentiate states, observers must also recognize patterns: stable configurations of distinctions that persist and carry meaning.',
+        'The distinction operator $\\diamond$ gives the raw power to tell states apart. But raw distinctions are not yet anything. Observers also have to recognise *patterns* - stable arrangements of distinctions that hold together, persist, and mean something.',
     },
     {
       type: 'definition',
@@ -138,7 +138,7 @@ export const section1_6: Section = {
     {
       type: 'paragraph',
       content:
-        'This dynamics captures the fundamental tension facing all observers: distinctions decay without energy investment, but limited energy forces prioritization. An observer cannot maintain all possible distinctions and must allocate resources according to some implicit or explicit strategy.',
+        'This dynamics holds the tension every observer is stuck with. Distinctions rot without energy; energy is finite. So you cannot keep all of them, and you do not get to opt out of choosing - some strategy, explicit or not, is always deciding which distinctions you feed and which you let go.',
       emphasis: 'key',
     },
     {
@@ -181,7 +181,7 @@ export const section1_6: Section = {
     {
       type: 'paragraph',
       content:
-        'The network perspective reveals that cognition is fundamentally about managing a resource-constrained distinction structure. The brain is not a passive receiver of information but an active manager of a dynamic network, constantly deciding which distinctions to maintain, strengthen, weaken, or abandon.',
+        'Seen this way, cognition is not reception. It is management - the running of a distinction structure under a tight budget. The brain is not a vessel that information pours into; it is an active manager of a living network, deciding moment by moment which distinctions to hold, which to strengthen, which to let slip, and which to drop altogether.',
       emphasis: 'conclusion',
     },
   ],

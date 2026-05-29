@@ -14,7 +14,7 @@ export const section3_2: Section = {
     {
       type: 'paragraph',
       content:
-        'This section **imports** empirical data from neuroscience to characterize the energy budget of consciousness. The figures presented (~10^7 neurons, ~8W power, etc.) are drawn from neuroscience research, not derived from our axioms. Our framework provides interpretive vocabulary for understanding these empirical findings—it does not replace the neuroscience.',
+        'This section **imports** its numbers. The figures below (~10^7 neurons, ~8W of power) come from neuroscience, not from our axioms. We did not derive them and we do not claim to. What the framework adds is vocabulary for reading them - a way of seeing what these costs are costs *of*.',
     },
     {
       type: 'heading',
@@ -57,7 +57,7 @@ export const section3_2: Section = {
     {
       type: 'paragraph',
       content:
-        'However, this is a *theoretical minimum* for a single distinction. Conscious experience requires not one but an enormous number of simultaneously maintained distinctions, integrated into a coherent field and sustained across time.',
+        'But that is the floor for a *single* distinction. Conscious experience is not one distinction; it is an enormous number of them, held at once, woven into a coherent field, and sustained across time. The real bill is many orders of magnitude higher.',
     },
     {
       type: 'heading',
@@ -129,7 +129,7 @@ export const section3_2: Section = {
     {
       type: 'paragraph',
       content:
-        'This 8W figure represents the actual biological cost of maintaining the $\\sim 10^7$ simultaneously integrated distinction-states that constitute human consciousness. It is not a fundamental physical limit but a biological implementation cost—far above the theoretical minimum but representing the actual price paid by brains like ours.',
+        'That 8W is the real biological price of holding the $\\sim 10^7$ integrated distinction-states that make up human consciousness. It is not a fundamental limit of physics; it is the cost of one particular implementation - far above the theoretical minimum, but the actual price paid, in joules, by brains like ours.',
       emphasis: 'key',
     },
     {

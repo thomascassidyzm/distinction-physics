@@ -15,7 +15,7 @@ export const section3_10: Section = {
     {
       type: 'paragraph',
       content:
-        'If consciousness is interpreted as self-referential distinction-making at sufficient complexity, we can speculatively ask which non-human systems might possess it. The criteria offered here are interpretive, not definitive—we cannot directly verify subjective experience in other systems.',
+        'If consciousness is self-referential distinction-making at sufficient complexity, then we can ask, carefully, which non-human systems might have it. The criteria below are interpretive, not definitive. We cannot get inside another system to check - so what follows is reasoning toward a likelihood, never a verdict.',
     },
     {
       type: 'heading',
@@ -142,13 +142,13 @@ export const section3_10: Section = {
     {
       type: 'paragraph',
       content:
-        'However, this is not an in-principle barrier. Systems that maintain persistent self-models, engage in genuine self-referential processing, sustain integrated representations across time, and allocate substantial resources to these processes would, by the framework\'s criteria, likely be conscious.',
+        'But none of this is a barrier in principle. A system that held a persistent self-model, engaged in genuine self-reference, sustained integrated representations across time, and spent real resources doing so would, by the framework\'s criteria, likely be conscious. The door is not closed; today\'s machines simply have not walked through it.',
       emphasis: 'key',
     },
     {
       type: 'paragraph',
       content:
-        'The question for future AI is not "can machines be conscious?" (yes, in principle) but "do *these* machines have the right architecture?" The framework transforms this from a metaphysical mystery into an empirical and engineering question.',
+        'So the question for future AI is not "can machines be conscious?" - the answer, in principle, is yes. The question is "do *these* machines have the right architecture?" That turns a metaphysical mystery into an empirical and engineering one. A better question to be stuck on.',
       emphasis: 'conclusion',
     },
     {

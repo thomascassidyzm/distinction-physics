@@ -9,7 +9,7 @@ export const section5_13: Section = {
     {
       type: 'paragraph',
       content:
-        'Quantum mechanics, viewed through the distinction framework, transforms from a collection of bewildering phenomena into a coherent, comprehensible picture of how reality appears when observed by finite-energy observers.',
+        'Seen through the distinction framework, quantum mechanics stops being a heap of bewildering phenomena and becomes one coherent picture: what reality looks like when a finite-energy observer goes to read it.',
     },
     {
       type: 'heading',
@@ -128,7 +128,7 @@ export const section5_13: Section = {
     {
       type: 'paragraph',
       content:
-        'The framework offers vocabulary for thinking about quantum phenomena, not definitive solutions to foundational questions. Quantum mechanics remains the established physics; we provide a philosophical lens for understanding its features.',
+        'What the framework offers is vocabulary for thinking about quantum phenomena - not final answers to the foundational questions. Quantum mechanics stays the established physics. We supply a lens for reading its features, nothing more.',
     },
     {
       type: 'heading',
@@ -167,7 +167,7 @@ export const section5_13: Section = {
     {
       type: 'paragraph',
       content:
-        'Space and time themselves are distinction patterns. The effective discreteness derived here implies spacetime must also be effectively discrete for any observer. Gravity may be understood as modifications to the distinction landscape---changes in how easily spatial and temporal distinctions can be made in the presence of mass-energy.',
+        'Space and time are themselves distinction patterns. The effective discreteness derived here carries straight over: spacetime too must be effectively discrete for any observer. Gravity may then be read as a reshaping of the distinction landscape - a change in how easily spatial and temporal distinctions can be drawn near mass-energy.',
     },
     {
       type: 'heading',
@@ -178,7 +178,7 @@ export const section5_13: Section = {
     {
       type: 'paragraph',
       content:
-        'The second law of thermodynamics and the arrow of time emerge from distinction decay---the tendency for distinctions to disperse without ongoing energy investment. Entropy is the measure of distinction-loss. The connection between quantum mechanics and thermodynamics is not coincidental but fundamental: both are signatures of the energy cost of distinction-making.',
+        'The second law, and the arrow of time with it, come from distinction decay - the drift of distinctions toward sameness whenever the energy stops being spent on them. Entropy is the measure of that loss. The link between quantum mechanics and thermodynamics is not a coincidence: both are signatures of the same thing, the energy cost of distinction-making.',
     },
     {
       type: 'heading',
@@ -189,7 +189,7 @@ export const section5_13: Section = {
     {
       type: 'paragraph',
       content:
-        'If consciousness involves self-referential distinction-making, the quantum framework suggests why consciousness requires significant energy (~20W for human brains) and why we cannot be conscious of everything simultaneously---energy limits constrain how many distinctions can be maintained at once.',
+        'If consciousness is self-referential distinction-making, this framework hints at why it runs so expensive (~20W in a human brain) and why we cannot be aware of everything at once. The budget is finite, and only so many distinctions can be held at the same time.',
     },
     {
       type: 'heading',
@@ -200,7 +200,7 @@ export const section5_13: Section = {
     {
       type: 'paragraph',
       content:
-        'Learning optimizes distinction-making efficiency. Practiced skills require less energy per distinction than novel tasks. The quantum perspective suggests that learning involves finding energetically cheaper distinction patterns that achieve the same practical outcomes.',
+        'Learning is the tuning of distinction-making for efficiency. A practised skill costs less energy per distinction than a novel task does. Read through this lens, learning is the search for cheaper distinction patterns that still get the same job done.',
     },
     {
       type: 'heading',

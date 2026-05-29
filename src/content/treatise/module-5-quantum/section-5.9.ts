@@ -20,7 +20,7 @@ export const section5_9: Section = {
     {
       type: 'paragraph',
       content:
-        'Quantum gates $U(\\phi)$ define how the system\'s potential distinctions evolve, transforming multiple distinction possibilities simultaneously without actualizing them until final measurement.',
+        'Quantum gates $U(\\phi)$ steer how the system\'s potential distinctions evolve - reshaping many distinction possibilities at once, and actualising none of them until the final measurement.',
     },
     {
       type: 'heading',
@@ -31,7 +31,7 @@ export const section5_9: Section = {
     {
       type: 'paragraph',
       content:
-        'Classical computation requires actualizing (making distinctions about) intermediate results. Each actualization costs energy. For N-bit problems, this means making distinctions about $2^N$ possible states.',
+        'A classical computer has to actualise its intermediate results - make a distinction about every step along the way. Each one costs energy. For an N-bit problem, that is distinctions drawn across $2^N$ possible states.',
     },
     {
       type: 'paragraph',

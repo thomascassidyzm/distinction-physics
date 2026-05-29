@@ -17,7 +17,7 @@ export const section1_7: Section = {
     {
       type: 'paragraph',
       content:
-        'From the axioms, we derive a hard bound on complexity:',
+        'The axioms give a hard ceiling on how much an observer can hold at once:',
     },
     {
       type: 'theorem',
@@ -73,7 +73,7 @@ export const section1_7: Section = {
     {
       type: 'paragraph',
       content:
-        'The finitude bound has profound consequences for understanding the limits of knowledge and observation. Every OLU must make choices about which distinctions to maintain, as the total number of possible distinctions always exceeds what can be sustained with available energy.',
+        'The finitude bound reaches further than it first looks. Every OLU has to choose what to hold, because the distinctions on offer always outrun the energy to keep them. Selectivity is not a failing of attention. It is forced by the books.',
       emphasis: 'key',
     },
   ],

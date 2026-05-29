@@ -20,7 +20,7 @@ export const section3_3: Section = {
     {
       type: 'paragraph',
       content:
-        'The "hard problem" of consciousness asks: why do physical processes generate subjective experiences with specific qualities? Why is there "something it feels like" to see red, taste salt, or feel pain? Our framework **relocates** this problem—it does NOT solve it.',
+        'The "hard problem" asks: why do physical processes generate experiences with specific qualities? Why is there something it feels like to see red, to taste salt, to feel pain? Our framework **relocates** this problem. It does NOT solve it - keep that firmly in view.',
     },
     {
       type: 'heading',
@@ -31,7 +31,7 @@ export const section3_3: Section = {
     {
       type: 'paragraph',
       content:
-        'When you experience "redness," you are experiencing what it is like *from inside the system* to maintain the specific distinction-pattern that separates red from not-red. Different qualia—colors, sounds, emotions—correspond to different patterns of boundary maintenance viewed from within the system maintaining them.',
+        'When you experience "redness", what you are experiencing is what it is like, *from inside the system*, to maintain the particular distinction-pattern that separates red from not-red. Different qualia - colours, sounds, emotions - are different boundary-maintenance patterns, met from within the system that holds them.',
     },
     {
       type: 'definition',
@@ -117,7 +117,7 @@ export const section3_3: Section = {
     {
       type: 'paragraph',
       content:
-        'These are not mere sensory limitations but reflections of the effective discreteness principle: making finer distinctions would require more energy than available. Conscious experience is necessarily *granular*—composed of discrete distinction-states rather than continuous flow.',
+        'These are not mere sensory limitations. They are effective discreteness showing through: a finer distinction would cost more energy than the budget allows. So experience is necessarily *granular* - built from discrete distinction-states, not poured as continuous flow.',
       emphasis: 'key',
     },
     {
@@ -134,7 +134,7 @@ export const section3_3: Section = {
     {
       type: 'paragraph',
       content:
-        'The apparent continuity of experience is an illusion analogous to how discrete movie frames create apparent motion. Conscious "moments" are discrete boundary-maintenance states integrated across time, not a continuous stream.',
+        'The seamless flow of experience is the same trick the cinema plays: discrete frames, run fast enough, read as motion. Conscious "moments" are discrete boundary-maintenance states, stitched across time - not a continuous stream.',
       emphasis: 'conclusion',
     },
   ],

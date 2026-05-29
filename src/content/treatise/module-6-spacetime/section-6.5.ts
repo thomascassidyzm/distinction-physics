@@ -78,7 +78,7 @@ export const section6_5: Section = {
     {
       type: 'paragraph',
       content:
-        'This does not mean "nothing exists" at a black hole\'s center. It means that **existence-as-distinct breaks down** - the structure we call spacetime cannot be maintained. What remains, if anything, is beyond the scope of any framework built on distinction-making.',
+        'This does not say that nothing exists at the centre. It says something stranger: **existence-as-distinct breaks down** - the structure we call spacetime can no longer be held together. What remains, if anything remains, lies past the reach of any framework built on distinction-making. We do not get to follow it there.',
     },
     {
       type: 'note',
@@ -195,7 +195,7 @@ export const section6_5: Section = {
     {
       type: 'paragraph',
       content:
-        'This interpretation does not solve the information paradox but reframes it in terms of distinction-maintenance costs and boundary propagation. The question becomes: how do distinction-patterns evolve when the boundary that trapped them dissolves?',
+        'This does not solve the information paradox. It relocates it - into the vocabulary of distinction-maintenance costs and boundary propagation. The question turns into a sharper one: how do distinction-patterns evolve when the boundary that trapped them dissolves?',
     },
     {
       type: 'heading',
@@ -224,7 +224,7 @@ export const section6_5: Section = {
     {
       type: 'paragraph',
       content:
-        'Black holes thus serve as natural laboratories for testing the limits of the distinction framework. They represent cosmic boundaries where the very concept of distinction reaches its limits.',
+        'Black holes, then, are natural laboratories for the limits of this framework - cosmic boundaries where the very idea of a distinction runs out of room.',
       emphasis: 'conclusion',
     },
     {

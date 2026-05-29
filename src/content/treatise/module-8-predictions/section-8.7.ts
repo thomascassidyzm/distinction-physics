@@ -9,7 +9,7 @@ export const section8_7: Section = {
     {
       type: 'paragraph',
       content:
-        'Intellectual honesty requires distinguishing what the framework genuinely predicts from what it merely interprets consistently. This section provides that accounting.',
+        'Honesty means separating what the framework genuinely predicts from what it merely interprets after the fact. This section does that, line by line.',
       emphasis: 'key',
     },
     {
@@ -25,7 +25,7 @@ export const section8_7: Section = {
     {
       type: 'paragraph',
       content:
-        'These claims follow from the two axioms with minimal additional assumptions. If the axioms are true, these predictions must hold. Failure of any Type 1 prediction would constitute evidence against the axioms themselves.',
+        'These follow from the two axioms with little else added. If the axioms hold, these must hold. And the failure of any one of them would count as evidence against the axioms themselves.',
     },
     {
       type: 'list',
@@ -71,7 +71,7 @@ export const section8_7: Section = {
     {
       type: 'paragraph',
       content:
-        'These claims are consistent with the axioms and provide conceptual unification, but do not follow necessarily. Alternative interpretations remain possible. These should not be confused with hard predictions.',
+        'These sit consistently with the axioms and pull disparate ideas together, but they do not follow of necessity. Other readings stay open. Do not mistake them for hard predictions.',
     },
     {
       type: 'list',
@@ -97,7 +97,7 @@ export const section8_7: Section = {
     {
       type: 'paragraph',
       content:
-        'Type 2 claims are valuable for conceptual unification. They show how disparate phenomena might share common structure. But we must be clear: these are interpretations that give the framework explanatory scope, not predictions that test its validity.',
+        'Type 2 claims earn their keep through unification - they show how unrelated phenomena might share one structure. But be clear about what they are: interpretations that give the framework reach, not predictions that put it to the test.',
     },
     {
       type: 'heading',
@@ -107,7 +107,7 @@ export const section8_7: Section = {
     {
       type: 'paragraph',
       content:
-        'These claims extend the framework speculatively into domains where the connection to the axioms is suggestive but not rigorously established. They represent research directions rather than conclusions.',
+        'These reach into domains where the tie to the axioms is suggestive but not rigorously established. They are research directions, not conclusions.',
     },
     {
       type: 'list',
@@ -130,7 +130,7 @@ export const section8_7: Section = {
     {
       type: 'paragraph',
       content:
-        'Type 3 claims should be held loosely. They indicate where the framework might extend, not where it has been established.',
+        'Hold Type 3 claims loosely. They mark where the framework might reach, not where it has arrived.',
     },
     {
       type: 'heading',
@@ -140,7 +140,7 @@ export const section8_7: Section = {
     {
       type: 'paragraph',
       content:
-        'Honest assessment requires acknowledging what lies beyond the framework\'s current reach:',
+        'An honest assessment names what lies beyond the framework\'s reach:',
     },
     {
       type: 'list',
@@ -178,7 +178,7 @@ export const section8_7: Section = {
     {
       type: 'paragraph',
       content:
-        'Acknowledging limits is not weakness but strength. The framework\'s value lies precisely in what it can and cannot claim:',
+        'Naming the limits is not weakness. It is the strength. The framework\'s value lies precisely in the line between what it can claim and what it cannot:',
     },
     {
       type: 'list',

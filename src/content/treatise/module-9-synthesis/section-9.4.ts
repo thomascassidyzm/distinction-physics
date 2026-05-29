@@ -19,12 +19,12 @@ export const section9_4: Section = {
     {
       type: 'paragraph',
       content:
-        'Traditional materialism holds that matter exists fundamentally and everything else (including mind) emerges from or reduces to matter. Traditional idealism holds that mind exists fundamentally and matter emerges from or reduces to mind. The framework suggests a third option: distinction-making can be understood as fundamental, with both mind and matter as aspects of distinction-making processes.',
+        'Materialism puts matter at the bottom and has everything else, mind included, emerge from it or reduce to it. Idealism puts mind at the bottom and has matter emerge from it. The framework offers a third floor beneath both: distinction-making as fundamental, with mind and matter as two aspects of the one process.',
     },
     {
       type: 'paragraph',
       content:
-        'This is not quite neutral monism (the view that mind and matter are both aspects of some neutral substance). The "neutral" element here is not a substance but a process—the process of distinguishing. Reality can be understood as constituted by distinctions. The appearance of stuff emerges from patterns of distinction-making.',
+        'This is not quite neutral monism, the view that mind and matter are both aspects of some neutral substance. The "neutral" element here is not a substance at all. It is a process — the process of distinguishing. Reality can be read as constituted by distinctions, and the appearance of stuff as a pattern of them.',
       emphasis: 'key',
     },
     {
@@ -81,7 +81,7 @@ export const section9_4: Section = {
     {
       type: 'paragraph',
       content:
-        'This is not skepticism: The framework does not say we cannot know reality. It says we know reality through distinctions, that our knowledge is real but partial, and that the structure of our knowledge reflects the structure of our distinction-making capacities.',
+        'This is not scepticism. The framework does not say we cannot know reality. It says we know reality *through distinctions* — that our knowledge is real but partial, and that its shape is the shape of our distinction-making capacities.',
       emphasis: 'key',
     },
     {
@@ -92,7 +92,7 @@ export const section9_4: Section = {
     {
       type: 'paragraph',
       content:
-        'Perhaps the most significant philosophical implication concerns the role of the observer in physical theory. Orthodox physics aims to describe a reality independent of observers. Observer-involving elements (like measurement in quantum mechanics) are seen as problems to be eliminated.',
+        'The deepest of these implications concerns the observer\'s place in physical theory. Orthodox physics aims to describe a reality that holds whether or not anyone is looking. Anything observer-involving — measurement in quantum mechanics, say — is treated as a problem to be cleaned out.',
     },
     {
       type: 'paragraph',
@@ -103,7 +103,7 @@ export const section9_4: Section = {
     {
       type: 'paragraph',
       content:
-        'This does not mean reality is observer-dependent in a subjective sense. The constraints on distinction-making are objective. Different observers who make the same distinctions will find the same physics. But "finding physics" requires making distinctions, and making distinctions requires an observer.',
+        'This does not make reality observer-dependent in any subjective sense. The constraints on distinction-making are objective. Two observers who make the same distinctions find the same physics. But finding physics at all means making distinctions, and making distinctions means there is an observer to make them.',
     },
     {
       type: 'paragraph',

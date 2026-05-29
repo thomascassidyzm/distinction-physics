@@ -15,7 +15,7 @@ export const section1_2: Section = {
     {
       type: 'paragraph',
       content:
-        'For distinction-making to occur, a necessary triadic relationship must exist between Observer, Act of Distinction, and Observable.',
+        'No distinction happens in a vacuum. Three things have to be present at once: an Observer, an Act of Distinction, and an Observable. Drop any one and the other two have nothing to be.',
     },
     {
       type: 'definition',
@@ -86,7 +86,7 @@ export const section1_2: Section = {
     {
       type: 'paragraph',
       content:
-        'The existence-based definition above tells us *whether* a system is an observer. It does not tell us *where* its distinctions are registered. To say that an OLU registered $x$ as distinct from $y$ is to say that the OLU now occupies a different internal state than it would have occupied for the alternative. We make this concrete by promoting the OLU from a predicate on systems to a four-tuple — a state machine coupled to the distinction space $(\\Delta, \\diamond, E)$ of §1.1.',
+        'The definition above tells us *whether* a system is an observer. It says nothing about *where* the distinctions land. And they have to land somewhere: to register $x$ as distinct from $y$ is to sit in a different internal state than you would have sat in for the other one. Registration is a difference made *inside* the observer. We make that concrete by promoting the OLU from a predicate on systems to a four-tuple - a state machine wired into the distinction space $(\\Delta, \\diamond, E)$ of §1.1.',
     },
     {
       type: 'definition',
@@ -137,7 +137,7 @@ export const section1_2: Section = {
     {
       type: 'paragraph',
       content:
-        'This proposition is the formal bridge between the distinction space (a global object) and the OLU (a local object embedded in it): an OLU never sees $\\Delta$ directly, only its own resolution-partition shadow.',
+        'This proposition is the bridge between the distinction space - a global object - and the OLU, which is a local thing living inside it. The upshot is blunt: an OLU never sees $\\Delta$. It sees its own resolution-partition shadow of it, and nothing finer.',
     },
     {
       type: 'heading',

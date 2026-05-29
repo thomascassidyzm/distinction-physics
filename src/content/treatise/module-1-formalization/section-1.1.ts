@@ -15,7 +15,7 @@ export const section1_1: Section = {
     {
       type: 'paragraph',
       content:
-        'We formalize the primitive operation of distinction-making with the distinction operator. This is **interpretive vocabulary**—a mathematical structure that captures the philosophical insight of distinction-primacy, not a derivation of new physics:',
+        'We give the primitive operation of distinction-making a symbol. This is **interpretive vocabulary** - a structure that captures the insight of distinction-primacy, not a derivation of new physics. The symbol does not add a claim; it sharpens one:',
     },
     {
       type: 'definition',
@@ -58,7 +58,7 @@ export const section1_1: Section = {
     {
       type: 'paragraph',
       content:
-        'Nothing can be distinguished from itself. This is not a convention but a logical necessity: the question "How does this differ from itself?" is incoherent. Self-identity represents the absence of distinction.',
+        'Nothing can be distinguished from itself. This is not a convention we chose - it is what the words mean. The question "how does this differ from itself?" does not have a hard answer; it has no answer, because it is incoherent. Self-identity is not a small distinction. It is the absence of one.',
     },
     {
       type: 'heading',
@@ -93,7 +93,7 @@ export const section1_1: Section = {
     {
       type: 'paragraph',
       content:
-        'Distinction is not transitive. That $x$ differs from $y$ and $y$ differs from $z$ does not guarantee that $x$ differs from $z$. Recognizing any particular distinction requires its own energy investment.',
+        'Distinction is not transitive. That $x$ differs from $y$, and $y$ from $z$, buys you nothing about $x$ and $z$. Each distinction has to be paid for in its own right - there is no free inference that carries you from two distinctions to a third.',
     },
     {
       type: 'heading',
@@ -104,7 +104,7 @@ export const section1_1: Section = {
     {
       type: 'paragraph',
       content:
-        'The fundamental insight from Module 0 is that distinctions cost energy. We therefore extend the distinction operator to include the energy dimension:',
+        'The core insight from Module 0 is that distinctions cost energy. So the operator as defined so far is incomplete - it tells us whether two states differ, but not at what price. We fold the energy dimension in:',
     },
     {
       type: 'definition',
@@ -119,7 +119,7 @@ export const section1_1: Section = {
     {
       type: 'paragraph',
       content:
-        'This captures a crucial fact: two states that are indistinguishable at one energy level may become distinguishable at higher energy. The same pair $(x, y)$ may yield:',
+        'This captures something the bare operator could not. Two states that are one-and-the-same at low energy can come apart at higher energy. The same pair $(x, y)$ may yield:',
     },
     {
       type: 'list',
@@ -142,7 +142,7 @@ export const section1_1: Section = {
     {
       type: 'paragraph',
       content:
-        'The energy-indexed operator $\\diamond_E$ is implicitly a sublevel set of an underlying cost function. We now make that cost function first-class. This gives us a single structured object — the **distinction space** — that later sections (resolution, finitude, decay, channel capacity) can reference as a common substrate.',
+        'The energy-indexed operator $\\diamond_E$ is, quietly, a sublevel set of a cost function it never names. Now we name it. Promoting that cost to a first-class object gives us a single thing to work with - the **distinction space** - that the later sections on resolution, finitude, decay, and channel capacity all stand on. One substrate, reused.',
     },
     {
       type: 'definition',
@@ -267,7 +267,7 @@ export const section1_1: Section = {
     {
       type: 'paragraph',
       content:
-        'This proposition is the formal underpinning of *effective discreteness* (§1.4) and *finitude* (§1.7). At any finite budget, $\\Delta$ presents itself to the OLU as a finite quotient — the continuum is inaccessible not because reality is discrete, but because OLU-access is. Note the unit: the cardinality of $\\Pi_B$ is exponential in $B/D_{\\min}$, while the *bit-content* $\\log_2|\\Pi_B|$ is linear in $B/D_{\\min}$. The linear bound on bits is the standard Landauer-Shannon ceiling and reappears in §1.7 (finitude) and §1.10 (channel capacity).',
+        'This proposition is the formal underpinning of *effective discreteness* (§1.4) and *finitude* (§1.7). At any finite budget, $\\Delta$ shows up to the OLU as a finite quotient. The continuum is out of reach - not because reality is discrete, but because access is. That is the move the whole module turns on. Note the unit: the cardinality of $\\Pi_B$ is exponential in $B/D_{\\min}$, while the *bit-content* $\\log_2|\\Pi_B|$ is linear in $B/D_{\\min}$. The linear bound on bits is the standard Landauer-Shannon ceiling and reappears in §1.7 (finitude) and §1.10 (channel capacity).',
       emphasis: 'key',
     },
     {

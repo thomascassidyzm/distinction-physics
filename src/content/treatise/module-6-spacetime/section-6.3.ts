@@ -14,7 +14,7 @@ export const section6_3: Section = {
     {
       type: 'paragraph',
       content:
-        'Einstein\'s special relativity teaches that observers in different inertial frames measure different spatial separations and temporal durations for the same events. The speed of light remains invariant across all frames. Why should this be?',
+        'Special relativity tells us that observers in different inertial frames measure different lengths and different durations for the very same events - and yet they all agree on the speed of light. Why should that be? Why does one number hold firm while space and time bend around it?',
     },
     {
       type: 'paragraph',
@@ -36,7 +36,7 @@ export const section6_3: Section = {
     {
       type: 'paragraph',
       content:
-        'Consider what it might mean for distinction-patterns to propagate. When an event occurs, the possibility of distinguishing it propagates outward. Other OLUs can make distinctions about this event only after the "information" (the distinguishability) reaches them. There must be a maximum speed at which distinguishability can propagate—otherwise, the very notion of "event" would be incoherent.',
+        'Consider what it might mean for distinction-patterns to propagate. When an event occurs, the possibility of distinguishing it spreads outward. Other OLUs can make distinctions about that event only once the distinguishability has reached them - not before. And there has to be a ceiling on how fast it can spread. Without one, every event would be distinguishable everywhere at once, and the very notion of an "event" would come apart.',
     },
     {
       type: 'paragraph',
@@ -85,7 +85,7 @@ export const section6_3: Section = {
     {
       type: 'paragraph',
       content:
-        'The relativity of simultaneity follows directly: two spatially separated events that are "simultaneous" for one observer may be distinguishable as "before/after" for another observer moving relative to the first. This is not paradoxical but reflects the observer-dependence of distinction-patterns.',
+        'The relativity of simultaneity falls out at once: two separated events that one observer calls "at the same time" another, moving relative to the first, can tell apart as "before" and "after". Nothing paradoxical in that. Simultaneity was never a fact about the events - it was always a fact about who was drawing the distinction.',
     },
     {
       type: 'heading',
@@ -222,7 +222,7 @@ export const section6_3: Section = {
     {
       type: 'paragraph',
       content:
-        'This reframing provides conceptual vocabulary: special relativity might be understood as describing how different observers access distinction-patterns from different perspectives. Whether this vocabulary proves useful remains to be seen. It is complementary to physics, not a replacement.',
+        'So the reframing buys us vocabulary, nothing more: special relativity, read this way, describes how different observers reach the same distinction-patterns from different perspectives. Whether the vocabulary earns its keep remains to be seen. It sits alongside the physics; it does not stand in for it.',
       emphasis: 'conclusion',
     },
   ],

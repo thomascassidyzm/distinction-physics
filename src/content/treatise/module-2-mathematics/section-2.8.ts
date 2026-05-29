@@ -9,7 +9,7 @@ export const section2_8: Section = {
     {
       type: 'paragraph',
       content:
-        'Advanced mathematical structures can be understood through the lens of efficient distinction organization. Complex numbers, groups, rings, fields, categories—all can be interpreted as stable patterns that enable more powerful reasoning than simpler structures alone. We do not derive these structures from our axioms; we show consistency.',
+        'The higher structures are not a different kind of thing. They are distinction-making organised more efficiently. Complex numbers, groups, rings, fields, categories - each can be read as a stable pattern that buys more reasoning power than the simpler structures could on their own. We do not derive any of them from the axioms; we show that they sit comfortably with them.',
     },
     {
       type: 'note',
@@ -31,12 +31,12 @@ export const section2_8: Section = {
     {
       type: 'paragraph',
       content:
-        'Why are complex numbers so effective in physics? Because many physical systems involve oscillations, waves, and rotations. These phenomena have natural two-dimensional structure (amplitude and phase), and complex numbers provide the most energy-efficient way to maintain distinctions about such systems.',
+        'Why are complex numbers so effective in physics? Because so much of physics is oscillation, waves, rotation. These have a natural two-dimensional structure - amplitude and phase - and complex numbers are simply the cheapest way to hold distinctions about systems built that way. The tool fits the job because the job has the shape the tool was made for.',
     },
     {
       type: 'paragraph',
       content:
-        'The "mystery" of why $\\sqrt{-1}$ is useful dissolves: complex numbers are not mysterious abstract entities but efficient representations of rotational distinction patterns. OLUs that need to track phase relationships converge on complex arithmetic because it is the most stable pattern for this purpose.',
+        'The old puzzle - why on earth should $\\sqrt{-1}$ be useful? - loses its sting. Complex numbers are not strange abstract entities that happen to work. They are efficient representations of rotational distinction patterns. Any OLU that needs to track phase converges on complex arithmetic, because nothing cheaper holds the pattern as well.',
       emphasis: 'key',
     },
     {
@@ -99,7 +99,7 @@ export const section2_8: Section = {
     {
       type: 'paragraph',
       content:
-        'The remarkable effectiveness of category theory stems from its capturing the most abstract stable patterns—patterns so general that they appear across all domains of distinction-making.',
+        'The reach of category theory comes from this: it captures the most abstract stable patterns of all - patterns so general they turn up wherever distinctions are being made. Climb high enough and the same shape is everywhere beneath you.',
       emphasis: 'conclusion',
     },
   ],

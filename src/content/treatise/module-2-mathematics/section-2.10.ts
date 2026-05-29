@@ -9,7 +9,7 @@ export const section2_10: Section = {
     {
       type: 'paragraph',
       content:
-        'This section offers an interpretive account of what mathematical truth is and why it feels necessary. We propose a correspondence between mathematical necessity and thermodynamic stability—this is a philosophical interpretation, not a derivation from axioms.',
+        'What is a mathematical truth, and why does it feel like it could not have been otherwise? This section offers a reading. We propose a correspondence between mathematical necessity and thermodynamic stability - a philosophical interpretation, not a derivation from axioms.',
     },
     {
       type: 'note',
@@ -49,7 +49,7 @@ export const section2_10: Section = {
     {
       type: 'paragraph',
       content:
-        'Mathematical truths are "discovered" in the sense that any OLU making distinctions will converge on these patterns. They are "invented" in the sense that specific notations, terminologies, and formalizations are human choices. The underlying patterns are universal; the representations are conventional.',
+        'So the old quarrel dissolves into a distinction. Mathematical truths are "discovered" in that any OLU making distinctions converges on these patterns. They are "invented" in that the notation, the terminology, the formalisation are human choices. The patterns are universal; the writing-down is conventional. Both camps were half right, and arguing past each other.',
       emphasis: 'key',
     },
     {
@@ -161,7 +161,7 @@ export const section2_10: Section = {
     {
       type: 'paragraph',
       content:
-        "Mathematics doesn't require empirical input because it formalizes the structure of distinction-making itself. But it's not independent of physical reality---it's deeply embedded in the thermodynamics that governs all OLU activity.",
+        "Mathematics needs no empirical input because it formalises the structure of distinction-making itself - and you are already doing that. But it is not floating free of physical reality. It is embedded in the very thermodynamics that governs everything an OLU does. A priori, yes; otherworldly, no.",
       emphasis: 'conclusion',
     },
     {

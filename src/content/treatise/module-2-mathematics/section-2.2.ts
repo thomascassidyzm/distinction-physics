@@ -15,7 +15,7 @@ export const section2_2: Section = {
     {
       type: 'paragraph',
       content:
-        'Our derivation of effective discreteness from the two axioms (see Section 0.3) has interpretive consequences for understanding mathematical foundations. It offers an explanation for a deep puzzle: why is discrete mathematics (sets, natural numbers, logic) foundational, while continuous mathematics (real analysis, calculus) is built on top of it?',
+        'Effective discreteness, derived from the two axioms in Section 0.3, carries an interpretive consequence for the foundations of mathematics. It speaks to an old puzzle. Why does discrete mathematics - sets, natural numbers, logic - sit at the bottom, while continuous mathematics - real analysis, calculus - is always built on top of it, never the other way round?',
     },
     {
       type: 'note',
@@ -98,7 +98,7 @@ export const section2_2: Section = {
     {
       type: 'paragraph',
       content:
-        'This is not a deficiency to be overcome but a necessary consequence of the energy cost of distinction-making. The continuum is a mathematical idealization—extraordinarily useful for certain purposes—but fundamentally inaccessible in its totality to any actual observer.',
+        'This is not a shortcoming waiting for a better instrument. It is what the energy cost of distinction-making requires. The continuum is an idealisation - extraordinarily useful, and no less so for being out of reach - but inaccessible in its totality to any actual observer. We work near it. We never arrive.',
       emphasis: 'key',
     },
     {
@@ -110,7 +110,7 @@ export const section2_2: Section = {
     {
       type: 'paragraph',
       content:
-        'This explains the historical development of mathematics. Humans first developed arithmetic (counting, discrete operations) thousands of years before developing calculus. The natural numbers felt "obvious" because they directly formalize the most basic distinction patterns we could maintain. The real numbers required centuries of sophisticated development because they formalize an idealization that no finite observer can directly experience.',
+        'This is the shape of the history, too. Humans had arithmetic - counting, discrete operations - for thousands of years before they had calculus. The natural numbers felt obvious because they formalise the most basic distinctions we can hold. The real numbers took centuries of hard work because they formalise an idealisation no finite observer ever directly meets. The order of discovery follows the order of accessibility.',
     },
     {
       type: 'paragraph',
@@ -128,7 +128,7 @@ export const section2_2: Section = {
     {
       type: 'paragraph',
       content:
-        'These are not arbitrary choices—they are attempts to build the inaccessible from the accessible, the infinite from the finite, the continuous from the discrete.',
+        'These are not arbitrary choices. They are attempts to build the inaccessible out of the accessible - the infinite from the finite, the continuous from the discrete. Always in that direction.',
     },
     {
       type: 'theorem',

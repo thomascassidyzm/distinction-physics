@@ -9,13 +9,13 @@ export const section4_10: Section = {
     {
       type: 'paragraph',
       content:
-        'The thermodynamic framework generates specific, testable claims about learning. Importantly, these are not novel predictions in the strong scientific sense---rather, they are **consistency demonstrations** showing that the framework aligns with what neuroscience and cognitive psychology have already established. Beyond theoretical consistency, the framework has been **practically validated through implemented learning systems**.',
+        'The framework makes specific, testable claims about learning. Be clear about what kind they are: not bold new predictions, but **consistency demonstrations** — showing that the framework lines up with what neuroscience and cognitive psychology already know. Beyond that theoretical fit, it has been **borne out in working learning systems** deployed in practice.',
     },
     {
       type: 'note',
       variant: 'editorial',
       content:
-        'We emphasize that recovering known results is a necessary but not sufficient condition for framework validity. The value lies in providing a unified thermodynamic explanation for phenomena that previously required separate theoretical accounts.',
+        'Recovering known results is necessary but not sufficient for the framework to be valid — it clears a bar, it does not win the case. The value is elsewhere: one thermodynamic account for phenomena that until now needed several separate ones.',
     },
     {
       type: 'heading',
@@ -57,7 +57,7 @@ export const section4_10: Section = {
     {
       type: 'paragraph',
       content:
-        'Each of these findings was established independently of the distinction framework. That they follow naturally from our axioms---$E(d) > 0$ for all distinctions $d$, and finite energy budgets for all OLUs---demonstrates the framework\'s coherence with existing empirical knowledge.',
+        'Every one of these findings was established independently of the distinction framework, by people not working in it. That they fall out naturally from our two axioms — $E(d) > 0$ for all distinctions $d$, and finite energy budgets for all OLUs — shows the framework is coherent with what is already known. It does not prove the framework; it shows the framework does not break against the evidence.',
       emphasis: 'key',
     },
     {
@@ -109,7 +109,7 @@ export const section4_10: Section = {
     {
       type: 'paragraph',
       content:
-        'The energy reduction from learning is not subtle. Studies of motor learning show 30-50% reductions in metabolic cost for practiced versus novel movements. This is thermodynamic optimization in action---the same distinction-making achieved with substantially less energy expenditure.',
+        'The energy reduction from learning is not subtle. Motor-learning studies report 30-50% drops in metabolic cost for practiced versus novel movements. That is thermodynamic optimization you can measure — the same distinction-making, done for substantially less energy.',
     },
     {
       type: 'math',
@@ -120,7 +120,7 @@ export const section4_10: Section = {
     {
       type: 'paragraph',
       content:
-        'This magnitude of reduction indicates that learning is fundamentally about efficiency, not merely capacity. The expert\'s advantage is not that they can do what the novice cannot, but that they can do what the novice can while expending far less metabolic resources.',
+        'A reduction of that size says something. Learning is not about capacity, it is about efficiency. The expert\'s edge is rarely that they can do what the novice cannot — it is that they do what the novice does, for a fraction of the metabolic cost.',
       emphasis: 'conclusion',
     },
     {
@@ -167,7 +167,7 @@ export const section4_10: Section = {
     {
       type: 'paragraph',
       content:
-        'For intellectual honesty, we should state what evidence would count against the thermodynamic account of learning:',
+        'Honesty demands we name what would count against the thermodynamic account, not just what fits it:',
     },
     {
       type: 'list',
@@ -194,7 +194,7 @@ export const section4_10: Section = {
     {
       type: 'paragraph',
       content:
-        'To date, no such contradicting evidence has emerged. The consistency between the framework and empirical findings, while not proving the framework true, establishes it as a viable candidate for unifying learning science under thermodynamic principles.',
+        'To date none of that contradicting evidence has appeared. The fit between the framework and the findings does not make it true — nothing earns that — but it does establish it as a viable candidate for unifying learning science under thermodynamic principles.',
     },
     {
       type: 'summary',

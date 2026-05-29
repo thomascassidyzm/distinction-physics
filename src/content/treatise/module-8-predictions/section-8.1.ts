@@ -9,13 +9,13 @@ export const section8_1: Section = {
     {
       type: 'paragraph',
       content:
-        'This module provides an epistemically honest assessment of the framework\'s empirical standing. **Most of what might be called "predictions" are actually consistency demonstrations with established physics.** The framework was designed to be consistent with known physics; showing that consistency is necessary for credibility but provides no independent validation.',
+        'So, here is the honest reckoning of where the framework stands against the evidence. **Most of what might be called "predictions" are actually consistency demonstrations with established physics.** The framework was built to be consistent with known physics. That consistency is necessary for credibility - and it validates nothing on its own.',
       emphasis: 'key',
     },
     {
       type: 'paragraph',
       content:
-        'Before cataloging the empirical claims of the framework, we must clarify what counts as a genuine prediction and how predictions differ from post-hoc interpretations. This distinction is crucial for intellectual honesty.',
+        'Before we catalogue any claim, we need to be clear about what counts as a genuine prediction - and how a prediction differs from a story told after the fact. The distinction is where the honesty lives.',
     },
     {
       type: 'heading',
@@ -138,13 +138,13 @@ export const section8_1: Section = {
     {
       type: 'paragraph',
       content:
-        'We must be scrupulously honest about an important distinction. Many phenomena discussed in this module were known before the Distinction Framework was developed. When we show that the framework accounts for these phenomena, we are demonstrating **consistency**, not prediction in the strict temporal sense.',
+        'Now, one distinction has to be held scrupulously. Most of the phenomena in this module were known long before the framework existed. So when we show that the framework accounts for them, we are demonstrating **consistency** - not prediction in the strict temporal sense. The framework did not call these phenomena in advance; it caught up to them.',
       emphasis: 'key',
     },
     {
       type: 'paragraph',
       content:
-        'A framework that could not account for known physics would be immediately falsified. Accounting for known physics is necessary but not sufficient for validation. The genuine test comes from:',
+        'A framework that could not account for known physics would be dead on arrival. Accounting for it is the price of entry, nothing more. The real test comes from:',
     },
     {
       type: 'list',
@@ -158,7 +158,7 @@ export const section8_1: Section = {
     {
       type: 'paragraph',
       content:
-        'The framework\'s value lies not primarily in "predicting" what we already know, but in providing a unified ontological foundation that generates falsifiable claims about what we do not yet know.',
+        'The worth of the framework is not in "predicting" what we already know. It is in offering a unified ontological foundation - one that generates falsifiable claims about what we do not yet know.',
     },
     {
       type: 'heading',
@@ -188,7 +188,7 @@ export const section8_1: Section = {
       type: 'note',
       variant: 'technical',
       content:
-        'This module aims for accounting rather than advocacy. The framework stands or falls on its empirical consequences, and we present them as transparently as possible.',
+        'This module is accounting, not advocacy. The framework stands or falls on its empirical consequences, and we lay them out as plainly as we can.',
     },
   ],
   keyPoints: [

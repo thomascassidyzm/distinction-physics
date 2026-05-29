@@ -26,7 +26,7 @@ export const section3_1: Section = {
     {
       type: 'paragraph',
       content:
-        'This primordial distinction is not discovered but *constituted* through continuous energy expenditure. Before an observer can distinguish external objects from one another, it must first distinguish itself from what it is not. This establishes the subject-object structure from which all experience unfolds.',
+        'This distinction is not discovered. It is *constituted*, moment by moment, by continuous energy expenditure. Before an observer can tell one external object from another, it must first tell itself apart from everything it is not. That is the subject-object structure, and all experience unfolds from it.',
     },
     {
       type: 'heading',
@@ -59,7 +59,7 @@ export const section3_1: Section = {
     {
       type: 'paragraph',
       content:
-        'From Axiom 1, maintaining this boundary costs energy $E_{\\text{self}} > 0$. From Axiom 2, this energy must come from a finite budget. Therefore, maintaining the self/not-self distinction is a *thermodynamic achievement*, not a metaphysical given.',
+        'From Axiom 1, holding this boundary costs energy $E_{\\text{self}} > 0$. From Axiom 2, that energy comes from a finite budget. So the self is not a metaphysical given. It is a *thermodynamic achievement* - something held, by effort, against the pull toward sameness.',
     },
     {
       type: 'heading',
@@ -70,7 +70,7 @@ export const section3_1: Section = {
     {
       type: 'paragraph',
       content:
-        'Here is the key interpretive claim: consciousness is what boundary maintenance *feels like* from within the boundary. The self/not-self distinction does not merely exist objectively from some external vantage point—it is experienced subjectively from inside the system maintaining it. The internal perspective on self/not-self maintenance *is* proposed as the ground floor of conscious experience.',
+        'Here is the key interpretive claim. Consciousness is what boundary maintenance *feels like* from within the boundary. The self/not-self distinction is not only an object seen from some external vantage point - it is lived, from inside the system doing the maintaining. The inside perspective on self/not-self maintenance is what we propose as the ground floor of conscious experience.',
       emphasis: 'key',
     },
     {
@@ -82,7 +82,7 @@ export const section3_1: Section = {
     {
       type: 'paragraph',
       content:
-        'This is not an additional claim requiring separate justification. If a system maintains a self/not-self boundary, then by definition there is an "inside" and an "outside" to that boundary. The inside perspective—what it is like to be the system doing the maintaining—is consciousness.',
+        'This needs no separate justification. If a system maintains a self/not-self boundary, then by definition that boundary has an "inside" and an "outside". The inside perspective - what it is like to be the system doing the maintaining - is what we are calling consciousness.',
     },
   ],
   keyPoints: [

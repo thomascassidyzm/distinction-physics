@@ -9,7 +9,7 @@ export const section4_8: Section = {
     {
       type: 'paragraph',
       content:
-        'Transfer occurs when learning in one domain facilitates learning in another. This happens when the distinction structures developed for the first domain are applicable to the second. Transfer is **leveraging prior anti-entropic investment**: the energy spent building distinction patterns in domain A reduces the energy needed to build related patterns in domain B.',
+        'Transfer is what happens when learning one thing makes the next thing cheaper. It works whenever the distinction structures built for the first domain still apply to the second. So transfer is not a separate faculty — it is **prior anti-entropic investment paying out again**: energy spent building patterns in domain A that domain B can borrow rather than rebuild.',
     },
     {
       type: 'heading',
@@ -20,7 +20,7 @@ export const section4_8: Section = {
     {
       type: 'paragraph',
       content:
-        'If domain A and domain B share underlying distinction structures, then developing those structures for A reduces the energy cost of learning B. The OLU doesn\'t need to build new boundaries; it can reuse existing ones.',
+        'Where domain A and domain B share underlying distinction structure, building it once for A discounts the cost of B. The learner does not draw new boundaries; it reuses the ones already drawn.',
     },
     {
       type: 'list',
@@ -92,7 +92,7 @@ export const section4_8: Section = {
     {
       type: 'paragraph',
       content:
-        'Negative transfer has a clear thermodynamic signature: the OLU must expend extra energy to inhibit existing boundaries while forming new ones. This is more costly than learning without prior distinctions.',
+        'Negative transfer has a clear thermodynamic signature. The learner now has to spend energy *suppressing* a boundary while drawing its replacement — fighting one distinction to make room for another. That is more expensive than starting from nothing. Prior knowledge is not always a head start; sometimes it is a debt.',
       emphasis: 'key',
     },
     {
@@ -137,7 +137,7 @@ export const section4_8: Section = {
     {
       type: 'paragraph',
       content:
-        'This meta-learning improves the efficiency of future learning—a higher-order thermodynamic optimization that compounds over time.',
+        'Meta-learning makes every later round of learning cheaper — a higher-order optimization that compounds. Learn to learn well once, and the saving is paid out on everything that follows.',
       emphasis: 'conclusion',
     },
     {

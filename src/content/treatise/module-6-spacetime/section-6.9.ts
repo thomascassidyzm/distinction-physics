@@ -14,7 +14,7 @@ export const section6_9: Section = {
     {
       type: 'paragraph',
       content:
-        'Testing the boundary-based interpretation of spacetime requires experiments at the interface of quantum mechanics and gravity. We categorize experiments by their epistemic value for the framework:',
+        'Testing a boundary-based reading of spacetime means working right at the seam between quantum mechanics and gravity - the hardest place to get a clean measurement. So it is worth sorting the experiments not by how exciting they sound but by what they would actually tell us. We group them by their epistemic value to the framework:',
     },
     {
       type: 'heading',

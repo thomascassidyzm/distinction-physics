@@ -19,7 +19,7 @@ export const section6_1: Section = {
     {
       type: 'paragraph',
       content:
-        'Traditional physics treats spacetime as a fundamental backdrop—an arena within which particles move and fields evolve. But this creates an immediate puzzle: What is this container made of? What does it exist within? These questions regress infinitely unless we change our conceptual approach.',
+        'Traditional physics treats spacetime as a fundamental backdrop - an arena within which particles move and fields evolve. But the backdrop carries a puzzle. What is the container made of? What does it sit within? Ask the question once and you have to ask it forever - the regress only stops when you change the approach.',
     },
     {
       type: 'note',
@@ -60,7 +60,7 @@ export const section6_1: Section = {
     {
       type: 'paragraph',
       content:
-        'Consider what an "event" means operationally. For any OLU, an event is something that can be distinguished from other events. Two events are "separated in space" if an OLU distinguishes their positions. Two events are "separated in time" if an OLU distinguishes their temporal ordering. The very concepts of spatial and temporal separation presuppose distinction-making.',
+        'Consider what an "event" means operationally. For any OLU, an event is simply something that can be told apart from other events. Two events are "separated in space" when an OLU distinguishes their positions; "separated in time" when an OLU distinguishes their order. So the very ideas of spatial and temporal separation already presuppose distinction-making. The separation is not prior to the act of telling apart - it is that act.',
     },
     {
       type: 'paragraph',

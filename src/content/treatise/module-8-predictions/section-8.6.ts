@@ -9,7 +9,7 @@ export const section8_6: Section = {
     {
       type: 'paragraph',
       content:
-        '**Critical Assessment**: How does this framework compare with standard physics and competing approaches? We present honest comparisons, acknowledging that for most currently testable phenomena, the framework makes IDENTICAL predictions to standard physics. The genuine differences are primarily interpretive, not predictive.',
+        '**Critical Assessment**: how does this framework sit beside standard physics and its rivals? Here is the honest comparison. For most currently testable phenomena, the framework makes predictions IDENTICAL to standard physics. The genuine differences are interpretive, not predictive.',
       emphasis: 'key',
     },
     {
@@ -34,13 +34,13 @@ export const section8_6: Section = {
     {
       type: 'paragraph',
       content:
-        'The frameworks make identical predictions for all currently testable phenomena. Future tests of Planck-scale effects might distinguish them, but such tests are beyond current technology. We are honest: the framework\'s value here is explanatory depth, not novel predictions.',
+        'For every currently testable phenomenon, the two make the same predictions. Future tests of Planck-scale effects might separate them, but those tests are beyond today\'s technology. So we say it straight: in the quantum domain the framework\'s value is explanatory depth, not novel predictions.',
     },
     {
       type: 'note',
       variant: 'editorial',
       content:
-        'This is a crucial honesty point. We do not claim to make different predictions than standard QM for any currently testable experiment. Our contribution is interpretive and explanatory, not predictively novel in the quantum domain.',
+        'This is the honesty point that matters most. For no currently testable experiment do we predict anything different from standard QM. Our contribution is interpretive and explanatory - not predictively novel in the quantum domain.',
     },
     {
       type: 'heading',
@@ -64,7 +64,7 @@ export const section8_6: Section = {
     {
       type: 'paragraph',
       content:
-        'Possible differences might appear in extreme non-equilibrium or quantum-gravitational regimes, but these are speculative. Again, our contribution is foundational rather than predictively novel.',
+        'Differences might surface in extreme non-equilibrium or quantum-gravitational regimes, but that is speculation. Here too, the contribution is foundational, not predictively novel.',
     },
     {
       type: 'heading',
@@ -232,22 +232,22 @@ export const section8_6: Section = {
     {
       type: 'paragraph',
       content:
-        'We acknowledge that for standard physics (QM and thermodynamics), our framework offers interpretive depth rather than novel predictions. We offer an interpretive/ontological grounding for what standard physics assumes, and we do not predict different experimental outcomes.',
+        'For standard physics - QM and thermodynamics - the framework offers interpretive depth, not novel predictions. It supplies an interpretive, ontological grounding for what standard physics simply assumes, and it predicts no different experimental outcome.',
     },
     {
       type: 'paragraph',
       content:
-        'For consciousness theories (IIT, GWT), we add specific requirements (self-reference, thermodynamic grounding) that could in principle distinguish us, but consciousness verification remains extremely difficult.',
+        'For the consciousness theories - IIT, GWT - we add specific requirements, self-reference and thermodynamic grounding, that could in principle set us apart. But verifying consciousness in anything remains extremely difficult.',
     },
     {
       type: 'paragraph',
       content:
-        'Our most distinctive testable claims concern the energetics of measurement and learning - areas where our framework makes specific quantitative predictions that competing frameworks do not address.',
+        'Our most distinctive testable claims are about the energetics of measurement and learning - where the framework commits to specific quantitative predictions that the competing frameworks simply do not address.',
     },
     {
       type: 'paragraph',
       content:
-        'The framework\'s primary value may be unificatory rather than predictively novel: it connects quantum mechanics, thermodynamics, consciousness, and learning under a common ontology. Whether this unification reveals deep truth or merely provides a useful conceptual framework remains to be determined by future investigation.',
+        'The framework\'s primary value may be unificatory rather than predictively novel: it binds quantum mechanics, thermodynamics, consciousness, and learning under one ontology. Whether that unification reveals a deep truth or merely hands us a useful lens is not ours to declare - future investigation decides it.',
       emphasis: 'conclusion',
     },
   ],

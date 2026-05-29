@@ -49,7 +49,7 @@ export const section1_5: Section = {
     {
       type: 'paragraph',
       content:
-        'This table reveals a striking pattern: each order of magnitude improvement in spatial resolution requires roughly an order of magnitude increase in energy investment. The LHC, humanity\'s most powerful microscope, consumes the energy of a small city to probe scales seventeen orders of magnitude smaller than the human eye can resolve.',
+        'Look down the table and a pattern jumps out: every order of magnitude in resolution costs roughly an order of magnitude in energy. The LHC is humanity\'s most powerful microscope, and it eats the power of a small city to reach scales seventeen orders of magnitude below what your eye can split. Sight is cheap. Fine sight is not.',
     },
     {
       type: 'heading',
@@ -60,7 +60,7 @@ export const section1_5: Section = {
     {
       type: 'paragraph',
       content:
-        'While resolution generally improves with energy, there exists an absolute floor beyond which no amount of energy can produce finer distinctions:',
+        'More energy buys finer resolution - but not without end. There is a floor beneath which no budget, however vast, buys you anything:',
     },
     {
       type: 'theorem',
@@ -77,7 +77,7 @@ export const section1_5: Section = {
     {
       type: 'paragraph',
       content:
-        '**Epistemic note**: The Planck scale itself is IMPORTED from physics (the combination of h-bar, G, and c). What we DERIVE is that there must be some universal limit—the specific scale comes from established physics. The Planck scale represents a fundamental boundary where quantum mechanics and general relativity conspire to prevent any further refinement of distinctions.',
+        '**Epistemic note**: the Planck scale itself is IMPORTED - it is the combination of h-bar, $G$, and $c$, handed to us by physics. What we DERIVE is only that *some* universal floor must exist; the particular value is borrowed, not earned. At that scale quantum mechanics and general relativity stop cooperating and start conspiring, and between them they shut the door on any finer distinction.',
     },
     {
       type: 'heading',
@@ -123,7 +123,7 @@ export const section1_5: Section = {
     {
       type: 'paragraph',
       content:
-        'For practical purposes, all known OLUs operate deep within the OLU-limited regime. The Planck energy ($\\sim 10^{19}$ GeV) exceeds the LHC\'s capability by a factor of roughly $10^{16}$. The Planck limit thus represents a theoretical ceiling rather than a practical constraint, yet its existence is philosophically profound: even infinite resources would not grant access to truly continuous reality.',
+        'In practice, every OLU we know of sits deep in the OLU-limited regime. The Planck energy ($\\sim 10^{19}$ GeV) is about $10^{16}$ times beyond the LHC. So the Planck limit is a ceiling no one is anywhere near pushing against - a theoretical bound, not a working one. And yet its mere existence carries the weight: even with infinite resources, you would not reach a truly continuous reality. The continuum is not expensive. It is shut.',
       emphasis: 'conclusion',
     },
     {
@@ -135,7 +135,7 @@ export const section1_5: Section = {
     {
       type: 'paragraph',
       content:
-        'The resolution function $g_Q(E)$ above describes what one OLU can resolve at one budget. We now lift this to a structural picture: the resolution partition $\\Pi_B$ from §1.1, viewed across all budgets, forms a hierarchy. This hierarchy is the formal home of the framework\'s emergence and renormalization-group themes.',
+        'The resolution function $g_Q(E)$ tells you what one OLU resolves at one budget. Now widen the lens. Take the resolution partition $\\Pi_B$ from §1.1 and run $B$ across every budget at once: the partitions stack into a hierarchy. That hierarchy is where the framework\'s emergence and renormalization-group themes actually live.',
     },
     {
       type: 'definition',
@@ -182,7 +182,7 @@ export const section1_5: Section = {
     {
       type: 'paragraph',
       content:
-        'This recasts effective discreteness as a structural feature of the hierarchy, not a property of any particular OLU: $\\Delta$ as a continuum is only ever a limit of its finite-budget shadows. No finite section of the inverse system contains the continuum; only the limit does — and no OLU lives at the limit.',
+        'So effective discreteness is not a quirk of this or that observer. It is built into the hierarchy itself: $\\Delta$ as a continuum is only ever the limit of its finite-budget shadows. No single rung of the system holds the continuum - only the limit does. And no OLU lives at the limit.',
       emphasis: 'key',
     },
     {

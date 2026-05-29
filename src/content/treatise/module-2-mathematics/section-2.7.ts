@@ -9,7 +9,7 @@ export const section2_7: Section = {
     {
       type: 'paragraph',
       content:
-        'Probability can be understood through the lens of incomplete distinction-making. When OLUs cannot maintain complete boundaries over all relevant distinctions, probability provides formalization of incomplete knowledge—the quantification of undistinguished possibilities. We do not derive probability theory from our axioms; we show consistency.',
+        'Probability is what distinction-making looks like when it cannot be finished. An OLU that cannot hold complete boundaries over everything relevant assigns probabilities instead - a way of putting numbers to the possibilities it has not managed to tell apart. We do not derive probability theory from the axioms; we show that it sits comfortably with them.',
     },
     {
       type: 'note',
@@ -78,7 +78,7 @@ export const section2_7: Section = {
     {
       type: 'paragraph',
       content:
-        'These axioms are not arbitrary mathematical conveniences—they reflect the physics of energy-constrained boundary maintenance.',
+        'These are not conveniences chosen to make the sums work. They reflect the physics of energy-constrained boundary maintenance - what the bookkeeping has to look like when energy is finite.',
       emphasis: 'key',
     },
     {
@@ -141,7 +141,7 @@ export const section2_7: Section = {
     {
       type: 'paragraph',
       content:
-        'Quantum randomness (Module 5) is the limiting case: at the quantum level, no additional energy investment can predict which boundary will be actualized. Classical randomness is typically epistemic—additional information would resolve it—whereas quantum randomness is most economically interpreted, for OLUs, as ontic (reflecting limits on boundary actualization rather than missing information). This interpretive stance is argued in Module 5; it is not established physics, and it does not adjudicate hidden-variable accounts.',
+        'Quantum randomness (Module 5) is the limiting case: at the quantum level, no further energy investment can tell you which boundary will be actualised. Classical randomness is usually epistemic - more information would resolve it. Quantum randomness is most economically read, for OLUs, as ontic: a limit on boundary actualisation rather than a gap in what we know. This is an interpretive stance, argued in Module 5. It is not established physics, and it does not adjudicate hidden-variable accounts.',
       emphasis: 'conclusion',
     },
   ],

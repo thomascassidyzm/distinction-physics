@@ -14,7 +14,7 @@ export const section1_3: Section = {
     {
       type: 'paragraph',
       content:
-        "We now formalize the minimum energy cost of distinction-making by **importing** Landauer's limit from thermodynamics. This is not a derivation from the axioms alone but an incorporation of established physics that the framework interprets. Note the scope (developed in §0.3): Landauer bounds *irreversible* operations — erasure and recording into thermodynamically equilibrated media. The framework applies the bound to OLU-accessible distinctions, on the grounds that an OLU accessing a distinction must read a recorded state, which involves irreversible operations and so hits the bound. The bound does not apply to purely reversible computations that leave no readable trace.",
+        "Here we fix the minimum energy cost of a distinction. We do not derive it - we **import** it. Landauer's limit comes from thermodynamics, and the framework takes it in and reads it through its own lens; it does not pretend to have found it. Mind the scope, set out in §0.3: Landauer bounds *irreversible* operations - erasure, and recording into media that have settled to equilibrium. The framework applies the bound to OLU-accessible distinctions, and the reason is direct: to access a distinction an OLU has to read a recorded state, reading a record is irreversible, and irreversibility is exactly where the bound bites. A purely reversible computation that leaves no readable trace pays nothing. That is the whole of the scope.",
     },
     {
       type: 'definition',
@@ -70,7 +70,7 @@ export const section1_3: Section = {
     {
       type: 'paragraph',
       content:
-        "**Epistemic clarification**: This does NOT derive Landauer's principle from our axioms alone. The argument above uses the Boltzmann distribution and thermodynamic entropy—results from standard physics. Our framework **imports** Landauer's principle and interprets it through the lens of distinction-making. The convergence shows our framework is consistent with thermodynamics, not that we have independently derived thermodynamics.",
+        "**Epistemic clarification**: none of this derives Landauer from our axioms. Read the argument again - it leans on the Boltzmann distribution and on thermodynamic entropy, both borrowed from standard physics. The framework **imports** Landauer and interprets it as a cost on distinction-making. What the fit buys us is consistency with thermodynamics. It does not buy us thermodynamics.",
       emphasis: 'conclusion',
     },
     {

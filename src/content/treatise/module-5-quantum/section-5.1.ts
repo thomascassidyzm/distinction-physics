@@ -25,7 +25,7 @@ export const section5_1: Section = {
     {
       type: 'paragraph',
       content:
-        'From these two axioms alone, Module 0 derived that no continuous quantities can be accessed by any OLU. Reality must be effectively discrete for any finite-energy observer. This section shows how quantum mechanics can be **interpreted** through this lens of effective discreteness. **Important: This is interpretation, not derivation. Quantum mechanics remains as it is---we provide conceptual vocabulary for understanding its features, not alternative physics.**',
+        'From these two axioms alone, Module 0 derived a hard result: no continuous quantity can be accessed by any OLU. For a finite-energy observer, reality must be effectively discrete. This section shows how quantum mechanics can be **interpreted** through that lens. **Be clear about what this is: interpretation, not derivation. Quantum mechanics stays exactly as it is - we supply conceptual vocabulary for its features, not alternative physics.**',
     },
     {
       type: 'heading',
@@ -65,7 +65,7 @@ export const section5_1: Section = {
     {
       type: 'paragraph',
       content:
-        'Any seemingly continuous property (position, momentum, energy, spin direction) requires infinite distinctions for perfect specification. Since no OLU can make infinite distinctions, all properties must be effectively quantized for any observer. The "quantum" is the minimum distinguishable unit given energy constraints.',
+        'Any seemingly continuous property - position, momentum, energy, spin direction - would need infinite distinctions to pin down perfectly. No OLU can make infinite distinctions. So every property is effectively quantized for every observer. The "quantum" is just the smallest unit you can still tell apart on your energy budget.',
     },
     {
       type: 'heading',
@@ -75,7 +75,7 @@ export const section5_1: Section = {
     {
       type: 'paragraph',
       content:
-        'The mathematical structure of quantum mechanics---superposition, uncertainty, measurement collapse, probability amplitudes---can be **understood** as describing how finite-energy observers interact with effectively quantized reality. This is interpretive vocabulary, not independent derivation: the Schrodinger equation, Hilbert space structure, and Born rule are **imported** from established physics.',
+        'The mathematical structure of quantum mechanics - superposition, uncertainty, measurement collapse, probability amplitudes - can be **read** as a description of how finite-energy observers meet an effectively quantized reality. This is interpretive vocabulary, not independent derivation. The Schrodinger equation, the Hilbert space structure, and the Born rule are **imported** from established physics.',
     },
     {
       type: 'theorem',
@@ -91,7 +91,7 @@ export const section5_1: Section = {
       type: 'note',
       variant: 'technical',
       content:
-        'The interpretation shows that quantum mechanics is conceptually natural for finite-energy observers. The "strangeness" of quantum mechanics can be understood as the signature of resource-constrained observation. However, we import the quantum formalism (Hilbert spaces, complex amplitudes, unitary evolution) from established physics rather than deriving it from the axioms.',
+        'The interpretation shows quantum mechanics to be conceptually natural for a finite-energy observer. The "strangeness" reads as the signature of resource-constrained observation. But the formalism itself - Hilbert spaces, complex amplitudes, unitary evolution - is imported from established physics, not spun out of the axioms.',
     },
   ],
   keyPoints: [

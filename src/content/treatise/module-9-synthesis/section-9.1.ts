@@ -26,7 +26,7 @@ export const section9_1: Section = {
     {
       type: 'paragraph',
       content:
-        'This move is foundational rather than novel to the present treatise. It recurs in Kant\'s transcendental arguments, in the opening gesture of Spencer-Brown\'s *Laws of Form* ("draw a distinction"), and in constructor theory (Deutsch, Marletto). The specific contribution of this framework is combining the transcendental priority with a thermodynamic grounding: Axiom 1 imports Landauer\'s principle; Axiom 2 imports finite-budget physicality. Every subsequent module builds on this foundation, asking what structures emerge for finite observers making costly distinctions under those two constraints.',
+        'This move is old, not ours. It recurs in Kant\'s transcendental arguments, in the opening gesture of Spencer-Brown\'s *Laws of Form* ("draw a distinction"), and in constructor theory (Deutsch, Marletto). What this framework adds is the thermodynamic grounding: Axiom 1 imports Landauer\'s principle; Axiom 2 imports finite-budget physicality. Every module after this one builds on that one foundation, asking the same question of a new domain — what structures emerge for finite observers making costly distinctions under those two constraints?',
     },
     {
       type: 'heading',
@@ -89,12 +89,12 @@ export const section9_1: Section = {
     {
       type: 'paragraph',
       content:
-        'What unifies these contributions is not derivation from first principles but **common vocabulary and perspective**. Every module asks: how can this domain be understood through distinction-making under energy constraints?',
+        'What unifies these contributions is not derivation from first principles. It is **common vocabulary and perspective**. Every module asks one question: how can this domain be understood through distinction-making under energy constraints?',
     },
     {
       type: 'paragraph',
       content:
-        'The framework\'s contribution is conceptual unification across domains — illuminating connections, not replacing equations. Substantial physics is imported (Landauer, statistical mechanics, quantum formalism, relativity). The vocabulary helps trace why physics, mathematics, and cognition share structure; it does not derive that structure from nothing.',
+        'The contribution is conceptual unification across domains — it illuminates connections, it does not replace equations. Substantial physics is imported: Landauer, statistical mechanics, the quantum formalism, relativity. The vocabulary helps trace *why* physics, mathematics, and cognition share structure. It does not conjure that structure from nothing.',
       emphasis: 'key',
     },
     {
@@ -161,7 +161,7 @@ export const section9_1: Section = {
       type: 'note',
       variant: 'editorial',
       content:
-        'The framework\'s assumptions are minimal (two axioms), its positioning is complementary (not competitive), and its load-bearing theoretical content is the variational account of acquisition in Module 4. No physics derives physics from nothing; this framework imports Landauer, statistical mechanics, and the quantum formalism. The honest claim is interpretive unification grounded in the variational structure of Module 4, not derivation of everything from first principles.',
+        'The assumptions are minimal — two axioms. The positioning is complementary, not competitive. The load-bearing content is the variational account of acquisition in Module 4. No physics derives physics from nothing; this framework imports Landauer, statistical mechanics, and the quantum formalism. The honest claim is interpretive unification grounded in the variational structure of Module 4 — not derivation of everything from first principles.',
     },
     {
       type: 'summary',

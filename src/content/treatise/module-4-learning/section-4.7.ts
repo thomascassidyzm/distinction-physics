@@ -9,7 +9,7 @@ export const section4_7: Section = {
     {
       type: 'paragraph',
       content:
-        'Neural plasticity, the brain\'s ability to modify its structure in response to experience, is the physical substrate of learning. Within the thermodynamic framework, plasticity is the mechanism by which distinction networks are reorganized for greater efficiency. It is the **physical implementation of anti-entropic pattern building**—the brain literally restructuring itself to maintain more distinctions with less energy.',
+        'Neural plasticity — the brain reshaping itself in response to experience — is where learning becomes physical. In the thermodynamic framing, plasticity is the mechanism that reorganizes a distinction network for efficiency. It is the **physical implementation of anti-entropic pattern building**: the brain rebuilding itself to hold more distinctions for less energy. The metaphor and the mechanism are the same thing.',
     },
     {
       type: 'heading',
@@ -47,7 +47,7 @@ export const section4_7: Section = {
     {
       type: 'paragraph',
       content:
-        'This is precisely the Hebbian rule, "neurons that fire together wire together," but grounded in thermodynamic efficiency rather than arbitrary association.',
+        'This is the Hebbian rule — "neurons that fire together wire together" — read through a different lens. Not arbitrary association, but thermodynamic efficiency: boundaries that earn their keep are kept, and the ones that do not are let go.',
       emphasis: 'key',
     },
     {
@@ -99,7 +99,7 @@ export const section4_7: Section = {
     {
       type: 'paragraph',
       content:
-        'Why are certain types of learning easier during particular developmental periods? The thermodynamic framework suggests an answer:',
+        'Why is some learning so much easier at certain ages? The thermodynamic framing offers an answer, and it is about cost, not magic:',
     },
     {
       type: 'paragraph',
@@ -123,7 +123,7 @@ export const section4_7: Section = {
     {
       type: 'paragraph',
       content:
-        'After critical periods close, the same reorganization would require dismantling stabilized structures—a much higher energy cost. This is why learning a first language in childhood is effortless while learning a second language as an adult requires sustained effort.',
+        'Once the window closes, the same reorganization means dismantling structures that have already set — and that costs far more. This is why a child takes on a first language without apparent effort, while an adult learning a second one has to pay, in sustained work, for boundaries that were once nearly free.',
       emphasis: 'conclusion',
     },
     {

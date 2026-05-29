@@ -48,7 +48,7 @@ export const section6_7: Section = {
     {
       type: 'paragraph',
       content:
-        'The notorious incompatibility of quantum mechanics and general relativity is an unsolved problem in physics. We speculatively suggest—but do NOT prove—that both might be understood through distinction-making under energy constraints. **This is conjecture, not solution.**',
+        'The standing incompatibility between quantum mechanics and general relativity is one of the great open problems in physics. We suggest - and only suggest, we do NOT prove - that both might be read through one lens: distinction-making under energy constraints. **This is conjecture, not solution.**',
     },
     {
       type: 'paragraph',

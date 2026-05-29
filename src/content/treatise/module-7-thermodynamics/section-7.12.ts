@@ -8,7 +8,7 @@ export const section7_12: Section = {
     {
       type: 'paragraph',
       content:
-        'Modern non-equilibrium thermodynamics has developed fluctuation theorems that quantify the probability of entropy-decreasing fluctuations. Our framework interprets these naturally within the distinction-dynamics paradigm.',
+        'Modern non-equilibrium thermodynamics has produced fluctuation theorems - precise statements about how likely it is for entropy to dip rather than rise. They put a number on something the old Second Law only forbade in the abstract. Read through distinction-dynamics, they fit without strain.',
     },
     {
       type: 'heading',
@@ -86,7 +86,7 @@ export const section7_12: Section = {
     {
       type: 'paragraph',
       content:
-        'This confirms our framework: the Second Law emerges from the statistics of distinction-maintenance. Distinctions disperse not by fundamental law but by overwhelming combinatorial advantage. The fluctuation theorems quantify precisely how overwhelming that advantage is.',
+        'This sits well with the framework\'s reading: the Second Law is statistics, not edict. Distinctions disperse not because a law forbids the reverse but because the configurations that blur a boundary outnumber the ones that sharpen it, overwhelmingly. The fluctuation theorems put a figure on just how overwhelming - and the figure is the point.',
     },
     {
       type: 'note',
