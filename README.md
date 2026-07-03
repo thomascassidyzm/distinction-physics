@@ -1,5 +1,7 @@
 # Distinction Physics
 
+This repository (`~/distinction-physics`, deployed site) is the canonical home of the Distinction Project. Other locations (`~/Distinction_Project`, `~/BoundaryFramework`, `~/living-epistemic-work-concept`) are superseded.
+
 A meta-theoretical framework that reads the structure of accessible reality through two axioms about distinction-making under energy constraints — offering interpretive vocabulary complementary to established science, not a new physics.
 
 ## The Framework
