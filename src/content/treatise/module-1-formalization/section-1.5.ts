@@ -71,7 +71,7 @@ export const section1_5: Section = {
       statement:
         'There exists a universal minimum resolution beyond which no OLU, regardless of energy, can make distinctions: $$\\delta_{\\min} = \\ell_P = \\sqrt{\\frac{\\hbar G}{c^3}} \\approx 1.6 \\times 10^{-35} \\text{ m}$$ $$\\tau_{\\min} = t_P = \\sqrt{\\frac{\\hbar G}{c^5}} \\approx 5.4 \\times 10^{-44} \\text{ s}$$',
       proof: `At the Planck scale, the energy required to probe smaller distances becomes so concentrated that it creates black holes, fundamentally disrupting the measurement. The Schwarzschild radius $r_s = 2GM/c^2$ equals the Compton wavelength $\\lambda_C = \\hbar/Mc$ precisely at the Planck mass, making sub-Planckian distinction impossible even in principle. $\\square$`,
-      epistemicStatus: 'derived',
+      epistemicStatus: 'imported',
       dependsOn: ['thm-spatial-resolution'],
     },
     {
@@ -98,7 +98,7 @@ export const section1_5: Section = {
       name: 'Complete Resolution Formula',
       statement:
         'The effective spatial grain for an OLU with energy $E$ is: $$g_x(E) = \\max\\left(\\frac{\\hbar c}{E}, \\ell_P\\right)$$',
-      epistemicStatus: 'derived',
+      epistemicStatus: 'imported',
       dependsOn: ['thm-spatial-resolution', 'thm-absolute-resolution-limit'],
     },
     {
@@ -200,7 +200,7 @@ export const section1_5: Section = {
   keyPoints: [
     '[DERIVED] Different observers access reality at different effective resolutions based on their energy budgets',
     '[DERIVED] The effective grain size represents the finest distinction an observer can make',
-    '[DERIVED] Each order of magnitude improvement in resolution requires roughly an order of magnitude more energy',
+    '[IMPORTED] Each order of magnitude improvement in spatial resolution costs roughly an order of magnitude more energy — the specific $\\delta_x \\sim \\hbar c/E$ scaling comes from de Broglie, not the axioms (§1.4); the axioms derive only THAT resolution is energy-bounded',
     'The Planck scale is IMPORTED from physics; we DERIVE that some universal limit must exist',
     'Two regimes exist: OLU-limited (practical) and Planck-limited (theoretical)',
     '[NEW] Resolution partitions $\\{\\Pi_B\\}_B$ form an inverse system under coarsening',

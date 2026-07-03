@@ -260,7 +260,7 @@ export const section1_1: Section = {
       statement:
         'For any finite budget $B < \\infty$, any OLU-realizable resolution partition $\\Pi_B$ has finite cardinality: $$|\\Pi_B| \\leq 2^{B/(k_B T \\ln 2)}$$',
       proof:
-        'Any OLU realizing $\\Pi_B$ must store, for each input state, a label identifying its cell. Storing a label drawn from $|\\Pi_B|$ alternatives requires at least $\\log_2 |\\Pi_B|$ bits of internal state. By the Landauer floor, each such bit costs at least $D_{\\min} = k_B T \\ln 2$ to maintain. Hence $\\log_2 |\\Pi_B| \\cdot D_{\\min} \\leq B$, giving $|\\Pi_B| \\leq 2^{B/D_{\\min}}$. $\\square$',
+        'Any OLU realizing $\\Pi_B$ must store, for each input state, a label identifying its cell. Storing a label drawn from $|\\Pi_B|$ alternatives requires at least $\\log_2 |\\Pi_B|$ bits of internal state. Each recorded bit is paid for at the Landauer floor $D_{\\min} = k_B T \\ln 2$ somewhere in its write–reset cycle: the write itself can be reversible (Bennett), but it needs a register initialized to a known state, and initialization — like eventual reuse — is erasure, which is where Landauer bites. Hence $\\log_2 |\\Pi_B| \\cdot D_{\\min} \\leq B$, giving $|\\Pi_B| \\leq 2^{B/D_{\\min}}$. $\\square$',
       epistemicStatus: 'derived',
       dependsOn: ['def-distinction-cost', 'def-resolution-partition'],
     },

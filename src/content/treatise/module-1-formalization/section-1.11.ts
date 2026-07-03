@@ -56,7 +56,7 @@ export const section1_11: Section = {
             '**Effective Discreteness**: All observable quantities are effectively quantized for finite-energy observers [DERIVED]',
         },
         {
-          content: '**Resolution-Energy Scaling**: $\\delta_x \\propto \\hbar c / E$ [DERIVED, uses IMPORTED h-bar]',
+          content: '**Resolution-Energy Scaling**: $\\delta_x \\propto \\hbar c / E$ [IMPORTED — de Broglie + kinematics; the axioms derive only THAT resolution is energy-bounded, not this form (§1.4)]',
         },
         {
           content:
@@ -147,7 +147,7 @@ export const section1_11: Section = {
   keyPoints: [
     'This module formalizes Module 0 philosophical insights into mathematical structures',
     'Core definitions: distinction operator, energy-indexed distinction, observer, resolution function [INTERPRETIVE VOCABULARY]',
-    'Core theorems: effective discreteness, resolution-energy scaling, finitude bound [DERIVED]; Landauer limit [IMPORTED]',
+    'Core theorems: effective discreteness, finitude bound [DERIVED]; Landauer limit, resolution-energy scaling $\\delta_x \\sim \\hbar c/E$ [IMPORTED]',
     'Connections to physics are INTERPRETED, not derived—the framework complements physics',
     'Subsequent modules apply this formalization to specific domains',
   ],

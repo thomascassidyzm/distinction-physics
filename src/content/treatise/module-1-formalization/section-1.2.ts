@@ -113,7 +113,7 @@ export const section1_2: Section = {
         },
         {
           content:
-            '**Energy accounting.** The internal state space $S$ stores $\\log_2 |\\Phi(\\Delta)|$ bits of information about $\\Delta$. By the Landauer floor each maintained bit costs at least $D_{\\min} = k_B T \\ln 2$, so the maintenance cost is bounded by the budget: $$\\log_2 |\\Phi(\\Delta)| \\cdot D_{\\min} \\leq E_{\\text{total}}$$',
+            '**Energy accounting.** The internal state space $S$ stores $\\log_2 |\\Phi(\\Delta)|$ bits of information about $\\Delta$. By the Landauer floor each recorded bit costs at least $D_{\\min} = k_B T \\ln 2$ per write–reset cycle — the cost can be deferred (Bennett), never eliminated — so the registration cost is bounded by the budget: $$\\log_2 |\\Phi(\\Delta)| \\cdot D_{\\min} \\leq E_{\\text{total}}$$',
         },
         {
           content:

@@ -15,7 +15,12 @@ export const section1_4: Section = {
     {
       type: 'paragraph',
       content:
-        'This is the result the module was built to reach. It connects the two axioms to the quantized look of observable physics - and it is one of the few things here we genuinely prove.',
+        'This is the result the module was built to reach. It connects the two axioms to the quantized look of observable physics - and it is one of the few things here we genuinely prove. Because it is the flagship, we hold it to the flagship standard: every assumption on the table, every step justified, and a fence around what the theorem does *not* say. (The fully explicit assumption ledger, gap list, and adversary check live in `docs/derivations/effective-discreteness.md`; this section is the reader-facing form of the same chain.)',
+    },
+    {
+      type: 'paragraph',
+      content:
+        'First, two definitions that keep the theorem honest. A **resolution act on property $Q$ at cardinality $N$** is a completed process whose readable record reliably discriminates which of $N$ disjoint cells of $Q$\'s value range the observed value lies in. And $Q$ is **effectively discrete for an OLU** if there is a finite $N_{\\max}$ bounding the cardinality of every resolution act that OLU can complete. Note what the definitions quantify over: *records*, not references. An OLU can denote $\\pi$, reason about $\\mathbb{R}$, and do calculus, all for a few bits of notation. Reference is cheap. Resolution is what costs.',
     },
     {
       type: 'theorem',
@@ -24,31 +29,40 @@ export const section1_4: Section = {
       number: '1.4',
       name: 'Effective Discreteness',
       statement:
-        'For any OLU with finite energy budget $E_{\\text{total}} < \\infty$, the precision with which continuous properties can be accessed is bounded. Arbitrarily fine distinctions require arbitrarily large energy, making all observable quantities effectively discrete.',
-      proof: `Let $Q$ be any property with a continuous mathematical description (e.g., position, momentum, temperature, field strength).
+        'Let an OLU\'s registers couple to reservoirs no colder than temperature $T > 0$, and let $E < \\infty$ bound its free-energy expenditure over an observation epoch (Axiom 2). Then every resolution act on any property $Q$ completed within that epoch has cardinality $$N \\leq N_{\\max} = 2^{\\,E/(k_B T \\ln 2)}$$ Arbitrarily fine distinctions require arbitrarily large energy, so every property is effectively discrete for every finite-energy observer.',
+      proof: `Each step names what it uses. $D_{\\min} = k_B T \\ln 2$ is the imported Landauer floor (§1.3).
 
-1. To distinguish value $q_1$ from value $q_2$ requires energy $E(\\diamond(q_1, q_2)) \\geq D_{\\min}$.
+1. A resolution act at cardinality $N$ produces a readable record discriminating $N$ alternatives. [Definition of resolution act + access-means-readable-record, §0.3]
 
-2. A continuous property contains infinitely many distinct values between any two points $q_a$ and $q_b$.
+2. The record occupies at least $\\log_2 N$ bits of register state: distinct outcomes must land in distinct internal states (registration faithfulness, §1.2), and a register with fewer than $\\log_2 N$ bits has fewer than $N$ states. [Pigeonhole]
 
-3. Resolving the property to one of $N$ cells within an interval is selecting one alternative among $N$, which requires recording $\\log_2 N$ bits of information. Each recorded bit costs at least $D_{\\min}$ (the Landauer floor of Axiom 1), so:
-$$E_{\\text{required}} \\geq D_{\\min} \\cdot \\log_2 N$$
-(This is the *informational* cost — it is not a claim that $N$ separate pairwise distinctions are drawn at once, which would give the looser $N \\cdot D_{\\min}$.)
+3. Each recorded bit costs at least $D_{\\min}$ of free energy over the act's write–reset cycle. The write can be reversible (Bennett), but it needs a register initialized to a known state, and initialization — like eventual reuse — is erasure, which is exactly what Landauer prices. Deferred, never eliminated. [IMPORTED Landauer floor, applied within its scope; $T > 0$ assumed]
 
-4. By Axiom 2, $E_{\\text{total}} < \\infty$, therefore:
-$$N_{\\max} \\leq 2^{\\,E_{\\text{total}}/D_{\\min}}$$
+4. Hence $E_{\\text{act}} \\geq \\log_2 N \\cdot D_{\\min}$, and by Axiom 2, $E_{\\text{act}} \\leq E$. [Steps 2–3; erasure costs add over independent bits]
 
-5. Arbitrarily fine distinctions ($N \\to \\infty$) would require recording unbounded information, hence arbitrarily large energy ($E \\to \\infty$), which no OLU possesses.
+5. Therefore $\\log_2 N \\leq E/D_{\\min}$, i.e. $N \\leq 2^{\\,E/D_{\\min}}$. [Arithmetic]
 
-The OLU accesses an effectively discrete version of $Q$ with resolution determined by $E_{\\text{total}}$. $\\square$`,
+6. Unbounded precision ($N \\to \\infty$) would require $E \\to \\infty$ (excluded by Axiom 2) or $T \\to 0$ (excluded at finite cost by the third law [IMPORTED]). $\\square$`,
       epistemicStatus: 'derived',
-      dependsOn: ['A1', 'A2', 'thm-landauer-limit'],
-      usedIn: ['thm-spatial-resolution', 'thm-complete-resolution'],
+      dependsOn: ['A1', 'A2', 'thm-landauer-limit', 'thm-partition-finiteness'],
+      usedIn: ['thm-complete-resolution'],
     },
     {
       type: 'paragraph',
       content:
-        '**Epistemic status [DERIVED]**: this theorem follows from the axioms, given the IMPORTED Landauer limit applied inside its proper scope. Step 1 leans on $E(\\diamond(q_1, q_2)) \\geq D_{\\min}$, and that holds because the theorem is about distinctions an OLU can *access* - values it can read, record, or hold - and access means irreversible recording, which is where Landauer bites (§0.3). So read the conclusion carefully. It is a claim about what any finite-energy observer can reach. It is not a claim about reality "in itself," and it is not a claim about reversible computations that leave no trace.',
+        '**Epistemic status [DERIVED]** - genuinely deductive, *given the ledger*. The imports and choices doing the work: the Landauer floor [IMPORTED]; the third law, which closes the cryogenic loophole ($T \\to 0$ makes the floor vanish) and turns out to be load-bearing [IMPORTED]; "access means readable record" and registration faithfulness [INTERPRETED - constitutive of what an observer is]; finite budget per epoch and $T > 0$ [INTERPRETED - empirical idealizations]. So the honest shape of the result: a theorem of information thermodynamics about observers, conditional on a stated model of what an observer is. Not physics from first principles - and not pretending to be.',
+      emphasis: 'key',
+    },
+    {
+      type: 'note',
+      variant: 'technical',
+      content:
+        '**Three fine points, stated rather than hidden.** (1) *Reliability*: the $\\log_2 N$ count in step 2 is the error-free case; allowing error probability $\\varepsilon > 0$ softens the bound by a Fano correction — a constant factor in the exponent, leaving "finite for finite $E$" untouched. (2) *Which budget*: the theorem is per-epoch. An OLU with finite power and unbounded time makes unboundedly many distinctions *sequentially* — but sequential records do not compose into one high-cardinality act for free, since joint discrimination requires *holding* the combined bits, which the same accounting bounds. A lifetime version follows by adding the (empirical) premise of finite lifetime energy throughput. (3) *Whose temperature*: $T$ is the coldest reservoir the register actually couples to, and energy figures are in the observer\'s proper frame.',
+    },
+    {
+      type: 'paragraph',
+      content:
+        'And the fence. The theorem bounds *access*, not ontology: the further step from "no finite observer resolves the continuum" to "reality is discrete" is a philosophical move (ontic structural realism) the framework may defend but has not derived - [INTERPRETED], and marked. Nor does the theorem put observables on a fixed lattice: the partition is act-relative and observer-relative, a cardinality bound, not a grid. And it does not touch quantum discreteness - atomic spectra quantize for reasons (boundary conditions on wave equations) the framework imports, not derives.',
       emphasis: 'key',
     },
     {
@@ -70,14 +84,14 @@ The OLU accesses an effectively discrete version of $Q$ with resolution determin
     {
       type: 'paragraph',
       content:
-        'For spatial position, we can derive the explicit form:',
+        'For spatial position, established physics supplies the explicit form:',
     },
     {
       type: 'theorem',
       id: 'thm-spatial-resolution',
       label: 'theorem',
       number: '1.5',
-      name: 'Spatial Resolution-Energy Relation',
+      name: 'Spatial Resolution-Energy Relation (Imported)',
       statement:
         'The minimum distinguishable spatial separation $\\delta_x$ for an OLU with energy budget $E$ scales as: $$\\delta_x(E) \\propto \\frac{\\hbar c}{E}$$',
       proof: `1. To distinguish positions separated by $\\delta_x$, we need a probe with wavelength $\\lambda \\lesssim \\delta_x$.
@@ -87,20 +101,20 @@ The OLU accesses an effectively discrete version of $Q$ with resolution determin
 3. The probe energy scales as $E \\sim pc$ (relativistic) or $E \\sim p^2/2m$ (non-relativistic).
 
 4. Combining: $\\delta_x \\sim \\lambda \\sim \\hbar c / E$. $\\square$`,
-      epistemicStatus: 'derived',
-      dependsOn: ['thm-effective-discreteness'],
+      epistemicStatus: 'imported',
     },
     {
       type: 'paragraph',
       content:
-        'This is why a particle collider burns gigawatts to see femtometres ($10^{-15}$ m): finer means dearer, and the price climbs fast. The inverse relation between energy and resolution comes from established physics - de Broglie, relativistic kinematics. The axioms do not derive it. They make it look inevitable rather than coincidental.',
+        'This is why a particle collider burns gigawatts to see femtometres ($10^{-15}$ m): finer means dearer, and the price climbs fast. But look at the proof - every step is de Broglie and relativistic kinematics. Established physics, no axiom used. That is why the theorem carries [IMPORTED], not [DERIVED]: Theorem 1.4 predicts *that* resolution is energy-bounded; which specific inverse relation holds is physics\' answer, not ours. What the axioms add is interpretive - they make the relation look inevitable rather than coincidental.',
     },
   ],
   keyPoints: [
-    '[DERIVED] The precision with which an OLU can distinguish continuous quantities is bounded by available energy',
-    '[DERIVED] Arbitrarily fine distinctions require arbitrarily large energy',
-    '[DERIVED] All observable quantities must be effectively discrete for any finite-energy observer',
-    '[DERIVED] Spatial resolution scales inversely with energy: finer distinctions require more energy',
-    'Effective discreteness follows from axioms + IMPORTED Landauer limit—not a claim about reality-in-itself but about accessible reality',
+    '[DERIVED] Every resolution act by a finite-energy OLU has bounded cardinality: $N \\leq 2^{E/(k_B T \\ln 2)}$ — the precision of access to continuous quantities is bounded by available energy',
+    '[DERIVED] Arbitrarily fine distinctions require arbitrarily large energy (or $T \\to 0$, excluded by the third law [IMPORTED])',
+    'The theorem is conditional on a stated ledger: Landauer floor + third law [IMPORTED]; access-as-readable-record, registration faithfulness, finite per-epoch budget, $T > 0$ [INTERPRETED]',
+    'The fence: a bound on access, not ontology — no fixed lattice, no claim that reality is discrete, no derivation of quantum discreteness',
+    '[IMPORTED] Spatial resolution $\\delta_x \\sim \\hbar c/E$ comes from de Broglie + kinematics, not from the axioms (relabeled from DERIVED); the axioms make it look inevitable rather than coincidental',
+    'Full assumption ledger, gap list, and adversary check: docs/derivations/effective-discreteness.md',
   ],
 };

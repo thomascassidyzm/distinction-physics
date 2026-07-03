@@ -37,7 +37,7 @@ export const module1: Module = {
     'The distinction operator formalizes the primitive act of differentiation [FORMAL DEFINITION — a formalization, not a result derived from the axioms]',
     'Landauer\'s limit (kT ln 2) is IMPORTED from thermodynamics—not derived from axioms alone',
     '[DERIVED] Effective discreteness: finite energy implies finite observable distinctions',
-    '[DERIVED] Resolution scales inversely with available energy',
+    '[DERIVED] Resolution is bounded by available energy; the specific inverse scaling $\\delta_x \\sim \\hbar c/E$ is IMPORTED',
     '[DERIVED] Finitude bounds the maximum simultaneous distinctions any observer can maintain',
     '[DERIVED] All OLUs require continuous energy coupling—isolation is impossible',
     'The formalization supports interpretation of physics, not replacement of it',
