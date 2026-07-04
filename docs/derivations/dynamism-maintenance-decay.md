@@ -130,3 +130,64 @@ Retention time is *exponentially cheap*: each additional $k_B T$ of barrier mult
 An OLU decoupled from all free-energy sources cannot fund corrections (A2 with budget exhausted) or erect new barriers; by (i) every record it holds decays on its timescale $\tau$, and by (iii) no finite prior investment makes any $\tau$ infinite. Hence an isolated OLU cannot function as an OLU *indefinitely*: its capacity to condition on past distinctions degrades toward zero on the timescale of its longest-retained record. The qualifier is load-bearing — an isolated OLU with well-built records can keep functioning for a very long time (Corollary 3), and the treatise's current unqualified "pure isolation is impossible" overstates what is proved (§5 R3).
 
 ---
+
+## 4. The scope fence: what is NOT claimed
+
+Each of these is a known failure mode from the derivation audit or the Arena register. Stating them is part of the derivation, not an apology for it.
+
+1. **Not: the Second Law, derived.** The Arena killed "Second Law as distinction decay" as a derivation (Round 2, D5, 30%), and this chain respects the verdict. The dependence runs one way only: statistical mechanics (K1) is *imported into* the framework to price record decay; nothing here generates entropy increase, equiprobable microstates, or ergodicity from the axioms. The framework translates the Second Law into distinction vocabulary; it does not derive it.
+2. **Not: the arrow of time.** K1's escape rate presupposes a thermal bath already relaxed toward equilibrium — the low-entropy-past boundary condition arrives inside the import. The decay direction of records inherits the bath's arrow; it does not explain it. (Derivation audit: "Time's Arrow — relabel as Open Problem." Concurred; this chain does not touch it.)
+3. **Not: a continuous decay of distinguishability itself.** The distinction operator stays binary. What decays exponentially is the survival *probability* of a record (and hence the *expected* distinguishability over the escape ensemble). Between escapes the record is fully intact; at escape it is gone. The treatise's current phrasing suggests a graded fading of $\diamond$; that reading is disclaimed (and its repair is R1).
+4. **Not: the prefactor.** $\tau_0$ (equivalently $\Gamma_0$) is system-specific physics — attempt frequencies, friction, well curvature. The framework derives nothing about it. All framework-level content lives in the exponent's *structure*, and even that is imported; what is derived is finiteness and the cost accounting built on it.
+5. **Not: a claim that maintenance must be continuous.** The per-unit-time cost can be made exponentially small by prepaying barrier height (Corollary 3), and corrections can be batched. Dynamism's rigorous content is the *nonzero floor and the divergence at infinity*, not metronomic energy drip. Prose that says "continuous maintenance" is gloss, not theorem.
+6. **Not: a claim that maintenance is the only strategy.** An OLU can let a record decay and *re-acquire* the distinction from the world. This escapes nothing relevant: re-acquisition pays the full per-bit acquisition cost (flagship chain, P4) rather than the correction cost, and it requires the source configuration to have itself survived — i.e., someone else paid the maintenance bill. The theorem bounds the cost of *holding* access; it does not forbid renting instead of owning.
+7. **Not: an identity metaphysics.** Corollary 2 models an entity as its $N$ distinction-boundaries. That is a fruitful modeling choice `[INTERPRETED]`, and the processual-existence reading built on it ("persistence is an achievement") is philosophy the framework may defend — but the theorem proves a power floor for boundary-maintenance, not a thesis about what entities *really are*. The slide is hereby marked, not made.
+8. **Not: quantum decoherence theory.** Decoherence is conceptually adjacent (environmental coupling destroying distinguishability of superpositions) but is separate physics with its own formalism; the framework imports QM wholesale (treatise Module 5). No claim that this chain derives or explains decoherence rates.
+
+---
+
+## 5. Honest gaps and proposed relabels
+
+The owner arbitrates these. **None of the treatise changes proposed below has been applied** — this document is the reference; the ratification list is the work order.
+
+**G1 — The exponent conflation.** `[gap in the treatise statement; repair proposed]`
+The treatise writes $\tau(E) = \tau_0 \exp(E/kT)$ with $E$ unglossed, inviting "energy spent on maintenance" as the reading. In K1 the exponent is barrier height $\Delta E_b$. Cumulative expenditure buys retention only through the barriers it erects or the corrections it funds; an OLU that burns joules without raising $\Delta E_b$ gets nothing. Conversion of budget into barrier has efficiency ≤ 1 and is medium-specific. Proposed handling: rename the exponent argument in Theorem 1.9 (R1) and state the conversion caveat once.
+
+**G2 — Kramers validity regime.** `[gap in constants, not in conclusion]`
+K1's formula is quantitative for $\Delta E_b \gtrsim$ a few $k_B T$ (and, strictly, for the overdamped single-well escape geometry Kramers treated). For shallow barriers escape is faster than the formula, and for exotic geometries the prefactor changes. Every conclusion drawn here uses K1 as an *upper bound on stability*, so the errors run in the safe direction. Same shape as the flagship's G1: a gap in constants that leaves "finite for finite investment" untouched.
+
+**G3 — Escape ≠ symmetric loss.** `[noted; does not affect the floor]`
+Step 6 prices the correction of a *detected* flip. A full treatment would model the detector's own error rate and the possibility that a flipped record is corrected to the wrong value — Fano-style corrections analogous to the flagship's G1. These adjust constants (a reliability factor on the correction cost) and leave the floor's existence and divergence structure intact.
+
+**G4 — P3 is interpreted, not derived.** `[the chain's honest soft spot]`
+"Finite investment buys finite barriers" is doing for this chain what A2 does for the flagship, and it has the same epistemic character: an empirical idealization that no one seriously doubts but that the framework does not derive. A rigorous version would need a work-cost lower bound for preparing a system behind a barrier $\Delta E_b$ (plausibly $\gtrsim \Delta E_b$ itself, from detailed balance), which has not been done. `[OPEN]` as a quantitative claim; the qualitative premise stays `[INTERPRETED]`.
+
+**G5 — Sophisticated encodings.** `[constants, not conclusion — with one open edge]`
+I1 assumes independent boundary flips. Error-correcting codes spread one logical bit over many physical records, and the effective logical flip rate can be suppressed super-exponentially in code size. But syndrome extraction and correction are themselves record-and-reset cycles paying P4, and the code's physical records each obey (i). The known shape of the accounting (classical fault-tolerant storage, Gács; quantum threshold theorems) is that indefinite retention still requires nonzero average power — the floor moves, it does not vanish. Making this framework-internal rather than citation-shaped is `[OPEN]`.
+
+**G6 — Topological and symmetry-protected records.** `[the strongest known attack; partially absorbed, honestly open]`
+A record stored in a topological degree of freedom or behind a superselection rule looks like it has $\Delta E_b = \infty$ "by symmetry." Three honest replies, in decreasing strength: (a) at $T > 0$ real topological media have finite gaps $\Delta$ and thermally activated quasiparticles at rate $\sim e^{-\Delta/k_BT} > 0$ — K1 again, with the gap as the barrier; (b) P2: a record an OLU can *read* must couple to a readout channel, and the coupling that permits readout perturbs the protection — perfect protection and readability pull against each other; (c) reply (b) is an argument sketch `[INTERPRETED]`, not a theorem — no quantitative readability-vs-protection trade-off has been derived here. Verdict: absorbed for all physically realized media anyone has built; `[OPEN]` as a matter of principle for hypothetical exactly-protected, still-readable records.
+
+**G7 — The cryogenic loophole.** `[closed by the same import as the flagship]`
+$\tau \to \infty$ as $T \to 0$, so the qualitative claim leans on L2 exactly as the flagship's G3 does, with the same honest note: refrigeration work shifts the accounting rather than escaping it, but folding a refrigeration-work bound into the budget premise has not been done. `[OPEN]` as a quantitative unification; `[DERIVED]` at fixed $T > 0$.
+
+**G8 — Adjacent cleanup: §1.6's stability equation.** `[flagged for owner attention, out of this chain's scope]`
+§1.6's "energy-dependent stability" writes $P(\mathcal{D}, t+\Delta t) = P(\mathcal{D}, t)\cdot\exp(-\gamma(T)\Delta t + E_{\text{maintain}}/E_0)$. As written the maintenance term can drive $P$ above 1, $E_0$ is unexplained, and $P$ elsewhere behaves as a predicate. Whatever intuition it encodes is better carried by Corollary 1's survival form. Noted here because it cites the same decay physics; repairing §1.6 is not attempted in this document.
+
+### Proposed relabels and restatements — for owner ratification, NOT applied
+
+**R1 — Treatise Theorem 1.9 (`thm-distinction-decay`, §1.8).**
+(a) Restate as the survival/expectation form of Corollary 1 (fixes the binary-$\diamond$ type error). (b) Rename the exponent argument $E \to \Delta E_b$ with a one-line barrier-vs-budget gloss (G1). (c) Split the epistemic status: finiteness of retention `derived` (conditional on this ledger); exponential form `imported` (Arrhenius–Kramers). The current single `derived` label with `dependsOn: [A1, def-distinction-operator]` is wrong on both counts — A1 prices erasure, not decay, and the operator definition contains no dynamics. Proposed `dependsOn` should surface the statistical-mechanics import explicitly (the treatise's dependency vocabulary may need an `imports:` field or an explicit K1-style node; owner's call).
+
+**R2 — Treatise Theorem 1.10 (`thm-existence-as-process`, §1.8).**
+Keep `derived`, conditional, with three repairs from Corollary 2: define $\gamma_{\text{decay}} = 1/\tau(\Delta E_b)$; mark the bound as an average-power floor over durations $\gg \tau$; state the independence idealization (I1) and the entity-as-boundaries modeling choice as `[INTERPRETED]`.
+
+**R3 — Treatise Theorem 1.11 (`thm-no-isolated-olus`, §1.9).**
+Add the timescale qualifier per Corollary 4: "cannot function as an OLU *indefinitely*" rather than "pure isolation is impossible." The current proof sentence "all its distinctions would decay, ceasing to function as an OLU" is correct only in the long-time limit and should say so.
+
+**R4 — §1.8 keyPoints.**
+The first keyPoint already half-concedes the import ("specific exponential form uses IMPORTED thermodynamics") while the theorem metadata says `derived` — align both with R1's split. The keyPoint "Existence is processual: maintaining identity requires continuous energy expenditure" should soften "continuous" per scope-fence item 5 (nonzero average power; intermittent is fine).
+
+**R5 — §1.6 stability equation.** Flag per G8; propose replacing the ad-hoc exponential with a pointer to the survival form, or deleting the equation and keeping the prose. Owner's call on scope.
+
+---
