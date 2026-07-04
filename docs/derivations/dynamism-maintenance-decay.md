@@ -80,3 +80,53 @@ For an entity constituted by $N$ distinction-boundaries, flips of distinct bound
 **D4 — Dynamism (timescale-relative form).** The claim to be proved, stated with its quantifiers: *for every OLU record held with finite investment at $T > 0$, there is a finite timescale $\tau$ beyond which the record has decayed with probability approaching 1 unless further expenditure is made; and no finite investment makes $\tau$ infinite.* This is deliberately weaker than "distinctions require *continuous* maintenance" (the treatise's informal gloss) — maintenance can be intermittent and its per-unit-time cost made exponentially small — and deliberately stronger than "things tend to fall apart": it is quantitative, with the exponential trade-off structure of Theorem parts (i)–(iii).
 
 ---
+
+## 3. The theorem
+
+**Theorem (Timescale-Relative Dynamism).**
+Let $O$ be an OLU holding a record of a distinction (P1) in a medium coupled to a reservoir at temperature $T > 0$ (P2, A3), behind a free-energy barrier $\Delta E_b < \infty$ (P3). Then:
+
+**(i) — Finite retention.** Unmaintained, the record's survival probability decays as
+$$P_{\text{intact}}(t) \;=\; e^{-t/\tau}, \qquad \tau \;=\; \tau_0\, e^{\Delta E_b / k_B T},$$
+with $\tau_0 = 1/\Gamma_0$ the inverse attempt frequency. The expected retention time $\tau$ is finite.
+
+**(ii) — Maintenance floor.** Holding the record intact (with probability bounded away from 0) over a duration $t \gg \tau$ by error correction requires expected expenditure at least $(t/\tau) \cdot k_B T \ln 2$: an *average power floor* of
+$$\bar{P} \;\geq\; \frac{k_B T \ln 2}{\tau(\Delta E_b)} \;>\; 0 \quad \text{per record.}$$
+
+**(iii) — No free eternity.** Expenditure-free indefinite retention requires $\tau \to \infty$, i.e. $\Delta E_b \to \infty$ (excluded by P3/A2) or $T \to 0$ (excluded by L2). Hence **no distinction is maintained indefinitely without expenditure** — the rigorous form of the Dynamism principle, exactly as the flagship's revised G2 stated it.
+
+**Proof.**
+
+| # | Statement | Justification |
+|---|-----------|---------------|
+| 1 | The record is a configuration of a physical medium, coupled to a thermal environment at some $T > 0$. | P1 (record is a readable internal-state difference) + P2 (readable ⟹ coupled; the readout channel is a fluctuation channel) + A3 ($T > 0$). |
+| 2 | The configuration is metastable behind a finite barrier $\Delta E_b < \infty$. | P3 (finite investment buys finite barriers). "Metastable, not stable" is forced: a configuration with *no* barrier is not a record at all (it cannot hold a difference readable later), and an infinite barrier is excluded by P3. |
+| 3 | The record therefore escapes its reference state at rate $\Gamma = \Gamma_0 e^{-\Delta E_b/k_BT} > 0$, memorylessly. | K1 applied to the configuration of steps 1–2. Strict positivity: every factor in the exponent is finite (step 2, A3), so $e^{-\Delta E_b/k_BT} > 0$. |
+| 4 | Survival probability is $P_{\text{intact}}(t) = e^{-\Gamma t}$; expected retention $\tau = 1/\Gamma = \tau_0 e^{\Delta E_b/k_BT} < \infty$. | Poisson escape statistics (part of K1). This proves (i). Note the object that decays is a *probability* — the binary operator $\diamond$ never takes fractional values (repairing the treatise's type error, §5 R1). |
+| 5 | Over duration $t \gg \tau$, the expected number of escapes under any correction schedule that keeps the record intact is at least $\sim t/\tau$. | Memorylessness (K1): correction restores the reference configuration, from which escape statistics restart identically. Waiting longer between checks does not reduce the flip rate; it only risks missing flips (and a missed flip is a lost record, not a saved cost). |
+| 6 | Each correction of an escaped record costs at least $k_B T \ln 2$. | P4 (cycle accounting): the reset merges register states — post-flip and reference — into the reference state; a logically irreversible operation priced by L1. Detection can in principle be done reversibly; the *reset conditioned on a flip* cannot. |
+| 7 | Hence expected maintenance expenditure over $t$ is $\geq (t/\tau)\, k_B T \ln 2$, i.e. average power $\geq k_B T \ln 2 / \tau$. | Steps 5 and 6; costs add over corrections (L1 is additive over independent erasures). This proves (ii). |
+| 8 | Zero average power over unbounded $t$ requires $\tau = \infty$, hence $\Delta E_b = \infty$ or $T = 0$. | Read (ii) in the limit: $\bar{P} \to 0$ with $t$ unbounded forces $\tau \to \infty$; by the formula in step 4 this needs the exponent to diverge. |
+| 9 | Both limbs are excluded: $\Delta E_b = \infty$ by P3 (with A2 as its physical ground), $T = 0$ by L2. | P3, A2, L2. This proves (iii). $\blacksquare$ |
+
+**Status.** Part (i): the *finiteness* of retention is `[DERIVED]` given the ledger; the *specific exponential form* is `[IMPORTED]` — it is K1 restated for records, and no axiom of the framework generates it. Part (ii): `[DERIVED]` from (i) + L1/P4. Part (iii): `[DERIVED]` given L2 + P3/A2. As with the flagship, the honest shape of the result is **a theorem of statistical mechanics and information thermodynamics about observers, conditional on a stated model of what a record is.** The framework's contribution is the model (P1, P2, D2–D4) and the assembly, not the physics.
+
+**Corollary 1 (Decay law — treatise Theorem 1.9, repaired form).** `[exponential form IMPORTED; finiteness DERIVED]`
+The *expected* distinguishability carried by an unmaintained record decays exponentially:
+$$\mathbb{E}[\diamond_O(x, y;\, t)] \;=\; \diamond_O(x, y;\, 0) \cdot e^{-t/\tau(\Delta E_b)}, \qquad \tau(\Delta E_b) = \tau_0\, e^{\Delta E_b/k_BT}.$$
+This is the treatise's equation with two repairs: the left side is an expectation over escape statistics (the operator itself stays binary), and the exponent's argument is the barrier height $\Delta E_b$, not a generic "$E$". Energy investment enters only through the barrier it erects — see G3 for what that caveat rules out.
+
+**Corollary 2 (Maintenance scaling — treatise Theorem 1.10, repaired form).** `[DERIVED given I1]`
+An entity constituted by $N$ independently-flipping distinction-boundaries (I1), each behind barrier $\Delta E_b$, requires average maintenance power
+$$\bar{P} \;\geq\; N \cdot \frac{k_B T \ln 2}{\tau(\Delta E_b)}$$
+to persist as that entity over durations $\gg \tau$. This is the treatise's $dE/dt \geq \gamma_{\text{decay}} \cdot D_{\min} \cdot N_{\text{boundaries}}$ with its symbols now defined: $\gamma_{\text{decay}} = 1/\tau(\Delta E_b)$ and $D_{\min} = k_B T \ln 2$. Two honesty notes carried into the statement: it is an *average*-power floor over long durations, not an instantaneous one (maintenance can be intermittent); and "the entity = its $N$ boundaries" is a modeling choice `[INTERPRETED]`, not a metaphysical discovery.
+
+**Corollary 3 (Logarithmic cost of retention).** `[DERIVED]`
+The minimum one-time barrier investment for a record to survive *unmaintained* for duration $t$ with probability $\geq 1 - \varepsilon$ is
+$$\Delta E_b \;\geq\; k_B T \,\ln\!\left(\frac{t}{\tau_0 \ln\frac{1}{1-\varepsilon}}\right) \;\approx\; k_B T \ln\!\left(\frac{t}{\varepsilon\, \tau_0}\right) \;\;(\varepsilon \text{ small}).$$
+Retention time is *exponentially cheap*: each additional $k_B T$ of barrier multiplies the retention time by $e$. Numbers, at $T = 300$ K ($k_B T \approx 0.026$ eV) with a typical attempt time $\tau_0 \sim 10^{-13}$ s: a 1.0 eV barrier holds for hours; 1.5 eV for tens of thousands of years; $\sim$2 eV holds for the age of the universe. This is why flash memory (eV-scale barriers) retains for decades on zero standby power — and why the limit $t \to \infty$ still diverges. Eternity is exponentially cheap and never free. This corollary is what backs the treatise's remark that Platonic Forms, as distinct maintained entities, would need infinite energy: the divergence is logarithmic, but it is a divergence.
+
+**Corollary 4 (No isolated OLUs — treatise Theorem 1.11, repaired form).** `[DERIVED, timescale-qualified]`
+An OLU decoupled from all free-energy sources cannot fund corrections (A2 with budget exhausted) or erect new barriers; by (i) every record it holds decays on its timescale $\tau$, and by (iii) no finite prior investment makes any $\tau$ infinite. Hence an isolated OLU cannot function as an OLU *indefinitely*: its capacity to condition on past distinctions degrades toward zero on the timescale of its longest-retained record. The qualifier is load-bearing — an isolated OLU with well-built records can keep functioning for a very long time (Corollary 3), and the treatise's current unqualified "pure isolation is impossible" overstates what is proved (§5 R3).
+
+---
