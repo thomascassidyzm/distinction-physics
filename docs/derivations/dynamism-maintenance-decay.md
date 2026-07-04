@@ -191,3 +191,47 @@ The first keyPoint already half-concedes the import ("specific exponential form 
 **R5 — §1.6 stability equation.** Flag per G8; propose replacing the ad-hoc exponential with a pointer to the survival form, or deleting the equation and keeping the prose. Owner's call on scope.
 
 ---
+
+## 6. Adversary check: the Arena's attacks against the tightened chain
+
+From the antibody register: the Round 2 attack on D5 (verdict there: "KILLED AS DERIVATION, 30%"), the Round 4 cross-domain attack CD2, the Round 5 formalization attacks (whose failure mode Theorem 1.9 shared), plus the relevant Round 1 material and two attacks the register does not contain but this chain invites. Run against *this* version:
+
+| Attack | Status against tightened chain |
+|---|---|
+| "Second Law as distinction decay is circular — decay IS the Second Law, restated" (Round 2, D5 — the kill) | The kill stands and is honored. This chain never claims to derive the Second Law: K1 is imported *from* statistical mechanics, labeled, and the dependence is stated as one-way (scope fence 1). The circularity attack targets a claim no longer made. What survives is smaller and solid: given stat mech, the *cost structure of record retention* follows. |
+| "Passive decay should be free while active forgetting costs — the framework conflates them" (Round 4, CD2) | Absorbed, and sharpened into structure. Three processes now have distinct price tags: spontaneous decay is free (it is what happens when you stop paying — Theorem (i)); maintenance costs $k_BT\ln 2$ per corrected flip (Theorem (ii)); targeted erasure costs $k_BT\ln 2$ per bit (L1 directly). The register's sleep-consolidation refinement (cheap decay of weak distinctions funding costly strengthening of important ones) is a direct corollary of this price list. |
+| "Decorative math — symbols with no units, no measurement procedure, binary operator forced into continuous equations" (Round 5's kill pattern, 12–15/100 rigor) | This was Theorem 1.9's actual disease: $\diamond \in \{0,1\}$ multiplied by $e^{-t/\tau}$. Repaired by R1: the decaying object is a survival probability, every symbol has units, and the law is *measured physics* — Arrhenius plots, Néel relaxation, flash-retention curves are the measurement procedure. This chain now clears the bar Round 5 set. |
+| "Stable media need no maintenance — Dynamism is false for equilibrium-stable records" (the flagship G2 draft's own retracted proposal) | Absorbed as the theorem's core content, per the owner correction of 2026-07-03: stability is a timescale, not a category (D3). Every medium anyone calls stable is a finite-$\Delta E_b$ medium read at $t \ll \tau$. The attack dissolves into Corollary 3's trade-off curve. |
+| "Cool the register" ($\tau \to \infty$ as $T \to 0$) | Handled at the cost of importing L2, identically to the flagship's G3; the refrigeration-work unification remains `[OPEN]` (G7). Flagged, not absorbed silently. |
+| "Reversible computation evades the floor" (Round 1, Empiric swarm; register Antibody 2) | Absorbed with a sharper edge here than in the flagship: *storage between corrections is genuinely free*, and the chain says so (D2, scope fence 5). The floor sits on barrier erection and on corrections — and decay is what makes "never correct" a losing strategy over $t \gg \tau$. Deferral relocates the cost; K1 guarantees the bill arrives. |
+| "Minimum cost could approach zero asymptotically" (Round 1, Steelman's acknowledged weakness) | For *maintenance*, partially true and now quantified: average power $\propto e^{-\Delta E_b/k_BT}$ can be driven exponentially small (Corollary 3). What cannot reach zero is the total: the prepaid barrier diverges logarithmically as the retention target goes to infinity (Theorem (iii)). The weakness becomes a theorem about *which* quantity vanishes and which diverges. |
+| "Store it topologically / behind a superselection rule — $\Delta E_b = \infty$ by symmetry" (new; this chain invites it) | Partially absorbed: real topological media have finite gaps and thermal quasiparticles (K1 with the gap as barrier), and P2 argues readability itself perturbs protection. But the readability-vs-protection trade-off is an argument sketch, not a theorem. `[OPEN]` in principle (G6) — recorded as the chain's strongest standing attack. |
+| "Re-measure instead of maintaining — outsource retention to the world" (new) | Absorbed by scope fence 6: re-acquisition pays the full acquisition floor per bit (flagship chain) and presupposes a surviving source, i.e. someone paid maintenance upstream. Renting is not free; it is a different customer on the same bill. |
+| "Energy is defined by the physics you claim to derive" (Chaos Agent) | Deflected as in the flagship: this document claims a conditional theorem — statistical mechanics and information thermodynamics applied to a stated model of records — not a generation of physics. The circularity attack targets a claim not made. |
+
+Net: the Arena's one outright kill in this territory (D5) is *ratified* by the tightened chain rather than contested, and the chain's content relocates to ground the register never killed: the cost structure of retention. The strongest standing attack is G6's in-principle protected record, held open honestly.
+
+---
+
+## 7. Status summary for the chain
+
+| Link | Status |
+|---|---|
+| Landauer floor ($k_BT\ln 2$ per irreversible bit) | `[IMPORTED]` |
+| Third law (closes $T \to 0$) | `[IMPORTED]` |
+| Arrhenius–Kramers escape ($\Gamma = \Gamma_0 e^{-\Delta E_b/k_BT}$) | `[IMPORTED]` — newly surfaced as this chain's load-bearing import; supplies the "statistical mechanics assumptions" the roadmap called for |
+| Access = readable record; no reading without coupling | `[INTERPRETED]` — constitutive definitions (P1, P2) |
+| Finite investment buys finite barriers (P3) | `[INTERPRETED]` — the chain's honest soft spot (G4); quantitative version `[OPEN]` |
+| Cycle accounting: corrections are erasures | `[DERIVED]` from Landauer |
+| Finite retention of every record ($\tau < \infty$) | **`[DERIVED]`** conditional on the ledger |
+| Exponential survival form ($e^{-t/\tau}$, $\tau = \tau_0 e^{\Delta E_b/k_BT}$) | `[IMPORTED]` — K1 restated for records |
+| Maintenance power floor ($\bar P \geq k_BT\ln 2/\tau$ per record) | **`[DERIVED]`** conditional on the ledger |
+| No free eternity ($\bar P \to 0$ over unbounded time is impossible) | **`[DERIVED]`** given L2 + P3/A2 |
+| Logarithmic cost of retention (Corollary 3) | `[DERIVED]` — eternity exponentially cheap, never free |
+| Maintenance scaling with $N$ boundaries (treatise Thm 1.10) | `[DERIVED]` given I1 (independence idealization) |
+| No isolated OLUs (treatise Thm 1.11) | `[DERIVED]` in timescale-qualified form only (R3) |
+| "Existence is processual" as metaphysics | `[INTERPRETED]` — fenced (scope fence 7) |
+| Second Law, arrow of time | not claimed — imported territory, per the Arena's D5 kill |
+
+Same verdict shape as the flagship, one chain over: **a theorem of statistical mechanics and information thermodynamics about observers, conditional on a stated model of what a record is** — with its imports on the table, its type error fixed, and the Dynamism principle emerging stronger in its timescale-relative form than in its original absolute one. The flagship's revised G2 now has the reference it cited.
+
