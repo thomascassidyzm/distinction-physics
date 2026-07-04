@@ -114,7 +114,7 @@ $$\bar{P} \;\geq\; \frac{k_B T \ln 2}{\tau(\Delta E_b)} \;>\; 0 \quad \text{per 
 **Corollary 1 (Decay law — treatise Theorem 1.9, repaired form).** `[exponential form IMPORTED; finiteness DERIVED]`
 The *expected* distinguishability carried by an unmaintained record decays exponentially:
 $$\mathbb{E}[\diamond_O(x, y;\, t)] \;=\; \diamond_O(x, y;\, 0) \cdot e^{-t/\tau(\Delta E_b)}, \qquad \tau(\Delta E_b) = \tau_0\, e^{\Delta E_b/k_BT}.$$
-This is the treatise's equation with two repairs: the left side is an expectation over escape statistics (the operator itself stays binary), and the exponent's argument is the barrier height $\Delta E_b$, not a generic "$E$". Energy investment enters only through the barrier it erects — see G3 for what that caveat rules out.
+This is the treatise's equation with two repairs: the left side is an expectation over escape statistics (the operator itself stays binary), and the exponent's argument is the barrier height $\Delta E_b$, not a generic "$E$". Energy investment enters only through the barrier it erects — see G1 for what that caveat rules out.
 
 **Corollary 2 (Maintenance scaling — treatise Theorem 1.10, repaired form).** `[DERIVED given I1]`
 An entity constituted by $N$ independently-flipping distinction-boundaries (I1), each behind barrier $\Delta E_b$, requires average maintenance power
