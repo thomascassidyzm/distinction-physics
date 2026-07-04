@@ -219,3 +219,54 @@ None of R6–R12 conflicts with R1–R5; they touch disjoint treatise passages (
 - **R9 here and R4 there share a pattern** (keyPoint/metadata saying more than the section's own honest prose). They can be ratified independently, but a single editorial pass applying both would be cheaper than two.
 
 No finding in this chain undermines any of R1–R5; Corollary 4's log-vs-power-law observation mildly *supports* R1's split labeling (finiteness derived, exponential form imported), since it shows the same informational/physical division recurring across chains.
+
+---
+
+## 6. Adversary check: the Arena's attacks against the tightened chain
+
+From the antibody register: the Round 2 attack on D2 (verdict there: "KILLED AS DERIVATION, 25%" — the register's worst surviving score), Antibodies 10 and 11, Refinements 2 and 3; from the Module 5 red team: AV-2.2, AV-4.2, AV-4.3; plus the Round 1/D1 material this chain inherits from the flagship and three attacks the register does not contain but this chain invites. Run against *this* version:
+
+| Attack | Status against tightened chain |
+|---|---|
+| "Cannot derive $\hbar/2$; conflates epistemic/ontological; Bell violations; QM applies without observers" (Round 2, D2 — the kill) | The kill stands and is **ratified with a proof attached**: Corollary 2 shows the resource trade-off has the wrong selectivity structure to be complementarity (pairing-blind and soft vs. pairing-specific and hard), so no amount of future tightening of *this* chain could reach $\hbar/2$. The chain's content relocates to ground the Arena never attacked: the joint allocation theorem and its exchange rate. Epistemic/ontic: the theorem is explicitly about records (scope fence 3). Bell: conceded per Antibody 11 (scope fence 3). Observer-free QM: no claim that QM needs observers is made anywhere in the chain. |
+| "The consistency admission undermines the module's framing — consistency is not derivation" (Module 5 red team, AV-2.2) | Absorbed by relocation. The complaint was that "consistent with" floated with nothing derived beneath it. Now the territory contains an actual theorem (Resolution Budget, parts (i)–(iv)) that is `[DERIVED]` on the ledger, and the consistency claim is confined to the *quantum* relation, where it belongs. "Consistent with" is no longer the framework's only product here; it is the label on exactly the one item that earns no stronger label. |
+| "You can't derive $\hbar$ or specific constants" (Antibody 10) | Ratified and sharpened: the chain states positively *which* constant it does derive as the trade-off scale — $k_B T \ln 2$ per bit — and proposes deleting the residual "$\hbar$ as exchange rate" prose (R7). The honest response is no longer only "we're qualitative"; it is "our constant is $k_B T \ln 2$, and it is not $\hbar$." |
+| "QM uncertainty can't be just resource limitation — Bell proves it" (Antibody 11) | Ratified; the two treatise lines that still flirt with the epistemic reading are proposed for softening (R10). The theorem never touches quantum-state ontology. |
+| "Hidden assumption of perfect precision / analog loophole / 'effectively' is vacuous" (Round 2, D1 — inherited) | Absorbed as in the flagship: the theorem is a quantitative bound on resolution acts (D1), reference is fenced (scope fence 8), and the bound's content is the formula, not the $N \to \infty$ limit. |
+| "Watts are not joules — the budget is dimensionally confused" (AV-4.2) | Absorbed in the theorem (A2 is per-epoch energy, stated) and proposed as a table repair (R11, G5). The red team's collider-vs-laptop example now appears in the gap list verbatim because it is correct. |
+| "The modified-uncertainty prediction is an unfalsifiable template" (AV-4.3) | Conceded and *disowned*: this chain affirmatively states that nothing in the derived bound generates any correction to $\hbar/2$ (G6), so Prediction 5 cannot cite the resource trade-off as motivation. Flagged to the prediction-operationalization work rather than defended. |
+| "Commuting observables: QM lets you know both sharply, so allocation trade-offs are refuted" (new; this chain invites it) | Absorbed by Corollary 2, which *asserts* the trade-off for commuting pairs — correctly: recording two sharp commuting values still costs bits against one budget. The attack refutes the *identification* of the trade-off with complementarity, which the chain has already disclaimed; against the budget bound itself it has no force. |
+| "Your derived floor is 28 orders of magnitude slack — thermodynamics is irrelevant to real resolution" (new) | Absorbed honestly by Corollary 3: for *probing*, yes — the operative limits are imported, and the chain says so in bold. The derived bound binds where it claims to: concurrently-held information and the trade-off structure. Slack is not falsity; but the credit-claiming the slack tempts is fenced (G4, R12). |
+| "Squeezed states buy precision below the vacuum floor — the budget story misprices QM" (new) | Absorbed by scope fence 6: squeezing pays in the conjugate variable per Q1 and in energy ($\sim 1/(\Delta x)^2$, imported); neither payment is Landauer's, and the chain never claimed QM's energetics reduce to bit-pricing. |
+| "Cool the register" ($N_{\max} \to \infty$ as $T \to 0$) | Handled at the cost of importing L2, identically to the flagship's G3 and Dynamism's G7; the refrigeration-work unification remains `[OPEN]` (G7). Flagged, not absorbed silently. |
+| "Sequential refinement escapes any single budget" (Round 2, D1 tail — inherited) | Absorbed by the concurrent/sequential split (D3, C1, G2): sequential acts escape (ii) and run into the flagship's per-epoch/lifetime accounting instead; composition into joint discrimination re-enters (ii) via C1(b). |
+| "Energy is defined by the physics you claim to derive" (Chaos Agent) | Deflected as in both prior chains: this document claims a conditional theorem of information thermodynamics about a stated observer model, not a generation of physics. The circularity attack targets a claim not made. |
+
+Net: the Arena's worst kill in the register (D2, 25%) is ratified *with a structural proof of why it had to be a kill* (Corollary 2) — turning the framework's biggest overclaim into its clearest boundary marker. The chain's surviving content is the joint allocation theorem, which no attack in the register or the red team touches. The strongest standing weakness is G1 (grain vs. standard deviation), held open honestly: it is what any future quantitative contact with QM would have to build first.
+
+---
+
+## 7. Status summary for the chain
+
+| Link | Status |
+|---|---|
+| Landauer floor ($k_B T \ln 2$ per irreversible bit) | `[IMPORTED]` |
+| Third law (closes $T \to 0$) | `[IMPORTED]` |
+| Robertson–Kennard relation, $\hbar/2$, commutators | `[IMPORTED]` — contrast only; never enters the proof |
+| Probe-resolution scaling ($\delta_x \sim \hbar c/E$) and Planck floor | `[IMPORTED]` — per flagship G4 relabels, already applied in §§1.4–1.5 |
+| Access = readable record; registration faithfulness | `[INTERPRETED]` — constitutive definitions (P1, P2) |
+| Register counting; cycle accounting | `[IMPORTED]` (elementary) / `[DERIVED]` from Landauer |
+| Concurrency accounting (concurrent bit costs add; sequential ≠ joint) | `[DERIVED]` from P3 + P4 (C1) |
+| Finite budget per epoch; $T > 0$ | `[INTERPRETED]` empirical idealizations, stated |
+| **Single-property resolution bound** ($E \geq k_BT\ln 2 \cdot \log_2(L/\delta)$) — core claim 1, quantified | **`[DERIVED]`** conditional on the ledger |
+| **Joint allocation bound** ($\sum \log_2 N_i \leq E/k_BT\ln 2$) — core claim 2, quantified | **`[DERIVED]`** conditional on the ledger |
+| **Exchange rate** (bit-for-bit at $k_BT\ln 2$; not $\hbar$) | **`[DERIVED]`** conditional on the ledger |
+| Grain-product relation ($\delta_1\delta_2 \geq L_1L_2\,2^{-E/k_BT\ln 2}$) | `[DERIVED]` — resemblance to Heisenberg disclaimed (§4 table) |
+| Pairing-blindness (trade-off binds commuting pairs too) | `[DERIVED]` — the structural ratification of the Arena's D2 kill |
+| No free continuum ($\delta \to 0$ needs $E \to \infty$ or $T \to 0$) | `[DERIVED]` given L2 |
+| "Heisenberg as resource allocation" | not claimed — `[INTERPRETED]` vocabulary at most, per Refinement 3; killed as derivation and ratified here |
+| "$\hbar$ is the exchange rate between distinctions" | `[CONJECTURED]` at best — proposed demotion (R7) |
+| "Uncertainty is thermodynamic, not metaphysical" | not claimed — philosophy outside the theorem; proposed softening (R10) |
+| Grain ↔ standard-deviation bridge | `[OPEN]` — the chain's honest soft spot (G1) |
+
+Same verdict shape as the prior chains, one chain over: **a theorem of information thermodynamics about observers, conditional on a stated model of what an observer is** — with the Arena's harshest kill ratified rather than contested, the two transcendental-core claims it guards now carrying quantitative forms with an exact exchange rate, and the framework's distance from $\hbar$ stated as a theorem instead of hidden as a hope.
