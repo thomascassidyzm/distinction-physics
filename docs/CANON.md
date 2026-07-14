@@ -118,12 +118,25 @@ Two structural facts about the spread:
 
 Flagged honestly, ranked by how load-bearing they are. These are forks needing a ruling, not errors to patch silently.
 
-### C1. Ontological priority vs expressibility-only — the claim's strength forks at the root
+### C1. Ontological priority vs expressibility-only — the claim's strength forks at the root — **RULED 2026-07-14**
 
 - `docs/meta/foundational-intent.md:143` and `the-assumption-problem.md:143`: distinction-making is "**logically and ontologically prior** to all theorizing."
 - Treatise §0.0 (V8): "first in the order of what can be *expressed*, **not as a pronouncement about what reality is made of** … Be careful with that claim — it is *not* the metaphysical one that distinction is primitive *in reality*. That would be a stronger thing, and we don't need it."
 
-The treatise explicitly disclaims exactly what the meta docs claim. The V8 scoping is the battle-hardened position; the meta docs predate it and were never updated. But "ontologically prior" is also the version the products inherited ("Understanding IS a network of distinctions" is an ontological register). **Ruling needed: is the canonical claim expressibility-only, or ontological?**
+The treatise explicitly disclaims exactly what the meta docs claim. The V8 scoping is the battle-hardened position; the meta docs predate it and were never updated. But "ontologically prior" is also the version the products inherited ("Understanding IS a network of distinctions" is an ontological register).
+
+**Ruling: the dichotomy is DISSOLVED, not chosen between. Ontology itself is an OLU construct; the question the contradiction presupposes is malformed.**
+
+> "helpful >> true. there is no coherence to the question 'reality' as actually is. ontology is a human construct — borne possibly from a monotheistic belief system that there must be an actual true way of things existing. this is not a requirement of the universe. the slice of the universe we experience as OLU is consistent with the laws of physics, precisely because we make observations the way we do as OLU. but it's a human construct borne of hubris that yearns for reality as truth. what is the true time? what is the true position? where and when are we right now? everything is relative, by necessity — in order to be consistent with what is POSSIBLE to be observed by OLU. ontology ITSELF collapses under the distinction-is-primitive framework. ontology is an OLU construct that results from the existence of the concept of reality as somehow separate from observation."
+> — Tom Cassidy, 2026-07-14
+
+Consequences:
+
+1. The treatise V8 expressibility-only stance is retained as the defensive perimeter for hostile readers — not a retreat, since the stronger question is malformed.
+2. The meta-doc phrase "ontologically prior" (`docs/meta/foundational-intent.md:143`, `the-assumption-problem.md:143`) should be recast as "prior to any question, including the question of ontology" — flagged for edit, not yet edited.
+3. Alexander's "Understanding IS a network of precise distinctions" stands unmodified — no separate ontological register remains for it to conflict with.
+4. C3 dissolves with C1 (see C3).
+5. The known edge, stated as stance not defended: the regress objection ("that claim is itself ontology") is answered by Helpful >> True — the framework does not enter the regress.
 
 ### C2. Which claim is THE core — transcendental priority or energetic cost
 
@@ -132,12 +145,14 @@ The treatise explicitly disclaims exactly what the meta docs claim. The V8 scopi
 
 One is a priori and unfalsifiable by design; the other is empirical and does all the deriving. Different documents lead with different ones, and the abstract splits the difference. [ASSEMBLER: these are compatible — kernel plus engine — but the estate never says which one the thesis *is named after*, and the answer decides how the work gets attacked.]
 
-### C3. Does reality exceed distinctions, or is relational structure all there is?
+### C3. Does reality exceed distinctions, or is relational structure all there is? — **RULED 2026-07-14**
 
 - `what-this-is.md:40`: "Reality necessarily exceeds any observer's distinctions." Likewise transcendental-core §2.4: undistinguished structure exists for every OLU.
 - `philosophical-position.md:92,152`: "The view-from-nowhere physics is not inaccessible to us; it is **incoherent as a concept**" … "There is no inaccessible noumenal realm 'behind' the relational structure. The relational structure is all there is."
 
 Epistemic humility in one doc, full ontic structural realism in the other — a genuine metaphysical fork, not wording. The July derivation chain sides with humility ("The theorem bounds *access*, not ontology… hereby marked, not made" — effective-discreteness §4.1) and treats the OSR move as an unearned extra.
+
+**Ruling: dissolves with C1.** "Reality exceeds distinctions" presupposes the observation-independent reality the C1 ruling denies — see the quote and consequences under C1. The July chain's "bounds access, not ontology" is noted as still granting the frame the ruling removes: it treats ontology as a coherent thing that access could fall short of, which is exactly the presupposition C1 dissolves.
 
 ### C4. CE: decoupled or re-coupling?
 
