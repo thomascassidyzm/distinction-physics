@@ -142,7 +142,7 @@ This connects to:
 
 ### The Honest Claim
 
-> Distinction as Primitive is a philosophical framework establishing that distinction-making is logically and ontologically prior to all theorizing. From this perspective, physics, mathematics, logic, and consciousness can be understood as manifestations of distinction-making under various constraints. The framework's most developed contribution is in understanding learning as anti-entropic distinction pattern building.
+> Distinction as Primitive is a philosophical framework establishing that distinction-making is logically prior to all theorizing — prior to any question, including the question of ontology. From this perspective, physics, mathematics, logic, and consciousness can be understood as manifestations of distinction-making under various constraints. The framework's most developed contribution is in understanding learning as anti-entropic distinction pattern building.
 
 ---
 

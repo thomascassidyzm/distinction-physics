@@ -140,7 +140,7 @@ This is the transcendental priority of distinction. It's not a bug — it's the 
 
 **Honest statement of Distinction as Primitive:**
 
-> We do not derive physics from nothing. No one does. We start from the observation that distinction-making is logically and ontologically prior to all theorizing — you cannot state any premise without first making distinctions. Given that distinctions cost energy (Landauer) and energy budgets are finite (observation), we show that certain features of physics, mathematics, and cognition follow necessarily or are naturally interpretable through this lens. The framework complements existing physics rather than replacing it.
+> We do not derive physics from nothing. No one does. We start from the observation that distinction-making is logically prior to all theorizing — prior to any question, including the question of ontology: you cannot state any premise without first making distinctions. Given that distinctions cost energy (Landauer) and energy budgets are finite (observation), we show that certain features of physics, mathematics, and cognition follow necessarily or are naturally interpretable through this lens. The framework complements existing physics rather than replacing it.
 
 This is defensible. The overclaiming was the problem, not the insight.
 

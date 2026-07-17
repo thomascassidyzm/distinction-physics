@@ -133,7 +133,7 @@ The treatise explicitly disclaims exactly what the meta docs claim. The V8 scopi
 Consequences:
 
 1. The treatise V8 expressibility-only stance is retained as the defensive perimeter for hostile readers — not a retreat, since the stronger question is malformed.
-2. The meta-doc phrase "ontologically prior" (`docs/meta/foundational-intent.md:143`, `the-assumption-problem.md:143`) should be recast as "prior to any question, including the question of ontology" — flagged for edit, not yet edited.
+2. The meta-doc phrase "ontologically prior" (`docs/meta/foundational-intent.md:143`, `the-assumption-problem.md:143`) recast as "prior to any question, including the question of ontology" — edited 2026-07-17 at both sites.
 3. Alexander's "Understanding IS a network of precise distinctions" stands unmodified — no separate ontological register remains for it to conflict with.
 4. C3 dissolves with C1 (see C3).
 5. The known edge, stated as stance not defended: the regress objection ("that claim is itself ontology") is answered by Helpful >> True — the framework does not enter the regress.
