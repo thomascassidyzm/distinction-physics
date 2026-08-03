@@ -56,7 +56,7 @@ Pointers, at citation depth:
 
   **Further public record, same design, four languages.** Beyond the Welsh and Croatian cases above, three more publicly timestamped items sit on the same evidence base:
   - **Japanuary (Japanese)** — the public face of the Japanese sprint probe cited above (§4.2.5.1): daily vlogs plus initial and final calls with a Japanese native speaker: https://youtu.be/KOzGmYEgISs?si=3is1KDdKMnqx4DpF — not additional evidence, the *same* experiment, now with its public record linked
-  - **The Irish sprint** — likewise the Irish sprint probe above, publicly recorded: an interview conducted in Irish on local radio (link to be added)
+  - **The Irish sprint** — likewise the Irish sprint probe above, publicly recorded: an interview conducted in Irish on RTÉ Raidió na Gaeltachta: https://www.rte.ie/radio/rnag/clips/22557598/ [VERIFY: Tom's identification of the clip, 2026-08-03 — one listen to confirm; RTÉ blocks automated checks]
   - **Irina at 3 months** — an independent learner, not SSi-affiliated: https://youtu.be/pUNEbdjFRns?si=p26m7nb11Zq0Io0T
   - **Sri Lanka — Tamil-speaking English teachers, Hill Country** — spoke Welsh after one hour of in-app time: https://youtu.be/WHYy1Xmms3U?si=jlksi5hnPddRgAXB
 
