@@ -40,7 +40,7 @@ These are stated once, domain-general, so that the cases below are instances —
 
 ## 3. Case 1 — SSi (language): the richest evidence, pointed to
 
-SSi Learning's HISE methodology is seventeen years of action research — the treatise itself says tens of thousands of learners (§4.2.3); the larger figure sometimes quoted, hundreds of thousands, needs checking against SSi's own records [VERIFY]. The directional honesty matters and is already in the treatise: the method was found by trial and error first; Module 4 interprets it afterwards as approximately least-action (§4.2.3, stated as interpretation, not derivation).
+SSi Learning's HISE methodology is seventeen years of action research with tens of thousands of learners since 2009 (the treatise's own figure, §4.2.3; cumulative counts run higher — Tom's ruling 2026-08-03: both measures are correct, and this document deliberately uses the modest one, since its evidential weight rests on duration and the band-edge result, not headcount). The directional honesty matters and is already in the treatise: the method was found by trial and error first; Module 4 interprets it afterwards as approximately least-action (§4.2.3, stated as interpretation, not derivation).
 
 Pointers, at citation depth:
 
