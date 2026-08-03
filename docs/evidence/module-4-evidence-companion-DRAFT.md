@@ -36,6 +36,8 @@ If Module 4 is right, it is right about *learning*, not about languages. Any con
 
 5. **Adherence is the binding constraint, so shame is off-trajectory by definition.** The energy budget (Axiom 2) is spent by a motivated human or not at all. Any mechanic that converts a missed session into guilt raises the energy cost of returning — action spent against the trajectory. [INFERRED — the treatise derives the budget constraint; reading motivational design as part of the cost functional is the extension this companion registers.]
 
+   [WATSON — proposed addition, 2026-08-03, authorised by Tom to contribute marked derivations.] Prediction 5 has a positive counterpart. If guilt raises the energy cost of returning, the cheapest way to *lower* it is **fulfilled prediction**: a system that says at the outset "around thirty hours in, three specific things will happen," and then shows the learner each one happening *to them*, converts trust in the method into reduced deliberation cost at every session start — trust transfers from the system to the method to the learner's own becoming. Doubt is an energy tax on returning; witnessed fulfilment is its refund. Falsifiable corollary: at matched competence outcomes, learners shown their predicted trajectory coming true should show measurably higher return rates than learners shown identical progress without the prediction having been made. If prediction-framing adds nothing over raw progress display, this addition is wrong and shame-avoidance alone carries prediction 5.
+
 These are stated once, domain-general, so that the cases below are instances — not the definition.
 
 ## 3. Case 1 — SSi (language): the richest evidence, pointed to
