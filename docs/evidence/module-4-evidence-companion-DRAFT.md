@@ -55,12 +55,12 @@ Pointers, at citation depth:
   **Public record:** the 30-hour milestone now has a public anchor — Tom's own 30 days × 1 hour of Welsh, culminating in an interview conducted in Welsh on S4C. Playlist: https://youtube.com/playlist?list=PL30thht5dqNC4aUGmS11nC4b6O-62OqLr&si=jMaiY4ZjCVX_w1Rl
 
   **Further public record, same design, four languages.** Beyond the Welsh and Croatian cases above, three more publicly timestamped items sit on the same evidence base:
-  - **Japanuary (Japanese)** — daily vlogs plus initial and final calls with a Japanese native speaker: https://youtu.be/KOzGmYEgISs?si=3is1KDdKMnqx4DpF
-  - **The Irish sprint** — an interview conducted in Irish on local radio, recorded and public (link to be added)
+  - **Japanuary (Japanese)** — the public face of the Japanese sprint probe cited above (§4.2.5.1): daily vlogs plus initial and final calls with a Japanese native speaker: https://youtu.be/KOzGmYEgISs?si=3is1KDdKMnqx4DpF — not additional evidence, the *same* experiment, now with its public record linked
+  - **The Irish sprint** — likewise the Irish sprint probe above, publicly recorded: an interview conducted in Irish on local radio (link to be added)
   - **Irina at 3 months** — an independent learner, not SSi-affiliated: https://youtu.be/pUNEbdjFRns?si=p26m7nb11Zq0Io0T
   - **Sri Lanka — Tamil-speaking English teachers, Hill Country** — spoke Welsh after one hour of in-app time: https://youtu.be/WHYy1Xmms3U?si=jlksi5hnPddRgAXB
 
-  Together these give four-language replication, independent learners as well as founders, and records that predate the claims (YouTube timestamps).
+  Together these give four-language replication (counting each experiment once — the sprint probes appear both in the evidence bullet above and here, because the public recordings and the audited probes are the same two studies), independent learners as well as founders, and records that predate the claims (YouTube timestamps).
 
 - **Adherence as the boundary condition.** SSi's design doctrine — no streaks, no shame, returns celebrated as consolidation ("your brain has been consolidating"), rewards on practice quality with the formula hidden — is prediction 5 implemented. SSi's operating experience is that adherence, not method, is the challenge: the first ~30 hours are the hard yards, and tiny-daily cadence is psychologically the *worst* path despite sounding easiest. Attention-hours are the unit; cadence is free.
 
