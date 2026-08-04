@@ -1,8 +1,8 @@
-# Distinction Physics: Academic Treatise Architecture
+# PRIMITIVE: Academic Treatise Architecture
 
 ## Overview
 
-This document defines the content architecture for rendering "Distinction as Primitive" as a proper academic treatise with full scholarly apparatus.
+This document defines the content architecture for rendering "Distinction as Primitive" as a proper academic treatise with full scholarly apparatus. The project is named PRIMITIVE — see [NAMING.md](NAMING.md).
 
 ---
 

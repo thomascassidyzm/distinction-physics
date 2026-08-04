@@ -174,6 +174,8 @@ Both currently stand in the CE repo. See §4.
 
 `foundational-intent.md` rules: "**Distinction as Primitive** (not 'Distinction Physics')." The treatise title complies (`meta.ts`: "Distinction as Primitive"). The repo, README, deployed site, glossary title, and every external citation (SSi brief, CE lineage page, site marketing copy) still say "Distinction Physics." The ruling exists; the estate audit never happened.
 
+[ASSEMBLER, 2026-08-04: partly closed. Tom ruled the project is named **PRIMITIVE** and gave the reason — it is not hard physics; it is the metaphysics, logic and ethics of being an OLU. The wrapper inside this repo (README, `TREATISE_ARCHITECTURE.md`, `package.json`) now says PRIMITIVE; the treatise keeps its own title, *Distinction as Primitive*. His articulation is quoted verbatim in `NAMING.md`. Still open: the repo slug, the directory, the Vercel URL, and the external citations in CE and `tomcassidy-site` — costed in `docs/rename-blast-radius.md`, not executed.]
+
 ### C7. What OLU expands to
 
 - `docs/meta/glossary.md:54`: "Observer-Like-**Us** (OLU)" — also `philosophical-position.md`, `transcendental-core.md`.

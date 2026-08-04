@@ -1,6 +1,10 @@
-# Distinction Physics
+# PRIMITIVE
 
-This repository (`~/distinction-physics`, deployed site) is the canonical home of the Distinction Project. Other locations (`~/Distinction_Project`, `~/BoundaryFramework`, `~/living-epistemic-work-concept`) are superseded.
+*Formerly Distinction Physics. The treatise is titled **Distinction as Primitive**. See [NAMING.md](NAMING.md) for the ruling and Tom's reasoning, 2026-08-04.*
+
+This repository (deployed site) is the canonical home of the Distinction Project. Other locations (`~/Distinction_Project`, `~/BoundaryFramework`, `~/living-epistemic-work-concept`) are superseded.
+
+The name changed because the work is not hard physics and should not be confused with it. It is the metaphysics, the logic, and the ethics of being an OLU — an observer that is computationally bounded and has a sense of persistence over time. Ontological humility before epistemic humility: we have no access to absolutes, and third-person "reality" is a human construct triangulated from first-person experience. What follows is a question about what it means to know as such an observer, and then a question about what to do.
 
 A meta-theoretical framework that reads the structure of accessible reality through two axioms about distinction-making under energy constraints — offering interpretive vocabulary complementary to established science, not a new physics.
 
