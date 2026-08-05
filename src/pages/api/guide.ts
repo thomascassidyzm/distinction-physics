@@ -2,6 +2,8 @@ import type { APIRoute } from 'astro';
 import { buildPromptWithContext } from '../../lib/guide-prompt';
 import { extractAndRenderMath } from '../../lib/math';
 
+export const prerender = false;
+
 interface ChatMessage {
   role: 'user' | 'assistant';
   content: string;
@@ -15,21 +17,26 @@ const MODEL_BY_TIER: Record<ModelTier, string> = {
   opus: 'claude-opus-4-7',
 };
 
+interface GuideContext {
+  currentSection?: string;
+  currentSectionTitle?: string;
+  epistemicStatus?: string;
+}
+
+// history and context are optional: the GuidePanel always sends them, but the
+// endpoint is also hit bare ({ message }) by probes and by any other caller.
+// Missing evidence must not fire the catch-all 500.
 interface RequestBody {
   message: string;
-  history: ChatMessage[];
-  context: {
-    currentSection?: string;
-    currentSectionTitle?: string;
-    epistemicStatus?: string;
-  };
+  history?: ChatMessage[];
+  context?: GuideContext;
   tier?: ModelTier;
 }
 
 export const POST: APIRoute = async ({ request }) => {
   try {
     const body: RequestBody = await request.json();
-    const { message, history, context, tier } = body;
+    const { message, history = [], context = {}, tier } = body;
     const selectedTier: ModelTier = tier && tier in MODEL_BY_TIER ? tier : 'haiku';
     const selectedModel = MODEL_BY_TIER[selectedTier];
 
@@ -51,7 +58,7 @@ export const POST: APIRoute = async ({ request }) => {
     const systemPrompt = buildPromptWithContext(message, context);
 
     const messages = [
-      ...history.map((msg) => ({
+      ...(Array.isArray(history) ? history : []).map((msg) => ({
         role: msg.role,
         content: msg.content,
       })),
