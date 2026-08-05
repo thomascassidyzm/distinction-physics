@@ -1,6 +1,6 @@
-# PRIMITIVE
+# Distinction as Primitive
 
-*Formerly Distinction Physics. The treatise is titled **Distinction as Primitive**. See [NAMING.md](NAMING.md) for the ruling and Tom's reasoning, 2026-08-04.*
+*Formerly Distinction Physics. The project and the treatise carry the same name. See [NAMING.md](NAMING.md) for the ruling and Tom's reasoning, 2026-08-04, and the 2026-08-05 correction.*
 
 This repository (deployed site) is the canonical home of the Distinction Project. Other locations (`~/Distinction_Project`, `~/BoundaryFramework`, `~/living-epistemic-work-concept`) are superseded.
 

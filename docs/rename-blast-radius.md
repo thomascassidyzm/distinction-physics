@@ -1,6 +1,8 @@
 # Full rename — blast radius
 
-*Decision paper for Tom, 2026-08-04. NOTHING HERE HAS BEEN EXECUTED. The presented identity is already renamed on branch `rename/primitive` (see [../NAMING.md](../NAMING.md)); this document costs the remaining, riskier half: the directory `~/distinction-physics` and the GitHub slug `thomascassidyzm/distinction-physics`.*
+*Decision paper for Tom, 2026-08-04. NOTHING HERE HAS BEEN EXECUTED. The presented identity is already renamed (see [../NAMING.md](../NAMING.md)); this document costs the remaining, riskier half: the directory `~/distinction-physics` and the GitHub slug `thomascassidyzm/distinction-physics`.*
+
+*Correction, 2026-08-05: this paper was written while the wrapper name was PRIMITIVE. Tom has since ruled the name is **Distinction as Primitive**, so wherever the tables below propose `~/primitive` or the slug `primitive`, read `~/distinction-as-primitive` and `distinction-as-primitive`. Nothing else in the costing changes — and the recommendation, unchanged, is still not to move the directory or the slug at all.*
 
 Every path and count below was read from the live estate, not estimated.
 
@@ -41,6 +43,6 @@ Every path and count below was read from the live estate, not estimated.
 
 ## Recommendation
 
-**Do not rename the directory or the GitHub slug yet.** The presented identity — README, package, treatise title, the canonical NAMING.md — is already PRIMITIVE on branch `rename/primitive`, and that is what anyone arriving at the work actually sees. The directory and slug are plumbing: renaming them buys tidiness and costs a coordinated migration across the Command Surface database (jobs, channel membership, repo state), two ops scripts, `nodes.js`, and a Vercel URL that other repos link to.
+**Do not rename the directory or the GitHub slug yet.** The presented identity — README, package, treatise title, the canonical NAMING.md — already reads Distinction as Primitive, and that is what anyone arriving at the work actually sees. The directory and slug are plumbing: renaming them buys tidiness and costs a coordinated migration across the Command Surface database (jobs, channel membership, repo state), two ops scripts, `nodes.js`, and a Vercel URL that other repos link to.
 
 **The cheaper alternative, and the one I recommend: keep the directory and the repo slug; rename only the presented identity.** If the slug does eventually matter — because the work gets its own domain, say — do it then, as one deliberate pass: stop the surface, run the cwd UPDATE transaction, edit `nodes.js` and `mirror-pull.sh`, set the remote URL, and decide the Vercel URL question in the same sitting.
