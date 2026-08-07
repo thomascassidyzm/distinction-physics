@@ -53,21 +53,21 @@ export const section1_11: Section = {
         },
         {
           content:
-            '**Effective Discreteness**: All observable quantities are effectively quantized for finite-energy observers [DERIVED]',
+            '**Effective Discreteness**: All observable quantities are effectively discrete for finite-energy observers [DERIVED, conditional on the assumption ledger - see `docs/derivations/effective-discreteness.md`]',
         },
         {
           content: '**Resolution-Energy Scaling**: $\\delta_x \\propto \\hbar c / E$ [IMPORTED — de Broglie + kinematics; the axioms derive only THAT resolution is energy-bounded, not this form (§1.4)]',
         },
         {
           content:
-            '**Finitude Bound**: $N_{\\max} \\leq E_{\\text{total}} / kT \\ln 2$ [DERIVED]',
+            '**Finitude Bound**: $N_{\\max} \\leq E_{\\text{total}} / kT \\ln 2$ [DERIVED per epoch; the lifetime form needs one further empirical premise - flagship Corollary 2]',
         },
         {
           content:
             '**Distinction Decay**: Exponential decay without maintenance energy [DERIVED, form uses IMPORTED thermodynamics]',
         },
         {
-          content: '**No Isolation**: All OLUs require energy coupling [DERIVED]',
+          content: '**No Isolation**: All OLUs require energy coupling [DERIVED in timescale-qualified form only - chain 2 Corollary 4]',
         },
       ],
     },
@@ -84,7 +84,7 @@ export const section1_11: Section = {
       headers: ['Physical Concept', 'Framework Interpretation'],
       rows: [
         ['Quantum uncertainty', 'Energy allocation trade-off (consistent with, not derived)'],
-        ['Quantization', 'Necessary for finite-energy observers'],
+        ['Quantization', 'Access is effectively discrete for finite-energy observers - a bound on resolution, not an account of quantum quantization (§1.4 scope fence)'],
         ['Second Law', 'Distinction decay in isolated systems'],
         ["Landauer's limit", 'Minimum cost per bit of distinction'],
       ],
@@ -99,7 +99,7 @@ export const section1_11: Section = {
     {
       type: 'paragraph',
       content:
-        'The mathematics backs what Module 0 argued in prose: **the structure of observable physics is consistent with distinction-making under finite energy**. Three things we genuinely derive - discreteness, resolution limits, finitude. The rest - quantum uncertainty, entropy - we read through the lens, no more. Keep the two apart, and the claim stays honest.',
+        'The mathematics backs what Module 0 argued in prose: **the structure of observable physics is consistent with distinction-making under finite energy**. Three chains we genuinely derive - effective discreteness, the resolution budget, finite retention - and each is conditional on a stated ledger of assumptions, never proven outright. Finitude comes with them, as a corollary needing one further premise. The rest - quantum uncertainty, entropy - we read through the lens, no more. Keep the two apart, and the claim stays honest.',
       emphasis: 'key',
     },
     {
@@ -137,9 +137,9 @@ export const section1_11: Section = {
       points: [
         'The distinction operator provides interpretive vocabulary for the philosophical insights of Module 0',
         "Landauer's limit is IMPORTED as the minimum energy cost per OLU-accessible distinction (which involves irreversible recording — see §0.3) — not derived from axioms alone",
-        '[DERIVED] Effective discreteness: continuous quantities are inaccessible to finite-energy observers',
-        '[DERIVED] Resolution and energy are inversely related; the Planck scale (IMPORTED) is the absolute limit',
-        '[DERIVED] All observers require continuous energy coupling; isolation is thermodynamically impossible',
+        '[DERIVED, conditional on a stated ledger] Effective discreteness: continuous quantities cannot be fully resolved by finite-energy observers - reference stays cheap, resolution is what costs',
+        '[DERIVED] *That* resolution is bounded by budget; *which* scales a given budget buys is [IMPORTED] probe physics, and the Planck scale is likewise imported',
+        '[DERIVED, timescale-qualified] All observers require energy coupling at nonzero average power; isolation is thermodynamically impossible over any long enough duration',
         'The framework provides interpretive vocabulary consistent with physics, not a replacement for it',
       ],
     },
@@ -147,7 +147,7 @@ export const section1_11: Section = {
   keyPoints: [
     'This module formalizes Module 0 philosophical insights into mathematical structures',
     'Core definitions: distinction operator, energy-indexed distinction, observer, resolution function [INTERPRETIVE VOCABULARY]',
-    'Core theorems: effective discreteness, finitude bound [DERIVED]; Landauer limit, resolution-energy scaling $\\delta_x \\sim \\hbar c/E$ [IMPORTED]',
+    'Core theorems: effective discreteness, the resolution budget, finite retention [DERIVED, each conditional on a published assumption ledger]; Landauer limit, resolution-energy scaling $\\delta_x \\sim \\hbar c/E$ [IMPORTED]',
     'Connections to physics are INTERPRETED, not derived—the framework complements physics',
     'Subsequent modules apply this formalization to specific domains',
   ],

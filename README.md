@@ -9,7 +9,7 @@ A meta-theoretical framework that reads the structure of accessible reality thro
 **Axiom 1**: All distinctions cost energy *(imported from Landauer's principle)*
 **Axiom 2**: All observers have finite energy budgets
 
-From these the framework genuinely derives one structural result — *effective discreteness* — and then offers a unified interpretive reading (consistent with, not replacing, established physics) of:
+From these the framework genuinely derives three chains of structural results — *effective discreteness*, the *resolution budget* and its allocation trade-off, and *finite retention* — each conditional on a published ledger of assumptions in `docs/derivations/`, and each honestly shaped as a theorem of information thermodynamics about observers rather than a derivation of physics. It then offers a unified interpretive reading (consistent with, not replacing, established physics) of:
 - Quantization and uncertainty (quantum mechanics)
 - Entropy and the Second Law (thermodynamics)
 - Consciousness as self-referential distinction

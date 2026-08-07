@@ -93,7 +93,7 @@ export const section8_2: Section = {
     {
       type: 'paragraph',
       content:
-        '**Framework Account**: From Module 0: accessing a continuous quantity to arbitrary precision requires recording unbounded information, hence unbounded energy. Axiom 2 prohibits this. Therefore, all accessible quantities must be effectively discrete. (Effective discreteness is the framework\'s one genuinely derived structural result.)',
+        '**Framework Account**: From Module 0: accessing a continuous quantity to arbitrary precision requires recording unbounded information, hence unbounded energy. Axiom 2 prohibits this. Therefore, all accessible quantities must be effectively discrete. (Effective discreteness is the framework\'s flagship derived result - derived conditional on a stated ledger, not proven outright.)',
     },
     {
       type: 'paragraph',

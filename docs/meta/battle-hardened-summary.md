@@ -3,6 +3,10 @@
 *Final Synthesis of Immune System Analysis*
 *December 2025*
 
+> **RE-BASELINED 2026-08-07 — read this first.** This document is retained as the December 2025 record of the immune-system process. Its **derivation counts are superseded**: the "15-20% of claims genuinely derived" figure and the six-theorem **PROVEN** table below both predate the July 2026 derivation chains, which are the declared standard. Where this document and those chains disagree, the chains win. See `docs/revision-logs/c5-derivation-count-rebaseline.md` for the ruling, and §Part II below for the corrected table.
+>
+> The standard, in one line: **three documented chains carry `[DERIVED]` results, each conditional on a stated assumption ledger** — `docs/derivations/effective-discreteness.md`, `dynamism-maintenance-decay.md`, `resolution-allocation-tradeoff.md`. Nothing is `PROVEN` unconditionally, and no percentage-of-claims figure is current.
+
 ---
 
 ## Executive Summary
@@ -15,7 +19,7 @@ The Distinction Physics framework underwent comprehensive stress-testing via an 
 - Created honest meta-documentation
 
 **The Verdict**: The framework has genuine insight that was systematically overclaimed. After battle-hardening:
-- **15-20%** of claims are genuinely derived from axioms
+- ~~**15-20%** of claims are genuinely derived from axioms~~ — **superseded 2026-08-07.** No percentage figure is current. The July 2026 chains replaced counting-by-proportion with a named ledger: three chains carry `[DERIVED]` results, each conditional on its stated assumptions. Cite the chains, not a percentage.
 - **40%** are strong interpretations consistent with axioms
 - **40%** were post-hoc rationalizations (now honestly relabeled)
 - **0** novel quantitative predictions that differ from standard physics
@@ -66,21 +70,25 @@ This means:
 **Axiom 1**: All distinctions cost energy (imports Landauer's principle)
 **Axiom 2**: All OLUs have finite energy budgets
 
-### Genuine Theorems (Rigorously Proven)
+### Genuine Theorems — status re-baselined 2026-08-07
 
-| Theorem | Statement | Proof Status |
-|---------|-----------|--------------|
-| Effective Discreteness | No finite-energy observer can access continuous structure | **PROVEN** |
-| Finite Cardinality | Observable distinctions have maximum N ≤ E/(kT ln 2) | **PROVEN** |
-| Bounded Channel Capacity | OLU information capacity ≤ E/(kT ln 2) bits | **PROVEN** |
-| Distinction Rate Bound | Maximum dN/dt ≤ P/(kT ln 2) | **PROVEN** |
-| Distinction Decay | Isolated systems: dN/dt = -ΓN | **PROVEN** |
-| Quotient Finiteness | At any energy, resolution has finite grain | **PROVEN** |
+The December 2025 column read **PROVEN** on all six rows. Nothing is proven unconditionally. Every result below is a theorem *of information thermodynamics about observers, conditional on a stated model of what an observer is* — the honest shape all three July chains converge on. The right-hand column is the current status and the chain that carries it.
+
+| Theorem | Statement | Status per the July 2026 chains |
+|---------|-----------|--------------------------------|
+| Effective Discreteness | No finite-energy observer can access continuous structure | `[DERIVED]` conditional on the ledger — flagship §3, as the per-epoch bound $N \leq 2^{E/(k_BT\ln 2)}$. Not a claim that reality is discrete, and **not** a derivation of quantum quantization (flagship §4.1, §4.3) |
+| Finite Cardinality | Observable distinctions have maximum N ≤ E/(kT ln 2) | `[DERIVED]` conditional — the same theorem in bit units, flagship Corollary 1. Note the per-epoch/lifetime split (flagship G5): $E$ is a per-epoch budget, not a lifetime one |
+| Bounded Channel Capacity | OLU information capacity ≤ E/(kT ln 2) bits | `[DERIVED]` **given one further empirical premise** — finite lifetime throughput, flagship Corollary 2 |
+| Distinction Rate Bound | Maximum dN/dt ≤ P/(kT ln 2) | **Not ratified by any July chain.** The accounting is the flagship's divided by time, but no chain states or fences it. Treat as unratified pending a chain, not as a theorem |
+| Distinction Decay | Isolated systems: dN/dt = -ΓN | **Split.** Finiteness of retention is `[DERIVED]` conditional; the exponential form is `[IMPORTED]` — Arrhenius–Kramers escape restated for records, chain 2 §3 and Corollary 1. Also timescale-qualified: no medium is stable, only stable over a timescale |
+| Quotient Finiteness | At any energy, resolution has finite grain | `[DERIVED]` conditional — chain 3 Theorem part (i), $E \geq k_BT\ln 2 \cdot \log_2(L/\delta)$. Which *scales* a given budget buys is `[IMPORTED]` probe physics, not derived (chain 3 R12) |
+
+Chain 3 also carries two results the December table has no row for, and they are the genuinely new content: the **joint allocation bound** $\sum_i \log_2 N_i \leq E/(k_BT\ln 2)$ and the **exchange rate** — bit-for-bit at $k_BT\ln 2$, not at $\hbar$. Both `[DERIVED]` conditional on the ledger. Chain 2 likewise carries the **maintenance power floor**, `[DERIVED]` conditional.
 
 ### What These Theorems Establish
 
-1. **Quantization is thermodynamically necessary** for finite-energy observers
-2. **Resolution-energy trade-offs** are unavoidable
+1. **Access is effectively discrete** for finite-energy observers — a bound on what can be *resolved and recorded*, not on what can be *referred to*, and not a claim about quantization. The December wording here read "quantization is thermodynamically necessary"; that is exactly the slide the flagship's scope fence §4.3 disclaims as `[POST-HOC]`. Quantum discreteness has a different origin and the framework imports it
+2. **Resolution-energy trade-offs** are unavoidable — quantified by chain 3, and 28 orders of magnitude slacker than the physics that actually sets probe resolution (chain 3 Corollary 3)
 3. **Complete knowledge is impossible** for any OLU
 4. **Information has physical cost** with measurable bounds
 

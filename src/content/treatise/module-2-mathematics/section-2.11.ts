@@ -29,7 +29,7 @@ export const section2_11: Section = {
       items: [
         {
           content:
-            '**[DERIVED] Effective discreteness**: Because no OLU can access continuous quantities (follows from axioms), discrete patterns are more directly accessible. This is genuinely derived.',
+            '**[DERIVED] Effective discreteness**: Because no OLU can access continuous quantities (follows from axioms), discrete patterns are more directly accessible. This is genuinely derived - conditional on the flagship chain\'s stated ledger, not proven outright.',
         },
         {
           content:

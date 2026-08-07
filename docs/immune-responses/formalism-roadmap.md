@@ -7,6 +7,8 @@
 
 ## Executive Summary
 
+*Status note, 2026-08-07: the "0% genuine derivations" figure below is the December 2025 state and is superseded — see `docs/revision-logs/c5-derivation-count-rebaseline.md`. Three July 2026 chains in `docs/derivations/` now carry `[DERIVED]` results, each conditional on a published assumption ledger.*
+
 The Derivation Audit found **0% genuine derivations** and the Diagnostic Synthesis identified **"Missing Mathematics"** as a deep structural issue. The framework uses decorative equations rather than generative formalism. This document provides a detailed roadmap for developing the mathematical formalism needed to transform the framework from philosophical interpretation into a genuine calculational tool.
 
 **Core Problem**: The framework has symbols but not structures, notation but not derivations, equations but not dynamics.

@@ -8,9 +8,11 @@
 
 The immune system stress-test analyzed ~280 attacks across 10 modules. The findings are sobering but constructive:
 
+> **Status note, 2026-08-07.** The derivation-quality line of this roadmap was delivered in July 2026 as three chains in `docs/derivations/` — effective discreteness, dynamism/maintenance-decay, resolution-allocation trade-off. The percentage targets below are **retired, not met**: the chains replaced counting-by-proportion with a named, published ledger per chain. Cite the chains, not a percentage. Ruling: `docs/revision-logs/c5-derivation-count-rebaseline.md`.
+
 | Metric | Current State | Target State |
 |--------|---------------|--------------|
-| Genuine Derivations | 0% | 15-20% (achievable) |
+| Genuine Derivations | 0% | 15-20% (achievable) — *retired as a metric 2026-08-07; superseded by three published chains* |
 | Strong Interpretations | 25% | 40% (with development) |
 | Post-Hoc Rationalizations | 37.5% | 0% (honest relabeling) |
 | Genuine Predictions | 0-2 | 5-10 (with operationalization) |

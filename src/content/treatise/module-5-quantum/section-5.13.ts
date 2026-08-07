@@ -232,7 +232,7 @@ export const section5_13: Section = {
   ],
   keyPoints: [
     '[INTERPRETED] Quantum mechanics is interpreted through the distinction framework---QM remains as it is',
-    '[DERIVED] Effective discreteness follows from the two axioms (this is genuinely derived)',
+    '[DERIVED] Effective discreteness follows from the two axioms plus the flagship chain\'s stated ledger of imports and interpretive premises (genuinely derived, and conditional on that ledger)',
     '[INTERPRETED] Superposition, uncertainty, measurement, and entanglement are reframed through distinction vocabulary',
     '[IMPORTED] The Born rule, Hilbert space, Schrodinger equation, and Planck\'s constant are imported',
     'The framework is a philosophical meta-theory complementary to physics, not replacement physics',

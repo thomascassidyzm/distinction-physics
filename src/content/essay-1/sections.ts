@@ -108,7 +108,7 @@ An entity indistinguishable from everything else cannot be recorded, stated, or 
     id: 'energy-cost',
     content: `**Why Continuity Stays Out of Reach**
 
-Here is the one structural result the framework genuinely derives, and it is worth stating plainly:
+Here is the flagship structural result the framework genuinely derives — conditional on a stated ledger of assumptions, like the two derivation chains beside it — and it is worth stating plainly:
 
 **No continuous quantity can be fully resolved by any observer — however rich its budget, however clever its apparatus.**
 

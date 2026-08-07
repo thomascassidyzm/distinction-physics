@@ -3,6 +3,10 @@
 *Generated: December 2025*
 *Status: Ruthlessly Honest Assessment for Battle-Hardening*
 
+> **RE-BASELINED 2026-08-07 — read this first.** This audit's headline verdict, **"zero genuine derivations,"** was accurate for the treatise *as written in December 2025* and is retained here as the record of that assessment. It is **no longer the current count.** The audit did its job: it was the trigger for the strengthening roadmap's derivation-quality work, and its own line *"effective discreteness is the best case"* is quoted in `docs/derivations/effective-discreteness.md` §0 as the reason that chain was written first.
+>
+> The current standard is the July 2026 chains: **three documented chains carry `[DERIVED]` results, each conditional on a stated assumption ledger** — `docs/derivations/effective-discreteness.md`, `dynamism-maintenance-decay.md`, `resolution-allocation-tradeoff.md`. Each states its result in the same honest shape: *a theorem of information thermodynamics about observers, conditional on a stated model of what an observer is.* The chains do not overturn this audit's method; they meet its demand. Where a chain and this audit disagree on a label, the chain wins. Ruling: `docs/revision-logs/c5-derivation-count-rebaseline.md`.
+
 ---
 
 ## Executive Summary
@@ -547,6 +551,8 @@ Physicalism, identity theory, structural realism are assumed throughout without 
 ## Conclusion
 
 The Distinction Physics framework contains **zero genuine derivations** in the strict logical sense. Its strongest claims are **Strong Interpretations** - conceptually natural given the axioms but not logically forced. Many claims are **Post-Hoc Rationalizations** - known physics redescribed in framework vocabulary.
+
+> **Superseded 2026-08-07 as a count, upheld as a method.** The verdict above stands as the December 2025 assessment. It no longer describes the estate: three July 2026 chains now carry `[DERIVED]` results, each conditional on a published assumption ledger, and each fencing off precisely the epistemic-to-ontic slide this audit named. What the chains did *not* do is promote anything to unconditional proof — the conditionality is on the face of every one of them. See the banner at the head of this document.
 
 This assessment is not an attack on the framework's value. Good interpretive frameworks are valuable in science and philosophy. But the rhetorical presentation as "deriving physics" is not defensible and undermines credibility with serious audiences.
 

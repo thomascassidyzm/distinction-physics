@@ -77,7 +77,7 @@ export const section1_0: Section = {
     {
       type: 'paragraph',
       content:
-        '**What we genuinely derive** from the axioms: effective discreteness, resolution limits, finitude bounds. These follow logically from the two axioms plus the imported Landauer limit.',
+        '**What we genuinely derive** from the axioms: effective discreteness, the resolution budget and its allocation trade-off, finite retention - three chains, with finitude bounds following as a corollary. These follow logically from the two axioms plus the imported Landauer limit **and each chain\'s stated ledger of further assumptions**. The ledgers are published in `docs/derivations/`; nothing here is proven unconditionally.',
     },
     {
       type: 'paragraph',

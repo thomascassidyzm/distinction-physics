@@ -161,7 +161,7 @@ Epistemic humility in one doc, full ontic structural realism in the other — a 
 
 Both currently stand in the CE repo. See §4.
 
-### C5. How much is actually derived — four different answers on the books
+### C5. How much is actually derived — four different answers on the books — **RE-BASELINED 2026-08-07**
 
 - `docs/meta/battle-hardened-summary.md`: six theorems marked **PROVEN**; "15-20% of claims genuinely derived."
 - Treatise §1.11: "Three things we genuinely derive - discreteness, resolution limits, finitude."
@@ -169,6 +169,16 @@ Both currently stand in the CE repo. See §4.
 - `docs/derivations/effective-discreteness.md` (July 2026, current): **one** flagship chain upgraded to [DERIVED], explicitly conditional on its assumption ledger.
 
 [ASSEMBLER: these aren't the same count under different granularity — battle-hardened-summary's "PROVEN" table overstates relative to the audit that followed it, and it still presents Module 4's variational structure as interpretation while section-4.2.ts:294 says the functional "is derived from the axioms … full stop." The July chain documents are the standard; the older summaries need re-baselining against them.]
+
+**Re-baselined 2026-08-07.** No new ruling was needed — the July chains were already the declared standard, and this was stale propagation. A fifth answer turned up during the pass and was fixed with the rest: README, the glossary, essay-1 and §8.2 all said the framework derives **"one"** structural result, which was true when only the flagship chain existed and went stale when chains 2 and 3 landed on 2026-07-04.
+
+The canonical answer, now stated the same way everywhere:
+
+> **Three documented chains carry `[DERIVED]` results, each conditional on a stated assumption ledger** — `docs/derivations/effective-discreteness.md` (effective discreteness, per-epoch, with the lifetime-finitude corollary needing one further empirical premise), `dynamism-maintenance-decay.md` (finite retention and the maintenance power floor; the exponential decay form is `[IMPORTED]`), and `resolution-allocation-tradeoff.md` (the resolution budget, the joint allocation bound, and the bit-for-bit exchange rate; probe-resolution scaling is `[IMPORTED]`). Each states its result in the same honest shape: *a theorem of information thermodynamics about observers, conditional on a stated model of what an observer is.* Nothing is `PROVEN` unconditionally, and no percentage-of-claims figure is current.
+
+Propagated to: `docs/meta/battle-hardened-summary.md` (banner + corrected theorem table + the "quantization is thermodynamically necessary" line, which was the disclaimed `[POST-HOC]` slide), `docs/immune-responses/derivation-audit.md` (banner + verdict note — superseded as a count, upheld as a method), `strengthening-roadmap.md` and `formalism-roadmap.md` (percentage metrics retired), treatise §1.0, §1.11, §2.11, §5.13, §8.2, the glossary, essay-1, and README. Full record: `docs/revision-logs/c5-derivation-count-rebaseline.md`.
+
+Still open under C5, and untouched by this pass: Module 4's variational structure. `section-4.2.ts:294` says the action functional "is derived from the axioms … full stop," and no July chain covers it — `docs/derivations/PREP-learning-as-optimization.md` is explicitly prep, not a derivation, and it ends on a decision only the owner can make. That claim is therefore **unratified**, not derived, and needs Tom's ruling before it can be labelled either way.
 
 ### C6. The name
 

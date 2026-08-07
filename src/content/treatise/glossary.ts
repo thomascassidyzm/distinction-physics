@@ -122,7 +122,7 @@ export const glossary: GlossaryEntry[] = [
   {
     id: 'effective-discreteness',
     term: 'Effective Discreteness',
-    definition: 'The principle that no continuous quantity can be accessed by any OLU with infinite precision. Resolving a continuous quantity to arbitrary precision would require recording unbounded information, and each recorded bit carries a positive energy cost (Axiom 1, via Landauer); a finite budget therefore fixes a finite resolution. This is the framework\'s one genuinely derived structural result.',
+    definition: 'The principle that no continuous quantity can be accessed by any OLU with infinite precision. Resolving a continuous quantity to arbitrary precision would require recording unbounded information, and each recorded bit carries a positive energy cost (Axiom 1, via Landauer); a finite budget therefore fixes a finite resolution. This is the framework\'s flagship derived result, and like the other two derivation chains it is conditional on a stated ledger of assumptions rather than proven outright.',
     firstAppearance: '0.3',
     relatedTerms: ['axiom-1', 'axiom-2', 'resolution-limit'],
     category: 'foundational',
