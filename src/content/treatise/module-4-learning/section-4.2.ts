@@ -291,7 +291,7 @@ export const section4_2: Section = {
     {
       type: 'paragraph',
       content:
-        'The variational structure itself is derived from the axioms and cannot be falsified independently of them: if Axiom 1 holds and Axiom 2 holds, then $S = \\int E \\, dt$ is the natural cost functional of the trajectory, full stop. What is falsifiable is the identification of HISE with an approximate least-action trajectory. Three specific conditions would require revising this identification:',
+        'The variational structure itself is read as following from the axioms, and on that reading cannot be falsified independently of them: if Axiom 1 holds and Axiom 2 holds, then $S = \\int E \\, dt$ is taken to be the natural cost functional of the trajectory. That reading is [INTERPRETED, awaiting chain 4] — no documented derivation chain yet carries it, and writing one turns on an operational-definition choice that has not been made (`docs/derivations/PREP-learning-as-optimization.md` is prep, not a derivation). What is falsifiable is the identification of HISE with an approximate least-action trajectory. Three specific conditions would require revising this identification:',
     },
     {
       type: 'list',
@@ -384,10 +384,10 @@ export const section4_2: Section = {
     'Axioms 1 and 2 combine to give any learning trajectory a natural action functional $S = \\int E[n, \\dot{n}] \\, dt$ with units of energy × time',
     'The least-action acquisition trajectory minimizes $S$ subject to reaching $n^*$ within time $T$',
     'Three characteristic sources of excess action: off-trajectory maintenance, premature distinction-load, high-action automatization paths',
-    'Each HISE design rule can be read as a local reduction of the cost integrand [INTERPRETED] — the rules came first and are interpreted after the fact, not derived from the axioms; only the action functional itself is [DERIVED]',
+    'Each HISE design rule can be read as a local reduction of the cost integrand [INTERPRETED] — the rules came first and are interpreted after the fact, not derived from the axioms; the action functional itself is [INTERPRETED, awaiting chain 4] rather than ratified',
     'The 10-day Japanese and Irish sprints are short-timescale probes where trajectory choice dominates over total effort',
     'Predicted features of sprint output: generative-overlap errors, flexible M-LEGO use, disfluency at selection points, production/metalinguistic-knowledge gap',
-    'The variational structure is derived from the axioms, not imported from physics — the convergence with classical mechanics is structural, not metaphorical',
+    'The variational structure is read as following from the axioms rather than imported from physics — the convergence with classical mechanics is claimed as structural, not metaphorical [INTERPRETED, awaiting chain 4]',
     'Falsification conditions: lower-$S$ alternative methodology, paradigm-gap error patterns, or high-metalinguistic-knowledge/low-production profiles',
     'Sprint findings (May 2026 audit, $n=2$): all four §4.2.4 predictions positively visible across both sprints; both transcript-assessable §4.2.5 falsifiers absent; cross-typology convergence on the same production signature; status remains [INTERPRETED] per §4.10 calibration',
   ],
