@@ -91,10 +91,34 @@ function getClientIp(request: Request): string {
   return 'unknown';
 }
 
+// The set of hostnames that count as "this site" for the same-origin check.
+//
+// `new URL(request.url).host` is NOT the public hostname behind Vercel's proxy —
+// the serverless invocation sees an internal host, so comparing Origin against it
+// rejected every real browser request with a 403 while curl (which sends no
+// Origin) sailed through. The public hostname arrives in the forwarding headers
+// instead. Neither `x-forwarded-host` nor `host` is reachable from page JS —
+// browsers set Host themselves and refuse `x-forwarded-host` as a forbidden
+// header, and Vercel's edge overwrites both — so trusting them here does not
+// widen the guard: a genuine cross-site caller still fails on its own Origin.
+function allowedHosts(request: Request): string[] {
+  const hosts = [
+    request.headers.get('x-forwarded-host'),
+    request.headers.get('host'),
+  ];
+  try {
+    hosts.push(new URL(request.url).host);
+  } catch {
+    // request.url unparseable; the forwarding headers still carry the answer.
+  }
+  return hosts.filter((h): h is string => Boolean(h)).map((h) => h.toLowerCase());
+}
+
 // Same-origin check: reject cross-site callers while keeping the deployed
 // site's own chat widget working. No allowlist exists elsewhere in this repo
 // (astro.config.mjs sets no `site`), so origin is derived from the request's
-// own URL rather than a hardcoded list.
+// own hostname rather than a hardcoded list — which means it keeps working
+// unchanged if a custom domain is added later.
 function isSameOrigin(request: Request): boolean {
   const originHeader = request.headers.get('origin');
   // Same-origin fetches from a browser normally carry Origin. Missing Origin
@@ -105,8 +129,7 @@ function isSameOrigin(request: Request): boolean {
 
   try {
     const origin = new URL(originHeader);
-    const requestUrl = new URL(request.url);
-    return origin.host === requestUrl.host;
+    return allowedHosts(request).includes(origin.host.toLowerCase());
   } catch {
     return false;
   }
