@@ -25,7 +25,7 @@ import { VERSION, BUILD } from '../lib/version';
     <main class="main-content">
       <section class="intro">
         <p class="lead">
-          Distinction-making comes before all theorising — first in the order of what can be expressed, not as a pronouncement about what reality is made of. It is a lens laid alongside physics, not a rival to it, and it rests on two axioms:
+          Distinction-making comes before all theorising. It is first in the order of what can be expressed, not a pronouncement about what reality is made of. This is a lens laid alongside physics, not a rival to it, and it rests on two axioms:
         </p>
         <div class="axioms">
           <div class="axiom">
@@ -38,7 +38,13 @@ import { VERSION, BUILD } from '../lib/version';
           </div>
         </div>
         <p class="consequence">
-          From these follows one theorem, and the narrowness is the point. Any observer spending a finite energy budget, with registers no colder than the world will allow, can complete only so much resolution: every act of resolution it finishes discriminates a bounded number of alternatives, and the ceiling is fixed by its budget and its temperature. Reference is cheap; resolution is what costs. Three things genuinely derive — discreteness, resolution limits, finitude. Quantum uncertainty, entropy, spacetime and consciousness are read through the lens rather than derived from it, and are marked that way throughout. What you get is a theorem of information thermodynamics about observers, conditional on a stated model of what an observer is, with every condition on the table.
+          From these follows one theorem, and the narrowness is the point. An observer spending a finite energy budget, on registers no colder than the world will allow, can complete only so much resolution. Every act of resolution it finishes discriminates a bounded number of alternatives, and the ceiling is set by its budget and its temperature. Reference is cheap; resolution is what costs.
+        </p>
+        <p class="consequence">
+          Three things genuinely derive: discreteness, resolution limits, finitude. Quantum uncertainty, entropy, spacetime and consciousness are read through the lens rather than derived from it, and they are marked that way throughout. What you get is a theorem of information thermodynamics about observers, conditional on a stated model of what an observer is, with every condition on the table.
+        </p>
+        <p class="consequence">
+          The wider work is the metaphysics, the logic and the ethics of being an observer that is computationally bounded and carries a sense of persistence over time. Ontological humility before epistemic humility: we have no access to absolutes, and third-person reality is a human construct triangulated from first-person experience. The first question is what it means to know as such an observer. The second is what to do about it.
         </p>
       </section>
 
@@ -53,7 +59,7 @@ import { VERSION, BUILD } from '../lib/version';
           </div>
           <div class="card-content">
             <h2>Start Here</h2>
-            <p>A conversational introduction to the framework. What it is, where it came from, and why it matters.</p>
+            <p>A conversational way in. What the framework is, where it came from, and what it is for.</p>
           </div>
           <span class="card-arrow">→</span>
         </a>
@@ -67,7 +73,7 @@ import { VERSION, BUILD } from '../lib/version';
           </div>
           <div class="card-content">
             <h2>Read the Essay</h2>
-            <p>The complete framework in 13 sections, from philosophical foundations through quantum mechanics, consciousness, and spacetime.</p>
+            <p>The whole argument in 13 sections, from the philosophical foundations through quantum mechanics, consciousness and spacetime.</p>
           </div>
           <span class="card-arrow">→</span>
         </a>
@@ -82,7 +88,7 @@ import { VERSION, BUILD } from '../lib/version';
           </div>
           <div class="card-content">
             <h2>Explore Concepts</h2>
-            <p>Browse the key propositions as a network of interconnected ideas. Each concept linked to its logical dependencies.</p>
+            <p>The key propositions as a network. Each concept linked to what it depends on.</p>
           </div>
           <span class="card-arrow">→</span>
         </a>
@@ -95,43 +101,17 @@ import { VERSION, BUILD } from '../lib/version';
           </div>
           <div class="card-content">
             <h2>Academic Treatise</h2>
-            <p>The full scholarly treatment with formal definitions, theorems, derivations, and rigorous mathematical apparatus.</p>
+            <p>The formal treatment: definitions, theorems and derivations, with every claim labelled derived, interpreted or imported.</p>
           </div>
           <span class="card-arrow">→</span>
         </a>
-      </section>
-
-      <section class="status-block">
-        <div class="status-header">
-          <span class="status-label">Framework Status</span>
-          <span class="status-badge">V8 · Anti-fragile</span>
-        </div>
-        <p class="status-text">
-          This framework has survived 36 adversarial attacks across 7 rounds of systematic critique.
-          Every attack either failed or generated refinements. The transcendental core—that distinction is
-          necessary for any thought or experience—cannot be attacked without using distinction.
-        </p>
-        <div class="status-stats">
-          <div class="stat">
-            <span class="stat-value">36</span>
-            <span class="stat-label">Attacks Survived</span>
-          </div>
-          <div class="stat">
-            <span class="stat-value">28</span>
-            <span class="stat-label">Antibodies Generated</span>
-          </div>
-          <div class="stat">
-            <span class="stat-value">22</span>
-            <span class="stat-label">Refinements Absorbed</span>
-          </div>
-        </div>
       </section>
     </main>
 
     <footer class="site-footer">
       <div class="footer-content">
         <span class="version-info">{VERSION} · build {BUILD}</span>
-        <span class="footer-text">Working Draft · December 2025</span>
+        <span class="footer-text">Working draft · August 2026</span>
       </div>
     </footer>
   </div>
@@ -248,6 +228,11 @@ import { VERSION, BUILD } from '../lib/version';
     font-size: 1rem;
     color: var(--text-secondary);
     text-align: center;
+    margin-bottom: 1.25rem;
+  }
+
+  .consequence:last-child {
+    margin-bottom: 0;
   }
 
   .entry-points {
@@ -329,69 +314,6 @@ import { VERSION, BUILD } from '../lib/version';
     color: var(--accent);
   }
 
-  .status-block {
-    background: var(--depth-1);
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    padding: 2rem;
-  }
-
-  .status-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 1rem;
-  }
-
-  .status-label {
-    font-size: 0.75rem;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    color: var(--text-muted);
-  }
-
-  .status-badge {
-    font-family: var(--font-mono);
-    font-size: 0.75rem;
-    color: #50c878;
-    background: rgba(80, 200, 120, 0.15);
-    padding: 0.25rem 0.75rem;
-    border-radius: 4px;
-  }
-
-  .status-text {
-    font-size: 0.9375rem;
-    color: var(--text-secondary);
-    margin-bottom: 1.5rem;
-    line-height: 1.7;
-  }
-
-  .status-stats {
-    display: flex;
-    gap: 2rem;
-    border-top: 1px solid var(--border);
-    padding-top: 1.5rem;
-  }
-
-  .stat {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .stat-value {
-    font-family: var(--font-mono);
-    font-size: 1.75rem;
-    font-weight: 500;
-    color: var(--text-primary);
-  }
-
-  .stat-label {
-    font-size: 0.75rem;
-    color: var(--text-muted);
-    text-align: center;
-  }
-
   .site-footer {
     padding: 2rem;
     border-top: 1px solid var(--border);
@@ -419,11 +341,6 @@ import { VERSION, BUILD } from '../lib/version';
 
     .card-arrow {
       display: none;
-    }
-
-    .status-stats {
-      flex-direction: column;
-      gap: 1rem;
     }
   }
 </style>
