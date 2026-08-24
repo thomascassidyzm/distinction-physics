@@ -19,6 +19,11 @@ From these the framework genuinely derives one structural result — *effective 
 - Consciousness as self-referential distinction
 - Spacetime as boundary network structure
 
+## Canonical nodes
+
+- [Least-Time Learning — the canonical statement](docs/canonical/least-time-learning.md). Ruled by Tom Cassidy, 2026-08-24. The pedagogy chapter of the thesis: learning is optimised by minimising the learner's total effort-time over a distinction network. CE, Zenjin and SSi reference this node; they do not restate it. Its detail is treatise §4.13.
+- [CANON — the distinction thesis](docs/CANON.md). First assembly, 2026-07-14.
+
 ## Development
 
 ```bash
