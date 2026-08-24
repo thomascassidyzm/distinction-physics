@@ -13,6 +13,7 @@ import { section4_9 } from './section-4.9';
 import { section4_10 } from './section-4.10';
 import { section4_11 } from './section-4.11';
 import { section4_12 } from './section-4.12';
+import { section4_13 } from './section-4.13';
 
 export const module4: Module = {
   number: 4,
@@ -34,6 +35,7 @@ export const module4: Module = {
     section4_10,
     section4_11,
     section4_12,
+    section4_13,
   ],
   keyInsights: [
     'THE KEY CONTRIBUTION: Learning is the framework\'s most developed application domain',
@@ -46,6 +48,7 @@ export const module4: Module = {
     'Chunking compresses multiple distinctions into single higher-order boundaries [INTERPRETED]',
     'The spacing effect emerges from thermodynamics of boundary reconstruction [INTERPRETED]',
     'Deployed pedagogy as explanandum: SSi outcomes are the data the framework attempts to explain — design rules came first, theoretical articulation followed (see §4.0, §4.10)',
+    'Least-Time Learning is the ruled canonical statement of the module\'s principle (Tom Cassidy, 2026-08-24); its detail is §4.13 and its front page is docs/canonical/least-time-learning.md',
   ],
   connectionsToNext: [
     'Module 5 interprets quantum mechanics through the same thermodynamic constraints',

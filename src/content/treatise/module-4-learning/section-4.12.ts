@@ -133,6 +133,12 @@ export const section4_12: Section = {
         'The 17-year deployment of SSi is the empirical phenomenon the theoretical account explains — not a validation claim for the framework',
       ],
     },
+    {
+      type: 'note',
+      variant: 'editorial',
+      content:
+        '§4.13 follows this conclusion as a ruled coda: the canonical statement of **Least-Time Learning** in detail, ratified by Tom Cassidy on 2026-08-24, together with the trinity it stands on. Its front page is `docs/canonical/least-time-learning.md`, the single node Configuration Economics, Zenjin and SSi reference rather than restate.',
+    },
   ],
   keyPoints: [
     'Module 4\'s central contribution is §4.2: the derivation of an action functional for learning trajectories from the two axioms, with HISE identified as approximate least-action pedagogy',
