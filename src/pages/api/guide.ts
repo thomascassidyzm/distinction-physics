@@ -301,6 +301,11 @@ export const POST: APIRoute = async ({ request }) => {
     let toolRounds = 0;
     let toolCharsUsed = 0;
     let data: any;
+    // Accumulated across ALL tool rounds, not just the final call. A question
+    // that made Alexander go and read something costs the rounds it took;
+    // reporting only the last call would under-report the real price of
+    // exactly the questions we most want to price.
+    const totals = { input: 0, cache_write: 0, cache_read: 0, output: 0 };
 
     for (;;) {
       const toolsAllowed = toolRounds < MAX_TOOL_ROUNDS && toolCharsUsed < MAX_TOOL_CHARS_TOTAL;
@@ -345,6 +350,11 @@ export const POST: APIRoute = async ({ request }) => {
       }
 
       data = await response.json();
+      const ru = data?.usage ?? {};
+      totals.input += ru.input_tokens ?? 0;
+      totals.cache_write += ru.cache_creation_input_tokens ?? 0;
+      totals.cache_read += ru.cache_read_input_tokens ?? 0;
+      totals.output += ru.output_tokens ?? 0;
 
       if (!toolsAllowed || data?.stop_reason !== 'tool_use') break;
 
@@ -377,16 +387,15 @@ export const POST: APIRoute = async ({ request }) => {
       conversation.push({ role: 'user', content: toolResults });
     }
 
-    // Cache verification. If cache_read_input_tokens stays at zero across
-    // repeated identical-prefix requests, a silent invalidator has crept into
-    // the prefix — a timestamp, a per-request id, a non-deterministic
-    // serialisation — and the layering above is doing nothing.
-    const u = data?.usage ?? {};
+    // Cache verification. If cache_read stays at zero across repeated
+    // identical-prefix requests, a silent invalidator has crept into the
+    // prefix and the layering above is doing nothing.
     console.log(
       `[guide] model=${MODEL} effort=${decision.effort} reason=${decision.reason} ` +
-        `input=${u.input_tokens ?? 0} cache_write=${u.cache_creation_input_tokens ?? 0} ` +
-        `cache_read=${u.cache_read_input_tokens ?? 0} output=${u.output_tokens ?? 0}`,
+        `rounds=${toolRounds} input=${totals.input} cache_write=${totals.cache_write} ` +
+        `cache_read=${totals.cache_read} output=${totals.output}`,
     );
+
     // Take the first TEXT block, not content[0]: the escalated tier runs with
     // adaptive thinking, so content[0] can be a thinking block.
     const textBlock = Array.isArray(data.content)
@@ -413,12 +422,7 @@ export const POST: APIRoute = async ({ request }) => {
       // section is the whole design working. No secret is exposed: these are
       // counts. Without accounting per surface, every cost question is
       // guesswork.
-      usage: {
-        input: u.input_tokens ?? 0,
-        cache_write: u.cache_creation_input_tokens ?? 0,
-        cache_read: u.cache_read_input_tokens ?? 0,
-        output: u.output_tokens ?? 0,
-      },
+      usage: { ...totals, rounds: toolRounds },
       // Why this tier, for the client's label and for the logs. Never taken
       // from the request; always the server's own decision.
       tierReason: decision.reason,
