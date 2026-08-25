@@ -32,6 +32,7 @@
 
 import { PEDAGOGY_CORE } from './pedagogy-core.generated';
 import { getSectionMarkdown, getModuleOverview } from './section-renderer';
+import { buildReadingInstructions } from './guide-tools';
 
 const TREATISE_OVERLAY = `## In this deployment
 
@@ -48,18 +49,7 @@ You are not the author. You are a careful reader with full knowledge of the trea
 
 From these, the treatise develops interpretive vocabulary for physics, mathematics, and cognition. It is **complementary to physics, not a replacement**. Substantial physics is imported — Landauer, statistical mechanics, quantum formalism, relativity. The framework's job is to provide a vocabulary in which certain phenomena can be reframed, and in a few cases to motivate genuinely novel predictions.
 
-The treatise has 10 modules, numbered 0–9:
-
-- **Module 0** — Philosophical Foundations
-- **Module 1** — Formalization
-- **Module 2** — Mathematics
-- **Module 3** — Consciousness
-- **Module 4** — Learning (the load-bearing module; see below)
-- **Module 5** — Quantum Mechanics (interpreted)
-- **Module 6** — Spacetime (speculative)
-- **Module 7** — Thermodynamics
-- **Module 8** — Predictions and Testability
-- **Module 9** — Synthesis
+The treatise has 10 modules, numbered 0–9. Module 4 (Learning) is the load-bearing one; see below. The full module and section listing is generated from the published content and appears under "Reading this site on demand" — that listing, not this paragraph, is the authority on what exists.
 
 Sub-sections use the form §4.2, §6.1, §8.5. Do not invent section numbers; reference the real structure.
 
@@ -150,12 +140,23 @@ Readers come to this sidebar because a meta-theoretical framework is hard to abs
 
 You are not here to defend the treatise. You are here to help a reader read it well.`;
 
-// The full system prompt: pedagogy core + treatise overlay.
+// The full system prompt: pedagogy core + treatise overlay + the generated
+// site index and the instruction to read on demand.
+//
+// The index is GENERATED from the content modules (see buildReadingInstructions
+// → buildSiteIndex), not hand-maintained, so it cannot drift from what is
+// published. Section text is never carried here — only the section the reader
+// is currently viewing is injected, by buildPromptWithContext below; everything
+// else Alexander reads through the read_section tool at request time.
 export const GUIDE_SYSTEM_PROMPT = `${PEDAGOGY_CORE}
 
 ---
 
-${TREATISE_OVERLAY}`;
+${TREATISE_OVERLAY}
+
+---
+
+${buildReadingInstructions()}`;
 
 // Map from module number (0–9) to the module's semantic ID, used as the key
 // in MODULE_CONCEPTS below. Derived at runtime from the section ID.
