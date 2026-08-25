@@ -10,7 +10,7 @@ import {
   module5, module6, module7, module8, module9,
 } from '../content/treatise';
 
-const ALL_MODULES: Module[] = [
+export const ALL_MODULES: Module[] = [
   module0, module1, module2, module3, module4,
   module5, module6, module7, module8, module9,
 ];
