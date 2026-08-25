@@ -259,3 +259,28 @@ describe('the old single-string shape vs the new layered shape', () => {
     expect(again).toBe(GUIDE_SYSTEM_PROMPT);
   });
 });
+
+// All three Alexanders must behave identically, but they name their content
+// differently: distinction-physics uses §4.13, configuration-economics and
+// tomcassidy-site use slugs. One predicate has to cover both.
+describe('cross-site reference notations', () => {
+  it('escalates on a slug reference set against something', () => {
+    const d = selectTier({ message: 'how does this compare with `option-space-formalisation`?' });
+    expect(d.reason).toBe('cross-section-comparison');
+  });
+
+  it('escalates on an unnamed but explicit other section', () => {
+    const d = selectTier({ message: 'how does this differ from the earlier section?' });
+    expect(d.reason).toBe('cross-section-comparison');
+  });
+
+  it('does not read ordinary hyphenated English as a site reference', () => {
+    for (const m of [
+      'is this a well-known result?',
+      'that seems counter-intuitive to me',
+      'give me a real-world example',
+    ]) {
+      expect(selectTier({ message: m }).effort).toBe('low');
+    }
+  });
+});

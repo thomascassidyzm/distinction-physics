@@ -95,9 +95,20 @@ export interface ChatTurn {
   content: string;
 }
 
-// A section reference in this treatise's own notation: §4.13, 4.2, 8.5.1.
-// Requires the dot so a bare year or count doesn't read as a section.
-const SECTION_REF = /§?\b(\d\.\d+(?:\.\d+)?)\b/g;
+// A reference to a NAMED PART OF THE SITE. Two notations, because the three
+// Alexanders address their content differently and must still behave
+// identically: numeric sections (§4.13, 4.2, 8.5.1 — the dot is required so a
+// bare year or count doesn't read as a section) and kebab-case slugs
+// (`option-space-formalisation`, configuration-value), which is how the
+// configuration-economics and tomcassidy-site indexes name propositions,
+// documents and standalone pages.
+const SECTION_REF = /§?\b(\d\.\d+(?:\.\d+)?)\b|`?\b([a-z][a-z0-9]*(?:-[a-z0-9]+){1,4})\b`?/g;
+
+// Words that name a part of the site without identifying which one — "that
+// other section", "your earlier essay". Enough to count as a target when the
+// reader has clearly put it in opposition to something.
+const NAMED_TARGET =
+  /\b(section|sections|essay|essays|module|modules|chapter|proposition|propositions|document|page|passage|piece)\b/i;
 
 // The reader setting one part of the treatise against another. This is the
 // specimen Tom showed us: "compare with 4.13's treatment - least-time learning".
@@ -108,8 +119,20 @@ const COMPARISON_VERB =
 const CONFUSION_MARKER =
   /\b(still (?:don'?t|do not|not|unclear|confus)|i'?m confus|i don'?t (?:get|understand|follow|see)|doesn'?t make sense|makes no sense|not following|lost me|you said|as i said|again[,:]|rephrase|say that again|what do you mean|i asked)\b/i;
 
+// Common English kebab compounds that are not site identifiers. Without this
+// "well-known" or "so-called" would read as a reference to a named page.
+const NOT_A_SLUG =
+  /^(well|so|self|non|semi|pre|post|re|co|multi|inter|intra|anti|counter|long|short|high|low|first|second|third|day|year|state|open|close|built|based|driven|related|specific|the|and|but|for|not)-/;
+
 function sectionRefs(text: string): string[] {
-  return [...new Set(Array.from(text.matchAll(SECTION_REF), (m) => m[1]))];
+  const out = new Set<string>();
+  for (const m of text.matchAll(SECTION_REF)) {
+    const numeric = m[1];
+    const slug = m[2];
+    if (numeric) out.add(numeric);
+    else if (slug && !NOT_A_SLUG.test(slug)) out.add(slug);
+  }
+  return [...out];
 }
 
 /**
@@ -185,7 +208,8 @@ export function selectTier(input: {
   // sections in one breath, or they use a comparison verb about a section
   // other than the one in front of them.
   const refs = sectionRefs(message);
-  if (refs.length >= 2 || (refs.length >= 1 && COMPARISON_VERB.test(message))) {
+  const comparing = COMPARISON_VERB.test(message);
+  if (refs.length >= 2 || (refs.length >= 1 && comparing) || (comparing && NAMED_TARGET.test(message))) {
     return at('high', 'cross-section-comparison', false);
   }
 
