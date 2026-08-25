@@ -10,7 +10,7 @@
 
 ## 1. The principle
 
-Learning is optimised by minimising the learner's total effort-time over a distinction network. Every distinction the learner is asked to hold must be load-bearing at the moment it is charged — never before, and never alongside a second one smuggled in unpaid.
+Learning is optimised by minimising the learner's total effort-time over a distinction network. Every distinction the learner is asked to hold must be doing work at the moment it is charged — never before, and never alongside a second one smuggled in unpaid.
 
 The name is Least-Time Learning, and the name is a ruling, not a flourish: "least time in some ways is more apt than least action — it's easier to understand… time is not smuggling in any confusions, unlike action as a term with a distinct meaning in physics." The everyday word carries the whole sense; the technical cousin charges a parse toll. The theory's own name passes the theory's own pricing rule.
 
@@ -22,7 +22,7 @@ Tom's ruling, 2026-08-24: the trinity stands on the front page.
 - **Epistemology: persistence of stable distinction patterns.** What counts as knowing is which patterns of distinction hold up over time under a bounded budget — not access to absolutes.
 - **Ethics: selection over configurations, denominated against heat death.** What to do is a matter of which configurations get selected, and the denominator is the one that does not move.
 
-Those three legs are the frame every other node in this project hangs on, and they are why Least-Time Learning is a Distinction as Primitive node rather than a standalone theory of teaching. The learner is an observer under the same two axioms; a curriculum is a selection over configurations; a subject is a distinction network with a shape. Stating the trinity here closes half the de-duplication problem in one stroke, and leaves the Script — the machinery of one's own choosing — as the only load-bearing idea still homeless, which sharpens that question rather than burying it.
+Those three legs are the frame every other node in this project hangs on, and they are why Least-Time Learning is a Distinction as Primitive node rather than a standalone theory of teaching. The learner is an observer under the same two axioms; a curriculum is a selection over configurations; a subject is a distinction network with a shape. Stating the trinity here closes half the de-duplication problem in one stroke, and leaves the Script — the machinery of one's own choosing — as the only essential idea still homeless, which sharpens that question rather than burying it.
 
 The detailed treatment of the trinity as it bears on learning is in Module 4, §4.13.
 
@@ -32,7 +32,7 @@ Subjects are distinction networks (the Distinction Project claim). A fact is an 
 
 ## 4. The quantity — what is actually minimised
 
-The minimised quantity is learner effort-time: cognitive work integrated over the seconds it takes. This is a real functional, not a metaphor, because all three costs a curriculum can charge are already denominated in it — **the charge** (acquiring a distinction, growing with distinction distance from what the learner already owns), **the idle charge** (holding an unused distinction, literally effort × time, which is why the load-bearing rule is a derivation rather than an axiom), and **the debt** (a false bridge, which charges acquisition *plus* a forced-effort term downstream — the alphabet song before decoding is the canonical specimen, and no existing theory prices it).
+The minimised quantity is learner effort-time: cognitive work integrated over the seconds it takes. This is a real functional, not a metaphor, because all three costs a curriculum can charge are already denominated in it — **the charge** (acquiring a distinction, growing with distinction distance from what the learner already owns), **the idle charge** (holding an unused distinction, literally effort × time, which is why the doing-work rule is a derivation rather than an axiom), and **the debt** (a false bridge, which charges acquisition *plus* a forced-effort term downstream — the alphabet song before decoding is the canonical specimen, and no existing theory prices it).
 
 Every term is measurable. Time-at-the-blink is directly observed; hesitation, wrong-direction misses and "I don't know" rates are the effort signal. The weights are set by telemetry, not by the armchair — "we only get there by testing."
 
@@ -44,7 +44,7 @@ The correct physics ancestor is Fermat's principle: light takes the path of leas
 
 Two laws follow from the functional:
 
-- **When** (load-bearing at introduction): a distinction is charged at the moment it does work, because any earlier accrues idle charge and any later blocks the path.
+- **When** (doing work at introduction): a distinction is charged at the moment it does work, because any earlier accrues idle charge and any later blocks the path.
 - **What next** (order by assembly distance): the next item is one distinction from the covered graph — question N is question N-1's composition plus exactly one new distinction. Categories and topics are packaging; the binding order is local to each node's ancestors ("it's a bloody graph — you can go in any direction you like"). Paths are examples; the graph is the artefact.
 
 And the whole method in one line, the objective function already ruled canon-grade: **minimum admitted, maximum minted** — introduce and state the fewest things, then mint the most from them. Least time is what that heuristic serves.

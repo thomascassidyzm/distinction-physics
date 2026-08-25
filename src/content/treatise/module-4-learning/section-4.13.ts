@@ -34,7 +34,7 @@ export const section4_13: Section = {
     {
       type: 'paragraph',
       content:
-        'Learning is optimised by minimising the learner\'s total effort-time over a distinction network. Every distinction the learner is asked to hold must be load-bearing at the moment it is charged — never before, and never alongside a second one smuggled in unpaid.',
+        'Learning is optimised by minimising the learner\'s total effort-time over a distinction network. Every distinction the learner is asked to hold must be doing work at the moment it is charged — never before, and never alongside a second one smuggled in unpaid.',
       emphasis: 'key',
     },
     {
@@ -75,7 +75,7 @@ export const section4_13: Section = {
       items: [
         {
           content:
-            '**Ontology: distinction networks.** What there is, for an observer like us, is distinctions and their relations. In the learning domain this is the load-bearing move: the *subject* is a network, not a syllabus, and the learner is a network being modified. §4.2\'s configuration space $\\mathcal{N}$ is that claim made formal; §4.3 names the ground-level operation it runs on.',
+            '**Ontology: distinction networks.** What there is, for an observer like us, is distinctions and their relations. In the learning domain this is the central move: the *subject* is a network, not a syllabus, and the learner is a network being modified. §4.2\'s configuration space $\\mathcal{N}$ is that claim made formal; §4.3 names the ground-level operation it runs on.',
         },
         {
           content:
@@ -90,7 +90,7 @@ export const section4_13: Section = {
     {
       type: 'paragraph',
       content:
-        'Stating the trinity at the head of the canonical node closes half the de-duplication problem in one stroke, and leaves the Script — the machinery of one\'s own choosing — as the only load-bearing idea still homeless, which sharpens that question rather than burying it.',
+        'Stating the trinity at the head of the canonical node closes half the de-duplication problem in one stroke, and leaves the Script — the machinery of one\'s own choosing — as the only essential idea still homeless, which sharpens that question rather than burying it.',
     },
 
     // =========================================================================
@@ -132,7 +132,7 @@ export const section4_13: Section = {
         },
         {
           content:
-            '**The idle charge.** Holding an unused distinction costs a maintenance rate integrated over the interval until it bears load. This term is literally effort × time — and it is why the load-bearing rule is a *derivation*, not an axiom: "load-bearing at the moment charged" is simply the condition that drives the idle interval to zero.',
+            '**The idle charge.** Holding an unused distinction costs a maintenance rate integrated over the interval until it does work. This term is literally effort × time — and it is why the doing-work rule is a *derivation*, not an axiom: "doing work at the moment charged" is simply the condition that drives the idle interval to zero.',
         },
         {
           content:
@@ -176,7 +176,7 @@ export const section4_13: Section = {
       items: [
         {
           content:
-            '**When** (load-bearing at introduction): a distinction is charged at the moment it does work, because any earlier accrues idle charge and any later blocks the path.',
+            '**When** (doing work at introduction): a distinction is charged at the moment it does work, because any earlier accrues idle charge and any later blocks the path.',
         },
         {
           content:
@@ -394,10 +394,10 @@ export const section4_13: Section = {
   ],
   keyPoints: [
     'Least-Time Learning is the ruled name: learning is optimised by minimising the learner\'s total effort-time over a distinction network (Tom Cassidy, 2026-08-24)',
-    'Every distinction must be load-bearing at the moment it is charged — a derivation from the idle-charge term, not an axiom',
+    'Every distinction must be doing work at the moment it is charged — a derivation from the idle-charge term, not an axiom',
     'Three cost terms denominated in effort-time: the charge, the idle charge, and the debt (false bridges, priced here for the first time)',
     'Fermat, not Hamilton: the subject is the medium, distinction density the refractive index, a well-built curriculum the geodesic',
-    'Two laws: load-bearing at introduction (when), and order by assembly distance (what next) — "minimum admitted, maximum minted"',
+    'Two laws: doing work at introduction (when), and order by assembly distance (what next) — "minimum admitted, maximum minted"',
     'The cross-subject fact-counts are corroboration, not proof; the internal control (genetics within biology) carries the weight',
     'OPEN: action is stationary, not always minimal — locally unimprovable paths may be globally beaten by a reroute. Unresolved by design',
   ],
