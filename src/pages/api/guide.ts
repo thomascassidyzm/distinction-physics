@@ -406,6 +406,17 @@ export const POST: APIRoute = async ({ request }) => {
       // The client uses it to label the response and to hide the Deeper button
       // once the deep tier has already answered.
       tier: decision.tier,
+      // Token accounting, returned so the caching layer is verifiable from
+      // outside — `cache_read` non-zero on a repeat question about the same
+      // section is the whole design working. No secret is exposed: these are
+      // counts. Without accounting per surface, every cost question is
+      // guesswork.
+      usage: {
+        input: u.input_tokens ?? 0,
+        cache_write: u.cache_creation_input_tokens ?? 0,
+        cache_read: u.cache_read_input_tokens ?? 0,
+        output: u.output_tokens ?? 0,
+      },
       // Why this tier, for the client's label and for the logs. Never taken
       // from the request; always the server's own decision.
       tierReason: decision.reason,
