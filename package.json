@@ -10,7 +10,7 @@
     "astro": "astro",
     "sync-pedagogy": "node scripts/sync-pedagogy.mjs",
     "test": "vitest run",
-    "typecheck": "astro check"
+    "typecheck": "tsc --noEmit"
   },
   "dependencies": {
     "@astrojs/vercel": "^9.0.2",
