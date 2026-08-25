@@ -283,8 +283,10 @@ export const POST: APIRoute = async ({ request }) => {
     //
     // It is bounded twice over: at most MAX_TOOL_ROUNDS rounds, and at most
     // MAX_TOOL_CHARS_TOTAL characters of fetched content per user message.
-    // When either bound is reached the final call is made with no `tools`
-    // array at all, so the model cannot ask again and must answer in text.
+    // When either bound is reached the final call still carries the SAME
+    // `tools` array — dropping it would change byte 0 of the cached prefix —
+    // but with `tool_choice: none`, so the model cannot ask again and must
+    // answer in text.
     //
     // Tool rounds sit INSIDE one already-rate-limited request, so the per-IP
     // limits above are unchanged. max_tokens caps each call's own output, not

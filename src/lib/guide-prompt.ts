@@ -146,7 +146,7 @@ You are not here to defend the treatise. You are here to help a reader read it w
 // The index is GENERATED from the content modules (see buildReadingInstructions
 // → buildSiteIndex), not hand-maintained, so it cannot drift from what is
 // published. Section text is never carried here — only the section the reader
-// is currently viewing is injected, by buildPromptWithContext below; everything
+// is currently viewing is injected, by buildSectionContext below; everything
 // else Alexander reads through the read_section tool at request time.
 export const GUIDE_SYSTEM_PROMPT = `${PEDAGOGY_CORE}
 
