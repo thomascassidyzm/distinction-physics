@@ -146,7 +146,7 @@ You are not here to defend the treatise. You are here to help a reader read it w
 // The index is GENERATED from the content modules (see buildReadingInstructions
 // → buildSiteIndex), not hand-maintained, so it cannot drift from what is
 // published. Section text is never carried here — only the section the reader
-// is currently viewing is injected, by buildPromptWithContext below; everything
+// is currently viewing is injected, by buildSectionContext below; everything
 // else Alexander reads through the read_section tool at request time.
 export const GUIDE_SYSTEM_PROMPT = `${PEDAGOGY_CORE}
 
@@ -365,28 +365,35 @@ export const CONCEPT_INDEX: Record<string, { title: string; claim: string }> = {
   },
 };
 
-/**
- * Build the full system prompt with context appended about what section the
- * reader is currently viewing and which concepts are most relevant to it.
- *
- * Context is injected based on the section ID (e.g., "4.2"). The module
- * number is parsed from the section ID, mapped to a module semantic key via
- * MODULE_ID_BY_NUMBER, and the corresponding concept list is appended.
- *
- * If no recognisable section context is available, the base prompt is
- * returned unchanged.
- */
-export function buildPromptWithContext(
-  _message: string,
-  context: {
-    currentSection?: string;
-    currentSectionTitle?: string;
-    epistemicStatus?: string;
-  }
-): string {
-  let enrichedPrompt = GUIDE_SYSTEM_PROMPT;
+export interface GuideContext {
+  currentSection?: string;
+  currentSectionTitle?: string;
+  epistemicStatus?: string;
+}
 
-  // Derive module key from section ID (e.g., "4.2" → 4 → "learning")
+/**
+ * The PER-SECTION layer of the prompt — and nothing else.
+ *
+ * This is everything that changes when the reader moves from one section to
+ * another: which section they have open, the concept cards for its module, the
+ * live section text, the module overview. It is returned SEPARATELY from
+ * GUIDE_SYSTEM_PROMPT so the two can be sent as distinct cacheable blocks with
+ * a `cache_control` breakpoint between them (see guide-request.ts).
+ *
+ * That separation is the whole point. These same paragraphs used to be
+ * concatenated onto the end of the global prompt to make one long string, which
+ * meant one cache entry keyed on the section — so every move between sections
+ * paid to re-read the pedagogy core and the treatise overlay from scratch.
+ * Split, the global layer is read once per reader and the section layer once
+ * per section.
+ *
+ * Returns null when there is no recognisable section context, in which case
+ * there is no second layer and no second breakpoint.
+ */
+export function buildSectionContext(context: GuideContext): string | null {
+  let out = '';
+
+  // Derive module key from section ID (e.g., "4.2" -> 4 -> "learning")
   let moduleKey: string | undefined;
   if (context.currentSection) {
     const moduleNumber = parseInt(context.currentSection, 10);
@@ -397,50 +404,64 @@ export function buildPromptWithContext(
 
   const relevantConcepts = moduleKey ? MODULE_CONCEPTS[moduleKey] || [] : [];
 
-  // Append context block only if we have something meaningful to add
   if (context.currentSectionTitle || relevantConcepts.length > 0) {
-    enrichedPrompt += '\n\n## CURRENT CONTEXT\n\n';
+    out += '## CURRENT CONTEXT\n\n';
 
     if (context.currentSectionTitle) {
-      enrichedPrompt += `The reader is currently viewing: **${context.currentSectionTitle}**\n`;
+      out += `The reader is currently viewing: **${context.currentSectionTitle}**\n`;
     }
     if (context.currentSection) {
-      enrichedPrompt += `Section ID: ${context.currentSection}\n`;
+      out += `Section ID: ${context.currentSection}\n`;
     }
     if (context.epistemicStatus) {
-      enrichedPrompt += `Epistemic status: \`${context.epistemicStatus}\`\n`;
+      out += `Epistemic status: \`${context.epistemicStatus}\`\n`;
     }
 
     if (relevantConcepts.length > 0) {
-      enrichedPrompt += '\nConcepts relevant to this module:\n';
+      out += '\nConcepts relevant to this module:\n';
       for (const conceptId of relevantConcepts) {
         const concept = CONCEPT_INDEX[conceptId];
         if (concept) {
-          enrichedPrompt += `\n**${concept.title}**: ${concept.claim}`;
+          out += `\n**${concept.title}**: ${concept.claim}`;
         }
       }
     }
   }
 
-  // Inject the live section text and module overview the reader is currently
-  // viewing. This is the source of truth — the static concept cards above are
-  // a thin cross-reference layer; the markdown below is the actual treatise
-  // content. Edit the section .ts files and Alexander automatically reads the
-  // new text on the next request.
+  // The live section text and module overview the reader is currently viewing.
+  // This is the source of truth — the concept cards above are a thin
+  // cross-reference layer; the markdown below is the actual treatise content.
   if (context.currentSection) {
     const sectionMd = getSectionMarkdown(context.currentSection);
     const moduleOverview = getModuleOverview(context.currentSection);
     if (sectionMd) {
-      enrichedPrompt += '\n\n## CURRENT SECTION TEXT\n\n';
-      enrichedPrompt += 'Below is the live text of the section the reader is viewing. Ground answers in this content; quote or paraphrase from it directly when relevant.\n\n---\n\n';
-      enrichedPrompt += sectionMd;
-      enrichedPrompt += '\n\n---\n';
+      out += '\n\n## CURRENT SECTION TEXT\n\n';
+      out += 'Below is the live text of the section the reader is viewing. Ground answers in this content; quote or paraphrase from it directly when relevant.\n\n---\n\n';
+      out += sectionMd;
+      out += '\n\n---\n';
     }
     if (moduleOverview) {
-      enrichedPrompt += '\n\n## MODULE CONTEXT\n\n';
-      enrichedPrompt += moduleOverview;
+      out += '\n\n## MODULE CONTEXT\n\n';
+      out += moduleOverview;
     }
   }
 
-  return enrichedPrompt;
+  const trimmed = out.trim();
+  return trimmed.length > 0 ? trimmed : null;
+}
+
+/**
+ * The old single-string form: global prompt with the section layer glued on.
+ *
+ * Kept so any caller that still wants one string keeps working, but it is NOT
+ * the cacheable path — a caller using this pays to re-read the global prompt
+ * every time the reader changes section. Prefer GUIDE_SYSTEM_PROMPT plus
+ * buildSectionContext(), assembled by buildSystemBlocks() in guide-request.ts.
+ */
+export function buildPromptWithContext(
+  _message: string,
+  context: GuideContext,
+): string {
+  const section = buildSectionContext(context);
+  return section ? `${GUIDE_SYSTEM_PROMPT}\n\n${section}` : GUIDE_SYSTEM_PROMPT;
 }
