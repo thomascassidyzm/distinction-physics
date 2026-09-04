@@ -24,7 +24,8 @@
 // --------
 // To evolve shared pedagogy (affects all Alexanders):
 //   1. Edit /Users/tomcassidy/alexander/pedagogy-core/pedagogy-core.md
-//   2. Commit on a claude/* branch in the alexander repo (auto-merges)
+//   2. Commit on a claude/* branch in the alexander repo and get it merged
+//      to main (nothing auto-merges — Actions is off; Tom takes the merge)
 //   3. In this repo, run `npm run sync-pedagogy` and commit the regen
 //
 // To evolve treatise-specific guidance (affects only distinction-physics):

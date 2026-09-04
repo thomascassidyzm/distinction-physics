@@ -8,8 +8,9 @@
 //
 // To edit the pedagogy core: edit pedagogy-core/pedagogy-core.md in
 // the alexander repo (github.com/thomascassidyzm/alexander), push on
-// a claude/* branch (auto-merges to main via GH Action), then run
-// npm run sync-pedagogy here and commit the regenerated file.
+// a claude/* branch, get it merged to main (nothing auto-merges — GitHub
+// Actions is off, Tom takes the merge through the command surface), then
+// run npm run sync-pedagogy here and commit the regenerated file.
 
 export const PEDAGOGY_CORE = `# Alexander — Chain of Thought Teaching
 
