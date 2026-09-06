@@ -23,6 +23,7 @@ From these the framework genuinely derives one structural result — *effective 
 
 - [Least-Time Learning — the canonical statement](docs/canonical/least-time-learning.md). Ruled by Tom Cassidy, 2026-08-24. The pedagogy chapter of the thesis: learning is optimised by minimising the learner's total effort-time over a distinction network. CE, Zenjin and SSi reference this node; they do not restate it. Its detail is treatise §4.13.
 - [Scaling is the primitive, position is an agreement](docs/canonical/scaling-is-the-primitive.md). Ruled by Tom Cassidy, 2026-08-29. Nothing observed relates to a position on a number line; that is an agreement about how much more one thing is than another. Comparison is a concept, the numeral and the number line are facts. The eleven-relation unification is stated and not yet cashed.
+- [The shared root — what the distinction thesis and Configuration Economics actually have in common](docs/canonical/shared-root.md). First articulation, 2026-09-06, forming, not ruled. The root stated once, what each branch adds, and five places they would disagree if pushed. Three rulings wanted.
 - [CANON — the distinction thesis](docs/CANON.md). First assembly, 2026-07-14.
 
 ## Development
