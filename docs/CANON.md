@@ -154,12 +154,24 @@ Epistemic humility in one doc, full ontic structural realism in the other — a 
 
 **Ruling: dissolves with C1.** "Reality exceeds distinctions" presupposes the observation-independent reality the C1 ruling denies — see the quote and consequences under C1. The July chain's "bounds access, not ontology" is noted as still granting the frame the ruling removes: it treats ontology as a coherent thing that access could fall short of, which is exactly the presupposition C1 dissolves.
 
-### C4. CE: decoupled or re-coupling?
+### C4. CE: decoupled or re-coupling? — **RULED 2026-09-06**
 
 - Settled policy (April 2026, `configuration-economics/PLAN.md:58`, `CLAUDE.md:100`, `lineage.astro:192`): "CE's main argument now stands on non-equilibrium thermodynamics + ecological economics. DP is offered as preferred foundational vocabulary, not required grounding. **CE survives if DP drifts.**" The public essay never mentions DP.
 - Live draft (2026-07-02, `src/content/open/NOTES-observer-architecture.md:35`): DP's primitives "are the OLU conditions stated natively. That upgrades the foundation's job in this project from *preferred vocabulary* to **observer theory of the world computer**."
 
 Both currently stand in the CE repo. See §4.
+
+**Ruling: convergence, not inheritance.** The two branches are not one downstream of the other; both reached the least-action-under-finite-budget root independently, and each keeps what that gives it — CE keeps its firewall, because an argument that stands on its own is worth more than one that stands on a sibling, and the distinction thesis keeps CE as its ethics leg, because that is a claim about what this branch is for, not a claim CE has to co-sign.
+
+> "convergence, not inheritance — correct."
+> — Tom Cassidy, 2026-09-06
+
+Consequences:
+
+1. Neither repo is the parent. CE's April firewall ("CE survives if DP drifts") stands unchanged; the ethics leg of the trinity stands unchanged.
+2. The re-coupling draft (`NOTES-observer-architecture.md`) is right about the *deepening* and should say "for the deepening" in so many words — DP as observer theory for readers who want the foundation, never as required grounding for the argument. That edit belongs to the CE room, not to this repo.
+3. The evidence for convergence is that CE found the maintenance cost, the observer class, the floor and the community-as-learner from the economics side and then recognised them; only the keystone quotes DP. Recorded in `docs/canonical/shared-root.md` §4.3.
+4. Still open, and not touched by this ruling: whether CE's keystone should follow the Least-Time naming ruling (shared-root §4.1/§7.2), and whether CE's `established` floor needs a line saying it is the one agreement no observer can revise (§4.2/§7.3).
 
 ### C5. How much is actually derived — four different answers on the books
 
@@ -207,7 +219,7 @@ That is Module 4's §4.2 passage restated almost line-for-line — verified: the
 
 **The seam, as CE wrote it:** "CE was originally framed as the 2026 application of DP … The v0.2 direction (April 2026) decoupled CE rhetorically … **CE survives if DP drifts.** The DP coupling remains available as one specific formalisation; the proposition set does not depend on it." (`lineage.astro:192`)
 
-**The open fork (= C4):** NOTES-observer-architecture would re-promote DP from optional vocabulary to CE's required observer theory. [ASSEMBLER: the two positions can coexist only if "required" means *for the deepening* and not *for the argument* — the note as drafted says more than that. One-line ruling wanted: keep the firewall, or promote DP to observer-theory status and accept that CE no longer fully survives DP drifting.]
+**The fork (= C4), RULED 2026-09-06 — convergence, not inheritance.** NOTES-observer-architecture would re-promote DP from optional vocabulary to CE's required observer theory. Tom's ruling keeps the firewall AND the ethics leg: the branches share the root by convergence, so neither is downstream of the other, and the note's "required" holds only *for the deepening*, not *for the argument*. Full ruling and consequences under C4 above; the shared root is stated in `docs/canonical/shared-root.md`.
 
 ---
 
