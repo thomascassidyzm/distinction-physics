@@ -1,8 +1,8 @@
 # The floor and the observer — is CE's reachable set at odds with the ontology ruling?
 
-*A position, not a ruling. Written 2026-09-06 to settle shared-root §4.2 and §7.3, the harder of the two questions C4 left open. Everything quoted is Tom's own text or the two repos' own text. The frame and the verdict are mine, marked as such, and built so Tom can accept or reject them in one sentence.*
+*Written as a position and ruled the same day. Written 2026-09-06 to settle shared-root §4.2 and §7.3, the harder of the two questions C4 left open. Everything quoted is Tom's own text or the two repos' own text. The frame and the verdict are mine, marked as such, and built so Tom can accept or reject them in one sentence.*
 
-*Status: FORMING. Nothing here is ruled. The document proposes one sentence for CANON C1, one correction to shared-root §4.2, and no change to CE.*
+*Status: **RULED 2026-09-06.** Tom accepted the frame in §2 and the consequence text in §6 in one word — "yes" — and that word is the whole of his ruling text; the argument below is this document's, adopted on his acceptance rather than authored by him. Landed as consequence 6 under CANON C1, as the correction to shared-root §4.2, and as no change to CE. The open edge named in §8, whether the upper storey of the floor is hard enough for CE when it binds only for the living class, was not put to him and is not ruled.*
 
 ---
 

@@ -2,7 +2,7 @@
 
 *A canonical node, first articulation. Written 2026-09-06 from a live read of both repos, this one and `~/configuration-economics`. Nothing here is ruled. It is built for Tom's redline, not for publication. Everything quoted is Tom's own text or the two repos' own text; connective prose is marked [ASSEMBLER]. Where the two branches would disagree, the disagreement is stated and a position is taken, marked as mine.*
 
-*Status: FORMING. The fork named in §4.3 is CANON C4, and Tom ruled it on 2026-09-06 — convergence, not inheritance. The other two questions in §7 are still open.*
+*Status: FORMING. The fork named in §4.3 is CANON C4, and Tom ruled it on 2026-09-06 — convergence, not inheritance. §4.2 and §7.3 were ruled the same day — the floor is class-invariant, CE unchanged. §7.2, time versus action in CE's keystone, is the one question still open.*
 
 ---
 
@@ -64,15 +64,17 @@ Pushed, they are not the same quantity. Fermat's light minimises time through a 
 
 My read: the root is the shape, not the units. What is shared is a cost functional over paths in a configuration space with an extremal that has to be searched for. Whether the integrand is energy, effort or one is a choice each branch makes for its own domain, and DP has made it and CE has not. CE's keystone should say action where it means the physics analogy and time where it means what a coordinating community actually spends. Until it does, the two branches read as sharing a functional they do not share.
 
-### 4.2 Is the reachable set observer-independent?
+### 4.2 Is the reachable set observer-independent? — **ANSWERED 2026-09-06: the question is malformed, as C1's was**
 
 CE's formal setup defines R(C, B, T) as the configurations "reachable from C using exergy ≤ B in time ≤ T, under physical and biophysical constraints." That is a third-person set. Value is then made observer-relative by slicing it to R_living. The floor, `binding-constraint`, is `derived`, and what it is derived from, `exergy-not-energy`, is `established` on classical thermodynamics with no observer in it at all.
 
 DP ruled on 2026-07-14 that "there is no coherence to the question 'reality' as actually is" and that ontology itself is an OLU construct. Under that ruling there is no observer-independent reachable set for CE to slice. There is only what bounded persistent observers can distinguish as reachable.
 
-Pushed: DP says the floor is where observation ends; CE says the floor is where physics ends, whether or not anyone observes it. CE needs the second reading, because a floor that is negotiable by observers is not a floor, and the whole point of `binding-constraint` is that it cannot be priced away. DP's ruling makes that floor an agreement among OLUs rather than a fact about the world.
+Pushed: DP says the floor is where observation ends; CE says the floor is where physics ends, whether or not anyone observes it. CE needs the second reading, because a floor that is negotiable by observers is not a floor, and the whole point of `binding-constraint` is that it cannot be priced away. DP's ruling makes that floor an agreement among OLUs, which under the same ruling is what a fact about the world is. The floor is the one such agreement no OLU can revise.
 
-My read: this is a real disagreement and it should stand. CE is right to keep its floor observer-free, because its argument has to survive readers who reject DP entirely. DP is right that the floor, like everything else, is stated by an observer. The reconciliation, if there is one, is DP's own: the floor is the one agreement no OLU can revise, which is what "the denominator that does not move" already says. But nobody has written that sentence into CE, and CE's `established` label on the exergy grounding would have to become "established for OLUs" to carry it. Not a change to make quietly.
+~~My read: this is a real disagreement and it should stand. CE is right to keep its floor observer-free, because its argument has to survive readers who reject DP entirely. DP is right that the floor, like everything else, is stated by an observer. The reconciliation, if there is one, is DP's own: the floor is the one agreement no OLU can revise, which is what "the denominator that does not move" already says. But nobody has written that sentence into CE, and CE's `established` label on the exergy grounding would have to become "established for OLUs" to carry it. Not a change to make quietly.~~ — superseded by the ruling below.
+
+**Ruled 2026-09-06.** Not a disagreement. "Observer-independent" was doing two jobs: *true from nowhere*, which C1 dissolved on 2026-07-14, and *invariant across the observer class*, which C1 did not touch and in fact relies on — the ruling names the laws of physics as what the OLU slice is consistent with, and Axiom 1 is imported from thermodynamics. CE's floor has only ever needed the second sense; "a floor that is negotiable by observers is not a floor" is a claim about class-invariance, not about a view from nowhere. Had the ruling dissolved class-invariants it would have dissolved Landauer's limit and the thesis would have lost its own first axiom. The floor is unrevisable in DP's own terms: revising it requires holding a distinction past the point where any distinction is payable, which means ceasing to be an observer. Argued in `the-floor-and-the-observer.md`, recorded as consequence 6 under CANON C1, and **no change to CE** — writing DP's vocabulary of agreement and revision into CE's floor would breach the C4 firewall, and relabelling one `established` node "established for OLUs" would imply the unqualified ones are more than that, which is the hubris the ruling names.
 
 ### 4.3 Is DP required by CE, or optional? — **RULED 2026-09-06: convergence, not inheritance**
 
@@ -123,10 +125,12 @@ That line is mine, not Tom's, and it is the thing this node is for. If it is wro
 
 ## 7. What this node asks of Tom
 
-Three rulings, each answerable in a sentence. My recommendation is stated on each. One is now ruled; two remain open.
+Three rulings, each answerable in a sentence. My recommendation is stated on each. Two are now ruled (2026-09-06); one remains open.
 
 1. **Convergence, not inheritance.** — **RULED 2026-09-06.** Tom: "convergence, not inheritance — correct." Neither branch is downstream of the other; both reached the root independently. C4 settles without either side giving anything up: CE keeps its firewall, the distinction thesis keeps CE as its ethics leg, and the observer-architecture note's "required" holds only for the deepening. Recorded in `docs/CANON.md` §3 C4 and §4, and journalled in `docs/DECISIONS.md`. The CE-side edits belong to the CE room.
 2. **[OPEN] Time or action, in CE.** Should CE's keystone follow DP's naming ruling and say time where it means what is spent? Recommend yes, but only in the keystone and the rig; the §4.2 bridge in the formalisation draft can keep action, because there it is the physics analogy and nothing else.
-3. **[OPEN] The floor's label.** Does CE's `established` floor survive DP's ontology ruling as written, or does it need a line saying it is the one agreement no observer can revise? Recommend the line, in CE, in Tom's words, because without it the two branches contradict each other on the one thing both say cannot move.
+3. **The floor's label.** — **ANSWERED 2026-09-06.** Does CE's `established` floor survive DP's ontology ruling as written? It does, unchanged. The recommendation this node originally made — a line in CE, and a relabel to "established for OLUs" — is withdrawn: it breaches the C4 firewall by importing DP's frame into the one node CE built to stand without it, and it would mark CE's floor as weaker than every other `established` claim in it. The answer is one consequence in DP instead, recorded under CANON C1 (consequence 6), with §4.2 above corrected to match. Tom accepted the position in one word on 2026-09-06; the argument is `docs/canonical/the-floor-and-the-observer.md`.
+
+Remaining open: **question 2 only** — time or action in CE's keystone. That one is untouched by this ruling and stays Tom's.
 
 Everything else in §4 is stated as a position and can wait.

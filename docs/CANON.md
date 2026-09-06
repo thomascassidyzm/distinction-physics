@@ -137,6 +137,11 @@ Consequences:
 3. Alexander's "Understanding IS a network of precise distinctions" stands unmodified — no separate ontological register remains for it to conflict with.
 4. C3 dissolves with C1 (see C3).
 5. The known edge, stated as stance not defended: the regress objection ("that claim is itself ontology") is answered by Helpful >> True — the framework does not enter the regress.
+6. **The ruling removes "true from nowhere". It does not remove invariance across the observer class — RULED 2026-09-06.** The ruling dissolves the question of reality apart from observation. It does not dissolve invariants across the observer class: those are what "the laws of physics" names in the ruling itself, and Axiom 1 is one of them. A fact is an agreement, and the floor is the one agreement no OLU can revise, because revising it would require holding a distinction past the point where distinctions can be held. CE's floor and the ethics leg's "denominator that does not move" are that agreement seen from the two sides of it.
+
+   *Why it holds, in the thesis's own axioms:* every distinction costs energy (Axiom 1) and every observer's budget is finite (Axiom 2), so no observer can hold a distinction its budget cannot pay for. The floor is the state where no distinction is maintainable at all (Module 7, heat death). Revising the floor would require distinguishing something past it, and that distinction is unpayable by definition of the floor. The floor's unrevisability is therefore a corollary of the distinction thesis, not a casualty of its ontology ruling. Maxwell's demon is the specimen: a less bounded observer appears to get a different second law until you charge it for the memory it holds, and the charge is Landauer's limit, which is Axiom 1.
+
+   *Provenance:* argued in full in `docs/canonical/the-floor-and-the-observer.md`, put to Tom on 2026-09-06 and accepted by him in one word — "yes". That is the whole of his ruling text; the argument and its wording are the document's, adopted on his acceptance rather than authored by him. Consequence: no change to Configuration Economics (see C4's firewall — importing this vocabulary into CE's floor would breach it), `docs/canonical/shared-root.md` §4.2 corrected, and its §7.3 closed.
 
 ### C2. Which claim is THE core — transcendental priority or energetic cost
 
