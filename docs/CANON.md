@@ -194,6 +194,8 @@ Same four-tuple, two expansions, both live in docs/meta. "Us" carries the transc
 
 ## 4. The boundary with Configuration Economics
 
+*[ASSEMBLER, 2026-09-06] The shared root is now stated in one place: `docs/canonical/shared-root.md`. That node carries the root, what each branch adds, and the disagreements. This section is the July view and is kept as-is.*
+
 **Shared root.** Both branches grow from least-action-under-finite-budget. CE states the inheritance exactly:
 
 > "Every change of configuration is a trajectory through a space of distinctions, and its cost is the action S = ∫E dt — energy integrated over time, the same quantity classical mechanics calls action (DP, Module 4). … In physics, nature selects the least-action path for free — δS = 0 is a law of motion."
