@@ -2,7 +2,7 @@
 
 *A canonical node, first articulation. Written 2026-09-06 from a live read of both repos, this one and `~/configuration-economics`. Nothing here is ruled. It is built for Tom's redline, not for publication. Everything quoted is Tom's own text or the two repos' own text; connective prose is marked [ASSEMBLER]. Where the two branches would disagree, the disagreement is stated and a position is taken, marked as mine.*
 
-*Status: FORMING. The fork named in §4.3 is CANON C4, open since 2026-07-14 and still unruled.*
+*Status: FORMING. The fork named in §4.3 is CANON C4, and Tom ruled it on 2026-09-06 — convergence, not inheritance. The other two questions in §7 are still open.*
 
 ---
 
@@ -74,7 +74,7 @@ Pushed: DP says the floor is where observation ends; CE says the floor is where 
 
 My read: this is a real disagreement and it should stand. CE is right to keep its floor observer-free, because its argument has to survive readers who reject DP entirely. DP is right that the floor, like everything else, is stated by an observer. The reconciliation, if there is one, is DP's own: the floor is the one agreement no OLU can revise, which is what "the denominator that does not move" already says. But nobody has written that sentence into CE, and CE's `established` label on the exergy grounding would have to become "established for OLUs" to carry it. Not a change to make quietly.
 
-### 4.3 Is DP required by CE, or optional?
+### 4.3 Is DP required by CE, or optional? — **RULED 2026-09-06: convergence, not inheritance**
 
 CE ruled in April 2026: "decouple rhetorically, couple optionally... CE survives if DP drifts." The lineage page says the same. CE's observer-architecture note, July 2026, says DP's primitives "upgrade the foundation's job in this project from preferred vocabulary to observer theory of the world computer." DP's front page, August 2026, puts ethics on the trinity as "selection over configurations, denominated against heat death," which is CE's entire subject matter stated as a leg of DP.
 
@@ -82,7 +82,7 @@ So DP now claims CE as its ethics leg, CE's ruling says it stands without DP, an
 
 Pushed: DP's trinity says a curriculum is "a selection over configurations of a person's network" and CE says an economy is a selection over configurations of a world. If both are true then CE is DP's ethics at a larger scale and cannot also be independent of it. If CE is independent, then DP's ethics leg is a claim DP makes about itself that its sibling has declined.
 
-My read, and this is the one I would ask Tom to rule on: the branches do not share the root by inheritance. They share it by convergence. The same person hit the same shape twice, from learning in 2025 and from accounting in 2026, and the texts show it: CE's keystone quotes DP, but CE's rig, its maintenance cost, its observer class and its floor were each found from the economics side and then recognised. That is a stronger relationship than inheritance, and it is the honest one. It also dissolves C4: CE keeps its firewall for the argument, because an argument that stands on its own is worth more than one that stands on a sibling, and DP keeps CE as its ethics leg, because that is a claim about what DP is for, not a claim CE has to co-sign. The observer-architecture note is right about the deepening and should say "for the deepening" in so many words.
+My read, put to Tom and ruled by him on 2026-09-06 in his own words, "convergence, not inheritance — correct": the branches do not share the root by inheritance. They share it by convergence. The same person hit the same shape twice, from learning in 2025 and from accounting in 2026, and the texts show it: CE's keystone quotes DP, but CE's rig, its maintenance cost, its observer class and its floor were each found from the economics side and then recognised. That is a stronger relationship than inheritance, and it is the honest one. It also dissolves C4: CE keeps its firewall for the argument, because an argument that stands on its own is worth more than one that stands on a sibling, and DP keeps CE as its ethics leg, because that is a claim about what DP is for, not a claim CE has to co-sign. The observer-architecture note is right about the deepening and should say "for the deepening" in so many words.
 
 ### 4.4 Minimum, or stationary?
 
@@ -123,10 +123,10 @@ That line is mine, not Tom's, and it is the thing this node is for. If it is wro
 
 ## 7. What this node asks of Tom
 
-Three rulings, each answerable in a sentence. My recommendation is stated on each.
+Three rulings, each answerable in a sentence. My recommendation is stated on each. One is now ruled; two remain open.
 
-1. **Convergence, not inheritance.** Is the relationship between the branches best described as two arrivals at one root, rather than CE as DP's application? Recommend yes. It is what the texts show, and it settles C4 without either side giving anything up.
-2. **Time or action, in CE.** Should CE's keystone follow DP's naming ruling and say time where it means what is spent? Recommend yes, but only in the keystone and the rig; the §4.2 bridge in the formalisation draft can keep action, because there it is the physics analogy and nothing else.
-3. **The floor's label.** Does CE's `established` floor survive DP's ontology ruling as written, or does it need a line saying it is the one agreement no observer can revise? Recommend the line, in CE, in Tom's words, because without it the two branches contradict each other on the one thing both say cannot move.
+1. **Convergence, not inheritance.** — **RULED 2026-09-06.** Tom: "convergence, not inheritance — correct." Neither branch is downstream of the other; both reached the root independently. C4 settles without either side giving anything up: CE keeps its firewall, the distinction thesis keeps CE as its ethics leg, and the observer-architecture note's "required" holds only for the deepening. Recorded in `docs/CANON.md` §3 C4 and §4, and journalled in `docs/DECISIONS.md`. The CE-side edits belong to the CE room.
+2. **[OPEN] Time or action, in CE.** Should CE's keystone follow DP's naming ruling and say time where it means what is spent? Recommend yes, but only in the keystone and the rig; the §4.2 bridge in the formalisation draft can keep action, because there it is the physics analogy and nothing else.
+3. **[OPEN] The floor's label.** Does CE's `established` floor survive DP's ontology ruling as written, or does it need a line saying it is the one agreement no observer can revise? Recommend the line, in CE, in Tom's words, because without it the two branches contradict each other on the one thing both say cannot move.
 
 Everything else in §4 is stated as a position and can wait.
