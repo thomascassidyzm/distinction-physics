@@ -1,6 +1,9 @@
 # Distinction Project home page — draft rewrite
 
-*Draft, 18 August 2026. Nothing deployed. Branch `rewrite/home-page`, not merged.*
+*Draft, 18 August 2026. **Landed**: `rewrite/home-page` was merged to main the same day
+(`dae34c4`) and is deployed. The anti-fragile block, the attack-count tiles and the
+"Working Draft · December 2025" footer described below are gone from `src/pages/index.astro`.
+Kept as the record of the diagnosis and the copy; it is no longer a proposal.*
 
 ---
 

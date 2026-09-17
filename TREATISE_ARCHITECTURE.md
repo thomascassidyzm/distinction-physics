@@ -4,6 +4,14 @@
 
 This document defines the content architecture for rendering "Distinction as Primitive" as a proper academic treatise with full scholarly apparatus. The project carries the same name as the treatise — see [NAMING.md](NAMING.md).
 
+**Read this as a design document, part built.** The content schema, the file layout, the block
+renderers and the KaTeX layer are live and are described below as they actually stand. The
+navigation apparatus of §6 — multi-level TOC, reading progress, reading modes, definition
+lookup — is not built: `ReadingMode` exists as a type in `src/content/treatise/types.ts` and no
+page implements it. Sections that describe something unbuilt now say so at the top of the
+section, rather than reading as a description of the site. The code is the authority; where
+this document and `src/content/treatise/types.ts` disagree, the types win.
+
 ---
 
 ## 1. Content Schema
@@ -80,6 +88,7 @@ export interface Subsection {
 ```typescript
 export type ContentBlock =
   | ParagraphBlock
+  | HeadingBlock
   | DefinitionBlock
   | TheoremBlock
   | ProofBlock
@@ -91,7 +100,10 @@ export type ContentBlock =
   | QuoteBlock
   | FigureBlock
   | TableBlock
-  | NoteBlock;
+  | NoteBlock
+  | ExampleBlock
+  | ComparisonBlock
+  | SummaryBlock;
 
 export interface ParagraphBlock {
   type: 'paragraph';
@@ -173,16 +185,21 @@ export interface NoteBlock {
 
 ```typescript
 export type EpistemicStatus =
-  | 'established'    // Grounded in thermodynamics/info theory
-  | 'derived'        // Follows logically from axioms
-  | 'contested'      // Alternative interpretations exist
-  | 'open'           // Genuinely unresolved
-  | 'speculative';   // Exploratory, not yet validated
+  | 'established'   // Grounded in thermodynamics, information theory, or experiment
+  | 'derived'       // Follows logically from axioms with explicit derivation
+  | 'interpreted'   // Existing physics reframed through distinction-vocabulary
+  | 'imported'      // Brought in from established physics (e.g. Landauer)
+  | 'consistent'    // Post-hoc consistency with known physics, not a prediction
+  | 'contested'     // Alternative interpretations exist; we defend one position
+  | 'conjectured'   // Speculative extension beyond what the axioms force
+  | 'open'          // Genuinely unresolved; active research question
+  | 'speculative';  // Exploratory extension, not yet validated
 
 export interface EpistemicMarker {
   status: EpistemicStatus;
   confidence?: number;               // 0-1 for derived claims
   groundedIn?: string[];             // Citation IDs for established
+  derivedFrom?: string[];            // Axiom/theorem IDs for derived claims
   alternativeViews?: AlternativeView[];
   openQuestions?: string[];
 }
@@ -254,42 +271,33 @@ export interface GlossaryEntry {
 
 ```
 src/content/treatise/
-├── index.ts                    # Treatise assembly & exports
+├── index.ts                    # Re-exports: meta, bibliography, glossary, module0..module9
 ├── types.ts                    # TypeScript interfaces
-├── meta.ts                     # Treatise metadata
+├── meta.ts                     # Treatise metadata + moduleIndex
 ├── bibliography.ts             # All citations
 ├── glossary.ts                 # Term definitions
 │
-├── preface/
-│   └── content.ts              # Preface content
-│
 ├── module-0-philosophical/
 │   ├── index.ts                # Module metadata & assembly
-│   ├── section-0.1.ts          # Beyond Subject and Object
-│   ├── section-0.2.ts          # Transcendental Necessity
-│   ├── section-0.3.ts          # Energy Cost of Existence
-│   ├── section-0.4.ts          # Observer-Observed Reconsidered
-│   ├── section-0.5.ts          # Cosmological Implications
-│   ├── section-0.6.ts          # Free Will
-│   ├── section-0.7.ts          # Limits of Knowledge
-│   ├── section-0.8.ts          # Ethics
-│   ├── section-0.9.ts          # Science Reconceptualized
-│   └── section-0.10.ts         # Conclusion
+│   ├── section-0.0.ts          # The kernel statement
+│   ├── section-0.1.ts ... section-0.10.ts
 │
-├── module-1-formalization/
-│   ├── index.ts
-│   ├── section-1.1.ts          # Formalizing the Ontological Foundation
-│   └── ...
-│
-├── module-2-mathematics/
-├── module-3-consciousness/
-├── module-4-learning/
-├── module-5-quantum/
-├── module-6-spacetime/
-├── module-7-thermodynamics/
-├── module-8-predictions/
-└── module-9-synthesis/
+├── module-1-formalization/     # section-1.0 … section-1.11
+├── module-2-mathematics/       # section-2.1 … section-2.11
+├── module-3-consciousness/     # section-3.0 … section-3.11
+├── module-4-learning/          # section-4.0 … section-4.13
+├── module-5-quantum/           # section-5.1 … section-5.13
+├── module-6-spacetime/         # section-6.0 … section-6.10
+├── module-7-thermodynamics/    # section-7.1 … section-7.14
+├── module-8-predictions/       # section-8.1 … section-8.9
+└── module-9-synthesis/         # section-9.1 … section-9.7
 ```
+
+Each module directory holds one file per section and an `index.ts` that assembles them. Section
+numbering is not uniform: some modules open at `.0` and some at `.1`, and the ranges differ — the
+listing above is the live tree, not a template. There is no `preface/` directory and no assembled
+`Treatise` object; `index.ts` exports the ten modules individually and the pages compose them.
+`types.ts` still declares `preface` on the `Treatise` interface, which nothing populates.
 
 ---
 
@@ -297,34 +305,36 @@ src/content/treatise/
 
 ### 3.1 Component Hierarchy
 
+These are Astro components, not React. The live tree is flatter than the hierarchy this section
+originally proposed: `src/pages/treatise/[module].astro` renders a module directly, and
+`ContentRenderer` switches on block type inside a single component rather than delegating to one
+component per block.
+
 ```
-<TreatiseLayout>
-├── <TreatiseHeader>              # Title, metadata, TOC button
-├── <TreatiseNav>                 # Module/section navigation
-├── <TreatiseContent>
-│   ├── <Module>
-│   │   ├── <ModuleHeader>        # Number, title, abstract
-│   │   ├── <Section>
-│   │   │   ├── <SectionHeader>   # Number, title, epistemic badge
-│   │   │   ├── <ContentRenderer> # Renders content blocks
-│   │   │   │   ├── <Paragraph>
-│   │   │   │   ├── <Definition>
-│   │   │   │   ├── <Theorem>
-│   │   │   │   ├── <Axiom>
-│   │   │   │   ├── <Derivation>
-│   │   │   │   ├── <ThoughtExperiment>
-│   │   │   │   ├── <Math>
-│   │   │   │   ├── <Quote>
-│   │   │   │   └── <Note>
-│   │   │   └── <Subsection>...
-│   │   └── <SectionFootnotes>
-│   └── <ModuleFooter>            # Key insights, connections
-├── <MarginNotes>                 # Sidenotes, marginalia
-├── <CitationPopover>             # Hover citations
-└── <TreatiseFooter>              # Bibliography link, etc.
+src/pages/treatise/[module].astro   # One page per module, prerendered
+├── <SiteHeader>                    # src/components/
+├── <SectionHeader>                 # Number, title
+├── <EpistemicBadge>                # Status tag
+├── <ContentRenderer>               # Switches on block type: paragraph, heading, list,
+│                                   # quote, definition, theorem, axiom, derivation,
+│                                   # thought-experiment, math, note, example,
+│                                   # comparison, summary, figure, table
+└── <GuidePanel>                    # Alexander, the sidebar reading companion
 ```
 
+Standalone block components also exist and are used where a page needs one directly:
+`Axiom.astro`, `Citation.astro`, `Definition.astro`, `Derivation.astro`, `Math.astro`,
+`Note.astro`, `Theorem.astro`, `ThoughtExperiment.astro`.
+
+Not built: `TreatiseLayout`, `TreatiseNav`, `MarginNotes`, `CitationPopover`, `ModuleFooter`,
+`SectionFootnotes`. Module key insights and connections are rendered inline by
+`[module].astro`, not by a footer component.
+
 ### 3.2 Key Components
+
+*Sketched in React terms when this document was written. The live components take the same
+fields as Astro props, with slot content in place of `children` — read the `Props` interface at
+the top of each `.astro` file for what each one actually accepts.*
 
 ```typescript
 // Definition block rendering
@@ -383,8 +393,12 @@ interface CiteProps {
 
 ### 4.1 Setup
 
+`katex` is the only maths dependency. `remark-math` and `rehype-katex` were never installed:
+maths is rendered by calling KaTeX directly from `src/lib/math.ts`, which `Math.astro` and
+`ContentRenderer.astro` use, rather than through a markdown pipeline.
+
 ```bash
-npm install katex remark-math rehype-katex
+npm install katex
 ```
 
 ### 4.2 Math Rendering Conventions
@@ -410,7 +424,7 @@ const SYMBOLS = {
 
 ### 4.3 Auto-Linking Definitions
 
-When a defined term appears in text, automatically link to its definition:
+*Not built. Defined terms are linked only where an author writes the link.* The intent was:
 - First occurrence: full definition popover
 - Subsequent: subtle link to definition
 
@@ -420,35 +434,33 @@ When a defined term appears in text, automatically link to its definition:
 
 ### 5.1 Inline Citation Formats
 
-```typescript
-// Author-year: (Landauer, 1961)
-<Cite id="landauer1961" />
+The component is `Citation.astro`, not `Cite`, and there is no separate `CiteNarrative` — a
+`narrative` prop switches the format. It takes one `id` at a time; the multiple-citation form was
+never built. It is not yet used by any page.
 
-// With page: (Shannon, 1948, p. 379)
-<Cite id="shannon1948" page="379" />
-
-// Multiple: (Landauer, 1961; Shannon, 1948)
-<Cite ids={["landauer1961", "shannon1948"]} />
-
-// Narrative: Landauer (1961) showed that...
-<CiteNarrative id="landauer1961" /> showed that...
-
-// With prefix: (see Penrose, 1989)
-<Cite id="penrose1989" prefix="see" />
+```astro
+<Citation id="landauer1961" />                        <!-- (Landauer, 1961) -->
+<Citation id="shannon1948" page="379" />              <!-- (Shannon, 1948, p. 379) -->
+<Citation id="landauer1961" narrative />              <!-- Landauer (1961) -->
+<Citation id="penrose1989" prefix="see" />            <!-- (see Penrose, 1989) -->
 ```
+
+`src/content/treatise/bibliography.ts` holds the entries and the helpers: `getCitation`,
+`getCitationsForSection`, `formatCitation` and `formatBibliographyEntry`.
 
 ### 5.2 Bibliography Styles
 
-Support for:
-- Chicago (author-date)
-- APA
-- IEEE (numbered)
-
-Default: Chicago author-date for philosophy/physics hybrid
+Chicago author-date only, hardcoded in `formatBibliographyEntry`. The APA and IEEE options this
+section originally proposed were never built, and there is no style switch.
 
 ---
 
 ## 6. Navigation System
+
+**None of this section is built.** Navigation today is the module grid at `/treatise` and the
+per-module pages it links to; the reader scrolls a whole module. The design below stands as the
+intent, not as a description of the site. `ReadingMode` (§6.3) exists as a type and is exported
+from `src/content/treatise/index.ts`; nothing reads it.
 
 ### 6.1 Multi-Level TOC
 
@@ -486,17 +498,22 @@ type ReadingMode =
 
 ## 7. URL Structure
 
+Live routes:
+
 ```
-/treatise                           # Landing/overview
-/treatise/preface                   # Preface
-/treatise/0                         # Module 0 overview
-/treatise/0/1                       # Section 0.1
-/treatise/0/2                       # Section 0.2
-/treatise/0/2#circularity           # Section 0.2, circularity subsection
-/treatise/bibliography              # Full bibliography
-/treatise/glossary                  # Glossary
-/treatise/glossary/olu              # Specific term
+/                                   # Home
+/intro                              # Introduction
+/essay                              # Essay 1
+/explore                            # The concept network (src/content/graph)
+/treatise                           # Module grid
+/treatise/module-0 … /treatise/module-9   # One page per module, all its sections
+/api/guide                          # Alexander, the reading companion
 ```
+
+Modules are addressed as `module-0`, not `0`, and a whole module is one page — there is no
+per-section route. `/treatise/preface`, `/treatise/bibliography` and `/treatise/glossary` do not
+exist; the bibliography and glossary are data in `src/content/treatise/` with no page rendering
+them. Within-module anchors are whatever ids the block renderers emit.
 
 ---
 
@@ -504,22 +521,19 @@ type ReadingMode =
 
 ### 8.1 Typography
 
+Three families are loaded from Google Fonts and set per page; there is no separate `--font-sans`
+or `--font-math`, and Source Serif Pro was never used — Sora carries the body text.
+
 ```css
 :root {
-  /* Display: Titles, module headers */
+  /* Display: titles, module headers */
   --font-display: 'Cormorant Garamond', serif;
 
-  /* Body: Main text, paragraphs */
-  --font-body: 'Source Serif Pro', Georgia, serif;
+  /* Body: main text, paragraphs, navigation, UI */
+  --font-body: 'Sora', sans-serif;
 
-  /* Sans: Navigation, UI elements */
-  --font-sans: 'Sora', sans-serif;
-
-  /* Mono: Code, symbols, citations */
+  /* Mono: code, symbols, citations, build number */
   --font-mono: 'JetBrains Mono', monospace;
-
-  /* Math: KaTeX default */
-  --font-math: 'KaTeX_Main', serif;
 }
 ```
 
@@ -534,6 +548,12 @@ type ReadingMode =
 
 ### 8.3 Epistemic Status Indicators
 
+Status is carried on a `data-status` attribute on the section or card — see
+`src/pages/treatise/[module].astro`, `src/pages/treatise/index.astro` and
+`src/pages/essay/index.astro` — and rendered as a tag by `EpistemicBadge.astro`. The
+`.epistemic-*` class scheme below covers four of the nine statuses and predates the others;
+read the live styles for the colours in force.
+
 ```css
 .epistemic-established { border-left-color: #4a9eff; }  /* Blue */
 .epistemic-derived { border-left-color: #50c878; }      /* Green */
@@ -545,39 +565,47 @@ type ReadingMode =
 
 ## 9. Implementation Phases
 
-### Phase 1: Foundation
-- [ ] Create type definitions
-- [ ] Set up file structure
-- [ ] Implement basic content rendering
-- [ ] Add KaTeX support
+*Status as of 2026-09-17, read from the tree. The phases were a build order, and the build went
+past them: all ten modules are written, not just Module 0.*
 
-### Phase 2: Module 0
-- [ ] Import V7 Module 0 content
-- [ ] Create all section files
-- [ ] Implement definition/theorem blocks
-- [ ] Add thought experiment component
+### Phase 1: Foundation — done
+- [x] Type definitions (`src/content/treatise/types.ts`)
+- [x] File structure
+- [x] Content rendering (`ContentRenderer.astro`, 16 block types)
+- [x] KaTeX support (`src/lib/math.ts`)
 
-### Phase 3: Citations
-- [ ] Build bibliography
-- [ ] Implement citation components
-- [ ] Add hover previews
-- [ ] Generate bibliography page
+### Phase 2: Content — done, and beyond Module 0
+- [x] All ten modules written as section files, Module 0 through Module 9
+- [x] Definition, theorem, axiom, derivation and thought-experiment blocks
 
-### Phase 4: Navigation
+### Phase 3: Citations — partly done
+- [x] Bibliography data and helpers (`bibliography.ts`)
+- [x] `Citation.astro` with hover preview — built, not yet used by any page
+- [ ] A bibliography page
+
+### Phase 4: Navigation — not started
 - [ ] Multi-level TOC
-- [ ] Deep linking
+- [ ] Per-section deep linking
 - [ ] Reading progress
 - [ ] Cross-references
 
-### Phase 5: Polish
-- [ ] Reading modes
-- [ ] Print/PDF export consideration
-- [ ] Glossary integration
+### Phase 5: Polish — not started
+- [ ] Reading modes (the `ReadingMode` type exists; nothing reads it)
+- [ ] Print/PDF export
+- [ ] Glossary integration (data exists; no page)
 - [ ] Search within treatise
+
+Built since the phases were written, and not on this list: the concept graph at `/explore`
+(`src/content/graph/`), and Alexander — the sidebar reading companion at `/api/guide`, which
+reads the site on demand rather than carrying a copy of it.
 
 ---
 
 ## 10. Sample Content Structure
+
+*Illustrative, and out of step with the file it names: the live §0.2 is subtitled "From
+Expressibility to Reality-as-Accessible" with `epistemicStatus: 'interpreted'`. Read
+`src/content/treatise/module-0-philosophical/section-0.2.ts` for the real thing.*
 
 ```typescript
 // src/content/treatise/module-0-philosophical/section-0.2.ts

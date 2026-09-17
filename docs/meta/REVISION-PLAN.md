@@ -2,6 +2,13 @@
 
 *A systematic approach to adapting the treatise based on meta-insights*
 
+*Status, 2026-09-17: this plan was written for the V7→V8 pivot and the work it describes has been
+done. All ten modules were revised; the record of what actually changed is
+`docs/revision-logs/module-0-revision.md` through `module-9-revision.md`, with
+`docs/revision-logs/v8-changelog.md` as the summary. The checkboxes below were never ticked as
+the work landed, so read them as the original plan rather than as an outstanding to-do list, and
+take the revision logs and the live treatise as the authority on where things stand.*
+
 ---
 
 ## Overview

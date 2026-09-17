@@ -2,7 +2,7 @@
 
 **The project is called Distinction as Primitive.**
 
-It was called Distinction Physics. The treatise inside it was already called *Distinction as Primitive* — that title stands unchanged, and so does the site header. What changes is the wrapper: the repository, the README, the package, and every place the project names itself as a project. Project and treatise now carry the same name.
+It was called Distinction Physics. The treatise inside it was already called *Distinction as Primitive* — that title stands unchanged, and so does the site header. What changes is the wrapper: how the repository presents itself — the README, the package, and every place the project names itself as a project. The GitHub slug and the directory are deliberately left as `distinction-physics`; see the conventions below. Project and treatise now carry the same name.
 
 Ruling: Tom Cassidy, 2026-08-04 (the reason for the change), corrected 2026-08-05 (the name itself).
 
@@ -68,6 +68,7 @@ This is a sketch, and it is left a sketch. Tom gave the shape and the direction 
 
 - **Distinction as Primitive** — the project *and* the treatise. README, package, `TREATISE_ARCHITECTURE.md`, and how the project refers to itself; also the treatise's own title, unchanged in `src/content/treatise/meta.ts` and the site header.
 - **`distinction-as-primitive`** — the machine slug, where a lowercase-hyphenated form is required: the `name` field in `package.json` and `package-lock.json`. This is the display name lowercased and hyphenated, not a separate name.
+- **`distinction-physics`** — still the GitHub slug (`thomascassidyzm/distinction-physics`), the working directory `~/distinction-physics`, and the deployment host `distinction-physics.vercel.app`. That is a decision, not an oversight: `docs/rename-blast-radius.md` costed the move and recommends against it. The presented identity is renamed; the plumbing is not.
 - **PRIMITIVE** — superseded. Used only between 2026-08-04 and 2026-08-05; see the correction above.
 - **Distinction Physics** — historical. Dated records that use it are correct as written and are left alone: `docs/revision-logs/*`, `docs/immune-responses/*`, `docs/evidence/*`, and prose inside the treatise that discusses the framework under its former name.
 

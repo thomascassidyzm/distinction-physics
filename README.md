@@ -29,20 +29,48 @@ From these the framework genuinely derives one structural result — *effective 
 
 ```bash
 npm install
-npm run dev
+npm run dev         # astro dev
+npm run build       # astro build
+npm run test        # vitest, covering src/lib
+npm run typecheck   # tsc --noEmit
 ```
+
+There is no CI in this repository. The GitHub Actions workflow that swept `claude/*` branches
+onto main was deleted on 2026-09-04 (`af56978`) after Actions was retired across the estate on
+2026-08-31; nothing auto-merges here or in the alexander repo, and the checks it was meant to
+provide now run nightly on watson-1. Run the tests and the typecheck yourself before pushing.
+
+`npm run sync-pedagogy` regenerates `src/lib/pedagogy-core.generated.ts` from
+`pedagogy-core/pedagogy-core.md` in the [alexander](https://github.com/thomascassidyzm/alexander)
+repo. Edit the canonical source there, get it merged, then re-sync here — never edit the
+generated file directly.
 
 ## Deployment
 
-This site deploys to Vercel. Add your `ANTHROPIC_API_KEY` as an environment variable.
+This site deploys to Vercel as a server-rendered Astro site (`@astrojs/vercel`). Set
+`ANTHROPIC_API_KEY` in the environment; it backs the guide endpoint at `/api/guide` and nothing
+else.
 
 ## Structure
 
-- `/src/content/essay-1/` - Essay sections and configuration
-- `/src/content/propositions.ts` - Concept network nodes
-- `/src/lib/guide-prompt.ts` - Leibniz (guide) system prompt
-- `/src/pages/` - Astro pages (essay, explore, API)
-- `/src/components/` - UI components
+- `/src/content/treatise/` - The treatise itself: ten modules (0-9) of section files, plus
+  `meta.ts`, `bibliography.ts`, `glossary.ts` and the `types.ts` content schema. See
+  [TREATISE_ARCHITECTURE.md](TREATISE_ARCHITECTURE.md).
+- `/src/content/graph/` - The concept network rendered at `/explore`: concepts, distinctions
+  and relationships, held to the treatise's wording (`f348f0f`, 2026-08-30).
+- `/src/content/essay-1/` - Essay sections and configuration, rendered at `/essay`.
+- `/src/content/propositions.ts` - The earlier concept-network format, unchanged since January
+  2026. Nothing imports it; the live network is `/src/content/graph/`.
+- `/src/lib/guide-prompt.ts` - System prompt for Alexander, the reading companion in the
+  sidebar. Composed from the shared `PEDAGOGY_CORE` and a treatise-specific overlay. (The guide
+  was called Leibniz in earlier drafts.)
+- `/src/lib/guide-request.ts`, `/src/lib/guide-tools.ts` - Request handling, and the tools
+  Alexander uses to read the site on demand rather than carry a copy of it (`e31edc5`).
+- `/src/pages/` - Astro pages: `/`, `/intro`, `/essay`, `/explore`, `/treatise`,
+  `/treatise/module-0` through `module-9`, and `/api/guide`.
+- `/src/components/` - Site components, with the treatise block renderers under
+  `/src/components/treatise/`.
+- `/scripts/sync-pedagogy.mjs` - The pedagogy-core sync.
 
 ## Status
 
