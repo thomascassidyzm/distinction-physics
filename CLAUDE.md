@@ -103,29 +103,43 @@ the part with invariants you can break silently. Four files:
 | File | Job |
 |---|---|
 | `src/pages/api/guide.ts` | The route: origin check, rate limits, validation, the bounded tool loop, the Anthropic call |
-| `src/lib/guide-request.ts` | `MODEL`, `selectTier()` (the ladder), `buildSystemBlocks()` (cache layering), `buildUserTurn()` |
+| `src/lib/guide-request.ts` | `MODELS`, `RUNGS`, `selectTier()` (the ladder), `buildSystemBlocks()` (cache layering), `buildUserTurn()` |
 | `src/lib/guide-tools.ts` | The `read_section` tool, its registry/index, and the tool budgets |
 | `src/lib/guide-prompt.ts` | `GUIDE_SYSTEM_PROMPT` = pedagogy core + treatise overlay + generated site index; `buildSectionContext()` |
 
-Client: `src/components/GuidePanel.astro`. It posts `{ message, history, context, escalate }`
-to `/api/guide` and labels the answer from the server's returned `tier`.
+Client: `src/components/GuidePanel.astro`. It posts `{ message, history, context, escalate, session }`
+to `/api/guide`, labels the answer from the server's returned `tier`, and stores the returned
+`session` token in sessionStorage. `src/lib/guide-session.ts` signs and checks that token.
 
 ### 4.1 The model ladder
 
-**Every rung is the same model.** `MODEL = 'claude-sonnet-5'` (`src/lib/guide-request.ts`). The
-rungs differ by **effort**, never by model, because the prompt cache is model-scoped: a model
-switch would discard the whole cached prefix at exactly the moment the request got expensive,
-whereas effort is not part of the cached prefix at all.
+**Three families, chosen by code per turn** (Tom, 2026-10-22: Haiku greets, Sonnet carries the
+body, Opus only when someone is really stuck). Version ids live in one map, `MODELS` in
+`src/lib/guide-request.ts`; everything else speaks family names. Sonnet's own rungs still differ
+by **effort**, not model, because the prompt cache is model-scoped and effort is not part of the
+prefix.
 
-| Rung | `effort` | `tier` | `max_tokens` | Chosen when |
-|---|---|---|---|---|
-| base | `low` | `base` | 2048 | default |
-| auto-escalated | `high` | `deep` | 8192 | cross-section comparison, or repeated confusion |
-| explicit | `xhigh` | `deep` | 12288 | the reader pressed **Deeper** (`escalate: true`) |
+| Rung | Family | `effort` | `tier` | `max_tokens` | Chosen when |
+|---|---|---|---|---|---|
+| greet | haiku | `low` | `base` | 2048 | opening turn that is a hello / "where do I start" (or ≤3 words) |
+| base | sonnet | `low` | `base` | 2048 | default |
+| high | sonnet | `high` | `deep` | 8192 | cross-section comparison; or repeated confusion once Opus is shut |
+| xhigh | sonnet | `xhigh` | `deep` | 12288 | the reader pressed **Deeper** (`escalate: true`) |
+| stuck | opus | `high` | `deep` | 8192 | repeated confusion, with proven session headroom |
 
-(`TIER_CONFIG` in `guide-request.ts`.) `max_tokens` caps thinking *and* text together, which is
-why the dear rungs need headroom. Effort is always sent explicitly: Sonnet 5 defaults to `high`
-if you say nothing, so silence means paying for `high` on every trivial question.
+(`RUNGS` in `guide-request.ts`.) **Opus is capped per session** (`OPUS_PER_SESSION`) by a
+server-signed token (`src/lib/guide-session.ts`): the response carries `session`, the panel
+echoes it, and Opus is reachable only when the token is genuine, the history is no longer than
+the turns the server actually served, and the cap is unspent. The HMAC key is derived from
+`ANTHROPIC_API_KEY`, so no new env var. Opus also spends from the per-IP deep budget.
+
+**What the switches cost in cache terms.** Haiku→Sonnet happens once, at turn 2, and only moves
+the Sonnet prefix write a turn later (Haiku's own write is a twentieth of the price). The real
+cost is Sonnet→Opus: one Opus write of the prefix per Opus turn; the Sonnet cache is still warm
+when the reader drops back.
+
+`max_tokens` caps thinking *and* text together, which is why the dear rungs need headroom.
+Effort is always sent explicitly: unset, Sonnet defaults to `high` and Haiku/Opus to `medium`.
 
 **Tier selection is server-side only, and that is a security property, not a style.** The only
 thing taken from the caller is the boolean `escalate`. A body containing a `model` key is
@@ -190,17 +204,18 @@ Rules an agent must not break:
    again would invalidate the entire cache, system layer included, on the most context-heavy
    call of the request. To stop further calls send `tool_choice: { type: 'none' }` instead,
    which preserves the tools+system cache by design.
-3. **One model at every rung.** See §4.1. Changing model per tier throws the prefix away.
+3. **Sonnet's rungs are one model.** See §4.1. A family change writes the prefix fresh for the
+   new model; keep family changes to the two in the ladder (greet→body, body→stuck).
 4. TTL is the **5-minute default**, deliberately: a reader's questions about one section arrive
    minutes apart, and the 1h TTL costs 2× on write instead of 1.25×.
-5. A section shorter than Sonnet 5's **1024-token minimum cacheable prefix** will not cache —
+5. A section shorter than the model's **minimum cacheable prefix** will not cache —
    silently, `cache_creation_input_tokens: 0`, no error. The breakpoint is then a harmless
    no-op. Do not report a saving that did not occur.
-6. The `system` layering also exists because Sonnet 5 does not support mid-conversation system
-   messages — that channel is closed here, so the section must ride in `system[1]`.
+6. The section rides in `system[1]` so its breakpoint covers every later turn however the
+   conversation grows, with the reader's turn last in the prefix.
 
 **How to verify caching still works:** the route logs
-`[guide] model=… effort=… reason=… rounds=… input=… cache_write=… cache_read=… output=…` and
+`[guide] model=… rung=… effort=… reason=… rounds=… input=… cache_write=… cache_read=… output=…` and
 returns the same totals in the JSON response as `usage`. `cache_read` non-zero on a repeat
 question about the same section is the design working; `cache_read` stuck at zero across
 identical-prefix requests means a silent invalidator has crept into the prefix. Totals are

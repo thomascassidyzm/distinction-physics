@@ -10,11 +10,11 @@ import {
   MAX_TOOL_CHARS_PER_RESULT,
 } from '../../lib/guide-tools';
 import {
-  MODEL,
   selectTier,
   buildSystemBlocks,
   buildUserTurn,
 } from '../../lib/guide-request';
+import { sessionGate, issueSession } from '../../lib/guide-session';
 
 export const prerender = false;
 
@@ -30,10 +30,10 @@ interface ChatMessage {
 // that names a model is rejected outright (400) rather than silently
 // downgraded, so the refusal is visible to whoever sent it.
 //
-// Every rung is Sonnet 5; the rungs differ by `effort`, not by model. That is
-// deliberate — caches are model-scoped, so a model switch would throw away the
-// whole cached prefix at exactly the moment the request got expensive, while
-// effort is not part of the cached prefix at all. See guide-request.ts.
+// Haiku greets, Sonnet carries the body (its deep rungs differ by effort, not
+// model, so climbing them keeps the cache), and Opus answers only REPEATED
+// confusion, capped per session by a server-signed token. The model never
+// chooses its own rung. See guide-request.ts and guide-session.ts.
 
 // history and context are optional: the GuidePanel always sends them, but the
 // endpoint is also hit bare ({ message }) by probes and by any other caller.
@@ -45,6 +45,8 @@ interface RequestBody {
   // The Deeper button's signal. Anything other than boolean true is treated as
   // false — a string, a model name, a tier label all fall through to base.
   escalate?: boolean;
+  // The server's own signed session token, echoed back. Opaque to the client.
+  session?: string | null;
 }
 
 const MAX_MESSAGE_LENGTH = 4000;
@@ -217,7 +219,21 @@ export const POST: APIRoute = async ({ request }) => {
     // Which rung this turn earned. Decided here and nowhere else, from the
     // message and history the client already sends — never from a client-
     // supplied tier field, which does not exist.
-    let decision = selectTier({ message, history, escalate });
+    const apiKey = import.meta.env.ANTHROPIC_API_KEY;
+    if (!apiKey) {
+      return new Response(JSON.stringify({ error: 'API key not configured' }), {
+        status: 500,
+        headers: { 'Content-Type': 'application/json' },
+      });
+    }
+
+    // What this session has proven to the server, and whether Opus is still
+    // within its cap. Computed before selectTier so the ladder never offers a
+    // rung the session cannot have.
+    const historyUserTurns = history.filter((m) => m?.role === 'user').length;
+    const { state: session, opusAllowed } = sessionGate(apiKey, body.session, historyUserTurns);
+
+    let decision = selectTier({ message, history, escalate, opusAllowed });
 
     // Every deep answer spends from the escalated budget, whether the reader
     // pressed Deeper or the server inferred it. Auto-escalation must not be a
@@ -242,16 +258,8 @@ export const POST: APIRoute = async ({ request }) => {
           });
         }
         // Server-inferred. Serve the answer at base rather than refusing it.
-        decision = selectTier({ message, history, escalate, escalatedBudgetSpent: true });
+        decision = selectTier({ message, history, escalate, opusAllowed, escalatedBudgetSpent: true });
       }
-    }
-
-    const apiKey = import.meta.env.ANTHROPIC_API_KEY;
-    if (!apiKey) {
-      return new Response(JSON.stringify({ error: 'API key not configured' }), {
-        status: 500,
-        headers: { 'Content-Type': 'application/json' },
-      });
     }
 
     // The layered, cacheable prompt. Global material first with a breakpoint
@@ -318,12 +326,12 @@ export const POST: APIRoute = async ({ request }) => {
           'anthropic-version': '2023-06-01',
         },
         body: JSON.stringify({
-          model: MODEL,
+          model: decision.model,
           max_tokens: decision.maxTokens,
-          // Sonnet 5 defaults to `high` effort when this is omitted, so
-          // silence here means silently paying for `high` on every trivial
-          // question. Effort is NOT part of the cached prefix, so changing it
-          // between rungs costs nothing in cache terms.
+          // Every family defaults to medium or high effort when this is
+          // omitted, so silence here means silently paying for depth on every
+          // trivial question. Effort is NOT part of the cached prefix, so
+          // changing it between Sonnet's rungs costs nothing in cache terms.
           output_config: { effort: decision.effort },
           system: systemBlocks,
           messages: conversation,
@@ -391,7 +399,7 @@ export const POST: APIRoute = async ({ request }) => {
     // identical-prefix requests, a silent invalidator has crept into the
     // prefix and the layering above is doing nothing.
     console.log(
-      `[guide] model=${MODEL} effort=${decision.effort} reason=${decision.reason} ` +
+      `[guide] model=${decision.model} rung=${decision.rung} effort=${decision.effort} reason=${decision.reason} ` +
         `rounds=${toolRounds} input=${totals.input} cache_write=${totals.cache_write} ` +
         `cache_read=${totals.cache_read} output=${totals.output}`,
     );
@@ -417,6 +425,13 @@ export const POST: APIRoute = async ({ request }) => {
       // The client uses it to label the response and to hide the Deeper button
       // once the deep tier has already answered.
       tier: decision.tier,
+      // Which family answered — haiku, sonnet or opus. A label, never an input.
+      model: decision.family,
+      // The session, re-signed with this turn counted. The client echoes it.
+      session: issueSession(apiKey, {
+        turns: session.turns + 1,
+        opus: session.opus + (decision.family === 'opus' ? 1 : 0),
+      }),
       // Token accounting, returned so the caching layer is verifiable from
       // outside — `cache_read` non-zero on a repeat question about the same
       // section is the whole design working. No secret is exposed: these are
