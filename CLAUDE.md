@@ -123,9 +123,9 @@ prefix.
 |---|---|---|---|---|---|
 | greet | haiku | `low` | `base` | 2048 | opening turn that is a hello / "where do I start" (or ≤3 words) |
 | base | sonnet | `low` | `base` | 2048 | default |
-| high | sonnet | `high` | `deep` | 8192 | cross-section comparison; or repeated confusion once Opus is shut |
+| high | sonnet | `high` | `deep` | 8192 | cross-section comparison; a first confused re-ask; any repeated confusion once Opus is shut |
 | xhigh | sonnet | `xhigh` | `deep` | 12288 | the reader pressed **Deeper** (`escalate: true`) |
-| stuck | opus | `high` | `deep` | 8192 | repeated confusion, with proven session headroom |
+| stuck | opus | `high` | `deep` | 8192 | confusion said twice, or three turns circling one point — with proven session headroom |
 
 (`RUNGS` in `guide-request.ts`.) **Opus is capped per session** (`OPUS_PER_SESSION`) by a
 server-signed token (`src/lib/guide-session.ts`): the response carries `session`, the panel
